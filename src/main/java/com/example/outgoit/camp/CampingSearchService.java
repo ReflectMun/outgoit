@@ -4,7 +4,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CampingSearchService {
-    public String temp(){
-        return "A";
+    public String GetSearchedCampingAreaList(String campName){
+        
+
+
     }
+
+
+
+
 }
