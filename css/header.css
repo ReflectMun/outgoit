@@ -1,37 +1,63 @@
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+}
+
 .hj-container {
   border: 2px solid black;
-  width: 100%;
-  height: 100%;
 }
 .hj-header {
   border: 2px solid blue;
   display: flex;
-  height: 20%;
-  //background-color: #275634;
+  height: 30%;
+  width: 100%;
+  justify-content: space-between;
+  /* background-color: #275634; */
 }
 .hj-right {
   display: flex;
   border: 1px solid green;
-  justify-content: space-between;
-  width: 15%;
+  justify-content: center;
+  align-content: center;
+  justify-content: space-evenly;
+  width: 30%;
 }
-.hj-family {
+.hj-left {
   display: flex;
   border: 1px solid green;
-  justify-content: space-evenly;
-  width: 15%;
-  margin-left: 50%;
+
+  width: 30%;
+  margin-left: 0%;
+  justify-content: center;
+  align-content: center;
+}
+.hj-menu {
+  border: 1px solid green;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 .hj-logo {
   border: 1px solid red;
-  margin: 8%;
+
   background-color: white;
 
   width: 20%;
-  height: 40%;
+  height: 100%;
 }
 .hj-font {
   border: 1px solid red;
   font-size: 20px;
-  margin: 8%;
+  margin: 5%;
+  width: 30%;
+  height: 30%;
 }
+.hj-menu-tab {
+  border: 1px solid red;
+  width: 20%;
+  height: 100%;
+}
+
+
