@@ -22,7 +22,7 @@ body {
   background-image: url("../img/캠핑/캠핑\ 인포_가이드_역사2_copy.jpg");
   padding-top: 25%;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -37,20 +37,16 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
+  text-align: center;
 }
 .rh-camping-content-wood-title {
-  border: 1px solid rgb(10, 34, 3);
   background-image: url(../img/기타/나무보드.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center bottom 0px;
+  background-size: contain;
   box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
   width: 50%;
+  font-size: 6vw;
   color: #275634;
   -webkit-text-stroke: 2px #f0ecc8;
-
-  font-size: 50px;
-  text-align: center;
   font-family: "Joti One", serif;
 }
 .rh-camping-content-wood-bridge {
@@ -81,32 +77,40 @@ body {
 }
 .rh-camping-content-wood-set {
   border: 1px solid rgb(49, 145, 25);
+  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
   width: 80%;
   height: 100%;
   text-align: center;
-  position: relative;
-}
-.rh-camping-content-wood-img {
-  border: 1px solid rgb(255, 147, 226);
-  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
+  display: flex;
   background-image: url(../img/기타/나무보드.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: contain;
   background-position: center bottom 0px;
-  height: 100vh;
 }
 .rh-camping-content-wood-textbox {
+  margin: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  text-align: center;
   width: 100%;
-  height: 100%;
   top: 0;
 }
+
 .rh-camping-content-wood-text {
-  border: 1px solid rgb(145, 25, 105);
   background-color: #f0ecc8;
-  width: 80%;
-  height: 90%;
+  border: 1px solid rgb(145, 25, 105);
+  width: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 1.2vw;
+}
+
+/* 안전사항 */
+.rh-camping-safety-content-title {
+  border: 1px solid rgb(199, 63, 63);
+  background-image: url("../img/캠핑/캠핑_인포_가이드_역사3.jpg");
+  padding-top: 25%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
