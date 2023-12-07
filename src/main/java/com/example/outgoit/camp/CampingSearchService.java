@@ -9,7 +9,6 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 @Service
 public class CampingSearchService {
