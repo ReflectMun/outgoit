@@ -8,7 +8,7 @@ import lombok.Setter;
 import java.time.LocalDate;
 import java.time.ZoneId;
 
-@Entity(name = "CampingReview")
+@Entity(name = "camping_review")
 @Getter
 @Setter
 @NoArgsConstructor
