@@ -19,7 +19,7 @@ body {
 }
 .rh-camping-content-title {
   border: 1px solid rgb(199, 63, 63);
-  background-image: url("../img/캠핑/캠핑\ 인포_가이드_역사2_copy.jpg");
+  background-image: url("../img/캠핑/camping_history4.jpg");
   padding-top: 25%;
   background-position: center;
   background-size: cover;
@@ -43,17 +43,18 @@ body {
   background-image: url(../img/기타/나무보드.jpg);
   background-size: contain;
   box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
-  width: 50%;
-  font-size: 6vw;
+  width: 40%;
+  font-size: 5vw;
   color: #275634;
   -webkit-text-stroke: 2px #f0ecc8;
   font-family: "Joti One", serif;
+  line-height: 1.2;
 }
 .rh-camping-content-wood-bridge {
   border: 1px solid rgb(238, 255, 0);
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 40%;
   height: 100%;
 }
 .rh-camping-content-wood-bridge1 {
@@ -78,7 +79,7 @@ body {
 .rh-camping-content-wood-set {
   border: 1px solid rgb(49, 145, 25);
   box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
-  width: 80%;
+  width: 60%;
   height: 100%;
   text-align: center;
   display: flex;
@@ -102,7 +103,7 @@ body {
   width: 100%;
   padding-top: 5%;
   padding-bottom: 5%;
-  font-size: 1.2vw;
+  font-size: 1vw;
 }
 
 /* 안전사항 */
@@ -113,4 +114,53 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.rh-camping-safety-content-wood-main {
+  border: 1px solid rgb(145, 141, 25);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.rh-camping-safety-content-wood-title {
+  background-image: url(../img/기타/나무보드.jpg);
+  background-size: contain;
+  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
+  width: 40%;
+  font-size: 5vw;
+  color: #275634;
+  -webkit-text-stroke: 2px #f0ecc8;
+  font-family: "Joti One", serif;
+  line-height: 1;
+}
+
+.rh-camping-safety-content-wood-set {
+  border: 1px solid rgb(49, 145, 25);
+  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
+  width: 60%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  background-image: url(../img/기타/나무보드.jpg);
+  background-size: contain;
+  background-position: center bottom 0px;
+}
+.rh-camping-safety-content-wood-textbox {
+  margin: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 100%;
+  top: 0;
+}
+.rh-camping-safety-content-wood-bg {
+  background-color: aliceblue;
+  padding: 15%;
+  border-radius: 10%;
+  margin-bottom: 3%;
+}
+.rh-camping-safety-content-wood-text {
+  width: 100%;
 }
