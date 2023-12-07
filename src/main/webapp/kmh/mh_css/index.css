@@ -1,3 +1,19 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'JalnanGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SOYOMapleBoldTTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
 .body {
     margin: 0;
     padding: 0;
@@ -29,21 +45,31 @@
 }
 
 .title {
+    font-family: 'JalnanGothic';
     display: flex;
     justify-content: center;
     text-align: center;
     font-size: 150px;
     font-weight: bolder;
-    color: #1c512b;
+    color: #116228;
+    text-shadow: 10px 10px 2px rgb(222, 111, 26);
 }
+
+.title .go {
+color: rgb(242, 166, 52);
+text-shadow: 10px 10px 2px #116228;
+
+}
+
     
 .sub-title {
+    font-family: 'SOYOMapleBoldTTF';
     display: flex;
     justify-content: center;
     text-align: center;
     font-size: 50px;
     font-weight: bolder;
-    color: rgb(220, 131, 23)
+    /* color: rgb(0, 0, 0) */
 }
 
 .menu-all {
@@ -66,13 +92,14 @@
     background-color: white;
     border-radius: 10%;
     opacity: 0.85;
-    box-shadow: 3px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.5);
     display: grid;
     place-items: center;
 
 }
 
 .txt {
+    font-family: 'SOYOMapleBoldTTF';
     padding-top: 30px;
     font-size: 70px;
     font-weight: bolder;
