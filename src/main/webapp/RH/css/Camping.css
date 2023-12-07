@@ -4,35 +4,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Joti+One&display=swap");
 
 body {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   margin: 0;
 }
 .rh-camping-container {
   border: 1px solid rgb(0, 38, 255);
 }
-.rh-camping-title-img {
-  border: 1px solid rgb(126, 138, 202);
-}
 .rh-camping-content {
   border: 1px solid rgb(18, 32, 112);
 }
-.rh-camping-content-container {
-  border: 1px solid rgb(115, 255, 80);
-}
-.rh-camping-content-title-div {
-  border: 1px solid rgb(8, 56, 58);
-  margin-bottom: 3%;
-  height: 400px;
+.rh-camping-content-title-box {
+  margin-bottom: 5%;
 }
 .rh-camping-content-title {
   border: 1px solid rgb(199, 63, 63);
-  background-image: url("33ce218902e1016a/캠핑/캠핑\ 인포_가이드_역사.jpg");
-  height: 75%;
-  background-size: cover;
+  background-image: url("../img/캠핑/캠핑\ 인포_가이드_역사2_copy.jpg");
+  padding-top: 25%;
+  background-position: center;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center bottom 0px;
 }
+
+/* 캠핑 콘텐츠 */
 .rh-camping-content-wood {
   border: 1px solid rgb(34, 65, 168);
   display: grid;
@@ -46,7 +40,7 @@ body {
 }
 .rh-camping-content-wood-title {
   border: 1px solid rgb(10, 34, 3);
-  background-image: url(33ce218902e1016a/기타/나무보드.jpg);
+  background-image: url(../img/기타/나무보드.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom 0px;
@@ -87,29 +81,32 @@ body {
 }
 .rh-camping-content-wood-set {
   border: 1px solid rgb(49, 145, 25);
-  width: 70%;
+  width: 80%;
+  height: 100%;
   text-align: center;
   position: relative;
 }
 .rh-camping-content-wood-img {
   border: 1px solid rgb(255, 147, 226);
   box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
-  background-image: url(33ce218902e1016a/기타/나무보드.jpg);
+  background-image: url(../img/기타/나무보드.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom 0px;
-  height: 600px;
+  height: 100vh;
 }
 .rh-camping-content-wood-textbox {
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
 }
 .rh-camping-content-wood-text {
   border: 1px solid rgb(145, 25, 105);
-  position: relative;
-  width: 90%;
   background-color: #f0ecc8;
-  font-size: 11px;
-  position: absolute;
-  bottom: 7%;
+  width: 80%;
+  height: 90%;
 }
