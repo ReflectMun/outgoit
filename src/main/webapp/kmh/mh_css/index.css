@@ -1,0 +1,113 @@
+.body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    background-image: url("../img/index.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    /* border: 5px solid red; */
+    width: 100%;
+    height: 100%;
+    padding-bottom: 170px;
+}
+
+.title-all {
+    /* border: 5px solid black; */
+    width: 100%;
+    height: 50%;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 150px;
+    font-weight: bolder;
+    color: #1c512b;
+}
+    
+.sub-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(220, 131, 23)
+}
+
+.menu-all {
+    /* border: 5px solid black; */
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 270px;
+}
+
+.menu {
+    /* border: 10px solid red; */
+    width: 25%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 5px auto;
+    background-color: white;
+    border-radius: 10%;
+    opacity: 0.85;
+    box-shadow: 3px;
+    display: grid;
+    place-items: center;
+
+}
+
+.txt {
+    padding-top: 30px;
+    font-size: 70px;
+    font-weight: bolder;
+    color: #15391f;
+
+}
+
+.camp-icon {
+    /* border: 4px solid red; */
+    width: 300px;
+    height: 233px;
+    opacity: 1;
+    background-image: url("../img/tent.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hiking-icon {
+    /* border: 4px solid red; */
+    width: 300px;
+    height: 233px;
+    opacity: 1;
+    background-image: url("../img/map.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.riding-icon {
+    /* border: 4px solid red; */
+    width: 300px;
+    height: 233px;
+    opacity: 1;
+    background-image: url("../img/bicycle.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
