@@ -81,7 +81,20 @@ text-shadow: 10px 10px 2px #116228;
     text-align: center;
     padding-top: 200px;
     padding-bottom: 270px;
+    animation: fadeInUp 1.0s ease-out forwards;
 }
+
+@keyframes fadeInUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
 
 .menu {
     /* border: 10px solid red; */
@@ -97,6 +110,11 @@ text-shadow: 10px 10px 2px #116228;
     place-items: center;
 
 }
+
+
+
+
+
 
 .txt {
     font-family: 'SOYOMapleBoldTTF';
