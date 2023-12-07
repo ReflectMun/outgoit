@@ -5,9 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.sql.Date;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.ZoneId;
 
 @Entity(name = "CampingReview")
@@ -15,9 +13,9 @@ import java.time.ZoneId;
 @Setter
 @NoArgsConstructor
 public class CampingReviewDTO { // 이 DTO는 캠핑장 리뷰에 관한 데이터를 담을 DTO임
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "comment_number", nullable = false, unique = true)
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long commentNumber; // 리뷰 고유번호
 
     @Column(nullable = false)
