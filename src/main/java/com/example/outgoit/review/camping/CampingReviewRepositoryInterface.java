@@ -1,4 +1,4 @@
-package com.example.outgoit.review;
+package com.example.outgoit.review.camping;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

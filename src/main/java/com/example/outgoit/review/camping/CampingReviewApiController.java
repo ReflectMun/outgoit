@@ -1,4 +1,4 @@
-package com.example.outgoit.review;
+package com.example.outgoit.review.camping;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

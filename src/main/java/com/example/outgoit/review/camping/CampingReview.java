@@ -1,4 +1,4 @@
-package com.example.outgoit.review;
+package com.example.outgoit.review.camping;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
