@@ -14,34 +14,27 @@
     font-style: normal;
 }
 
-.body {
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
+    background-image: url("../img/index.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
     position: relative;
-    background-image: url("../img/index.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.header {
-    /* border: 5px solid red; */
-    width: 100%;
-    height: 100%;
-    padding-bottom: 170px;
+    width: 100vw;
+    height: 100vh;
 }
 
 .title-wrap {
-    /* border: 5px solid black; */
     width: 100%;
-    height: 50%;
+    height: 27vh;
+    margin-top: 8vw;
 }
 
 .title {
@@ -49,10 +42,10 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 150px;
+    font-size: 8.5vw;
     font-weight: bolder;
     color: #116228;
-    text-shadow: 10px 10px 2px rgb(222, 111, 26);
+    text-shadow: 0.7vw 0.7vw 0 rgb(222, 111, 26);
 }
 
 @keyframes bounce {
@@ -67,10 +60,9 @@
 }
 
 
-
 .title .go {
 color: rgb(242, 166, 52);
-text-shadow: 10px 10px 2px #116228;
+text-shadow: 0.7vw 0.7vw 0 #116228;
 
 }
 
@@ -80,7 +72,7 @@ text-shadow: 10px 10px 2px #116228;
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 50px;
+    font-size: 2.5vw;
     font-weight: bolder;
     /* color: rgb(0, 0, 0) */
 }
@@ -89,14 +81,12 @@ text-shadow: 10px 10px 2px #116228;
 .menu-wrap {
     /* border: 5px solid black; */
     width: 100%;
-    height: 50%;
-    display: flex;
+    height: 60vh;
+    display: flex; 
     justify-content: center;
-    text-align: center;
-    padding-top: 200px;
-    padding-bottom: 270px;
+    margin-top: 3vw ;
     animation: fadeInUp 1.0s ease-out forwards;
-}
+}   
 
 @keyframes fadeInUp {
     0% {
@@ -111,25 +101,22 @@ text-shadow: 10px 10px 2px #116228;
 
 
 .menu {
-    /* border: 10px solid red; */
     width: 25%;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    margin: 5px auto;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10%;
-    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.5);
+    height: 26vh;
     display: grid;
     place-items: center;
-
-}
-
-
+    padding-top: 5vw;
+    padding-bottom: 8vw;
+    margin: 3vw ;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10%;
+    box-shadow: 0px 0.7vw 0.7vw 0px rgba(0, 0, 0, 0.5);
+}    
 
 .txt {
     font-family: 'SOYOMapleBoldTTF';
-    padding-top: 30px;
-    font-size: 70px;
+    padding-top: 1vw;
+    font-size: 3.5vw;    
     font-weight: bolder;
     color: #185328;
 
