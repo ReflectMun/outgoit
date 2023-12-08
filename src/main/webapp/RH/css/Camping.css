@@ -113,12 +113,15 @@ body {
 }
 
 .rh-camping-content-wood-text {
-  background-color: #f0ecc8;
+  background-color: #fffff6;
   border: 1px solid rgb(145, 25, 105);
   width: 100%;
   padding-top: 5%;
   padding-bottom: 5%;
   font-size: 1vw;
+}
+.rh-camping-content-wood-text > p {
+  margin-top: 5%;
 }
 
 /* 안전사항 */
@@ -204,7 +207,7 @@ body {
   font-size: 5vw;
   left: 10vw;
   bottom: 5vw;
-  width: 28%;
+  width: 30%;
   animation: fadeInUp 1s ease-out forwards;
   font-family: "JalnanGothic";
 }
