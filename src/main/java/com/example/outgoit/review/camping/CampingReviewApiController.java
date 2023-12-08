@@ -1,4 +1,4 @@
-package com.example.outgoit.review;
+package com.example.outgoit.review.camping;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,11 +10,13 @@ import java.util.ArrayList;
 @RestController
 @RequestMapping("/api/review/camping")
 public class CampingReviewApiController {
+    //////////////////// 초기화 코드니까 말 없이 건드리지 마시오 /////////////////////////
     private final CampingReviewService campingReviewService;
 
     public CampingReviewApiController(CampingReviewService campingReviewService){
         this.campingReviewService = campingReviewService;
     }
+    ////////////////////////////////////////////////////////////////////////////
 
     @PostMapping("/submit")
     public boolean submitCampingAreaReview(){
@@ -51,7 +53,7 @@ public class CampingReviewApiController {
     }
 
     @GetMapping("/list")
-    public ArrayList<CampingReview> getCampingAreaList(){
+    public ArrayList<CampingReview> getCampingAreaReviewList(){
         return campingReviewService.loadCampingAreaReview(1);
     }
 }

@@ -1,4 +1,4 @@
-package com.example.outgoit.review;
+package com.example.outgoit.review.camping;
 
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
@@ -43,7 +43,7 @@ public class CampingReviewService {
     @Transactional
     public void deleteReview(int commentId){
         int countOfDeletedRecord = this.repo.deleteByCommentNumber(commentId);
-        System.out.printf("총 %d개의 리뷰가 수정됨. 레코드 넘버: %d\n", countOfDeletedRecord, commentId);
+        System.out.printf("총 %d개의 리뷰가 삭제됨. 레코드 넘버: %d\n", countOfDeletedRecord, commentId);
     }
 
     // 리뷰 작성
