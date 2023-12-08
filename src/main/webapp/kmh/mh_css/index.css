@@ -55,6 +55,19 @@
     text-shadow: 10px 10px 2px rgb(222, 111, 26);
 }
 
+@keyframes bounce {
+    
+    title {
+        
+        animation: bounce; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s; /* don't forget to set a duration! */
+     
+    }
+    
+}
+
+
+
 .title .go {
 color: rgb(242, 166, 52);
 text-shadow: 10px 10px 2px #116228;
@@ -71,6 +84,7 @@ text-shadow: 10px 10px 2px #116228;
     font-weight: bolder;
     /* color: rgb(0, 0, 0) */
 }
+
 
 .menu-all {
     /* border: 5px solid black; */
@@ -102,9 +116,8 @@ text-shadow: 10px 10px 2px #116228;
     padding-top: 100px;
     padding-bottom: 100px;
     margin: 5px auto;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10%;
-    opacity: 0.85;
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.5);
     display: grid;
     place-items: center;
@@ -113,15 +126,12 @@ text-shadow: 10px 10px 2px #116228;
 
 
 
-
-
-
 .txt {
     font-family: 'SOYOMapleBoldTTF';
     padding-top: 30px;
     font-size: 70px;
     font-weight: bolder;
-    color: #15391f;
+    color: #185328;
 
 }
 
