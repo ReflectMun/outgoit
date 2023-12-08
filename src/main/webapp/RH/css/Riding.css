@@ -1,0 +1,271 @@
+@charset "UTF-8";
+/* 캠핑 CSS */
+/* title font */
+@import url("https://fonts.googleapis.com/css2?family=Joti+One&display=swap");
+@font-face {
+  font-family: "JalnanGothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SOYOMapleBoldTTF";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+.rh-riding-container {
+  border: 1px solid rgb(0, 38, 255);
+}
+.rh-riding-content {
+  border: 1px solid rgb(18, 32, 112);
+}
+.rh-riding-content-title-box {
+  margin-bottom: 10%;
+}
+.rh-riding-content-title {
+  border: 1px solid rgb(199, 63, 63);
+  background-image: url("../img/자전거/자전거용\ 인포_\ 가이드2.jpg");
+  padding-top: 25%;
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+}
+
+/* 하이킹 콘텐츠 */
+.rh-riding-content-wood {
+  border: 1px solid rgb(34, 65, 168);
+  display: grid;
+  justify-items: center;
+}
+.rh-riding-content-wood-title1 {
+  border: 1px solid rgb(49, 145, 25);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+.rh-riding-content-wood-title {
+  background-image: url(../img/기타/나무보드.jpg);
+  background-size: contain;
+  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
+  width: 40%;
+  font-size: 5vw;
+  color: #275634;
+  -webkit-text-stroke: 2px #f0ecc8;
+  font-family: "Joti One", serif;
+  line-height: 1.2;
+  letter-spacing: -0.3vw;
+}
+.rh-riding-content-wood-bridge {
+  border: 1px solid rgb(238, 255, 0);
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  height: 100%;
+}
+.rh-riding-content-wood-bridge1 {
+  background-color: rgb(78, 47, 11);
+  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
+  width: 4%;
+  margin-left: 10%;
+}
+.rh-riding-content-wood-bridge2 {
+  background-color: rgb(78, 47, 11);
+  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
+  width: 4%;
+  height: 100%;
+  margin-right: 10%;
+}
+.rh-riding-content-wood-main {
+  border: 1px solid rgb(145, 141, 25);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.rh-riding-content-wood-set {
+  border: 1px solid rgb(49, 145, 25);
+  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
+  width: 60%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  background-image: url(../img/기타/나무보드.jpg);
+  background-size: contain;
+  background-position: center bottom 0px;
+}
+.rh-riding-content-wood-textbox {
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  top: 0;
+}
+
+.rh-riding-content-wood-text {
+  background-color: #fffff6;
+  border: 1px solid rgb(145, 25, 105);
+  width: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 1vw;
+}
+.rh-riding-content-wood-text > p {
+  margin-top: 5%;
+}
+
+/* 안전사항 */
+.rh-riding-safety-content-title {
+  border: 1px solid rgb(199, 63, 63);
+  background-image: url("../img/캠핑/camping_safety.png");
+  padding-top: 11.5%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.rh-riding-safety-content-title-text {
+  position: relative;
+  font-size: 5vw;
+  left: 13vw;
+  bottom: 5vw;
+  width: 28%;
+  animation: fadeInUp 1s ease-out forwards;
+  font-family: "JalnanGothic";
+}
+
+.rh-riding-safety-content-wood-main {
+  border: 1px solid rgb(145, 141, 25);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.rh-riding-safety-content-wood-title {
+  background-image: url(../img/기타/나무보드.jpg);
+  background-size: contain;
+  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
+  width: 40%;
+  font-family: "SOYOMapleBoldTTF";
+  font-size: 2vw;
+  line-height: 1.6;
+  color: white;
+  -webkit-text-stroke: 1px #000000;
+}
+
+.rh-riding-safety-content-wood-set {
+  border: 1px solid rgb(49, 145, 25);
+  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
+  width: 60%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  background-image: url(../img/기타/나무보드.jpg);
+  background-size: contain;
+  background-position: center bottom 0px;
+}
+.rh-riding-safety-content-wood-textbox {
+  margin: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 100%;
+  top: 0;
+}
+.rh-riding-safety-content-wood-bg {
+  background-color: aliceblue;
+  padding: 15%;
+  border-radius: 10%;
+  margin-bottom: 3%;
+}
+.rh-riding-safety-content-wood-text {
+  width: 100%;
+}
+
+/* 초보자 */
+.rh-riding-beginner-content-title {
+  border: 1px solid rgb(199, 63, 63);
+  background-image: url("../img/자전거/riding_beginner2.jpg");
+  padding-top: 11.5%;
+  background-position: 0% 65%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.rh-riding-beginner-content-title-text {
+  position: relative;
+  font-size: 5vw;
+  left: 10vw;
+  bottom: 5vw;
+  width: 30%;
+  animation: fadeInUp 1s ease-out forwards;
+  font-family: "JalnanGothic";
+}
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.rh-riding-beginner-content-wood-main {
+  border: 1px solid rgb(145, 141, 25);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.rh-riding-beginner-content-wood-title {
+  background-image: url(../img/기타/나무보드.jpg);
+  background-size: contain;
+  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
+  width: 40%;
+  font-family: "SOYOMapleBoldTTF";
+  font-size: 2vw;
+  line-height: 1.6;
+  color: white;
+  -webkit-text-stroke: 1px #000000;
+}
+
+.rh-riding-beginner-content-wood-set {
+  border: 1px solid rgb(49, 145, 25);
+  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
+  width: 60%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  background-image: url(../img/기타/나무보드.jpg);
+  background-size: contain;
+  background-position: center bottom 0px;
+}
+.rh-riding-beginner-content-wood-textbox {
+  margin: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 100%;
+  top: 0;
+}
+.rh-riding-beginner-content-wood-bg {
+  background-color: aliceblue;
+  padding: 15%;
+  border-radius: 10%;
+  margin-bottom: 3%;
+}
+.rh-riding-beginner-content-wood-text {
+  width: 100%;
+}
