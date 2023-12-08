@@ -33,6 +33,93 @@ body {
   justify-content: center;
   align-content: center;
 }
+/* 글씨 효과 */
+.hj-tracking {
+  user-select: none;
+  overflow: hidden;
+}
+.hj-tracking span {
+  animation: bounce 0.6s;
+  display: inline-block;
+  animation: float 0.2s ease-in-out infinite;
+}
+.hj-tracking:hover span {
+  animation: bounce 0.6s;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  25% {
+    transform: rotateX(20deg) translateY(2px) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(3deg) scale(1.1);
+  }
+}
+
+.hj-tracking span:nth-child(2) {
+  animation-delay: 0.05s;
+}
+.hj-tracking span:nth-child(3) {
+  animation-delay: 0.1s;
+}
+.hj-tracking span:nth-child(4) {
+  animation-delay: 0.15s;
+}
+.hj-tracking span:nth-child(5) {
+  animation-delay: 0.2s;
+}
+.hj-tracking span:nth-child(6) {
+  animation-delay: 0.25s;
+}
+.hj-tracking span:nth-child(7) {
+  animation-delay: 0.3s;
+}
+.hj-tracking span:nth-child(8) {
+  animation-delay: 0.35s;
+}
+
+.hj-riding {
+  user-select: none;
+  overflow: hidden;
+}
+.hj-riding span {
+  animation: bounce 0.6s;
+  display: inline-block;
+  animation: float 0.2s ease-in-out infinite;
+}
+.hj-riding:hover span {
+  animation: bounce 0.6s;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  25% {
+    transform: rotateX(20deg) translateY(2px) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(3deg) scale(1.1);
+  }
+}
+.hj-riding span:nth-child(2) {
+  animation-delay: 0.05s;
+}
+.hj-riding span:nth-child(3) {
+  animation-delay: 0.1s;
+}
+.hj-riding span:nth-child(4) {
+  animation-delay: 0.15s;
+}
+.hj-riding span:nth-child(5) {
+  animation-delay: 0.2s;
+}
+.hj-riding span:nth-child(6) {
+  animation-delay: 0.25s;
+}
 .hj-menu {
   border: 1px solid green;
   width: 20%;
@@ -60,4 +147,3 @@ body {
   width: 20%;
   height: 100%;
 }
-
