@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body, html{
+    overflow: hidden;
+}
+
 
 .hj-overlay {
     display: none;
@@ -15,7 +19,9 @@
 
 
 
-
+.hj-box1:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
 
 
 
@@ -27,7 +33,7 @@
     right: 39px;
 }
 
-.hj-box{
+.hj-box, .hj-box1{
     /* border: 1px solid pink; */
     margin-top: 60%;
     text-align: center;

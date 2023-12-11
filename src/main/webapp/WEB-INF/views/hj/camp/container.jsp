@@ -5,10 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../css_hj/footer.css">
-    <link rel="stylesheet" type="text/css" href="../css_hj/header.css">
-    <link rel="stylesheet" type="text/css" href="../css_hj/menu.css">
-    <script src="../js_hj/menu.js"></script>
+    <link rel="stylesheet" type="text/css" href="/resources/static/css_hj/footer.css">
+    <link rel="stylesheet" type="text/css" href="/resources/static/css_hj/header.css">
+    <link rel="stylesheet" type="text/css" href="/resources/static/css_hj/menu.css">
+    <script src="/resources/static/js_hj/menu.js"></script>
     
   </head>
   <body>
@@ -35,10 +35,10 @@
 
   <div class="hj-close-icon" onclick="">아이콘</div>
   <div class="hj-over-box">
-    <div class="hj-box">
+    <div class="hj-box1">
       <div class="hj-col">
         <div class="hj-span">
-          <div class="hj-home"><span>Home</span></div>
+          <div class="hj-home" id="hj-home"><span>Home</span></div>
         </div>
       </div>
     </div>
