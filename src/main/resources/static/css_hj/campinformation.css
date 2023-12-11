@@ -21,7 +21,7 @@ body {
   align-items: center;
 }
 .hj-info-name-img {
-  background-image: url(../img_hj/나무보드.jpg);
+  background-image: url(../Img_hj/나무보드.jpg);
   background-size: contain;
   background-position: center bottom 0px;
   border: 1px solid gray;
@@ -48,7 +48,7 @@ body {
 }
 .hj-contact-right,
 .hj-contact-left {
-  background-image: url(../img_hj/나무보드.jpg);
+  background-image: url(../Img_hj/나무보드.jpg);
   background-size: contain;
   background-position: center bottom 0px;
   border: 1px solid gray;
@@ -63,7 +63,7 @@ body {
 }
 /* 사진 내용 부분 */
 .hj-content-pic {
-  background-image: url(../img_hj/나무보드.jpg);
+  background-image: url(../Img_hj/나무보드.jpg);
   background-size: contain;
   background-position: center bottom 0px;
   border: 1px solid gray;

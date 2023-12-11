@@ -16,7 +16,12 @@ public class CampingAreaSearchPageController {
     @GetMapping("/container")
     public String containerPage(Model model){
 
-        return "hj/camp/jsp/container";
+        return "hj/camp/container";
+    }
+    @GetMapping("/campinformation")
+    public String campinformationPage(Model model){
+
+        return "hj/camp/campinformation";
     }
 
 }
