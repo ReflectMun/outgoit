@@ -24,8 +24,11 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation("mysql:mysql-connector-java:8.0.29")
-//    implementation 'com.oracle.database.jdbc:ojdbc8:21.1.0.0'
+    implementation 'mysql:mysql-connector-java:8.0.29'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    implementation 'jakarta.servlet:jakarta.servlet-api'
+    implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api'
+    implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
 
     compileOnly 'org.projectlombok:lombok'
 
