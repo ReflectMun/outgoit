@@ -1,4 +1,4 @@
-package com.example.outgoit.config;
+package com.example.outgoit.global_config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
