@@ -6,11 +6,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/camping")
-public class SearchCampingAreaController {
-    private CampingSearchService campingSearchService;
+public class CampingAreaSearchApiController {
+    private final CampingSearchService campingSearchService;
 
-    SearchCampingAreaController(){
-        this.campingSearchService = new CampingSearchService();
+    CampingAreaSearchApiController(CampingSearchService campingSearchService){
+        this.campingSearchService = campingSearchService;
     }
     @GetMapping("/search/{campName}")
     public List<CampingAreaInfoDTO> getChampingAreaInfo(@PathVariable String campName){

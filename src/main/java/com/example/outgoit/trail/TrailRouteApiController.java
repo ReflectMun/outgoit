@@ -11,8 +11,8 @@ import java.util.ArrayList;
 public class TrailRouteApiController {
     private final TrailRouteService trailRouteService;
 
-    public TrailRouteApiController(){
-        this.trailRouteService = new TrailRouteService();
+    public TrailRouteApiController(TrailRouteService trailRouteService){
+        this.trailRouteService = trailRouteService;
     }
 
     @GetMapping("/search")
