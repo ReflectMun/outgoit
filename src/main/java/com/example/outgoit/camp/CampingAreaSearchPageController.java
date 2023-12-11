@@ -16,9 +16,9 @@ public class CampingAreaSearchPageController {
 
     @GetMapping("/campingAbout")
     public String sendCampingHistoryController(Model model){
-        return "RH/jsp/Camping/Camping_About";
+       // return "RH/jsp/Camping/Camping_About";
         //return "RH/jsp/Camping/Camping_Beginner";
-      //  return "RH/jsp/Camping/Camping_Safety";
+       return "RH/jsp/Camping/Camping_Safety";
     }
 
 
