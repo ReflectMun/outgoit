@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../css_hj/footer.css">
     <link rel="stylesheet" type="text/css" href="../css_hj/header.css">
+    <link rel="stylesheet" type="text/css" href="../css_hj/menu.css">
+    <script src="../js_hj/menu.js"></script>
     
   </head>
   <body>
@@ -26,9 +28,16 @@
            
             </span> </div> 
         </div>
-        
+
 
         </div>
+<%--      메뉴 디브--%>
+      <div class="expand-container" id="expand-container">
+        <div class="expanding-element" id="expanding-element">
+          메뉴 들어가야하는데 왜
+        </div>
+      </div>
+<%--      contents page--%>
         <div>
           <!-- 컨텐츠 페이지 인쿠르드로 설정  -->
         </div>
