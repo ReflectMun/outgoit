@@ -23,20 +23,45 @@
         <div class="hj-left">
           <div class="hj-tracking hj-font"><span>T</span><span>r</span><span>a</span><span>c</span><span>k</span><span>i</span><span>n</span><span>g</span></div>
           <div class="hj-riding hj-font"><span>R</span><span>i</span><span>d</span><span>i</span><span>n</span><span>g</span></div>
-          <div class="hj-menu-tab"> <span class="">
-            <!-- 나중에 아이콘 추가 누를떄 메뉴 뜨게 설정하기 -->
-           
-            </span> </div> 
+          <div class="hj-menu-tab"> <div class="icon" id="icon" >아이콘</div>   </div>
         </div>
 
 
         </div>
 <%--      메뉴 디브--%>
-      <div class="expand-container" id="expand-container">
-        <div class="expanding-element" id="expanding-element">
-          메뉴 들어가야하는데 왜
+<div class="overlay" id="overlay">
+  <div class="hj-close-icon" onclick="">아이콘</div>
+  <div class="hj-over-box">
+    <div class="hj-box">
+      <div class="hj-col">
+        <div class="hj-span">
+          <div class="hj-home"><span>Home</span></div>
         </div>
       </div>
+    </div>
+    <div class="hj-box">
+      <div class="hj-col">
+        <div class="hj-span">
+          <div class="hj-story"><span>캠핑 이야기</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hj-box">
+      <div class="hj-col">
+        <div class="hj-span">
+          <div class="hj-info"><span>안전 정보</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hj-box">
+      <div class="hj-col">
+        <div class="hj-span">
+          <div class="hj-guide"><span>초보자 가이드</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <%--      contents page--%>
         <div>
           <!-- 컨텐츠 페이지 인쿠르드로 설정  -->
