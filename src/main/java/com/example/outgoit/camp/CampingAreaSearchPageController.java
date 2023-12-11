@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/camping")
 public class CampingAreaSearchPageController {
-    @GetMapping
+    @GetMapping("/camp")
     public String sendCampingSearchingPage(Model model){
         model.addAttribute("msg", "camping");
         return "jh/camp";
