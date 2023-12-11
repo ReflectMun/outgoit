@@ -11,12 +11,14 @@
 <head>
     <title>Spring Boot 3 JSP Page</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/resources/static/jh/camp.css">
 </head>
 <body>
     <h1>This is JSP Page with Spring Boot 3</h1>
-    <h2>From ${msg} controller</h2>
+    <h2 id="aaa">From ${msg} controller...</h2>
     <c:forEach var="i" begin="1" end="10" step="1">
         <div>${i}</div>
     </c:forEach>
+    <script type="text/javascript" src="/resources/static/ms/camp.js"></script>
 </body>
 </html>
