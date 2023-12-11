@@ -1,14 +1,19 @@
 package com.example.outgoit.camp;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/camping")
 public class SearchCampingAreaController {
-    @GetMapping("/search")
-    public CampingAreaInfoDTO getChampingAreaInfo(){
-        return new CampingAreaInfoDTO();
+    private CampingSearchService campingSearchService;
+
+    SearchCampingAreaController(){
+        this.campingSearchService = new CampingSearchService();
+    }
+    @GetMapping("/search/{campName}")
+    public List<CampingAreaInfoDTO> getChampingAreaInfo(@PathVariable String campName){
+        return campingSearchService.GetSearchedCampingAreaList(campName);
     }
 }
