@@ -23,13 +23,16 @@
         <div class="hj-left">
           <div class="hj-tracking hj-font"><span>T</span><span>r</span><span>a</span><span>c</span><span>k</span><span>i</span><span>n</span><span>g</span></div>
           <div class="hj-riding hj-font"><span>R</span><span>i</span><span>d</span><span>i</span><span>n</span><span>g</span></div>
-          <div class="hj-menu-tab"> <div class="icon" id="icon" >아이콘</div>   </div>
+          <div class="hj-menu-tab"> <div class="icon" id="icon">아이콘</div>   </div>
         </div>
 
 
         </div>
 <%--      메뉴 디브--%>
-<div class="overlay" id="overlay">
+
+<div class="hj-overlay" id="hj-overlay">
+  <div class="hj-expand-container" id="hj-expand-container">
+
   <div class="hj-close-icon" onclick="">아이콘</div>
   <div class="hj-over-box">
     <div class="hj-box">
@@ -61,6 +64,8 @@
       </div>
     </div>
   </div>
+
+    </div>
 </div>
 <%--      contents page--%>
         <div>

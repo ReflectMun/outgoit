@@ -1,5 +1,6 @@
 @charset "UTF-8";
-.overlay {
+
+.hj-overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -8,11 +9,18 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     align-items: center;
-    justify-content: center; 
-
-    border: 3px solid blueviolet;
+    justify-content: center;
     display: flex;
 }
+
+
+
+
+
+
+
+
+
 .hj-close-icon{
     position: fixed;
     top: 27px;
