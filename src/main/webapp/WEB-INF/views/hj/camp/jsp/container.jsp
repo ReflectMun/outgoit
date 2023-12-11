@@ -1,11 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/css/header.css" />
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../../../../../../resources/static/css_hj/header.css"/>
+    <link rel="stylesheet" href="../../../../../../resources/static/css_hj/footer.css">
     
   </head>
   <body>
@@ -34,7 +36,7 @@
         <!-- 푸터 시작작 -->
         <div class="hj-container">
           <div class="hj-footer-pic">
-            <img src="../img/푸터_위_나무.png" alt="" />
+            <img src="../img_hj/푸터_위_나무.png" alt="" />
           </div>
           <div class="hj-footer">
             <div class="hj-footer-box hj-footer-box-first">
