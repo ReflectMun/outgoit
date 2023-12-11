@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +9,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="../../js/camping.js"></script>
-    <link rel="stylesheet" href="../../css/camping.css" />
+    <link rel="stylesheet" href="../css/Camping.css" />
   </head>
   <body>
     <script>

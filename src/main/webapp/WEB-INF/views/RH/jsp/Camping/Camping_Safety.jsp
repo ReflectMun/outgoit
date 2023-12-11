@@ -1,10 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../../css/camping.css" />
+    <link rel="stylesheet" href="../css/Camping.css" />
   </head>
   <body>
     <div class="rh-camping-container">
@@ -45,8 +46,8 @@
                 <!-- 통나무 내용물 내부/통나무이미지 -->
                 <div class="rh-camping-safety-content-wood-textbox">
                   <!-- 안전정보 카드들을 감싸는 큰 div -->
+                  <!-- 안전정보 백그라운드 div / 안정정보 내용 div ↓-->
                   <div class="rh-camping-safety-content-wood-bg">
-                    <!-- 안전정보 백그라운드 div ↑ 안정정보 내용 div ↓-->
                     <div class="rh-camping-safety-content-wood-text">1</div>
                   </div>
                   <div class="rh-camping-safety-content-wood-bg">
