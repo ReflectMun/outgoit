@@ -11,6 +11,6 @@ public class CampingAreaSearchPageController {
     @GetMapping()
     public String sendCampingSearchingPage(Model model){
         model.addAttribute("msg", "camping");
-        return "camp";
+        return "jh/camp";
     }
 }
