@@ -1,6 +1,7 @@
 package com.example.outgoit.camp;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -35,7 +36,6 @@ public class CampingAreaInfoDTO {
     private String zipcode; // 우편번호
     private String mapX, mapY; // 위도 경도
     private String tel; // 전화번호
-    private String homepage; // 홈페이지 주소
     private String swrmCo; // 샤워실 개수
     private String brazierCl; // 화로대 개별 지참 여부 ex) 개별
     private String sbrsEtc; // 부대시설 ex) 전기,온수,물놀이장,놀이터,운동시설
@@ -44,4 +44,40 @@ public class CampingAreaInfoDTO {
     private String siteBottomCl3; // 테크바닥(나무마루) 자리 수
     private String siteBottomCl4; // 자갈바닥 자리 수
     private String siteBottomCl5; // 맨흙바닥 자리 수
+}
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+class ApiResponse {
+    private ResponseData response;
+}
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+class ResponseData {
+    private BodyData body;
+}
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+class BodyData {
+    private ItemsData items;
+}
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+class ItemsData {
+    private CampingAreaInfoDTO[] item;
 }
