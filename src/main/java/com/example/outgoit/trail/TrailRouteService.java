@@ -49,8 +49,6 @@ public class TrailRouteService {
                 .queryParam("key", key)
                 .build(true);
 
-        System.out.println(uri.toUriString());
-
         ObjectMapper mapper = new ObjectMapper();
         URL url = new URL(uri.toUriString());
         TrailRouteApiResponse res = mapper.readValue(url, TrailRouteApiResponse.class);
