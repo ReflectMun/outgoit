@@ -7,17 +7,17 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../css_hj/footer.css">
     <link rel="stylesheet" type="text/css" href="../css_hj/header.css">
-    <link rel="stylesheet" type="text/css" href="../css_hj/menu.css">
-    <script src="../js_hj/menu.js"></script>
     
   </head>
   <body>
+
+
     <div class="hj-container">
       <div class="hj-header">
         <div class="hj-right">
           <div class="hj-logo"><img src="" alt="" /></div>
           <!-- 로고 이미지 넣기 -->
-          <div class="hj-font">Out go it</div>
+          <div class="hj-title hj-font">Out go it</div>
           <!-- 글자 나중에 꾸미기  -->
         </div>
         <div class="hj-left">
@@ -30,43 +30,6 @@
         </div>
 <%--      메뉴 디브--%>
 
-<div class="hj-overlay" id="hj-overlay">
-  <div class="hj-expand-container" id="hj-expand-container">
-
-  <div class="hj-close-icon" onclick="">아이콘</div>
-  <div class="hj-over-box">
-    <div class="hj-box">
-      <div class="hj-col">
-        <div class="hj-span">
-          <div class="hj-home"><span>Home</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hj-box">
-      <div class="hj-col">
-        <div class="hj-span">
-          <div class="hj-story"><span>캠핑 이야기</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hj-box">
-      <div class="hj-col">
-        <div class="hj-span">
-          <div class="hj-info"><span>안전 정보</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="hj-box">
-      <div class="hj-col">
-        <div class="hj-span">
-          <div class="hj-guide"><span>초보자 가이드</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-    </div>
-</div>
 <%--      contents page--%>
         <div>
           <!-- 컨텐츠 페이지 인쿠르드로 설정  -->

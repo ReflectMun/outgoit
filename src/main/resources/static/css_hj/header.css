@@ -1,24 +1,39 @@
 @charset "UTF-8";
+
+@font-face {
+  font-family: 'JalnanGothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SOYOMapleBoldTTF';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
 .hj-container {
-  border: 2px solid black;
+  border: 2px solid red;
 }
 .hj-header {
-  border: 2px solid blue;
+  border: 5px solid skyblue;
   display: flex;
   height: 30%;
   width: 100%;
   justify-content: space-between;
-  /* background-color: #275634; */
+  background-color: #275634;
 }
 .hj-right {
   display: flex;
-  border: 1px solid green;
+  border: 3px solid green;
   justify-content: center;
   align-content: center;
   justify-content: space-evenly;
@@ -26,7 +41,7 @@ body {
 }
 .hj-left {
   display: flex;
-  border: 1px solid green;
+  border: 3px solid palevioletred;
 
   width: 30%;
   margin-left: 0%;
@@ -35,8 +50,13 @@ body {
 }
 /* 글씨 효과 */
 .hj-tracking {
+  font-family: 'SOYOMapleBoldTTF';
+  font-weight: bolder;
+  font-size: 1.5vw;
+  color: ;
   user-select: none;
   overflow: hidden;
+
 }
 .hj-tracking span {
   animation: bounce 0.6s;
@@ -82,6 +102,9 @@ body {
 }
 
 .hj-riding {
+  font-family: 'SOYOMapleBoldTTF';
+  font-weight: bolder;
+  font-size: 1.5vw;
   user-select: none;
   overflow: hidden;
 }
@@ -137,10 +160,9 @@ body {
 }
 .hj-font {
   border: 1px solid red;
-  font-size: 20px;
   margin: 5%;
-  width: 30%;
-  height: 30%;
+  width: 35%;
+  height: 35%;
 }
 .hj-menu-tab {
   border: 1px solid red;
