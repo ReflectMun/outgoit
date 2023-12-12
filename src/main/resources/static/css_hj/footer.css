@@ -1,23 +1,22 @@
 @charset "UTF-8";
 body {
   margin: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 .hj-container {
   width: 100%;
-  /*border: 10px solid black;*/
+  border: 2px solid black;
 }
 .hj-footer-pic img {
   width: 100%;
 }
 .hj-footer {
-  width: 100vw;
-  height: 20vh;
+  width: 100%;
+  height: 100%;
   border: 1px solid blue;
   display: flex;
   justify-content: space-around;
-  background-color: #275634;
 }
 
 .hj-footer-box {
