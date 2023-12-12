@@ -167,7 +167,7 @@ body {
 .rh-camping-safety-content-wood-set {
   border: 1px solid rgb(49, 145, 25);
   box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
-  width: 60%;
+  width: 70%;
   height: 100%;
   text-align: center;
   display: flex;
@@ -191,9 +191,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 28%;
-  max-height: 400px;
-  height: 20vh;
+  width: 30%;
+  height: 30%;
   font-size: 1vw;
   position: relative;
   padding: 1%;
@@ -257,7 +256,7 @@ body {
 .rh-camping-beginner-content-wood-set {
   border: 1px solid rgb(49, 145, 25);
   box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
-  width: 60%;
+  width: 70%;
   height: 100%;
   text-align: center;
   display: flex;
@@ -266,7 +265,7 @@ body {
   background-position: center bottom 0px;
 }
 .rh-camping-beginner-content-wood-textbox {
-  margin: 5%;
+  margin: 3%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -277,10 +276,23 @@ body {
 }
 .rh-camping-beginner-content-wood-bg {
   background-color: aliceblue;
-  padding: 15%;
-  border-radius: 10%;
   margin-bottom: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 30%;
+  font-size: 1vw;
+  position: relative;
+  padding: 1%;
 }
-.rh-camping-beginner-content-wood-text {
+.rh-camping-safety-content-wood-text {
   width: 100%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  position: absolute;
+}
+#content {
+  font-size: 0.8vw;
 }
