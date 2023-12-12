@@ -44,6 +44,12 @@ public class CampingAreaInfoDTO {
     private String siteBottomCl3; // 테크바닥(나무마루) 자리 수
     private String siteBottomCl4; // 자갈바닥 자리 수
     private String siteBottomCl5; // 맨흙바닥 자리 수
+
+    private String errorMessage; // 에러 발생시 메시지
+
+    public CampingAreaInfoDTO(String  errorMessage){
+        this.errorMessage = errorMessage;
+    }
 }
 
 @JsonIgnoreProperties(ignoreUnknown = true)
