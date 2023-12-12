@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $(".icon").show();
+        $(".content").hide();
+
+        $(".icon").click(function () {
+          $(".i1").hide();
+          $(".c1").show();
+          $(".c2").show();
+        });
+        $("#content").click(function () {
+          $("#content").hide();
+          $("#icon").show();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="icon i1">1</div>
+    <div class="content c1">안뇽</div>
+    <div class="icon i2">2</div>
+    <div class="content c2">하세요</div>
+  </body>
+</html>
