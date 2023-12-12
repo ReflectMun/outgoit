@@ -1,43 +1,154 @@
 @charset "UTF-8";
-body, html{
-    overflow: hidden;
+/* 전체 div */
+/*별똥별 실험*/
+body{
+ overflow: hidden;
+}
+/*실험 2*/
+.hover-effect {
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+  /*background-color: #3498db;*/
+  color: #fff;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
 }
 
+.stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
 
+.star {
+  position: absolute;
+  background: #fff;
+  width: 2px;
+  height: 2px;
+  animation: shooting-star 5s infinite linear;
+}
+
+@keyframes shooting-star {
+  to {
+    transform: translateX(-100vw) translateY(100vh);
+  }
+}
+
+.hover-effect:hover {
+  background-color: #2980b9;
+}
+/*실험 2 end*/
+/*.hj-col {*/
+/*  position: relative;*/
+/*  display: inline-block;*/
+/*  !*padding: 20px;*!*/
+/*  !*background-color: black;*!*/
+/*  color: #fff;*/
+/*  transition: background-color 0.3s ease;*/
+/*  overflow: hidden; !* 내부의 별똥별이 넘치지 않도록 숨겨진 영역 설정 *!*/
+/*}*/
+
+/*.stars {*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  pointer-events: none; !* 별똥별 요소에 대한 이벤트를 무시하도록 설정 *!*/
+/*}*/
+
+/*.star {*/
+/*  position: absolute;*/
+/*  background: #fff;*/
+/*  width: 2px;*/
+/*  height: 2px;*/
+/*  animation: shooting-star 5s infinite linear;*/
+/*}*/
+
+/*@keyframes shooting-star {*/
+/*  to {*/
+/*    transform: translateX(-100vw) translateY(100vh);*/
+/*  }*/
+/*}*/
+
+/*.hj-box:hover {*/
+/*  background-color: black;*/
+/*}*/
+/*시작*/
 .hj-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    align-items: center;
-    justify-content: center;
-    display: flex;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+
+  /* border: 4px solid red; */
 }
-.hj
-
-
-.hj-box1:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+/* 아이콘 */
+.hj-box-1 {
+  height: 9%;
+  /* border: 1px solid violet; */
+}
+.hj-row-1 {
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+}
+.hj-col-1 {
+  position: fixed;
+  right: 0;
+  width: 6%;
+  height: 8%;
+}
+.hj-icon {
+  text-align: center;
+  margin-top: 20%;
+}
+/* 나머지 디브 */
+.hj-box {
+  /* display: flex;
+  justify-content: center; */
+  /* border: 1px solid violet; */
+  height: 20%;
+}
+.hj-row {
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+}
+.hj-col {
+  width: 40%;
+  text-align: center;
 }
 
-
-
-
-
-.hj-close-icon{
-    position: fixed;
-    top: 27px;
-    right: 39px;
+.hj-home,
+.hj-story,
+.hj-info,
+.hj-guide {
+  text-shadow: 1vw;
+  font-size: 2vw;
+  margin-top: 8%;
 }
-
-.hj-box, .hj-box1{
-    /* border: 1px solid pink; */
-    margin-top: 60%;
-    text-align: center;
-}
-.hj-home, .hj-story, .hj-info, .hj-guide{
-    font-size: 2vw;
-}
+/* 호버 이벤트 */
+/*.hj-col:hover {*/
+/*  background-color: black;*/
+/*}*/
+/*.hj-col {*/
+/*  padding: 20px;*/
+/*  !* background-color: #3498db; *!*/
+/*  color: #fff;*/
+/*  transition: background-color 0.9s ease;*/
+/*  border: 1px solid black;*/
+/*}*/
