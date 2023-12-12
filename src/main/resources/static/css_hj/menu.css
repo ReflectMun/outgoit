@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* 전체 div */
-/*별똥별 실험*/
+
 @font-face {
   font-family: 'JalnanGothic';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
@@ -11,7 +11,45 @@ body{
  overflow: hidden;
   font-family: 'JalnanGothic';
 }
-/*실험 2*/
+/*아이콘 클릭했을떄 가운데서 퍼지는 css 효과*/
+.hj-menu-icon{
+  cursor: pointer;
+}
+.hj-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: dimgray;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  animation-fill-mode: forwards;
+  animation: expand 1s ease-out, fadeOut 1s ease-out;
+  /* border: 4px solid red; */
+}
+@keyframes expand {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+/* 별똥별 효과*/
 .hj-col, .hj-col-2, .hj-col-3, .hj-col-4 {
   position: relative;
   display: inline-block;
@@ -20,6 +58,8 @@ body{
   color: #fff;
   transition: background-color 0.3s ease;
   overflow: hidden;
+  width: 100%;
+  text-align: center;
 }
 
 .hj-star-container, .hj-star-container-2, .hj-star-container-3, .hj-star-container-4 {
@@ -57,57 +97,8 @@ body{
 .hj-col-4:hover {
   background-color: black;
 }
-/*실험 2 end*/
-/*.hj-col {*/
-/*  position: relative;*/
-/*  display: inline-block;*/
-/*  !*padding: 20px;*!*/
-/*  !*background-color: black;*!*/
-/*  color: #fff;*/
-/*  transition: background-color 0.3s ease;*/
-/*  overflow: hidden; !* 내부의 별똥별이 넘치지 않도록 숨겨진 영역 설정 *!*/
-/*}*/
+/*원래 css 효과*/
 
-/*.stars {*/
-/*  position: absolute;*/
-/*  top: 0;*/
-/*  left: 0;*/
-/*  width: 100%;*/
-/*  height: 100%;*/
-/*  pointer-events: none; !* 별똥별 요소에 대한 이벤트를 무시하도록 설정 *!*/
-/*}*/
-
-/*.star {*/
-/*  position: absolute;*/
-/*  background: #fff;*/
-/*  width: 2px;*/
-/*  height: 2px;*/
-/*  animation: shooting-star 5s infinite linear;*/
-/*}*/
-
-/*@keyframes shooting-star {*/
-/*  to {*/
-/*    transform: translateX(-100vw) translateY(100vh);*/
-/*  }*/
-/*}*/
-
-/*.hj-box:hover {*/
-/*  background-color: black;*/
-/*}*/
-/*시작*/
-.hj-overlay {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  align-items: center;
-  justify-content: center;
-
-  /* border: 4px solid red; */
-}
 /* 아이콘 */
 .hj-box-1 {
   height: 9%;
@@ -147,10 +138,7 @@ body{
   height: 100%;
   width: 40%;
 }
-.hj-col, .hj-col-2, .hj-col-3, .hj-col-4 {
-  width: 100%;
-  text-align: center;
-}
+
 
 .hj-home,
 .hj-story,
@@ -160,14 +148,4 @@ body{
   font-size: 2vw;
   margin-top: 8%;
 }
-/* 호버 이벤트 */
-/*.hj-col:hover {*/
-/*  background-color: black;*/
-/*}*/
-/*.hj-col {*/
-/*  padding: 20px;*/
-/*  !* background-color: #3498db; *!*/
-/*  color: #fff;*/
-/*  transition: background-color 0.9s ease;*/
-/*  border: 1px solid black;*/
-/*}*/
+

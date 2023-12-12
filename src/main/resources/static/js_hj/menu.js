@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 
-// jquery 실험
+// 별똥별효과
     $(document).ready(function() {
         const hoverEffect = $('.hj-col');
         const starsContainer = $('.hj-star-container');
@@ -81,7 +81,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
+    // 메뉴 누르면 가운데서 퍼지는 효과
+        $(document).ready(function() {
+            $('.hj-menu-icon').on('click', function() {
+                $('.hj-overlay').fadeToggle(100); // 500은 애니메이션 지속 시간(ms)입니다. 필요에 따라 조절 가능
+            });
+        });
 
 
 

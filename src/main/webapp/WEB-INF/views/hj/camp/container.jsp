@@ -44,7 +44,7 @@ pageEncoding="UTF-8"%>
             ><span>n</span><span>g</span>
           </div>
           <div class="hj-menu-tab">
-            <div class="icon" id="icon">아이콘</div>
+            <div class="hj-menu-icon" id="hj-menu-icon">&#128269;</div>
           </div>
         </div>
       </div>
@@ -55,7 +55,7 @@ pageEncoding="UTF-8"%>
         <div class="hj-box-1">
           <div class="hj-row-1">
             <div class="hj-col-1">
-              <div class="hj-icon"><span>아이콘</span></div>
+              <div class="hj-menu-icon">&#128269;</div>
             </div>
           </div>
         </div>
