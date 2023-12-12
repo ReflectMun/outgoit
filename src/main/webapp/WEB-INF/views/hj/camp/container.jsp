@@ -50,13 +50,8 @@ pageEncoding="UTF-8"%>
       </div>
       <%-- 메뉴 디브--%>
 
-<%--      실험--%>
       <div class="hj-overlay" id="hj-overlay">
-<%--       실험--%>
-  <div class="hover-effect">
-    <p>마우스를 가져가보세요.</p>
-    <div class="stars-container"></div>
-  </div>
+
         <div class="hj-box-1">
           <div class="hj-row-1">
             <div class="hj-col-1">

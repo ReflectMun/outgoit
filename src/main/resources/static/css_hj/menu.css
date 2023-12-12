@@ -1,8 +1,15 @@
 @charset "UTF-8";
 /* 전체 div */
 /*별똥별 실험*/
+@font-face {
+  font-family: 'JalnanGothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 body{
  overflow: hidden;
+  font-family: 'JalnanGothic';
 }
 /*실험 2*/
 .hj-col, .hj-col-2, .hj-col-3, .hj-col-4 {
