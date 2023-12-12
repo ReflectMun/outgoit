@@ -47,7 +47,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
         <div class="hj-box-1">
           <div class="hj-row-1">
             <div class="hj-col-1">
-              <div class="hj-menu-icon">&#128269;</div>
+              <div class="hj-menu-icon-2"></div>
             </div>
           </div>
         </div>
@@ -57,6 +57,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
             <div class="hj-col">
               <div class="hj-home" id="hj-home"><span>Home</span></div>
               <div class="hj-star-container"></div>
+
             </div>
           </div>
         </div>
