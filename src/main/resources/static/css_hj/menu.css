@@ -5,7 +5,7 @@ body{
  overflow: hidden;
 }
 /*실험 2*/
-.hover-effect {
+.hj-col, .hj-col-2, .hj-col-3, .hj-col-4 {
   position: relative;
   display: inline-block;
   padding: 20px;
@@ -15,7 +15,7 @@ body{
   overflow: hidden;
 }
 
-.stars-container {
+.hj-star-container, .hj-star-container-2, .hj-star-container-3, .hj-star-container-4 {
   position: absolute;
   top: 0;
   left: 0;
@@ -24,11 +24,11 @@ body{
   pointer-events: none;
 }
 
-.star {
+.star, .star2, .star3, .star4 {
   position: absolute;
   background: #fff;
-  width: 2px;
-  height: 2px;
+  width: 5px;
+  height: 3px;
   animation: shooting-star 5s infinite linear;
 }
 
@@ -38,8 +38,17 @@ body{
   }
 }
 
-.hover-effect:hover {
-  background-color: #2980b9;
+.hj-col:hover {
+  background-color: black;
+}
+.hj-col-2:hover {
+  background-color: black;
+}
+.hj-col-3:hover {
+  background-color: black;
+}
+.hj-col-4:hover {
+  background-color: black;
 }
 /*실험 2 end*/
 /*.hj-col {*/
@@ -120,6 +129,8 @@ body{
   justify-content: center; */
   /* border: 1px solid violet; */
   height: 20%;
+  display: flex;
+  justify-content: center;
 }
 .hj-row {
   /* border: 1px solid blue; */
@@ -127,9 +138,10 @@ body{
   justify-content: center;
   align-content: center;
   height: 100%;
-}
-.hj-col {
   width: 40%;
+}
+.hj-col, .hj-col-2, .hj-col-3, .hj-col-4 {
+  width: 100%;
   text-align: center;
 }
 
@@ -137,7 +149,7 @@ body{
 .hj-story,
 .hj-info,
 .hj-guide {
-  text-shadow: 1vw;
+
   font-size: 2vw;
   margin-top: 8%;
 }

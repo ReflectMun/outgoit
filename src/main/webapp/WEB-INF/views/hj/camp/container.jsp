@@ -69,27 +69,31 @@ pageEncoding="UTF-8"%>
           <div class="hj-row">
             <div class="hj-col">
               <div class="hj-home" id="hj-home"><span>Home</span></div>
+              <div class="hj-star-container"></div>
             </div>
           </div>
         </div>
         <div class="hj-box">
           <div class="hj-row">
-            <div class="hj-col">
+            <div class="hj-col-2">
               <div class="hj-story"><span>캠핑 이야기</span></div>
+              <div class="hj-star-container-2"></div>
             </div>
           </div>
         </div>
         <div class="hj-box">
           <div class="hj-row">
-            <div class="hj-col">
+            <div class="hj-col-3">
               <div class="hj-info"><span>안전 정보</span></div>
+              <div class="hj-star-container-3"></div>
             </div>
           </div>
         </div>
         <div class="hj-box">
           <div class="hj-row">
-            <div class="hj-col">
+            <div class="hj-col-4">
               <div class="hj-guide"><span>초보자 가이드</span></div>
+              <div class="hj-star-container-4"></div>
             </div>
           </div>
         </div>
