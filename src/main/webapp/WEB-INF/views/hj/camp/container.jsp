@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%> <%@ page language="java" contentType="text/html;
+ <%@ page language="java" contentType="text/html;
 charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,35 +6,24 @@ charset=UTF-8" pageEncoding="UTF-8"%>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../css_hj/footer.css" />
-    <link rel="stylesheet" type="text/css" href="../css_hj/header.css" />
-    <<<<<<< HEAD =======
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="/resources/static/css_hj/footer.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="/resources/static/css_hj/header.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="/resources/static/css_hj/menu.css"
-    />
+    <link rel="stylesheet" type="text/css" href="../css_hj/footer.css">
+    <link rel="stylesheet" type="text/css" href="../css_hj/header.css">
+    <link rel="stylesheet" type="text/css" href="../css_hj/menu.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/resources/static/js_hj/menu.js"></script>
-
-    >>>>>>> hj
   </head>
   <body>
+
+
+
+
+
+  <%-- 헤더 시작 --%>
     <div class="hj-container">
       <div class="hj-header">
         <div class="hj-right">
           <div class="hj-logo"></div>
-          <!-- 로 고 이미지 넣기 -->
+          <!-- 로고 이미지 넣기 -->
           <div class="hj-title">Out<span>&nbsp;go&nbsp;</span>it</div>
           <!-- 글자 나중에    -->
         </div>
@@ -48,34 +36,13 @@ charset=UTF-8" pageEncoding="UTF-8"%>
             <span>R</span><span>i</span><span>d</span><span>i</span
             ><span>n</span><span>g</span>
           </div>
-          <div class="hj-menu-tab"><div class="icon" id="icon"></div></div>
+          <div class="hj-menu-tab"><div class="hj-menu-icon" id="icon"></div></div>
         </div>
       </div>
-      <%-- 메뉴 디브--%> <%-- contents page--%>
-      <div>
-        <!-- 컨텐츠 페이지 인쿠르드로 설정  -->
-      </div>
-      <!-- 푸터 시작작 -->
-      <div class="hj-container">
-        <div class="hj-footer-pic">
-          <img src="../Img_hj/footer_tree.png" alt="" />
-          =======
-          <div class="hj-tracking hj-font">
-            <span>T</span><span>r</span><span>a</span><span>c</span
-            ><span>k</span><span>i</span><span>n</span><span>g</span>
-            >>>>>>> hj
-          </div>
-          <div class="hj-riding hj-font">
-            <span>R</span><span>i</span><span>d</span><span>i</span
-            ><span>n</span><span>g</span>
-          </div>
-          <div class="hj-menu-tab">
-            <div class="hj-menu-icon" id="hj-menu-icon">&#128269;</div>
-          </div>
-        </div>
-      </div>
-      <%-- 메뉴 디브--%>
 
+      <%-- 헤더 끝--%>
+
+      <%-- 메뉴 디브--%>
       <div class="hj-overlay" id="hj-overlay">
         <div class="hj-box-1">
           <div class="hj-row-1">
@@ -118,11 +85,17 @@ charset=UTF-8" pageEncoding="UTF-8"%>
           </div>
         </div>
       </div>
+
+      <%-- 메뉴 끝--%>
+
       <%-- contents page--%>
       <div>
         <!-- 컨텐츠 페이지 인쿠르드로 설정  -->
       </div>
-      <!-- 푸터 시작작 -->
+
+      <%-- 컨텐트 페이지 끝--%>
+
+      <!-- 푸터 시작 -->
       <div class="hj-container">
         <div class="hj-footer-pic">
           <img src="../Img_hj/footer_tree.png" alt="" />
