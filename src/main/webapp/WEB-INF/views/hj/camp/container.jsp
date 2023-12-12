@@ -15,15 +15,15 @@
     <div class="hj-container">
       <div class="hj-header">
         <div class="hj-right">
-          <div class="hj-logo"><img src="" alt="" /></div>
-          <!-- 로고 이미지 넣기 -->
-          <div class="hj-title hj-font">Out go it</div>
-          <!-- 글자 나중에 꾸미기  -->
+          <div class="hj-logo"></div>
+          <!-- 로 고 이미지 넣기 -->
+          <div class="hj-title">Out<span>&nbsp;go&nbsp;</span>it</div>
+          <!-- 글자 나중에    -->
         </div>
         <div class="hj-left">
           <div class="hj-tracking hj-font"><span>T</span><span>r</span><span>a</span><span>c</span><span>k</span><span>i</span><span>n</span><span>g</span></div>
           <div class="hj-riding hj-font"><span>R</span><span>i</span><span>d</span><span>i</span><span>n</span><span>g</span></div>
-          <div class="hj-menu-tab"> <div class="icon" id="icon">아이콘</div>   </div>
+          <div class="hj-menu-tab"> <div class="icon" id="icon"></div>   </div>
         </div>
 
 
@@ -74,7 +74,7 @@
                   <div class="hj-footer-col">
                       <div class="hj-footer-links">Links</div>
                       
-                      <div class="hj-footer-kobox">
+                      <div class="hj-footer-ko box">
                         <div class="hj-footer-home"><img src="" alt="" onclick="">home</div>
                       <div class="hj-footer-camp"><img src="" alt="" onclick="">camping</div>
                       <div class="hj-footer-tracking"><img src="" alt="" onclick="">Tracking</div>
