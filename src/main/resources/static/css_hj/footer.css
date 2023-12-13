@@ -8,19 +8,27 @@ body {
   width: 100%;
   border: 2px solid black;
 }
-.hj-footer-pic img {
+.hj-footer-pic{
+  height: 294px;
+}
+.hj-footer img {
+  position: absolute;
+  bottom: 110px;
+  /*margin-top: 12px;*/
   width: 100%;
 }
 .hj-footer {
   width: 100vw;
-  height: 15.5vh;
+  height: auto;
   border: 1px solid blue;
   display: flex;
+  position: relative;
   justify-content: space-around;
   background-color: #275634;
 }
 
 .hj-footer-box {
+  padding-top: 3.2vh;
   border: 1px solid green;
   width: 100%;
 }
@@ -28,15 +36,20 @@ body {
   /*margin-left: 4%;*/
 }
 .hj-footer-garo {
+  height: 100%;
   border: 1px solid red;
 }
 .hj-footer-col {
+  height: 100%;
   border: 1px solid pink;
+  display: grid;
 }
 .hj-footer-kobox {
   display: flex;
   justify-content: space-around;
   color: rgb(242, 166, 52);
+  height: 100%;
+  min-height: 80px;
 }
 .hj-footer-logo {
   margin: 1%;
@@ -71,13 +84,13 @@ body {
   margin: 15%;
 }
 .hj-footer-connact {
-  margin: 1%;
-  padding: 1%;
+  margin: 5px;
+  padding: 5px;
   color: rgb(242, 166, 52);
   background-color: #FFFAF6;
   border-radius: 10%;
   width: 5.5vw;
-  height: 2vh;
+  height: 25px;
   text-align: center;
 }
 .hj-tel-icon,

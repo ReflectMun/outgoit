@@ -99,14 +99,14 @@ charset=UTF-8" pageEncoding="UTF-8"%>
       <!-- 푸터 시작 -->
       <div class="hj-container">
         <div class="hj-footer-pic">
-          <img src="../Img_hj/footer_tree.png" alt="" />
+
         </div>
         <div class="hj-footer">
+          <img src="../Img_hj/footer_tree.png" alt="" />
           <div class="hj-footer-box hj-footer-box-first">
             <div class="hj-footer-garo">
               <div class="hj-footer-col">
                 <div class="hj-footer-logo">Out <span>Go</span> It</div>
-
                 <div class="hj-footer-kobox">
                   <div class="hj-footer-kozin">
                     <span onclick="">개인정보 처리 방침</span>
@@ -122,15 +122,14 @@ charset=UTF-8" pageEncoding="UTF-8"%>
             <div class="hj-footer-garo">
               <div class="hj-footer-col">
                 <div class="hj-footer-connact">connacts</div>
-
                 <div class="hj-footer-kobox">
                   <div class="hj-footer-tel">
-                    <div class="hj-tel-icon"><img src="" alt="" />image</div>
+                    <div class="hj-tel-icon">image</div>
                     <div class="hj-tel">telephone</div>
                   </div>
                   <div class="hj-footer-location">
                     <div class="hj-location-icon">
-                      <img src="" alt="" />image >>>>>>> hj
+                      image
                     </div>
                     <div class="hj-location">location</div>
                   </div>
@@ -142,7 +141,6 @@ charset=UTF-8" pageEncoding="UTF-8"%>
             <div class="hj-footer-garo">
               <div class="hj-footer-col">
                 <div class="hj-footer-links">Links</div>
-
                 <div class="hj-footer-kobox">
                   <div class="hj-footer-home">
                     <img src="" alt="" onclick="" />home
