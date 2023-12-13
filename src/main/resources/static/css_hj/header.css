@@ -93,6 +93,7 @@ body {
   overflow: hidden;
   background-color: #FFFAF6;
   border-radius: 10%;
+  box-shadow: 0.2vw 0.2vw 0.2vw 0 #173b21;
 }
 .hj-tracking span {
   animation: bounce 0.6s;
@@ -141,12 +142,12 @@ body {
   font-family: 'SOYOMapleBoldTTF';
   font-weight: bolder;
   font-size: 1.5vw;
-  color: rgb(222, 111, 26);
+  color: rgb(242, 166, 52);
   user-select: none;
   overflow: hidden;
-  color: rgb(242, 166, 52);
   background-color: #FFFAF6;
   border-radius: 10%;
+  box-shadow: 0.2vw 0.2vw 0.2vw 0 #173b21;
 }
 .hj-riding span {
   animation: bounce 0.6s;
@@ -217,7 +218,7 @@ body {
 }
 
 .hj-menu-icon {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   width: 3.5vw;
   height: 6vh;
   background-image: url("../Img_hj/menu_sun1.png");

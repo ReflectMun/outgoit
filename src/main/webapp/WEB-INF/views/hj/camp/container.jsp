@@ -99,10 +99,9 @@ charset=UTF-8" pageEncoding="UTF-8"%>
       <!-- 푸터 시작 -->
       <div class="hj-container">
         <div class="hj-footer-pic">
-
+          <img src="../Img_hj/footer_tree.png" alt="" />
         </div>
         <div class="hj-footer">
-          <img src="../Img_hj/footer_tree.png" alt="" />
           <div class="hj-footer-box hj-footer-box-first">
             <div class="hj-footer-garo">
               <div class="hj-footer-col">
@@ -121,17 +120,15 @@ charset=UTF-8" pageEncoding="UTF-8"%>
           <div class="hj-footer-box">
             <div class="hj-footer-garo">
               <div class="hj-footer-col">
-                <div class="hj-footer-connact">connacts</div>
+                <div class="hj-footer-connact">Connacts</div>
                 <div class="hj-footer-kobox">
                   <div class="hj-footer-tel">
-                    <div class="hj-tel-icon">image</div>
-                    <div class="hj-tel">telephone</div>
+                    <div class="hj-tel-icon"></div>
+                    <div class="hj-tel"><sapn>telephone</sapn></div>
                   </div>
                   <div class="hj-footer-location">
-                    <div class="hj-location-icon">
-                      image
-                    </div>
-                    <div class="hj-location">location</div>
+                    <div class="hj-location-icon"></div>
+                    <div class="hj-location"><sapn>location</sapn></div>
                   </div>
                 </div>
               </div>

@@ -8,15 +8,15 @@ body {
   width: 100%;
   border: 2px solid black;
 }
-.hj-footer-pic{
-  height: 294px;
+
+.hj-footer-pic > img {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  z-index: 5;
+  margin-top: 15vh;
 }
-.hj-footer img {
-  position: absolute;
-  bottom: 110px;
-  /*margin-top: 12px;*/
-  width: 100%;
-}
+
 .hj-footer {
   width: 100vw;
   height: auto;
@@ -25,7 +25,16 @@ body {
   position: relative;
   justify-content: space-around;
   background-color: #275634;
+  border-top: 0.35vw solid #1c4728;
 }
+
+@media screen and (max-width: 400px) {
+  .container {
+    max-height: 5vh; /* 원하는 최대 높이 값 설정 */
+    overflow-y: auto; /* 내용이 넘칠 경우 스크롤 표시 */
+  }
+}
+
 
 .hj-footer-box {
   padding-top: 3.2vh;
@@ -46,10 +55,9 @@ body {
 }
 .hj-footer-kobox {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   color: rgb(242, 166, 52);
-  height: 100%;
-  min-height: 80px;
+  height: 7.5vh;
 }
 .hj-footer-logo {
   margin: 1%;
@@ -58,8 +66,10 @@ body {
   background-color: #FFFAF6;
   border-radius: 10%;
   width: 5.5vw;
-  height: 2vh;
+  height: 1.8vh;
   text-align: center;
+  box-shadow: 0.07vw 0.07vw 0.07vw 0 #173b21;
+  font-size: 1vw;
 }
 
 .hj-footer-logo > span {
@@ -71,46 +81,83 @@ body {
 
 .hj-footer-kozin,
 .hj-footer-design {
-  margin: 3%;
+  margin: 1vw;
+  width: 10vw;
+  text-align: center;
+  font-size: 1vw;
 }
 /* 두번쨰 푸터 */
 .hj-footer-tel,
 .hj-footer-location {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  text-align: center;
+  width: 10vw;
+  height: 3.5vh;
+  margin: 1vw;
+  font-size: 1vw;
+
 }
 .hj-tel,
 .hj-location {
-  margin: 15%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1vw;
 }
 .hj-footer-connact {
-  margin: 5px;
-  padding: 5px;
-  color: rgb(242, 166, 52);
+  margin: 1%;
+  padding: 1%;
+  color: rgb(222, 111, 26);
   background-color: #FFFAF6;
   border-radius: 10%;
   width: 5.5vw;
-  height: 25px;
+  height: 1.8vh;
   text-align: center;
+  box-shadow: 0.07vw 0.07vw 0.07vw 0 #173b21;
+  font-size: 1vw;
+
 }
-.hj-tel-icon,
+.hj-tel-icon{
+  width: 1.2vw;
+  height: 1.2vw;
+  background-image: url("../../Img_hj/tel.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-right: 0.35vw;
+
+}
+
+
 .hj-location-icon {
-  border: 1px solid saddlebrown;
+  width: 1.2vw;
+  height: 1.2vw;
+  background-image: url("../../Img_hj/location.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-right: 0.35vw;
 }
 /* 세번쨰 푸터 */
 .hj-footer-links {
   margin: 1%;
   padding: 1%;
-  color: rgb(242, 166, 52);
+  color: rgb(222, 111, 26);
   background-color: #FFFAF6;
   border-radius: 10%;
   width: 5.5vw;
-  height: 2vh;
+  height: 1.8vh;
   text-align: center;
+  box-shadow: 0.07vw 0.07vw 0.07vw 0 #173b21;
+  font-size: 1vw;
 }
 .hj-footer-home,
 .hj-footer-camp,
 .hj-footer-tracking,
 .hj-footer-riding {
-  margin: 3%;
+  margin: 1vw;
+  width: 6.5vw;
+  text-align: center;
+  font-size: 1vw;
 }
