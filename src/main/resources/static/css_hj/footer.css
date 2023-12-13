@@ -20,7 +20,7 @@ body {
 .hj-footer {
   width: 100vw;
   height: auto;
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
   display: flex;
   position: relative;
   justify-content: space-around;
@@ -38,7 +38,7 @@ body {
 
 .hj-footer-box {
   padding-top: 3.2vh;
-  border: 1px solid green;
+  /*border: 1px solid green;*/
   width: 100%;
 }
 .hj-footer-box-first {
@@ -46,11 +46,11 @@ body {
 }
 .hj-footer-garo {
   height: 100%;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 .hj-footer-col {
   height: 100%;
-  border: 1px solid pink;
+  /*border: 1px solid pink;*/
   display: grid;
 }
 .hj-footer-kobox {

@@ -131,7 +131,7 @@ body{
 }
 
   .hj-menu-icon-2 {
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     width: 3.5vw;
     height: 6vh;
     background-image: url("../Img_hj/menu_moon1.png");
