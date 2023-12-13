@@ -172,3 +172,12 @@ body{
   margin-top: 8%;
 }
 
+.hj-menu-img {
+  width: 100vw;
+  height: 17vh;
+  background-image: url("../Img_hj/메뉴 밑 나무2 다크버전.png");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: repeat-x;
+  margin-bottom: 20vh;
+}

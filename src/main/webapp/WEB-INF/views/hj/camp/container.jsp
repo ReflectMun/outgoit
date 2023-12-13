@@ -85,6 +85,8 @@ charset=UTF-8" pageEncoding="UTF-8"%>
             </div>
           </div>
         </div>
+        <div class="hj-menu-img"></div>
+
       </div>
 
       <%-- 메뉴 끝--%>
