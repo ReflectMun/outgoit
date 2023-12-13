@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   margin: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 .hj-container {
@@ -12,11 +12,12 @@ body {
   width: 100%;
 }
 .hj-footer {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 15.5vh;
   border: 1px solid blue;
   display: flex;
   justify-content: space-around;
+  background-color: #275634;
 }
 
 .hj-footer-box {
@@ -24,7 +25,7 @@ body {
   width: 100%;
 }
 .hj-footer-box-first {
-  margin-left: 4%;
+  /*margin-left: 4%;*/
 }
 .hj-footer-garo {
   border: 1px solid red;
@@ -35,10 +36,26 @@ body {
 .hj-footer-kobox {
   display: flex;
   justify-content: space-around;
+  color: rgb(242, 166, 52);
 }
 .hj-footer-logo {
   margin: 1%;
+  padding: 1%;
+  color: rgb(242, 166, 52);
+  background-color: #FFFAF6;
+  border-radius: 10%;
+  width: 5.5vw;
+  height: 2vh;
+  text-align: center;
 }
+
+.hj-footer-logo > span {
+  color: rgb(222, 111, 26);
+
+}
+
+
+
 .hj-footer-kozin,
 .hj-footer-design {
   margin: 3%;
@@ -55,6 +72,13 @@ body {
 }
 .hj-footer-connact {
   margin: 1%;
+  padding: 1%;
+  color: rgb(242, 166, 52);
+  background-color: #FFFAF6;
+  border-radius: 10%;
+  width: 5.5vw;
+  height: 2vh;
+  text-align: center;
 }
 .hj-tel-icon,
 .hj-location-icon {
@@ -63,6 +87,13 @@ body {
 /* 세번쨰 푸터 */
 .hj-footer-links {
   margin: 1%;
+  padding: 1%;
+  color: rgb(242, 166, 52);
+  background-color: #FFFAF6;
+  border-radius: 10%;
+  width: 5.5vw;
+  height: 2vh;
+  text-align: center;
 }
 .hj-footer-home,
 .hj-footer-camp,

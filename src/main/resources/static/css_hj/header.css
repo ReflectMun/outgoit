@@ -74,6 +74,7 @@ body {
   color: rgb(242, 166, 52);
   text-shadow: -0.1vw 0 #FFFAF6, 0 0.1vw #FFFAF6, 0.1vw 0 #FFFAF6, 0 -0.1vw #FFFAF6;
   /*border: 3px solid darkred;*/
+  line-height: 5vh;
 }
 
 .hj-title > span {
@@ -90,7 +91,8 @@ body {
   color: rgb(242, 166, 52);
   user-select: none;
   overflow: hidden;
-
+  background-color: #FFFAF6;
+  border-radius: 10%;
 }
 .hj-tracking span {
   animation: bounce 0.6s;
@@ -142,6 +144,9 @@ body {
   color: rgb(222, 111, 26);
   user-select: none;
   overflow: hidden;
+  color: rgb(242, 166, 52);
+  background-color: #FFFAF6;
+  border-radius: 10%;
 }
 .hj-riding span {
   animation: bounce 0.6s;
@@ -191,9 +196,13 @@ body {
   width: 10vw;
   height: 4.5vh;
   padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
   margin-top: auto;
   margin-bottom: auto;
+  margin-left: 1vw;
+  margin-right: 1vw;
   text-align: center;
+  line-height: 4.5vh;
 }
 .hj-menu-tab {
   /*border: 1px solid red;*/

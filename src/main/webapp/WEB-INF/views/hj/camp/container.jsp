@@ -24,7 +24,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
         <div class="hj-right">
           <div class="hj-logo"></div>
           <!-- 로고 이미지 넣기 -->
-          <div class="hj-title">Out<span>&nbsp;go&nbsp;</span>it</div>
+          <div class="hj-title">Out<span>&nbsp;Go&nbsp;</span>It</div>
           <!-- 글자 나중에    -->
         </div>
         <div class="hj-left">
@@ -105,7 +105,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
           <div class="hj-footer-box hj-footer-box-first">
             <div class="hj-footer-garo">
               <div class="hj-footer-col">
-                <div class="hj-footer-logo">logo</div>
+                <div class="hj-footer-logo">Out <span>Go</span> It</div>
 
                 <div class="hj-footer-kobox">
                   <div class="hj-footer-kozin">
