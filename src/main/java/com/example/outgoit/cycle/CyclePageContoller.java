@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 public class CyclePageContoller {
     @GetMapping
     public String sendCyclePage(Model model){
-        model.addAttribute("name", "jiho");
         return "jh/camp";
     }
 }

@@ -17,7 +17,7 @@ public class CampingSearchService {
     private final String key = "s7uOVVVt02w8vbG4QdP35gAmWK%2F9GkwQ0GIX7lLHcQ6wXeuPyOF1LJia95iYlnTpaA2IJk6uYQekBwKXpqDspw%3D%3D";
 
     public ArrayList<CampingAreaInfoDTO> GetSearchedCampingAreaList(String campName) {
-
+        ArrayList<CampingAreaInfoDTO> result = null;
         try {
             UriComponents uriComponents = UriComponentsBuilder.newInstance()
                 .scheme("https")
@@ -33,27 +33,22 @@ public class CampingSearchService {
             ObjectMapper mapper = new ObjectMapper();
             URL url = new URL(uriComponents.toUriString());
             ApiResponse res = mapper.readValue(url, ApiResponse.class);
-            ArrayList<CampingAreaInfoDTO> list =
-                    new ArrayList<>(Arrays.asList(res.getResponse().getBody().getItems().getItem()));
+            result = new ArrayList<>(Arrays.asList(res.getResponse().getBody().getItems().getItem()));
 
-            System.out.printf("%s 키워드로 총 %d개의 캠핑장이 검색됨\n", campName, list.size());
-
-            return list;
+            System.out.printf("%s 키워드로 총 %d개의 캠핑장이 검색됨\n", campName, result.size());
         } catch (InvalidFormatException e) {
             System.out.println("캠핑장 검색결과가 없습니다");
 
-            ArrayList<CampingAreaInfoDTO> error = new ArrayList();
-            error.add(new CampingAreaInfoDTO("캠핑장 검색결과가 없습니다"));
-
-            return error;
+            result = new ArrayList();
+            result.add(new CampingAreaInfoDTO("캠핑장 검색결과가 없습니다"));
         } catch (Exception e){
             System.out.println("에러 발생");
             e.printStackTrace();
 
-            ArrayList<CampingAreaInfoDTO> error = new ArrayList();
-            error.add(new CampingAreaInfoDTO("원인을 알 수 없는 오류가 발생했습니다"));
-
-            return error;
+            result = new ArrayList();
+            result.add(new CampingAreaInfoDTO("원인을 알 수 없는 오류가 발생했습니다"));
         }
+
+        return result;
     }
 }

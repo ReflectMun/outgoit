@@ -113,7 +113,22 @@ function makeListElement(searchData, apiResData){
     openDetailButton.innerText = "캠핑장 정보 보기"
     openDetailButton.classList.add("open-detail-button")
     openDetailButton.addEventListener("click", (e) => {
-        alert(apiResData['facltNm'])
+        const hiddenForm = document.createElement("form")
+        hiddenForm.style.display = "none"
+        hiddenForm.method = "post"
+        hiddenForm.action = `/camping/detail/${apiResData['facltNm']}`
+
+        let tempInput
+        for(const prop in apiResData){
+            tempInput = document.createElement("input")
+            tempInput.name = prop
+            tempInput.value = apiResData[prop]
+
+            hiddenForm.appendChild(tempInput)
+        }
+
+        document.body.appendChild(hiddenForm)
+        hiddenForm.submit()
     })
 
     childButtonWrapper.classList.add("button-wrapper")
