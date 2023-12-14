@@ -137,7 +137,7 @@ pageEncoding="UTF-8"%>
                 갖춘 공간을 제공함으로써 캠핑을 보다 편리하게 만들어갔습니다.
               </p>
               <p
-                class="rh-camping-history-wood-text"
+                class="rh-camping-history-wood-textLast"
                 data-aos="fade-up"
                 data-aos-easing="ease-in-out"
                 data-aos-delay="150"
