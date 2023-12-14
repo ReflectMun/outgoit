@@ -13,4 +13,15 @@ public class CampingAreaSearchPageController {
         model.addAttribute("msg", "camping");
         return "jh/camp";
     }
+
+    @GetMapping("/index")
+    public String indexPage(Model model) {
+        return "kmh/index";
+    }
+
+    @GetMapping("/camping")
+    public String campingPage(Model model) {
+        return "kmh/camping";
+    }
+
 }
