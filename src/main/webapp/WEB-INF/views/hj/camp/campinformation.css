@@ -76,7 +76,7 @@ body {
   background-color: #59795a;
   box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
   width: 80%;
-  padding-bottom: 10vw;
+  padding-bottom: 15vw;
 }
 .hj-content-inside-box {
   display: flex;
@@ -98,15 +98,34 @@ body {
 /* 정보 부분 */
 .hj-content-detail {
   background-color: rgb(6, 57, 10);
-  background-image: url(../img_hj/kami.jpeg);
-  background-size: cover;
-  background-position: center bottom 0px;
+ 
   border: 0.6vw solid rgb(157, 111, 76);
-  padding: 2% 0% 2% 2%;
+  padding: 2% 0% 5% 2%;
   margin-right: 5%;
   width: 45%;
   color: #fffaf6;
   font-family: 'SOYOMapleBoldTTF';
+  /* position: relative; */
+}
+.hj-content-plus-container{
+   position: absolute;
+   
+   /* position: fixed; */
+   /* transform: translate(-50%, -50%); */
+  /* border: 3px solid blue; */
+  width: 95%;
+  right: 2%;
+  top: 3%;
+  height: 90%;
+  background-color: rgb(6, 57, 10);
+ 
+  border: 0.6vw solid rgb(157, 111, 76);
+  /* padding: 2% 0% 5% 2%; */
+  /* margin-right: 5%; */
+  /* width: 45%; */
+  color: #fffaf6;
+  font-family: 'SOYOMapleBoldTTF';
+  z-index: 1;
 }
 .hj-no,
 .hj-time,
@@ -114,6 +133,7 @@ body {
 .hj-ability,
 .hj-etc {
   font-size: 1.7vw;
+  line-height: 2;
 }
 /* 코멘트 부분 */
 .hj-comment-name-img{
