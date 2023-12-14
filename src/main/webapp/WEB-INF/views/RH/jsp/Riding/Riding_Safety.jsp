@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,10 +19,10 @@
   </head>
   <body>
     <div>
-      <div class="rh-riding-titleBox">
-        <div class="rh-riding-title">
-          <div>Beginner</div>
-          <div style="text-align: right">Guide</div>
+      <div class="rh-riding-safety-titleBox">
+        <div class="rh-riding-safety-title">
+          <div>Safety</div>
+          <div style="text-align: right">Information</div>
         </div>
       </div>
       <div class="rh-riding-content">
@@ -29,7 +31,9 @@
           <!-- 통나무 -->
           <div class="rh-riding-wood-titleBox">
             <!-- 통나무 타이틀 -->
-            <div class="rh-riding-wood-title">초보자를 위해 준비했어요</div>
+            <div class="rh-riding-wood-title">
+              숙지해야 할 안전사항을 안내드려요
+            </div>
           </div>
           <div class="rh-riding-wood-bridgeBox">
             <!-- 통나무 다리 -->
@@ -49,9 +53,8 @@
                 <div>키워드 자뤼</div>
               </div>
               <div class="rh-riding-wood-mainPost" id="content1">
-                자전거를 타기 전, 아래의 사항을 체크해야 해요. <br />○ 브레이크
-                오염 상태 <br />○ 안장 높낮이, 각도 <br />○ 서스펜션 윤활, 청소
-                <br />○ 공기압 체크 <br />○ 체인 상태 확인 및 관리
+                자전거 횡단보도가 있는 경우를 제외하고는 자전거에서 내려 끌고 가
+                거나, 들고 보행해야 해요.
               </div>
             </div>
             <div class="rh-riding-wood-main">
@@ -60,9 +63,9 @@
                 <div>키워드 자뤼</div>
               </div>
               <div class="rh-riding-wood-mainPost" id="content2">
-                산악 자전거, 도로 자전거, 하이브리드 자전거 등 여러 종류의
-                자전거가 있어요. 자신의 주행 스타일과 목적에 맞는 자전거를
-                선택해야 해요.
+                안전장비 착용은 필수! 안전경, 장갑, 팔다리 보호대, 안전모 등
+                안전장비를 착용해야 해요. 또한 안전모 뒷부분엔 야간 운행에
+                대비해 반사체가 부착돼 있어야 해요.
               </div>
             </div>
             <div class="rh-riding-wood-main">
@@ -71,8 +74,8 @@
                 <div>키워드 자뤼</div>
               </div>
               <div class="rh-riding-wood-mainPost" id="content3">
-                안전모, 안전경, 장갑, 팔다리보호대 등 안전장비 착용은 필수예요.
-                또한 주행 전 적절한 스트레칭도 중요해요.
+                전조등과 후미등을 설치해요. 야간에 시야를 확보하고 상대방에게
+                위치를 알려 줌으로 충돌 사고를 예방할 수 있어요.
               </div>
             </div>
             <div class="rh-riding-wood-main">
@@ -81,8 +84,8 @@
                 <div>키워드 자뤼</div>
               </div>
               <div class="rh-riding-wood-mainPost" id="content4">
-                교통이 복잡한 지역으로 나가기 전, 공원 같은 차량이 적은 곳에서
-                주행을 시작해 기본적인 라이딩 기술을 익혀요.
+                자전거는 도로교통법상 '차'에 해당해요. 시속 20km를 준수하며
+                안전거리를 유지해요. 음주 후 라이딩은 절대 금지예요
               </div>
             </div>
             <div class="rh-riding-wood-main">
@@ -91,7 +94,8 @@
                 <div>키워드 자뤼</div>
               </div>
               <div class="rh-riding-wood-mainPost" id="content5">
-                탈진, 탈수 등을 예방하기 위해 충분한 수분 섭취가 필요해요.
+                이어폰, 핸드폰 등은 자전거 운행 시 사용하지 않아요. 네비게이션이
+                필요한 경우, 핸드폰 거치대를 설치해야 해요.
               </div>
             </div>
             <div class="rh-riding-wood-main">
@@ -100,8 +104,12 @@
                 <div>키워드 자뤼</div>
               </div>
               <div class="rh-riding-wood-mainPost" id="content6">
-                다른 라이더나 차량과의 상호작용에 주의를 기울여요. 손 신호 등을
-                이용해 자신의 의도를 알리는 것도 중요해요.
+                자전거 도로가 없다면 도로 우측 가장자리에서 자동차와 같은
+                방향으로 직선 주행해야 해요. 보도를 통행할 수 있는 경우는 아래와
+                같아요. 1. 어린이, 노인 그 밖에 행정안정부령으로 정하는
+                신체장애인이 자전거를 운전하는 경우 2. 안전표지로 자전거 통행이
+                허용된 경우 3. 도로의 파손, 도로 공사나 그 밖의 장애 등으로
+                도로를 통항핼 수 없는 경우
               </div>
             </div>
             <div class="rh-riding-wood-main">
@@ -110,38 +118,9 @@
                 <div>키워드 자뤼</div>
               </div>
               <div class="rh-riding-wood-mainPost" id="content7">
-                자전거 역시 도로 교통 참여자로 간주되기 때문에 교통 규칙을
-                준수해야 해요.
+                야생동물
               </div>
             </div>
-            <div class="rh-riding-wood-main">
-              <div id="icon8">
-                <div>아이콘 자뤼</div>
-                <div>키워드</div>
-              </div>
-              <div id="content8">
-                초보 라이더가 이용하기 좋을 장소를 선정했어요.
-              </div>
-            </div>
-            <div class="rh-riding-wood-main" style="display: block" id="best">
-              <div class="rh-riding-wood-main-best">
-                <div class="rh-riding-wood-mainPost-best">
-                  <div>이미지</div>
-                  <div>1</div>
-                </div>
-              </div>
-              <div class="rh-riding-wood-main-best">
-                <div class="rh-riding-wood-mainPost-best">
-                  <div>이미지</div>
-                  <div>1</div>
-                </div>
-              </div>
-              <div class="rh-riding-wood-main-best">
-                <div class="rh-riding-wood-mainPost-best">
-                  <div>이미지</div>
-                  <div>1</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

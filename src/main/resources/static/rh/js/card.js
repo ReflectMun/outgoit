@@ -17,6 +17,7 @@ $(function () {
   $("#content7").hide();
   $("#content8").hide();
   $("#content9").hide();
+  $("#best").hide();
 
   //1번
   $("#icon1").click(function () {
@@ -93,9 +94,11 @@ $(function () {
   $("#icon8").click(function () {
     $("#icon8").hide();
     $("#content8").show();
+    $("#best").show();
   });
   $("#content8").click(function () {
     $("#content8").hide();
+    $("#best").hide();
     $("#icon8").show();
   });
 

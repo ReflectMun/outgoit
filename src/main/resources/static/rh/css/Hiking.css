@@ -120,9 +120,10 @@ body {
 /* 정보 카드 */
 .rh-hiking-wood-main {
   /* border: 3px solid rgb(255, 0, 0); */
-  background-color: aliceblue;
-  width: 25vw;
-  margin: 1%;
+  background-color: rgb(85, 176, 255);
+  width: 23vw;
+  height: 23vw;
+  margin: 1.5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,8 +132,36 @@ body {
 }
 .rh-hiking-wood-mainPost {
   margin: 5%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.rh-hiking-wood-main-best {
+  background-color: rgb(143, 255, 141);
+  margin: 1.5%;
+  display: flex;
+  font-size: 1vw;
+  height: 7.2vw;
+}
+.rh-hiking-wood-mainPost-best {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.rh-animal-card {
+  font-size: 0.8vw;
+  text-align: center;
+  width: 24vw;
+}
+.rh-animal-card tr:hover {
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
 /* 따로 만짐 안전가드 */
 .rh-hiking-safety-titleBox {
   width: 100%;

@@ -23,7 +23,7 @@ body {
   margin: 0;
 }
 /* 기본은 비기너 가이드임 */
-.rh-camping-titleBox {
+.rh-riding-titleBox {
   width: 100%;
   padding-top: 6%;
   padding-bottom: 4%;
@@ -36,7 +36,7 @@ body {
   /* border: 2px solid rgb(255, 0, 0); */
 }
 
-.rh-camping-title {
+.rh-riding-title {
   font-family: JalnanGothic;
   width: 27%;
   font-size: 4vw;
@@ -56,25 +56,25 @@ body {
   }
 }
 
-.rh-camping-content {
+.rh-riding-content {
   /* border: 3px solid rgb(21, 255, 0); */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.rh-camping-wood {
+.rh-riding-wood {
   /* border: 1px solid rgb(0, 183, 255); */
   width: 80vw;
   text-align: center;
 }
-.rh-camping-wood-titleBox {
+.rh-riding-wood-titleBox {
   /* border: 5px solid rgb(255, 0, 43); */
   height: 7vh;
   display: flex;
   justify-content: center;
 }
-.rh-camping-wood-title {
+.rh-riding-wood-title {
   width: 55vw;
   /* border: 3px solid rgb(238, 255, 0); */
   background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
@@ -88,25 +88,25 @@ body {
   color: white;
   -webkit-text-stroke: 2px black;
 }
-.rh-camping-wood-bridgeBox {
+.rh-riding-wood-bridgeBox {
   /* border: 5px solid rgb(255, 0, 217); */
   display: flex;
   justify-content: center;
 }
-.rh-camping-wood-bridgeSet {
+.rh-riding-wood-bridgeSet {
   /* border: 1px solid rgb(255, 0, 179); */
   width: 45vw;
   height: 3vh;
   display: flex;
   justify-content: space-between;
 }
-.rh-camping-wood-bridge {
+.rh-riding-wood-bridge {
   background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
   box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
   background-size: contain;
   width: 3vw;
 }
-.rh-camping-wood-mainBox {
+.rh-riding-wood-mainBox {
   /* border: 5px solid rgb(64, 0, 255); */
   display: flex;
   background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
@@ -118,23 +118,44 @@ body {
 }
 
 /* 정보 카드 */
-.rh-camping-wood-main {
+.rh-riding-wood-main {
   /* border: 3px solid rgb(255, 0, 0); */
-  background-color: aliceblue;
-  width: 25vw;
-  margin: 1%;
+  background-color: rgb(85, 176, 255);
+  width: 23vw;
+  height: 23vw;
+  margin: 1.5%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: left;
   font-size: 1vw;
 }
-.rh-camping-wood-mainPost {
+.rh-riding-wood-mainPost {
   margin: 5%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rh-riding-wood-main-best {
+  background-color: rgb(143, 255, 141);
+  margin: 1.5%;
+  display: flex;
+  font-size: 1vw;
+  height: 7.2vw;
+}
+.rh-riding-wood-mainPost-best {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /* 따로 만짐 안전가드 */
-.rh-camping-safety-titleBox {
+.rh-riding-safety-titleBox {
   width: 100%;
   padding-top: 6%;
   padding-bottom: 4%;
@@ -146,7 +167,7 @@ body {
   background-repeat: no-repeat;
   /* border: 2px solid rgb(255, 0, 0); */
 }
-.rh-camping-safety-title {
+.rh-riding-safety-title {
   font-family: JalnanGothic;
   width: 35%;
   font-size: 4vw;
@@ -165,9 +186,18 @@ body {
     opacity: 1;
   }
 }
+.rh-animal-card {
+  font-size: 0.8vw;
+  text-align: center;
+  width: 24vw;
+}
+.rh-animal-card tr:hover {
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
 
 /* 따로 만짐 역사 */
-.rh-camping-history-titleBox {
+.rh-riding-history-titleBox {
   width: 100%;
   padding-top: 17%;
   padding-bottom: 10%;
@@ -178,7 +208,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.rh-camping-history-wood-mainBox {
+.rh-riding-history-wood-mainBox {
   /* border: 5px solid rgb(64, 0, 255); */
   display: flex;
   background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
@@ -188,13 +218,13 @@ body {
   justify-content: center;
   background-color: rgb(226, 255, 238);
 }
-.rh-camping-history-wood-main {
+.rh-riding-history-wood-main {
   /* border: 3px solid rgb(255, 0, 0); */
   background-color: rgb(255, 251, 195);
   width: 70vw;
   margin: 1%;
 }
-.rh-camping-history-wood-text {
+.rh-riding-history-wood-text {
   margin-top: 5%;
   margin-bottom: 5%;
   font-size: 1vw;
