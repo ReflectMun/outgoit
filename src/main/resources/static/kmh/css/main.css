@@ -111,13 +111,12 @@
     padding: 3vw;
 }
 
-.map {
+#map {
     width: 50%;
     height: 30vw;
-    background-color: skyblue;
 }
 
-.map-detail {
+.search-result-list {
     background-color: aquamarine;
     width: 35%;
     height: 30vw;

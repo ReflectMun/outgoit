@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUT GO IT - main</title>
-    <link rel="stylesheet" href="../../../../resources/static/kmh/css/main.css">
+    <link rel="stylesheet" href="/resources/static/kmh/css/main.css">
 </head>
 <body>
     <!-- 헤더 영역 -->
@@ -39,8 +39,8 @@
             </div>
             <div class="map-wrap">
                 <div class="map-all">
-                    <div class="map"><h1>지도 디브</h1></div>
-                    <div class="map-detail"><h1>리스트 띄워주는 div</h1></div>
+                    <div id="map"></div>
+                    <div class="search-result-list"><h1>리스트 띄워주는 div</h1></div>
                 </div>
             </div>
         </div>
@@ -49,8 +49,9 @@
     <!--컨테이너 여기까지 -->
     <!-- 푸터 영역 -->
     <div class="footer"></div>
-    <script>
 
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=770a2850e8ce3177b209d2d94dc1e58b&libraries=services"></script>
+    <script type="text/javascript" src="/resources/static/kmh/js/camping_area_search.js"></script>
 </body>
 </html>
