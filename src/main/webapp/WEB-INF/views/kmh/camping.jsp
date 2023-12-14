@@ -37,16 +37,14 @@
                     <span> 간단한 기능 설명하는 문장 하나 들어가면 좋을듯</span>
                 </div>
             </div>
-            <div class="map-search">
-                <form action="">
-                    <input placeholder="검색하고 싶은 지역!">
-                    <button> 검색! </button>
-                </form>
+            <div class="camping-area-search">
+                <input id="search-box" placeholder="검색하고 싶은 지역!">
+                <button id="submit-search">검색!</button>
             </div>
-            <div class="map-wrap">
+            <div class="search-result">
                 <div class="map-all">
                     <div id="map"></div>
-                    <div class="search-result-list"><h1>리스트 띄워주는 div</h1></div>
+                    <div id="search-result-list"><h1>리스트 띄워주는 div</h1></div>
                 </div>
             </div>
         </div>
