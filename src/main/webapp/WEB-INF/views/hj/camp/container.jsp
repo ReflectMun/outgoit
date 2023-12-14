@@ -1,5 +1,6 @@
  <%@ page language="java" contentType="text/html;
 charset=UTF-8" pageEncoding="UTF-8"%>
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -92,15 +93,16 @@ charset=UTF-8" pageEncoding="UTF-8"%>
 
       <%-- 메뉴 끝--%>
 
-      <%-- contents page--%>
-      <div>
-        <!-- 컨텐츠 페이지 인쿠르드로 설정  -->
+ <%-- contents page--%>
+      <div class="hj-camping-content-page">
+        <jsp:include page="${campingContentPage}" />
+        <!-- 컨텐츠 페이지 인클루드로 설정 -->
       </div>
 
       <%-- 컨텐트 페이지 끝--%>
 
       <!-- 푸터 시작 -->
-      <div class="hj-container">
+      <div class="hj-container-footer">
         <div class="hj-footer-pic">
           <img src="../Img_hj/footer_tree.png" alt="" />
         </div>

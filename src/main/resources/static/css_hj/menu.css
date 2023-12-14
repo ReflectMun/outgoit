@@ -8,14 +8,14 @@
   font-style: normal;
 }
 body{
- overflow: hidden;
-  font-family: 'JalnanGothic';
+ overflow: auto;
 }
 
 /*아이콘 클릭했을떄 가운데서 퍼지는 css 효과*/
 
 
 .hj-overlay {
+  font-family: 'JalnanGothic';
   display: none;
   position: fixed;
   top: 0;
