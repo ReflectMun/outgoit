@@ -1,0 +1,272 @@
+@import url("https://fonts.cdnfonts.com/css/drawing-guides");
+
+@font-face {
+  font-family: 'SOYOMapleBoldTTF';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JalnanGothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+}
+.hj-container2 {
+  /* border: 1px solid black; */
+  height: 100%;
+  width: 100%;
+  background-color: #FFFAF6;
+}
+/* 첫번쨰  */
+.hj-info {
+  background-color: #fffaf6;
+  /* border: 1px solid blue; */
+}
+.hj-info-box,
+.hj-content-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hj-info-name-img {
+  
+  border: 1px solid gray;
+  width: 30%;
+  background-color: #59795a;
+  padding: 2%;
+  border-radius: 3vw;
+  border: 1vw solid #6c480c;
+  
+  box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+}
+.hj-info-name {
+  text-align: center;
+  font-size: 1.9vw;
+  color: white;
+  font-family: 'JalnanGothic';
+}
+/* 정보 div */
+.hj-content1{
+  margin-top: 3%;  
+}
+
+.hj-content-box-comment {
+  font-family: "Drawing Guides", sans-serif;
+  color: white;
+  font-size: 4vw;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+}
+
+/* 사진 내용 부분 */
+.hj-content-pic {
+  position: relative;
+ 
+  border-radius: 5vw;
+  border: 2vw solid #6c480c;
+  background-color: #59795a;
+  box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+  width: 80%;
+  padding-bottom: 10vw;
+}
+.hj-content-inside-box {
+  display: flex;
+  margin-top: 5%;
+
+  justify-content: space-between;
+}
+.hj-content-img {
+  background-color: white;
+  margin-left: 5%;
+  width: 40%;
+  height: 100%;
+  padding-bottom: 15vw;
+}
+.hj-content-img-link img {
+  width: 100%;
+  height: 100%;
+}
+/* 정보 부분 */
+.hj-content-detail {
+  background-color: rgb(6, 57, 10);
+  background-image: url(../img_hj/kami.jpeg);
+  background-size: cover;
+  background-position: center bottom 0px;
+  border: 0.6vw solid rgb(157, 111, 76);
+  padding: 2% 0% 2% 2%;
+  margin-right: 5%;
+  width: 45%;
+  color: #fffaf6;
+  font-family: 'SOYOMapleBoldTTF';
+}
+.hj-no,
+.hj-time,
+.hj-addr,
+.hj-ability,
+.hj-etc {
+  font-size: 1.7vw;
+}
+/* 코멘트 부분 */
+.hj-comment-name-img{
+  border: 1px solid gray;
+  width: 30%;
+  background-color: #59795a;
+  padding: 2%;
+  border-radius: 3vw;
+  border: 1vw solid #6c480c;
+  
+  box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+}
+
+.hj-comment {
+  /* border: 1px solid pink; */
+  margin-top: 2%;
+}
+.hj-comment-pic{
+  border-radius: 5vw;
+  border: 2vw solid #6c480c;
+  background-color: #59795a;
+  box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+  width: 80%;
+  padding-bottom: 6vw;
+}
+.hj-content-inside-box2 {
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  width: 100%;
+  /* margin-top: 5%; */
+}
+.hj-content-detail2 {
+  /*background-image: url(../img/kami.jpeg);*/
+  /*background-size: cover;*/
+  /*background-position: center bottom 0px;*/
+
+  /* margin-right: 5%; */
+  width: 100%;
+  /* padding-bottom: 4vw; */
+}
+.hj-content-zentai-box {
+  margin-top: 3%;
+}
+.hj-review-star {
+  display: flex;
+  margin-left: 25%;
+}
+
+.hj-review {
+  /* border: 1px solid purple; */
+}
+
+.hj-input {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2%;
+}
+.hj-input-content {
+  margin-left: 3%;
+  margin-top: 1%;
+}
+.hj-id-input, .hj-pw-input{
+  
+    padding: 4%;
+
+}
+.hj-review-content {
+  width: 50%;
+}
+.hj-review-input {
+  height: 100%;
+  width: 100%;
+  padding: 2%;
+}
+.hj-btn {
+  margin-top: 3%;
+}
+/* 리뷰 보여주는 창 */
+
+
+.hj-review-pic{
+  /* border: 10px solid hsl(197, 78%, 28%); */
+   position: relative; 
+  border-radius: 5vw;
+  border: 2vw solid #6c480c;
+  background-color: #59795a;
+  box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+  width: 80%;
+  padding-bottom: 8vw;
+
+}
+.hj-content-box-comment2{
+  font-family: "Drawing Guides", sans-serif;
+  color: white;
+  font-size: 4vw;
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+}
+.hj-review-inside-box2{
+  /* border: 2px solid red; */
+ display: flex;
+ justify-content: center;
+
+}
+.hj-review-detail2{
+  /* border: 3px solid blue; */
+   width: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   padding-bottom: 15vw;
+   background-color: rgb(6, 57, 10);
+   border: 0.6vw solid rgb(157, 111, 76);
+   padding: 2% 0% 2% 2%;
+   padding-bottom: 15vw;
+   /* margin-left: 10%; */
+   /* justify-content: center; */
+   /* display: flex; */
+   align-content: center;
+   width: 80%;
+   color: #fffaf6;
+   font-family: 'SOYOMapleBoldTTF';
+   margin-top: 3%;
+}
+.hj-review-zentai-box{
+  /* border: 5px solid blueviolet; */
+  width: 80%;
+  margin-top: 2%;
+}
+.hj-review-stars{
+  /* border: 1px solid darkgoldenrod; */
+  display: flex;
+  align-content: space-between;
+  width: 10%;
+  /* margin-left: ; */
+}
+.hj-review-box{
+  /* border: 1px solid saddlebrown; */
+  width: 100%;
+}
+.hj-review-content-box{
+  display: flex;
+  /* border: 1px solid darkgreen; */
+  width: 100%;
+  margin-top: 2%;
+  font-size: 1.7vw;
+}
+.hj-review-nickname{
+  width: 20%;
+}
+.hj-review-comment{
+  /* border: 1px solid darkorange; */
+  width: 80%;
+}
