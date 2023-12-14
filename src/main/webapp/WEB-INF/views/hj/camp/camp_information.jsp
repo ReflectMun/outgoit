@@ -5,7 +5,7 @@ pageEncoding="UTF-8"%>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>${campingAreaName} 상세정보</title>
     <link rel="stylesheet" href="/resources/static/css_hj/campinformation.css" />
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/resources/static/js_hj/campinformation.js"></script>
@@ -16,7 +16,7 @@ pageEncoding="UTF-8"%>
       <div class="hj-info">
         <div class="hj-info-box">
           <div class="hj-info-name-img">
-            <div class="hj-info-name">캠핑장 이름</div>
+            <div class="hj-info-name">${campingAreaName}</div>
           </div>
         </div>
       </div>
@@ -37,15 +37,17 @@ pageEncoding="UTF-8"%>
            <!-- 이미지 부분 -->
             <div class="hj-content-inside-box">
               <div class="hj-content-img">
-                <div class="hj-content-img-link"></div>
+                <div class="hj-content-img-link">
+                  <img src="${thumbnail}">
+                </div>
               </div>
               <!-- 정보 부분 -->
               <div class="hj-content-detail">
-                <div class="hj-no">번호:</div>
-                <div class="hj-time">운영 기간 +시간:</div>
-                <div class="hj-addr">주소:</div>
-                <div class="hj-ability">부대시설:</div>
-                <div class="hj-etc">기타사항:</div>
+                <div class="hj-no">번호: ${telephoneNumber}</div>
+                <div class="hj-time">운영 기간 + 시간: ${periodOfOperation}</div>
+                <div class="hj-addr">주소: ${address}</div>
+                <div class="hj-ability">부대시설: ${subsidiaryFacilities}</div>
+                <div class="hj-etc">기타사항: ${etc}</div>
               </div>
             </div>
           </div>
@@ -126,34 +128,36 @@ pageEncoding="UTF-8"%>
               <div class="hj-review-inside-box2">
                 <div class="hj-review-detail2">
                   <div class="hj-review-zentai-box">
-                    <!-- 별보여주는 곳 -->
-                    <div class="hj-review-stars">
-                      <div class="hj-review-star">☆</div>
-                      <div class="hj-review-star">☆</div>
-                      <div class="hj-review-star">☆</div>
-                      <div class="hj-review-star">☆</div>
-                      <div class="hj-review-star">☆</div>
-                    </div>
                     <!-- 닉넴 한줄평 보여주는 곳  -->
                     <div class="hj-review-content-box">
-                      <div class="hj-review-nickname">닉넴</div>
+                      <div class="hj-review-stars">
+                        <div class="hj-review-star">☆</div>
+                        <div class="hj-review-star">☆</div>
+                        <div class="hj-review-star">☆</div>
+                        <div class="hj-review-star">☆</div>
+                        <div class="hj-review-star">☆</div>
+                      </div>
+                      <br>
+                      <div class="hj-review-nickname">닉네임: </div>
 
-                      <div class="hj-review-comment">한줄평</div>
+                      <div class="hj-review-comment">한줄평: </div>
                       <div class="hj-edit-box">
                         <div class="hj-edit-icon">...</div>
                       </div>
                       <div class="hj-edit-drop">
-
-
                         <div><input type="text" placeholder="비밀번호"> </div>
                         <div class="hj-edit-part">수정</div>
                         <div class="hj-edit-part">삭제</div>
-
                       </div>
                     </div>
+
+                    <!-- 코멘트 보여주는 위치 여기까지 -->
+
                   </div>
                 </div>
               </div>
+
+              <!-- 칠판모양 코멘트 영역 여기까지 -->
             </div>
           </div>
         </div>
