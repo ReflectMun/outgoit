@@ -11,21 +11,24 @@ body {
 
 .hj-footer-pic > img {
   display: flex;
+  position: relative;
   justify-content: center;
   width: 100vw;
-  z-index: 5;
-  margin-top: 15vh;
+  z-index: 20;
+  margin-top: -12vh;
 }
 
 .hj-footer {
   width: 100vw;
   height: auto;
-  /*border: 1px solid blue;*/
+  /* border: 1px solid blue; */
   display: flex;
-  position: relative;
+  /* position: relative; */
   justify-content: space-around;
   background-color: #275634;
   border-top: 0.35vw solid #1c4728;
+  margin-top: -2vw;
+
 }
 
 @media screen and (max-width: 400px) {
