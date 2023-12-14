@@ -131,24 +131,30 @@
                 <div class="hj-review-detail2">
                   <div class="hj-review-zentai-box">
 
+                    <!-- 작성된 리뷰들을 개별 출력하는 부분 -->
                     <c:choose>
                       <c:when test="${existReviews}">
                         <c:forEach items="${reviews}" var="review">
                           <!-- 닉넴 한줄평 보여주는 곳  -->
                           <div class="hj-review-content-box">
                             <div class="hj-review-stars">
-                              <div class="hj-review-star">☆</div>
-                              <div class="hj-review-star">☆</div>
-                              <div class="hj-review-star">☆</div>
-                              <div class="hj-review-star">☆</div>
-                              <div class="hj-review-star">☆</div>
+                              <c:forEach var="i" begin="1" end="5" step="1">
+                                <c:choose>
+                                  <c:when test="${i > review.rating}">
+                                    <div class="hj-review-star">☆</div>
+                                  </c:when>
+                                  <c:otherwise>
+                                    <div class="hj-review-star">별</div>
+                                  </c:otherwise>
+                                </c:choose>
+                              </c:forEach>
                             </div>
 
                             <br>
 
-                            <div class="hj-review-nickname">닉네임: </div>
+                            <div class="hj-review-nickname">닉네임: ${review.author}</div>
 
-                            <div class="hj-review-comment">한줄평: </div>
+                            <div class="hj-review-comment">한줄평: ${review.content}</div>
                             <div class="hj-edit-box">
                               <div class="hj-edit-icon">...</div>
                             </div>
