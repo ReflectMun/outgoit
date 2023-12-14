@@ -29,7 +29,7 @@
 		<div class="menu-wrap">
 			<div class="menu">
 				<div class="camp-icon"></div>
-				<div class="txt">캠핑</div>
+				<div class="txt"><a href="/outgoit/camping"><span>캠핑</span></a></div>
 			</div>
 			<div class="menu">
 				<div class="hiking-icon"></div>
