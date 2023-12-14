@@ -6,7 +6,9 @@ pageEncoding="UTF-8"%>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../css_hj/campinformation.css" />
+    <link rel="stylesheet" href="/resources/static/css_hj/campinformation.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/resources/static/js_hj/campinformation.js"></script>
   </head>
   <body>
     <div class="hj-container2">
@@ -23,8 +25,15 @@ pageEncoding="UTF-8"%>
       <!-- 실제 정보 들어있는 div중 사진 -->
       <div class="hj-content1">
         <div class="hj-content-box">
+          <!-- 칠판 효과 보더준 부분 -->
           <div class="hj-content-pic">
+            <!-- 팝업 클릭했을떄 뜨는 디브 -->
+            <div class="hj-content-plus-container">
+              더보기 정보들 떠야하는 페이지
+            </div>
+            <!-- 칠판에 쓰인 분필 -->
             <div class="hj-content-box-comment"><span>OUT GO IT</span></div>
+           <!-- 이미지 부분 -->
             <div class="hj-content-inside-box">
               <div class="hj-content-img">
                 <div class="hj-content-img-link"></div>
@@ -53,10 +62,12 @@ pageEncoding="UTF-8"%>
 
         <div class="hj-content1">
           <div class="hj-content-box">
+            <!-- 코멘트 칠판 효과 -->
             <div class="hj-comment-pic">
               <div class="hj-content-inside-box2">
                 <div class="hj-content-detail2">
                   <div class="hj-content-zentai-box">
+                    <!-- 별부분 -->
                     <div class="hj-review-star">
                       <div class="hj-star">☆</div>
                       <div class="hj-star">☆</div>
@@ -64,6 +75,7 @@ pageEncoding="UTF-8"%>
                       <div class="hj-star">☆</div>
                       <div class="hj-star">☆</div>
                     </div>
+                    <!-- 인풋 아이디 비번 부분 -->
                     <div class="hj-input">
                       <div class="hj-input-content">
                         <div class="hj-nickname">
@@ -83,6 +95,7 @@ pageEncoding="UTF-8"%>
                           />
                         </div>
                       </div>
+                      <!-- 리뷰부분 -->
                       <div class="hj-review-content">
                         <input
                           type="text"
@@ -90,6 +103,7 @@ pageEncoding="UTF-8"%>
                           placeholder="비방글은 삭제 조치 됩니다."
                         />
                       </div>
+                      <!-- 확인버튼 -->
                       <div class="hj-btn">
                         <button class="hj-btn-button">확인</button>
                       </div>
@@ -101,14 +115,17 @@ pageEncoding="UTF-8"%>
           </div>
         </div>
       </div>
+      <!-- 리뷰 보여주는 부분 -->
       <div class="hj-review">
         <div class="hj-content1">
           <div class="hj-content-box">
             <div class="hj-review-pic">
+              <!--  칠판 코멘트 -->
               <div class="hj-content-box-comment2"><span>Camping</span></div>
               <div class="hj-review-inside-box2">
                 <div class="hj-review-detail2">
                   <div class="hj-review-zentai-box">
+                    <!-- 별보여주는 곳 -->
                     <div class="hj-review-stars">
                       <div class="hj-review-star">☆</div>
                       <div class="hj-review-star">☆</div>
@@ -116,7 +133,7 @@ pageEncoding="UTF-8"%>
                       <div class="hj-review-star">☆</div>
                       <div class="hj-review-star">☆</div>
                     </div>
-
+                    <!-- 닉넴 한줄평 보여주는 곳  -->
                     <div class="hj-review-content-box">
                       <div class="hj-review-nickname">닉넴</div>
 
