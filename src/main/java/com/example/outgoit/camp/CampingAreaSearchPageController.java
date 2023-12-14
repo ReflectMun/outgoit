@@ -19,4 +19,9 @@ public class CampingAreaSearchPageController {
         return "kmh/index";
     }
 
+    @GetMapping("/camping")
+    public String campingPage(Model model) {
+        return "kmh/camping";
+    }
+
 }
