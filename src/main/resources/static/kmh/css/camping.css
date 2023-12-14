@@ -100,6 +100,16 @@
     justify-content: center;
 }
 
+.map-search {
+    width: 100vw;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 1vh;
+
+}
+
+
 .map-all {
     border: 3px solid skyblue;
     width: 75%;
