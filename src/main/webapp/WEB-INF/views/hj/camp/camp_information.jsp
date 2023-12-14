@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -131,29 +131,40 @@ pageEncoding="UTF-8"%>
                 <div class="hj-review-detail2">
                   <div class="hj-review-zentai-box">
 
-                    <!-- 닉넴 한줄평 보여주는 곳  -->
-                    <div class="hj-review-content-box">
-                      <div class="hj-review-stars">
-                        <div class="hj-review-star">☆</div>
-                        <div class="hj-review-star">☆</div>
-                        <div class="hj-review-star">☆</div>
-                        <div class="hj-review-star">☆</div>
-                        <div class="hj-review-star">☆</div>
-                      </div>
-                      <br>
-                      <div class="hj-review-nickname">닉네임: </div>
+                    <c:choose>
+                      <c:when test="${existReviews}">
+                        <c:forEach items="${reviews}" var="review">
+                          <!-- 닉넴 한줄평 보여주는 곳  -->
+                          <div class="hj-review-content-box">
+                            <div class="hj-review-stars">
+                              <div class="hj-review-star">☆</div>
+                              <div class="hj-review-star">☆</div>
+                              <div class="hj-review-star">☆</div>
+                              <div class="hj-review-star">☆</div>
+                              <div class="hj-review-star">☆</div>
+                            </div>
 
-                      <div class="hj-review-comment">한줄평: </div>
-                      <div class="hj-edit-box">
-                        <div class="hj-edit-icon">...</div>
-                      </div>
-                      <div class="hj-edit-drop">
-                        <div><input type="text" placeholder="비밀번호"> </div>
-                        <div class="hj-edit-part">수정</div>
-                        <div class="hj-edit-part">삭제</div>
-                      </div>
-                    </div>
-                    <!-- 코멘트 보여주는 위치 여기까지 -->
+                            <br>
+
+                            <div class="hj-review-nickname">닉네임: </div>
+
+                            <div class="hj-review-comment">한줄평: </div>
+                            <div class="hj-edit-box">
+                              <div class="hj-edit-icon">...</div>
+                            </div>
+                            <div class="hj-edit-drop">
+                              <div><input type="text" placeholder="비밀번호"> </div>
+                              <div class="hj-edit-part">수정</div>
+                              <div class="hj-edit-part">삭제</div>
+                            </div>
+                          </div>
+                          <!-- 코멘트 보여주는 위치 여기까지 -->
+                        </c:forEach>
+                      </c:when>
+                      <c:otherwise>
+                        <h2>아직 작성된 리뷰가 없습니다</h2>
+                      </c:otherwise>
+                    </c:choose>
 
                   </div>
                 </div>

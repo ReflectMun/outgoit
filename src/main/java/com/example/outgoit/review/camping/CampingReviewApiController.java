@@ -53,7 +53,7 @@ public class CampingReviewApiController {
     }
 
     @GetMapping("/list")
-    public ArrayList<CampingReview> getCampingAreaReviewList(){
-        return campingReviewService.loadCampingAreaReview(1);
+    public ArrayList<CampingReview> getCampingAreaReviewList(Integer campingAreaId,Integer page){
+        return campingReviewService.loadCampingAreaReview(campingAreaId, page);
     }
 }

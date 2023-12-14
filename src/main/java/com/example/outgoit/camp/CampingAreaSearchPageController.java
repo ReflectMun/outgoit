@@ -38,7 +38,7 @@ public class CampingAreaSearchPageController {
     @PostMapping("/detail/{campingAreaName}")
     public String sendDetailPage(CampingAreaInfoDTO data, Model model){
         ArrayList<CampingReview> reviews =
-                campingReviewService.getCampingAreaReview(data.getContentId());
+                campingReviewService.loadCampingAreaReview(data.getContentId(), 1);
 
         model.addAttribute("thumbnail", data.getFirstImageUrl());
         model.addAttribute("campingAreaName", data.getFacltNm());
@@ -47,6 +47,9 @@ public class CampingAreaSearchPageController {
         model.addAttribute("address", data.getAddr1() + " " + data.getAddr2());
         model.addAttribute("subsidiaryFacilities", data.getSbrsEtc());
         model.addAttribute("etc", "etc??");
+
+        model.addAttribute("existReviews", !reviews.isEmpty());
+        model.addAttribute("reviews", reviews);
 
         return "hj/camp/camp_information";
     }
