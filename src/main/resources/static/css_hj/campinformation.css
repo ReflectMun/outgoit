@@ -359,3 +359,7 @@ body {
 .hj-edit-part{
   margin-top: 2%;
 }
+/*리뷰가 없을떄 css 따로주기*/
+.hj-no-review{
+  margin-left: 35%;
+}

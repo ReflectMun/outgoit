@@ -162,7 +162,7 @@
                         </c:forEach>
                       </c:when>
                       <c:otherwise>
-                        <h2>아직 작성된 리뷰가 없습니다</h2>
+                        <h2 class="hj-no-review">아직 작성된 리뷰가 없습니다</h2>
                       </c:otherwise>
                     </c:choose>
 
