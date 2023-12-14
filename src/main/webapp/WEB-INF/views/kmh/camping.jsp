@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUT GO IT - main</title>
-    <link rel="stylesheet" href="../../../../resources/static/kmh/css/main.css">
+    <link rel="stylesheet" href="../../../../resources/static/kmh/css/camping.css">
 </head>
 <body>
     <!-- 헤더 영역 -->
@@ -36,6 +36,12 @@
                 <div class="map-sub-txt">
                     <span> 간단한 기능 설명하는 문장 하나 들어가면 좋을듯</span>
                 </div>
+            </div>
+            <div class="map-search">
+                <form action="">
+                    <input placeholder="검색하고 싶은 지역!">
+                    <button> 검색! </button>
+                </form>
             </div>
             <div class="map-wrap">
                 <div class="map-all">
