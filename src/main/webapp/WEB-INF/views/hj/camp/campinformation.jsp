@@ -119,7 +119,7 @@ pageEncoding="UTF-8"%>
       <!-- 리뷰 보여주는 부분 -->
       <div class="hj-review">
         <div class="hj-content1">
-          <div class="hj-content-box">
+          <div class="hj-review-content2-box">
             <div class="hj-review-pic">
               <!--  칠판 코멘트 -->
               <div class="hj-content-box-comment2"><span>Camping</span></div>
@@ -139,6 +139,17 @@ pageEncoding="UTF-8"%>
                       <div class="hj-review-nickname">닉넴</div>
 
                       <div class="hj-review-comment">한줄평</div>
+                      <div class="hj-edit-box">
+                        <div class="hj-edit-icon">...</div>
+                      </div>
+                      <div class="hj-edit-drop">
+
+
+                        <div><input type="text" placeholder="비밀번호"> </div>
+                        <div class="hj-edit-part">수정</div>
+                        <div class="hj-edit-part">삭제</div>
+
+                      </div>
                     </div>
                   </div>
                 </div>

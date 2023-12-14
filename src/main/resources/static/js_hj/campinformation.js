@@ -17,6 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    $(".hj-edit-box").click(function () {
+        // 현재 .hj-edit-drop의 display 상태를 가져옵니다.
+        let currentDisplay = $(".hj-edit-drop").css("display");
+
+        // 현재 display 상태가 "none"이면 "block"으로, "block"이면 "none"으로 토글합니다.
+        $(".hj-edit-drop").css("display", currentDisplay === "none" ? "block" : "none");
+    });
 
 
 
