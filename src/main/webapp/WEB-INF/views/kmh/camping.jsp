@@ -8,13 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUT GO IT - main</title>
     <link rel="stylesheet" href="../../../../resources/static/kmh/css/main.css">
-
-
-
 </head>
 <body>
-
-
     <!-- 헤더 영역 -->
     <div class="header"></div>
     <!-- 컨테이너 영역 -->
@@ -45,7 +40,7 @@
             <div class="map-wrap">
                 <div class="map-all">
                     <div class="map"><h1>지도 디브</h1></div>
-                    <div class="map-detail"><h1>디테일한 정보 띄워주는 디브. 누르면 정보 페이지로 넘어감.</h1></div>
+                    <div class="map-detail"><h1>리스트 띄워주는 div</h1></div>
                 </div>
             </div>
         </div>
@@ -54,7 +49,8 @@
     <!--컨테이너 여기까지 -->
     <!-- 푸터 영역 -->
     <div class="footer"></div>
+    <script>
 
-
+    </script>
 </body>
 </html>
