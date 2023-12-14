@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'JalnanGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SOYOMapleBoldTTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../img/index.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.title-wrap {
+    width: 100%;
+    height: 27vh;
+    margin-top: 7vw;
+}
+
+.title {
+    font-family: 'JalnanGothic';
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 8.5vw;
+    font-weight: bolder;
+    color: #116228;
+    text-shadow: 0.7vw 0.7vw 0 rgb(222, 111, 26);
+}
+
+@keyframes bounce {
+    
+    title {
+        
+        animation: bounce; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s; /* don't forget to set a duration! */
+     
+    }
+    
+}
+
+
+.title .go {
+color: rgb(242, 166, 52);
+text-shadow: 0.7vw 0.7vw 0 #116228;
+
+}
+
+    
+.sub-title {
+    font-family: 'SOYOMapleBoldTTF';
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2.5vw;
+    font-weight: bolder;
+    /* color: rgb(0, 0, 0) */
+}
+
+
+.menu-wrap {
+    /* border: 5px solid black; */
+    width: 100%;
+    height: 60vh;
+    display: flex; 
+    justify-content: center;
+    margin-top: 1vw ;
+    animation: fadeInUp 1.0s ease-out forwards;
+}   
+
+@keyframes fadeInUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
+.menu {
+    width: 25%;
+    height: 26vh;
+    display: grid;
+
+    place-items: center;
+    padding-top: 4vw;
+    padding-bottom: 9vw;
+    margin: 3vw ;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10%;
+    box-shadow: 0px 0.7vw 0.7vw 0px rgba(0, 0, 0, 0.5);
+}
+
+
+.txt {
+    font-family: 'SOYOMapleBoldTTF';
+    font-size: 3.5vw;    
+    font-weight: bolder;
+    color: #185328;
+
+}
+
+.camp-icon {
+    /* border: 4px solid red; */
+    width: 15vw;
+    height: 23vh;
+    opacity: 1;
+    background-image: url("../img/tent.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.hiking-icon {
+    /* border: 4px solid red; */
+    width: 15vw;
+    height: 23vh;
+    opacity: 1;
+    background-image: url("../img/map.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+}
+
+.riding-icon {
+    /* border: 4px solid red; */
+    width: 15vw;
+    height: 23vh;
+    opacity: 1;
+    background-image: url("../img/bicycle.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+}
