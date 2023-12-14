@@ -43,7 +43,7 @@
 .banner {
     width: 80%;
     height: 27vw;
-    background-image: url("../img/camping_banner.jpg");
+    background-image: url("../../../../resources/static/kmh/img/camping_banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
