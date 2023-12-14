@@ -125,13 +125,26 @@ body {
  color: #fffaf6;
  font-family: 'SOYOMapleBoldTTF';
  /* 팝업 효과*/
- z-index: 1;
+ z-index: 5;
   display: none;
   opacity: 0;
   transition: opacity 1s ease;
 }
 .hj-content-plus-container.show {
   opacity: 1;
+  display: block;
+}
+.hj-overlay-popup{
+  background: rgba(0, 0, 0, 0.1); /* 어두운 오버레이의 색상과 투명도를 조절합니다. */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: none;
+}
+.hj-overlay-popup.active {
   display: block;
 }
 .hj-no,

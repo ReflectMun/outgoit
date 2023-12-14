@@ -6,11 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
             // alert(11);
 
             $(".hj-content-plus-container").addClass("show");
+            $(".hj-overlay-popup").addClass("active");
+
         });
 
         $(".hj-content-plus-container").on("click", function () {
             // alert(22);
             $(".hj-content-plus-container").removeClass("show");
+            $(".hj-overlay-popup").removeClass("active");
         });
     });
 

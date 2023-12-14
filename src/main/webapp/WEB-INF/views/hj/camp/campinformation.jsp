@@ -31,6 +31,7 @@ pageEncoding="UTF-8"%>
             <div class="hj-content-plus-container">
               더보기 정보들 떠야하는 페이지
             </div>
+            <div class="hj-overlay-popup"></div>
             <!-- 칠판에 쓰인 분필 -->
             <div class="hj-content-box-comment"><span>OUT GO IT</span></div>
            <!-- 이미지 부분 -->
