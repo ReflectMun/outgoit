@@ -29,7 +29,7 @@ body {
   padding-bottom: 4%;
   margin-top: 1%;
   margin-bottom: 3%;
-  background-image: url(../../../../../../../resources/static/img/캠핑/camping_beginner.jpg);
+  background-image: url("/resources/static/img/자전거/riding_beginner2.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -168,11 +168,11 @@ body {
 /* 따로 만짐 안전가드 */
 .rh-riding-safety-titleBox {
   width: 100%;
-  padding-top: 6%;
-  padding-bottom: 4%;
+  padding-top: 10%;
+  padding-bottom: 5%;
   margin-top: 1%;
   margin-bottom: 3%;
-  background-image: url(../../../../../../../resources/static/img/캠핑/camping_safety.jpg);
+  background-image: url("/resources/static/img/자전거/riding_safety.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -184,7 +184,7 @@ body {
   font-size: 4vw;
   color: white;
   position: relative;
-  left: 59.5%;
+  left: 56%;
   animation: fadeInUp 1s ease-out forwards;
 }
 

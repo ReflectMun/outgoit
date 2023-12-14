@@ -24,8 +24,8 @@ body {
 }
 .rh-camping-titleBox {
   width: 100%;
-  padding-top: 6%;
-  padding-bottom: 4%;
+  padding-top: 10.355%;
+  padding-bottom: 6%;
   margin-top: 1%;
   margin-bottom: 3%;
   background-image: url(../../../../../../../resources/static/img/캠핑/camping_beginner.jpg);
@@ -69,20 +69,20 @@ body {
 }
 .rh-camping-wood-titleBox {
   /* border: 5px solid rgb(255, 0, 43); */
-  height: 7vh;
+  height: 4vw;
   display: flex;
   justify-content: center;
 }
 .rh-camping-wood-title {
   width: 55vw;
   /* border: 3px solid rgb(238, 255, 0); */
-  background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
+  background-image: url("/resources/static/img/기타/나무보드.jpg");
   box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
   background-size: contain;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5vw;
+  font-size: 3vw;
   font-family: "SOYOMapleBoldTTF";
   color: white;
   -webkit-text-stroke: 2px black;
@@ -95,7 +95,7 @@ body {
 .rh-camping-wood-bridgeSet {
   /* border: 1px solid rgb(255, 0, 179); */
   width: 45vw;
-  height: 3vh;
+  height: 3vw;
   display: flex;
   justify-content: space-between;
 }
@@ -166,8 +166,8 @@ body {
 /* 따로 만짐 안전가드 */
 .rh-camping-safety-titleBox {
   width: 100%;
-  padding-top: 6%;
-  padding-bottom: 4%;
+  padding-top: 10.355%;
+  padding-bottom: 6%;
   margin-top: 1%;
   margin-bottom: 3%;
   background-image: url(../../../../../../../resources/static/img/캠핑/camping_safety.jpg);
@@ -182,7 +182,7 @@ body {
   font-size: 4vw;
   color: white;
   position: relative;
-  left: 59.5%;
+  left: 58%;
   animation: fadeInUp 1s ease-out forwards;
 }
 @keyframes fadeInUp {
@@ -199,8 +199,8 @@ body {
 /* 따로 만짐 역사 */
 .rh-camping-history-titleBox {
   width: 100%;
-  padding-top: 17%;
-  padding-bottom: 10%;
+  padding-top: 16%;
+  padding-bottom: 10.043%;
   margin-top: 1%;
   margin-bottom: 3%;
   background-image: url(../../../../../../../resources/static/img/캠핑/camping_history4.jpg);

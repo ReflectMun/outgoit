@@ -26,7 +26,7 @@ body {
 .rh-hiking-titleBox {
   width: 100%;
   padding-top: 10%;
-  padding-bottom: 4%;
+  padding-bottom: 5.104%;
   margin-top: 1%;
   margin-bottom: 3%;
   background-image: url(../../img/등산/등산용_인포_가이드.jpg);
@@ -70,7 +70,7 @@ body {
 }
 .rh-hiking-wood-titleBox {
   /* border: 5px solid rgb(255, 0, 43); */
-  height: 7vh;
+  height: 4vw;
   display: flex;
   justify-content: center;
 }
@@ -83,7 +83,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5vw;
+  font-size: 3vw;
   font-family: "SOYOMapleBoldTTF";
   color: white;
   -webkit-text-stroke: 2px black;
@@ -165,11 +165,11 @@ body {
 /* 따로 만짐 안전가드 */
 .rh-hiking-safety-titleBox {
   width: 100%;
-  padding-top: 6%;
-  padding-bottom: 4%;
+  padding-top: 10.104%;
+  padding-bottom: 5%;
   margin-top: 1%;
   margin-bottom: 3%;
-  background-image: url(../../../../../../../resources/static/img/캠핑/camping_safety.jpg);
+  background-image: url("/resources/static/img/등산/hiking_safety.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -181,7 +181,7 @@ body {
   font-size: 4vw;
   color: white;
   position: relative;
-  left: 59.5%;
+  left: 10%;
   animation: fadeInUp 1s ease-out forwards;
 }
 @keyframes fadeInUp {
@@ -198,13 +198,13 @@ body {
 /* 따로 만짐 역사 */
 .rh-hiking-history-titleBox {
   width: 100%;
-  padding-top: 17%;
+  padding-top: 14.68%;
   padding-bottom: 10%;
   margin-top: 1%;
   margin-bottom: 3%;
-  background-image: url(../../../../../../../resources/static/img/캠핑/camping_history4.jpg);
+  background-image: url("/resources/static/img/등산/등산용 인포_가이드.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: 66%;
   background-repeat: no-repeat;
 }
 .rh-hiking-history-wood-mainBox {

@@ -135,11 +135,11 @@ pageEncoding="UTF-8"%>
               </div>
             </div>
             <div class="rh-camping-wood-main" id="animal">
-              <div id="camping-icon9">
+              <div id="icon9">
                 <div>아이콘 자뤼</div>
                 <div>키워드 자리</div>
               </div>
-              <div class="rh-camping-wood-mainPost" id="camping-content9">
+              <div class="rh-camping-wood-mainPost" id="content9">
                 <table class="rh-animal-card" border="1">
                   <tr>
                     <td>지역</td>

@@ -31,7 +31,7 @@ pageEncoding="UTF-8"%>
           <!-- 통나무 -->
           <div class="rh-riding-wood-titleBox">
             <!-- 통나무 타이틀 -->
-            <div class="rh-riding-wood-title">About Camping</div>
+            <div class="rh-riding-wood-title">About Riding</div>
           </div>
           <div class="rh-riding-wood-bridgeBox">
             <!-- 통나무 다리 -->
