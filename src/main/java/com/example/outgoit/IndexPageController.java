@@ -11,8 +11,9 @@ public class IndexPageController {
     public String sendIndexPage(){
         return "kmh/index";
     }
-//    @GetMapping("/camping")
-//    public String sendCampingPage(){
-//        return  "kmh/camping";
-//    }
+    @GetMapping("/camping")
+    public String sendCampingPage(){
+        return  "hj/camp/container";
+    }
+
 }
