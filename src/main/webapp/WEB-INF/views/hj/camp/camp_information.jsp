@@ -118,16 +118,19 @@ pageEncoding="UTF-8"%>
           </div>
         </div>
       </div>
+
       <!-- 리뷰 보여주는 부분 -->
       <div class="hj-review">
         <div class="hj-content1">
           <div class="hj-review-content2-box">
             <div class="hj-review-pic">
+
               <!--  칠판 코멘트 -->
               <div class="hj-content-box-comment2"><span>Camping</span></div>
               <div class="hj-review-inside-box2">
                 <div class="hj-review-detail2">
                   <div class="hj-review-zentai-box">
+
                     <!-- 닉넴 한줄평 보여주는 곳  -->
                     <div class="hj-review-content-box">
                       <div class="hj-review-stars">
@@ -150,18 +153,19 @@ pageEncoding="UTF-8"%>
                         <div class="hj-edit-part">삭제</div>
                       </div>
                     </div>
-
                     <!-- 코멘트 보여주는 위치 여기까지 -->
 
                   </div>
                 </div>
               </div>
-
               <!-- 칠판모양 코멘트 영역 여기까지 -->
+
             </div>
           </div>
         </div>
       </div>
+      <!-- 리뷰 보여주는 곳 끝 -->
+
     </div>
   </body>
 </html>

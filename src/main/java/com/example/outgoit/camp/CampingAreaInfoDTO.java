@@ -13,7 +13,7 @@ import lombok.Setter;
 @Setter
 @Getter
 public class CampingAreaInfoDTO {
-    private String contentId; // 캠핑장 식별 일련번호. 캠핑장 이미지 불러오는데 필요함
+    private Integer contentId; // 캠핑장 식별 일련번호. 캠핑장 이미지 불러오는데 필요함
     private String facltNm; // 야영장명
     private String lineIntro; // 한줄소개
     private String gnrlSiteCo; // 일반 야영장 개수
