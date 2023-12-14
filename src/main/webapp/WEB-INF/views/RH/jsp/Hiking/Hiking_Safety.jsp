@@ -131,7 +131,7 @@ pageEncoding="UTF-8"%>
                 돼요.
               </div>
             </div>
-            <div class="rh-hiking-wood-main">
+            <div class="rh-hiking-wood-main" id="animal">
               <div id="icon9">
                 <div>아이콘 자뤼</div>
                 <div>키워드 자뤼</div>
@@ -149,12 +149,18 @@ pageEncoding="UTF-8"%>
                     <td>033-250-7504</td>
                   </tr>
                   <tr>
-                    <td>경기<br />(남부)</td>
+                    <td>
+                      경기<br />
+                      <span style="font-size: 0.7vw">(남부)</span>
+                    </td>
                     <td>경기야생동물구조센터</td>
                     <td>031-8008-6212</td>
                   </tr>
                   <tr>
-                    <td>경기<br />(북부)</td>
+                    <td>
+                      경기<br />
+                      <span style="font-size: 0.7vw">(북부)</span>
+                    </td>
                     <td>경기북부야생동물관리센터</td>
                     <td>031-8030-4451</td>
                   </tr>

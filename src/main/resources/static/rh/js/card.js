@@ -84,10 +84,12 @@ $(function () {
   $("#icon7").click(function () {
     $("#icon7").hide();
     $("#content7").show();
+    $("#animal").css("height", "100%");
   });
   $("#content7").click(function () {
     $("#content7").hide();
     $("#icon7").show();
+    $("#animal").css("height", "23vw");
   });
 
   //8번
@@ -106,9 +108,11 @@ $(function () {
   $("#icon9").click(function () {
     $("#icon9").hide();
     $("#content9").show();
+    $("#animal").css("height", "100%");
   });
   $("#content9").click(function () {
     $("#content9").hide();
     $("#icon9").show();
+    $("#animal").css("height", "23vw");
   });
 });
