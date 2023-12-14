@@ -28,10 +28,12 @@
       center: new kakao.maps.LatLng(37.57295965192006, 126.97690156991),
       level: 5
     }
-    const map = new kakao.maps.Map(mapContainer, mapOption)
+    let map = new kakao.maps.Map(mapContainer, mapOption)
     const ps = new kakao.maps.services.Places()
+    const infowindow = new kakao.maps.InfoWindow({ zIndex: 1 })
 
     let markers = []
+    let polylines = []
     let latlngBounds = new kakao.maps.LatLngBounds()
 
     searchSubmitButton.addEventListener("click", async (e) => {
@@ -39,20 +41,41 @@
 
       deleteMarker()
 
-      ps.keywordSearch(inputValue, (data, status, pagination) => {
+      ps.keywordSearch(inputValue, async (data, status, pagination) => {
         if(status === kakao.maps.services.Status.OK){
-          console.log(data)
-          addMarker(data)
+
+
+          addMarker(data.slice(0, 1))
           displayMarker()
+
+          const baseUrl = new URL("http://" + hostName + "/api/trail/search")
+
+          baseUrl.searchParams.set("lati", data[0].y)
+          baseUrl.searchParams.set("lngi", data[0].x)
+
+          const { data: resData } = await axios.get(baseUrl)
+
+          for(const trail of resData){
+            const trailLine = trail['geometry']['coordinates'][0]
+            const path = []
+
+            for(const coord of trailLine){
+              path.push(new kakao.maps.LatLng(coord[1], coord[0]))
+            }
+
+            const polyline = new kakao.maps.Polyline({
+              path: path,
+              strokeWeight: 5,
+              strokeColor: '#F7819F',
+              strokeOpacity: 0.7,
+              strokeStyle: 'solid'
+            })
+
+            polylines.push(polyline)
+            polyline.setMap(map)
+          }
         }
       })
-
-      const baseUrl = new URL("http://" + hostName + "/api/trail/search")
-
-      baseUrl.searchParams.set("lati", 37)
-      baseUrl.searchParams.set("lngi", 127)
-
-      const { data: resData } = await axios.get(baseUrl)
     })
 
     function addMarker(places){
@@ -85,8 +108,13 @@
         marker.setMap(null)
       }
 
+      for(const line of polylines){
+        line.setMap(null)
+      }
+
       latlngBounds = new kakao.maps.LatLngBounds()
       markers = []
+      polylines = []
     }
 
     function displayMarker(){
