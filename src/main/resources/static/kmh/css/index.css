@@ -26,11 +26,17 @@ body {
     background-position: center;
 }
 
+a {
+    text-decoration-line: none;
+    color: inherit;
+}
+
 .container {
     position: relative;
     width: 100vw;
     height: 100vh;
 }
+
 
 .title-wrap {
     width: 100%;
@@ -44,25 +50,25 @@ body {
     justify-content: center;
     text-align: center;
     font-size: 8.5vw;
-    font-weight: bolder;
+    font-weight: 700;
     color: #116228;
     text-shadow: 0.7vw 0.7vw 0 rgb(222, 111, 26);
 }
 
 @keyframes bounce {
-    
+
     title {
-        
+
         animation: bounce; /* referring directly to the animation's @keyframe declaration */
         animation-duration: 2s; /* don't forget to set a duration! */
-     
+
     }
-    
+
 }
 
 
 .title .go {
-color: rgb(242, 166, 52);
+    color: rgb(255, 251, 211);
 text-shadow: 0.7vw 0.7vw 0 #116228;
 
 }
@@ -118,11 +124,11 @@ text-shadow: 0.7vw 0.7vw 0 #116228;
 
 .txt {
     font-family: 'SOYOMapleBoldTTF';
-    font-size: 3.5vw;    
+    font-size: 3.5vw;
     font-weight: bolder;
     color: #185328;
-
 }
+
 
 .camp-icon {
     /* border: 4px solid red; */

@@ -8,6 +8,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/outgoit")
 public class IndexPageController {
     @GetMapping("/index")
-    public String sendIndexPage(){
+    public String sendIndexPage() {
         return "kmh/index";
+    }
+
+    @GetMapping("/camping")
+    public String sendCampingMainPage() {
+        return "kmh/camping";
+    }
 }
+

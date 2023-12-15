@@ -13,6 +13,10 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+
+
+
+
 </head>
 <body>
     
@@ -33,11 +37,11 @@
 			</div>
 			<div class="menu">
 				<div class="hiking-icon"></div>
-				<div class="txt">하이킹</div>
+				<div class="txt"><a href=""><span>하이킹</span></a></div>
 			</div>
 			<div class="menu">
 				<div class="riding-icon"></div>
-				<div class="txt">라이딩</div>
+				<div class="txt"><a href=""><span>라이딩</span></a></div>
 			</div>
 		</div>
         <div class="footer"></div>
