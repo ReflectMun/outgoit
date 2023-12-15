@@ -21,11 +21,11 @@ public class CampingReviewApiController {
     @PostMapping("/submit")
     public boolean submitCampingAreaReview(){
         campingReviewService.submitReview(
-                "jh",
+                "ButterFlakes",
                 "1234",
-                "안녕 리뷰",
-                5,
-                1
+                "테스트용 리뷰",
+                3,
+                3397
         );
 
         return true;
