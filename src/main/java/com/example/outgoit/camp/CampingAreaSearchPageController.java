@@ -53,7 +53,7 @@ public class CampingAreaSearchPageController {
                         ? "부대시설 정보가 없습니다"
                         : data.getSbrsEtc()
         );
-        model.addAttribute("etc", "etc??");
+        model.addAttribute("etc", data.getSbrsEtc());
 
         model.addAttribute("existReviews", !reviews.isEmpty());
         model.addAttribute("reviews", reviews);
