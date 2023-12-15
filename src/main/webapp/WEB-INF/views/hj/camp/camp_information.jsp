@@ -169,19 +169,10 @@
                                 <div class="hj-edit-part" onclick="deleteComment(${review.commentNumber})">삭제</div>
                               </div>
                             </div>
-<<<<<<< HEAD
-
-                            <br>
-
-
-
-                            <!--에딧 기능 -->
-
                             <!-- 개별 리뷰 끝 -->
                           </c:forEach>
                         </div>
                         <!-- 코멘트 보여주는 위치 여기까지 -->
->>>>>>> origin/jiho
                         <!--   페이징 처리-->
                         <div id="hj-page-box">
                           <div id="hj-prev-button" onclick="getPrevCommentPage()"><span>[앞으로]</span></div>
