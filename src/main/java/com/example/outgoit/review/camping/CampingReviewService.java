@@ -1,6 +1,7 @@
 package com.example.outgoit.review.camping;
 
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -17,8 +18,9 @@ public class CampingReviewService {
 
     ///////////////////////////// 서비스 구현 /////////////////////////////////////
     // 해당 캠핑장의 리뷰 모두 불러오는 메서드
-    public ArrayList<CampingReview> loadCampingAreaReview(int campingAreaId){
-        return new ArrayList<CampingReview>(repo.findByCampingAreaId(campingAreaId));
+    public ArrayList<CampingReview> loadCampingAreaReview(int campingAreaId, int page){
+        PageRequest pageRequest = PageRequest.of(page, 5);
+        return new ArrayList<CampingReview>(repo.findByCampingAreaId(campingAreaId, pageRequest).getContent());
     }
 
     // 리뷰 수정 및 삭제를 위해 해당 작업을 할 리뷰를 불러오는 메서드

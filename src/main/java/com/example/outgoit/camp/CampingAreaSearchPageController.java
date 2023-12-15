@@ -1,5 +1,7 @@
 package com.example.outgoit.camp;
 
+import com.example.outgoit.review.camping.CampingReview;
+import com.example.outgoit.review.camping.CampingReviewService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -11,10 +13,10 @@ import java.util.ArrayList;
 public class CampingAreaSearchPageController {
     //////////////////// 의존성 주입 코드 //////////////////////
     // 허락없이 건들면 뒤집니다
-    private final CampingSearchService campingSearchService;
+    private final CampingReviewService campingReviewService;
 
-    public CampingAreaSearchPageController(CampingSearchService campingSearchService){
-        this.campingSearchService = campingSearchService;
+    public CampingAreaSearchPageController(CampingReviewService campingReviewService){
+        this.campingReviewService = campingReviewService;
     }
     ////////////////////////////////////////////////////////
 
@@ -35,13 +37,27 @@ public class CampingAreaSearchPageController {
 
     @PostMapping("/detail/{campingAreaName}")
     public String sendDetailPage(CampingAreaInfoDTO data, Model model){
+        ArrayList<CampingReview> reviews =
+                campingReviewService.loadCampingAreaReview(data.getContentId(), 0);
+
+        System.out.println(data.getContentId());
+
         model.addAttribute("thumbnail", data.getFirstImageUrl());
         model.addAttribute("campingAreaName", data.getFacltNm());
         model.addAttribute("telephoneNumber", data.getTel());
         model.addAttribute("periodOfOperation", data.getOperPdCl() + " " + data.getOperDecl());
         model.addAttribute("address", data.getAddr1() + " " + data.getAddr2());
-        model.addAttribute("subsidiaryFacilities", data.getSbrsEtc());
+        model.addAttribute(
+                "subsidiaryFacilities",
+                data.getSbrsEtc().isEmpty()
+                        ? "부대시설 정보가 없습니다"
+                        : data.getSbrsEtc()
+        );
         model.addAttribute("etc", "etc??");
+
+        model.addAttribute("existReviews", !reviews.isEmpty());
+        model.addAttribute("reviews", reviews);
+
 
         return "hj/camp/camp_information";
     }
