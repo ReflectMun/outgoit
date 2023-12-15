@@ -198,11 +198,13 @@ body {
 #hj-content-zentai-box {
   margin-top: 3%;
 }
-.hj-review-star {
+#hj-review-star-box {
   display: flex;
-  margin-left: 25%;
+  margin-left: 30%;
 }
-
+.hj-star{
+  font-size: 3vw;
+}
 .hj-review {
   /* border: 1px solid purple; */
 }
@@ -216,7 +218,7 @@ body {
 #hj-input {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 2%;
+  margin-top: 1%;
 }
 #hj-input-content {
   margin-left: 3%;
@@ -302,7 +304,10 @@ body {
   height: auto;
   /* margin-left: ; */
 }
-
+.hj-review-star {
+  display: flex;
+  margin-left: 25%;
+}
 #hj-review-content-box{
   /*display: flex;*/
    /*border: 1px solid darkgreen;*/

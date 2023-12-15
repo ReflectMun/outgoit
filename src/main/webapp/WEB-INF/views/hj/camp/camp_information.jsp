@@ -71,10 +71,10 @@
                 <div id="hj-content-detail2">
                   <div id="hj-content-zentai-box">
                     <!-- 별부분 -->
-                    <div class="hj-review-star">
-                      <div class="hj-star">☆</div>
-                      <div class="hj-star">☆</div>
-                      <div class="hj-star">☆</div>
+                    <div id="hj-review-star-box">
+                      <div class="hj-star">✰</div>
+                      <div class="hj-star">✰</div>
+                      <div class="hj-star">✰</div>
                       <div class="hj-star">☆</div>
                       <div class="hj-star">☆</div>
                     </div>
