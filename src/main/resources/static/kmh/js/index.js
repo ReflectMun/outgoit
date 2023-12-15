@@ -1,26 +1,9 @@
-const txt = document.getElementById('txt1');
-txt.addEventListener('mouseover',function () {
-    txt.style.color = 'rgb(222, 111, 26)';
-})
+const title = document.querySelector('.title');
 
-txt.addEventListener('mouseout',function () {
-    txt.style.color = '';
-})
+function startAnimation() {
+    title.classList.remove('bounce'); // 애니메이션 클래스 제거
+    void title.offsetWidth; // 리플로우 트리거(애니메이션 클래스가 제거된 후 다시 추가되면 애니메이션이 재시작됨)
+    title.classList.add('bounce'); // 애니메이션 클래스 추가
+}
 
-const txt2 = document.getElementById('txt2');
-txt2.addEventListener('mouseover',function () {
-    txt2.style.color = 'rgb(222, 111, 26)';
-})
-
-txt2.addEventListener('mouseout',function () {
-    txt2.style.color = '';
-})
-
-const txt3 = document.getElementById('txt3');
-txt3.addEventListener('mouseover',function () {
-    txt3.style.color = 'rgb(222, 111, 26)';
-})
-
-txt3.addEventListener('mouseout',function () {
-    txt3.style.color = '';
-})
+setInterval(startAnimation, 5000); // 5초마다 애니메이션 시작 함수 호출

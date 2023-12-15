@@ -14,6 +14,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'TTTogether';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/TTTogetherA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -42,7 +49,7 @@ a {
     width: 100%;
     height: 27vh;
     margin-top: 5vw;
-    margin-bottom: 3vw;
+    margin-bottom: 2vw;
 }
 
 .title {
@@ -54,7 +61,7 @@ a {
     font-weight: 700;
     color: #116228;
     text-shadow: 0 0.7vw 0 rgb(222, 111, 26);
-    animation: bounce 2s infinite; /* 애니메이션을 무한히 반복 */
+    animation: bounce 2s ease-in-out; /* 애니메이션을 무한히 반복 */
 }
 
 @keyframes bounce {
@@ -83,7 +90,17 @@ a {
     text-align: center;
     font-size: 2.5vw;
     font-weight: bolder;
-    /* color: rgb(0, 0, 0) */
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 
@@ -93,8 +110,8 @@ a {
     height: 60vh;
     display: flex; 
     justify-content: center;
-    animation: fadeInUp 1.0s ease-out forwards;
-    margin-bottom: 3vw;
+    animation: fadeInUp 1s ease-in-out forwards;
+    margin-bottom: 1vw;
 }   
 
 @keyframes fadeInUp {
@@ -125,37 +142,36 @@ a {
 
 
 .txt {
-    font-family: 'SOYOMapleBoldTTF';
-    font-size: 3.5vw;
-    font-weight: 700;
+    font-family: 'TTTogether';
+    font-style: normal;
+    font-size: 3vw;
+    font-weight: bold;
     color: #19672d;
+    margin-top: 0.6vw;
 }
 
 .menu-txt {
     cursor: pointer;
-    -webkit-text-stroke: 2px #19672d;
+    -webkit-text-stroke: 0.6px #19672d;
     background-image: linear-gradient(0deg, #19672d, #19672d);
     -webkit-background-clip: text;
     color: transparent;
     background-repeat: no-repeat;
-    transition: background-size 0.2s ease-in
+    transition: background-size 0.2s ease-in;
 }
 
-
-.menu-txt:hover {
-    background-size: 100% 100%;
+.menu:hover {
+    transform: scale(1.1); /* 호버 시 크기를 1.1배로 확대 */
 }
 
-span:hover {
-    background-size: 100% 100%;
+.menu:hover .menu-txt {
+    background-size: 100% 100%; /* menu-txt도 같이 호버되도록 */
 }
 
 .menu-txt {
     background-position: 0% 0%;
     background-size: 0% 100%;
 }
-
-
 
 
 .camp-icon {
