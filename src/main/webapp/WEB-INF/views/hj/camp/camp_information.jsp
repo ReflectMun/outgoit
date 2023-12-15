@@ -6,14 +6,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${campingAreaName} 상세정보</title>
-
-    <link rel="stylesheet" href="/resources/static/css_hj/campinformation.css" />
-
     <link rel="stylesheet" href="/resources/static/css_hj/camp_information.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-    <script src="/resources/static/js_hj/campinformation.js"></script>
+    <script src="/resources/static/js_hj/draft_information.js"></script>
   </head>
   <body>
     <input id="camping-area-id" value="${campingAreaNumber}" style="display: none;">
