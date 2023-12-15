@@ -44,8 +44,6 @@
             try{
                 const { data: resData }  = await axios.get(reqUrl)
 
-                console.log(resData)
-
                 if(resData[0]['errorMessage']){
                     alert(resData[0]['errorMessage'])
                     return

@@ -1,9 +1,14 @@
 package com.example.outgoit.review.camping;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.outgoit.review.camping.dto.CampingReviewModifyingDTO;
+import com.example.outgoit.review.camping.dto.CampingReviewSubmitBodyDTO;
+import com.example.outgoit.review.camping.dto.NotificationProcessStatusDTO;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -19,16 +24,35 @@ public class CampingReviewApiController {
     ////////////////////////////////////////////////////////////////////////////
 
     @PostMapping("/submit")
-    public boolean submitCampingAreaReview(){
-        campingReviewService.submitReview(
-                "jh",
-                "1234",
-                "안녕 리뷰",
-                5,
-                1
-        );
+    public NotificationProcessStatusDTO submitCampingAreaReview(@RequestBody CampingReviewSubmitBodyDTO body){
+        Integer resultCode = null;
+        try {
+            if(body.getAuthor().isEmpty() || body.getPassword().isEmpty() ||
+               body.getContent().isEmpty() || body.getCampingAreaId() == null){
+                resultCode = 703;
+                throw new Exception("올바르지 않은 값이 전달되었습니다");
+            }
 
-        return true;
+            resultCode = campingReviewService.submitReview(
+                    body.getAuthor(),
+                    body.getPassword(),
+                    body.getContent(),
+                    3,
+                    body.getCampingAreaId()
+            );
+
+            if(resultCode != 200)
+                throw new Exception("리뷰 작성 중 문제가 발생하였습니다");
+
+            return new NotificationProcessStatusDTO(resultCode, null);
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            if(resultCode == null)
+                resultCode = 700;
+
+            return new NotificationProcessStatusDTO(resultCode, e.getMessage());
+        }
     }
 
     @PostMapping("/rating")
@@ -37,8 +61,8 @@ public class CampingReviewApiController {
     }
 
     @PostMapping("/update")
-    public boolean updateReview(){
-        campingReviewService.updateReviewContent(
+    public boolean updateReview(@RequestBody CampingReviewModifyingDTO body){
+        Integer updatedRow = campingReviewService.updateReviewContent(
                 "하하하하하",
                 1
         );
@@ -53,7 +77,24 @@ public class CampingReviewApiController {
     }
 
     @GetMapping("/list")
-    public ArrayList<CampingReview> getCampingAreaReviewList(){
-        return campingReviewService.loadCampingAreaReview(1);
+    public ArrayList<CampingReview> getCampingAreaReviewList(
+            @PageableDefault(size = 5, sort = "commentNumber", direction = Sort.Direction.DESC) Pageable pageable,
+            Integer campingAreaId,
+            Integer pageNumber
+    ){
+        if (pageNumber == 0) {
+            return new ArrayList<>();
+        }
+
+        Pageable modified = PageRequest.of(pageNumber, pageable.getPageSize(), pageable.getSort());
+        Page<CampingReview> result = campingReviewService.loadCampingAreaReview(campingAreaId, modified);
+        System.out.println(result.getTotalPages());
+
+        if (pageNumber > result.getTotalPages()){
+            return new ArrayList<>();
+        }
+
+        System.out.println(result.getTotalPages());
+        return new ArrayList<CampingReview>(result.getContent());
     }
 }

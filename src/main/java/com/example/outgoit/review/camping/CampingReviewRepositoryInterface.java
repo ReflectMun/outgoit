@@ -1,5 +1,7 @@
 package com.example.outgoit.review.camping;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -17,7 +19,9 @@ public interface CampingReviewRepositoryInterface extends JpaRepository<CampingR
 
     // SELECT * FROM (Table) WHERE Camping_Area_Id := camping_area_id
     // 해당 캠핑장의 리뷰를 모두 불러오는 쿼리문
-    List<CampingReview> findByCampingAreaId(int campingAreaId);
+    // Pageable 객체를 이용해서 페이징하면 됨
+    // 페이지네이션 객체는 CampingReviewApiController와 CampingReviewService에 좋은 예제가 있음
+    Page<CampingReview> findByCampingAreaId(int campingAreaId, Pageable pageable);
 
     // SELECT * FROM (Table) WHERE Comment_Number := comment_number
     // 수정 및 삭제를 위한 특정 리뷰 하나만을 불러오기 위한 쿼리문
