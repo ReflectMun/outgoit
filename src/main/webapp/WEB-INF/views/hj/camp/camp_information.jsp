@@ -6,9 +6,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${campingAreaName} 상세정보</title>
+
+    <link rel="stylesheet" href="/resources/static/css_hj/campinformation.css" />
+
     <link rel="stylesheet" href="/resources/static/css_hj/camp_information.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
     <script src="/resources/static/js_hj/campinformation.js"></script>
   </head>
   <body>
@@ -74,11 +78,11 @@
                   <div id="hj-content-zentai-box">
                     <!-- 별부분 -->
                     <div id="hj-review-star-box">
-                      <div class="hj-star">✰</div>
-                      <div class="hj-star">✰</div>
-                      <div class="hj-star">✰</div>
-                      <div class="hj-star">☆</div>
-                      <div class="hj-star">☆</div>
+                      <span class="hj-star" data-value="1">&#9733;</span>
+                      <span class="hj-star" data-value="2">&#9733;</span>
+                      <span class="hj-star" data-value="3">&#9733;</span>
+                      <span class="hj-star" data-value="4">&#9733;</span>
+                      <span class="hj-star" data-value="5">&#9733;</span>
                     </div>
                     <!-- 인풋 아이디 비번 부분 -->
                     <div id="hj-input">
@@ -165,10 +169,19 @@
                                 <div class="hj-edit-part" onclick="deleteComment(${review.commentNumber})">삭제</div>
                               </div>
                             </div>
+<<<<<<< HEAD
+
+                            <br>
+
+
+
+                            <!--에딧 기능 -->
+
                             <!-- 개별 리뷰 끝 -->
                           </c:forEach>
                         </div>
                         <!-- 코멘트 보여주는 위치 여기까지 -->
+>>>>>>> origin/jiho
                         <!--   페이징 처리-->
                         <div id="hj-page-box">
                           <div id="hj-prev-button" onclick="getPrevCommentPage()"><span>[앞으로]</span></div>
@@ -183,13 +196,7 @@
                     </c:choose>
 
                   </div>
-              <!--   페이징 처리-->
-<%--                  <div id="hj-page-box">--%>
-<%--                    <div id="hj-first-button"><span>[맨 처음]</span></div>--%>
-<%--                    <div id="hj-pages"><span>[페이지 번호들]</span></div>--%>
-<%--                    <div id="hj-final-button"><span>[맨 끝]</span></div>--%>
-<%--                  </div>--%>
-                  <!--페이징 처리 div 끝 -->
+
                 </div>
               </div>
               <!-- 칠판모양 코멘트 영역 여기까지 -->
