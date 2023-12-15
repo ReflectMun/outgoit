@@ -112,9 +112,12 @@ function makeListElement(searchData, apiResData){
     const openDetailButton = document.createElement("button")
     openDetailButton.innerText = "캠핑장 정보 보기"
     openDetailButton.classList.add("open-detail-button")
-    openDetailButton.addEventListener("click", (e) => {
-        alert(apiResData['facltNm'])
-    })
+     // 모달 띄우기 위해 js
+    let detailpopup = document.getElementById('hj-container2');
+     openDetailButton.addEventListener("click", (e) => {
+         detailpopup.style.display='block';
+         // alert(apiResData['facltNm'])
+     })
 
     childButtonWrapper.classList.add("button-wrapper")
     childButtonWrapper.appendChild(openDetailButton)

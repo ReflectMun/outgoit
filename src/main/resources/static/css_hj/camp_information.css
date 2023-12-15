@@ -25,6 +25,9 @@ body {
   width: 100%;
   background-color: #FFFAF6;
   display: none;
+  position: absolute;
+  top: 0;
+  z-index: 1;
 }
 /* 첫번쨰  */
 #hj-info {
