@@ -14,8 +14,6 @@
     font-style: normal;
 }
 
-
-
 .body {
     margin: 0;
     padding: 0;
@@ -92,7 +90,7 @@
     margin-top: 0.5vw;
 }
 
-.map-wrap {
+.search-result {
     width: 100%;
     height: 45vw;
     background-color: rgb(216, 216, 216);
@@ -100,7 +98,7 @@
     justify-content: center;
 }
 
-.map-search {
+.camping-area-search {
     width: 100vw;
     height: 3vh;
     display: flex;
@@ -121,15 +119,14 @@
     padding: 3vw;
 }
 
-.map {
+#map {
     width: 50%;
     height: 30vw;
-    background-color: skyblue;
 }
 
-.map-detail {
+#search-result-list {
     background-color: aquamarine;
     width: 35%;
     height: 30vw;
-
+    overflow: scroll;
 }

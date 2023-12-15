@@ -1,36 +1,34 @@
-package com.example.outgoit.review.camping;
+package com.example.outgoit.review.cycle;
 
 import jakarta.transaction.Transactional;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
 @Service
-public class CampingReviewService {
+public class CycleRouteReviewService {
     //////////////////// 초기화 코드니까 말 없이 건드리지 마시오 /////////////////////////
-    private final CampingReviewRepositoryInterface repo;
+    private final CycleRouteReviewRepositoryInterface repo;
 
-    public CampingReviewService(CampingReviewRepositoryInterface repo){
+    public CycleRouteReviewService(CycleRouteReviewRepositoryInterface repo){
         this.repo = repo;
     }
     ////////////////////////////////////////////////////////////////////////////
 
     ///////////////////////////// 서비스 구현 /////////////////////////////////////
-    // 해당 캠핑장의 리뷰 모두 불러오는 메서드
-    public ArrayList<CampingReview> loadCampingAreaReview(int campingAreaId, int page){
-        PageRequest pageRequest = PageRequest.of(page, 5);
-        return new ArrayList<CampingReview>(repo.findByCampingAreaId(campingAreaId, pageRequest).getContent());
+    // 해당 자전거길의 리뷰 모두 불러오는 메서드
+    public ArrayList<CycleRouteReview> loadCycleRouteReview(int CycleRouteId){
+        return new ArrayList<CycleRouteReview>(repo.findByCycleRouteId(CycleRouteId));
     }
 
     // 리뷰 수정 및 삭제를 위해 해당 작업을 할 리뷰를 불러오는 메서드
-    public ArrayList<CampingReview> getCampingAreaReview(int commentId){
-        return new ArrayList<CampingReview>(repo.findByCommentNumber(commentId));
+    public ArrayList<CycleRouteReview> getCycleRouteReview(int commentId){
+        return new ArrayList<CycleRouteReview>(repo.findByCommentNumber(commentId));
     }
 
     // 사용자가 입력한 비밀번호가 일치하는지 확인하는 메서드
     public boolean isCorrectPassword(String password, int commentId){
-        CampingReview review = this.getCampingAreaReview(commentId).get(0);
+        CycleRouteReview review = this.getCycleRouteReview(commentId).get(0);
         return review.getPassword().equals(password);
     }
 
@@ -54,20 +52,20 @@ public class CampingReviewService {
             String password,
             String content,
             int rating,
-            int campingAreaId
+            int cycleRouteId
     ){
-        repo.save(new CampingReview(
+        repo.save(new CycleRouteReview(
                 author,
                 password,
                 content,
                 rating,
-                campingAreaId
+                cycleRouteId
         ));
         System.out.println("새로운 리뷰가 작성됨");
     }
 
     // 캠핑장 평점 조회
-    public ArrayList<Object> getCampingAreaRating(int campingAreaId){
-        return new ArrayList<>(this.repo.findAvgRatingByCampingAreaId(campingAreaId));
+    public ArrayList<Object> getCycleRouteRating(int cycleRouteId){
+        return new ArrayList<>(this.repo.findAvgRatingByCycleRouteId(cycleRouteId));
     }
 }

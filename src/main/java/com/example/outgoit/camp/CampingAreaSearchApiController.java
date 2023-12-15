@@ -14,6 +14,7 @@ public class CampingAreaSearchApiController {
     }
     @GetMapping("/search/{campName}")
     public List<CampingAreaInfoDTO> getChampingAreaInfo(@PathVariable String campName){
+        System.out.printf("검색 키워드: %s\n", campName);
         return campingSearchService.GetSearchedCampingAreaList(campName);
     }
 }

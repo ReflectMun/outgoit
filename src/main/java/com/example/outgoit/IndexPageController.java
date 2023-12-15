@@ -10,9 +10,4 @@ public class IndexPageController {
     @GetMapping("/index")
     public String sendIndexPage(){
         return "kmh/index";
-    }
-//    @GetMapping("/camping")
-//    public String sendCampingPage(){
-//        return  "kmh/camping";
-//    }
 }

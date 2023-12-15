@@ -6,6 +6,7 @@ import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -43,13 +44,12 @@ public class TrailRouteService {
                 .queryParam("errorFormat", format)
                 .queryParam("request", "GetFeature")
                 .queryParam("data", "LT_L_FRSTCLIMB")
-                .queryParam("geomFilter", coordinateBox)
+                .queryParam("geomFilter", URLEncoder.encode(coordinateBox))
+                .queryParam("size", "300")
                 .queryParam("domain", serviceUrl)
                 .queryParam("crs", crs)
                 .queryParam("key", key)
                 .build(true);
-
-        System.out.println(uri.toUriString());
 
         ObjectMapper mapper = new ObjectMapper();
         URL url = new URL(uri.toUriString());
@@ -61,6 +61,7 @@ public class TrailRouteService {
         ArrayList<FeatureData> list =
                 res.getResponse().getResult().getFeatureCollection().getFeatures();
 
+        System.out.printf("총 %d개의 등산로 정보 검색결과가 반환됨\n", list.size());
         return list;
     }
 }
