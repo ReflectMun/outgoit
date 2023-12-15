@@ -27,6 +27,7 @@ public class CampingAreaSearchPageController {
         return "jh/camp";
     }
 
+<<<<<<< HEAD
     @GetMapping("/draft1")
     public String sendDraft1(){
         return "kmh/draft/1";
@@ -67,5 +68,11 @@ public class CampingAreaSearchPageController {
     public String sendError(){
         return "잘못된 접근입니다";
     }
+=======
+
+
+
+
+>>>>>>> 74081d467bd8c943873d986cca4c846a3296344b
 
 }
