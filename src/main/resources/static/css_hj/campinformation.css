@@ -205,18 +205,20 @@ body {
 .hj-star{
   cursor: pointer;
   user-select: none;
-  background-image: url(../Img_hj/star.svg);
+
   width: 3vw;
   height: 2.6vw;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   display: inline-block;
+  font-size: 2vw;
 }
 .hj-star:hover,
 .hj-star.checked {
   text-shadow: 0 0 0 yellow;
   fill: gold;
+  color: #ffcc00;
 }
 .hj-review {
   /* border: 1px solid purple; */

@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${campingAreaName} 상세정보</title>
     <link rel="stylesheet" href="/resources/static/css_hj/campinformation.css" />
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/resources/static/js_hj/campinformation.js"></script>
   </head>
   <body>
@@ -72,11 +71,11 @@
                   <div id="hj-content-zentai-box">
                     <!-- 별부분 -->
                     <div id="hj-review-star-box">
-                      <span class="hj-star" data-rating="1"></span>
-                      <span class="hj-star" data-rating="2"></span>
-                      <span class="hj-star" data-rating="3"></span>
-                      <span class="hj-star" data-rating="4"></span>
-                      <span class="hj-star" data-rating="5"></span>
+                      <span class="hj-star" data-value="1">&#9733;</span>
+                      <span class="hj-star" data-value="2">&#9733;</span>
+                      <span class="hj-star" data-value="3">&#9733;</span>
+                      <span class="hj-star" data-value="4">&#9733;</span>
+                      <span class="hj-star" data-value="5">&#9733;</span>
                     </div>
                     <!-- 인풋 아이디 비번 부분 -->
                     <div id="hj-input">
