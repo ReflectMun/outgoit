@@ -41,7 +41,7 @@
 			</div>
 			<div class="menu">
 				<div class="riding-icon"></div>
-				<div class="txt"><a href=""><span>라이딩</span></a></div>
+				<div class="txt"><a href="/outgoit/riding"><span>라이딩</span></a></div>
 			</div>
 		</div>
         <div class="footer"></div>

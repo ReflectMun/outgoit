@@ -22,5 +22,9 @@ public class IndexPageController {
         return "kmh/hiking";
     }
 
+    @GetMapping("/riding")
+    public String sendRidingMainPage() {
+        return "kmh/riding";
+    }
 }
 
