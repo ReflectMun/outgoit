@@ -158,7 +158,7 @@
                             <div id="hj-review-comment">한줄평: ${review.content}</div>
 
 
-
+                            <!--에딧 기능 -->
                             <div id="hj-edit-box">
                               <div id="hj-edit-icon">...</div>
                             </div>
@@ -167,6 +167,7 @@
                               <div class="hj-edit-part">수정</div>
                               <div class="hj-edit-part">삭제</div>
                             </div>
+                            <!-- 에딧 기능 끝 -->
                           </div>
                           <!-- 코멘트 보여주는 위치 여기까지 -->
                         </c:forEach>
@@ -184,13 +185,7 @@
                     </c:choose>
 
                   </div>
-              <!--   페이징 처리-->
-<%--                  <div id="hj-page-box">--%>
-<%--                    <div id="hj-first-button"><span>[맨 처음]</span></div>--%>
-<%--                    <div id="hj-pages"><span>[페이지 번호들]</span></div>--%>
-<%--                    <div id="hj-final-button"><span>[맨 끝]</span></div>--%>
-<%--                  </div>--%>
-                  <!--페이징 처리 div 끝 -->
+
                 </div>
               </div>
               <!-- 칠판모양 코멘트 영역 여기까지 -->
