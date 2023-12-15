@@ -119,15 +119,17 @@ body {
 /* 정보 카드 */
 .rh-camping-wood-main {
   /* border: 3px solid rgb(255, 0, 0); */
-  background-color: rgb(85, 176, 255);
- 
+  /*background-color: rgb(255, 255, 255);*/
+  /*box-shadow: inset -3px -3px 3px 0px #c5c5c5;*/
+  background-image: url("/resources/static/img/기타/paper.png");
+  background-size: contain;
   width: 23vw;
   height: 23vw;
   margin: 1.5%;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: left;
+  text-align: center;
   font-size: 1vw;
 }
 .rh-camping-wood-mainPost {
@@ -157,11 +159,15 @@ body {
 .rh-animal-card {
   font-size: 0.8vw;
   text-align: center;
-  width: 22vw;
+  width: 21vw;
+  margin-top: 10%;
 }
 .rh-animal-card tr:hover {
-  background-color: white;
+  background-color: #98bd98;
   transition: background-color 0.3s ease;
+}
+.rh-card-set{
+  font-size: 1.4vw;
 }
 
 /* 따로 만짐 안전가드 */

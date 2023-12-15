@@ -5,6 +5,7 @@ $(function () {
   $("#icon4").show();
   $("#icon5").show();
   $("#icon6").show();
+  $("#camping-icon7").show();
   $("#icon7").show();
   $("#icon8").show();
   $("#icon9").show();
@@ -14,6 +15,7 @@ $(function () {
   $("#content4").hide();
   $("#content5").hide();
   $("#content6").hide();
+  $("#camping-content7").hide();
   $("#content7").hide();
   $("#content8").hide();
   $("#content9").hide();
@@ -80,16 +82,27 @@ $(function () {
     $("#icon6").show();
   });
 
+  //캠핑7번
+  $("#camping-icon7").click(function () {
+    $("#camping-icon7").hide();
+    $("#camping-content7").show();
+  });
+  $("#camping-content7").click(function () {
+    $("#camping-content7").hide();
+    $("#camping-icon7").show();
+  });
+
+
   //7번
   $("#icon7").click(function () {
     $("#icon7").hide();
     $("#content7").show();
-    $("#animal").css("height", "100%");
+    $("#animal").css("height", "100%").css("background-image", " url('/resources/static/img/기타/longPaper.png')");
   });
   $("#content7").click(function () {
     $("#content7").hide();
     $("#icon7").show();
-    $("#animal").css("height", "23vw");
+    $("#animal").css("height", "23vw").css("background-image", " url('/resources/static/img/기타/paper.png')");
   });
 
   //8번
@@ -108,11 +121,11 @@ $(function () {
   $("#icon9").click(function () {
     $("#icon9").hide();
     $("#content9").show();
-    $("#animal").css("height", "100%");
+    $("#animal").css("height", "100%").css("background-image", " url('/resources/static/img/기타/longPaper.png')").css("background-size","100% 100%");
   });
   $("#content9").click(function () {
     $("#content9").hide();
     $("#icon9").show();
-    $("#animal").css("height", "23vw");
+    $("#animal").css("height", "23vw").css("background-image", " url('/resources/static/img/기타/paper.png')").css("background-size","contain");
   });
 });
