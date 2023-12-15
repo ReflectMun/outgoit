@@ -1,7 +1,9 @@
 package com.example.outgoit.review.camping;
 
+import com.example.outgoit.review.camping.dto.CampingReviewModifyingDTO;
 import com.example.outgoit.review.camping.dto.CampingReviewSubmitBodyDTO;
 import com.example.outgoit.review.camping.dto.NotificationProcessStatusDTO;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -59,7 +61,7 @@ public class CampingReviewApiController {
     }
 
     @PostMapping("/update")
-    public boolean updateReview(){
+    public boolean updateReview(@RequestBody CampingReviewModifyingDTO body){
         Integer updatedRow = campingReviewService.updateReviewContent(
                 "하하하하하",
                 1
@@ -80,7 +82,19 @@ public class CampingReviewApiController {
             Integer campingAreaId,
             Integer pageNumber
     ){
+        if (pageNumber == 0) {
+            return new ArrayList<>();
+        }
+
         Pageable modified = PageRequest.of(pageNumber, pageable.getPageSize(), pageable.getSort());
-        return campingReviewService.loadCampingAreaReview(campingAreaId, modified);
+        Page<CampingReview> result = campingReviewService.loadCampingAreaReview(campingAreaId, modified);
+        System.out.println(result.getTotalPages());
+
+        if (pageNumber > result.getTotalPages()){
+            return new ArrayList<>();
+        }
+
+        System.out.println(result.getTotalPages());
+        return new ArrayList<CampingReview>(result.getContent());
     }
 }

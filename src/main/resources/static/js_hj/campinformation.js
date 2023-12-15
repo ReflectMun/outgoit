@@ -23,3 +23,19 @@ document.addEventListener('DOMContentLoaded', function() {
         $("#hj-edit-drop").css("display", currentDisplay === "none" ? "block" : "none");
     });
 });
+
+let pageNum = 1
+
+function getPrevCommentPage(){
+    const reqUrl = "/api/review/camping/list"
+}
+
+function getNextCommentPage(){
+
+}
+
+function deleteComment(commentNumber){
+}
+
+function modifyComment(commentNumber){
+}

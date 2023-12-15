@@ -47,7 +47,7 @@ public class CampingAreaSearchPageController {
     ){
         Pageable modified = PageRequest.of(0, pageable.getPageSize(), pageable.getSort());
         ArrayList<CampingReview> reviews =
-                campingReviewService.loadCampingAreaReview(data.getContentId(), modified);
+                new ArrayList<>(campingReviewService.loadCampingAreaReview(data.getContentId(), modified).getContent());
 
         model.addAttribute("thumbnail", data.getFirstImageUrl());
         model.addAttribute("campingAreaName", data.getFacltNm());

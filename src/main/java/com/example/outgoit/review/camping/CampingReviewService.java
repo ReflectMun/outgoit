@@ -2,6 +2,7 @@ package com.example.outgoit.review.camping;
 
 import jakarta.transaction.Transactional;
 import org.springframework.dao.OptimisticLockingFailureException;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -20,8 +21,8 @@ public class CampingReviewService {
 
     ///////////////////////////// 서비스 구현 /////////////////////////////////////
     // 해당 캠핑장의 리뷰 모두 불러오는 메서드
-    public ArrayList<CampingReview> loadCampingAreaReview(int campingAreaId, Pageable pageable){
-        return new ArrayList<CampingReview>(repo.findByCampingAreaId(campingAreaId, pageable).getContent());
+    public Page<CampingReview> loadCampingAreaReview(int campingAreaId, Pageable pageable){
+        return repo.findByCampingAreaId(campingAreaId, pageable);
     }
 
     // 리뷰 수정 및 삭제를 위해 해당 작업을 할 리뷰를 불러오는 메서드
