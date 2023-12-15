@@ -13,7 +13,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
-	<script type="text/javascript" src="/resources/static/kmh/js/index.js"></script>
+<%--	<script type="text/javascript" src="/resources/static/kmh/js/index.js"></script>--%>
 
 
 
@@ -33,15 +33,15 @@
 		<div class="menu-wrap">
 			<div class="menu">
 				<div class="camp-icon"></div>
-				<div class="txt" id="txt1"><a href="/outgoit/camping"><span>캠핑</span></a></div>
+				<div class="txt menu-txt" id="txt1"><a href="/outgoit/camping"><span>CAMPING</span></a></div>
 			</div>
 			<div class="menu">
 				<div class="hiking-icon"></div>
-				<div class="txt" id="txt2"><a href="/outgoit/hiking"><span>하이킹</span></a></div>
+				<div class="txt menu-txt" id="txt2"><a href="/outgoit/hiking"><span>HIKING</span></a></div>
 			</div>
 			<div class="menu">
 				<div class="riding-icon"></div>
-				<div class="txt" id="txt3"><a href="/outgoit/riding"><span>라이딩</span></a></div>
+				<div class="txt menu-txt" id="txt3"><a href="/outgoit/riding"><span>RIDING</span></a></div>
 			</div>
 		</div>
         <div class="footer"></div>

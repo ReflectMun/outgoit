@@ -41,7 +41,8 @@ a {
 .title-wrap {
     width: 100%;
     height: 27vh;
-    margin-top: 7vw;
+    margin-top: 5vw;
+    margin-bottom: 3vw;
 }
 
 .title {
@@ -53,19 +54,20 @@ a {
     font-weight: 700;
     color: #116228;
     text-shadow: 0 0.7vw 0 rgb(222, 111, 26);
+    animation: bounce 2s infinite; /* 애니메이션을 무한히 반복 */
 }
 
 @keyframes bounce {
-
-    title {
-
-        animation: bounce; /* referring directly to the animation's @keyframe declaration */
-        animation-duration: 2s; /* don't forget to set a duration! */
-
+    0% {
+        transform: translateY(0); /* 애니메이션의 시작 상태 */
     }
-
+    50% {
+        transform: translateY(-20px); /* 중간 상태 */
+    }
+    100% {
+        transform: translateY(0); /* 애니메이션의 마지막 상태 */
+    }
 }
-
 
 .title .go {
     color: rgb(242, 166, 52);
@@ -91,8 +93,8 @@ a {
     height: 60vh;
     display: flex; 
     justify-content: center;
-    margin-top: 1vw ;
     animation: fadeInUp 1.0s ease-out forwards;
+    margin-bottom: 3vw;
 }   
 
 @keyframes fadeInUp {
@@ -108,14 +110,14 @@ a {
 
 
 .menu {
-    width: 25%;
+    width: 20%;
     height: 26vh;
     display: grid;
-
     place-items: center;
     padding-top: 4vw;
-    padding-bottom: 9vw;
-    margin: 3vw ;
+    padding-bottom: 7.5vw;
+    margin-bottom: 5vw;
+    margin: 3vw;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10%;
     box-shadow: 0px 0.7vw 0.7vw 0px rgba(0, 0, 0, 0.5);
@@ -125,13 +127,35 @@ a {
 .txt {
     font-family: 'SOYOMapleBoldTTF';
     font-size: 3.5vw;
-    font-weight: bolder;
-    color: #185328;
+    font-weight: 700;
+    color: #19672d;
 }
 
-.txt:hover {
-    color: rgb(222, 111, 26);
+.menu-txt {
+    cursor: pointer;
+    -webkit-text-stroke: 2px #19672d;
+    background-image: linear-gradient(0deg, #19672d, #19672d);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in
 }
+
+
+.menu-txt:hover {
+    background-size: 100% 100%;
+}
+
+span:hover {
+    background-size: 100% 100%;
+}
+
+.menu-txt {
+    background-position: 0% 0%;
+    background-size: 0% 100%;
+}
+
+
 
 
 .camp-icon {
