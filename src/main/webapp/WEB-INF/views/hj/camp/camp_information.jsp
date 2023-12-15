@@ -72,11 +72,11 @@
                   <div id="hj-content-zentai-box">
                     <!-- 별부분 -->
                     <div id="hj-review-star-box">
-                      <div class="hj-star">✰</div>
-                      <div class="hj-star">✰</div>
-                      <div class="hj-star">✰</div>
-                      <div class="hj-star">☆</div>
-                      <div class="hj-star">☆</div>
+                      <span class="hj-star" data-rating="1"></span>
+                      <span class="hj-star" data-rating="2"></span>
+                      <span class="hj-star" data-rating="3"></span>
+                      <span class="hj-star" data-rating="4"></span>
+                      <span class="hj-star" data-rating="5"></span>
                     </div>
                     <!-- 인풋 아이디 비번 부분 -->
                     <div id="hj-input">

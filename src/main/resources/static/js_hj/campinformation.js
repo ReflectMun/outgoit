@@ -44,20 +44,50 @@ document.addEventListener('DOMContentLoaded', function() {
     //js
     let editbox = document.getElementById('hj-edit-box');
     let editdrop = document.getElementById('hj-edit-drop');
-    let editDisplay = editdrop.style.display;
+
     let currentDisplay = window.getComputedStyle(editdrop).getPropertyValue('display');
     function dropeditbox(){
         if (currentDisplay=='none'){
+
             // alert(11);
-            editDisplay="block";
+            editdrop.style.display ='block';
+            // editDisplay="block";
         }else {
             // alert(22);
-            editDisplay="none"
+            editdrop.style.display ='none'
+            // editDisplay="none"
 
         }
         // editdrop.style.display = (currentDisplay === 'none') ? 'block' : 'none';
     }
     editbox.addEventListener("click", dropeditbox);
+
+//     별점 채우기 값 보내기
+    let stars = document.querySelectorAll('.hj-star');
+
+    stars.forEach(function(star) {
+        star.addEventListener('click', function() {
+            //data-rating에 있는 값을 가져와서 rating 에 넣음
+            let rating = parseInt(this.getAttribute('data-rating'));
+            //함수(rating)을 넣음
+            handleStarClick(rating);
+        });
+    });
+
+    function handleStarClick(rating) {
+        // 클릭한 별의 데이터 값을 확인
+        console.log(rating);
+
+        // 선택한 별을 강조 표시하거나 다른 동작을 수행할 수 있습니다.
+        stars.forEach(function(star) {
+            let starRating = parseInt(star.getAttribute('data-rating'));
+            if (starRating <= rating) {
+                star.classList.add('checked');
+            } else {
+                star.classList.remove('checked');
+            }
+        });
+    }
 
 
 });
