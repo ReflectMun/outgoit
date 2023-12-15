@@ -58,6 +58,7 @@ public class CampingAreaSearchPageController {
         model.addAttribute("existReviews", !reviews.isEmpty());
         model.addAttribute("reviews", reviews);
 
+
         return "hj/camp/camp_information";
     }
 

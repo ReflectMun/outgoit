@@ -138,13 +138,14 @@
                           <!-- 닉넴 한줄평 보여주는 곳  -->
                           <div class="hj-review-content-box">
                             <div class="hj-review-stars">
+                              <div></div>
                               <c:forEach var="i" begin="1" end="5" step="1">
                                 <c:choose>
                                   <c:when test="${i > review.rating}">
                                     <div class="hj-review-star">☆</div>
                                   </c:when>
                                   <c:otherwise>
-                                    <div class="hj-review-star">별</div>
+                                    <div class="hj-review-star">★</div>
                                   </c:otherwise>
                                 </c:choose>
                               </c:forEach>
@@ -155,6 +156,8 @@
                             <div class="hj-review-nickname">닉네임: ${review.author}</div>
 
                             <div class="hj-review-comment">한줄평: ${review.content}</div>
+
+
                             <div class="hj-edit-box">
                               <div class="hj-edit-icon">...</div>
                             </div>

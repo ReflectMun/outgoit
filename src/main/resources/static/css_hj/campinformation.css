@@ -242,7 +242,7 @@ body {
 
 .hj-review {
   /* border: 1px solid purple; */
-  height: 40vw;
+  height: auto;
 }
 .hj-review-pic{
   /* border: 10px solid hsl(197, 78%, 28%); */
@@ -280,7 +280,7 @@ body {
    background-color: rgb(6, 57, 10);
    border: 0.6vw solid rgb(157, 111, 76);
    padding: 2% 0% 2% 2%;
-   padding-bottom: 15vw;
+   /*padding-bottom: 15vw;*/
    /* margin-left: 10%; */
    /* justify-content: center; */
    /* display: flex; */
@@ -289,7 +289,7 @@ body {
    color: #fffaf6;
    font-family: 'SOYOMapleBoldTTF';
    margin-top: 3%;
-  height: 100%;
+  height: auto;
 }
 .hj-review-zentai-box{
    /*border: 5px solid blueviolet;*/
@@ -302,7 +302,7 @@ body {
   display: flex;
   align-content: space-between;
   width: 10%;
-  height: 50%;
+  height: auto;
   /* margin-left: ; */
 }
 .hj-review-box{
@@ -315,18 +315,19 @@ body {
   width: 100%;
   /*margin-top: 2%;*/
   font-size: 1.7vw;
-  height: 100%;
+  /*height: 100%;*/
   position: relative;
 }
 .hj-review-nickname{
-  width: 20%;
+  width: 100%;
   height: 100%;
+
 }
 .hj-review-comment{
    /*border: 1px solid darkorange;*/
   width: 100%;
   height: 100%;
-  margin-top: 1%;
+  margin-bottom: 1%;
 }
 .hj-edit-box {
   height: 100%;
