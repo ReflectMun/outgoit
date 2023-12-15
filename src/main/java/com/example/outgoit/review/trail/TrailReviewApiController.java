@@ -43,8 +43,8 @@ public class TrailReviewApiController {
     }
 
     @PostMapping("/rating")
-    public ArrayList<Object> getTrailRouteReview(String trailRouteId){
-        return new  ArrayList<> (trailReviewService.getTrailRouteRating(trailRouteId));
+    public ArrayList<Object> getTrailRouteReview(@RequestBody TrailReview trailReview){
+        return new  ArrayList<> (trailReviewService.getTrailRouteRating(trailReview.getTrailRouteId()));
     }
     @PostMapping("/update")
     public boolean updateReview(String content, Integer commentId){
