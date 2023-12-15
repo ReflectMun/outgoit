@@ -157,7 +157,7 @@ body {
 }
 /* 코멘트 부분 */
 #hj-comment-name-img{
-  border: 1px solid gray;
+  /*border: 1px solid gray;*/
   width: 30%;
   background-color: #59795a;
   padding: 2%;
@@ -272,11 +272,8 @@ body {
 }
 #hj-review-detail2{
   /* border: 3px solid blue; */
-   width: 100%;
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   padding-bottom: 15vw;
+
+
    background-color: rgb(6, 57, 10);
    border: 0.6vw solid rgb(157, 111, 76);
    padding: 2% 0% 2% 2%;
@@ -295,7 +292,7 @@ body {
    /*border: 5px solid blueviolet;*/
   width: 95%;
   /*margin-top: 2%;*/
-  height: 100%;
+
 }
 #hj-review-stars{
    /*border: 1px solid darkgoldenrod;*/
@@ -324,13 +321,13 @@ body {
    /*border: 1px solid darkorange;*/
   width: 100%;
   height: 100%;
-  margin-bottom: 1%;
+  margin-bottom: 2%;
 }
 #hj-edit-box {
-  height: 100%;
+
   width: 5%;
   position: absolute;
-  top: 50%;
+  top: 45%;
   right: 0;
 }
 #hj-edit-icon{
@@ -359,5 +356,18 @@ body {
 }
 /*리뷰가 없을떄 css 따로주기*/
 #hj-no-review{
-  margin-left: 35%;
+  margin-left: 40%;
+}
+/*페이지 처리*/
+#hj-page-box{
+  display: flex;
+  align-content: center;
+
+  justify-content: center;
+}
+#hj-first-button{
+  margin-right: 1%;
+}
+#hj-final-button{
+  margin-left: 1%;
 }

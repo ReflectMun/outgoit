@@ -128,6 +128,7 @@
               <!--  칠판 코멘트 -->
               <div id="hj-content-box-comment2"><span>Camping</span></div>
               <div id="hj-review-inside-box2">
+
                 <div id="hj-review-detail2">
                   <div id="hj-review-zentai-box">
 
@@ -157,6 +158,7 @@
                             <div id="hj-review-comment">한줄평: ${review.content}</div>
 
 
+
                             <div id="hj-edit-box">
                               <div id="hj-edit-icon">...</div>
                             </div>
@@ -168,6 +170,13 @@
                           </div>
                           <!-- 코멘트 보여주는 위치 여기까지 -->
                         </c:forEach>
+                        <!--   페이징 처리-->
+                        <div id="hj-page-box">
+                          <div id="hj-first-button"><span>[맨 처음]</span></div>
+                          <div id="hj-pages"><span>[페이지 번호들]</span></div>
+                          <div id="hj-final-button"><span>[맨 끝]</span></div>
+                        </div>
+                        <!--페이징 처리 div 끝 -->
                       </c:when>
                       <c:otherwise>
                         <h2 id="hj-no-review">아직 작성된 리뷰가 없습니다</h2>
@@ -175,6 +184,13 @@
                     </c:choose>
 
                   </div>
+              <!--   페이징 처리-->
+<%--                  <div id="hj-page-box">--%>
+<%--                    <div id="hj-first-button"><span>[맨 처음]</span></div>--%>
+<%--                    <div id="hj-pages"><span>[페이지 번호들]</span></div>--%>
+<%--                    <div id="hj-final-button"><span>[맨 끝]</span></div>--%>
+<%--                  </div>--%>
+                  <!--페이징 처리 div 끝 -->
                 </div>
               </div>
               <!-- 칠판모양 코멘트 영역 여기까지 -->
