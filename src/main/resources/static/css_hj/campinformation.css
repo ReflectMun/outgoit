@@ -19,14 +19,14 @@ body {
   height: 100vh;
   padding: 0;
 }
-.hj-container2 {
+#hj-container2 {
   /* border: 1px solid black; */
   height: 100%;
   width: 100%;
   background-color: #FFFAF6;
 }
 /* 첫번쨰  */
-.hj-info {
+#hj-info {
   background-color: #fffaf6;
   /* border: 1px solid blue; */
 }
@@ -36,9 +36,9 @@ body {
   justify-content: center;
   align-items: center;
 }
-.hj-info-name-img {
+#hj-info-name-img {
   
-  border: 1px solid gray;
+  /*border: 1px solid gray;*/
   width: 30%;
   background-color: #59795a;
   padding: 2%;
@@ -58,7 +58,7 @@ body {
   margin-top: 3%;  
 }
 
-.hj-content-box-comment {
+#hj-content-box-comment {
   font-family: "Drawing Guides", sans-serif;
   color: white;
   font-size: 4vw;
@@ -68,7 +68,7 @@ body {
 }
 
 /* 사진 내용 부분 */
-.hj-content-pic {
+#hj-content-pic {
   position: relative;
  
   border-radius: 5vw;
@@ -78,25 +78,25 @@ body {
   width: 80%;
   padding-bottom: 15vw;
 }
-.hj-content-inside-box {
+#hj-content-inside-box {
   display: flex;
   margin-top: 5%;
 
   justify-content: space-between;
 }
-.hj-content-img {
+#hj-content-img {
   background-color: white;
   margin-left: 5%;
   width: 40%;
   height: 100%;
   padding-bottom: 15vw;
 }
-.hj-content-img-link img {
+#hj-content-img-link img {
   width: 100%;
   height: 100%;
 }
 /* 정보 부분 */
-.hj-content-detail {
+#hj-content-detail {
   background-color: rgb(6, 57, 10);
   
   border: 0.6vw solid rgb(157, 111, 76);
@@ -106,7 +106,7 @@ body {
   color: #fffaf6;
   font-family: 'SOYOMapleBoldTTF';
 }
-.hj-content-plus-container{
+#hj-content-plus-container{
   position: absolute;
   
   /* position: fixed; */
@@ -130,11 +130,11 @@ body {
   opacity: 0;
   transition: opacity 1s ease;
 }
-.hj-content-plus-container.show {
+#hj-content-plus-container.show {
   opacity: 1;
   display: block;
 }
-.hj-overlay-popup{
+#hj-overlay-popup{
   background: rgba(0, 0, 0, 0.1); /* 어두운 오버레이의 색상과 투명도를 조절합니다. */
   position: fixed;
   top: 0;
@@ -144,20 +144,20 @@ body {
   z-index: 1;
   display: none;
 }
-.hj-overlay-popup.active {
+#hj-overlay-popup.active {
   display: block;
 }
-.hj-no,
-.hj-time,
-.hj-addr,
-.hj-ability,
-.hj-etc {
+#hj-no,
+#hj-time,
+#hj-addr,
+#hj-ability,
+#hj-etc {
   font-size: 1.7vw;
   line-height: 2;
 }
 /* 코멘트 부분 */
-.hj-comment-name-img{
-  border: 1px solid gray;
+#hj-comment-name-img{
+  /*border: 1px solid gray;*/
   width: 30%;
   background-color: #59795a;
   padding: 2%;
@@ -167,11 +167,11 @@ body {
   box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
 }
 
-.hj-comment {
+#hj-comment {
   /* border: 1px solid pink; */
   margin-top: 2%;
 }
-.hj-comment-pic{
+#hj-comment-pic{
   border-radius: 5vw;
   border: 2vw solid #6c480c;
   background-color: #59795a;
@@ -179,14 +179,14 @@ body {
   width: 80%;
   padding-bottom: 6vw;
 }
-.hj-content-inside-box2 {
+#hj-content-inside-box2 {
   justify-content: center;
   align-content: center;
   display: flex;
   width: 100%;
   /* margin-top: 5%; */
 }
-.hj-content-detail2 {
+#hj-content-detail2 {
   /*background-image: url(../img/kami.jpeg);*/
   /*background-size: cover;*/
   /*background-position: center bottom 0px;*/
@@ -195,56 +195,58 @@ body {
   width: 100%;
    /*padding-bottom: 4vw;*/
 }
-.hj-content-zentai-box {
+#hj-content-zentai-box {
   margin-top: 3%;
 }
-.hj-review-star {
+#hj-review-star-box {
   display: flex;
-  margin-left: 25%;
+  margin-left: 30%;
 }
-
+.hj-star{
+  font-size: 3vw;
+}
 .hj-review {
   /* border: 1px solid purple; */
 }
-.hj-review-content2-box{
+#hj-review-content2-box{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-.hj-input {
+#hj-input {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 2%;
+  margin-top: 1%;
 }
-.hj-input-content {
+#hj-input-content {
   margin-left: 3%;
   margin-top: 1%;
 }
-.hj-id-input, .hj-pw-input{
+#hj-id-input, #hj-pw-input{
   
     padding: 4%;
 
 }
-.hj-review-content {
+#hj-review-content {
   width: 50%;
 }
-.hj-review-input {
+#hj-review-input {
   height: 100%;
   width: 100%;
   padding: 2%;
 }
-.hj-btn {
+#hj-btn {
   margin-top: 3%;
 }
 /* 리뷰 보여주는 창 */
 
-.hj-review {
+#hj-review {
   /* border: 1px solid purple; */
-  height: 40vw;
+  height: auto;
 }
-.hj-review-pic{
+#hj-review-pic{
   /* border: 10px solid hsl(197, 78%, 28%); */
    position: relative; 
   border-radius: 5vw;
@@ -256,7 +258,7 @@ body {
   /*height: 100%;*/
 
 }
-.hj-content-box-comment2{
+#hj-content-box-comment2{
   font-family: "Drawing Guides", sans-serif;
   color: white;
   font-size: 4vw;
@@ -264,23 +266,20 @@ body {
   left: 5%;
   bottom: 5%;
 }
-.hj-review-inside-box2{
+#hj-review-inside-box2{
   /* border: 2px solid red; */
  display: flex;
  justify-content: center;
 
 }
-.hj-review-detail2{
+#hj-review-detail2{
   /* border: 3px solid blue; */
-   width: 100%;
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   padding-bottom: 15vw;
+
+
    background-color: rgb(6, 57, 10);
    border: 0.6vw solid rgb(157, 111, 76);
    padding: 2% 0% 2% 2%;
-   padding-bottom: 15vw;
+   /*padding-bottom: 15vw;*/
    /* margin-left: 10%; */
    /* justify-content: center; */
    /* display: flex; */
@@ -289,53 +288,54 @@ body {
    color: #fffaf6;
    font-family: 'SOYOMapleBoldTTF';
    margin-top: 3%;
-  height: 100%;
+  height: auto;
 }
-.hj-review-zentai-box{
+#hj-review-zentai-box{
    /*border: 5px solid blueviolet;*/
   width: 95%;
   /*margin-top: 2%;*/
-  height: 100%;
+
 }
-.hj-review-stars{
+#hj-review-stars{
    /*border: 1px solid darkgoldenrod;*/
   display: flex;
   align-content: space-between;
   width: 10%;
-  height: 50%;
+  height: auto;
   /* margin-left: ; */
 }
-.hj-review-box{
-   /*border: 1px solid saddlebrown;*/
-  width: 100%;
+.hj-review-star {
+  display: flex;
+  margin-left: 25%;
 }
-.hj-review-content-box{
+#hj-review-content-box{
   /*display: flex;*/
    /*border: 1px solid darkgreen;*/
   width: 100%;
   /*margin-top: 2%;*/
   font-size: 1.7vw;
-  height: 100%;
+  /*height: 100%;*/
   position: relative;
 }
-.hj-review-nickname{
-  width: 20%;
+#hj-review-nickname{
+  width: 100%;
   height: 100%;
+
 }
-.hj-review-comment{
+#hj-review-comment{
    /*border: 1px solid darkorange;*/
   width: 100%;
   height: 100%;
-  margin-top: 1%;
+  margin-bottom: 2%;
 }
-.hj-edit-box {
-  height: 100%;
+#hj-edit-box {
+
   width: 5%;
   position: absolute;
-  top: 50%;
+  top: 45%;
   right: 0;
 }
-.hj-edit-icon{
+#hj-edit-icon{
   /*background-image: url(/resources/static/Img_hj/horizon_icon.png);*/
 
   /*background-size: contain;*/
@@ -346,7 +346,7 @@ body {
 }
 
 /* 드롭 수정 삭제 창*/
-.hj-edit-drop{
+#hj-edit-drop{
   position: absolute;
   font-size: 1vw;
   right: 3%;
@@ -358,4 +358,21 @@ body {
 }
 .hj-edit-part{
   margin-top: 2%;
+}
+/*리뷰가 없을떄 css 따로주기*/
+#hj-no-review{
+  margin-left: 40%;
+}
+/*페이지 처리*/
+#hj-page-box{
+  display: flex;
+  align-content: center;
+
+  justify-content: center;
+}
+#hj-first-button{
+  margin-right: 1%;
+}
+#hj-final-button{
+  margin-left: 1%;
 }
