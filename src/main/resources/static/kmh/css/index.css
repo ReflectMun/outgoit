@@ -52,7 +52,7 @@ a {
     font-size: 8.5vw;
     font-weight: 700;
     color: #116228;
-    text-shadow: 0.7vw 0.7vw 0 rgb(222, 111, 26);
+    text-shadow: 0 0.7vw 0 rgb(222, 111, 26);
 }
 
 @keyframes bounce {
@@ -68,8 +68,8 @@ a {
 
 
 .title .go {
-    color: rgb(255, 251, 211);
-text-shadow: 0.7vw 0.7vw 0 #116228;
+    color: rgb(242, 166, 52);
+    text-shadow: 0 0.7vw 0 #116228;
 
 }
 
@@ -127,6 +127,10 @@ text-shadow: 0.7vw 0.7vw 0 #116228;
     font-size: 3.5vw;
     font-weight: bolder;
     color: #185328;
+}
+
+.txt:hover {
+    color: rgb(222, 111, 26);
 }
 
 
