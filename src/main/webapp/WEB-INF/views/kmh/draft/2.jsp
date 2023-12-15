@@ -9,6 +9,7 @@
     <title>OUT GO IT - main</title>
     <link rel="stylesheet" href="/resources/static/kmh/css/camping.css">
     <link rel="stylesheet" href="/resources/static/css_hj/camp_information.css">
+    <script src="/resources/static/js_hj/campinformation.js"></script>
 </head>
 <body>
     <!-- 헤더 영역 -->
@@ -69,6 +70,7 @@
         <!-- 정보 div -->
         <div id="hj-info">
             <div class="hj-info-box">
+<%--                <div id="hj-close-btn"> <button>닫기</button></div>--%>
                 <div id="hj-info-name-img">
                     <div class="hj-info-name">${campingAreaName}</div>
                 </div>
@@ -81,6 +83,7 @@
             <div class="hj-content-box">
                 <!-- 칠판 효과 보더준 부분 -->
                 <div id="hj-content-pic">
+                    <div id="hj-close-btn"> <button>닫기</button></div>
                     <!-- 팝업 클릭했을떄 뜨는 디브 -->
                     <div id="hj-content-plus-container">
                         더보기 정보들 떠야하는 페이지

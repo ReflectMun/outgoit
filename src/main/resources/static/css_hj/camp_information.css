@@ -24,6 +24,7 @@ body {
   height: 100%;
   width: 100%;
   background-color: #FFFAF6;
+  display: none;
 }
 /* 첫번쨰  */
 #hj-info {
@@ -36,6 +37,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 #hj-info-name-img {
   
   /*border: 1px solid gray;*/
@@ -211,7 +213,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  display: inline-block;
+  /*display: inline-block;*/
   font-size: 2vw;
 }
 .hj-star:hover,

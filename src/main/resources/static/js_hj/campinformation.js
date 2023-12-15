@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
+    //검색 클릭시 campinformation 뜨게
+    let serch = document.getElementById('submit-search');
+    let detailpopup = document.getElementById('hj-container2');
+    let closedetailpopup = document.getElementById('hj-close-btn');
+
+    function campinfoup(){
+        // alert(11)
+        detailpopup.style.display='block';
+    }
+    function campinfodown(){
+        // alert(22)
+        detailpopup.style.display='none';
+    }
+    serch.addEventListener('click',campinfoup);
+    closedetailpopup.addEventListener('click',campinfodown);
 
         //js
     //팝업 열리기
@@ -17,31 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     popupoverlay.classList.remove('active');
                 }
                 pluscontainer.addEventListener('click',closepopup);
-                //제이쿼리
-        // $("#hj-content-detail").on("click", function () {
-        //     // alert(11);
-        //
-        //     $("#hj-content-plus-container").addClass("show");
-        //     $("#hj-overlay-popup").addClass("active");
-        //
-        // });
-//제이쿼리
-    //     $("#hj-content-plus-container").on("click", function () {
-    //         // alert(22);
-    //         $("#hj-content-plus-container").removeClass("show");
-    //         $("#hj-overlay-popup").removeClass("active");
-    //     });
-    // });
-//jquery
-//     $("#hj-edit-box").click(function () {
-//         // 현재 .hj-edit-drop의 display 상태를 가져옵니다.
-//         let currentDisplay = $("#hj-edit-drop").css("display");
-//
-//         // 현재 display 상태가 "none"이면 "block"으로, "block"이면 "none"으로 토글합니다.
-//         $("#hj-edit-drop").css("display", currentDisplay === "none" ? "block" : "none");
-//
-//
-//     })
+
     //js
     let editbox = document.getElementById('hj-edit-box');
     let editdrop = document.getElementById('hj-edit-drop');
@@ -51,66 +42,63 @@ document.addEventListener('DOMContentLoaded', function() {
         editbox.addEventListener("click", dropeditbox);
     }
 
-    $(document).ready(function () {
-        // $(".hj-content-plus-container").css("display", "none");
-        $("#hj-content-detail").on("click", function () {
-            // alert(11);
 
 
-    function dropeditbox() {
-        // 클릭할 때마다 현재 display 상태를 다시 가져옴
-        let currentDisplay = window.getComputedStyle(editdrop).getPropertyValue('display');
 
-        if (currentDisplay === 'none') {
-            editdrop.style.display = 'block';
-        } else {
-            editdrop.style.display = 'none';
-        }
-    }
+            function dropeditbox() {
+                // 클릭할 때마다 현재 display 상태를 다시 가져옴
+                let currentDisplay = window.getComputedStyle(editdrop).getPropertyValue('display');
+
+                if (currentDisplay === 'none') {
+                    editdrop.style.display = 'block';
+                } else {
+                    editdrop.style.display = 'none';
+                }
+            }
 
 //     별점 채우기 값 보내기
-    let stars = document.querySelectorAll('.hj-star');
+            let stars = document.querySelectorAll('.hj-star');
 
-    // 각 별에 이벤트 리스너를 등록합니다.
-    stars.forEach(function(star) {
-        star.addEventListener('click', function() {
-            handleStarClick(this);
-        });
-    });
+            // 각 별에 이벤트 리스너를 등록합니다.
+            stars.forEach(function (star) {
+                star.addEventListener('click', function () {
+                    handleStarClick(this);
+                });
+            });
 
 
-    function handleStarClick(clickedStar) {
-        // 클릭된 별의 data-value 속성 값을 가져옵니다.
-        let clickedValue = clickedStar.getAttribute('data-value');
-        console.log(clickedValue);
-        // 클릭된 별까지 노란색으로 채우기
-        stars.forEach(function(star) {
-            let starValue = star.getAttribute('data-value');
+            function handleStarClick(clickedStar) {
+                // 클릭된 별의 data-value 속성 값을 가져옵니다.
+                let clickedValue = clickedStar.getAttribute('data-value');
+                console.log(clickedValue);
+                // 클릭된 별까지 노란색으로 채우기
+                stars.forEach(function (star) {
+                    let starValue = star.getAttribute('data-value');
 
-            if (starValue <= clickedValue) {
-                star.classList.add('checked');
-            } else {
-                star.classList.remove('checked');
+                    if (starValue <= clickedValue) {
+                        star.classList.add('checked');
+                    } else {
+                        star.classList.remove('checked');
+                    }
+                });
             }
+
+
         });
-    }
+
+        let pageNum = 1
+
+        function getPrevCommentPage() {
+            const reqUrl = "/api/review/camping/list"
+        }
+
+        function getNextCommentPage() {
+
+        }
+
+        function deleteComment(commentNumber) {
+        }
 
 
-});
-
-let pageNum = 1
-
-function getPrevCommentPage(){
-    const reqUrl = "/api/review/camping/list"
-}
-
-function getNextCommentPage(){
-
-}
-
-function deleteComment(commentNumber){
-}
-
-
-function modifyComment(commentNumber){
-}
+        function modifyComment(commentNumber) {
+        }
