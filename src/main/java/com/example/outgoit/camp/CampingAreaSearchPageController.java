@@ -2,6 +2,10 @@ package com.example.outgoit.camp;
 
 import com.example.outgoit.review.camping.CampingReview;
 import com.example.outgoit.review.camping.CampingReviewService;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -36,11 +40,14 @@ public class CampingAreaSearchPageController {
     }
 
     @PostMapping("/detail/{campingAreaName}")
-    public String sendDetailPage(CampingAreaInfoDTO data, Model model){
+    public String sendDetailPage(
+            @PageableDefault(size = 5, sort = "commentNumber", direction = Sort.Direction.DESC) Pageable pageable,
+            CampingAreaInfoDTO data,
+            Model model
+    ){
+        Pageable modified = PageRequest.of(0, pageable.getPageSize(), pageable.getSort());
         ArrayList<CampingReview> reviews =
-                campingReviewService.loadCampingAreaReview(data.getContentId(), 0);
-
-        System.out.println(data.getContentId());
+                new ArrayList<>(campingReviewService.loadCampingAreaReview(data.getContentId(), modified).getContent());
 
         model.addAttribute("thumbnail", data.getFirstImageUrl());
         model.addAttribute("campingAreaName", data.getFacltNm());
@@ -53,7 +60,8 @@ public class CampingAreaSearchPageController {
                         ? "부대시설 정보가 없습니다"
                         : data.getSbrsEtc()
         );
-        model.addAttribute("etc", "etc??");
+        model.addAttribute("etc", data.getSbrsEtc());
+        model.addAttribute("campingAreaNumber", data.getContentId());
 
         model.addAttribute("existReviews", !reviews.isEmpty());
         model.addAttribute("reviews", reviews);

@@ -24,6 +24,7 @@ body {
   height: 100%;
   width: 100%;
   background-color: #FFFAF6;
+  display: none;
 }
 /* 첫번쨰  */
 #hj-info {
@@ -36,6 +37,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 #hj-info-name-img {
   
   /*border: 1px solid gray;*/
@@ -203,7 +205,22 @@ body {
   margin-left: 30%;
 }
 .hj-star{
-  font-size: 3vw;
+  cursor: pointer;
+  user-select: none;
+
+  width: 3vw;
+  height: 2.6vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /*display: inline-block;*/
+  font-size: 2vw;
+}
+.hj-star:hover,
+.hj-star.checked {
+  text-shadow: 0 0 0 yellow;
+  fill: gold;
+  color: #ffcc00;
 }
 .hj-review {
   /* border: 1px solid purple; */
@@ -370,9 +387,9 @@ body {
 
   justify-content: center;
 }
-#hj-first-button{
+#hj-prev-button{
   margin-right: 1%;
 }
-#hj-final-button{
+#hj-next-button{
   margin-left: 1%;
 }
