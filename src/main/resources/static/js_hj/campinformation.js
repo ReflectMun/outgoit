@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+
         //js
     //팝업 열리기
         let contentdetail = document.getElementById("hj-content-detail");
@@ -50,6 +51,12 @@ document.addEventListener('DOMContentLoaded', function() {
         editbox.addEventListener("click", dropeditbox);
     }
 
+    $(document).ready(function () {
+        // $(".hj-content-plus-container").css("display", "none");
+        $("#hj-content-detail").on("click", function () {
+            // alert(11);
+
+
     function dropeditbox() {
         // 클릭할 때마다 현재 display 상태를 다시 가져옴
         let currentDisplay = window.getComputedStyle(editdrop).getPropertyValue('display');
@@ -71,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+
     function handleStarClick(clickedStar) {
         // 클릭된 별의 data-value 속성 값을 가져옵니다.
         let clickedValue = clickedStar.getAttribute('data-value');
@@ -89,3 +97,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 });
+
+let pageNum = 1
+
+function getPrevCommentPage(){
+    const reqUrl = "/api/review/camping/list"
+}
+
+function getNextCommentPage(){
+
+}
+
+function deleteComment(commentNumber){
+}
+
+
+function modifyComment(commentNumber){
+}

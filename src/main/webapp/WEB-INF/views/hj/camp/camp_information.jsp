@@ -6,10 +6,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${campingAreaName} 상세정보</title>
+
     <link rel="stylesheet" href="/resources/static/css_hj/campinformation.css" />
+
+    <link rel="stylesheet" href="/resources/static/css_hj/camp_information.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
     <script src="/resources/static/js_hj/campinformation.js"></script>
   </head>
   <body>
+    <input id="camping-area-id" value="${campingAreaNumber}" style="display: none;">
     <div id="hj-container2">
       <!-- 정보 div -->
       <div id="hj-info">
@@ -85,7 +92,7 @@
                             type="text"
                             id="hj-id-input"
                             placeholder="닉네임"
-                            name="id"
+                            name="author"
                           />
                         </div>
                         <div id="hj-pw">
@@ -93,7 +100,7 @@
                             type="text"
                             id="hj-pw-input"
                             placeholder="비번"
-                            name="pw"
+                            name="password"
                           />
                         </div>
                       </div>
@@ -134,47 +141,52 @@
                     <!-- 작성된 리뷰들을 개별 출력하는 부분 -->
                     <c:choose>
                       <c:when test="${existReviews}">
-                        <c:forEach items="${reviews}" var="review">
-                          <!-- 닉넴 한줄평 보여주는 곳  -->
-                          <div id="hj-review-content-box">
-                            <div id="hj-review-stars">
-                              <c:forEach var="i" begin="1" end="5" step="1">
-                                <c:choose>
-                                  <c:when test="${i > review.rating}">
-                                    <div class="hj-review-star">☆</div>
-                                  </c:when>
-                                  <c:otherwise>
-                                    <div class="hj-review-star">★</div>
-                                  </c:otherwise>
-                                </c:choose>
-                              </c:forEach>
+                        <div id="hj-review-list-container">
+                          <c:forEach items="${reviews}" var="review">
+                            <!-- 개별 리뷰 -->
+                            <div id="hj-review-content-box">
+                              <div id="hj-review-stars">
+                                <c:forEach var="i" begin="1" end="5" step="1">
+                                  <c:choose>
+                                    <c:when test="${i > review.rating}">
+                                      <div class="hj-review-star">☆</div>
+                                    </c:when>
+                                    <c:otherwise>
+                                      <div class="hj-review-star">★</div>
+                                    </c:otherwise>
+                                  </c:choose>
+                                </c:forEach>
+                              </div>
+                              <br>
+                              <div id="hj-review-nickname">닉네임: ${review.author}</div>
+                              <div id="hj-review-comment">한줄평: ${review.content}</div>
+                              <div id="hj-edit-box">
+                                <div id="hj-edit-icon">...</div>
+                              </div>
+                              <div id="hj-edit-drop">
+                                <div><input type="text" placeholder="비밀번호"> </div>
+                                <div class="hj-edit-part" onclick="modifyComment(${review.commentNumber})">수정</div>
+                                <div class="hj-edit-part" onclick="deleteComment(${review.commentNumber})">삭제</div>
+                              </div>
                             </div>
+<<<<<<< HEAD
 
                             <br>
 
-                            <div id="hj-review-nickname">닉네임: ${review.author}</div>
-
-                            <div id="hj-review-comment">한줄평: ${review.content}</div>
 
 
                             <!--에딧 기능 -->
-                            <div id="hj-edit-box">
-                              <div id="hj-edit-icon">...</div>
-                            </div>
-                            <div id="hj-edit-drop">
-                              <div><input type="text" placeholder="비밀번호"> </div>
-                              <div class="hj-edit-part">수정</div>
-                              <div class="hj-edit-part">삭제</div>
-                            </div>
-                            <!-- 에딧 기능 끝 -->
-                          </div>
-                          <!-- 코멘트 보여주는 위치 여기까지 -->
-                        </c:forEach>
+
+                            <!-- 개별 리뷰 끝 -->
+                          </c:forEach>
+                        </div>
+                        <!-- 코멘트 보여주는 위치 여기까지 -->
+>>>>>>> origin/jiho
                         <!--   페이징 처리-->
                         <div id="hj-page-box">
-                          <div id="hj-first-button"><span>[맨 처음]</span></div>
-                          <div id="hj-pages"><span>[페이지 번호들]</span></div>
-                          <div id="hj-final-button"><span>[맨 끝]</span></div>
+                          <div id="hj-prev-button" onclick="getPrevCommentPage()"><span>[앞으로]</span></div>
+                          <div id="hj-pages"><span>1</span></div>
+                          <div id="hj-next-button" onclick="getNextCommentPage()"><span>[다음으로]</span></div>
                         </div>
                         <!--페이징 처리 div 끝 -->
                       </c:when>
@@ -196,5 +208,52 @@
       <!-- 리뷰 보여주는 곳 끝 -->
 
     </div>
+    <script>
+      const commentSubmitButton = document.getElementById("hj-btn-button")
+      commentSubmitButton.addEventListener("click", async (e) => {
+        const author = document.getElementById("hj-id-input").value
+        const password = document.getElementById("hj-pw-input").value
+        const content = document.getElementById("hj-review-input").value
+
+        if(!author) {
+          alert("닉네임을 입력해주세요!")
+          return
+        }
+
+        if(!password){
+          alert("비밀번호를 입력해주세요!")
+          return;
+        }
+
+        if(!content){
+          alert("댓글을 입력해주세요!")
+          return;
+        }
+
+        try{
+          const reqUrl = "/api/review/camping/submit"
+          const { data: resData } = await axios.post(
+            reqUrl,
+            {
+              author: author,
+              password: password,
+              content: content,
+              // rating: ,
+              campingAreaId: ${campingAreaNumber}
+            }
+          )
+
+          if(resData['statusCode'] === 200){
+            alert("리뷰 작성 성공")
+          }
+          else{
+            alert(resData['errorMessage'])
+          }
+        }
+        catch (e){
+          alert("원인을 알 수 없는 오류가 발생했습니다")
+        }
+      })
+    </script>
   </body>
 </html>
