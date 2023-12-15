@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${campingAreaName} 상세정보</title>
     <link rel="stylesheet" href="/resources/static/css_hj/campinformation.css" />
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="/resources/static/js_hj/campinformation.js"></script>
   </head>
   <body>
     <div class="hj-container2">
@@ -86,7 +84,8 @@
                             type="text"
                             class="hj-id-input"
                             placeholder="닉네임"
-                            name="id"
+                            name="author"
+                            id="comment-author-input"
                           />
                         </div>
                         <div class="hj-pw">
@@ -94,7 +93,8 @@
                             type="text"
                             class="hj-pw-input"
                             placeholder="비번"
-                            name="pw"
+                            name="password"
+                            id="comment-password-input"
                           />
                         </div>
                       </div>
@@ -103,12 +103,13 @@
                         <input
                           type="text"
                           class="hj-review-input"
+                          id="comment-content-input"
                           placeholder="비방글은 삭제 조치 됩니다."
                         />
                       </div>
                       <!-- 확인버튼 -->
                       <div class="hj-btn">
-                        <button class="hj-btn-button">확인</button>
+                        <button id="comment-submit-button" class="hj-btn-button">확인</button>
                       </div>
                     </div>
                   </div>
@@ -184,5 +185,56 @@
       <!-- 리뷰 보여주는 곳 끝 -->
 
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/resources/static/js_hj/campinformation.js"></script>
+    <script>
+      const commentSubmitButton = document.getElementById("comment-submit-button")
+      commentSubmitButton.addEventListener("click", async (e) => {
+        const author = document.getElementById("comment-author-input").value
+        const password = document.getElementById("comment-password-input").value
+        const content = document.getElementById("comment-content-input").value
+
+        if(!author) {
+          alert("닉네임을 입력해주세요!")
+          return
+        }
+
+        if(!password){
+          alert("비밀번호를 입력해주세요!")
+          return;
+        }
+
+        if(!content){
+          alert("댓글을 입력해주세요!")
+          return;
+        }
+
+        try{
+          const reqUrl = "/api/review/camping/submit"
+          const { data: resData } = await axios.post(
+            reqUrl,
+            {
+              author: author,
+              password: password,
+              content: content,
+              // rating: ,
+              campingAreaId: ${campingAreaNumber}
+            }
+          )
+
+          if(resData['statusCode'] === 200){
+            alert("리뷰 작성 성공")
+          }
+          else{
+            alert(resData['errorMessage'])
+          }
+        }
+        catch (e){
+          console.log(e)
+        }
+      })
+    </script>
   </body>
 </html>

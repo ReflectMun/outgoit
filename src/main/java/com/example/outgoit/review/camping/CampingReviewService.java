@@ -1,7 +1,9 @@
 package com.example.outgoit.review.camping;
 
 import jakarta.transaction.Transactional;
+import org.springframework.dao.OptimisticLockingFailureException;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -18,9 +20,8 @@ public class CampingReviewService {
 
     ///////////////////////////// 서비스 구현 /////////////////////////////////////
     // 해당 캠핑장의 리뷰 모두 불러오는 메서드
-    public ArrayList<CampingReview> loadCampingAreaReview(int campingAreaId, int page){
-        PageRequest pageRequest = PageRequest.of(page, 5);
-        return new ArrayList<CampingReview>(repo.findByCampingAreaId(campingAreaId, pageRequest).getContent());
+    public ArrayList<CampingReview> loadCampingAreaReview(int campingAreaId, Pageable pageable){
+        return new ArrayList<CampingReview>(repo.findByCampingAreaId(campingAreaId, pageable).getContent());
     }
 
     // 리뷰 수정 및 삭제를 위해 해당 작업을 할 리뷰를 불러오는 메서드
@@ -36,9 +37,10 @@ public class CampingReviewService {
 
     // 리뷰 내용을 수정하는 메서드(만약 비밀번호가 맞으면)
     @Transactional
-    public void updateReviewContent(String content, int commentId){
-        int countOfUpdatedRecord = this.repo.updateContentByCommentNumber(content, commentId);
+    public Integer updateReviewContent(String content, int commentId){
+        Integer countOfUpdatedRecord = this.repo.updateContentByCommentNumber(content, commentId);
         System.out.printf("총 %d개의 리뷰가 수정됨. 레코드 넘버: %d\n", countOfUpdatedRecord, commentId);
+        return countOfUpdatedRecord;
     }
 
     // 리뷰를 삭제하는 메서드(만약 비밀번호가 맞으면)
@@ -49,21 +51,28 @@ public class CampingReviewService {
     }
 
     // 리뷰 작성
-    public void submitReview(
+    public Integer submitReview(
             String author,
             String password,
             String content,
             int rating,
             int campingAreaId
     ){
-        repo.save(new CampingReview(
-                author,
-                password,
-                content,
-                rating,
-                campingAreaId
-        ));
-        System.out.println("새로운 리뷰가 작성됨");
+        try {
+            repo.save(new CampingReview(
+                    author,
+                    password,
+                    content,
+                    rating,
+                    campingAreaId
+            ));
+            System.out.println("새로운 리뷰가 작성됨");
+            return 200;
+        } catch (IllegalArgumentException e) {
+            return 701;
+        } catch (OptimisticLockingFailureException e){
+            return 702;
+        }
     }
 
     // 캠핑장 평점 조회

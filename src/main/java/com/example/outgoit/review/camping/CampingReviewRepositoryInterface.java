@@ -19,7 +19,6 @@ public interface CampingReviewRepositoryInterface extends JpaRepository<CampingR
 
     // SELECT * FROM (Table) WHERE Camping_Area_Id := camping_area_id
     // 해당 캠핑장의 리뷰를 모두 불러오는 쿼리문
-    @Query("SELECT r FROM camping_review r WHERE r.campingAreaId = :campingAreaId ORDER BY r.commentedDate DESC")
     Page<CampingReview> findByCampingAreaId(int campingAreaId, Pageable pageable);
 
     // SELECT * FROM (Table) WHERE Comment_Number := comment_number
