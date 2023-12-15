@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OUT GO IT - camping</title>
+    <title>OUT GO IT - hiking </title>
     <link rel="stylesheet" href="/resources/static/kmh/css/camping.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
@@ -24,18 +24,18 @@
 
         <div class="banner-wrap camp swiper mySwiper">
             <div class="banner swiper-wrapper">
-                <div class="swiper-slide"><img src="../kmh/img/camping_banner.jpg"></div>
-                <div class="swiper-slide"><img src="../kmh/img/camping_banner.jpg"></div>
-                <div class="swiper-slide"><img src="../kmh/img/camping_banner.jpg"></div>
-                <div class="swiper-slide"><img src="../kmh/img/camping_banner.jpg"></div>
-                <div class="swiper-slide"><img src="../kmh/img/camping_banner.jpg"></div>
+                <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
+                <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
+                <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
+                <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
+                <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
             </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
                 <div class="banner-txt-wrap">
                     <div class="banner-titlek">
-<%--                        <span>CAMPING</span>--%>
+<%--                        <span>HKING</span>--%>
                          <div class="banner-sub-txt">
                             <span> &nbsp; Campsite &nbsp; Campfire &nbsp; Tent Pitching &nbsp; Sleeping Bag &nbsp; Fishing Spot &nbsp; Sunrise/Sunset Views &nbsp; Stargazing &nbsp; Nature Exploration &nbsp; Outdoor Enthusiast </span>
                          </div>

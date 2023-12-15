@@ -86,15 +86,9 @@
     font-family: 'JalnanGothic';
     font-size: 6vw;
     font-weight: bolder;
-    color: white;
+    color: black;
 }
 
-.banner-sub-txt {
-    font-family: 'SOYOMapleBoldTTF';
-    font-size: 1.5vw;
-    font-weight: bolder;
-    color: white;
-}
 
 .content {
     width: 100%;

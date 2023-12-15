@@ -16,5 +16,11 @@ public class IndexPageController {
     public String sendCampingMainPage() {
         return "kmh/camping";
     }
+
+    @GetMapping("/hiking")
+    public String sendHikingMainPage() {
+        return "kmh/hiking";
+    }
+
 }
 

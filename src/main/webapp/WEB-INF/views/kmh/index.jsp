@@ -37,7 +37,7 @@
 			</div>
 			<div class="menu">
 				<div class="hiking-icon"></div>
-				<div class="txt"><a href=""><span>하이킹</span></a></div>
+				<div class="txt"><a href="/outgoit/hiking"><span>하이킹</span></a></div>
 			</div>
 			<div class="menu">
 				<div class="riding-icon"></div>
