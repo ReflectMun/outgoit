@@ -1,5 +1,7 @@
 package com.example.outgoit.review.trail;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -24,5 +26,5 @@ public interface TrailReviewRepositoryInterface extends JpaRepository<TrailRevie
 
     int deleteByCommentNumber(int commentNumber);
 
-
+    Page<TrailReview> findAllByTrailRouteId(String trailRouteId,Pageable pageable);
 }

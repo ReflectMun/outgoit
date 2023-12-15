@@ -35,4 +35,10 @@ public interface CampingReviewRepositoryInterface extends JpaRepository<CampingR
     // DELETE FROM (Table) WHERE Comment_Number := comment_number
     // 특정 리뷰를 삭제하는 쿼리문
     int deleteByCommentNumber(int commentNumber);
+
+
+
+
+
 }
+
