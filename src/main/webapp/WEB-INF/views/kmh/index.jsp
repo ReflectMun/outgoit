@@ -42,15 +42,15 @@
 		<div class="menu-wrap">
 			<div class="menu">
 				<div class="camp-icon"></div>
-				<div class="txt menu-txt" id="txt1"><a href="/outgoit/camping"><span>CAMPING</span></a></div>
+				<a href="/outgoit/camping"><div class="txt menu-txt" id="txt1"><span>CAMPING</span></div></a>
 			</div>
 			<div class="menu">
 				<div class="hiking-icon"></div>
-				<div class="txt menu-txt" id="txt2"><a href="/outgoit/hiking"><span>HIKING</span></a></div>
+				<a href="/outgoit/hiking"><div class="txt menu-txt" id="txt2"><span>HIKING</span></div></a>
 			</div>
 			<div class="menu">
 				<div class="riding-icon"></div>
-				<div class="txt menu-txt" id="txt3"><a href="/outgoit/riding"><span>RIDING</span></a></div>
+				<a href="/outgoit/riding"><div class="txt menu-txt" id="txt3"><span>RIDING</span></div></a>
 			</div>
 		</div>
         <div class="footer"></div>

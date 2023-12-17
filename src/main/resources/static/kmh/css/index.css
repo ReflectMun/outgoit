@@ -61,7 +61,7 @@ a {
     font-weight: 700;
     color: #116228;
     text-shadow: 0 0.7vw 0 rgb(222, 111, 26);
-    animation: bounce 2s ease-in-out; /* 애니메이션을 무한히 반복 */
+    animation: bounce 2s ease-in-out infinite; /* 애니메이션을 무한히 반복 */
 }
 
 @keyframes bounce {
@@ -152,8 +152,8 @@ a {
 
 .menu-txt {
     cursor: pointer;
-    -webkit-text-stroke: 0.6px #19672d;
-    background-image: linear-gradient(0deg, #19672d, #19672d);
+    -webkit-text-stroke: 0.6px #173b21;
+    background-image: linear-gradient(0deg, #2b8042, #2b8042);
     -webkit-background-clip: text;
     color: transparent;
     background-repeat: no-repeat;
