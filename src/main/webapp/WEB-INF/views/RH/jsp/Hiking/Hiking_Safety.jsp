@@ -64,7 +64,7 @@
                                   alt=""></div>
                         <div class="rh-card-set">야생동물 대처방법</div>
                     </div>
-                    <div class="rh-hiking-wood-mainPost" id="content2">
+                    <div class="rh-hiking-wood-mainPost" id="content2" style="margin-top: 20%;">
                        <p>
                            • 벌 <br>
                            말벌집을 발견하면 재빨리 벗어나야 해요. 만약 말벌에 쏘일 경우
