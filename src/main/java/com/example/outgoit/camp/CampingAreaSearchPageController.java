@@ -32,7 +32,7 @@ public class CampingAreaSearchPageController {
 
     @GetMapping("/draft1")
     public String sendDraft1(){
-        return "kmh/draft/1";
+        return "jiho/draft/1";
     }
     @GetMapping("/draft2")
     public String sendDraft2(){
@@ -67,7 +67,7 @@ public class CampingAreaSearchPageController {
         model.addAttribute("reviews", reviews);
 
 
-        return "hj/camp/camp_information";
+        return "jiho/draft/camp_information";
     }
 
     @GetMapping("/detail/{campingAreaName}")

@@ -6,10 +6,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${campingAreaName} 상세정보</title>
-    <link rel="stylesheet" href="/resources/static/css_hj/camp_information.css" />
+    <link rel="stylesheet" href="/resources/static/jh/css/draft1.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="/resources/static/js_hj/draft_information.js"></script>
+    <script src="/resources/static/jh/js/draft_information.js"></script>
   </head>
   <body>
     <input id="camping-area-id" value="${campingAreaNumber}" style="display: none;">
@@ -140,8 +140,8 @@
                         <div id="hj-review-list-container">
                           <c:forEach items="${reviews}" var="review">
                             <!-- 개별 리뷰 -->
-                            <div id="hj-review-content-box">
-                              <div id="hj-review-stars">
+                            <div class="hj-review-content-box">
+                              <div class="hj-review-stars">
                                 <c:forEach var="i" begin="1" end="5" step="1">
                                   <c:choose>
                                     <c:when test="${i > review.rating}">
@@ -154,15 +154,15 @@
                                 </c:forEach>
                               </div>
                               <br>
-                              <div id="hj-review-nickname">닉네임: ${review.author}</div>
-                              <div id="hj-review-comment">한줄평: ${review.content}</div>
-                              <div id="hj-edit-box">
-                                <div id="hj-edit-icon">...</div>
+                              <div class="hj-review-nickname">닉네임: ${review.author}</div>
+                              <div class="hj-review-comment">한줄평: ${review.content}</div>
+                              <div class="hj-edit-box">
+                                <div class="hj-edit-icon">...</div>
                               </div>
-                              <div id="hj-edit-drop">
+                              <div class="hj-edit-drop">
                                 <div><input type="text" placeholder="비밀번호"> </div>
-                                <div class="hj-edit-part" onclick="modifyComment(${review.commentNumber})">수정</div>
-                                <div class="hj-edit-part" onclick="deleteComment(${review.commentNumber})">삭제</div>
+                                <div class="hj-edit-part" onclick="modifyComment(${review.commentNumber}, this)">수정</div>
+                                <div class="hj-edit-part" onclick="deleteComment(${review.commentNumber}, this)">삭제</div>
                               </div>
                             </div>
                             <!-- 개별 리뷰 끝 -->

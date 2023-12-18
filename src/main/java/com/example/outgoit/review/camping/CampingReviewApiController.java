@@ -86,7 +86,7 @@ public class CampingReviewApiController {
             return new ArrayList<>();
         }
 
-        Pageable modified = PageRequest.of(pageNumber, pageable.getPageSize(), pageable.getSort());
+        Pageable modified = PageRequest.of(pageNumber - 1, pageable.getPageSize(), pageable.getSort());
         Page<CampingReview> result = campingReviewService.loadCampingAreaReview(campingAreaId, modified);
         System.out.println(result.getTotalPages());
 
