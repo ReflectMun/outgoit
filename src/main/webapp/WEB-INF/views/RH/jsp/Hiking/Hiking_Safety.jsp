@@ -49,8 +49,9 @@ pageEncoding="UTF-8"%>
 
             <div class="rh-hiking-wood-main">
               <div id="icon1">
-                <div>아이콘 자뤼</div>
-                <div>키워드 자뤼</div>
+                <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/checklist.png"
+                          alt=""></div>
+                <div class="rh-card-set">탈수 주의...ㅋ</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content1">
                 고열량의 비상식량과 충분한 물을 준비하고, 조금씩 자주 먹어요.
@@ -59,8 +60,9 @@ pageEncoding="UTF-8"%>
             </div>
             <div class="rh-hiking-wood-main">
               <div id="icon2">
-                <div>아이콘 자뤼</div>
-                <div>키워드 자뤼</div>
+                <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/beeSnake.png"
+                          alt=""></div>
+                <div class="rh-card-set">야생동물 대처방법</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content2">
                 말벌집을 발견하면 재빨리 벗어나야 해요. 만약 말벌에 쏘일 경우
@@ -71,18 +73,20 @@ pageEncoding="UTF-8"%>
             </div>
             <div class="rh-hiking-wood-main">
               <div id="icon3">
-                <div>아이콘 자뤼</div>
-                <div>키워드 자뤼</div>
+                <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/hiking.png"
+                          alt=""></div>
+                <div class="rh-card-set">하이킹 시간</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content3">
-                아침 일찍 산을 오르고 해 지기 한두 시간 전에는 하산해 주세요.
-                하루 최대 8시간 동안 산행하고, 체력의 30%는 비축해요
+                아침 일찍 시작하고 해 지기 한두 시간 전에는 하산해 주세요.
+                하루 최대 8시간 동안 진행하고, 체력의 30%는 비축해요
               </div>
             </div>
             <div class="rh-hiking-wood-main">
               <div id="icon4">
-                <div>아이콘 자뤼</div>
-                <div>키워드 자뤼</div>
+                <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/weather2.png"
+                          alt=""></div>
+                <div class="rh-card-set">기상정보 확인</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content4">
                 기상정보를 확인하고 이에 맞는 산행 용품을 준비해 주세요. 체온을
@@ -93,8 +97,9 @@ pageEncoding="UTF-8"%>
             </div>
             <div class="rh-hiking-wood-main">
               <div id="icon5">
-                <div>아이콘 자뤼</div>
-                <div>키워드 자뤼</div>
+                <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/hikingNG.png"
+                          alt=""></div>
+                <div class="rh-card-set">금지사항</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content5">
                 음주, 흡연, 취사는 금지예요! <br />
@@ -103,8 +108,9 @@ pageEncoding="UTF-8"%>
             </div>
             <div class="rh-hiking-wood-main">
               <div id="icon6">
-                <div>아이콘 자뤼</div>
-                <div>키워드 자뤼</div>
+                <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/signpost1.png"
+                          alt=""></div>
+                <div class="rh-card-set">현 위치 확인</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content6">
                 현재 위치를 중간중간 확인하여 사고 발생을 대비해요. 만일 사고가
@@ -113,8 +119,9 @@ pageEncoding="UTF-8"%>
             </div>
             <div class="rh-hiking-wood-main">
               <div id="icon7">
-                <div>아이콘 자뤼</div>
-                <div>키워드 자뤼</div>
+                <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/map.png"
+                          alt=""></div>
+                <div class="rh-card-set">등산로 파악</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content7">
                 등산로는 미리 파악해 두고, 지정된 탐방로를 이용해요. 만약 길을
@@ -123,8 +130,9 @@ pageEncoding="UTF-8"%>
             </div>
             <div class="rh-hiking-wood-main">
               <div id="icon8">
-                <div>아이콘 자뤼</div>
-                <div>키워드 자뤼</div>
+                <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/pain.png"
+                          alt=""></div>
+                <div class="rh-card-set">식중독</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content8">
                 계곡물이나 샘물 등은 안전성이 확인되지 않았으니 함부로 마시면 안
@@ -133,8 +141,8 @@ pageEncoding="UTF-8"%>
             </div>
             <div class="rh-hiking-wood-main" id="animal">
               <div id="icon9">
-                <div>아이콘 자뤼</div>
-                <div>키워드 자뤼</div>
+                <div> <img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/wildanimals.png" alt=""></div>
+                <div class="rh-card-set">야생동물 신고</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content9">
                 <table class="rh-animal-card" border="1">
@@ -227,12 +235,16 @@ pageEncoding="UTF-8"%>
                   <tr>
                     <td colspan="3">
                       <p>
-                        [로드킬 등 동물이 죽은 경우] <br />전국 고속도로:
+                        <span style="background: yellow">
+                        로드킬 등 동물이 죽은 경우
+                        </span>
+                        <br />전국 고속도로:
                         1588-2504<br />
                         고속도로 외 일반도로 및 국도: 지역번호+120/128
                       </p>
                       <p>
-                        [위협적인 야생동물을 만나 긴급신고가 필요한 경우]<br />
+                        <span  style="background: yellow">위협적인 야생동물을 만나 긴급신고가 필요한 경우</span>
+                        <br />
                         119
                       </p>
                     </td>

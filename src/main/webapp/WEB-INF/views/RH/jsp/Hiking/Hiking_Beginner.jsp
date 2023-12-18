@@ -47,8 +47,9 @@ pageEncoding="UTF-8"%>
 
             <div class="rh-hiking-wood-main">
               <div id="icon1">
-                <div>아이콘 자뤼</div>
-                <div>키워드 자뤼</div>
+                <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/mountaineer.png" alt="">
+                </div>
+                <div class="rh-card-set">난이도 선정</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content1">
                 처음부터 무리한 난이도의 코스를 선택하면 몸도 마음도 지치기
@@ -57,8 +58,9 @@ pageEncoding="UTF-8"%>
             </div>
             <div class="rh-hiking-wood-main">
               <div id="icon2">
-                <div>아이콘 자뤼</div>
-                <div>키워드 자뤼</div>
+                <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/hikingSafety.png" alt="">
+                </div>
+                <div>준비물</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content2">
                 기능성 의복, 모자, 배낭, 지도, 나침반, 손전등, 음식, 물 등
@@ -68,8 +70,9 @@ pageEncoding="UTF-8"%>
             </div>
             <div class="rh-hiking-wood-main">
               <div id="icon3">
-                <div>아이콘 자뤼</div>
-                <div>키워드 자뤼</div>
+                <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/exercising.png" alt="">
+                </div>
+                <div>스트레칭</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content3">
                 몸을 움직이기 전, 스트레칭과 워밍업은 필수예요. 이는 부상을
@@ -78,19 +81,21 @@ pageEncoding="UTF-8"%>
             </div>
             <div class="rh-hiking-wood-main">
               <div id="icon4">
-                <div>아이콘 자뤼</div>
-                <div>키워드 자뤼</div>
+                <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/weather3.png" alt="">
+                </div>
+                <div>날씨 확인</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content4">
-                날씨 예보 확인은 필수! 비나 추위에 대비할 수 있도록 해요. 또한
+                날씨 예보 확인은 필수! <br>비나 추위에 대비할 수 있도록 해요. 또한
                 하이킹하기 위험한 날씨라면 되도록 다른 날 일정을 잡는 것이
                 좋아요.
               </div>
             </div>
             <div class="rh-hiking-wood-main">
               <div id="icon5">
-                <div>아이콘 자뤼</div>
-                <div>키워드 자뤼</div>
+                <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/backpacker.png" alt="">
+                </div>
+                <div>그룹 하이킹</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content5">
                 첫 산행부터 혼자 움직이는 것보단 그룹 하이킹을 추천해요. 주위
@@ -100,8 +105,9 @@ pageEncoding="UTF-8"%>
             </div>
             <div class="rh-hiking-wood-main">
               <div id="icon6">
-                <div>아이콘 자뤼</div>
-                <div>키워드 자뤼</div>
+                <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/save-nature.png" alt="">
+                </div>
+                <div>자연 보호</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content6">
                 산림, 동물, 식물 등의 자연환경을 존중하는 태도를 가져야 해요.
@@ -113,8 +119,9 @@ pageEncoding="UTF-8"%>
             </div>
             <div class="rh-hiking-wood-main">
               <div id="icon8">
-                <div>아이콘 자뤼</div>
-                <div>키워드</div>
+                <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/mountainBest.png" alt="">
+                </div>
+                <div>초보 하이커 베스트 코스</div>
               </div>
               <div id="content8">
                 초보 하이커가 이용하기 좋을 장소를 선정했어요.

@@ -49,7 +49,6 @@ pageEncoding="UTF-8"%>
 
             <div class="rh-camping-wood-main">
               <div id="icon1">
-<%--                <img width="12%" src="/resources/static/img/기타/pin.png" alt="">--%>
                 <div>
                   <img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/fire.png" alt="">
                 </div>

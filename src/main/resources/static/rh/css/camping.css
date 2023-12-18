@@ -90,7 +90,7 @@ body {
     font-size: 3vw;
     font-family: "SOYOMapleBoldTTF";
     color: white;
-    -webkit-text-stroke: 2px black;
+    -webkit-text-stroke: 0.1vw black;
 }
 
 .rh-camping-wood-bridgeBox {
@@ -150,6 +150,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: column;
+    text-align: justify;
 }
 
 .rh-camping-wood-main-best {
@@ -158,6 +159,7 @@ body {
     display: flex;
     font-size: 1vw;
     height: 7.2vw;
+    border-radius: 10%;
 }
 
 .rh-camping-wood-mainPost-best {
@@ -209,7 +211,7 @@ body {
 }
 #back{
     position: relative;
-    top: 30%
+    /*top: 30%*/
 }
 /* 안전가이드 */
 .rh-camping-safety-titleBox {

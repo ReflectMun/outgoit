@@ -40,7 +40,6 @@ body {
   font-family: JalnanGothic;
   width: 27%;
   font-size: 4vw;
-  color: white;
   position: relative;
   left: 13%;
   animation: fadeInUp 1s ease-out forwards;
@@ -70,7 +69,7 @@ body {
 }
 .rh-riding-wood-titleBox {
   /* border: 5px solid rgb(255, 0, 43); */
-  height: 7vh;
+  height: 4vw;
   display: flex;
   justify-content: center;
 }
@@ -83,10 +82,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5vw;
+  font-size: 3vw;
   font-family: "SOYOMapleBoldTTF";
   color: white;
-  -webkit-text-stroke: 2px black;
+  -webkit-text-stroke: 0.1vw black;
 }
 .rh-riding-wood-bridgeBox {
   /* border: 5px solid rgb(255, 0, 217); */
@@ -119,24 +118,31 @@ body {
 
 /* 정보 카드 */
 .rh-riding-wood-main {
-  /* border: 3px solid rgb(255, 0, 0); */
-  background-color: rgb(85, 176, 255);
+
+  background-image: url("/resources/static/img/기타/paper.png");
+  background-size: contain;
   width: 23vw;
   height: 23vw;
   margin: 1.5%;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: left;
+  text-align: center;
   font-size: 1vw;
 }
+
 .rh-riding-wood-mainPost {
   margin: 5%;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /*align-items: center;*/
+  flex-flow: column;
+  text-align: justify;
+}
+.rh-riding-wood-mainPost-content6-set{
+  display: flex;
 }
 
 .rh-riding-wood-main-best {
@@ -144,27 +150,42 @@ body {
   margin: 1.5%;
   display: flex;
   font-size: 1vw;
-  height: 7.2vw;
+  height: 9vw;
+  border-radius: 10%;
 }
+
 .rh-riding-wood-mainPost-best {
   width: 100%;
   height: 100%;
   display: grid;
-  justify-content: center;
-  align-items: center;
+  padding: 0vw 2vw;
+  align-items: end;
   text-align: center;
 }
+.rh-riding-wood-mainPost-bestText {
+  text-align: right;
+  margin-bottom: 1vw;
+}
+.bestText2{
+  font-size: 1.5vw;
+}
+
 
 .rh-animal-card {
   font-size: 0.8vw;
   text-align: center;
-  width: 22vw;
+  width: 21vw;
+  margin-top: 10%;
 }
+
 .rh-animal-card tr:hover {
-  background-color: white;
+  background-color: #98bd98;
   transition: background-color 0.3s ease;
 }
 
+.rh-card-set {
+  font-size: 1.4vw;
+}
 /* 따로 만짐 안전가드 */
 .rh-riding-safety-titleBox {
   width: 100%;
