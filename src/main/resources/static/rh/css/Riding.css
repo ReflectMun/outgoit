@@ -27,7 +27,6 @@ body {
   width: 100%;
   padding-top: 6%;
   padding-bottom: 4%;
-  margin-top: 1%;
   margin-bottom: 3%;
   background-image: url("/resources/static/img/자전거/riding_beginner2.jpg");
   background-position: center;
@@ -147,13 +146,12 @@ body {
 
 .rh-riding-wood-main-best {
   background-color: rgb(143, 255, 141);
-  margin: 1.5%;
+  margin: 3%;
   display: flex;
   font-size: 1vw;
   height: 9vw;
   border-radius: 10%;
 }
-
 .rh-riding-wood-mainPost-best {
   width: 100%;
   height: 100%;
@@ -161,6 +159,10 @@ body {
   padding: 0vw 2vw;
   align-items: end;
   text-align: center;
+}
+.rh-riding-wood-main-best:hover {
+ box-shadow: 0 0 5px 0px gray;
+  margin: 2%;
 }
 .rh-riding-wood-mainPost-bestText {
   text-align: right;

@@ -27,7 +27,6 @@ body {
     width: 100%;
     padding-top: 10.355%;
     padding-bottom: 6%;
-    margin-top: 1%;
     margin-bottom: 3%;
     background-image: url(../../../../../../../resources/static/img/캠핑/camping_beginner.jpg);
     background-position: center;
@@ -155,10 +154,10 @@ body {
 
 .rh-camping-wood-main-best {
     background-color: rgb(143, 255, 141);
-    margin: 1.5%;
+    margin: 3%;
     display: flex;
     font-size: 1vw;
-    height: 7.2vw;
+    height: 9vw;
     border-radius: 10%;
 }
 
@@ -166,11 +165,21 @@ body {
     width: 100%;
     height: 100%;
     display: grid;
-    justify-content: center;
-    align-items: center;
+    padding: 0vw 2vw;
+    align-items: end;
     text-align: center;
 }
-
+.rh-camping-wood-main-best:hover {
+    box-shadow: 0 0 5px 0px gray;
+    margin: 2%;
+}
+.rh-camping-wood-mainPost-bestText {
+    text-align: right;
+    margin-bottom: 1vw;
+}
+.bestText2{
+    font-size: 1.5vw;
+}
 .rh-animal-card {
     font-size: 0.8vw;
     text-align: center;
@@ -185,6 +194,9 @@ body {
 
 .rh-card-set {
     font-size: 1.4vw;
+}
+#deckC{
+    margin-top: 10%;
 }
 
 /*비기너 카드 */

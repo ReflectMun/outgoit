@@ -136,7 +136,7 @@
                 <div class="rh-riding-wood-main" style="display: block" id="best">
                     <div class="rh-riding-wood-main-best">
                         <div class="rh-riding-wood-mainPost-best">
-                            <div class="rh-riding-wood-mainPost-bestText">
+                            <div onclick="location.href=''" class="rh-riding-wood-mainPost-bestText">
                                 <div>인천-서울</div>
                                 <div class="bestText2">아라뱃길</div>
                             </div>
@@ -144,7 +144,7 @@
                     </div>
                     <div class="rh-riding-wood-main-best">
                         <div class="rh-riding-wood-mainPost-best">
-                            <div class="rh-riding-wood-mainPost-bestText">
+                            <div onclick="location.href=''" class="rh-riding-wood-mainPost-bestText">
                                 <div>강원 춘천</div>
                                 <div class="bestText2">의암호 둘레길</div>
                             </div>
@@ -152,7 +152,7 @@
                     </div>
                     <div class="rh-riding-wood-main-best">
                         <div class="rh-riding-wood-mainPost-best">
-                            <div class="rh-riding-wood-mainPost-bestText">
+                            <div onclick="location.href=''" class="rh-riding-wood-mainPost-bestText">
                                 <div>대전</div>
                                 <div class="bestText2">둔산대교~대청댐</div>
                             </div>

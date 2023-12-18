@@ -61,7 +61,7 @@
                         • 휴대용 랜턴 <br/>
                         • 구급약품 <br/>
                         • 계절에 따른 온/냉방 용품
-                        <br/>
+                        <br/><br/>
                         이외의 소화기, 구급용품 등은 캠핑장 내에 구비되어 있을 확률이 높으나, 비상용으로 구비해 두는 편이 좋아요.
                     </div>
                 </div>
@@ -167,20 +167,26 @@
                 <div class="rh-camping-wood-main" style="display: block" id="best">
                     <div class="rh-camping-wood-main-best">
                         <div class="rh-camping-wood-mainPost-best">
-                            <div>이미지</div>
-                            <div>1</div>
+                            <div onclick="location.href=''" class="rh-camping-wood-mainPost-bestText">
+                                <div>인천-서울</div>
+                                <div class="bestText2">아라뱃길</div>
+                            </div>
                         </div>
                     </div>
                     <div class="rh-camping-wood-main-best">
                         <div class="rh-camping-wood-mainPost-best">
-                            <div>이미지</div>
-                            <div>1</div>
+                            <div onclick="location.href=''" class="rh-camping-wood-mainPost-bestText">
+                                <div>인천-서울</div>
+                                <div class="bestText2">아라뱃길</div>
+                            </div>
                         </div>
                     </div>
                     <div class="rh-camping-wood-main-best">
                         <div class="rh-camping-wood-mainPost-best">
-                            <div>이미지</div>
-                            <div>1</div>
+                            <div onclick="location.href=''" class="rh-camping-wood-mainPost-bestText">
+                                <div>인천-서울</div>
+                                <div class="bestText2">아라뱃길</div>
+                            </div>
                         </div>
                     </div>
                 </div>
