@@ -45,6 +45,8 @@ public class CampingAreaInfoDTO {
     private String siteBottomCl4; // 자갈바닥 자리 수
     private String siteBottomCl5; // 맨흙바닥 자리 수
 
+    private String imageUrl; // 캠핑장 이미지 URL
+
     private String errorMessage; // 에러 발생시 메시지
 
     public CampingAreaInfoDTO(String  errorMessage){
