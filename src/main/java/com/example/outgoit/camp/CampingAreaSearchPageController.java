@@ -27,7 +27,8 @@ public class CampingAreaSearchPageController {
     @GetMapping
     public String sendCampingSearchingPage(Model model){
         model.addAttribute("msg", "camping");
-        return "kmh/camping";
+
+        return "jh/camp";
     }
 
     @GetMapping("/draft1")
@@ -75,4 +76,5 @@ public class CampingAreaSearchPageController {
     public String sendError(){
         return "잘못된 접근입니다";
     }
+
 }
