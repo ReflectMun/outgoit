@@ -55,6 +55,7 @@
                         자전거를 타기 전, 아래의 사항을 체크해야 해요. <br/><br/>• 브레이크
                         오염 상태 <br/>• 안장 높낮이, 각도 <br/>• 서스펜션 윤활, 청소
                         <br/>• 공기압 체크 <br/>• 체인 상태 확인 및 관리
+                        <div class="rh-back-set" id="back1">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
                 <div class="rh-riding-wood-main">
@@ -67,6 +68,7 @@
                         산악 자전거, 도로 자전거, 하이브리드 자전거 등 여러 종류의
                         자전거가 있어요. 자신의 주행 스타일과 목적에 맞는 자전거를
                         선택해야 해요.
+                        <div class="rh-back-set" id="back2">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
                 <div class="rh-riding-wood-main">
@@ -78,6 +80,7 @@
                     <div class="rh-riding-wood-mainPost" id="content3">
                         안전모, 안전경, 장갑, 팔다리보호대 등 안전장비 착용은 필수예요.
                         또한 주행 전 적절한 스트레칭도 중요해요.
+                        <div class="rh-back-set" id="back3">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
                 <div class="rh-riding-wood-main">
@@ -89,6 +92,7 @@
                     <div class="rh-riding-wood-mainPost" id="content4">
                         교통이 복잡한 지역으로 나가기 전, 공원 같은 차량이 적은 곳에서
                         주행을 시작해 기본적인 라이딩 기술을 익혀요.
+                        <div class="rh-back-set" id="back4">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
                 <div class="rh-riding-wood-main">
@@ -99,6 +103,7 @@
                     </div>
                     <div class="rh-riding-wood-mainPost" id="content5">
                         탈진, 탈수 등을 예방하기 위해 충분한 수분 섭취가 필요해요.
+                        <div class="rh-back-set" id="back5">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
                 <div class="rh-riding-wood-main">
@@ -110,6 +115,7 @@
                     <div class="rh-riding-wood-mainPost" id="content6">
                         다른 라이더나 차량과의 상호작용에 주의를 기울여요. 손 신호 등을
                         이용해 자신의 의도를 알리는 것도 중요해요.
+                        <div class="rh-back-set" id="back6">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
                 <div class="rh-riding-wood-main">
@@ -121,6 +127,7 @@
                     <div class="rh-riding-wood-mainPost" id="content7">
                         자전거 역시 도로 교통 참여자로 간주되기 때문에 교통 규칙을
                         준수해야 해요.
+                        <div class="rh-back-set" id="back7">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
                 <div class="rh-riding-wood-main">
@@ -131,11 +138,12 @@
                     </div>
                     <div class="rh-riding-wood-mainPost" id="content8">
                         초보 라이더가 이용하기 좋을 장소를 선정했어요.
+                        <div class="rh-back-set" id="back8">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
                 <div class="rh-riding-wood-main" style="display: block" id="best">
                     <div class="rh-riding-wood-main-best">
-                        <div class="rh-riding-wood-mainPost-best">
+                        <div class="rh-riding-wood-mainPost-best" id="best1">
                             <div onclick="location.href=''" class="rh-riding-wood-mainPost-bestText">
                                 <div>인천-서울</div>
                                 <div class="bestText2">아라뱃길</div>
@@ -143,18 +151,18 @@
                         </div>
                     </div>
                     <div class="rh-riding-wood-main-best">
-                        <div class="rh-riding-wood-mainPost-best">
+                        <div class="rh-riding-wood-mainPost-best" id="best2">
                             <div onclick="location.href=''" class="rh-riding-wood-mainPost-bestText">
-                                <div>강원 춘천</div>
-                                <div class="bestText2">의암호 둘레길</div>
+                                <div>인천-서울</div>
+                                <div class="bestText2">아라뱃길</div>
                             </div>
                         </div>
                     </div>
                     <div class="rh-riding-wood-main-best">
-                        <div class="rh-riding-wood-mainPost-best">
+                        <div class="rh-riding-wood-mainPost-best" id="best3">
                             <div onclick="location.href=''" class="rh-riding-wood-mainPost-bestText">
-                                <div>대전</div>
-                                <div class="bestText2">둔산대교~대청댐</div>
+                                <div>인천-서울</div>
+                                <div class="bestText2">아라뱃길</div>
                             </div>
                         </div>
                     </div>

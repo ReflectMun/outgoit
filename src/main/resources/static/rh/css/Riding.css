@@ -145,7 +145,6 @@ body {
 }
 
 .rh-riding-wood-main-best {
-  background-color: rgb(143, 255, 141);
   margin: 3%;
   display: flex;
   font-size: 1vw;
@@ -197,7 +196,10 @@ body {
   font-size: 1.1vw;
   position: absolute;
   bottom: 0.7vw
-
+}
+#best1, #best2, #best3{
+  background-image: url("/resources/static/img/기타/나무보드.jpg");
+  border-radius: 5%;
 }
 /* 따로 만짐 안전가드 */
 .rh-riding-safety-titleBox {
