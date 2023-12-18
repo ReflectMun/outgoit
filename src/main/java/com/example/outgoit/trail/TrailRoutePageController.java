@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class TrailRoutePageController {
     @GetMapping
     public String getTrailRoutePage(){
-        return "jh/trail";
+        return "jiho/trail";
     }
 }

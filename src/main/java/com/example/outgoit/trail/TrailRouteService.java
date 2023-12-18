@@ -54,7 +54,7 @@ public class TrailRouteService {
         ObjectMapper mapper = new ObjectMapper();
         URL url = new URL(uri.toUriString());
         TrailRouteApiResponse res = mapper.readValue(url, TrailRouteApiResponse.class);
-
+      //  System.out.printf(res.toString());
         if(res.getResponse().getStatus().equals("OK") == false)
             throw new NoSearchResultException();
 
