@@ -54,15 +54,16 @@
                     <div class="rh-camping-wood-mainPost" id="content1" style="margin-top: 15%">
                         • 텐트 <br/>
                         • 취사 도구<br/>
-                        • 취사 재료 <br/>
-                        • 수면용품(침낭, 매트 등) <br/>
+                        • 취침 용품(침낭, 매트 등) <br/>
                         • 테이블 <br/>
                         • 보냉팩(아이스박스, 보냉가방) <br/>
                         • 휴대용 랜턴 <br/>
                         • 구급약품 <br/>
                         • 계절에 따른 온/냉방 용품
-                        <br/><br/>
+                        <br/>
                         이외의 소화기, 구급용품 등은 캠핑장 내에 구비되어 있을 확률이 높으나, 비상용으로 구비해 두는 편이 좋아요.
+                        <div class="rh-back-set" id="back1">돌아가기
+                            <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
                 <div class="rh-camping-wood-main">
@@ -74,6 +75,7 @@
                     <div class="rh-camping-wood-mainPost" id="content2">
                         장비 사용 방법을 알아둬요. <br/>
                         제품 페이지나 SNS를 통해 사진 및 동영상으로 접근할 수 있어요.
+                        <div class="rh-back-set" id="back2">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
                 <div class="rh-camping-wood-main">
@@ -85,6 +87,7 @@
                     <div class="rh-camping-wood-mainPost" id="content3">
                         기온, 강수량, 바람 등을 고려해 <br/>
                         적절한 의류와 장비를 선택해요
+                        <div class="rh-back-set" id="back3">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
                 <div class="rh-camping-wood-main">
@@ -97,6 +100,7 @@
                         근거리 캠핑장이나 국립공원 등 멀지 않고 편의시설이 잘 갖춰져
                         있는 곳을 선택해요. 처음부터 장거리 캠핑을 선택하면 텐트 피칭도
                         전에 피로해질 수 있어요.
+                        <div class="rh-back-set" id="back4">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
                 <div class="rh-camping-wood-main">
@@ -133,6 +137,7 @@
                             붙을 수 있어 관리가 필요해요.
                         </div>
                         <div class="rh-card-set" id="line">캠핑존 선택</div>
+                        <div class="rh-back-set" id="back5">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
                 <div class="rh-camping-wood-main">
@@ -142,15 +147,16 @@
                         <div class="rh-card-set">캠핑장 이용 매너</div>
                     </div>
                     <div class="rh-camping-wood-mainPost" id="content6">
-                        • 매너타임: 캠핑장마다 매너 타임(취침 타임)이라는 것이 존재해요.
+                        • 캠핑장마다 매너 타임(취침 타임)이라는 것이 존재해요.
                         해당 시간엔 목소리를 낮추고 시끄러운 음악을 틀지 않도록 해요.
                         <br/>
-                        • 반려동물: 반려동물과 함께 캠핑을 할 시, 목줄과 배변 처리를
+                        • 반려동물과 함께 캠핑을 할 시, 목줄과 배변 처리를
                         확실하게 해야 해요.<br/>• 다른 사이트를 침범해 타인을 방해하지
                         않도록 해요.<br/>
                         • 흡연은 지정된 공간에서만 가능해요.<br/>
                         • 아이와 함께하는 경우, 항상 보호자가 아이들을 주시하고 있어야
                         해요.
+                        <div class="rh-back-set" id="back6">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
 
@@ -160,13 +166,14 @@
                                   alt=""></div>
                         <div class="rh-card-set">초보 캠퍼 베스트 캠핑장</div>
                     </div>
-                    <div id="content8">
+                    <div class="rh-camping-wood-mainPost" id="content8">
                         초보 캠퍼 이용하기 좋을 장소를 선정했어요.
+                        <div class="rh-back-set" id="back8">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
                 <div class="rh-camping-wood-main" style="display: block" id="best">
                     <div class="rh-camping-wood-main-best">
-                        <div class="rh-camping-wood-mainPost-best">
+                        <div class="rh-camping-wood-mainPost-best" id="best1">
                             <div onclick="location.href=''" class="rh-camping-wood-mainPost-bestText">
                                 <div>인천-서울</div>
                                 <div class="bestText2">아라뱃길</div>
@@ -174,7 +181,7 @@
                         </div>
                     </div>
                     <div class="rh-camping-wood-main-best">
-                        <div class="rh-camping-wood-mainPost-best">
+                        <div class="rh-camping-wood-mainPost-best" id="best2">
                             <div onclick="location.href=''" class="rh-camping-wood-mainPost-bestText">
                                 <div>인천-서울</div>
                                 <div class="bestText2">아라뱃길</div>
@@ -182,7 +189,7 @@
                         </div>
                     </div>
                     <div class="rh-camping-wood-main-best">
-                        <div class="rh-camping-wood-mainPost-best">
+                        <div class="rh-camping-wood-mainPost-best" id="best3">
                             <div onclick="location.href=''" class="rh-camping-wood-mainPost-bestText">
                                 <div>인천-서울</div>
                                 <div class="bestText2">아라뱃길</div>

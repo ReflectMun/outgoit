@@ -130,7 +130,7 @@ body {
   align-items: center;
   text-align: center;
   font-size: 1vw;
-}
+  position: relative;}
 
 .rh-hiking-wood-mainPost {
   margin: 5%;
@@ -162,12 +162,14 @@ body {
 }
 .rh-hiking-wood-main-best:hover {
   box-shadow: 0 0 5px 0px gray;
+  transition: all 0.3s ease;
   margin: 2%;
 }
 .rh-hiking-wood-mainPost-bestText {
   text-align: right;
   margin-bottom: 1vw;
 }
+
 .bestText2{
   font-size: 1.5vw;
 }
@@ -176,7 +178,7 @@ body {
   font-size: 0.8vw;
   text-align: center;
   width: 21vw;
-  margin-top: 10%;
+  margin: 10% 0;
 }
 
 .rh-animal-card tr:hover {
@@ -187,12 +189,26 @@ body {
 .rh-card-set {
   font-size: 1.4vw;
 }
+
+.rh-back-set {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 7vw;
+  font-size: 1.1vw;
+  position: absolute;
+  bottom: 0.7vw
+
+}
+#best1, #best2, #best3{
+  background-image: url("/resources/static/img/기타/나무보드.jpg");
+  border-radius: 5%;
+}
 /* 따로 만짐 안전가드 */
 .rh-hiking-safety-titleBox {
   width: 100%;
   padding-top: 10.104%;
   padding-bottom: 5%;
-  margin-top: 1%;
   margin-bottom: 3%;
   background-image: url("/resources/static/img/등산/hiking_safety.jpg");
   background-position: center;
@@ -225,7 +241,6 @@ body {
   width: 100%;
   padding-top: 14.68%;
   padding-bottom: 10%;
-  margin-top: 1%;
   margin-bottom: 3%;
   background-image: url("/resources/static/img/등산/등산용 인포_가이드.jpg");
   background-position: center;

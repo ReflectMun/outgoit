@@ -117,7 +117,6 @@ body {
 
 /* 정보 카드 */
 .rh-riding-wood-main {
-
   background-image: url("/resources/static/img/기타/paper.png");
   background-size: contain;
   width: 23vw;
@@ -128,6 +127,7 @@ body {
   align-items: center;
   text-align: center;
   font-size: 1vw;
+  position: relative;
 }
 
 .rh-riding-wood-mainPost {
@@ -136,7 +136,7 @@ body {
   height: 100%;
   display: flex;
   justify-content: center;
-  /*align-items: center;*/
+  align-items: center;
   flex-flow: column;
   text-align: justify;
 }
@@ -161,7 +161,8 @@ body {
   text-align: center;
 }
 .rh-riding-wood-main-best:hover {
- box-shadow: 0 0 5px 0px gray;
+  box-shadow: 0 0 5px 0px gray;
+  transition: all 0.3s ease;
   margin: 2%;
 }
 .rh-riding-wood-mainPost-bestText {
@@ -177,7 +178,7 @@ body {
   font-size: 0.8vw;
   text-align: center;
   width: 21vw;
-  margin-top: 10%;
+  margin: 10% 0;
 }
 
 .rh-animal-card tr:hover {
@@ -187,6 +188,16 @@ body {
 
 .rh-card-set {
   font-size: 1.4vw;
+}
+.rh-back-set {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 7vw;
+  font-size: 1.1vw;
+  position: absolute;
+  bottom: 0.7vw
+
 }
 /* 따로 만짐 안전가드 */
 .rh-riding-safety-titleBox {
@@ -229,7 +240,7 @@ body {
   padding-bottom: 10%;
   margin-top: 1%;
   margin-bottom: 3%;
-  background-image: url(../../../../../../../resources/static/img/캠핑/camping_history4.jpg);
+  background-image: url("/resources/static/img/자전거/riding_history2.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

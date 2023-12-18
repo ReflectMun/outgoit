@@ -54,6 +54,7 @@ pageEncoding="UTF-8"%>
               <div class="rh-hiking-wood-mainPost" id="content1">
                 처음부터 무리한 난이도의 코스를 선택하면 몸도 마음도 지치기
                 쉬워요. 가볍고 난이도가 낮은 코스부터 시작하는 것이 좋아요.
+                <div class="rh-back-set" id="back1">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
             </div>
             <div class="rh-hiking-wood-main">
@@ -66,6 +67,7 @@ pageEncoding="UTF-8"%>
                 기능성 의복, 모자, 배낭, 지도, 나침반, 손전등, 음식, 물 등
                 기본적인 장비를 준비해요. 특히 음식은 가볍고 고열량인 것으로
                 챙기는 것이 좋아요.
+                <div class="rh-back-set" id="back2">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
             </div>
             <div class="rh-hiking-wood-main">
@@ -77,6 +79,7 @@ pageEncoding="UTF-8"%>
               <div class="rh-hiking-wood-mainPost" id="content3">
                 몸을 움직이기 전, 스트레칭과 워밍업은 필수예요. 이는 부상을
                 방지하고 하이킹 도중 편안함을 유지하는 데 도움이 돼요.
+                <div class="rh-back-set" id="back3">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
             </div>
             <div class="rh-hiking-wood-main">
@@ -89,6 +92,7 @@ pageEncoding="UTF-8"%>
                 날씨 예보 확인은 필수! <br>비나 추위에 대비할 수 있도록 해요. 또한
                 하이킹하기 위험한 날씨라면 되도록 다른 날 일정을 잡는 것이
                 좋아요.
+                <div class="rh-back-set" id="back4">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
             </div>
             <div class="rh-hiking-wood-main">
@@ -101,6 +105,7 @@ pageEncoding="UTF-8"%>
                 첫 산행부터 혼자 움직이는 것보단 그룹 하이킹을 추천해요. 주위
                 사람들과 도움을 주고받을 수 있고, 위급 상황이 있을 시 주위의
                 도움을 받기 수월해요.
+                <div class="rh-back-set" id="back5">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
             </div>
             <div class="rh-hiking-wood-main">
@@ -115,6 +120,7 @@ pageEncoding="UTF-8"%>
                 관한 법률, 산림자원의 조성 및 관리에 관한 법률에 의해 금지하고
                 있어요. 또한 지정 장소 외에 쓰레기를 버리지 말고 불을 피우는
                 등의 위험 행위를 삼가야 해요.
+                <div class="rh-back-set" id="back6">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
             </div>
             <div class="rh-hiking-wood-main">
@@ -123,13 +129,14 @@ pageEncoding="UTF-8"%>
                 </div>
                 <div class="rh-card-set">초보 하이커 베스트 코스</div>
               </div>
-              <div id="content8">
+              <div class="rh-hiking-wood-mainPost" id="content8">
                 초보 하이커가 이용하기 좋을 장소를 선정했어요.
+                <div class="rh-back-set" id="back8">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
             </div>
             <div class="rh-hiking-wood-main" style="display: block" id="best">
               <div class="rh-hiking-wood-main-best">
-                <div class="rh-hiking-wood-mainPost-best">
+                <div class="rh-hiking-wood-mainPost-best" id="best1">
                   <div onclick="location.href=''" class="rh-hiking-wood-mainPost-bestText">
                     <div>인천-서울</div>
                     <div class="bestText2">아라뱃길</div>
@@ -137,7 +144,7 @@ pageEncoding="UTF-8"%>
                 </div>
               </div>
               <div class="rh-hiking-wood-main-best">
-                <div class="rh-hiking-wood-mainPost-best">
+                <div class="rh-hiking-wood-mainPost-best" id="best2">
                   <div onclick="location.href=''" class="rh-hiking-wood-mainPost-bestText">
                     <div>인천-서울</div>
                     <div class="bestText2">아라뱃길</div>
@@ -145,7 +152,7 @@ pageEncoding="UTF-8"%>
                 </div>
               </div>
               <div class="rh-hiking-wood-main-best">
-                <div class="rh-hiking-wood-mainPost-best">
+                <div class="rh-hiking-wood-mainPost-best" id="best3">
                   <div onclick="location.href=''" class="rh-hiking-wood-mainPost-bestText">
                     <div>인천-서울</div>
                     <div class="bestText2">아라뱃길</div>
