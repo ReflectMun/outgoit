@@ -109,7 +109,7 @@
                 </div>
                 <div class="rh-riding-wood-main">
                     <div class="rh-pointer" id="icon4">
-                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/wildanimals.png"
+                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/bikeroad3.png"
                                   alt=""></div>
                         <div class="rh-card-set">라이딩 스킬</div>
                     </div>
