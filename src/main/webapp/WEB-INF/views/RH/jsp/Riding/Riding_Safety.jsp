@@ -49,12 +49,13 @@
 
                 <div class="rh-riding-wood-main">
                     <div class="rh-pointer" id="icon1">
-                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/cross.png" alt="">
+                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/bikeCross.png" alt="">
                         </div>
-                        <div class="rh-card-set">횡단보도</div>
+                        <div class="rh-card-set">도로교통 준수</div>
                     </div>
                     <div class="rh-riding-wood-mainPost" id="content1">
-                        자전거 횡단보도가 있는 경우를 제외하고는 자전거에서 내려 끌고 가거나 들고 보행해야 해요.
+                        자전거는 도로교통법상 '차'에 해당해요. 시속 20km를 준수하며 안전거리를 유지해요. 음주 후 라이딩은 절대 금지예요. <br>
+                        또한 자전거 횡단보도가 있는 경우를 제외하고는 자전거에서 내려 끌고 가거나 들고 보행해야 해요.
                         <div class="rh-back-set rh-pointer" id="back1">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
@@ -78,23 +79,22 @@
                         <div class="rh-card-set">야간 라이딩 시 필요한 것</div>
                     </div>
                     <div class="rh-riding-wood-mainPost" id="content3">
-                        전조등과 후미등을 설치해요. 야간에 시야를 확보하고 상대방에게
+                        야간 라이딩 시 전조등과 후미등을 설치해요. 시야를 확보하고 상대방에게
                         위치를 알려 줌으로 충돌 사고를 예방할 수 있어요.
                         <div class="rh-back-set rh-pointer" id="back3">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
-                <div class="rh-riding-wood-main">
-                    <div class="rh-pointer" id="icon4">
-                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/speedlimit.png"
-                                  alt=""></div>
-                        <div class="rh-card-set">속도위반 주의</div>
-                    </div>
-                    <div class="rh-riding-wood-mainPost" id="content4">
-                        자전거는 도로교통법상 '차'에 해당해요. 시속 20km를 준수하며
-                        안전거리를 유지해요. 음주 후 라이딩은 절대 금지예요.
-                        <div class="rh-back-set rh-pointer" id="back4">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
-                    </div>
-                </div>
+<%--                <div class="rh-riding-wood-main">--%>
+<%--                    <div class="rh-pointer" id="icon4">--%>
+<%--                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/speedlimit.png"--%>
+<%--                                  alt=""></div>--%>
+<%--                        <div class="rh-card-set">속도위반 주의</div>--%>
+<%--                    </div>--%>
+<%--                    <div class="rh-riding-wood-mainPost" id="content4">--%>
+<%--                        내용--%>
+<%--                        <div class="rh-back-set rh-pointer" id="back4">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
                 <div class="rh-riding-wood-main">
                     <div class="rh-pointer" id="icon5">
                         <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/phoneNG1.png"

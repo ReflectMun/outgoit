@@ -121,7 +121,7 @@ body {
     background-size: contain;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgb(226, 255, 238);
+    padding: 5vw 0;
 }
 
 /* 정보 카드 */
