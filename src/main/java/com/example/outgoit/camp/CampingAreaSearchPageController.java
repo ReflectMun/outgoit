@@ -64,7 +64,6 @@ public class CampingAreaSearchPageController {
         model.addAttribute("campingAreaNumber", data.getContentId());
 
         model.addAttribute("existReviews", !reviews.isEmpty());
-        model.addAttribute("reviews", reviews);
 
 
         return "jiho/draft/camp_information";

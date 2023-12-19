@@ -138,35 +138,35 @@
                     <c:choose>
                       <c:when test="${existReviews}">
                         <div id="hj-review-list-container">
-                          <c:forEach items="${reviews}" var="review">
-                            <!-- 개별 리뷰 -->
-                            <div class="hj-review-content-box">
-                              <div class="hj-review-stars">
-                                <c:forEach var="i" begin="1" end="5" step="1">
-                                  <c:choose>
-                                    <c:when test="${i > review.rating}">
-                                      <div class="hj-review-star">☆</div>
-                                    </c:when>
-                                    <c:otherwise>
-                                      <div class="hj-review-star">★</div>
-                                    </c:otherwise>
-                                  </c:choose>
-                                </c:forEach>
-                              </div>
-                              <br>
-                              <div class="hj-review-nickname">닉네임: ${review.author}</div>
-                              <div class="hj-review-comment">한줄평: ${review.content}</div>
-                              <div class="hj-edit-box">
-                                <div class="hj-edit-icon">...</div>
-                              </div>
-                              <div class="hj-edit-drop">
-                                <div><input type="text" placeholder="비밀번호"> </div>
-                                <div class="hj-edit-part" onclick="modifyComment(${review.commentNumber}, this)">수정</div>
-                                <div class="hj-edit-part" onclick="deleteComment(${review.commentNumber}, this)">삭제</div>
-                              </div>
-                            </div>
-                            <!-- 개별 리뷰 끝 -->
-                          </c:forEach>
+<%--                          <c:forEach items="${reviews}" var="review">--%>
+<%--                            <!-- 개별 리뷰 -->--%>
+<%--                            <div class="hj-review-content-box">--%>
+<%--                              <div class="hj-review-stars">--%>
+<%--                                <c:forEach var="i" begin="1" end="5" step="1">--%>
+<%--                                  <c:choose>--%>
+<%--                                    <c:when test="${i > review.rating}">--%>
+<%--                                      <div class="hj-review-star">☆</div>--%>
+<%--                                    </c:when>--%>
+<%--                                    <c:otherwise>--%>
+<%--                                      <div class="hj-review-star">★</div>--%>
+<%--                                    </c:otherwise>--%>
+<%--                                  </c:choose>--%>
+<%--                                </c:forEach>--%>
+<%--                              </div>--%>
+<%--                              <br>--%>
+<%--                              <div class="hj-review-nickname">닉네임: ${review.author}</div>--%>
+<%--                              <div class="hj-review-comment">한줄평: ${review.content}</div>--%>
+<%--                              <div class="hj-edit-box">--%>
+<%--                                <div class="hj-edit-icon">...</div>--%>
+<%--                              </div>--%>
+<%--                              <div class="hj-edit-drop">--%>
+<%--                                <div><input type="text" placeholder="비밀번호"> </div>--%>
+<%--                                <div class="hj-edit-part" onclick="modifyComment(${review.commentNumber}, this)">수정</div>--%>
+<%--                                <div class="hj-edit-part" onclick="deleteComment(${review.commentNumber}, this)">삭제</div>--%>
+<%--                              </div>--%>
+<%--                            </div>--%>
+<%--                            <!-- 개별 리뷰 끝 -->--%>
+<%--                          </c:forEach>--%>
                         </div>
                         <!-- 코멘트 보여주는 위치 여기까지 -->
                         <!--   페이징 처리-->

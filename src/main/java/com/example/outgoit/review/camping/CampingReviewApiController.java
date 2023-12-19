@@ -1,5 +1,6 @@
 package com.example.outgoit.review.camping;
 
+import com.example.outgoit.review.camping.dto.CampingReviewDeleteDTO;
 import com.example.outgoit.review.camping.dto.CampingReviewModifyingDTO;
 import com.example.outgoit.review.camping.dto.CampingReviewSubmitBodyDTO;
 import com.example.outgoit.review.camping.dto.NotificationProcessStatusDTO;
@@ -61,19 +62,17 @@ public class CampingReviewApiController {
     }
 
     @PostMapping("/update")
-    public boolean updateReview(@RequestBody CampingReviewModifyingDTO body){
-        Integer updatedRow = campingReviewService.updateReviewContent(
-                "하하하하하",
-                1
+    public NotificationProcessStatusDTO updateReview(@RequestBody CampingReviewModifyingDTO body){
+        return campingReviewService.updateReviewContent(
+                body.getPassword(),
+                body.getCommentNumber(),
+                body.getContent()
         );
-
-        return true;
     }
 
     @PostMapping("/delete")
-    public boolean deleteReview(){
-        campingReviewService.deleteReview(2);
-        return true;
+    public NotificationProcessStatusDTO deleteReview(@RequestBody CampingReviewDeleteDTO body){
+        return campingReviewService.deleteReview(body.getCommentNumber(), body.getPassword());
     }
 
     @GetMapping("/list")

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
     document.querySelector("#hj-content-detail").addEventListener("click", (e) => {
         document.getElementById("hj-content-plus-container").classList.add("show")
         document.getElementById("hj-overlay-popup").classList.add("active")
@@ -9,23 +9,35 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("hj-overlay-popup").classList.remove("active")
     })
 
-    const editBoxList = document.querySelectorAll(".hj-edit-box")
-    editBoxList.forEach((element, key, parent) => {
-        element.addEventListener("click", (e) => {
-            const siblingEditDropBox =  element.parentNode.lastElementChild
-            const displayValue = siblingEditDropBox.style['display']
-            siblingEditDropBox.style['display'] = displayValue === "none" ? "block" : "none"
-        })
-    })
+    const reviewListContainer = document.getElementById("hj-review-list-container")
+    if(reviewListContainer){
+        const campingAreaId = document.getElementById("camping-area-id").value
+        try {
+            const resData = await getReviewList(campingAreaId, 1)
+
+            if(resData === null)
+                throw new Error("서버와의 통신 중 알 수 없는 오류가 발생")
+
+            for(const review of resData){
+                const madeReviewBox = makeReviewBox(review)
+                reviewListContainer.appendChild(madeReviewBox)
+            }
+        } catch (e) {
+            console.log(e)
+            alert("원인을 알 수 없는 오류가 발생했습니다")
+        }
+    }
 });
 
 let pageNum = 1
 
 async function getPrevCommentPage() {
     const campingAreaId = document.getElementById("camping-area-id").value
-    const reqUrl = "/api/review/camping/list?" + `campingAreaId=${campingAreaId}&pageNumber=${pageNum - 1}`
     try {
-        const {data: resData} = await axios.get(reqUrl)
+        const resData = await getReviewList(campingAreaId, pageNum - 1)
+
+        if (resData === null)
+            throw new Error("서버와 통신 중 원인을 알 수 없는 오류 발생")
 
         if (resData.length === 0) {
             alert("첫번째 페이지 입니다!")
@@ -50,9 +62,11 @@ async function getPrevCommentPage() {
 
 async function getNextCommentPage() {
     const campingAreaId = document.getElementById("camping-area-id").value
-    const reqUrl = "/api/review/camping/list?" + `campingAreaId=${campingAreaId}&pageNumber=${pageNum + 1}`
     try {
-        const {data: resData} = await axios.get(reqUrl)
+        const resData = await getReviewList(campingAreaId, pageNum + 1)
+
+        if (resData === null)
+            throw new Error("서버와 통신 중 원인을 알 수 없는 오류 발생")
 
         if (resData.length === 0) {
             alert("마지막 페이지 입니다!")
@@ -76,8 +90,13 @@ async function getNextCommentPage() {
 }
 
 function deleteComment(commentNumber, element) {
-    console.log(element.parentNode.firstElementChild.firstElementChild)
-    console.log(element.parentNode.firstElementChild.firstElementChild.value)
+    const passwordInput = element.parentNode.firstElementChild
+    if(!passwordInput.value){
+        alert("댓글을 수정하시려면 비밀번호를 입력해주세요!")
+        return
+    }
+
+
 }
 
 function modifyComment(commentNumber, element) {
@@ -208,4 +227,14 @@ function makeReviewBox(reviewData) {
 
     reviewComment.classList.add("hj-review-content-box")
     return reviewComment
+}
+
+async function getReviewList(areaId, pageNumber){
+    const reqUrl = "/api/review/camping/list?" + `campingAreaId=${areaId}&pageNumber=${pageNumber}`
+    try {
+        const {data: resData} = await axios.get(reqUrl)
+        return resData
+    } catch (e) {
+        return null
+    }
 }
