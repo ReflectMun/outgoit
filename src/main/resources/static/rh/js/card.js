@@ -1,8 +1,9 @@
 $(function () {
-    $("#icon1, #icon2, #icon3, #icon4, #icon5, #camping-content5, #icon6, #camping-icon7, #icon7, #icon8, #icon9").show();
+    $("#icon1, #icon2, #riding-content2, #icon3, #icon4, #icon5, #camping-content5, #icon6, #camping-icon7, #icon7, #icon8, #icon9").show();
     $("#content1, #content2, #content3, #content4, #content5, #content6, #camping-content7, #content7, #content8, #content9").hide();
     $("#best").hide();
     $("#stoneC, #deckC, #grassC").hide();
+    $("#mtbC, #rbC, #hbC").hide();
     $("#back1, #back2, #back3, #back4, #back5, #back6, #back7, #back8, #back9").hide();
 
     //1번
@@ -24,6 +25,26 @@ $(function () {
         $("#content2, #back2").hide();
         $("#icon2").show();
     });
+
+    // 라이딩 2번
+    $("#mtb").click(function () {
+        $("#mtbC, #back2").toggle();
+        $("#mtb, #rb, #hb, #line").hide();
+    });
+    $("#rb").click(function () {
+        $("#rbC, #back2").toggle();
+        $("#mtb, #rb, #hb, #line").hide();
+    });
+    $("#hb").click(function () {
+        $("#hbC, #back2").toggle();
+        $("#mtb, #rb, #hb, #line").hide();
+    });
+    $("#back2").click(function (){
+        $("#mtb, #rb, #hb, #line").show();
+        $("#mtbC, #rbC, #hbC, #back2").hide();
+    });
+
+
 
     //3번
     $("#icon3").click(function () {

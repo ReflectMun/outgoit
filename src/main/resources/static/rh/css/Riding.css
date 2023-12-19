@@ -112,7 +112,7 @@ body {
   background-size: contain;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: rgb(226, 255, 238);
+  padding: 5vw 0;
 }
 
 /* 정보 카드 */
@@ -158,7 +158,7 @@ body {
   width: 100%;
   height: 100%;
   display: grid;
-  padding: 0vw 2vw;
+  padding: 0vw 1vw;
   align-items: end;
   text-align: center;
 }
@@ -170,6 +170,8 @@ body {
 .rh-riding-wood-mainPost-bestText {
   text-align: right;
   margin-bottom: 1vw;
+  color: white;
+  text-shadow: 0 0 3px black;
 }
 .bestText2{
   font-size: 1.5vw;
@@ -200,9 +202,21 @@ body {
   position: absolute;
   bottom: 0.7vw
 }
-#best1, #best2, #best3{
-  background-image: url("/resources/static/img/기타/나무보드.jpg");
+#best1{
+  background-image: url("/resources/static/img/best/의암호.jpg");
   border-radius: 5%;
+  background-size: cover;
+  background-position: right;
+}
+#best2{
+  background-image: url("/resources/static/img/best/아라뱃길.jpg");
+  border-radius: 5%;
+  background-size: cover;
+}
+#best3{
+  background-image: url("/resources/static/img/best/대청댐.jpg");
+  border-radius: 5%;
+  background-size: cover;
 }
 /* 따로 만짐 안전가드 */
 .rh-riding-safety-titleBox {
@@ -275,4 +289,32 @@ body {
   margin-top: 5%;
   margin-bottom: 20%;
   font-size: 1vw;
+}
+
+/*비기너 선택 카드*/
+.rh-riding-wood-beginner-zone {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3vw;
+  text-align: center;
+  margin-bottom: 2%;
+  border: 1px solid #275634;
+  padding: 0.1vw 1vw;
+  transition: 0.2s ease-in-out;
+}
+.rh-riding-wood-beginner-zone > img {
+  width: 33%;
+}
+
+.rh-riding-wood-beginner-zone:hover {
+  background-color: #275634;
+  color: white;
+}
+.first {
+  margin-top: 5%;
+}
+#line{
+  margin-top: 10%;
 }
