@@ -29,27 +29,35 @@ try {
         deleteMarker()
         resultList.innerText = ""
 
-        ps.keywordSearch(inputValue, async (data, status, pagination) => {
+         ps.keywordSearch(inputValue, async (data, status, pagination) => {
 
             if (status === kakao.maps.services.Status.OK) {
-                addMarker(data.slice(0, 1))
-                displayMarker()
-
-                const url = new URL("http://" + hostName + "/api/trail/search")
+                const url = new URL("http://" + hostName + "/api/trail/search"+inputValue)
 
                 url.searchParams.set("lati", data[0].y)
+
                 url.searchParams.set("lngi", data[0].x)
 
-                const {data: resData} = await axios.get(url)
+
+
+                 const {data: resData} = await axios.get(url)
+
+                 addMarker(data.slice(0, 1), resData)
+                displayMarker()
 
                 for (const trail of resData) {
+
+                     console.log(JSON.stringify(resData, null, 2))
                     const trailLIne = trail['geometry']['coordinates'][0]
+
+                     //console.log(trailLIne)
                     const path = []
 
-                    for (const coord of trailLIne) {
-                        path.push(new kakao.maps.LatLng(coord[1], coord[0]))
-                    }
 
+                    for (const coord of trail) {
+                        path.push(new kakao.maps.LatLng(coord[1], coord[0]))
+
+                    }
                     const polyLine = new kakao.maps.Polyline({
                         path: path,
                         strokeWeight: 10,
@@ -71,14 +79,14 @@ catch (e) {
     console.log(e)
     alert("오류발생")
 }
-    function addMarker(places) {
+    function addMarker(places, resData) {
         for (const place of places) {
             const coord = new kakao.maps.LatLng(place.y, place.x)
             const marker = new kakao.maps.Marker({
                 position: coord
 
             })
-            resultList.appendChild(makeListElement(coord))
+            //resultList.appendChild(makeListElement(resData))
             kakao.maps.event.addListener(marker, 'click', () => {
                 map.panTo(coord)
             })
@@ -102,6 +110,9 @@ catch (e) {
         for (const marker of markers) {
             marker.setMap(null)
         }
+        for (const polyLine of polylines) {
+            polyLine.setMap(null)
+        }
 
         latlngBounds = new kakao.maps.LatLngBounds()
         markers = []
@@ -115,6 +126,7 @@ catch (e) {
         }
         map.setBounds(latlngBounds)
     }
+
 
 
 function makeListElement(apiResData){
