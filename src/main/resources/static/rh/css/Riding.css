@@ -129,6 +129,9 @@ body {
   font-size: 1vw;
   position: relative;
 }
+.rh-pointer:hover{
+  cursor: pointer;
+}
 
 .rh-riding-wood-mainPost {
   margin: 5%;

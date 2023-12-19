@@ -48,7 +48,7 @@ pageEncoding="UTF-8"%>
             <!-- 통나무 내용판 -->
 
             <div class="rh-camping-wood-main">
-              <div id="icon1">
+              <div class="rh-pointer" id="icon1">
                 <div>
                   <img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/fire.png" alt="">
                 </div>
@@ -58,11 +58,11 @@ pageEncoding="UTF-8"%>
                 전기용품은 600w 이하로, 화로 이용 시 과대 불판 이용을 삼가고,
                 잔불 처리를 철저하게 해요. 사이트 내 소화기 위치를 미리 파악하는
                 것도 좋아요.
-                <div class="rh-back-set" id="back1">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
+                <div class="rh-back-set rh-pointer" id="back1">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
             </div>
             <div class="rh-camping-wood-main">
-              <div id="icon2">
+              <div class="rh-pointer" id="icon2">
                 <div> <img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/gass.png" alt=""></div>
                 <div class="rh-card-set">가스 사용 주의</div>
               </div>
@@ -71,22 +71,22 @@ pageEncoding="UTF-8"%>
                 난방기구 이용 시 환기 가능한 장소에서 사용하고 휴대용 일산화탄소
                 경보기를 준비해야 해요. 또한 캠핑용 가스용기에 KC 마크가 있는지
                 확인해요.
-                <div class="rh-back-set" id="back2">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
+                <div class="rh-back-set rh-pointer" id="back2">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
             </div>
             <div class="rh-camping-wood-main">
-              <div id="icon3">
+              <div class="rh-pointer" id="icon3">
                 <div> <img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/foodBear.png" alt=""></div>
                 <div class="rh-card-set">남은 음식물 처리</div>
               </div>
               <div class="rh-camping-wood-mainPost" id="content3">
                 캠프 사이트에 방치된 음식물은 야생동물을 캠프 사이트로 유인하는
                 역할을 해요. 지정된 장소에 음식물 쓰레기를 배출해 주세요.
-                <div class="rh-back-set" id="back3">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
+                <div class="rh-back-set rh-pointer" id="back3">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
             </div>
             <div class="rh-camping-wood-main">
-              <div id="icon4">
+              <div class="rh-pointer" id="icon4">
                 <div> <img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/trash2.png" alt=""></div>
                 <%--사진 1로 할지 2로 할지 고민--%>
                 <div class="rh-card-set">쓰레기 배출</div>
@@ -95,22 +95,22 @@ pageEncoding="UTF-8"%>
                 캠핑 시 발생하는 쓰레기는 지정된 장소에 분리 배출해야 해요.
                 기름이나 오수를 캠핑장 바닥에 버리는 것은 환경오염과 해충 발생의
                 원인이 돼요.
-                <div class="rh-back-set" id="back4">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
+                <div class="rh-back-set rh-pointer" id="back4">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
             </div>
             <div class="rh-camping-wood-main">
-              <div id="icon5">
+              <div class="rh-pointer" id="icon5">
                 <div> <img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/axe2.png" alt=""></div>
                 <div class="rh-card-set">위험한 장비</div>
               </div>
               <div class="rh-camping-wood-mainPost" id="content5">
                 흉기가 될 수 있는 캠핑장비는 사용 후 어린이들 손에 닿지 않는
                 곳에 보관해 주세요.
-                <div class="rh-back-set" id="back5">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
+                <div class="rh-back-set rh-pointer" id="back5">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
             </div>
             <div class="rh-camping-wood-main">
-              <div id="icon6">
+              <div class="rh-pointer" id="icon6">
                 <div> <img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/campNG.png" alt=""></div>
                 <div class="rh-card-set">불법 야영 금지</div>
               </div>
@@ -118,11 +118,11 @@ pageEncoding="UTF-8"%>
                 미등록 야영/취사행위 불가지역에서 캠핑을 하면 자연공원법
                 제27조에 따라 불법야영은 50만 원 이하의 과태료, 불법취사는 20만
                 원 이하의 과태료 부과돼요.
-                <div class="rh-back-set" id="back6">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
+                <div class="rh-back-set rh-pointer" id="back6">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
             </div>
             <div class="rh-camping-wood-main">
-              <div id="camping-icon7">
+              <div class="rh-pointer" id="camping-icon7">
                 <div> <img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/weather2.png" alt=""></div>
                 <div class="rh-card-set">일기예보 확인</div>
               </div>
@@ -130,11 +130,11 @@ pageEncoding="UTF-8"%>
                 캠핑 전 반드시 일기예보를 확인해요. 폭우가 내리면 텐트 즉시 철수
                 후 안전한 장소로 대피해요. 만약 우중캠핑이 목적일 경우, 지대가
                 높고 배수 시설이 잘 돼 있는 데크 캠핑장을 선택해요.
-                <div class="rh-back-set" id="back7">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
+                <div class="rh-back-set rh-pointer" id="back7">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
             </div>
             <div class="rh-camping-wood-main">
-              <div id="icon8">
+              <div class="rh-pointer" id="icon8">
                 <div> <img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/pain.png" alt=""></div>
                 <div class="rh-card-set">식중독 예방</div>
               </div>
@@ -142,11 +142,11 @@ pageEncoding="UTF-8"%>
                 실온에 오래 둔 식품은 식중독의 원인이 될 수 있으니 되도록 먹지
                 말아요. 또한 생고기, 민물어패류 등 날것은 기생충 감염의 우려가
                 있으니 완전히 익혀서 먹어요.
-                <div class="rh-back-set" id="back8">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
+                <div class="rh-back-set rh-pointer" id="back8">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
             </div>
             <div class="rh-camping-wood-main" id="animal">
-              <div id="icon9">
+              <div class="rh-pointer" id="icon9">
                 <div> <img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/wildanimals.png" alt=""></div>
                 <div class="rh-card-set">야생동물 신고</div>
               </div>
@@ -256,7 +256,7 @@ pageEncoding="UTF-8"%>
                     </td>
                   </tr>
                 </table>
-                <div class="rh-back-set" id="back9">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
+                <div class="rh-back-set rh-pointer" id="back9">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
             </div>
           </div>
