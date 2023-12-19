@@ -11,4 +11,8 @@ public class TrailRoutePageController {
     public String getTrailRoutePage(){
         return "jiho/trail";
     }
+    @GetMapping("/draft1")
+    public String sendDraft1(){
+        return "kmh/hiking2";
+    }
 }
