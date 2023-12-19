@@ -77,7 +77,7 @@ pageEncoding="UTF-8"%>
                 <div class="rh-card-set">스트레칭</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content3">
-                몸을 움직이기 전, 스트레칭과 워밍업은 필수예요. 이는 부상을
+                본격적으로 하이킹을 시작하기 전, 스트레칭과 워밍업은 필수예요. 준비 운동은 부상을
                 방지하고 하이킹 도중 편안함을 유지하는 데 도움이 돼요.
                 <div class="rh-back-set rh-pointer" id="back3">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>

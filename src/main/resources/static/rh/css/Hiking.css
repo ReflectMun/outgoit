@@ -168,6 +168,8 @@ body {
 .rh-hiking-wood-mainPost-bestText {
   text-align: right;
   margin-bottom: 1vw;
+  color: white;
+  text-shadow: 0 0 3px black;
 }
 
 .bestText2{
@@ -200,10 +202,24 @@ body {
   bottom: 0.7vw
 
 }
-#best1, #best2, #best3{
-  background-image: url("/resources/static/img/기타/나무보드.jpg");
+#best1 {
+  background-image: url("/resources/static/img/best/오대산.jpg");
   border-radius: 5%;
+  background-size: cover;
 }
+
+#best2{
+    background-image: url("/resources/static/img/best/천황산.jpg");
+    border-radius: 5%;
+  background-size: cover;
+  }
+#best3{
+    background-image: url("/resources/static/img/best/안산.jpg");
+    border-radius: 5%;
+  background-size: cover;
+  }
+
+
 .rh-pointer:hover{
   cursor: pointer;
 }
