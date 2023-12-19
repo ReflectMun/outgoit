@@ -33,16 +33,13 @@ try {
 
             if (status === kakao.maps.services.Status.OK) {
                 addMarker(data.slice(0, 1))
-                // console.log(data)
                 displayMarker()
 
                 const url = new URL("http://" + hostName + "/api/trail/search")
 
                 url.searchParams.set("lati", data[0].y)
                 url.searchParams.set("lngi", data[0].x)
-                //배열 0번쨰 경도 위도 -> 핀이 하나만 설정되고 있음
-                // console.log(data[0].y)
-                // console.log(data[0].x)
+
                 const {data: resData} = await axios.get(url)
 
                 for (const trail of resData) {
