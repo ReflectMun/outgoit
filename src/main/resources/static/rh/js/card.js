@@ -4,6 +4,7 @@ $(function () {
     $("#best").hide();
     $("#autoCampC, #glampingC, #backCampC").hide();
     $("#stoneC, #deckC, #grassC").hide();
+    $("#beeC, #snakeC, #pigC, #dogC").hide();
     $("#mtbC, #rbC, #hbC").hide();
     $("#back1, #back2, #back3, #back4, #back5, #back6, #back7, #back8, #back9").hide();
 
@@ -26,6 +27,31 @@ $(function () {
         $("#content2, #back2").hide();
         $("#icon2").show();
     });
+
+
+    // 하이킹 세이프티 2번
+    $("#bee").click(function () {
+        $("#bee, #snake, #pig, #dog, #line").hide();
+        $("#beeC, #back2").toggle();
+    });
+    $("#snake").click(function () {
+        $("#bee, #snake, #pig, #dog, #line").hide();
+        $("#snakeC, #back2").toggle();
+    });
+    $("#pig").click(function () {
+        $("#bee, #snake, #pig, #dog, #line").hide();
+        $("#pigC, #back2").toggle();
+    });
+    $("#dog").click(function () {
+        $("#bee, #snake, #pig, #dog, #line").hide();
+        $("#dogC, #back2").toggle();
+    });
+    $("#back2").click(function () {
+        $("#beeC, #snakeC, #pigC, #dogC, #back2").hide();
+        $("#bee, #snake, #pig, #dog, #line").show();
+    });
+
+
 
     // 라이딩 2번
     $("#mtb").click(function () {

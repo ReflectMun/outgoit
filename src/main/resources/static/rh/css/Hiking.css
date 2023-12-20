@@ -220,10 +220,37 @@ body {
   background-size: cover;
   }
 
-
 .rh-pointer:hover{
   cursor: pointer;
 }
+
+/*safety 야생동물 섹션*/
+.rh-hiking-animal{
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3vw;
+  text-align: center;
+  margin-bottom: 2%;
+  border: 1px solid #275634;
+  padding: 0.3vw 2vw;
+  transition: 0.2s ease-in-out;
+}
+
+.rh-hiking-animal > img {
+  width: 40%;
+  margin-right: 0.5vw;
+}
+.rh-hiking-animal > span{
+  font-size: 1vw;
+}
+.rh-hiking-animal:hover {
+  background-color: #275634;
+  color: white;
+}
+
+
 /* 따로 만짐 안전가드 */
 .rh-hiking-safety-titleBox {
   width: 100%;
@@ -280,9 +307,12 @@ body {
 }
 .rh-hiking-history-wood-main {
   /* border: 3px solid rgb(255, 0, 0); */
-  background-color: rgb(255, 251, 195);
+  /*background-color: rgb(255, 251, 195);*/
   width: 70vw;
   margin: 1%;
+  background-image: url("/resources/static/img/기타/bigPaper.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 .rh-hiking-history-wood-text {
   margin-top: 5%;

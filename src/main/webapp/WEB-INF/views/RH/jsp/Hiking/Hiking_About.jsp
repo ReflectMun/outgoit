@@ -44,14 +44,14 @@ pageEncoding="UTF-8"%>
           <div class="rh-hiking-history-wood-mainBox">
             <!-- 통나무 내용판 -->
             <div class="rh-hiking-history-wood-main">
-              <p
+              <p style="margin-top: 7vw"
                 class="rh-hiking-history-wood-text"
                 data-aos="fade-up"
                 data-aos-easing="ease-in-out"
                 data-aos-delay="150"
               >
                 하이킹은 자연의 아름다움을 감상하며 스트레스 해소와 휴식을
-                취하는 문화적 활동이자, 체력 향상을 위한 활동입니다.
+                취하는 문화적 활동이자, 체력 향상을 위한 운동입니다.
               </p>
               <p
                 class="rh-hiking-history-wood-text"

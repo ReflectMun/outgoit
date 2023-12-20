@@ -347,7 +347,9 @@ body {
 
 .rh-camping-history-wood-main {
     /* border: 3px solid rgb(255, 0, 0); */
-    background-color: rgb(255, 251, 195);
+    background-image: url("/resources/static/img/기타/bigPaper.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     width: 70vw;
     margin: 1%;
 }
