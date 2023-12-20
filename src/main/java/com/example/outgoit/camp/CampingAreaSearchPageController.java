@@ -18,9 +18,14 @@ public class CampingAreaSearchPageController {
     //////////////////// 의존성 주입 코드 //////////////////////
     // 허락없이 건들면 뒤집니다
     private final CampingReviewService campingReviewService;
+    private final CampingSearchService campingSearchService;
 
-    public CampingAreaSearchPageController(CampingReviewService campingReviewService){
+    public CampingAreaSearchPageController(
+            CampingReviewService campingReviewService,
+            CampingSearchService campingSearchService
+    ){
         this.campingReviewService = campingReviewService;
+        this.campingSearchService = campingSearchService;
     }
     ////////////////////////////////////////////////////////
 
@@ -60,7 +65,11 @@ public class CampingAreaSearchPageController {
                         ? "부대시설 정보가 없습니다"
                         : data.getSbrsEtc()
         );
+
+        String ratingAvg = campingReviewService.getCampingAreaRating(data.getContentId()).get(0).toString();
+
         model.addAttribute("etc", data.getSbrsEtc());
+        model.addAttribute("ratingAvg", ratingAvg);
         model.addAttribute("campingAreaNumber", data.getContentId());
 
         model.addAttribute("existReviews", !reviews.isEmpty());

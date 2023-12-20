@@ -44,11 +44,11 @@ async function getPrevCommentPage() {
             return
         }
 
-        const reviewListConatiner = document.getElementById("hj-review-list-container")
-        reviewListConatiner.innerHTML = ""
+        const reviewListContainer = document.getElementById("hj-review-list-container")
+        reviewListContainer.innerHTML = ""
         for(const review of resData){
             const madeReviewBox = makeReviewBox(review)
-            reviewListConatiner.appendChild(madeReviewBox)
+            reviewListContainer.appendChild(madeReviewBox)
         }
 
         pageNum -= 1
@@ -73,11 +73,11 @@ async function getNextCommentPage() {
             return
         }
 
-        const reviewListConatiner = document.getElementById("hj-review-list-container")
-        reviewListConatiner.innerHTML = ""
+        const reviewListContainer = document.getElementById("hj-review-list-container")
+        reviewListContainer.innerHTML = ""
         for(const review of resData){
             const madeReviewBox = makeReviewBox(review)
-            reviewListConatiner.appendChild(madeReviewBox)
+            reviewListContainer.appendChild(madeReviewBox)
         }
 
         pageNum += 1
@@ -89,20 +89,108 @@ async function getNextCommentPage() {
     }
 }
 
-function deleteComment(commentNumber, element) {
-    const passwordInput = element.parentNode.firstElementChild
+async function deleteComment(commentNumber, element) {
+    const passwordInput = element.parentNode.firstElementChild.firstElementChild
     if(!passwordInput.value){
         alert("댓글을 수정하시려면 비밀번호를 입력해주세요!")
         return
     }
 
+    try{
+        const { data: resData } = await axios.post(
+            '/api/review/camping/delete',
+            {
+                password: passwordInput.value,
+                commentNumber: commentNumber
+            }
+        )
 
+        if(resData['statusCode'] === 200)
+            alert("댓글 삭제 완료!")
+        else {
+            alert(resData['errorMessage'])
+            return
+        }
+
+        const campingAreaId = document.getElementById("camping-area-id").value
+
+        const reviewDataList = await getReviewList(campingAreaId, pageNum)
+
+        const reviewListContainer = document.getElementById("hj-review-list-container")
+        reviewListContainer.innerHTML = ""
+        for(const review of reviewDataList){
+            const madeReviewBox = makeReviewBox(review)
+            reviewListContainer.appendChild(madeReviewBox)
+        }
+    }
+    catch (e){
+        console.log(e)
+        alert("알 수 없는 오류가 발생했습니다")
+    }
 }
 
-function modifyComment(commentNumber, element) {
-    console.log(commentNumber)
-    console.log(element.parentNode.firstElementChild.firstElementChild)
-    console.log(element.parentNode.firstElementChild.firstElementChild.value)
+async function commentModifyingReady(commentNumber, element) {
+    const commentDiv = element.parentNode.parentElement.getElementsByClassName("hj-review-comment")[0]
+
+    const reviewModifyingInput = document.createElement("input")
+    reviewModifyingInput.type = "text"
+    reviewModifyingInput.value = commentDiv.innerText
+    commentDiv.innerText = ""
+
+    commentDiv.appendChild(reviewModifyingInput)
+
+    element.onclick = function (){
+        updateComment(commentNumber, commentDiv, element)
+    }
+    return
+}
+
+async function updateComment(commentNumber, commentDiv, modifyButtonElement){
+    alert("바뀜 ㅇㅇ")
+    return
+
+    const passwordInput = element.parentNode.firstElementChild.firstElementChild
+
+    // const commentInput = document.createElement("input")
+    // commentInput.type = "text"
+    // commentInput.value = commentDiv.innerText
+
+    if(!passwordInput.value){
+        alert("댓글을 수정하시려면 비밀번호를 입력해주세요!")
+        return
+    }
+
+    try{
+        const { data: resData } = await axios.post(
+            '/api/review/camping/update',
+            {
+                password: passwordInput.value,
+                commentNumber: commentNumber
+            }
+        )
+
+        if(resData['statusCode'] === 200)
+            alert("댓글 수정 완료!")
+        else {
+            alert(resData['errorMessage'])
+            return
+        }
+
+        const campingAreaId = document.getElementById("camping-area-id").value
+
+        const reviewDataList = await getReviewList(campingAreaId, pageNum)
+
+        const reviewListContainer = document.getElementById("hj-review-list-container")
+        reviewListContainer.innerHTML = ""
+        for(const review of reviewDataList){
+            const madeReviewBox = makeReviewBox(review)
+            reviewListContainer.appendChild(madeReviewBox)
+        }
+    }
+    catch (e){
+        console.log(e)
+        alert("알 수 없는 오류가 발생했습니다")
+    }
 }
 
 /**
@@ -209,7 +297,7 @@ function makeReviewBox(reviewData) {
     const editButtonDiv = document.createElement("div")
     editButtonDiv.innerText = "수정"
     editButtonDiv.onclick = function (){
-        modifyComment(commentNum, editButtonDiv)
+        commentModifyingReady(commentNum, editButtonDiv)
     }
     editButtonDiv.classList.add("hj-edit-part")
     editDrop.appendChild(editButtonDiv)

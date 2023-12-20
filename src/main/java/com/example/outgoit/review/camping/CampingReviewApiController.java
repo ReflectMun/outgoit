@@ -56,9 +56,9 @@ public class CampingReviewApiController {
         }
     }
 
-    @PostMapping("/rating")
-    public ArrayList<Object> getCampingAreaRating(){
-        return new ArrayList<>(campingReviewService.getCampingAreaRating(1));
+    @GetMapping("/rating")
+    public ArrayList<Object> getCampingAreaRating(Integer campingAreaId){
+        return new ArrayList<>(campingReviewService.getCampingAreaRating(campingAreaId));
     }
 
     @PostMapping("/update")
@@ -87,13 +87,11 @@ public class CampingReviewApiController {
 
         Pageable modified = PageRequest.of(pageNumber - 1, pageable.getPageSize(), pageable.getSort());
         Page<CampingReview> result = campingReviewService.loadCampingAreaReview(campingAreaId, modified);
-        System.out.println(result.getTotalPages());
 
         if (pageNumber > result.getTotalPages()){
             return new ArrayList<>();
         }
 
-        System.out.println(result.getTotalPages());
         return new ArrayList<CampingReview>(result.getContent());
     }
 }

@@ -49,6 +49,7 @@
                 <div id="hj-time">운영 기간 + 시간: ${periodOfOperation}</div>
                 <div id="hj-addr">주소: ${address}</div>
                 <div id="hj-ability">부대시설: ${subsidiaryFacilities}</div>
+                <div id="hj-rating-avg">캠핑장 평점: ${ratingAvg}</div>
                 <div id="hj-etc">기타사항: ${etc}</div>
               </div>
             </div>
