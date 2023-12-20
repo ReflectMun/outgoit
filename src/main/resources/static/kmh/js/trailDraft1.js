@@ -32,7 +32,7 @@ try {
          ps.keywordSearch(inputValue, async (data, status, pagination) => {
 
             if (status === kakao.maps.services.Status.OK) {
-                const url = new URL("http://" + hostName + "/api/trail/search"+inputValue)
+                const url = new URL("http://" + hostName + "/api/trail/search")
 
                 url.searchParams.set("lati", data[0].y)
 
@@ -44,17 +44,23 @@ try {
 
                  addMarker(data.slice(0, 1), resData)
                 displayMarker()
-
+                //const = [r,d,q,w,d,s,a,z,,c,,vv,g]
+                //MAth.r 1~10d
                 for (const trail of resData) {
+                   // a[rint]
+                    // 이게 등산로 하나.
+                    // 이때 색깔 핸덤하나 생성
+                     console.log(resData)
+                    console.log(trail)
+                    // console.log(JSON.stringify(resData['properties']['mntn_nm']))
+                     console.log(trail.properties.mntn_nm)
+                     const trailLIne = trail['geometry']['coordinates'][0]
 
-                     console.log(JSON.stringify(resData, null, 2))
-                    const trailLIne = trail['geometry']['coordinates'][0]
-
-                     //console.log(trailLIne)
+                     console.log(trailLIne)
                     const path = []
 
 
-                    for (const coord of trail) {
+                    for (const coord of trailLIne) {
                         path.push(new kakao.maps.LatLng(coord[1], coord[0]))
 
                     }
@@ -65,7 +71,7 @@ try {
                         strokeOpacity: 0.7,
                         strokeStyle: 'dotted'
                     })
-
+        console.log(path);
                     polylines.push(polyLine)
                     polyLine.setMap(map)
 
