@@ -50,5 +50,6 @@ public class CampingSearchService {
         }
 
         return result;
+
     }
 }

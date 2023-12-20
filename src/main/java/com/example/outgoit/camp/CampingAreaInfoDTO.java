@@ -7,11 +7,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
 @Getter
+
+//추가함
+
 public class CampingAreaInfoDTO {
     private Integer contentId; // 캠핑장 식별 일련번호. 캠핑장 이미지 불러오는데 필요함
     private String facltNm; // 야영장명
