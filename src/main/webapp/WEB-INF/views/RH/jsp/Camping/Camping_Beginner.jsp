@@ -53,14 +53,14 @@
                     </div>
                     <div class="rh-camping-wood-mainPost-section4" id="content1">
                         <div class="rh-camping-content1-cut" id="cut1">
-                            <span style="border-radius: 50%; background-color: yellow">메인 장비</span><br>
+                            <span id="mainItem" style="border-radius: 50%; background-color: yellow">메인 장비</span><br>
                             • 텐트 <br/>
                             • 그라운드 시트 <br/>
                             • 의자, 테이블 <br/>
                             • 취침 용품<span style="font-size: 0.7vw">(침낭, 매트 등)</span> <br/>
                         </div>
                         <div class="rh-camping-content1-cut" id="cut2">
-                            <span style="border-radius: 30%; background-color: #98bd98">조리도구</span><br>
+                            <span style="border-radius: 50%; background-color: #98bd98">조리도구</span><br>
                             • 취사 도구<br/>
                             • 아이스박스, 보냉팩 <br/>
                             • 식수
@@ -73,12 +73,12 @@
                         </div>
                         <div class="rh-camping-content1-cut">
                             <span style="border-radius: 50%; background-color: thistle">기타</span><br>
-                            • 휴대용 랜턴 <br/>
+                            • 랜턴 <br/>
                             • 구급약품 <br/>
                             • 계절에 따른 온/냉방 용품
                         </div>
                         <br>
-                        소화기는 캠핑장 내에 구비되어 있을 확률이 높으나, 비상용으로 구비해 두는 편이 좋아요.
+                        ※장비 구입 시 인원, 계절, 캠핑장 타입을 고려해 충분한 정보 수집과 질의를 거친 후 장만해야 해요.
                         <div class="rh-back-set rh-pointer" id="back1">돌아가기
                             <img width="20%" src="/resources/static/img/icon/next.png" alt=""></div>
                     </div>
@@ -87,11 +87,13 @@
                     <div class="rh-pointer" id="icon2">
                         <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/howtouse.png"
                                   alt=""></div>
-                        <div class="rh-card-set">장비 사용</div>
+                        <div class="rh-card-set">장비 사용법 숙지</div>
                     </div>
                     <div class="rh-camping-wood-mainPost" id="content2">
-                        장비 사용 방법을 알아둬요. <br/>
-                        제품 페이지나 SNS를 통해 사진 및 동영상으로 접근할 수 있어요.
+                        경험이 적을 시 장비 세팅에 많은 시간을 소모하게 되는데,
+                        캠핑 전 장비 사용 방법을 미리 숙지해 두면 도움이 돼요.<br>
+                        장비 사용법은 제품 상세 페이지나 SNS를 통해 사진 및 동영상으로 사용 방법을 숙지할 수 있어요.
+                        또한 캠핑 페어, 기업 주최 캠핑스쿨 등 다양한 박람회나 이벤트에 참여하는 것도 도움이 돼요.
                         <div class="rh-back-set rh-pointer" id="back2">돌아가기 <img width="20%"
                                                                                  src="/resources/static/img/icon/next.png"
                                                                                  alt=""></div>
@@ -104,23 +106,43 @@
                         <div class="rh-card-set">날씨 확인</div>
                     </div>
                     <div class="rh-camping-wood-mainPost" id="content3">
-                        기온, 강수량, 바람 등을 고려해 <br/>
-                        적절한 의류와 장비를 선택해요
+                        출발 전후는 물론 캠핑 중에도 수시로 기상 정보를 확인하며 위험에 대비하는 습관을 들이는 것이 좋아요. <br>
+                        또한 기상 정보를 토대로 적절한 의류와 장비를 선택해 효율적인 캠핑을 즐겨요.
                         <div class="rh-back-set rh-pointer" id="back3">돌아가기 <img width="20%"
                                                                                  src="/resources/static/img/icon/next.png"
                                                                                  alt=""></div>
                     </div>
                 </div>
                 <div class="rh-camping-wood-main">
-                    <div class="rh-pointer" id="icon4">
-                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/deck2.png" alt="">
+                    <div class="rh-camping-wood-mainPost">
+                        <div class="rh-card-set" id="line2">캠핑 종류</div>
+                        <div class="rh-camping-wood-beginner-zone first rh-pointer" id="autoCamp">
+                            <img src="/resources/static/img/icon/autocamping.png" alt="">
+                            오토캠핑
                         </div>
-                        <div class="rh-card-set">캠핑장 선택</div>
-                    </div>
-                    <div class="rh-camping-wood-mainPost" id="content4">
-                        근거리 캠핑장이나 국립공원 등 멀지 않고 편의시설이 잘 갖춰져
-                        있는 곳을 선택해요. 처음부터 장거리 캠핑을 선택하면 텐트 피칭
-                        전에 피로해질 수 있어요.
+                        <div id="autoCampC">
+                            오토캠핑은 차량에 캠핑 장비를 싣고 이동해 텐트를 치고 즐기는 캠핑이에요.
+                            국내 곳곳에 있어 접근성이 좋고 장비가 무거워도 크게 문제가 되지 않아요. <br>
+                            이밖에도 차량과 연결할 수 있는 도킹 텐트를 이용하거나 텐트 없이 차 내부에서 지내는 차박 등 여러 형태의 오토캠핑이 존재해요.
+
+                        </div>
+                        <div class="rh-camping-wood-beginner-zone rh-pointer" id="backCamp">
+                            <img src="/resources/static/img/icon/backpacking.png" alt="">
+                            백패킹
+                        </div>
+                        <div id="backCampC">
+                            백패킹은 가방에 모든 장비를 넣은 채 도보로 여행하는 캠핑이에요. 주로 산악지대, 국립공원, 하이킹 코스 등 자연환경에서 즐겨요.<br>
+                            모든 장비를 등에 지고 다녀야 하기 때문에 경량 장비로 구성되어야 하고, 일반적인 장비보다 가격대가 있어요.<br>
+                            또한 예기치 못한 환경에 대응해야 하는 경우가 발생할 수 있어 초보 캠퍼라면 조금 어려울 수 있어요.
+                        </div>
+                        <div class="rh-camping-wood-beginner-zone rh-pointer" id="glamping">
+                            <img width="10%" src="/resources/static/img/icon/glamping.png" alt="">
+                            글램핑
+                        </div>
+                        <div id="glampingC">
+                            글램핑은 글래머러스+캠핑의 합성어로, 캠핑장 내에 모든 장비가 세팅돼 있어요.
+                            자연 속에서 편안한 숙박 시설과 서비스를 경험할 수 있어 휴양과 캠핑을 동시에 즐길 수 있어요.
+                        </div>
                         <div class="rh-back-set rh-pointer" id="back4">돌아가기 <img width="20%"
                                                                                  src="/resources/static/img/icon/next.png"
                                                                                  alt=""></div>
@@ -128,6 +150,7 @@
                 </div>
                 <div class="rh-camping-wood-main">
                     <div class="rh-camping-wood-mainPost" id="camping-content5">
+                        <div class="rh-card-set" id="line">캠핑존 종류</div>
                         <div class="rh-camping-wood-beginner-zone first rh-pointer" id="stone">
                             <img src="/resources/static/img/icon/stone.png" alt="">
                             파쇄석
@@ -159,7 +182,6 @@
                             않은 날엔 선택하지 않는 것이 좋아요. 또한 철수 시 장비에 잔디가
                             붙을 수 있어 관리가 필요해요.
                         </div>
-                        <div class="rh-card-set" id="line">캠핑존 선택</div>
                         <div class="rh-back-set rh-pointer" id="back5">돌아가기 <img width="20%"
                                                                                  src="/resources/static/img/icon/next.png"
                                                                                  alt=""></div>

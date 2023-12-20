@@ -86,10 +86,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vw;
-    font-family: "SOYOMapleBoldTTF";
-    color: white;
-    -webkit-text-stroke: 0.1vw black;
+    font-size: 2.5vw;
+    font-family: "JalnanGothic";
+    color: #7e4a135e;
+    -webkit-text-stroke: 0.05vw white;
+    text-shadow: 0 0 14px black;
 }
 
 .rh-camping-wood-bridgeBox {
@@ -121,7 +122,7 @@ body {
     background-size: contain;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 5vw 0;
+    padding: 4vw 0;
 }
 
 /* 정보 카드 */
@@ -208,7 +209,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     text-align: center;
     margin-bottom: 2%;
     border: 1px solid #275634;
@@ -217,7 +218,7 @@ body {
 }
 
 .first {
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .rh-camping-wood-beginner-zone > img {
@@ -229,7 +230,7 @@ body {
     color: white;
 }
 
-#deckC {
+#line, #line2{
     margin-top: 10%;
 }
 
@@ -341,6 +342,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     background-color: rgb(226, 255, 238);
+    padding: 4vw 0;
 }
 
 .rh-camping-history-wood-main {
@@ -354,6 +356,7 @@ body {
     margin-top: 5%;
     margin-bottom: 5%;
     font-size: 1vw;
+    line-height: 1.8vw;
 }
 
 .rh-riding-history-wood-textLast {

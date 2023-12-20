@@ -81,10 +81,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3vw;
-  font-family: "SOYOMapleBoldTTF";
-  color: white;
-  -webkit-text-stroke: 0.1vw black;
+  font-size: 2.5vw;
+  font-family: "JalnanGothic";
+  color: #7e4a135e;
+  -webkit-text-stroke: 0.05vw white;
+  text-shadow: 0 0 14px black;
 }
 .rh-hiking-wood-bridgeBox {
   /* border: 5px solid rgb(255, 0, 217); */
@@ -112,7 +113,7 @@ body {
   background-size: contain;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 5vw 0;
+  padding: 4vw 0;
 }
 
 /* 정보 카드 */
@@ -275,6 +276,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   background-color: rgb(226, 255, 238);
+  padding: 4vw 0;
 }
 .rh-hiking-history-wood-main {
   /* border: 3px solid rgb(255, 0, 0); */
@@ -286,6 +288,7 @@ body {
   margin-top: 5%;
   margin-bottom: 5%;
   font-size: 1vw;
+  line-height: 1.8vw;
 }
 .rh-riding-history-wood-textLast {
   margin-top: 5%;

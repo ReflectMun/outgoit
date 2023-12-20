@@ -273,6 +273,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   background-color: rgb(226, 255, 238);
+  padding: 4vw 0;
 }
 .rh-riding-history-wood-main {
   /* border: 3px solid rgb(255, 0, 0); */

@@ -2,6 +2,7 @@ $(function () {
     $("#icon1, #icon2, #riding-content2, #icon3, #icon4, #icon5, #camping-content5, #icon6, #camping-icon7, #icon7, #icon8, #icon9").show();
     $("#content1, #content2, #content3, #content4, #content5, #content6, #camping-content7, #content7, #content8, #content9").hide();
     $("#best").hide();
+    $("#autoCampC, #glampingC, #backCampC").hide();
     $("#stoneC, #deckC, #grassC").hide();
     $("#mtbC, #rbC, #hbC").hide();
     $("#back1, #back2, #back3, #back4, #back5, #back6, #back7, #back8, #back9").hide();
@@ -66,6 +67,27 @@ $(function () {
         $("#icon4").show();
     });
 
+    // 캠핑 비기너 4번
+    $("#autoCamp").click(function (){
+       $("#autoCamp, #backCamp, #glamping, #line2").hide();
+       $("#autoCampC, #back4").toggle();
+    });
+    $("#backCamp").click(function (){
+        $("#autoCamp, #backCamp, #glamping, #line2").hide();
+        $("#backCampC, #back4").toggle();
+    });
+    $("#glamping").click(function (){
+        $("#autoCamp, #backCamp, #glamping, #line2").hide();
+        $("#glampingC, #back4").toggle();
+    });
+    $("#back4").click(function (){
+        $("#autoCampC, #backCampC, #glampingC, #back4").hide();
+        $("#autoCamp, #backCamp, #glamping, #line2").show();
+    });
+
+
+
+
     //5번
     $("#icon5").click(function () {
         $("#icon5").hide();
@@ -113,7 +135,7 @@ $(function () {
         $("#camping-icon7").hide();
         $("#camping-content7, #back7").toggle();
     });
-    $("#camping-content7").click(function () {
+    $("#back7").click(function () {
         $("#camping-content7, #back7").hide();
         $("#camping-icon7").show();
     });
@@ -151,4 +173,7 @@ $(function () {
         $("#icon9").show();
         $("#animal").css("height", "23vw").css("background-image", " url('/resources/static/img/기타/paper.png')").css("background-size", "contain");
     });
+
+
 });
+
