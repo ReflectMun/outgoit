@@ -67,10 +67,18 @@ try {
                         path.push(new kakao.maps.LatLng(coord[1], coord[0]))
 
                     }
+                    function getRandomColor() {
+                        // 랜덤한 RGB 값을 생성
+                        const randomColor = Math.floor(Math.random()*16777215).toString(16);
+
+                        // 생성된 RGB 값을 색상 문자열로 변환
+                        return '#' + randomColor;
+                    }
+
                     const polyLine = new kakao.maps.Polyline({
                         path: path,
-                        strokeWeight: 10,
-                        strokeColor: '#F7FE2E',
+                        strokeWeight: 5,
+                        strokeColor: getRandomColor(),
                         strokeOpacity: 0.7,
                         strokeStyle: 'dotted'
                     })
