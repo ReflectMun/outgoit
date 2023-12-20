@@ -15,4 +15,9 @@ public class TrailRoutePageController {
     public String sendDraft1(){
         return "kmh/hiking2";
     }
+
+    @GetMapping("/draft2min")
+    public String sendDraft2(){
+        return "kmh/hiking3";
+    }
 }
