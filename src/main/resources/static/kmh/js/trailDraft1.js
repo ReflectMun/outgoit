@@ -46,6 +46,7 @@ try {
                 displayMarker()
                 //const = [r,d,q,w,d,s,a,z,,c,,vv,g]
                 //MAth.r 1~10d
+                let name;
                 for (const trail of resData) {
                    // a[rint]
                     // 이게 등산로 하나.
@@ -53,7 +54,7 @@ try {
                     // console.log(resData)
                     //console.log(trail)
                     // console.log(JSON.stringify(resData['properties']['mntn_nm']))
-                  const name = trail.properties.mntn_nm
+                  name = trail.properties.mntn_nm;
                     console.log(name)
                      //console.log(trail.properties.mntn_nm)
                      const trailLIne = trail['geometry']['coordinates'][0]
@@ -88,13 +89,15 @@ catch (e) {
     alert("오류발생")
 }
     function addMarker(places, name) {
+
         for (const place of places) {
             const coord = new kakao.maps.LatLng(place.y, place.x)
             const marker = new kakao.maps.Marker({
                 position: coord
 
             })
-            resultList.appendChild(makeListElement(name))
+            addListElementsToResultList(name)
+
             kakao.maps.event.addListener(marker, 'click', () => {
                 map.panTo(coord)
             })
@@ -137,44 +140,100 @@ catch (e) {
 
 
 
-function makeListElement(apiResData){
-    const child = document.createElement("div")
-    child.classList.add("camping-area-info-box")
+// function makeListElement(name) {
+//     // for (n of name) {
+//          console.log(name)
+//         // console.log(n);
+//
+//         console.log(name.properties.mntn_nm)
+//
+//         const child = document.createElement("div")
+//         child.classList.add("camping-area-info-box")
+//         const childCampingAreaName = document.createElement("div")
+//         childCampingAreaName.innerHTML = `<h2>${n.properties.mntn_nm}</h2>`
+//         childCampingAreaName.classList.add("camping-area-name")
+//         const childButtonWrapper = document.createElement("div")
+//
+//         const openDetailButton = document.createElement("button")
+//
+//         openDetailButton.innerText = "캠핑장 정보 보기"
+//         openDetailButton.classList.add("open-detail-button")
+//         openDetailButton.addEventListener("click", (e) => {
+//            const hiddenForm = document.createElement("form")
+//             hiddenForm.style.display = "none"
+//             hiddenForm.method = "post"
+//             hiddenForm.action = `/trail/detail/${n.properties.mntn_nm}`
+//             let tempInput
+//
+//             for (const prop in apiResData) {
+//                 tempInput = document.createElement("input")
+//                 tempInput.name = prop
+//                 tempInput.value = apiResData[prop]
+//                 hiddenForm.appendChild(tempInput)
+//
+//             }
+//             document.body.appendChild(hiddenForm)
+//
+//             hiddenForm.submit()
+//         })
+//             childButtonWrapper.classList.add("button-wrapper")
+//
+//
+//         childButtonWrapper.appendChild(openDetailButton)
+//         child.appendChild(childCampingAreaName)
+//
+//         child.appendChild(childButtonWrapper)
+//         return child
+//
+//         console.log(11)
+//
+//     // }
+// }
 
-    const childCampingAreaName = document.createElement("div")
-    childCampingAreaName.innerHTML = `<h2>${apiResData}</h2>`
-    childCampingAreaName.classList.add("camping-area-name")
+function addListElementsToResultList(name) {
+    for (const n of name) {
+        console.log(n);
 
-    const childButtonWrapper = document.createElement("div")
+        console.log(n.properties.mntn_nm);
 
-    const openDetailButton = document.createElement("button")
-    openDetailButton.innerText = "캠핑장 정보 보기"
-    openDetailButton.classList.add("open-detail-button")
-    openDetailButton.addEventListener("click", (e) => {
-        const hiddenForm = document.createElement("form")
-        hiddenForm.style.display = "none"
-        hiddenForm.method = "post"
-        hiddenForm.action = `/trail/detail/${apiResData}`
+        const child = document.createElement("div");
+        child.classList.add("camping-area-info-box");
+        const childCampingAreaName = document.createElement("div");
+        childCampingAreaName.innerHTML = `<h2>${n.properties.mntn_nm}</h2>`;
+        childCampingAreaName.classList.add("camping-area-name");
+        const childButtonWrapper = document.createElement("div");
 
-        let tempInput
-        for(const prop in apiResData){
-            tempInput = document.createElement("input")
-            tempInput.name = prop
-            tempInput.value = apiResData[prop]
+        const openDetailButton = document.createElement("button");
 
-            hiddenForm.appendChild(tempInput)
-        }
+        openDetailButton.innerText = "캠핑장 정보 보기";
+        openDetailButton.classList.add("open-detail-button");
+        openDetailButton.addEventListener("click", (e) => {
+            const hiddenForm = document.createElement("form");
+            hiddenForm.style.display = "none";
+            hiddenForm.method = "post";
+            hiddenForm.action = `/trail/detail/${n.properties.mntn_nm}`;
+            let tempInput;
 
-        document.body.appendChild(hiddenForm)
-        hiddenForm.submit()
-    })
+            for (const prop in apiResData) {
+                tempInput = document.createElement("input");
+                tempInput.name = prop;
+                tempInput.value = apiResData[prop];
+                hiddenForm.appendChild(tempInput);
+            }
+            document.body.appendChild(hiddenForm);
+            hiddenForm.submit();
+        });
 
-    childButtonWrapper.classList.add("button-wrapper")
-    childButtonWrapper.appendChild(openDetailButton)
+        childButtonWrapper.classList.add("button-wrapper");
 
-    child.appendChild(childCampingAreaName)
-    child.appendChild(childButtonWrapper)
+        childButtonWrapper.appendChild(openDetailButton);
+        child.appendChild(childCampingAreaName);
+        child.appendChild(childButtonWrapper);
 
-    return child
+        // 각각의 엘리먼트를 직접 추가
+        resultList.appendChild(child);
+    }
+
+
+
 }
-
