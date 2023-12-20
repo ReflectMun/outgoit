@@ -50,13 +50,15 @@ try {
                    // a[rint]
                     // 이게 등산로 하나.
                     // 이때 색깔 핸덤하나 생성
-                     console.log(resData)
-                    console.log(trail)
+                    // console.log(resData)
+                    //console.log(trail)
                     // console.log(JSON.stringify(resData['properties']['mntn_nm']))
-                     console.log(trail.properties.mntn_nm)
+                  const name = trail.properties.mntn_nm
+                    console.log(name)
+                     //console.log(trail.properties.mntn_nm)
                      const trailLIne = trail['geometry']['coordinates'][0]
 
-                     console.log(trailLIne)
+                    // console.log(trailLIne)
                     const path = []
 
 
@@ -71,7 +73,7 @@ try {
                         strokeOpacity: 0.7,
                         strokeStyle: 'dotted'
                     })
-        console.log(path);
+
                     polylines.push(polyLine)
                     polyLine.setMap(map)
 
@@ -85,14 +87,14 @@ catch (e) {
     console.log(e)
     alert("오류발생")
 }
-    function addMarker(places, resData) {
+    function addMarker(places, name) {
         for (const place of places) {
             const coord = new kakao.maps.LatLng(place.y, place.x)
             const marker = new kakao.maps.Marker({
                 position: coord
 
             })
-            //resultList.appendChild(makeListElement(resData))
+            resultList.appendChild(makeListElement(name))
             kakao.maps.event.addListener(marker, 'click', () => {
                 map.panTo(coord)
             })
@@ -140,7 +142,7 @@ function makeListElement(apiResData){
     child.classList.add("camping-area-info-box")
 
     const childCampingAreaName = document.createElement("div")
-    childCampingAreaName.innerHTML = `<h2>${apiResData['facltNm']}</h2>`
+    childCampingAreaName.innerHTML = `<h2>${apiResData}</h2>`
     childCampingAreaName.classList.add("camping-area-name")
 
     const childButtonWrapper = document.createElement("div")
@@ -152,7 +154,7 @@ function makeListElement(apiResData){
         const hiddenForm = document.createElement("form")
         hiddenForm.style.display = "none"
         hiddenForm.method = "post"
-        hiddenForm.action = `/trail/detail/${apiResData['facltNm']}`
+        hiddenForm.action = `/trail/detail/${apiResData}`
 
         let tempInput
         for(const prop in apiResData){
