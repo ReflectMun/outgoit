@@ -1,5 +1,7 @@
 package com.example.outgoit.trail;
 
+import com.example.outgoit.trail.dto.FeatureData;
+import com.example.outgoit.trail.dto.TrailRouteApiResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.UriComponents;
@@ -60,7 +62,6 @@ public class TrailRouteService {
                 res.getResponse().getResult().getFeatureCollection().getFeatures();
 
         System.out.printf("총 %d개의 등산로 정보 검색결과가 반환됨\n", list.size());
-        System.out.println(list);
         return list;
     }
 }

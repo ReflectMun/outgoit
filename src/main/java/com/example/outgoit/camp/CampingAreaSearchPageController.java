@@ -36,6 +36,25 @@ public class CampingAreaSearchPageController {
         return "jh/camp";
     }
 
+    @GetMapping("/About")
+    public String aboutPage(Model model){
+        return "RH/jsp/Camping/Camping_About";
+        // return "RH/jsp/Hiking/Hiking_About";
+        // return "RH/jsp/Riding/Riding_About";
+    }
+    @GetMapping("/Safety")
+    public String safetyPage(Model model){
+        return "RH/jsp/Camping/Camping_Safety";
+      // return "RH/jsp/Hiking/Hiking_Safety";
+      //return "RH/jsp/Riding/Riding_Safety";
+    }
+    @GetMapping("/Beginner")
+    public String beginnerPage(Model model){
+        return "RH/jsp/Camping/Camping_Beginner";
+      //   return "RH/jsp/Hiking/Hiking_Beginner";
+      //return "RH/jsp/Riding/Riding_Beginner";
+    }
+
     @GetMapping("/draft1")
     public String sendDraft1(){
         return "jiho/draft/1";
@@ -90,6 +109,15 @@ public class CampingAreaSearchPageController {
         model.addAttribute("toiletCount", data.getToiletCo());
         model.addAttribute("availableFacilities", data.getPosblFcltyCl());
         model.addAttribute("managementStatement", data.getManageSttus());
+        model.addAttribute("holidaySeasonStart", data.getHvofBgnde());
+        model.addAttribute("holidaySeasonEnd", data.getHvofEnddle());
+        model.addAttribute("showerRoomCount", data.getSwrmCo());
+        model.addAttribute("brazierControl", data.getBrazierCl());
+        model.addAttribute("siteGrass", data.getSiteBottomCl1());
+        model.addAttribute("siteCrushedStone", data.getSiteBottomCl2());
+        model.addAttribute("siteDeck", data.getSiteBottomCl3());
+        model.addAttribute("siteGravel", data.getSiteBottomCl4());
+        model.addAttribute("siteSoil", data.getSiteBottomCl5());
 
         return "jiho/draft/camp_information";
     }
@@ -99,5 +127,4 @@ public class CampingAreaSearchPageController {
     public String sendError(){
         return "잘못된 접근입니다";
     }
-
 }
