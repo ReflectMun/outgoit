@@ -9,7 +9,7 @@ import java.util.List;
 public class CampingAreaSearchApiController {
     private final CampingSearchService campingSearchService;
 
-    CampingAreaSearchApiController(CampingSearchService campingSearchService){
+    public CampingAreaSearchApiController(CampingSearchService campingSearchService){
         this.campingSearchService = campingSearchService;
     }
     @GetMapping("/search/{campName}")
