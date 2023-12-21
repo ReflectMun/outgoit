@@ -16,7 +16,12 @@
 <%--    <script src="/resources/static/js_hj/campinformation.js"></script>--%>
   </head>
   <body>
-  ${trailRouteList[0].properties}
+
+  ${trailRouteList[0].properties.mntn_nm}
+
+
+
+
 <%--    <input id="camping-area-id" value="${trailAreaName}" style="display: none;">--%>
 <%--    <div id="hj-container2">--%>
 <%--      <!-- 정보 div -->--%>

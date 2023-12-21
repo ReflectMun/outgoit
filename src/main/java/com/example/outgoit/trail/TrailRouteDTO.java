@@ -3,10 +3,8 @@ package com.example.outgoit.trail;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
-
 import java.util.ArrayList;
 import java.util.List;
-
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 @AllArgsConstructor
@@ -22,17 +20,6 @@ public class TrailRouteDTO {
     private String mntn_nm; // 등산로 이름 ex) 설악산 대청봉
 }
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
-class PropertiesData{
-    private int sec_len; // 등산로의 총 거리 단위(m)
-    private int up_min; // 상행시간(산 올라가는데 걸리는 시간) 단위(분)
-    private String cat_nam; // 등산로 난이도 ex) 상, 중, 하
-    private String mntn_nm; // 등산로 이름 ex) 설악산 대청봉
-}
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @AllArgsConstructor
@@ -78,17 +65,4 @@ class ResultData{
 @Setter
 class FeatureCollection{
     private ArrayList<FeatureData> features;
-}
-
-@JsonIgnoreProperties(ignoreUnknown = true)
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
-@ToString
-class FeatureData{
-    private GeometryData geometry;
-    private PropertiesData properties;
-    private String id; // 이거 테스트 해봐야됨 등산로 ID (아직 안해봄)
-    private String errorMessage;
 }

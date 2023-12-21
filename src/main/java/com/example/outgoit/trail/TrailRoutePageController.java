@@ -12,7 +12,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import java.util.ArrayList;
 
 @Controller
@@ -57,17 +56,15 @@ public String GetDetailTrain(@PathVariable("lngi") double lngi, @PathVariable("l
     System.out.println(lati); // 경도
     System.out.println("111111");
 
-
     ArrayList<FeatureData> trailRouteList = trailRouteService.getTrailRouteList(lngi, lati); // list를 반환함.
 
-    // list를 반환하면 되는거 아님 ?!!?!?!?!
-    System.out.println("111111");
+    // 한라산을 검색했을때 분류한 5개의 등산로가 배열로 담겨있음!
     for (FeatureData f : trailRouteList){
-        System.out.println(f.toString());
+        System.out.println();
     }
 
     // 모델에 trailRouteList를 추가
-//    model.addAttribute("trailRouteList", trailRouteList);
+    model.addAttribute("trailRouteList", trailRouteList);
 //    // 다른 TrailRouteDTO 속성들을 얻어와서 모델에 추가
 //    // ...
 //
