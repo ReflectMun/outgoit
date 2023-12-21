@@ -49,11 +49,11 @@ pageEncoding="UTF-8"%>
               <div class="rh-pointer" id="icon1">
                 <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/mountaineer.png" alt="">
                 </div>
-                <div class="rh-card-set">난이도 선정</div>
+                <div class="rh-card-set">코스 선정</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content1">
-                처음부터 무리한 난이도의 코스를 선택하면 몸도 마음도 지치기
-                쉬워요. 가볍고 난이도가 낮은 코스부터 시작하는 것이 좋아요.
+                  &nbsp;처음부터 무리한 난이도의 코스를 선택하면 몸도 마음도 지치기 쉬워요. 가볍고 난이도가 낮은 코스부터 시작하는 것이 좋아요.
+                  <br>&nbsp;고도 차이가 심하지 않고 길이 잘 정비되어 길을 잃을 염려가 없는 국립공원으로 지정된 곳을 추천해요.
                 <div class="rh-back-set rh-pointer" id="back1">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
             </div>
@@ -64,8 +64,8 @@ pageEncoding="UTF-8"%>
                 <div class="rh-card-set">준비물</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content2">
-                기능성 의복, 모자, 배낭, 지도, 나침반, 손전등, 음식, 물 등
-                기본적인 장비를 준비해요. 특히 음식은 가볍고 고열량인 것으로
+                  &nbsp;기능성 의복, 모자, 배낭, 지도, 나침반, 손전등, 음식, 물 등
+                기본적인 장비를 준비해요. 짐은 가벼울수록 좋기 때문에 무게가 나가는 음식은 가볍고 고열량인 것으로
                 챙기는 것이 좋아요.
                 <div class="rh-back-set rh-pointer" id="back2">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
@@ -77,7 +77,7 @@ pageEncoding="UTF-8"%>
                 <div class="rh-card-set">스트레칭</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content3">
-                본격적으로 하이킹을 시작하기 전, 스트레칭과 워밍업은 필수예요. 준비 운동은 부상을
+                  &nbsp;본격적으로 하이킹을 시작하기 전, 스트레칭과 워밍업은 필수예요. 준비 운동은 근육 손상과 부상을
                 방지하고 하이킹 도중 편안함을 유지하는 데 도움이 돼요.
                 <div class="rh-back-set rh-pointer" id="back3">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
@@ -89,8 +89,7 @@ pageEncoding="UTF-8"%>
                 <div class="rh-card-set">날씨 확인</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content4">
-                날씨 예보 확인은 필수! <br>비나 추위에 대비할 수 있도록 해요. 또한
-                하이킹하기 위험한 날씨라면 되도록 다른 날 일정을 잡는 것이
+                  &nbsp;날씨 예보 확인은 필수! <br>&nbsp;비나 추위에 대비할 수 있도록 해요. 또한 일정을 진행하기 위험한 날씨라면 되도록 다른 날 일정을 다시 잡는 것이
                 좋아요.
                 <div class="rh-back-set rh-pointer" id="back4">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
@@ -102,9 +101,9 @@ pageEncoding="UTF-8"%>
                 <div class="rh-card-set">그룹 하이킹</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content5">
-                첫 산행부터 혼자 움직이는 것보단 그룹 하이킹을 추천해요. 주위
-                사람들과 도움을 주고받을 수 있고, 위급 상황이 있을 시 주위의
-                도움을 받기 수월해요.
+                  &nbsp;하이킹에 대한 경험이 없을 시, 혼자 움직이는 것보단 그룹 하이킹을 추천해요. 주위
+                사람들과 도움을 주고받을 수 있고, 위급 상황이 있을 시 주위의 도움을 받기 수월해요.
+                  <br> &nbsp;타인과 함께하는 하이킹이 불편하여 혼자 움직이고 싶다면 주변 사람에게 본인의 위치를 꼭 알리고 출발해요.
                 <div class="rh-back-set rh-pointer" id="back5">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
             </div>
@@ -115,10 +114,11 @@ pageEncoding="UTF-8"%>
                 <div class="rh-card-set">자연 보호</div>
               </div>
               <div class="rh-hiking-wood-mainPost" id="content6">
-                산림, 동물, 식물 등의 자연환경을 존중하는 태도를 가져야 해요.
+                  &nbsp;산림, 동물, 식물 등의 자연환경을 존중하는 태도를 가져야 해요.
                 자연공원에서의 임산물 채취는 자연공원법, 야생생물 보호 및 관리에
                 관한 법률, 산림자원의 조성 및 관리에 관한 법률에 의해 금지하고
-                있어요. 또한 지정 장소 외에 쓰레기를 버리지 말고 불을 피우는
+                있어요.
+                  <br> &nbsp;또한 지정 장소 외에 쓰레기를 버리지 말고 불을 피우는
                 등의 위험 행위를 삼가야 해요.
                 <div class="rh-back-set rh-pointer" id="back6">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
