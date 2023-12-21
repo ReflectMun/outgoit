@@ -51,6 +51,7 @@ public class CampingSearchService {
         }
 
         return result;
+
     }
 
     // 불러온 캠핑장에 대한 이미지를 담는 일

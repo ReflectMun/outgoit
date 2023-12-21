@@ -1,6 +1,7 @@
 package com.example.outgoit.trail;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -54,7 +55,7 @@ public class TrailRouteService {
         ObjectMapper mapper = new ObjectMapper();
         URL url = new URL(uri.toUriString());
         TrailRouteApiResponse res = mapper.readValue(url, TrailRouteApiResponse.class);
-
+      //  System.out.printf(res.toString());
         if(res.getResponse().getStatus().equals("OK") == false)
             throw new NoSearchResultException();
 
@@ -62,8 +63,10 @@ public class TrailRouteService {
                 res.getResponse().getResult().getFeatureCollection().getFeatures();
 
         System.out.printf("총 %d개의 등산로 정보 검색결과가 반환됨\n", list.size());
+        System.out.println(list);
         return list;
     }
 }
 
-class NoSearchResultException extends Exception{}
+class       NoSearchResultException extends Exception{
+}

@@ -74,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
         // 클릭된 별까지 노란색으로 채우기
         stars.forEach(function (star) {
             let starValue = star.getAttribute('data-value');
-
             if (starValue <= clickedValue) {
                 star.classList.add('checked');
             } else {

@@ -29,6 +29,7 @@
       level: 5
     }
     let map = new kakao.maps.Map(mapContainer, mapOption)
+    map.addOverlayMapTypeId(kakao.maps.MapTypeId.TERRAIN);
     const ps = new kakao.maps.services.Places()
     const infowindow = new kakao.maps.InfoWindow({ zIndex: 1 })
 
