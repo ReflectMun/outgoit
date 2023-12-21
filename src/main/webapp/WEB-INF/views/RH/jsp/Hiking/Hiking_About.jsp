@@ -41,7 +41,7 @@ pageEncoding="UTF-8"%>
               </span>
             </div>
           </div>
-          <div class="rh-hiking-history-wood-mainBox">
+          <div class="rh-hiking-wood-mainBox">
             <!-- 통나무 내용판 -->
             <div class="rh-hiking-history-wood-main">
               <p style="margin-top: 7vw"

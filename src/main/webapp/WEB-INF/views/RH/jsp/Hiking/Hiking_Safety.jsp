@@ -54,7 +54,7 @@
                         <div class="rh-card-set">하이킹 준비</div>
                     </div>
                     <div class="rh-hiking-wood-mainPost" id="content1">
-                        &nbsp;기상정보를 확인하고 이에 맞는 산행 용품을 준비해 주세요. 체온 유지에 용이한 긴 옷을 입고 등산 스틱, 미끄럼 방지 기능이
+                        &nbsp;&nbsp;기상정보를 확인하고 이에 맞는 산행 용품을 준비해 주세요. 체온 유지에 용이한 긴 옷을 입고 등산 스틱, 미끄럼 방지 기능이
                         있는 등산화를 갖춰요.
                         <br> &nbsp;또한 고열량의 비상식량과 충분한 물을 준비하고 조금씩 자주 먹어요. 탈수, 탈진, 저혈당을 예방할 수 있어요.
                         <div class="rh-back-set rh-pointer" id="back1">돌아가기 <img width="20%"

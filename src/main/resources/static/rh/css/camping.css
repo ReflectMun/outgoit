@@ -33,7 +33,6 @@ body {
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    /* border: 2px solid rgb(255, 0, 0); */
 }
 
 .rh-camping-title {
@@ -58,7 +57,6 @@ body {
 }
 
 .rh-camping-content {
-    /* border: 3px solid rgb(21, 255, 0); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,13 +64,11 @@ body {
 }
 
 .rh-camping-wood {
-    /* border: 1px solid rgb(0, 183, 255); */
     width: 80vw;
     text-align: center;
 }
 
 .rh-camping-wood-titleBox {
-    /* border: 5px solid rgb(255, 0, 43); */
     height: 5.5vw;
     display: flex;
     justify-content: center;
@@ -94,13 +90,13 @@ body {
 }
 
 .rh-camping-wood-bridgeBox {
-    /* border: 5px solid rgb(255, 0, 217); */
+
     display: flex;
     justify-content: center;
 }
 
 .rh-camping-wood-bridgeSet {
-    /* border: 1px solid rgb(255, 0, 179); */
+
     width: 45vw;
     height: 3vw;
     display: flex;
@@ -128,9 +124,6 @@ body {
 
 /* 정보 카드 */
 .rh-camping-wood-main {
-    /* border: 3px solid rgb(255, 0, 0); */
-    /*background-color: rgb(255, 255, 255);*/
-    /*box-shadow: inset -3px -3px 3px 0px #c5c5c5;*/
     background-image: url("/resources/static/img/기타/paper.png");
     background-size: contain;
     width: 23vw;
@@ -142,6 +135,7 @@ body {
     text-align: center;
     font-size: 1vw;
     position: relative;
+    z-index: 1;
 }
 
 .rh-camping-wood-mainPost {
@@ -318,7 +312,6 @@ body {
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    /* border: 2px solid rgb(255, 0, 0); */
 }
 
 .rh-camping-safety-title {
@@ -354,19 +347,6 @@ body {
     display: flex;
     align-items: center;
 }
-
-.rh-camping-history-wood-mainBox {
-    /* border: 5px solid rgb(64, 0, 255); */
-    display: flex;
-    background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
-    box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
-    background-size: contain;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: rgb(226, 255, 238);
-    padding: 4vw 0;
-}
-
 .rh-camping-history-wood-main {
     /* border: 3px solid rgb(255, 0, 0); */
     background-image: url("/resources/static/img/기타/bigPaper2.png");
