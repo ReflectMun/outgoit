@@ -18,9 +18,14 @@ public class CampingAreaSearchPageController {
     //////////////////// 의존성 주입 코드 //////////////////////
     // 허락없이 건들면 뒤집니다
     private final CampingReviewService campingReviewService;
+    private final CampingSearchService campingSearchService;
 
-    public CampingAreaSearchPageController(CampingReviewService campingReviewService){
+    public CampingAreaSearchPageController(
+            CampingReviewService campingReviewService,
+            CampingSearchService campingSearchService
+    ){
         this.campingReviewService = campingReviewService;
+        this.campingSearchService = campingSearchService;
     }
     ////////////////////////////////////////////////////////
 
@@ -32,7 +37,7 @@ public class CampingAreaSearchPageController {
 
     @GetMapping("/draft1")
     public String sendDraft1(){
-        return "kmh/draft/1";
+        return "jiho/draft/1";
     }
     @GetMapping("/draft2")
     public String sendDraft2(){
@@ -49,7 +54,17 @@ public class CampingAreaSearchPageController {
         ArrayList<CampingReview> reviews =
                 new ArrayList<>(campingReviewService.loadCampingAreaReview(data.getContentId(), modified).getContent());
 
-        model.addAttribute("thumbnail", data.getFirstImageUrl());
+        String ratingAvg;
+        try {
+            ratingAvg = campingReviewService.getCampingAreaRating(data.getContentId()).get(0).toString();
+        }
+        catch (NullPointerException e){
+            ratingAvg = "아직 평균평점 정보가 없어요!";
+        }
+
+        ArrayList<CampingAreaInfoDTO> images = campingSearchService.GetImgSearchedCampingAreaList(data.getContentId());
+
+        model.addAttribute("images", images);
         model.addAttribute("campingAreaName", data.getFacltNm());
         model.addAttribute("telephoneNumber", data.getTel());
         model.addAttribute("periodOfOperation", data.getOperPdCl() + " " + data.getOperDecl());
@@ -60,14 +75,12 @@ public class CampingAreaSearchPageController {
                         ? "부대시설 정보가 없습니다"
                         : data.getSbrsEtc()
         );
-        model.addAttribute("etc", data.getSbrsEtc());
+//        model.addAttribute("etc", data.getSbrsEtc());
+        model.addAttribute("ratingAvg", ratingAvg);
         model.addAttribute("campingAreaNumber", data.getContentId());
-
         model.addAttribute("existReviews", !reviews.isEmpty());
-        model.addAttribute("reviews", reviews);
 
-
-        return "hj/camp/camp_information";
+        return "jiho/draft/camp_information";
     }
 
     @GetMapping("/detail/{campingAreaName}")

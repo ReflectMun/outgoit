@@ -12,4 +12,8 @@ import lombok.Setter;
 public class NotificationProcessStatusDTO {
     private int statusCode;
     private String errorMessage;
+
+    public NotificationProcessStatusDTO(int statusCode) {
+        this.statusCode = statusCode;
+    }
 }

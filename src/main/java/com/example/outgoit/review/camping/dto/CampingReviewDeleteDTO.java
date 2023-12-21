@@ -7,12 +7,9 @@ import lombok.Setter;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Setter
 @Getter
-public class CampingReviewSubmitBodyDTO {
-    private String author;
+@Setter
+public class CampingReviewDeleteDTO {
     private String password;
-    private String content;
-    private Integer rating;
-    private Integer campingAreaId;
+    private int commentNumber;
 }
