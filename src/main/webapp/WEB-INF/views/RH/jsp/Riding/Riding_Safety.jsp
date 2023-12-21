@@ -54,8 +54,8 @@
                         <div class="rh-card-set">도로교통 준수</div>
                     </div>
                     <div class="rh-riding-wood-mainPost" id="content1">
-                        자전거는 도로교통법상 '차'에 해당해요. 시속 20km를 준수하며 안전거리를 유지해요. 음주 후 라이딩은 절대 금지예요. <br>
-                        또한 자전거 횡단보도가 있는 경우를 제외하고는 자전거에서 내려 끌고 가거나 들고 보행해야 해요.
+                        &nbsp;자전거는 도로교통법상 '차'에 해당해요. 시속 20km/h를 준수하며 안전거리를 유지해요. 운행 중 자전거 도로가 없다면 도로 우측 가장자리에서 자동차와 같은 방향으로 직선 주행해야 해요.
+                        <br>음주 후 라이딩 역시 음주운전이기 때문에 도로교통법 제44조에 의해 처벌받아요.
                         <div class="rh-back-set rh-pointer" id="back1">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
@@ -66,9 +66,10 @@
                         <div class="rh-card-set">안전장비</div>
                     </div>
                     <div  class="rh-riding-wood-mainPost" id="content2">
-                        안전장비 착용은 필수! <br> 안전경, 장갑, 팔다리 보호대, 안전모 등
-                        안전장비를 착용해야 해요. 또한 안전모 뒷부분엔 야간 운행에
-                        대비해 반사체가 부착돼 있어야 해요.
+                        &nbsp;&nbsp;안전장비 착용은 필수! <br>
+                        &nbsp;고글, 장갑, 팔다리 보호대, 헬멧 등 안전장비를 착용해야 해요. <br>
+                        &nbsp;고글은 라이딩 중 얼굴에 부딪히는 날벌레 등 이물질로부터 안구를 보호하는 역할을, 헬멧과 장갑, 보호대는 운행 중 넘어져 땅에 딛게 될 때 발생할 수 있는 부상을 방지해 줘요.
+
                         <div class="rh-back-set rh-pointer" id="back2">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
@@ -76,25 +77,15 @@
                     <div class="rh-pointer" id="icon3">
                         <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/light.png" alt="">
                         </div>
-                        <div class="rh-card-set">야간 라이딩 시 필요한 것</div>
+                        <div class="rh-card-set">야간 라이딩</div>
                     </div>
                     <div class="rh-riding-wood-mainPost" id="content3">
-                        야간 라이딩 시 전조등과 후미등을 설치해요. 시야를 확보하고 상대방에게
-                        위치를 알려 줌으로 충돌 사고를 예방할 수 있어요.
+                        &nbsp;야간 라이딩 시 전조등과 후미등을 설치하고 반사체가 부착된 헬멧을 착용해요. 시야를 확보하고 상대방에게 위치를 알려 줌으로 충돌 사고를 예방할 수 있어요.
+                        <br>&nbsp;전조등의 경우 원활한 야간 운행을 위해 최소 1300루멘 이상의 밝기를 가지고 반사판이 촘촘하게 설계돼 충분한 범위를 비출 수 있는 제품을 사용하는 편이 좋아요.
+
                         <div class="rh-back-set rh-pointer" id="back3">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
-<%--                <div class="rh-riding-wood-main">--%>
-<%--                    <div class="rh-pointer" id="icon4">--%>
-<%--                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/speedlimit.png"--%>
-<%--                                  alt=""></div>--%>
-<%--                        <div class="rh-card-set">속도위반 주의</div>--%>
-<%--                    </div>--%>
-<%--                    <div class="rh-riding-wood-mainPost" id="content4">--%>
-<%--                        내용--%>
-<%--                        <div class="rh-back-set rh-pointer" id="back4">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
                 <div class="rh-riding-wood-main">
                     <div class="rh-pointer" id="icon5">
                         <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/phoneNG1.png"
@@ -102,8 +93,7 @@
                         <div class="rh-card-set">전자기기 이용</div>
                     </div>
                     <div class="rh-riding-wood-mainPost" id="content5">
-                        이어폰, 핸드폰 등은 자전거 운행 시 사용하지 않아요. 네비게이션이
-                        필요한 경우, 핸드폰 거치대를 설치해야 해요.
+                        &nbsp;이어폰, 핸드폰 등은 자전거 운행 시 사용하지 않아요. 핸드폰을 네비게이션으로 이용할 경우, 핸드폰 거치대를 설치해야 해요.
                         <div class="rh-back-set rh-pointer" id="back5">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
@@ -114,8 +104,7 @@
                         <div class="rh-card-set">자전거 도로</div>
                     </div>
                     <div class="rh-riding-wood-mainPost" id="content6">
-                        자전거 도로가 없다면 도로 우측 가장자리에서 자동차와 같은
-                        방향으로 직선 주행해야 해요. 보도를 통행할 수 있는 경우는 아래와
+                        &nbsp;자전거 횡단보도가 있는 경우를 제외하고는 자전거에서 내려 끌고 가거나 들고 보행해야 해요. 보도를 통행할 수 있는 경우는 아래와
                         같아요. <br><br>
                         <div>
                         <div class="rh-riding-wood-mainPost-content6-set">

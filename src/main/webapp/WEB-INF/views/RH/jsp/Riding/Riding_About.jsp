@@ -45,7 +45,7 @@ pageEncoding="UTF-8"%>
           <div class="rh-riding-history-wood-mainBox">
             <!-- 통나무 내용판 -->
             <div class="rh-riding-history-wood-main">
-              <p
+              <p style="margin-top: 7vw"
                 class="rh-riding-history-wood-text"
                 data-aos="fade-up"
                 data-aos-easing="ease-in-out"
