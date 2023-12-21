@@ -36,7 +36,11 @@
             <div id="hj-content-pic">
                 <!-- 팝업 클릭했을떄 뜨는 디브 -->
                 <div id="hj-content-plus-container">
-                    더보기 정보들 떠야하는 페이지
+                    <div id="hj-detail-tel">번호: ${telephoneNumber}</div>
+                    <div id="hj-detail-season">운영 시즌: ${periodOfOperation}</div>
+                    <div id="hj-detail-addr">주소: ${address}</div>
+                    <div id="hj-detail-facilities">부대시설: ${subsidiaryFacilities}</div>
+                    <div></div>
                 </div>
                 <div id="hj-overlay-popup"></div>
                 <!-- 칠판에 쓰인 분필 -->
@@ -62,7 +66,6 @@
                         <div id="hj-addr">주소: ${address}</div>
                         <div id="hj-ability">부대시설: ${subsidiaryFacilities}</div>
                         <div id="hj-rating-avg">캠핑장 평점: ${ratingAvg}</div>
-                        <div id="hj-etc">기타사항: ${etc}</div>
                     </div>
                 </div>
             </div>

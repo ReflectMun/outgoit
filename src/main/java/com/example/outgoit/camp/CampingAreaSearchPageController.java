@@ -79,6 +79,16 @@ public class CampingAreaSearchPageController {
         model.addAttribute("ratingAvg", ratingAvg);
         model.addAttribute("campingAreaNumber", data.getContentId());
         model.addAttribute("existReviews", !reviews.isEmpty());
+        model.addAttribute("lineIntro", data.getLineIntro());
+        model.addAttribute("generalSite", data.getGnrlSiteCo());
+        model.addAttribute("autoSite", data.getAutoStieCo());
+        model.addAttribute("animalComingControl", data.getAnimalCmgCl());
+        model.addAttribute("equipmentRental", data.getEqpmnLendCl());
+        model.addAttribute("trailerAccompanyAt", data.getTrlerAcmpnyAt());
+        model.addAttribute("caravanAccompanyAt", data.getCaravAcmpnyAt());
+        model.addAttribute("toiletCount", data.getToiletCo());
+        model.addAttribute("availableFacilities", data.getPosblFcltyCl());
+        model.addAttribute("managementStatement", data.getManageSttus());
 
         return "jiho/draft/camp_information";
     }
