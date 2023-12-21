@@ -1,13 +1,5 @@
 package com.example.outgoit.trail;
 
-import com.example.outgoit.review.camping.CampingReview;
-import com.example.outgoit.review.camping.CampingReviewService;
-import com.example.outgoit.review.trail.TrailReview;
-import com.example.outgoit.review.trail.TrailReviewService;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -18,10 +10,9 @@ import java.util.ArrayList;
 @Controller
 @RequestMapping("/trail")
 public class TrailRoutePageController {
-    //private final TrailReviewService trailReviewService;
     private final TrailRouteService trailRouteService;
 
-    public TrailRoutePageController(TrailRouteService trailRouteService){
+    public TrailRoutePageController(TrailRouteService trailRouteService) {
         this.trailRouteService = trailRouteService;
     }
 
@@ -30,11 +21,12 @@ public class TrailRoutePageController {
 //    }
 
     @GetMapping
-    public String getTrailRoutePage(){
+    public String getTrailRoutePage() {
         return "jiho/trail";
     }
+
     @GetMapping("/draft1")
-    public String sendDraft1(){
+    public String sendDraft1() {
         return "kmh/hiking";
     }
 
@@ -43,7 +35,7 @@ public class TrailRoutePageController {
 //        return "kmh/hiking3";
 //    }
 
-//    @PostMapping("/detail/{lngi}/{lati}")
+    //    @PostMapping("/detail/{lngi}/{lati}")
 //    public ArrayList<TrailRouteDTO> GetDetailTrain(@PathVariable ("lngi") double lngi, @PathVariable ("lati") double lati) throws Exception {
 //       trailRouteService.getTrailRouteList(lngi, lati);
 //        {
@@ -51,34 +43,27 @@ public class TrailRoutePageController {
 //        }
 //
 //    }
-@PostMapping("/detail/{lngi}/{lati}")
-public String GetDetailTrain(@PathVariable("lngi") double lngi, @PathVariable("lati") double lati, Model model) throws Exception {
-    System.out.println(lngi); //위도
-    System.out.println(lati); // 경도
-    System.out.println("111111");
+    @PostMapping("/detail/{lngi}/{lati}")
+    public String GetDetailTrain(@PathVariable("lngi") double lngi, @PathVariable("lati") double lati, Model model) throws Exception {
+        ArrayList<FeatureData> trailRouteList = trailRouteService.getTrailRouteList(lngi, lati); // list를 반환함.
 
+        for (FeatureData f : trailRouteList) {
+            System.out.println(f.toString());
+        }
 
-    ArrayList<FeatureData> trailRouteList = trailRouteService.getTrailRouteList(lngi, lati); // list를 반환함.
+        model.addAttribute("trailRouteList", trailRouteList);
 
-    // list를 반환하면 되는거 아님 ?!!?!?!?!
-    System.out.println("111111");
-    for (FeatureData f : trailRouteList){
-        System.out.println(f.toString());
-    }
-
-    // 모델에 trailRouteList를 추가
+        // 모델에 trailRouteList를 추가
 //    model.addAttribute("trailRouteList", trailRouteList);
 //    // 다른 TrailRouteDTO 속성들을 얻어와서 모델에 추가
 //    // ...
 //
-    return "hj/camp/trail_information"; // yourViewName은 실제로 사용할 JSP 파일의 이름이어야 합니다.
-}
-
+        return "hj/camp/trail_information"; // yourViewName은 실제로 사용할 JSP 파일의 이름이어야 합니다.
+    }
 
 
 //            @PageableDefault(size = 5, sort = "commentNumber", direction = Sort.Direction.DESC) Pageable pageable,
 //            @PathVariable("TrailRouteName") String trailRouteName,
-
 
 
 //            TrailRouteDTO data
@@ -86,7 +71,7 @@ public String GetDetailTrain(@PathVariable("lngi") double lngi, @PathVariable("l
 //
 //    {  TrailRouteService(lngi, lati);
 //        System.out.printf(String.valueOf(data));
- //       Pageable modified = PageRequest.of(0, pageable.getPageSize(), pageable.getSort());
+    //       Pageable modified = PageRequest.of(0, pageable.getPageSize(), pageable.getSort());
 //       ArrayList<TrailReview> reviews =
 //               new ArrayList<>(trailReviewService.loadTrailRouteReview(data.getId()));
 ////        model.addAttribute("trailAreaName", data.getProperties().getMntn_nm());
@@ -98,11 +83,11 @@ public String GetDetailTrain(@PathVariable("lngi") double lngi, @PathVariable("l
 //        model.addAttribute("existReviews", !reviews.isEmpty());
 //        model.addAttribute("reviews", reviews);
 
-//        return "hj/camp/trail_information";
+    //        return "hj/camp/trail_information";
 //    }
     @GetMapping("/detail/{TrailRouteName}")
     @ResponseBody
-    public String sendError(){
+    public String sendError() {
         return "잘못된 접근입니다";
     }
 

@@ -109,6 +109,15 @@ public class CampingAreaSearchPageController {
         model.addAttribute("toiletCount", data.getToiletCo());
         model.addAttribute("availableFacilities", data.getPosblFcltyCl());
         model.addAttribute("managementStatement", data.getManageSttus());
+        model.addAttribute("holidaySeasonStart", data.getHvofBgnde());
+        model.addAttribute("holidaySeasonEnd", data.getHvofEnddle());
+        model.addAttribute("showerRoomCount", data.getSwrmCo());
+        model.addAttribute("brazierControl", data.getBrazierCl());
+        model.addAttribute("siteGrass", data.getSiteBottomCl1());
+        model.addAttribute("siteCrushedStone", data.getSiteBottomCl2());
+        model.addAttribute("siteDeck", data.getSiteBottomCl3());
+        model.addAttribute("siteGravel", data.getSiteBottomCl4());
+        model.addAttribute("siteSoil", data.getSiteBottomCl5());
 
         return "jiho/draft/camp_information";
     }
