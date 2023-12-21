@@ -181,6 +181,8 @@ body {
 .rh-camping-wood-mainPost-bestText {
     text-align: right;
     margin-bottom: 1vw;
+    color: white;
+    text-shadow: 0 0 3px black;
 }
 
 .bestText2 {
@@ -251,10 +253,27 @@ body {
 }
 
 /*비기너 best3 이미지*/
-#best1, #best2, #best3 {
-    background-image: url("/resources/static/img/기타/나무보드.jpg");
+#best1 {
+    background-image: url("/resources/static/img/best/난지캠핑장.jpg");
     border-radius: 5%;
+    background-size: cover;
+    background-position: bottom;
 }
+ #best2 {
+    background-image: url("/resources/static/img/best/송호국민관광지.jpg");
+    border-radius: 5%;
+     background-size: cover;
+     background-position: bottom;
+}
+#best3 {
+    background-image: url("/resources/static/img/best/대저캠핑장2.jpg");
+    border-radius: 5%;
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+
 
 .rh-camping-content1-cut {
     width: 49%;

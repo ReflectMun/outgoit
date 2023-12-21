@@ -235,7 +235,7 @@
                         <div class="rh-camping-wood-mainPost-best " id="best2">
                             <div onclick="location.href=''" class="rh-camping-wood-mainPost-bestText">
                                 <div>충청북도</div>
-                                <div class="bestText2">송호관광지 캠핑장</div>
+                                <div class="bestText2">송호국민관광지 캠핑장</div>
                             </div>
                         </div>
                     </div>
