@@ -25,13 +25,14 @@ body {
 /* 기본은 비기너 가이드임 */
 .rh-riding-titleBox {
   width: 100%;
-  padding-top: 6%;
-  padding-bottom: 4%;
-  margin-bottom: 3%;
+  height: 26.042vw;
+  margin-bottom: 7%;
   background-image: url("/resources/static/img/자전거/riding_beginner2.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
   /* border: 2px solid rgb(255, 0, 0); */
 }
 
@@ -68,24 +69,23 @@ body {
 }
 .rh-riding-wood-titleBox {
   /* border: 5px solid rgb(255, 0, 43); */
-  height: 4vw;
+  height: 5.5vw;
   display: flex;
   justify-content: center;
 }
 .rh-riding-wood-title {
   width: 55vw;
-  /* border: 3px solid rgb(238, 255, 0); */
+  border: 5px solid rgb(92 42 4);
   background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
   box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
   background-size: contain;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.5vw;
+  font-size: 2.4vw;
   font-family: "JalnanGothic";
-  color: #7e4a135e;
-  -webkit-text-stroke: 0.05vw white;
-  text-shadow: 0 0 14px black;
+  color: #ffffff;
+  -webkit-text-stroke: 0.1vw #290b0b;
 }
 .rh-riding-wood-bridgeBox {
   /* border: 5px solid rgb(255, 0, 217); */
@@ -106,7 +106,7 @@ body {
   width: 3vw;
 }
 .rh-riding-wood-mainBox {
-  /* border: 5px solid rgb(64, 0, 255); */
+  border: 10px solid rgb(92 42 4);
   display: flex;
   background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
   box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
@@ -114,6 +114,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   padding: 5vw 0;
+  border-radius: 5%;
 }
 
 /* 정보 카드 */
@@ -129,6 +130,7 @@ body {
   text-align: center;
   font-size: 1vw;
   position: relative;
+  z-index: 1;
 }
 .rh-pointer:hover{
   cursor: pointer;
@@ -222,13 +224,14 @@ body {
 /* 따로 만짐 안전가드 */
 .rh-riding-safety-titleBox {
   width: 100%;
-  padding-top: 10%;
-  padding-bottom: 5%;
-  margin-bottom: 3%;
+  height: 26.042vw;
+  margin-bottom: 7%;
   background-image: url("/resources/static/img/자전거/riding_safety.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
   /* border: 2px solid rgb(255, 0, 0); */
 }
 .rh-riding-safety-title {
@@ -255,13 +258,15 @@ body {
 /* 따로 만짐 역사 */
 .rh-riding-history-titleBox {
   width: 100%;
-  padding-top: 17%;
-  padding-bottom: 10%;
-  margin-bottom: 3%;
+  height: 26.042vw;
+  margin-bottom: 7%;
   background-image: url("/resources/static/img/자전거/riding_history2.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+
 }
 .rh-riding-history-wood-mainBox {
   /* border: 5px solid rgb(64, 0, 255); */

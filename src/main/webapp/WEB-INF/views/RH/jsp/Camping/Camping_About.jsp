@@ -39,7 +39,7 @@ pageEncoding="UTF-8"%>
               </span>
             </div>
           </div>
-          <div class="rh-camping-history-wood-mainBox">
+          <div class="rh-camping-wood-mainBox">
             <!-- 통나무 내용판 -->
             <div class="rh-camping-history-wood-main">
               <p style="margin-top: 7vw"

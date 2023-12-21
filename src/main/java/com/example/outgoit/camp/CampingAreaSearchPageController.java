@@ -16,21 +16,21 @@ public class CampingAreaSearchPageController {
 
     @GetMapping("/About")
     public String aboutPage(Model model){
-       // return "RH/jsp/Camping/Camping_About";
+        return "RH/jsp/Camping/Camping_About";
         // return "RH/jsp/Hiking/Hiking_About";
-        return "RH/jsp/Riding/Riding_About";
+        // return "RH/jsp/Riding/Riding_About";
     }
     @GetMapping("/Safety")
     public String safetyPage(Model model){
-       // return "RH/jsp/Camping/Camping_Safety";
+        return "RH/jsp/Camping/Camping_Safety";
       // return "RH/jsp/Hiking/Hiking_Safety";
-      return "RH/jsp/Riding/Riding_Safety";
+      //return "RH/jsp/Riding/Riding_Safety";
     }
     @GetMapping("/Beginner")
     public String beginnerPage(Model model){
-     //   return "RH/jsp/Camping/Camping_Beginner";
+        return "RH/jsp/Camping/Camping_Beginner";
       //   return "RH/jsp/Hiking/Hiking_Beginner";
-       return "RH/jsp/Riding/Riding_Beginner";
+      //return "RH/jsp/Riding/Riding_Beginner";
     }
 
 
