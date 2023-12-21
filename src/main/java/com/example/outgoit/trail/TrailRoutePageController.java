@@ -53,13 +53,18 @@ public class TrailRoutePageController {
 //    }
 @PostMapping("/detail/{lngi}/{lati}")
 public String GetDetailTrain(@PathVariable("lngi") double lngi, @PathVariable("lati") double lati, Model model) throws Exception {
-    System.out.println(lngi);
-    System.out.println(lati);
-//    ArrayList<FeatureData> trailRouteList = trailRouteService.getTrailRouteList(lngi, lati);
-//    System.out.println("111111");
-//    for (FeatureData f : trailRouteList){
-//        System.out.println(f.toString());
-//    }
+    System.out.println(lngi); //위도
+    System.out.println(lati); // 경도
+    System.out.println("111111");
+
+
+    ArrayList<FeatureData> trailRouteList = trailRouteService.getTrailRouteList(lngi, lati); // list를 반환함.
+
+    // list를 반환하면 되는거 아님 ?!!?!?!?!
+    System.out.println("111111");
+    for (FeatureData f : trailRouteList){
+        System.out.println(f.toString());
+    }
 
     // 모델에 trailRouteList를 추가
 //    model.addAttribute("trailRouteList", trailRouteList);

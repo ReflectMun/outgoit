@@ -63,7 +63,7 @@ public class TrailRouteService {
                 res.getResponse().getResult().getFeatureCollection().getFeatures();
 
         System.out.printf("총 %d개의 등산로 정보 검색결과가 반환됨\n", list.size());
-
+        System.out.println(list);
         return list;
     }
 }
