@@ -46,7 +46,7 @@ try {
                 displayMarker()
                 //const = [r,d,q,w,d,s,a,z,,c,,vv,g]
                 //MAth.r 1~10d
-                let name;
+
                 for (const trail of resData) {
                    // a[rint]
                     // 이게 등산로 하나.
@@ -54,10 +54,10 @@ try {
                     // console.log(resData)
                     //console.log(trail)
                     // console.log(JSON.stringify(resData['properties']['mntn_nm']))
-                  name = trail.properties.mntn_nm;
-                    console.log(name)
+
                      //console.log(trail.properties.mntn_nm)
                      const trailLIne = trail['geometry']['coordinates'][0]
+                    console.log(resData)
 
                     // console.log(trailLIne)
                     const path = []
@@ -96,7 +96,7 @@ catch (e) {
     console.log(e)
     alert("오류발생")
 }
-    function addMarker(places, name) {
+    function addMarker(places, resData) {
 
         for (const place of places) {
             const coord = new kakao.maps.LatLng(place.y, place.x)
@@ -104,7 +104,7 @@ catch (e) {
                 position: coord
 
             })
-            addListElementsToResultList(name)
+            addListElementsToResultList(resData)
 
             kakao.maps.event.addListener(marker, 'click', () => {
                 map.panTo(coord)
@@ -212,6 +212,11 @@ function addListElementsToResultList(name) {
         const childButtonWrapper = document.createElement("div");
 
         const openDetailButton = document.createElement("button");
+        console.log(n)
+        lngi = n.geometry.coordinates[0][0][0];
+        lati = n.geometry.coordinates[0][0][1];
+        console.log(lngi)
+        console.log(lati)
 
         openDetailButton.innerText = "캠핑장 정보 보기";
         openDetailButton.classList.add("open-detail-button");
@@ -219,15 +224,17 @@ function addListElementsToResultList(name) {
             const hiddenForm = document.createElement("form");
             hiddenForm.style.display = "none";
             hiddenForm.method = "post";
-            hiddenForm.action = `/trail/detail/${n.properties.mntn_nm}`;
+            hiddenForm.action = `/trail/detail/${lngi}/${lati}`;
+            // C로 간다
+
             let tempInput;
 
-            for (const prop in apiResData) {
+
                 tempInput = document.createElement("input");
-                tempInput.name = prop;
-                tempInput.value = apiResData[prop];
+                tempInput.name = n;
+                tempInput.value = name;
                 hiddenForm.appendChild(tempInput);
-            }
+
             document.body.appendChild(hiddenForm);
             hiddenForm.submit();
         });

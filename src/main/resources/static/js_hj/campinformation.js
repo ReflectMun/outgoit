@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let pageNum = 1
 
         function getPrevCommentPage() {
-            const reqUrl = "/api/review/camping/list"
+            const reqUrl = "/api/review/trail/list"
         }
 
         function getNextCommentPage() {
