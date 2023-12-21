@@ -16,9 +16,9 @@ public class TrailRouteApiController {
     }
 
     @GetMapping("/search")
-    public ArrayList<FeatureData> searchTrailRoute(){
+    public ArrayList<FeatureData> searchTrailRoute(Double lati, Double lngi){
         try {
-            return this.trailRouteService.getTrailRouteList(128.46532747829454, 38.11910443438176);
+            return this.trailRouteService.getTrailRouteList(lngi, lati);
         }
         catch (NoSearchResultException e){
             ArrayList<FeatureData> error = new ArrayList<>();
