@@ -54,7 +54,17 @@ public class CampingAreaSearchPageController {
         ArrayList<CampingReview> reviews =
                 new ArrayList<>(campingReviewService.loadCampingAreaReview(data.getContentId(), modified).getContent());
 
-        model.addAttribute("thumbnail", data.getFirstImageUrl());
+        String ratingAvg;
+        try {
+            ratingAvg = campingReviewService.getCampingAreaRating(data.getContentId()).get(0).toString();
+        }
+        catch (NullPointerException e){
+            ratingAvg = "아직 평균평점 정보가 없어요!";
+        }
+
+        ArrayList<CampingAreaInfoDTO> images = campingSearchService.GetImgSearchedCampingAreaList(data.getContentId());
+
+        model.addAttribute("images", images);
         model.addAttribute("campingAreaName", data.getFacltNm());
         model.addAttribute("telephoneNumber", data.getTel());
         model.addAttribute("periodOfOperation", data.getOperPdCl() + " " + data.getOperDecl());
@@ -65,15 +75,10 @@ public class CampingAreaSearchPageController {
                         ? "부대시설 정보가 없습니다"
                         : data.getSbrsEtc()
         );
-
-        String ratingAvg = campingReviewService.getCampingAreaRating(data.getContentId()).get(0).toString();
-
-        model.addAttribute("etc", data.getSbrsEtc());
+//        model.addAttribute("etc", data.getSbrsEtc());
         model.addAttribute("ratingAvg", ratingAvg);
         model.addAttribute("campingAreaNumber", data.getContentId());
-
         model.addAttribute("existReviews", !reviews.isEmpty());
-
 
         return "jiho/draft/camp_information";
     }

@@ -13,6 +13,6 @@ public class CampingReviewSubmitBodyDTO {
     private String author;
     private String password;
     private String content;
-//    private Integer rating;
+    private Integer rating;
     private Integer campingAreaId;
 }

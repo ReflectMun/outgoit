@@ -19,6 +19,11 @@ body {
     height: 100vh;
     padding: 0;
 }
+
+div{
+    display: block;
+}
+
 #hj-container2 {
     /* border: 1px solid black; */
     height: 100%;
@@ -87,13 +92,11 @@ body {
 #hj-content-img {
     background-color: white;
     margin-left: 5%;
-    width: 40%;
-    height: 100%;
-    padding-bottom: 15vw;
+    width: 375px;
+    height: 250px;
 }
-#hj-content-img-link img {
-    width: 100%;
-    height: 100%;
+#hj-content-img-slide-wrapper img {
+    height: 250px;
 }
 /* 정보 부분 */
 #hj-content-detail {
@@ -151,7 +154,8 @@ body {
 #hj-time,
 #hj-addr,
 #hj-ability,
-#hj-etc {
+#hj-etc,
+#hj-rating-avg{
     font-size: 1.7vw;
     line-height: 2;
 }
@@ -204,6 +208,9 @@ body {
 }
 .hj-star{
     font-size: 3vw;
+}
+.hj-star.checked{
+    color: yellow;
 }
 .hj-review {
     /* border: 1px solid purple; */

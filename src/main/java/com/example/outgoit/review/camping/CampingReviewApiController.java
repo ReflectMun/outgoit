@@ -38,7 +38,7 @@ public class CampingReviewApiController {
                     body.getAuthor(),
                     body.getPassword(),
                     body.getContent(),
-                    3,
+                    body.getRating(),
                     body.getCampingAreaId()
             );
 

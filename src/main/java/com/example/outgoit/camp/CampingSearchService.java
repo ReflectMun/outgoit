@@ -78,7 +78,6 @@ public class CampingSearchService {
             System.out.println("캠핑장 이미지 검색결과가 없습니다");
 
             result = new ArrayList();
-            result.add(new CampingAreaInfoDTO("캠핑장 이미지 검색결과가 없습니다"));
         } catch (Exception e){
             System.out.println("에러 발생");
             e.printStackTrace();
