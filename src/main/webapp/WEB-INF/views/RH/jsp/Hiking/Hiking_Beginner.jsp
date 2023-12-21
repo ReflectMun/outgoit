@@ -44,7 +44,7 @@ pageEncoding="UTF-8"%>
           </div>
           <div class="rh-hiking-wood-mainBox">
             <!-- 통나무 내용판 -->
-
+          
             <div class="rh-hiking-wood-main">
               <div class="rh-pointer" id="icon1">
                 <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/mountaineer.png" alt="">
@@ -160,7 +160,7 @@ pageEncoding="UTF-8"%>
                 </div>
               </div>
             </div>
-           
+
             </div>
           </div>
         </div>
