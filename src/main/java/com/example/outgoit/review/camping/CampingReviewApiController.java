@@ -1,5 +1,6 @@
 package com.example.outgoit.review.camping;
 
+import com.example.outgoit.review.camping.dto.CampingReviewDeleteDTO;
 import com.example.outgoit.review.camping.dto.CampingReviewModifyingDTO;
 import com.example.outgoit.review.camping.dto.CampingReviewSubmitBodyDTO;
 import com.example.outgoit.review.camping.dto.NotificationProcessStatusDTO;
@@ -37,7 +38,7 @@ public class CampingReviewApiController {
                     body.getAuthor(),
                     body.getPassword(),
                     body.getContent(),
-                    3,
+                    body.getRating(),
                     body.getCampingAreaId()
             );
 
@@ -55,25 +56,23 @@ public class CampingReviewApiController {
         }
     }
 
-    @PostMapping("/rating")
-    public ArrayList<Object> getCampingAreaRating(){
-        return new ArrayList<>(campingReviewService.getCampingAreaRating(1));
+    @GetMapping("/rating")
+    public ArrayList<Object> getCampingAreaRating(Integer campingAreaId){
+        return new ArrayList<>(campingReviewService.getCampingAreaRating(campingAreaId));
     }
 
     @PostMapping("/update")
-    public boolean updateReview(@RequestBody CampingReviewModifyingDTO body){
-        Integer updatedRow = campingReviewService.updateReviewContent(
-                "하하하하하",
-                1
+    public NotificationProcessStatusDTO updateReview(@RequestBody CampingReviewModifyingDTO body){
+        return campingReviewService.updateReviewContent(
+                body.getPassword(),
+                body.getCommentNumber(),
+                body.getContent()
         );
-
-        return true;
     }
 
     @PostMapping("/delete")
-    public boolean deleteReview(){
-        campingReviewService.deleteReview(2);
-        return true;
+    public NotificationProcessStatusDTO deleteReview(@RequestBody CampingReviewDeleteDTO body){
+        return campingReviewService.deleteReview(body.getCommentNumber(), body.getPassword());
     }
 
     @GetMapping("/list")
@@ -86,15 +85,13 @@ public class CampingReviewApiController {
             return new ArrayList<>();
         }
 
-        Pageable modified = PageRequest.of(pageNumber, pageable.getPageSize(), pageable.getSort());
+        Pageable modified = PageRequest.of(pageNumber - 1, pageable.getPageSize(), pageable.getSort());
         Page<CampingReview> result = campingReviewService.loadCampingAreaReview(campingAreaId, modified);
-        System.out.println(result.getTotalPages());
 
         if (pageNumber > result.getTotalPages()){
             return new ArrayList<>();
         }
 
-        System.out.println(result.getTotalPages());
         return new ArrayList<CampingReview>(result.getContent());
     }
 }

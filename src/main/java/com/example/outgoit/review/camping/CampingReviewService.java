@@ -1,9 +1,9 @@
 package com.example.outgoit.review.camping;
 
+import com.example.outgoit.review.camping.dto.NotificationProcessStatusDTO;
 import jakarta.transaction.Transactional;
 import org.springframework.dao.OptimisticLockingFailureException;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +20,7 @@ public class CampingReviewService {
     ////////////////////////////////////////////////////////////////////////////
 
     ///////////////////////////// 서비스 구현 /////////////////////////////////////
-    // 해당 캠핑장의 리뷰 모두 불러오는 메서드
+    // 해당 캠핑장의 리뷰를 페이지별로 지정해서 불러오는 메서드
     public Page<CampingReview> loadCampingAreaReview(int campingAreaId, Pageable pageable){
         return repo.findByCampingAreaId(campingAreaId, pageable);
     }
@@ -31,24 +31,35 @@ public class CampingReviewService {
     }
 
     // 사용자가 입력한 비밀번호가 일치하는지 확인하는 메서드
-    public boolean isCorrectPassword(String password, int commentId){
+    public boolean isPasswordMatch(String password, int commentId){
         CampingReview review = this.getCampingAreaReview(commentId).get(0);
         return review.getPassword().equals(password);
     }
 
     // 리뷰 내용을 수정하는 메서드(만약 비밀번호가 맞으면)
     @Transactional
-    public Integer updateReviewContent(String content, int commentId){
+    public NotificationProcessStatusDTO updateReviewContent(String password, int commentId, String content){
+        if(!isPasswordMatch(password, commentId)){
+            System.out.println("비밀번호가 일치하지 않아 리뷰를 수정할 수 없음");
+            return new NotificationProcessStatusDTO(5201, "비밀번호가 일치하지 않습니다!");
+        }
+
         Integer countOfUpdatedRecord = this.repo.updateContentByCommentNumber(content, commentId);
         System.out.printf("총 %d개의 리뷰가 수정됨. 레코드 넘버: %d\n", countOfUpdatedRecord, commentId);
-        return countOfUpdatedRecord;
+        return new NotificationProcessStatusDTO(200);
     }
 
     // 리뷰를 삭제하는 메서드(만약 비밀번호가 맞으면)
     @Transactional
-    public void deleteReview(int commentId){
-        int countOfDeletedRecord = this.repo.deleteByCommentNumber(commentId);
+    public NotificationProcessStatusDTO deleteReview(int commentId, String password){
+        if(!isPasswordMatch(password, commentId)){
+            System.out.println("입력된 비밀번호가 일치하지 않음");
+            return new NotificationProcessStatusDTO(5101, "입력된 비밀번호가 일치하지 않습니다!");
+        }
+
+        int countOfDeletedRecord = repo.deleteByCommentNumber(commentId);
         System.out.printf("총 %d개의 리뷰가 삭제됨. 레코드 넘버: %d\n", countOfDeletedRecord, commentId);
+        return new NotificationProcessStatusDTO(200);
     }
 
     // 리뷰 작성
