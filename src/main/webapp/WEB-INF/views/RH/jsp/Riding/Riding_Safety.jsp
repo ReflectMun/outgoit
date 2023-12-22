@@ -55,7 +55,7 @@
                     </div>
                     <div class="rh-riding-wood-mainPost" id="content1">
                         &nbsp;자전거는 도로교통법상 '차'에 해당해요. 시속 20km/h를 준수하며 안전거리를 유지해요. 운행 중 자전거 도로가 없다면 도로 우측 가장자리에서 자동차와 같은 방향으로 직선 주행해야 해요.
-                        <br>음주 후 라이딩 역시 음주운전이기 때문에 도로교통법 제44조에 의해 처벌받아요.
+                        <br>&nbsp;음주 후 라이딩 역시 음주운전이기 때문에 도로교통법 제44조에 의해 처벌받아요.
                         <div class="rh-back-set rh-pointer" id="back1">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
                         <div class="rh-card-set">안전장비</div>
                     </div>
                     <div  class="rh-riding-wood-mainPost" id="content2">
-                        &nbsp;&nbsp;안전장비 착용은 필수! <br>
+                        &nbsp; 안전장비 착용은 필수!<br>
                         &nbsp;고글, 장갑, 팔다리 보호대, 헬멧 등 안전장비를 착용해야 해요. <br>
                         &nbsp;고글은 라이딩 중 얼굴에 부딪히는 날벌레 등 이물질로부터 안구를 보호하는 역할을, 헬멧과 장갑, 보호대는 운행 중 넘어져 땅에 딛게 될 때 발생할 수 있는 부상을 방지해 줘요.
 

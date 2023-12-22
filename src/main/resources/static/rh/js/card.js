@@ -184,7 +184,7 @@ $(function () {
         $("#best").css("visibility","visible").css("left","0").css("height","100%").css("background-image", " url('/resources/static/img/기타/noPin.png')").css("background-size", "100% 100%").css("transition","0.5s ease-in-out");
     });
     $("#back8").click(function () {
-        $("#best").css("left","-25.3vw").css("visibility","hidden");
+        $("#best").css("left","-25.3vw").css("visibility","hidden").css("height","0");
         $("#content8, #back8").hide();
         $("#icon8").fadeToggle();
     });
