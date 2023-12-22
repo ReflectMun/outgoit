@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TrailRouteDTO2 {
+public class TrailRouteDTO {
     @JsonProperty("0")
     private Double lngi; // 경도(x)
     @JsonProperty("1")

@@ -8,10 +8,10 @@ import java.util.ArrayList;
 
 @Controller
 @RequestMapping("/trail")
-public class TrailRoutePageController2 {
+public class TrailRoutePageController {
     private final TrailRouteService trailRouteService;
 
-    public TrailRoutePageController2(TrailRouteService trailRouteService) {
+    public TrailRoutePageController(TrailRouteService trailRouteService) {
         this.trailRouteService = trailRouteService;
     }
 
@@ -42,20 +42,18 @@ public class TrailRoutePageController2 {
 //        }
 //
 //    }
-    @PostMapping("/detail/{lngi}/{lati}")
-    public String GetDetailTrain(@PathVariable("lngi") double lngi, @PathVariable("lati") double lati, Model model) throws Exception {
+    @PostMapping("/detail/{lngi}/{lati}/{index}")
+    public String GetDetailTrain(@PathVariable("lngi") double lngi, @PathVariable("lati") double lati, @PathVariable ("index") int index, Model model) throws Exception {
 
     ArrayList<com.example.outgoit.trail.dto.FeatureData> trailRouteList = trailRouteService.getTrailRouteList(lngi, lati); // list를 반환함.
+        System.out.println(index);
 
     // 한라산을 검색했을때 분류한 5개의 등산로가 배열로 담겨있음!
-    for (com.example.outgoit.trail.dto.FeatureData f : trailRouteList){
-        System.out.println();
-    }
+        System.out.println(trailRouteList.get(index).getProperties());
 
     // 모델에 trailRouteList를 추가
-    model.addAttribute("trailRouteList", trailRouteList);
+    model.addAttribute("trailRouteList", trailRouteList.get(index).getProperties());
 
-        model.addAttribute("trailRouteList", trailRouteList);
 
         // 모델에 trailRouteList를 추가
 //    model.addAttribute("trailRouteList", trailRouteList);

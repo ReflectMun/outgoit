@@ -200,7 +200,8 @@ catch (e) {
 
 function addListElementsToResultList(name, data) {
     // 등산로만 있는 것임.
-    for (const n of name) {
+    for (const [index, n] of name.entries()) {
+        console.log(index)
         console.log(n);
         console.log(n.properties.mntn_nm);
 
@@ -224,7 +225,7 @@ function addListElementsToResultList(name, data) {
             const hiddenForm = document.createElement("form");
             hiddenForm.style.display = "none";
             hiddenForm.method = "post";
-            hiddenForm.action = `/trail/detail/${lngi}/${lati}`;
+            hiddenForm.action = `/trail/detail/${lngi}/${lati}/${index}`;
             // C로 간다
 
             let tempInput;
