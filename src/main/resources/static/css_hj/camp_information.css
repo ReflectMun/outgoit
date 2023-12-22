@@ -24,7 +24,7 @@ body {
   height: 100%;
   width: 100%;
   background-color: #FFFAF6;
-  display: none;
+  /*display: none;*/
   position: absolute;
   top: 0;
   z-index: 1;
