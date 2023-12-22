@@ -140,8 +140,8 @@
                             글램핑
                         </div>
                         <div id="glampingC">
-                            &nbsp;글램핑은 글래머러스+캠핑의 합성어로, 캠핑장 내에 모든 장비가 세팅돼 있어요.
-                            자연 속에서 편안한 숙박 시설과 서비스를 경험할 수 있어 휴양과 캠핑을 동시에 즐길 수 있어요.
+                            &nbsp;글램핑은 글래머러스+캠핑의 합성어로, 캠핑장 내에 모든 장비가 세팅돼 있어요. <br>
+                            &nbsp;자연 속에서 편안한 숙박 시설과 서비스를 경험할 수 있어 휴양과 캠핑을 동시에 즐길 수 있어요.
                         </div>
                         <div class="rh-back-set rh-pointer" id="back4">돌아가기 <img width="20%"
                                                                                  src="/resources/static/img/icon/next.png"
@@ -246,6 +246,9 @@
                                 <div class="bestText2">대저 생태공원 캠핑장</div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="rh-camping-wood-main" style="visibility: hidden">
                     </div>
                 </div>
             </div>

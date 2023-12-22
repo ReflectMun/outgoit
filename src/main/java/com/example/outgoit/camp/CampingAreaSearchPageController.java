@@ -51,9 +51,9 @@ public class CampingAreaSearchPageController {
     }
     @GetMapping("/Beginner")
     public String beginnerPage(Model model){
-        // return "RH/jsp/Camping/Camping_Beginner";
+         return "RH/jsp/Camping/Camping_Beginner";
       //   return "RH/jsp/Hiking/Hiking_Beginner";
-       return "RH/jsp/Riding/Riding_Beginner";
+       // return "RH/jsp/Riding/Riding_Beginner";
     }
 
     @GetMapping("/draft1")
