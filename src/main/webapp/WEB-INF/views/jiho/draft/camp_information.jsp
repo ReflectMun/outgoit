@@ -6,14 +6,14 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>${campingAreaName} 상세정보</title>
-    <link rel="stylesheet" href="/resources/static/jh/css/draft1.css"/>
+    <link rel="stylesheet" href="/resources/static/jiho/css/draft1.css"/>
     <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="/resources/static/jh/js/draft_information.js"></script>
+    <script src="/resources/static/jiho/js/draft_information.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
