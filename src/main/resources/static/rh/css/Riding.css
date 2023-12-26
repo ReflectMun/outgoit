@@ -25,15 +25,8 @@ body {
 /* 기본은 비기너 가이드임 */
 .rh-riding-titleBox {
   width: 100%;
-<<<<<<< HEAD
   height: 26.042vw;
   margin-bottom: 7%;
-=======
-  padding-top: 9.105%;
-  padding-bottom: 6%;
-  margin-top: 1%;
-  margin-bottom: 3%;
->>>>>>> front
   background-image: url("/resources/static/img/자전거/riding_beginner2.jpg");
   background-position: center;
   background-size: cover;
@@ -76,11 +69,8 @@ body {
 }
 .rh-riding-wood-titleBox {
   /* border: 5px solid rgb(255, 0, 43); */
-<<<<<<< HEAD
   height: 5.5vw;
-=======
   height: 4vw;
->>>>>>> front
   display: flex;
   justify-content: center;
 }
@@ -93,17 +83,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
   font-size: 2.4vw;
   font-family: "JalnanGothic";
   color: #ffffff;
   -webkit-text-stroke: 0.1vw #290b0b;
-=======
-  font-size: 3vw;
-  font-family: "SOYOMapleBoldTTF";
-  color: white;
-  -webkit-text-stroke: 2px black;
->>>>>>> front
 }
 .rh-riding-wood-bridgeBox {
   /* border: 5px solid rgb(255, 0, 217); */
@@ -242,15 +225,8 @@ body {
 /* 따로 만짐 안전가드 */
 .rh-riding-safety-titleBox {
   width: 100%;
-<<<<<<< HEAD
   height: 26.042vw;
   margin-bottom: 7%;
-=======
-  padding-top: 9.105%;
-  padding-bottom: 6%;
-  margin-top: 1%;
-  margin-bottom: 3%;
->>>>>>> front
   background-image: url("/resources/static/img/자전거/riding_safety.jpg");
   background-position: center;
   background-size: cover;
@@ -283,17 +259,9 @@ body {
 /* 따로 만짐 역사 */
 .rh-riding-history-titleBox {
   width: 100%;
-<<<<<<< HEAD
   height: 26.042vw;
   margin-bottom: 7%;
   background-image: url("/resources/static/img/자전거/riding_history2.png");
-=======
-  padding-top: 17%;
-  padding-bottom: 7.68%;
-  margin-top: 1%;
-  margin-bottom: 3%;
-  background-image: url("/resources/static/img/자전거/riding_history2.jpg");
->>>>>>> front
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -327,9 +295,8 @@ body {
 }
 .rh-riding-history-wood-textLast {
   margin-top: 5%;
-  margin-bottom: 20%;
+  margin-bottom: 10%;
   font-size: 1vw;
-<<<<<<< HEAD
 }
 
 /*비기너 선택 카드*/
@@ -359,10 +326,8 @@ body {
 #line{
   margin-top: 10%;
 }
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> rh
->>>>>>> front
+
+
+
+
+

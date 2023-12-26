@@ -12,7 +12,6 @@ public class IndexPageController {
     public String sendIndexPage() {
         return "kmh/index";
     }
-<<<<<<< HEAD
 
     @GetMapping("/camping")
     public String sendCampingPage(Model model){
@@ -21,21 +20,18 @@ public class IndexPageController {
     }
 
     @GetMapping("/hiking")
-    public String sendHikingMainPage() {
-        return "kmh/hiking";
+    public String sendHikingMainPage(Model model) {
+        model.addAttribute("campingContentPage", "Hiking_About.jsp");
+        return "jsp/hiking/container";
     }
 
     @GetMapping("/riding")
-    public String sendRidingMainPage() {
-        return "kmh/riding";
-    }
-=======
-    @GetMapping("/camping")
-    public String sendCampingPage(Model model){
-        model.addAttribute("campingContentPage", "Camping_About.jsp");
-        return "hj/camp/container";
+    public String sendRidingMainPage(Model model) {
+        model.addAttribute("campingContentPage", "Riding_About.jsp");
+        return "jsp/riding/container";
     }
 
->>>>>>> 74081d467bd8c943873d986cca4c846a3296344b
+
+
 }
 
