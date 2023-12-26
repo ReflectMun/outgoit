@@ -9,7 +9,7 @@
     <title>OUT GO IT - main</title>
     <link rel="stylesheet" href="/resources/static/kmh/css/camping.css">
     <link rel="stylesheet" href="/resources/static/css_hj/camp_information.css">
-    <script src="/resources/static/js_hj/campinformation.js"></script>
+    <script src="/resources/static/js_hj/campinformation2.js"></script>
 </head>
 <body>
     <!-- 헤더 영역 -->
@@ -235,5 +235,6 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=770a2850e8ce3177b209d2d94dc1e58b&libraries=services"></script>
     <script type="text/javascript" src="/resources/static/kmh/js/draft2.js"></script>
+    <script type="text/javascript" src="/resources/static/kmh/js/camping_area_search.js"></script>
 </body>
 </html>

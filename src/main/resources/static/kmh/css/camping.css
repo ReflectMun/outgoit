@@ -30,25 +30,55 @@
     height: 100%;
 }
 
-.banner-wrap {
-    border: 3px solid blue;
+/*슬라이드*/
+.swiper {
+    /*width: 100%;*/
+    /*height: 100%;*/
     width: 100%;
-    height: 27vw;
+    height: 35vw;
     display: flex;
     justify-content: center;
 }
 
-.banner {
+.swiper-slide {
     width: 80%;
     height: 27vw;
-    background-image: url("../../../../resources/static/kmh/img/camping_banner.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    text-align: center;
+    /*font-size: 18px;*/
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.swiper-slide img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*슬라이드 끝*/
+
+/*.banner-wrap {*/
+/*    !*border: 3px solid blue;*!*/
+/*    width: 100%;*/
+/*    height: 27vw;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.banner {*/
+/*    width: 80%;*/
+/*    height: 27vw;*/
+/*    background-image: url("../../../../resources/static/kmh/img/camping_banner.jpg");*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*}*/
 
 .banner-txt-wrap {
     margin-top: 14vw;
-    display: grid;
+    display: none;
     place-items: center;
 }
 
@@ -56,15 +86,9 @@
     font-family: 'JalnanGothic';
     font-size: 6vw;
     font-weight: bolder;
-    color: white;
+    color: black;
 }
 
-.banner-sub-txt {
-    font-family: 'SOYOMapleBoldTTF';
-    font-size: 1.5vw;
-    font-weight: bolder;
-    color: white;
-}
 
 .content {
     width: 100%;
