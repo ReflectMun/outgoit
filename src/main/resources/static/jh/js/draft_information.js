@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 throw new Error("서버와의 통신 중 알 수 없는 오류가 발생")
 
             for(const review of resData){
+
                 const madeReviewBox = makeReviewBox(review)
                 reviewListContainer.appendChild(madeReviewBox)
             }
