@@ -90,8 +90,9 @@ charset=UTF-8" pageEncoding="UTF-8"%>
       <%-- 메뉴 끝--%>
 
       <%-- contents page--%>
-      <div>
-        <!-- 컨텐츠 페이지 인쿠르드로 설정  -->
+      <div class="hj-camping-content-page">
+        <jsp:include page="${campingContentPage}" />
+        <!-- 컨텐츠 페이지 인클루드로 설정 -->
       </div>
 
       <%-- 컨텐트 페이지 끝--%>

@@ -1,6 +1,7 @@
 package com.example.outgoit;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -13,8 +14,9 @@ public class IndexPageController {
     }
 
     @GetMapping("/camping")
-    public String sendCampingMainPage() {
-        return "kmh/camping";
+    public String sendCampingPage(Model model){
+        model.addAttribute("campingContentPage", "Camping_About.jsp");
+        return "jsp/camp/container";
     }
 
     @GetMapping("/hiking")
