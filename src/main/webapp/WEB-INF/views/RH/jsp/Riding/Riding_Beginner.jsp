@@ -186,7 +186,7 @@
                         <div class="rh-riding-wood-mainPost-best rh-pointer" id="best1">
                             <div onclick="location.href=''" class="rh-riding-wood-mainPost-bestText">
                                 <div>춘천</div>
-                                <div class="bestText2">의암호 둘레길</div>
+                                <div class="bestText2">의암호 자전거길</div>
                             </div>
                         </div>
                     </div>
@@ -194,7 +194,7 @@
                         <div class="rh-riding-wood-mainPost-best rh-pointer" id="best2">
                             <div onclick="location.href=''" class="rh-riding-wood-mainPost-bestText">
                                 <div>인천-서울</div>
-                                <div class="bestText2">아라뱃길</div>
+                                <div class="bestText2">아라 자전거길</div>
                             </div>
                         </div>
                     </div>
@@ -202,7 +202,7 @@
                         <div class="rh-riding-wood-mainPost-best rh-pointer" id="best3">
                             <div onclick="location.href=''" class="rh-riding-wood-mainPost-bestText">
                                 <div>대전</div>
-                                <div class="bestText2">둔산대교-대청댐</div>
+                                <div class="bestText2">대청호수 자전거길</div>
                             </div>
                         </div>
                     </div>
