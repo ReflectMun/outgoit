@@ -124,6 +124,7 @@ function makeListElement(searchData, apiResData){
             tempInput.name = prop
             tempInput.value = apiResData[prop]
 
+
             hiddenForm.appendChild(tempInput)
         }
 

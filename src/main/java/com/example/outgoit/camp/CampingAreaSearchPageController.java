@@ -32,7 +32,27 @@ public class CampingAreaSearchPageController {
     @GetMapping
     public String sendCampingSearchingPage(Model model){
         model.addAttribute("msg", "camping");
-        return "kmh/camping";
+
+        return "jh/camp";
+    }
+
+    @GetMapping("/About")
+    public String aboutPage(Model model){
+        return "RH/jsp/Camping/Camping_About";
+        // return "RH/jsp/Hiking/Hiking_About";
+        // return "RH/jsp/Riding/Riding_About";
+    }
+    @GetMapping("/Safety")
+    public String safetyPage(Model model){
+        return "RH/jsp/Camping/Camping_Safety";
+      // return "RH/jsp/Hiking/Hiking_Safety";
+      //return "RH/jsp/Riding/Riding_Safety";
+    }
+    @GetMapping("/Beginner")
+    public String beginnerPage(Model model){
+        return "RH/jsp/Camping/Camping_Beginner";
+      //   return "RH/jsp/Hiking/Hiking_Beginner";
+      //return "RH/jsp/Riding/Riding_Beginner";
     }
 
     @GetMapping("/draft1")
@@ -79,6 +99,25 @@ public class CampingAreaSearchPageController {
         model.addAttribute("ratingAvg", ratingAvg);
         model.addAttribute("campingAreaNumber", data.getContentId());
         model.addAttribute("existReviews", !reviews.isEmpty());
+        model.addAttribute("lineIntro", data.getLineIntro());
+        model.addAttribute("generalSite", data.getGnrlSiteCo());
+        model.addAttribute("autoSite", data.getAutoStieCo());
+        model.addAttribute("animalComingControl", data.getAnimalCmgCl());
+        model.addAttribute("equipmentRental", data.getEqpmnLendCl());
+        model.addAttribute("trailerAccompanyAt", data.getTrlerAcmpnyAt());
+        model.addAttribute("caravanAccompanyAt", data.getCaravAcmpnyAt());
+        model.addAttribute("toiletCount", data.getToiletCo());
+        model.addAttribute("availableFacilities", data.getPosblFcltyCl());
+        model.addAttribute("managementStatement", data.getManageSttus());
+        model.addAttribute("holidaySeasonStart", data.getHvofBgnde());
+        model.addAttribute("holidaySeasonEnd", data.getHvofEnddle());
+        model.addAttribute("showerRoomCount", data.getSwrmCo());
+        model.addAttribute("brazierControl", data.getBrazierCl());
+        model.addAttribute("siteGrass", data.getSiteBottomCl1());
+        model.addAttribute("siteCrushedStone", data.getSiteBottomCl2());
+        model.addAttribute("siteDeck", data.getSiteBottomCl3());
+        model.addAttribute("siteGravel", data.getSiteBottomCl4());
+        model.addAttribute("siteSoil", data.getSiteBottomCl5());
 
         return "jiho/draft/camp_information";
     }
