@@ -104,7 +104,7 @@ pageEncoding="UTF-8"%>
                 라이더들 간의 소통과 교류가 활성화되었습니다.
               </p>
               <p
-                class="rh-riding-history-wood-text"
+                class="rh-riding-history-wood-textLast"
                 data-aos="fade-up"
                 data-aos-easing="ease-in-out"
                 data-aos-delay="150"

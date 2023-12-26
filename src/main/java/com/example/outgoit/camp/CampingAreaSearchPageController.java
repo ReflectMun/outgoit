@@ -36,7 +36,11 @@ public class CampingAreaSearchPageController {
         return "jh/camp";
     }
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> front
     @GetMapping("/draft1")
     public String sendDraft1(){
         return "jiho/draft/1";
@@ -109,4 +113,14 @@ public class CampingAreaSearchPageController {
     public String sendError(){
         return "잘못된 접근입니다";
     }
+<<<<<<< HEAD
+=======
+=======
+
+
+
+
+>>>>>>> 74081d467bd8c943873d986cca4c846a3296344b
+
+>>>>>>> front
 }

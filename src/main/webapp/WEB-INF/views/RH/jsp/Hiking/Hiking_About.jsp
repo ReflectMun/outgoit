@@ -102,7 +102,7 @@ pageEncoding="UTF-8"%>
                 즐기게 되었습니다. <br />
               </p>
               <p
-                class="rh-hiking-history-wood-text"
+                class="rh-hiking-history-wood-textLast"
                 data-aos="fade-up"
                 data-aos-easing="ease-in-out"
                 data-aos-delay="150"

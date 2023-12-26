@@ -6,7 +6,7 @@ pageEncoding="UTF-8"%>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/resources/static/rh/css/camping.css" />
+    <link rel="stylesheet" href="../resources/static/rh/css/camping.css" />
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
@@ -14,7 +14,7 @@ pageEncoding="UTF-8"%>
     ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="/resources/static/rh/js/card.js"></script>
+    <script src="/static/rh/js/card.js"></script>
   </head>
   <body>
     <script>
@@ -134,7 +134,7 @@ pageEncoding="UTF-8"%>
                 갖춘 공간을 제공함으로써 캠핑을 보다 편리하게 만들어갔습니다.
               </p>
               <p
-                class="rh-camping-history-wood-text"
+                class="rh-camping-history-wood-textLast"
                 data-aos="fade-up"
                 data-aos-easing="ease-in-out"
                 data-aos-delay="150"
