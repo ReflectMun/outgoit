@@ -6,7 +6,7 @@ body {
 }
 .hj-container {
   width: 100%;
-  border: 2px solid black;
+  /*border: 2px solid black;*/
 }
 
 .hj-footer-pic > img {
@@ -15,7 +15,7 @@ body {
   justify-content: center;
   width: 100vw;
   z-index: 20;
-  margin-top: -12vh;
+  margin-top: -7.5vw;
 }
 
 .hj-footer {
@@ -40,7 +40,7 @@ body {
 
 
 .hj-footer-box {
-  padding-top: 3.2vh;
+  padding-top: 3.2vw;
   /*border: 1px solid green;*/
   width: 100%;
 }
@@ -60,7 +60,7 @@ body {
   display: flex;
   justify-content: center;
   color: rgb(242, 166, 52);
-  height: 7.5vh;
+  height: 5vw;
 }
 .hj-footer-logo {
   margin: 1%;
@@ -69,7 +69,6 @@ body {
   background-color: #FFFAF6;
   border-radius: 10%;
   width: 5.5vw;
-  height: 1.8vh;
   text-align: center;
   box-shadow: 0.07vw 0.07vw 0.07vw 0 #173b21;
   font-size: 1vw;
@@ -97,7 +96,7 @@ body {
   justify-content: center;
   text-align: center;
   width: 10vw;
-  height: 3.5vh;
+  /*height: 3.5vh;*/
   margin: 1vw;
   font-size: 1vw;
 
@@ -117,7 +116,6 @@ body {
   background-color: #FFFAF6;
   border-radius: 10%;
   width: 5.5vw;
-  height: 1.8vh;
   text-align: center;
   box-shadow: 0.07vw 0.07vw 0.07vw 0 #173b21;
   font-size: 1vw;
@@ -152,7 +150,6 @@ body {
   background-color: #FFFAF6;
   border-radius: 10%;
   width: 5.5vw;
-  height: 1.8vh;
   text-align: center;
   box-shadow: 0.07vw 0.07vw 0.07vw 0 #173b21;
   font-size: 1vw;

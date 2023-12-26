@@ -31,6 +31,10 @@ public class IndexPageController {
         return "jsp/riding/container";
     }
 
+    @GetMapping("/design")
+    public String sendDesignPage() {
+        return "jsp/etc/design";
+    }
 
 
 }

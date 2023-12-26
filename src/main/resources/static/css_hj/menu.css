@@ -57,14 +57,16 @@ body{
 /* 별똥별 효과*/
 .hj-col, .hj-col-2, .hj-col-3, .hj-col-4 {
   position: relative;
-  display: inline-block;
-  padding: 20px;
-  /*background-color: #3498db;*/
+  display: flex;
+  padding: 1vw;
+  /* background-color: #3498db; */
   color: #fff;
   transition: background-color 0.3s ease;
   overflow: hidden;
   width: 100%;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .hj-star-container, .hj-star-container-2, .hj-star-container-3, .hj-star-container-4 {
@@ -117,7 +119,7 @@ body{
 
 /* 아이콘 */
 .hj-box-1 {
-  height: 9%;
+  height: 5vw;
   /* border: 1px solid violet; */
 }
 .hj-row-1 {
@@ -137,15 +139,14 @@ body{
   .hj-menu-icon-2 {
     /*border: 1px solid red;*/
     width: 3.5vw;
-    height: 6vh;
+    height: 6vw;
     background-image: url("../Img_hj/menu_moon1.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-
     margin-bottom: auto;
     text-align: center;
-    margin-top: 20%;
+    margin-left: 1.5vw;
   }
 
 /* 나머지 디브 */
@@ -153,7 +154,7 @@ body{
   /* display: flex;
   justify-content: center; */
   /* border: 1px solid violet; */
-  height: 17%;
+  height: 8.2vw;
   display: flex;
   justify-content: center;
 }
@@ -172,7 +173,10 @@ body{
 .hj-info,
 .hj-guide {
   font-size: 2vw;
-  margin-top: 8%;
+}
+
+.hj-home:hover, .hj-story:hover, .hj-info:hover, .hj-guide:hover{
+    cursor: pointer;
 }
 
 .hj-menu-txt :hover {
@@ -183,7 +187,7 @@ body{
 
 .hj-menu-img {
   width: 100vw;
-  height: 30vh;
+  height: 20vw;
   background-image: url("../Img_hj/menu_img_dark.png");
   background-size: cover;
   background-position: center;
