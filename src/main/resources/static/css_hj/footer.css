@@ -15,7 +15,7 @@ body {
 
 .hj-footer-pic > img {
   position: relative;
-  /*width: 70vw;*/
+  width: 90vw;
   z-index: 20;
   /*margin-top: -7.5vw;*/
 }
