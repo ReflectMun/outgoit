@@ -124,8 +124,6 @@ charset=UTF-8" pageEncoding="UTF-8"%>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="hj-footer-box">
             <div class="hj-footer-garo">
               <div class="hj-footer-col">
                 <div class="hj-footer-connact">Contact</div>
