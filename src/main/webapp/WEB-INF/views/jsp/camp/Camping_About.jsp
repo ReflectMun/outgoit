@@ -42,7 +42,8 @@ pageEncoding="UTF-8"%>
           <div class="rh-camping-wood-mainBox">
             <!-- 통나무 내용판 -->
             <div class="rh-camping-history-wood-main">
-              <p style="margin-top: 7vw"
+              <p><img src="/resources/static/img/기타/pin.png" alt=""></p>
+              <p
                 class="rh-camping-history-wood-text"
                 data-aos="fade-up"
                 data-aos-easing="ease-in-out"
