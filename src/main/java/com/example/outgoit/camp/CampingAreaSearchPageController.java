@@ -37,7 +37,7 @@ public class CampingAreaSearchPageController {
     }
 
 
-    @GetMapping("/draft1")
+    @GetMapping("/draft1")  // 지도메인페이지
     public String sendDraft1(){
         return "jiho/draft/1";
     }
@@ -46,7 +46,7 @@ public class CampingAreaSearchPageController {
         return "kmh/draft/2";
     }
 
-    @PostMapping("/detail/{campingAreaName}")
+    @PostMapping("/detail/{campingAreaName}") // 디테일
     public String sendDetailPage(
             @PageableDefault(size = 5, sort = "commentNumber", direction = Sort.Direction.DESC) Pageable pageable,
             CampingAreaInfoDTO data,
