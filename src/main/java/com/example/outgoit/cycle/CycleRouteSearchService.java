@@ -1,10 +1,12 @@
 package com.example.outgoit.cycle;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.text.PDFTextStripper;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 @Service
@@ -31,5 +33,15 @@ public class CycleRouteSearchService {
                 scanner.close();
         }
         return dto;
+    }
+
+    public String extractTextFromPDF(int courseNumber) throws IOException {
+        PDDocument document = PDDocument.load(new File("src/main/resources/static/cycle_pdf/"+ courseNumber + ".pdf"));
+        PDFTextStripper pdfTextStripper = new PDFTextStripper();
+        pdfTextStripper.setStartPage(1);
+        pdfTextStripper.setEndPage(1);
+        String text = pdfTextStripper.getText(document);
+        document.close();
+        return text;
     }
 }

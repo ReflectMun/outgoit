@@ -1,5 +1,6 @@
 package com.example.outgoit.trail;
 
+import com.example.outgoit.trail.dto.FeatureData;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
