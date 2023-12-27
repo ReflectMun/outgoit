@@ -21,6 +21,8 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
+  overflow-x: hidden;
+  background: #FFFAF6;
 }
 /* 기본은 비기너 가이드임 */
 .rh-hiking-titleBox {
@@ -64,7 +66,7 @@ body {
 }
 .rh-hiking-wood {
   /* border: 1px solid rgb(0, 183, 255); */
-  width: 75vw;
+  width: 70vw;
   text-align: center;
 }
 .rh-hiking-wood-titleBox {

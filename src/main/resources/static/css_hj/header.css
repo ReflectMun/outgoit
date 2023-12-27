@@ -18,6 +18,7 @@ body {
     margin: 0;
     width: 100vw;
     height: 100vh;
+    overflow-x:hidden;
 }
 
 .hj-container {
@@ -90,9 +91,7 @@ body {
     color: rgb(242, 166, 52);
     user-select: none;
     overflow: hidden;
-    background-color: #FFFAF6;
     border-radius: 10%;
-    box-shadow: 0.2vw 0.2vw 0.2vw 0 #173b21;
 }
 
 .hj-tracking span {
@@ -153,9 +152,7 @@ body {
     color: rgb(242, 166, 52);
     user-select: none;
     overflow: hidden;
-    background-color: #FFFAF6;
     border-radius: 10%;
-    box-shadow: 0.2vw 0.2vw 0.2vw 0 #173b21;
 }
 
 .hj-riding span {
@@ -233,8 +230,8 @@ body {
 
 .hj-menu-icon {
     /*border: 1px solid red;*/
-    width: 3.5vw;
-    height: 3.5vw;
+    width: 3vw;
+    height: 3vw;
     background-image: url("../Img_hj/menu_sun1.png");
     background-repeat: no-repeat;
     background-size: contain;

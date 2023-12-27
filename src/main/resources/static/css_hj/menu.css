@@ -138,8 +138,8 @@ body{
 
   .hj-menu-icon-2 {
     /*border: 1px solid red;*/
-    width: 3.5vw;
-    height: 6vw;
+    width: 3vw;
+    height: 4vw;
     background-image: url("../Img_hj/menu_moon1.png");
     background-repeat: no-repeat;
     background-size: contain;

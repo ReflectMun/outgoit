@@ -21,6 +21,8 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
+  background: #FFFAF6;
+  overflow-x: hidden;
 }
 /* 기본은 비기너 가이드임 */
 .rh-riding-titleBox {
@@ -64,7 +66,7 @@ body {
 }
 .rh-riding-wood {
   /* border: 1px solid rgb(0, 183, 255); */
-  width: 75vw;
+  width: 70vw;
   text-align: center;
 }
 .rh-riding-wood-titleBox {
