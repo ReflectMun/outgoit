@@ -64,18 +64,17 @@ body {
 }
 .rh-riding-wood {
   /* border: 1px solid rgb(0, 183, 255); */
-  width: 80vw;
+  width: 75vw;
   text-align: center;
 }
 .rh-riding-wood-titleBox {
   /* border: 5px solid rgb(255, 0, 43); */
   height: 5.5vw;
-  height: 4vw;
   display: flex;
   justify-content: center;
 }
 .rh-riding-wood-title {
-  width: 55vw;
+  width: 50vw;
   border: 0.5vw solid rgb(92 42 4);
   background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
   box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
@@ -122,14 +121,14 @@ body {
 .rh-riding-wood-main {
   background-image: url("/resources/static/img/기타/paper.png");
   background-size: contain;
-  width: 23vw;
-  height: 23vw;
+  width: 20vw;
+  height: 20vw;
   margin: 1.5%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 1vw;
+  font-size: 0.9vw;
   position: relative;
   z-index: 1;
 }
@@ -185,7 +184,7 @@ body {
 .rh-animal-card {
   font-size: 0.8vw;
   text-align: center;
-  width: 21vw;
+  width: 19vw;
   margin: 10% 0;
 }
 
@@ -269,23 +268,23 @@ body {
   align-items: center;
 
 }
-.rh-riding-history-wood-mainBox {
-  /* border: 5px solid rgb(64, 0, 255); */
-  display: flex;
-  background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
-  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
-  background-size: contain;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: rgb(226, 255, 238);
-  padding: 4vw 0;
-}
+/*.rh-riding-history-wood-mainBox {*/
+/*  !* border: 5px solid rgb(64, 0, 255); *!*/
+/*  display: flex;*/
+/*  background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);*/
+/*  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;*/
+/*  background-size: contain;*/
+/*  flex-wrap: wrap;*/
+/*  justify-content: center;*/
+/*  background-color: rgb(226, 255, 238);*/
+/*  padding: 4vw 0;*/
+/*}*/
 .rh-riding-history-wood-main {
   /* border: 3px solid rgb(255, 0, 0); */
   background-image: url("/resources/static/img/기타/bigPaper.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  width: 70vw;
+  width: 65vw;
   margin: 1%;
 }
 .rh-riding-history-wood-text {
@@ -305,7 +304,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   text-align: center;
   margin-bottom: 2%;
   border: 1px solid #275634;

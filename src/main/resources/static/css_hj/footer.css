@@ -8,14 +8,16 @@ body {
   width: 100%;
   /*border: 2px solid black;*/
 }
+.hj-footer-pic{
+  display: flex;
+  justify-content: center;
+}
 
 .hj-footer-pic > img {
-  display: flex;
   position: relative;
-  justify-content: center;
-  width: 100vw;
+  /*width: 70vw;*/
   z-index: 20;
-  margin-top: -7.5vw;
+  /*margin-top: -7.5vw;*/
 }
 
 .hj-footer {

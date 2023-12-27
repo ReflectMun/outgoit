@@ -198,7 +198,7 @@ $(function () {
     $("#back9").click(function () {
         $("#content9, #back9").hide();
         $("#icon9").fadeToggle();
-        $("#animal").css("height", "23vw").css("background-image", " url('/resources/static/img/기타/paper.png')").css("background-size", "contain");
+        $("#animal").css("height", "20vw").css("background-image", " url('/resources/static/img/기타/paper.png')").css("background-size", "contain");
     });
 
 

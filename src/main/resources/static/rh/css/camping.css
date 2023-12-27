@@ -64,7 +64,7 @@ body {
 }
 
 .rh-camping-wood {
-    width: 80vw;
+    width: 75vw;
     text-align: center;
 }
 
@@ -75,7 +75,7 @@ body {
 }
 
 .rh-camping-wood-title {
-    width: 55vw;
+    width: 50vw;
     border: 0.5vw solid rgb(92 42 4);
     background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
     box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
@@ -126,14 +126,14 @@ body {
 .rh-camping-wood-main {
     background-image: url("/resources/static/img/기타/paper.png");
     background-size: contain;
-    width: 23vw;
-    height: 23vw;
+    width: 20vw;
+    height: 20vw;
     margin: 1.5%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1vw;
+    font-size: 0.9vw;
     position: relative;
     z-index: 1;
 }
@@ -186,7 +186,7 @@ body {
 .rh-animal-card {
     font-size: 0.8vw;
     text-align: center;
-    width: 21vw;
+    width: 19vw;
     margin: 10% 0;
 }
 
@@ -206,7 +206,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.3vw;
+    font-size: 1.1vw;
     text-align: center;
     margin-bottom: 2%;
     border: 1px solid #275634;
@@ -267,10 +267,8 @@ body {
     background-repeat: no-repeat;
 }
 
-
-
 .rh-camping-content1-cut {
-    width: 49%;
+    width: 48%;
     margin: 0.08vw;
 
 }
@@ -297,7 +295,7 @@ body {
     justify-content: center;
     flex-flow: wrap;
     text-align: left;
-    font-size: 0.85vw;
+    font-size: 0.75vw;
 }
 
 
@@ -352,7 +350,7 @@ body {
     background-image: url("/resources/static/img/기타/bigPaper2.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    width: 70vw;
+    width: 65vw;
     margin: 1%;
 }
 
