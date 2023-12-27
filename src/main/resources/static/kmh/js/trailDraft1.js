@@ -35,29 +35,29 @@ try {
                 const url = new URL("http://" + hostName + "/api/trail/search")
 
                 url.searchParams.set("lati", data[0].y)
-
                 url.searchParams.set("lngi", data[0].x)
+                // data는 한라산을 검색했을때 한라산에 관련된 모든 정보
 
+                const {data: resData} = await axios.get(url)
+                // resData - data에서 등산로만 뽑아냄.
+                console.log(data)
+                console.log(resData)
 
-
-                 const {data: resData} = await axios.get(url)
-
-                 addMarker(data.slice(0, 1), resData)
+                addMarker(data.slice(0, 1), resData, data)
                 displayMarker()
                 //const = [r,d,q,w,d,s,a,z,,c,,vv,g]
+
                 //MAth.r 1~10d
-                let name;
                 for (const trail of resData) {
-                   // a[rint]
+                    // a[rint]
                     // 이게 등산로 하나.
                     // 이때 색깔 핸덤하나 생성
                     // console.log(resData)
                     //console.log(trail)
+
                     // console.log(JSON.stringify(resData['properties']['mntn_nm']))
-                  name = trail.properties.mntn_nm;
-                    console.log(name)
-                     //console.log(trail.properties.mntn_nm)
-                     const trailLIne = trail['geometry']['coordinates'][0]
+                    //console.log(trail.properties.mntn_nm)
+                    const trailLIne = trail['geometry']['coordinates'][0]
 
                     // console.log(trailLIne)
                     const path = []
@@ -96,7 +96,7 @@ catch (e) {
     console.log(e)
     alert("오류발생")
 }
-    function addMarker(places, name) {
+    function addMarker(places, resData, data) {
 
         for (const place of places) {
             const coord = new kakao.maps.LatLng(place.y, place.x)
@@ -104,7 +104,7 @@ catch (e) {
                 position: coord
 
             })
-            addListElementsToResultList(name)
+            addListElementsToResultList(resData, data)
 
             kakao.maps.event.addListener(marker, 'click', () => {
                 map.panTo(coord)
@@ -198,10 +198,10 @@ catch (e) {
 //     // }
 // }
 
-function addListElementsToResultList(name) {
+function addListElementsToResultList(name, data) {
+    // 등산로만 있는 것임.
     for (const n of name) {
         console.log(n);
-
         console.log(n.properties.mntn_nm);
 
         const child = document.createElement("div");
@@ -212,6 +212,11 @@ function addListElementsToResultList(name) {
         const childButtonWrapper = document.createElement("div");
 
         const openDetailButton = document.createElement("button");
+        console.log(n)
+        lngi = data[0].x // 뒤바꿈.
+        lati = data[0].y
+        console.log(lngi) // 한라산 국립공원 (마크 핀)의 경도
+        console.log(lati) // 한라산 국립공원 위도
 
         openDetailButton.innerText = "캠핑장 정보 보기";
         openDetailButton.classList.add("open-detail-button");
@@ -219,15 +224,17 @@ function addListElementsToResultList(name) {
             const hiddenForm = document.createElement("form");
             hiddenForm.style.display = "none";
             hiddenForm.method = "post";
-            hiddenForm.action = `/trail/detail/${n.properties.mntn_nm}`;
+            hiddenForm.action = `/trail/detail/${lngi}/${lati}`;
+            // C로 간다
+
             let tempInput;
 
-            for (const prop in apiResData) {
+
                 tempInput = document.createElement("input");
-                tempInput.name = prop;
-                tempInput.value = apiResData[prop];
+                tempInput.name = n;
+                tempInput.value = name;
                 hiddenForm.appendChild(tempInput);
-            }
+
             document.body.appendChild(hiddenForm);
             hiddenForm.submit();
         });

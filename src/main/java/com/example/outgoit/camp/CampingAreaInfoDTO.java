@@ -23,7 +23,6 @@ public class CampingAreaInfoDTO {
     private String gnrlSiteCo; // 일반 야영장 개수
     private String autoStieCo; // 자동차 야영장 개수
     private String resveUrl, resveCl; // 예약관련 무언가들 나중에 필요할 수도
-    private String firstImageUrl; // 썸네일
     private String animalCmgCl; // 애완동물 출입가능 여부 ex) 불가능
     private String eqpmnLendCl; // 캠핑장비 대여가능 여부
     private String operPdCl; // 운영기간 ex) 봄,여름,가을,겨울
@@ -48,6 +47,8 @@ public class CampingAreaInfoDTO {
     private String siteBottomCl3; // 테크바닥(나무마루) 자리 수
     private String siteBottomCl4; // 자갈바닥 자리 수
     private String siteBottomCl5; // 맨흙바닥 자리 수
+
+    private String imageUrl; // 캠핑장 이미지 URL
 
     private String errorMessage; // 에러 발생시 메시지
 
