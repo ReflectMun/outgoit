@@ -31,39 +31,70 @@ public class TrailReviewApiController {
 //    }
 
     @PostMapping("/submit")
-    public boolean submitTrailRouteReview(@RequestBody TrailReview trailReview){
-        trailReviewService.submitReview(
+    public int submitTrailRouteReview(@RequestBody TrailReview trailReview){
+       return trailReviewService.submitReview(
                 trailReview.getAuthor(),
                 trailReview.getPassword(),
                 trailReview.getContent(),
                 trailReview.getRating(),
                 trailReview.getTrailRouteId()
         );
-        return true;
+
     }
 
     @PostMapping("/rating")
     public ArrayList<Object> getTrailRouteReview(@RequestBody TrailReview trailReview){
         return new  ArrayList<> (trailReviewService.getTrailRouteRating(trailReview.getTrailRouteId()));
     }
+// 1.
+//    @PostMapping("/update")
+//    public boolean updateReview(@RequestParam String content,@RequestParam Integer commentNumber){
+////        System.out.println(content);
+//        System.out.println(commentNumber);
+//        trailReviewService.updateReviewContent(content, commentNumber);
+//        return true;
+//
+//    }
+
+// 2.
+//    @PostMapping("/update/{content}/{commentNumber}")
+//    public boolean updateReview(@PathVariable String content,@PathVariable Integer commentNumber){
+//        System.out.println(content);
+//        System.out.println(commentNumber);
+//        trailReviewService.updateReviewContent(content, commentNumber);
+//        return true;
+//
+//    }
+
+    // 3.
     @PostMapping("/update")
-    public boolean updateReview(String content, Integer commentId){
-        trailReviewService.updateReviewContent(content, commentId);
-        return true;
+    public int updateReview(@RequestBody TrailReview trailReview){
+        System.out.println(trailReview.getContent());
+        System.out.println(trailReview.getCommentNumber());
+//        trailReviewService.updateReviewContent(trailReview.getContent(), Math.toIntExact(trailReview.getCommentNumber()));
+     return    trailReviewService.updateReviewContent(trailReview);
+
 
     }
 
     @PostMapping("/delete")
-    public boolean deleteReview(Integer commentId){
-        trailReviewService.deleteReview(commentId);
-        return true;
+    public int deleteReview(@RequestBody TrailReview trailReview){
+      return   trailReviewService.deleteReview(Math.toIntExact(trailReview.getCommentNumber()));
+
     }
 
     @GetMapping("/list")
     public ArrayList<TrailReview> getTrailRouteReviewList(@PageableDefault(size = 5, sort = "commentNumber",direction = Sort.Direction.DESC) Pageable pageable,
                                                           String trailRouteId, Integer pageNumber){
+        if (pageNumber == 0){
+            return  new ArrayList<>();
+        }
         Pageable modified = PageRequest.of(pageNumber -1, pageable.getPageSize(), pageable.getSort());
-        return new ArrayList<>(trailReviewService.loadTrailRouteReview(trailRouteId , modified).getContent());
+        Page<TrailReview> result = trailReviewService.loadTrailRouteReview(trailRouteId , modified);
+        if (pageNumber > result.getTotalPages()){
+            return new ArrayList<>();
+        }
+        return new ArrayList<TrailReview>(result.getContent());
     }
 //    @GetMapping("/paging")
 //    public ArrayList<TrailReview> getAllTrailRouteReview(@PageableDefault(size = 5, sort = "commentNumber",direction = Sort.Direction.DESC) Pageable pageable){
