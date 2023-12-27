@@ -48,10 +48,6 @@ public class TrailRoutePageController {
     public String GetDetailTrain(@PathVariable("lngi") double lngi, @PathVariable("lati") double lati, Model model) throws Exception {
         ArrayList<FeatureData> trailRouteList = trailRouteService.getTrailRouteList(lngi, lati); // list를 반환함.
 
-        for (FeatureData f : trailRouteList) {
-            System.out.println(f.toString());
-        }
-
         model.addAttribute("trailRouteList", trailRouteList);
 
         // 모델에 trailRouteList를 추가
