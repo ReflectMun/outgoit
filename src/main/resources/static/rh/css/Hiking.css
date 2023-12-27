@@ -25,13 +25,14 @@ body {
 /* 기본은 비기너 가이드임 */
 .rh-hiking-titleBox {
   width: 100%;
-  padding-top: 10%;
-  padding-bottom: 5.104%;
-  margin-bottom: 3%;
+  height: 26.042vw;
+  margin-bottom: 5%;
   background-image: url(../../img/등산/hiking_beginner.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
   /* border: 2px solid rgb(255, 0, 0); */
 }
 
@@ -68,24 +69,23 @@ body {
 }
 .rh-hiking-wood-titleBox {
   /* border: 5px solid rgb(255, 0, 43); */
-  height: 4vw;
+  height: 5.5vw;
   display: flex;
   justify-content: center;
 }
 .rh-hiking-wood-title {
   width: 55vw;
-  /* border: 3px solid rgb(238, 255, 0); */
+  border: 0.5vw solid rgb(92 42 4);
   background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
   box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
   background-size: contain;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.5vw;
+  font-size: 2.4vw;
   font-family: "JalnanGothic";
-  color: #7e4a135e;
-  -webkit-text-stroke: 0.05vw white;
-  text-shadow: 0 0 14px black;
+  color: #ffffff;
+  -webkit-text-stroke: 0.1vw #290b0b;
 }
 .rh-hiking-wood-bridgeBox {
   /* border: 5px solid rgb(255, 0, 217); */
@@ -106,21 +106,20 @@ body {
   width: 3vw;
 }
 .rh-hiking-wood-mainBox {
-  /* border: 5px solid rgb(64, 0, 255); */
+  border: 1vw solid rgb(92 42 4);
   display: flex;
   background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
   box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
   background-size: contain;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 4vw 0;
+  padding: 5vw 0;
+  border-radius: 5%;
+
 }
 
 /* 정보 카드 */
 .rh-hiking-wood-main {
-  /* border: 3px solid rgb(255, 0, 0); */
-  /*background-color: rgb(255, 255, 255);*/
-  /*box-shadow: inset -3px -3px 3px 0px #c5c5c5;*/
   background-image: url("/resources/static/img/기타/paper.png");
   background-size: contain;
   width: 23vw;
@@ -131,7 +130,9 @@ body {
   align-items: center;
   text-align: center;
   font-size: 1vw;
-  position: relative;}
+  position: relative;
+  z-index: 1;
+}
 
 .rh-hiking-wood-mainPost {
   margin: 5%;
@@ -254,13 +255,14 @@ body {
 /* 따로 만짐 안전가드 */
 .rh-hiking-safety-titleBox {
   width: 100%;
-  padding-top: 10.104%;
-  padding-bottom: 5%;
-  margin-bottom: 3%;
+  height: 26.042vw;
+  margin-bottom: 5%;
   background-image: url("/resources/static/img/등산/hiking_safety.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
   /* border: 2px solid rgb(255, 0, 0); */
 }
 .rh-hiking-safety-title {
@@ -286,28 +288,16 @@ body {
 /* 따로 만짐 역사 */
 .rh-hiking-history-titleBox {
   width: 100%;
-  padding-top: 14.68%;
-  padding-bottom: 10%;
-  margin-bottom: 3%;
+  height: 26.042vw;
+  margin-bottom: 5%;
   background-image: url("/resources/static/img/등산/등산용 인포_가이드.jpg");
   background-position: center;
   background-size: 66%;
   background-repeat: no-repeat;
-}
-.rh-hiking-history-wood-mainBox {
-  /* border: 5px solid rgb(64, 0, 255); */
   display: flex;
-  background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
-  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
-  background-size: contain;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: rgb(226, 255, 238);
-  padding: 4vw 0;
+  align-items: center;
 }
 .rh-hiking-history-wood-main {
-  /* border: 3px solid rgb(255, 0, 0); */
-  /*background-color: rgb(255, 251, 195);*/
   width: 70vw;
   margin: 1%;
   background-image: url("/resources/static/img/기타/bigPaper.png");
@@ -320,8 +310,9 @@ body {
   font-size: 1vw;
   line-height: 1.8vw;
 }
-.rh-riding-history-wood-textLast {
+
+.rh-hiking-history-wood-textLast {
   margin-top: 5%;
-  margin-bottom: 20%;
+  margin-bottom: 10%;
   font-size: 1vw;
 }

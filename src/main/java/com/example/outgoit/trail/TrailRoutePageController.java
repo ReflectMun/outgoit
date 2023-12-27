@@ -1,5 +1,6 @@
 package com.example.outgoit.trail;
 
+import com.example.outgoit.trail.dto.FeatureData;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -45,6 +46,7 @@ public class TrailRoutePageController {
     @PostMapping("/detail/{lngi}/{lati}/{index}")
     public String GetDetailTrain(@PathVariable("lngi") double lngi, @PathVariable("lati") double lati, @PathVariable ("index") int index, Model model) throws Exception {
 
+
     ArrayList<com.example.outgoit.trail.dto.FeatureData> trailRouteList = trailRouteService.getTrailRouteList(lngi, lati); // list를 반환함.
         System.out.println(index);
 
@@ -53,6 +55,9 @@ public class TrailRoutePageController {
 
     // 모델에 trailRouteList를 추가
     model.addAttribute("trailRouteList", trailRouteList.get(index).getProperties());
+
+
+
 
 
         // 모델에 trailRouteList를 추가
