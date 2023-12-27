@@ -115,7 +115,7 @@ body {
   background-size: contain;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 5vw 0;
+  padding: 3vw 0;
   border-radius: 5%;
 }
 
@@ -297,6 +297,7 @@ body {
 .rh-riding-history-wood-textLast {
   margin-top: 5%;
   margin-bottom: 10%;
+  line-height: 1.8vw;
   font-size: 1vw;
 }
 

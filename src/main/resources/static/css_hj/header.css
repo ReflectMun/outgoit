@@ -34,9 +34,7 @@ body {
     width: 100%;
     justify-content: space-between;
     background-color: #275634;
-    position: fixed;
     top: 0;
-    z-index: 998;
 }
 
 .hj-right {
@@ -244,7 +242,6 @@ body {
 .hj-camping-content-page {
     width: 100%;
     height: auto;
-    margin-top: 4.5vw;
 }
 
 /*호버 효과*/

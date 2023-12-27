@@ -248,7 +248,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="rh-camping-wood-main" style="visibility: hidden">
+                <div class="rh-camping-wood-main" style="visibility: hidden; height: 0;">
                     </div>
                 </div>
             </div>
