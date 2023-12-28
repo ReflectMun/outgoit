@@ -8,7 +8,7 @@ pageEncoding="UTF-8"%>
     <title>Document</title>
     <link
       rel="stylesheet"
-      href="../../../../../../../resources/static/rh/css/camping.css"
+      href="/resources/static/rh/css/camping.css"
     />
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
