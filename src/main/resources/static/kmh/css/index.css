@@ -35,13 +35,10 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        overflow: hidden;
+        /*overflow: hidden;*/
+        /*align-items: center;*/
     }
 
-    a {
-        text-decoration-line: none;
-        color: inherit;
-    }
 
     .container {
         position: relative;
@@ -53,7 +50,8 @@
     .title-wrap {
         width: 100vw;
         height: 17vw;
-        margin-top: 2vw;
+        margin-top: 5vw;
+        padding-top: 1vw;
     }
 
     .title {
@@ -111,11 +109,11 @@
     .menu-wrap {
         /* border: 5px solid black; */
         width: 100vw;
-        height: 35vw;
+        /*height: 35vw;*/
         display: flex;
         justify-content: center;
         animation: fadeInUp 1s ease-in-out forwards;
-        /*margin-bottom: 1vw;*/
+        margin-top: 2vw;
     }
 
     @keyframes fadeInUp {
@@ -131,14 +129,13 @@
 
 
     .menu {
-        width: 20vw;
-        height: 15vw;
+        width: 18vw;
+        height: 20vw;
         display: grid;
         place-items: center;
-        padding-top: 4vw;
-        padding-bottom: 7.5vw;
-        margin-bottom: 5vw;
-        margin: 3vw;
+        padding-bottom: 2vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
         background-color: rgba(255, 255, 255, 0.8);
         border-radius: 10%;
         box-shadow: 0px 0.7vw 0.7vw 0px rgba(0, 0, 0, 0.5);
@@ -151,7 +148,7 @@
         font-size: 3vw;
         font-weight: bold;
         color: #19672d;
-        margin-top: 0.6vw;
+        margin-botton: 3vw;
     }
 
     .menu-txt {
@@ -162,6 +159,7 @@
         color: transparent;
         background-repeat: no-repeat;
         transition: background-size 0.32s ease-in;
+
     }
 
     .menu:hover {
