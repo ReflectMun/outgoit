@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 throw new Error("서버와의 통신 중 알 수 없는 오류가 발생")
 
             for(const review of resData){
+
                 const madeReviewBox = makeReviewBox(review)
                 reviewListContainer.appendChild(madeReviewBox)
             }
@@ -83,7 +84,7 @@ async function getPrevCommentPage() {
     const campingAreaId = document.getElementById("camping-area-id").value
     try {
         const resData = await getReviewList(campingAreaId, pageNum - 1)
-
+        // console.log(resData)
         if (resData === null)
             throw new Error("서버와 통신 중 원인을 알 수 없는 오류 발생")
 
@@ -402,6 +403,7 @@ async function getReviewList(areaId, pageNumber){
     const reqUrl = "/api/review/camping/list?" + `campingAreaId=${areaId}&pageNumber=${pageNumber}`
     try {
         const {data: resData} = await axios.get(reqUrl)
+        // console.log(resData)
         return resData
     } catch (e) {
         return null

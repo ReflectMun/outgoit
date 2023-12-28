@@ -1,22 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
     //검색 클릭시 campinformation 뜨게
     // let serch = document.querySelector('.open-detail-button');
-    let detailpopup = document.getElementById('hj-container2');
-    let closedetailpopup = document.getElementById('hj-close-btn');
-
+    // let detailpopup = document.getElementById('hj-container2');
+    // let closedetailpopup = document.getElementById('hj-close-btn');
+    //
     // function campinfoup(){
     //      alert(11)
     //     detailpopup.style.display='block';
     // }
-    function campinfodown(){
-        // alert(22)
-        detailpopup.style.display='none';
-    }
-    // if (serch) {
-    //
-    //     serch.addEventListener('click',campinfoup);
+    // function campinfodown(){
+    //     // alert(22)
+    //     detailpopup.style.display='none';
     // }
-    closedetailpopup.addEventListener('click',campinfodown);
+    // // if (serch) {
+    // //
+    // //     serch.addEventListener('click',campinfoup);
+    // // }
+    // closedetailpopup.addEventListener('click',campinfodown);
 
         //js
     //팝업 열리기
