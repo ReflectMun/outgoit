@@ -23,7 +23,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
     <div class="hj-container">
       <div class="hj-header">
         <div class="hj-right" onclick="location.href='/outgoit/camping'">
-          <div class="hj-logo"></div>
+          <div class="hj-logo"> <img src="/resources/static/Img_hj/outgoit_logo1.png"> </div>
           <!-- 로고 이미지 넣기 -->
           <div class="hj-title">Out<span>&nbsp;Go&nbsp;</span>It</div>
           <!-- 글자 나중에    -->
