@@ -21,7 +21,7 @@ public class CyclePageContoller {
     }
     @GetMapping("/riding")
     public String sendRidingPage(Model model){
-        return "kmh/riding";
+        return "jsp/riding/ridingMain";
     }
 
     @GetMapping("/pdf")
