@@ -63,7 +63,7 @@
                             • 텐트 <br/>
                             • 그라운드 시트 <br/>
                             • 의자, 테이블 <br/>
-                            • 취침 용품<span style="font-size: 0.7vw">(침낭, 매트 등)</span> <br/>
+                            • 취침 용품<span>(침낭, 매트 등)</span> <br/>
                         </div>
                         <div class="rh-camping-content1-cut" id="cut2">
                             <span style="border-radius: 50%; background-color: #98bd98">조리도구</span><br>
@@ -262,7 +262,7 @@
                     <div class="rh-camping-wood-main-best rh-pointer">
                         <div class="rh-camping-wood-mainPost-best" id="best1">
                             <div onclick="location.href=''" class="rh-camping-wood-mainPost-bestText">
-                                <div>서울</div>
+                                <div class="bestTextLocal">서울</div>
                                 <div class="bestText2">한강공원 난지 캠핑장</div>
                             </div>
                         </div>
@@ -270,7 +270,7 @@
                     <div class="rh-camping-wood-main-best rh-pointer">
                         <div class="rh-camping-wood-mainPost-best " id="best2">
                             <div onclick="location.href=''" class="rh-camping-wood-mainPost-bestText">
-                                <div>충청북도</div>
+                                <div class="bestTextLocal">충청북도</div>
                                 <div class="bestText2">송호국민관광지 캠핑장</div>
                             </div>
                         </div>
@@ -278,7 +278,7 @@
                     <div class="rh-camping-wood-main-best rh-pointer">
                         <div class="rh-camping-wood-mainPost-best" id="best3">
                             <div onclick="location.href=''" class="rh-camping-wood-mainPost-bestText">
-                                <div>부산</div>
+                                <div class="bestTextLocal">부산</div>
                                 <div class="bestText2">대저 생태공원 캠핑장</div>
                             </div>
                         </div>

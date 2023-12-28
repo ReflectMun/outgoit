@@ -29,7 +29,7 @@ body {
     width: 100%;
     height: 26.042vw;
     margin-bottom: 5%;
-    background-image: url(../../../../../../../resources/static/img/캠핑/camping_beginner.jpg);
+    background-image: url("/resources/static/img/캠핑/camping_beginner.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -79,7 +79,7 @@ body {
 .rh-camping-wood-title {
     width: 50vw;
     border: 0.5vw solid rgb(92 42 4);
-    background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
+    background-image: url("/resources/static/img/기타/나무보드.jpg");
     box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
     background-size: contain;
     display: flex;
@@ -106,7 +106,7 @@ body {
 }
 
 .rh-camping-wood-bridge {
-    background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
+    background-image: url("/resources/static/img/기타/나무보드.jpg");
     box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
     background-size: contain;
     width: 3vw;
@@ -115,7 +115,7 @@ body {
 .rh-camping-wood-mainBox {
     border: 1vw solid rgb(92 42 4);
     display: flex;
-    background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
+    background-image: url("/resources/static/img/기타/나무보드.jpg");
     box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
     background-size: contain;
     flex-wrap: wrap;
@@ -155,7 +155,7 @@ body {
     width: 2.5vw;
 }
 #historyRedpin {
-    width: 4vw;
+    width: 3vw;
 
 }
 
@@ -289,7 +289,7 @@ body {
 
 }
 .rh-camping-content1-cut > span{
-    font-weight: bold;
+    font-size: 0.7vw;
 }
 
 #cut1 {
@@ -401,7 +401,7 @@ body {
         width: 100%;
         height: 60vw;
         margin-bottom: 5%;
-        background-image: url(../../../../../../../resources/static/img/캠핑/camping_beginner.jpg);
+        background-image: url("/resources/static/img/캠핑/camping_beginner.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -411,11 +411,11 @@ body {
 
     .rh-camping-title {
         font-family: JalnanGothic;
-        width: 27%;
-        font-size: 4vw;
+        width: 40%;
+        font-size: 6vw;
         color: white;
         position: relative;
-        left: 13%;
+        left: 4.5%;
         animation: fadeInUp 1s ease-out forwards;
     }
 
@@ -642,7 +642,7 @@ body {
 
     }
     .rh-camping-content1-cut > span{
-        font-weight: bold;
+        font-size: 1.3vw;
     }
 
     #cut1 {
@@ -671,7 +671,7 @@ body {
     /* 안전가이드 */
     .rh-camping-safety-titleBox {
         width: 100%;
-        height: 65vw;
+        height: 60vw;
         margin-bottom: 5%;
         background-image: url(../../../../../../../resources/static/img/캠핑/camping_safety.jpg);
         background-position: center;
@@ -683,11 +683,11 @@ body {
 
     .rh-camping-safety-title {
         font-family: JalnanGothic;
-        width: 35%;
-        font-size: 4vw;
+        width: 46%;
+        font-size: 6vw;
         color: white;
         position: relative;
-        left: 58%;
+        left: 50%;
         animation: fadeInUp 1s ease-out forwards;
     }
 
@@ -725,15 +725,12 @@ body {
 
     #historyRedpin {
         width: 7vw;
-
     }
 
     .rh-camping-history-wood-text {
         font-size: 3vw;
         line-height: 5vw;
         margin: 5%;
-        line-height: 5vw;
-
     }
 
     .rh-camping-history-wood-textLast {
@@ -756,5 +753,9 @@ body {
     .rh-redPin{
         width: 4vw;
     }
+    .bestTextLocal{
+        font-size: 2vw;
+    }
+
 }
 
