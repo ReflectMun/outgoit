@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUT GO IT - main</title>
-    <link rel="stylesheet" href="/resources/static/kmh/css/camping.css">
+    <link rel="stylesheet" href="/static/kmh/css/main.css">
     <link rel="stylesheet" href="/resources/static/css_hj/camp_information.css">
     <script src="/resources/static/js_hj/campinformation2.js"></script>
 </head>

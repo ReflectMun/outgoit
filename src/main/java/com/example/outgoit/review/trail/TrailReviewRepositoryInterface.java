@@ -28,3 +28,6 @@ public interface TrailReviewRepositoryInterface extends JpaRepository<TrailRevie
 
     Page<TrailReview> findAllByTrailRouteId(String trailRouteId,Pageable pageable);
 }
+//@Query(value = "SELECT * FROM trail_review WHERE trail_route_id = :trailRouteId", nativeQuery = true)
+//List<TrailReview> findByTrailRouteId(@Param("trailRouteId") Long trailRouteId);
+

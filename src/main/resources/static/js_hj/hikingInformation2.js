@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // let serch = document.querySelector('.open-detail-button');
     // let detailpopup = document.getElementById('hj-container2');
     // let closedetailpopup = document.getElementById('hj-close-btn');
-    //
+
     // function campinfoup(){
     //      alert(11)
     //     detailpopup.style.display='block';
@@ -20,21 +20,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
         //js
     //팝업 열리기
-        let contentdetail = document.getElementById("hj-content-detail");
-        let pluscontainer = document.getElementById("hj-content-plus-container");
-        let popupoverlay = document.getElementById("hj-overlay-popup");
-                function popup(){
-                    // alert(11);
-                    pluscontainer.classList.add('show');
-                    popupoverlay.classList.add('active');
-                }
-    contentdetail.addEventListener('click', popup);
-                //닫는 js
-                function closepopup(){
-                    pluscontainer.classList.remove('show');
-                    popupoverlay.classList.remove('active');
-                }
-                pluscontainer.addEventListener('click',closepopup);
+    //     let contentdetail = document.getElementById("hj-content-detail");
+    //     let pluscontainer = document.getElementById("hj-content-plus-container");
+    //     let popupoverlay = document.getElementById("hj-overlay-popup");
+    //             function popup(){
+    //                 // alert(11);
+    //                 pluscontainer.classList.add('show');
+    //                 popupoverlay.classList.add('active');
+    //             }
+    // contentdetail.addEventListener('click', popup);
+    //             //닫는 js
+    //             function closepopup(){
+    //                 pluscontainer.classList.remove('show');
+    //                 popupoverlay.classList.remove('active');
+    //             }
+    //             pluscontainer.addEventListener('click',closepopup);
 
     //js
     let editbox = document.getElementById('hj-edit-box');
@@ -89,10 +89,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         });
 
-        let pageNum = 1
+        // let pageNum = 1
 
         function getPrevCommentPage() {
-            const reqUrl = "/api/review/camping/list"
+            const reqUrl = "/api/review/trail/list"
         }
 
         function getNextCommentPage() {
