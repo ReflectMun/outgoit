@@ -1,4 +1,5 @@
 $(function () {
+
     $("#icon1, #icon2, #riding-content2, #icon3, #icon4, #icon5, #camping-content5, #icon6, #camping-icon7, #icon7, #icon8, #icon9").show();
     $("#content1, #content2, #content3, #content4, #content5, #content6, #camping-content7, #content7, #content8, #content9").hide();
     $("#autoCampC, #glampingC, #backCampC").hide();
@@ -212,8 +213,18 @@ $(function () {
     $("#back9").click(function () {
         $("#content9, #back9").hide();
         $("#icon9").fadeToggle();
-        $("#animal").css("height", "20vw").css("background-image", " url('/resources/static/img/기타/양피지.png')");
+        if (window.innerWidth === 430 && window.innerHeight === 932) {
+            $("#animal").css("height", "40vw").css("background-image", "url('/resources/static/img/기타/양피지.png')");
+        } else {
+            $("#animal").css("height", "20vw").css("background-image", "url('/resources/static/img/기타/양피지.png')");
+        }
     });
+
+    if (window.innerWidth === 430 && window.innerHeight === 932) {
+        $("#campingTitleText").css("font-size", "6vw");
+    } else {
+        $("#campingTitleText").css("font-size", "2.4vw");
+    }
 
 
 });

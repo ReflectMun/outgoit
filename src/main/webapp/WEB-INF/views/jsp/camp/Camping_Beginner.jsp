@@ -83,7 +83,6 @@
                             • 구급약품 <br/>
                             • 계절에 따른 온/냉방 용품
                         </div>
-                        <br>
                         ※장비 구입 시 인원, 계절, 캠핑장 타입을 고려해 충분한 정보 수집과 질의를 거친 후 장만해야 해요.
                         <div class="rh-back-set rh-pointer" id="back1">돌아가기
                             <img width="20%" src="/resources/static/img/icon/next.png" alt=""></div>
