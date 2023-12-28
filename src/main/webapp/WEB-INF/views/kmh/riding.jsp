@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUT GO IT - riding </title>
-    <link rel="stylesheet" href="/static/kmh/css/main.css">
+    <link rel="stylesheet" href="/resources/static/kmh/css/main.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
@@ -24,17 +24,17 @@
 
         <div class="banner-wrap camp swiper mySwiper">
             <div class="banner swiper-wrapper">
-                <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
-                <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
-                <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
-                <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
-                <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
+                <div class="swiper-slide"><img src="/resources/static/kmh/img/riding_banner.jpg"></div>
+                <div class="swiper-slide"><img src="/resources/static/kmh/img/riding_banner.jpg"></div>
+                <div class="swiper-slide"><img src="/resources/static/kmh/img/riding_banner.jpg"></div>
+                <div class="swiper-slide"><img src="/resources/static/kmh/img/riding_banner.jpg"></div>
+                <div class="swiper-slide"><img src="/resources/static/kmh/img/riding_banner.jpg"></div>
             </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
                 <div class="banner-txt-wrap">
-                    <div class="banner-titlek">
+                    <div class="banner-title">
 <%--                        <span>HKING</span>--%>
                          <div class="banner-sub-txt">
                             <span> &nbsp; Campsite &nbsp; Campfire &nbsp; Tent Pitching &nbsp; Sleeping Bag &nbsp; Fishing Spot &nbsp; Sunrise/Sunset Views &nbsp; Stargazing &nbsp; Nature Exploration &nbsp; Outdoor Enthusiast </span>

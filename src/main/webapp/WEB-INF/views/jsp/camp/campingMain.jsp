@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUT GO IT - main</title>
     <link rel="stylesheet" href="/resources/static/kmh/css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
     <!-- 헤더 영역 -->
@@ -20,18 +22,27 @@
 
         <!-- 배너 영역 (슬라이드 들어가면 좋을듯!) -->
 
-        <div class="banner-wrap camp">
-            <div class="banner">
-                <div class="banner-txt-wrap">
-                    <div class="banner-title">
-                        <span>CAMPING</span>
-                    </div>
-                     <div class="banner-sub-txt"> 
-                        <span> 캠핑에 대한 간단한 케치프레이즈 ^0^ </span>
+        <div class="banner-wrap camp swiper mySwiper">
+            <div class="banner swiper-wrapper">
+                <div class="swiper-slide"><img src="resources/static/img/camping_banner.jpg"></div>
+                <div class="swiper-slide"><img src="resources/static/img/camping_banner.jpg"></div>
+                <div class="swiper-slide"><img src="resources/static/img/camping_banner.jpg"></div>
+                <div class="swiper-slide"><img src="resources/static/img/camping_banner.jpg"></div>
+                <div class="swiper-slide"><img src="resources/static/img/camping_banner.jpg"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+            <div class="banner-txt-wrap">
+                <div class="banner-title">
+                    <%--                        <span>CAMPING</span>--%>
+                    <div class="banner-sub-txt">
+                        <span> &nbsp; Campsite &nbsp; Campfire &nbsp; Tent Pitching &nbsp; Sleeping Bag &nbsp; Fishing Spot &nbsp; Sunrise/Sunset Views &nbsp; Stargazing &nbsp; Nature Exploration &nbsp; Outdoor Enthusiast </span>
                     </div>
                 </div>
             </div>
         </div>
+
 
         <!-- 배너 여기까지 / 컨텐트 영역 (지도 API)-->
 
