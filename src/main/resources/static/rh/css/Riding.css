@@ -102,7 +102,7 @@ body {
   justify-content: space-between;
 }
 .rh-riding-wood-bridge {
-  background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
+  background-image: url(/resources/static/img/기타/나무보드.jpg);
   box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
   background-size: contain;
   width: 3vw;
@@ -110,13 +110,13 @@ body {
 .rh-riding-wood-mainBox {
   border: 1vw solid rgb(92 42 4);
   display: flex;
-  background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
+  background-image: url(/resources/static/img/기타/나무보드.jpg);
   box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
   background-size: contain;
   flex-wrap: wrap;
   justify-content: center;
   padding: 3vw 0;
-  border-radius: 5%;
+  border-radius: 1%;
 }
 
 /* 정보 카드 */
@@ -589,12 +589,11 @@ body {
     height: 60vw;
     margin-bottom: 5%;
     background-image: url("/resources/static/img/자전거/riding2.png");
-    background-position: center;
+    background-position: 88%;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-
   }
   /*.rh-riding-history-wood-mainBox {*/
   /*  !* border: 5px solid rgb(64, 0, 255); *!*/
@@ -632,7 +631,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 2.8vw;
+    font-size: 2.2vw;
     text-align: center;
     margin-bottom: 2%;
     padding: 0.3vw 2vw;
@@ -652,22 +651,21 @@ body {
   /*빨간핀*/
   /*핀 감싸는 div */
   .rh-redPin-height{
-    height: 2vw;
+    height: 5vw;
   }
   /*콘텐트를 봤을 때 pin*/
   .rh-redPin-textView{
-    height: 2vw;
+    height: 1vw;
     position: absolute;
     top: 1.4vw;
   }
   /*핀 img*/
   .rh-redPin{
-    width: 2.5vw;
+    width: 4vw;
   }
   #historyRedpin {
     width: 3vw;
   }
-
 
 
 
