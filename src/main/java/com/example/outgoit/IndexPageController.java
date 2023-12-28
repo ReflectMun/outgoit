@@ -27,7 +27,7 @@ public class IndexPageController {
 
     @GetMapping("/riding")
     public String sendRidingMainPage(Model model) {
-        model.addAttribute("ridingContentPage", "Riding_About.jsp");
+        model.addAttribute("ridingContentPage", "ridingMain.jsp");
         return "jsp/riding/container";
     }
 
