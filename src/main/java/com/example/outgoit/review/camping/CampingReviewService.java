@@ -22,23 +22,23 @@ public class CampingReviewService {
     ///////////////////////////// 서비스 구현 /////////////////////////////////////
     // 해당 캠핑장의 리뷰를 페이지별로 지정해서 불러오는 메서드
     public Page<CampingReview> loadCampingAreaReview(int campingAreaId, Pageable pageable){
-        return repo.findByCampingAreaId(campingAreaId, pageable);
+        return repo.findByCampingAreaIdAndIsDeletedFalse(campingAreaId, pageable);
     }
 
     // 리뷰 수정 및 삭제를 위해 해당 작업을 할 리뷰를 불러오는 메서드
-    public ArrayList<CampingReview> getCampingAreaReview(int commentId){
-        return new ArrayList<CampingReview>(repo.findByCommentNumber(commentId));
+    public ArrayList<CampingReview> getCampingAreaReview(Long commentId){
+        return new ArrayList<CampingReview>(repo.findByCommentNumberAndIsDeletedFalse(commentId));
     }
 
     // 사용자가 입력한 비밀번호가 일치하는지 확인하는 메서드
-    public boolean isPasswordMatch(String password, int commentId){
+    public Boolean isPasswordMatch(String password, Long commentId){
         CampingReview review = this.getCampingAreaReview(commentId).get(0);
         return review.getPassword().equals(password);
     }
 
     // 리뷰 내용을 수정하는 메서드(만약 비밀번호가 맞으면)
     @Transactional
-    public NotificationProcessStatusDTO updateReviewContent(String password, int commentId, String content){
+    public NotificationProcessStatusDTO updateReviewContent(String password, Long commentId, String content){
         if(!isPasswordMatch(password, commentId)){
             System.out.println("비밀번호가 일치하지 않아 리뷰를 수정할 수 없음");
             return new NotificationProcessStatusDTO(5201, "비밀번호가 일치하지 않습니다!");
@@ -51,7 +51,7 @@ public class CampingReviewService {
 
     // 리뷰를 삭제하는 메서드(만약 비밀번호가 맞으면)
     @Transactional
-    public NotificationProcessStatusDTO deleteReview(int commentId, String password){
+    public NotificationProcessStatusDTO deleteReview(Long commentId, String password){
         if(!isPasswordMatch(password, commentId)){
             System.out.println("입력된 비밀번호가 일치하지 않음");
             return new NotificationProcessStatusDTO(5101, "입력된 비밀번호가 일치하지 않습니다!");
@@ -89,6 +89,6 @@ public class CampingReviewService {
 
     // 캠핑장 평점 조회
     public ArrayList<Object> getCampingAreaRating(int campingAreaId){
-        return new ArrayList<>(this.repo.findAvgRatingByCampingAreaId(campingAreaId));
+        return new ArrayList<>(this.repo.findAvgRatingByCampingAreaIdAndIsDeletedFalse(campingAreaId));
     }
 }

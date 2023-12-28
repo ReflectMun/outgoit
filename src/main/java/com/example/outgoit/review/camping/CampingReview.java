@@ -1,7 +1,6 @@
 package com.example.outgoit.review.camping;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -35,6 +34,9 @@ public class CampingReview { // 이 DTO는 캠핑장 리뷰에 관한 데이터�
     @Column(name = "commented_date", nullable = false)
     private LocalDate commentedDate; // 리뷰를 작성한 날짜
 
+    @Column(name = "is_deleted", nullable = false)
+    private Boolean isDeleted;
+
     @PrePersist
     public void prePersist(){
         this.commentedDate = LocalDate.now(ZoneId.of("Asia/Seoul"));
@@ -52,5 +54,6 @@ public class CampingReview { // 이 DTO는 캠핑장 리뷰에 관한 데이터�
         this.content = content;
         this.rating = rating;
         this.campingAreaId = campingAreaId;
+        this.isDeleted = false;
     }
 }
