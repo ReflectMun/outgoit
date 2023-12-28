@@ -181,7 +181,7 @@ $(function () {
     $("#icon8").click(function () {
         $("#icon8").hide();
         $("#content8, #back8").fadeToggle();
-        $("#best").css("visibility","visible").css("left","0").css("height","100%").css("background-image", " url('/resources/static/img/기타/noPin.png')").css("background-size", "100% 100%").css("transition","0.5s ease-in-out");
+        $("#best").css("visibility","visible").css("left","0").css("height","100%").css("background-image", " url('/resources/static/img/기타/양피지.png')").css("background-size", "100% 100%").css("transition","0.5s ease-in-out");
     });
     $("#back8").click(function () {
         $("#best").css("left","-25.3vw").css("visibility","hidden").css("height","0");
@@ -193,12 +193,12 @@ $(function () {
     $("#icon9").click(function () {
         $("#icon9").hide();
         $("#content9, #back9").fadeToggle();
-        $("#animal").css("height", "100%").css("background-image", " url('/resources/static/img/기타/longPaper.png')").css("background-size", "100% 100%");
+        $("#animal").css("height", "100%").css("background-image", " url('/resources/static/img/기타/양피지.png')").css("background-size", "100% 100%");
     });
     $("#back9").click(function () {
         $("#content9, #back9").hide();
         $("#icon9").fadeToggle();
-        $("#animal").css("height", "20vw").css("background-image", " url('/resources/static/img/기타/paper.png')").css("background-size", "contain");
+        $("#animal").css("height", "20vw").css("background-image", " url('/resources/static/img/기타/양피지.png')");
     });
 
 

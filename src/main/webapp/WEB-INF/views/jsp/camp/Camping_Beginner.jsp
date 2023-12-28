@@ -47,11 +47,17 @@
 
                 <div class="rh-camping-wood-main">
                     <div class="rh-pointer" id="icon1">
+                        <div class="rh-redPin-height">
+                            <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                        </div>
                         <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/stone.png" alt="">
                         </div>
                         <div class="rh-card-set">캠핑 필수 용품</div>
                     </div>
                     <div class="rh-camping-wood-mainPost-section4" id="content1">
+                        <div class="rh-redPin-textView">
+                            <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                        </div>
                         <div class="rh-camping-content1-cut" id="cut1">
                             <span id="mainItem" style="border-radius: 50%; background-color: yellow">메인 장비</span><br>
                             • 텐트 <br/>
@@ -85,6 +91,9 @@
                 </div>
                 <div class="rh-camping-wood-main">
                     <div class="rh-pointer" id="icon2">
+                        <div class="rh-redPin-height">
+                            <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                        </div>
                         <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/howtouse.png"
                                   alt=""></div>
                         <div class="rh-card-set">장비 사용법 숙지</div>

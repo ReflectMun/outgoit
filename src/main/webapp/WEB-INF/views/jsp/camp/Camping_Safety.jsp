@@ -88,6 +88,9 @@ pageEncoding="UTF-8"%>
             </div>
             <div class="rh-camping-wood-main">
               <div class="rh-pointer" id="icon3">
+                <div class="rh-redPin-height">
+                  <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                </div>
                 <div> <img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/foodBear.png" alt=""></div>
                 <div class="rh-card-set">야생동물 주의</div>
               </div>
@@ -102,6 +105,9 @@ pageEncoding="UTF-8"%>
             </div>
             <div class="rh-camping-wood-main">
               <div class="rh-pointer" id="icon4">
+                <div class="rh-redPin-height">
+                  <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                </div>
                 <div> <img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/trash2.png" alt=""></div>
                 <%--사진 1로 할지 2로 할지 고민--%>
                 <div class="rh-card-set">쓰레기 배출</div>
@@ -118,6 +124,9 @@ pageEncoding="UTF-8"%>
             </div>
             <div class="rh-camping-wood-main">
               <div class="rh-pointer" id="icon5">
+                <div class="rh-redPin-height">
+                  <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                </div>
                 <div> <img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/axe2.png" alt=""></div>
                 <div class="rh-card-set">위험한 장비</div>
               </div>
@@ -130,8 +139,12 @@ pageEncoding="UTF-8"%>
                 <div class="rh-back-set rh-pointer" id="back5">돌아가기 <img width="20%" src="/resources/static/img/icon/next.png" alt=""> </div>
               </div>
             </div>
+
             <div class="rh-camping-wood-main">
               <div class="rh-pointer" id="icon6">
+                <div class="rh-redPin-height">
+                  <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                </div>
                 <div> <img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/campNG.png" alt=""></div>
                 <div class="rh-card-set">불법 야영 금지</div>
               </div>
@@ -147,6 +160,9 @@ pageEncoding="UTF-8"%>
             </div>
             <div class="rh-camping-wood-main">
               <div class="rh-pointer" id="camping-icon7">
+                <div class="rh-redPin-height">
+                  <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                </div>
                 <div> <img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/weather2.png" alt=""></div>
                 <div class="rh-card-set">일기예보 확인</div>
               </div>
@@ -162,6 +178,9 @@ pageEncoding="UTF-8"%>
             </div>
             <div class="rh-camping-wood-main">
               <div class="rh-pointer" id="icon8">
+                <div class="rh-redPin-height">
+                  <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                </div>
                 <div> <img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/pain.png" alt=""></div>
                 <div class="rh-card-set">식중독 예방</div>
               </div>
@@ -177,10 +196,16 @@ pageEncoding="UTF-8"%>
             </div>
             <div class="rh-camping-wood-main" id="animal">
               <div class="rh-pointer" id="icon9">
+                <div class="rh-redPin-height">
+                  <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                </div>
                 <div> <img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/wildanimals.png" alt=""></div>
                 <div class="rh-card-set">야생동물 신고</div>
               </div>
               <div class="rh-camping-wood-mainPost" id="content9">
+                <div class="rh-redPin-textView">
+                  <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                </div>
                 <table class="rh-animal-card" border="1">
                   <tr>
                     <td>지역</td>
