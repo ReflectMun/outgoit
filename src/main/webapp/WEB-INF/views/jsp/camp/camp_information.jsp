@@ -6,7 +6,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>${campingAreaName} 상세정보</title>
-    <link rel="stylesheet" href="/resources/static/jiho/css/draft1.css"/>
+    <link rel="stylesheet" href="/resources/static/jiho/css/camp_information.css"/>
     <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -36,12 +36,16 @@
             <div id="hj-content-pic">
                 <!-- 팝업 클릭했을떄 뜨는 상세내용 디브 -->
                 <div id="hj-content-plus-container">
+                    <div id="hj-content-plus-overray">
+                    <div class="hj-content-plus-ray">
                     <div id="hj-detail-tel">번호: ${telephoneNumber}</div>
                     <div id="hj-detail-season">운영 시즌: ${periodOfOperation}</div>
                     <div id="hj-detail-addr">주소: ${address}</div>
                     <div id="hj-detail-facilities">부대시설: ${subsidiaryFacilities}</div>
+                    </div>
+                    <div class="hj-content-plus-ray">
                     <div id="hj-line-introduce">
-                        <div>한줄 소개</div>
+<%--                        <div>한줄 소개</div>--%>
                         <div>${lineIntro}</div>
                     </div>
                     <div>일반 야영장 개수: ${generalSite}</div>
@@ -62,10 +66,14 @@
                     <div>테크 자리: ${siteDeck}</div>
                     <div>자갈 자리: ${siteGravel}</div>
                     <div>맨흙 자리: ${siteSoil}</div>
+                    </div>
+                    </div>
                 </div>
                 <div id="hj-overlay-popup"></div>
                 <!-- 칠판에 쓰인 분필 -->
                 <div id="hj-content-box-comment"><span>OUT GO IT</span></div>
+                <div id="hj-post-it"></div>
+
                 <!-- 이미지 부분 -->
                 <div id="hj-content-inside-box">
                     <div id="hj-content-img" class="swiper">
