@@ -14,7 +14,7 @@ public class TrailReview {
     @Column(name="comment_number",nullable = false,unique = true)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long commentNumber; // 리뷰 고유번호
+    private Long commentNumber; // 리뷰 고유번호
 
     @Column(nullable = false)
     private String author; // 작성자 닉네임
@@ -34,6 +34,9 @@ public class TrailReview {
     @Column(name = "commented_date", nullable = false)
     private LocalDate commentedDate; // 리뷰를 작성한 날짜
 
+    @Column(name = "is_deleted", nullable = false)
+    private Boolean isDeleted;
+
     @PrePersist
     public void prePersist(){
         this.commentedDate = LocalDate.now(ZoneId.of("Asia/Seoul"));
@@ -51,7 +54,7 @@ public class TrailReview {
         this.content = content;
         this.rating = rating;
         this.trailRouteId = trailRouteId;
-
+        this.isDeleted = false;
     }
 
 

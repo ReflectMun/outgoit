@@ -218,11 +218,6 @@ async function commentModifyingReady(commentNumber, element) {
  * */
 async function updateComment(commentNumber, reviewContentInput, modifyButtonElement){
     const passwordInput = modifyButtonElement.parentNode.firstElementChild.firstElementChild
-    // console.log(commentNumber)
-    // console.log(reviewContentInput.value);
-    // const commentInput = document.createElement("input")
-    // commentInput.type = "text"
-    // commentInput.value = commentDiv.innerText
 
     if(!passwordInput.value){
         alert("댓글을 수정하시려면 비밀번호를 입력해주세요!")
@@ -233,34 +228,7 @@ async function updateComment(commentNumber, reviewContentInput, modifyButtonElem
         alert("댓글 내용이 비어있어요!")
         return
     }
-// 3가지 방법 알려줄게요.  역시 mz..!
 
-// 1. url  querystring 으로 전달하는 경우   @requestparam 으로 파라미터 값 받아야됨
-// 2. url을 조금 restful 하게 만들어서 처리하는 방법 있음 이 경우 @ParamVariable 써서 url의 데이터와 값 일치 시켜 받으면 됨
-// 3. controller에서 객체 맵핑 받는 경우     @requestbody 로 json body값을 java dto에 맵핑 시켜야됨
-    // 1.
-    // try{
-    //     const { data: resData } = await axios.post(
-    //         '/api/review/trail/update', null,
-    //         {
-    //             params:{
-    //                 password: passwordInput.value,
-    //                 content: reviewContentInput.value,
-    //                 commentNumber: commentNumber
-    //             }
-    //         }
-    //     )
-
-    // 2.
-    // try{
-    //     let mzUrl = '/api/review/trail/update/';
-    //         mzUrl += reviewContentInput.value;
-    //         mzUrl += "/" + commentNumber;
-    //     const { data: resData } = await axios.post(
-    //       mzUrl
-    //     )
-
-    // 3.
     try{
         const { data: resData } = await axios.post(
             '/api/review/trail/update',
@@ -271,7 +239,7 @@ async function updateComment(commentNumber, reviewContentInput, modifyButtonElem
             }
         )
 
-        if(resData== 1)
+        if(resData === 1)
             alert("댓글 수정 완료!")
         else {
             alert("댓글 수정 실패")
@@ -431,12 +399,9 @@ function makeReviewBox(reviewData) {
  * null을 리턴할 경우 서버와 통신하는 도중에 문제가 생겼다는 의미임
  * */
 async function getReviewList(areaId, pageNumber){
-    // console.log(areaId)
-    // console.log(pageNumber)
     const reqUrl = "/api/review/trail/list?" + `trailRouteId=${areaId}&pageNumber=${pageNumber}`
     try {
         const {data: resData} = await axios.get(reqUrl)
-        // console.log(resData)
         return resData
     } catch (e) {
         return null

@@ -18,6 +18,8 @@ import java.util.ArrayList;
 @Controller
 @RequestMapping("/hiking")
 public class TrailRoutePageController {
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////// 의존성 주입 코드 ////////////////////////////////////////////////////
     private final TrailRouteService trailRouteService;
     public final TrailReviewService trailReviewService;
 
@@ -25,34 +27,8 @@ public class TrailRoutePageController {
         this.trailRouteService = trailRouteService;
         this.trailReviewService = trailReviewService;
     }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//    public TrailRoutePageController(TrailReviewService trailReviewService){
-//        this.trailReviewService = trailReviewService;
-//    }
-
-//    @GetMapping
-//    public String getTrailRoutePage() {
-//        return "jiho/trail";
-//    }
-//
-//    @GetMapping("/draft1")
-//    public String sendDraft1() {
-//        return "jsp/hiking/hiking";
-//    }
-
-//    @GetMapping("/draft2min")
-//    public String sendDraft2(){
-//        return "kmh/hiking3";
-//    }
-
-    //    @PostMapping("/detail/{lngi}/{lati}")
-//    public ArrayList<TrailRouteDTO> GetDetailTrain(@PathVariable ("lngi") double lngi, @PathVariable ("lati") double lati) throws Exception {
-//       trailRouteService.getTrailRouteList(lngi, lati);
-//        {
-//            return new ArrayList<TrailRouteDTO>();
-//        }
-//
-//    }
     @PostMapping("/detail/{lngi}/{lati}/{index}/{trailRouteId}")
     public String GetDetailTrain(
                                  @PageableDefault(size = 5, sort = "commentNumber", direction = Sort.Direction.DESC) Pageable pageable,
@@ -89,46 +65,12 @@ public class TrailRoutePageController {
     model.addAttribute("existReviews", !reviews.isEmpty());
     model.addAttribute("hikingContentPage", "hiking_information.jsp");
 
-
-
-        // 모델에 trailRouteList를 추가
-//    model.addAttribute("trailRouteList", trailRouteList);
-
-
-//    // 다른 TrailRouteDTO 속성들을 얻어와서 모델에 추가
-//    // ...
-//
         return "jsp/hiking/container"; // yourViewName은 실제로 사용할 JSP 파일의 이름이어야 합니다.
     }
 
-
-//            @PageableDefault(size = 5, sort = "commentNumber", direction = Sort.Direction.DESC) Pageable pageable,
-//            @PathVariable("TrailRouteName") String trailRouteName,
-
-
-//            TrailRouteDTO data
-//            Model model
-//
-//    {  TrailRouteService(lngi, lati);
-//        System.out.printf(String.valueOf(data));
-    //       Pageable modified = PageRequest.of(0, pageable.getPageSize(), pageable.getSort());
-//       ArrayList<TrailReview> reviews =
-//               new ArrayList<>(trailReviewService.loadTrailRouteReview(data.getId()));
-////        model.addAttribute("trailAreaName", data.getProperties().getMntn_nm());
-//        model.addAttribute("trailKm", data.getProperties().getSec_len());
-//        model.addAttribute("trailHour", data.getProperties().getUp_min());
-//        model.addAttribute("trailLevel", data.getProperties().getCat_nam());
-//
-//
-//        model.addAttribute("existReviews", !reviews.isEmpty());
-//        model.addAttribute("reviews", reviews);
-
-    //        return "hj/camp/trail_information";
-//    }
     @GetMapping("/detail/{TrailRouteName}")
     @ResponseBody
     public String sendError() {
         return "잘못된 접근입니다";
     }
-
 }

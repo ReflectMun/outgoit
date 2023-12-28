@@ -6,12 +6,13 @@
 <body>
 
 <h1>페이지 소스 출처</h1>
-<h2>API</h2>
+<h2>기능</h2>
 
 <pre>
 고캠핑 캠핑장 정보 조회: https://www.data.go.kr/data/15101933/openapi.do#/API%20목록/searchList
 국토교통부 등산로: https://www.vworld.kr/dev/v4dv_2ddataguide2_s002.do?svcIde=frstclimb
 카카오맵: https://apis.map.kakao.com/web/wizard/
+스와이퍼: https://swiperjs.com/
 </pre>
 
 <h2>이미지</h2>
@@ -47,6 +48,7 @@
   1. 라이딩 이야기
   2. 라이딩 안전정보: https://kr.freepik.com/free-vector/hand-drawn-people-doing-sports-illustration_49663454.htm#&position=2&from_view=search&track=ais&uuid=ac9167d1-d8c0-4bff-8488-b7c6ff3032b5
   3. 라이딩 초보자: https://kr.freepik.com/free-vector/flat-landing-page-template-for-world-bicycle-day-celebration_40883519.htm#page=13&query=world%20bicycle%20day&position=21&from_view=search&track=ais&uuid=bd239d2d-fa10-4fea-8cf7-70505687a8b7
+  4. 라이딩 메인 카드: https://www.bike.go.kr/index.do
 </pre>
 <h2>아이콘</h2>
 <pre>
