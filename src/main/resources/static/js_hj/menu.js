@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const star = $('<div class="star"></div>');
                 star.css({
                     left: Math.random() * 100 + '%',
-                    animationDuration: Math.random() * 2 + 1 + 's'
+                    animationDuration: Math.random() * 9 + 1 + 's'
                 });
                 starsContainer.append(star);
             }
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const star2 = $('<div class="star2"></div>');
                 star2.css({
                     left: Math.random() * 100 + '%',
-                    animationDuration: Math.random() * 2 + 1 + 's'
+                    animationDuration: Math.random() * 9 + 1 + 's'
                 });
                 starsContainer2.append(star2);
             }
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const star3 = $('<div class="star3"></div>');
                 star3.css({
                     left: Math.random() * 100 + '%',
-                    animationDuration: Math.random() * 2 + 1 + 's'
+                    animationDuration: Math.random() * 9 + 1 + 's'
                 });
                 starsContainer3.append(star3);
             }
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const star4 = $('<div class="star4"></div>');
                 star4.css({
                     left: Math.random() * 100 + '%',
-                    animationDuration: Math.random() * 2 + 1 + 's'
+                    animationDuration: Math.random() * 9 + 1 + 's'
                 });
                 starsContainer4.append(star4);
             }

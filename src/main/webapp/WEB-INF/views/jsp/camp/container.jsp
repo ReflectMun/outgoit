@@ -22,13 +22,13 @@ charset=UTF-8" pageEncoding="UTF-8"%>
   <%-- 헤더 시작 --%>
     <div class="hj-container">
       <div class="hj-header">
-        <div class="hj-right" onclick="location.href='/outgoit/camping'">
-          <div class="hj-logo"> <img src="/resources/static/Img_hj/outgoit_logo1.png"> </div>
+        <div class="hj-logo-container">
+          <div class="hj-logo" onclick="location.href='/outgoit/camping'">  </div>
           <!-- 로고 이미지 넣기 -->
-          <div class="hj-title">Out<span>&nbsp;Go&nbsp;</span>It</div>
+<%--          <div class="hj-title">Out<span>&nbsp;Go&nbsp;</span>It</div>--%>
           <!-- 글자 나중에    -->
         </div>
-        <div class="hj-left">
+        <div class="hj-right">
           <div class="hj-tracking hj-font" onclick="location.href='/outgoit/camping'">
             <span>C</span><span>a</span><span>m</span><span>p</span
           ><span>i</span><span>n</span><span>g</span>

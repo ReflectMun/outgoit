@@ -127,7 +127,7 @@ body {
 .hj-tel-icon{
   width: 1.2vw;
   height: 1.2vw;
-  background-image: url("../../Img_hj/tel.png");
+  background-image: url("/resources/static/Img_hj/tel.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -139,7 +139,7 @@ body {
 .hj-location-icon {
   width: 1.2vw;
   height: 1.2vw;
-  background-image: url("../../Img_hj/location.png");
+  background-image: url("/resources/static/Img_hj/location.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

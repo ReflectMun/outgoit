@@ -67,6 +67,7 @@ body{
   text-align: center;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
 }
 
 .hj-star-container, .hj-star-container-2, .hj-star-container-3, .hj-star-container-4 {

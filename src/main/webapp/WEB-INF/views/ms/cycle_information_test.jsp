@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${campingAreaName} 상세정보</title>
-    <link rel="stylesheet" href="/resources/static/css_hj/camp_information.css" />
+    <link rel="stylesheet" href="/static/css_hj/campinfo.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/static/js_hj/try2.js"></script>
