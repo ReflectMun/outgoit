@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUT GO IT - main</title>
+    <link rel="stylesheet" href="/static/kmh/css/main.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="/resources/static/kmh/css/camping.css">
 </head>
 <body>
     <!-- 헤더 영역 -->

@@ -38,14 +38,10 @@ public class CampingAreaSearchPageController {
     @GetMapping("/Safety")
     public String safetyPage(Model model){
         return "RH/jsp/Camping/Camping_Safety";
-      // return "RH/jsp/Hiking/Hiking_Safety";
-      //return "RH/jsp/Riding/Riding_Safety";
     }
     @GetMapping("/Beginner")
     public String beginnerPage(Model model){
         return "RH/jsp/Camping/Camping_Beginner";
-      //   return "RH/jsp/Hiking/Hiking_Beginner";
-      //return "RH/jsp/Riding/Riding_Beginner";
     }
 
     @PostMapping("/detail/{campingAreaName}")
@@ -102,8 +98,8 @@ public class CampingAreaSearchPageController {
         model.addAttribute("siteDeck", data.getSiteBottomCl3());
         model.addAttribute("siteGravel", data.getSiteBottomCl4());
         model.addAttribute("siteSoil", data.getSiteBottomCl5());
-
-        return "jiho/draft/camp_information";
+        model.addAttribute("campingContentPage","camp_information.jsp");
+        return "jsp/camp/container";
     }
 
     @GetMapping("/detail/{campingAreaName}")
@@ -111,4 +107,5 @@ public class CampingAreaSearchPageController {
     public String sendError(){
         return "잘못된 접근입니다";
     }
+
 }

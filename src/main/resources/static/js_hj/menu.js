@@ -85,10 +85,13 @@ document.addEventListener('DOMContentLoaded', function() {
         $(document).ready(function() {
             $('.hj-menu-icon').on('click', function() {
                 $('.hj-overlay').fadeToggle(100); // 500은 애니메이션 지속 시간(ms)입니다. 필요에 따라 조절 가능
+                $('body').css("overflow-x", "hidden").css("overflow-y","hidden");
             });
             $('.hj-menu-icon-2').on('click', function() {
                 $('.hj-overlay').fadeToggle(100); // 500은 애니메이션 지속 시간(ms)입니다. 필요에 따라 조절 가능
+                $('body').css("overflow-y", "auto");
             });
+
         });
 
 
