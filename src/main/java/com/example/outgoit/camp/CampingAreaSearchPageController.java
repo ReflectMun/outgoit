@@ -29,33 +29,6 @@ public class CampingAreaSearchPageController {
     }
     ////////////////////////////////////////////////////////
 
-//    @GetMapping
-//    public String sendCampingSearchingPage(Model model){
-//        model.addAttribute("msg", "camping");
-//
-//        return "jh/camp";
-//    }
-
-
-<<<<<<< HEAD
-    @GetMapping("/draft1")  // 지도메인페이지
-    public String sendDraft1(){
-        return "jiho/draft/1";
-    }
-    @GetMapping("/draft2")
-    public String sendDraft2(){
-        return "kmh/draft/2";
-    }
-=======
-//    @GetMapping("/camping")
-//    public String sendDraft1(){
-//        return "jsp/camp/campingMain";
-//    }
-//    @GetMapping("/draft2")
-//    public String sendDraft2(){
-//        return "kmh/draft/2";
-//    }
->>>>>>> front
 
     @PostMapping("/detail/{campingAreaName}") // 디테일
     public String sendDetailPage(
@@ -88,7 +61,8 @@ public class CampingAreaSearchPageController {
                         ? "부대시설 정보가 없습니다"
                         : data.getSbrsEtc()
         );
-//        model.addAttribute("etc", data.getSbrsEtc());
+
+//      model.addAttribute("etc", data.getSbrsEtc());
         model.addAttribute("ratingAvg", ratingAvg);
         model.addAttribute("campingAreaNumber", data.getContentId());
         model.addAttribute("existReviews", !reviews.isEmpty());
@@ -120,5 +94,6 @@ public class CampingAreaSearchPageController {
     public String sendError(){
         return "잘못된 접근입니다";
     }
+
 
 }

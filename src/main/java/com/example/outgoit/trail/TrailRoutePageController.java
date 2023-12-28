@@ -10,17 +10,16 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
-<<<<<<< HEAD
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-=======
+
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
->>>>>>> hj-front-copy
+
 
 import java.util.ArrayList;
 
@@ -30,16 +29,8 @@ public class TrailRoutePageController {
     private final TrailRouteService trailRouteService;
     public final TrailReviewService trailReviewService;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public TrailRoutePageController(TrailRouteService trailRouteService){
-        this.trailRouteService = trailRouteService;
-    }
-=======
-    public TrailRoutePageController(TrailRouteService trailRouteService) {
-=======
     public TrailRoutePageController(TrailRouteService trailRouteService, TrailReviewService trailReviewService) {
->>>>>>> front
+
         this.trailRouteService = trailRouteService;
         this.trailReviewService = trailReviewService;
     }
@@ -48,8 +39,7 @@ public class TrailRoutePageController {
 //        this.trailReviewService = trailReviewService;
 //    }
 
-<<<<<<< HEAD
->>>>>>> hj-front-copy
+
     @GetMapping
     public String getTrailRoutePage() {
         return "jiho/trail";
@@ -59,7 +49,7 @@ public class TrailRoutePageController {
     public String sendDraft1() {
         return "kmh/hiking";
     }
-=======
+
 //    @GetMapping
 //    public String getTrailRoutePage() {
 //        return "jiho/trail";
@@ -69,10 +59,8 @@ public class TrailRoutePageController {
 //    public String sendDraft1() {
 //        return "jsp/hiking/hiking";
 //    }
->>>>>>> front
 
-<<<<<<< HEAD
-=======
+
 //    @GetMapping("/draft2min")
 //    public String sendDraft2(){
 //        return "kmh/hiking3";
@@ -163,6 +151,6 @@ public class TrailRoutePageController {
     public String sendError() {
         return "잘못된 접근입니다";
     }
->>>>>>> hj-front-copy
+
 
 }

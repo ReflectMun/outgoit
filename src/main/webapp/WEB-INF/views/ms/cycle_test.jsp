@@ -11,7 +11,7 @@
 =======
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="/resources/static/kmh/css/camping.css">
+    <link rel="stylesheet" href="/resources/static/kmh/css/main.css">
 >>>>>>> backend
 </head>
 <body>
