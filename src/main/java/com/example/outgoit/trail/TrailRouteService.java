@@ -10,8 +10,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.Arrays;
-
 @Service
 public class TrailRouteService {
     private final String key = "F9C68EFA-3050-383C-8CC5-191419985184";

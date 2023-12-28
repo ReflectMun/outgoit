@@ -200,7 +200,8 @@ catch (e) {
 
 function addListElementsToResultList(name, data) {
     // 등산로만 있는 것임.
-    for (const n of name) {
+    for (const [index, n] of name.entries()) {
+        console.log(index)
         console.log(n);
         console.log(n.properties.mntn_nm);
 
@@ -213,18 +214,18 @@ function addListElementsToResultList(name, data) {
 
         const openDetailButton = document.createElement("button");
         console.log(n)
-        lngi = data[0].x // 뒤바꿈.
+        lngi = data[0].x
         lati = data[0].y
         console.log(lngi) // 한라산 국립공원 (마크 핀)의 경도
         console.log(lati) // 한라산 국립공원 위도
-
+        let trailRouteId = n.id
         openDetailButton.innerText = "캠핑장 정보 보기";
         openDetailButton.classList.add("open-detail-button");
         openDetailButton.addEventListener("click", (e) => {
             const hiddenForm = document.createElement("form");
             hiddenForm.style.display = "none";
             hiddenForm.method = "post";
-            hiddenForm.action = `/trail/detail/${lngi}/${lati}`;
+            hiddenForm.action = `/trail/detail/${lngi}/${lati}/${index}/${trailRouteId}`;
             // C로 간다
 
             let tempInput;
