@@ -45,10 +45,10 @@
         <div class="content">
             <div class="map-txt-wrap">
                 <div class="map-title">
-                    <span>  </span>
+                    <span> Riding Course </span>
                 </div>
                 <div class="map-sub-txt">
-                    <span> 간단한 기능 설명하는 문장 하나 들어가면 좋을듯</span>
+                    <span> 전국 100가지 자전거길로 떠나보세요</span>
                 </div>
             </div>
             <div class="metro-city-btn-menu">
