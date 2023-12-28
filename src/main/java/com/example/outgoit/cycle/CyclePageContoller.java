@@ -19,6 +19,10 @@ public class CyclePageContoller {
     public String sendCyclePage(Model model){
         return "ms/cycle_test";
     }
+    @GetMapping("/riding")
+    public String sendRidingPage(Model model){
+        return "kmh/riding";
+    }
 
     @GetMapping("/pdf")
     public String pdfTest(Model model) throws IOException {
