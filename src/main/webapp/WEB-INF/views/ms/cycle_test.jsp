@@ -51,8 +51,8 @@
             </div>
             <div class="search-result">
                 <div class="map-all">
-                    <div id="map"></div>
-                    <div id="search-result-list"><jsp:include page="pdf_test.jsp"></jsp:include></div>
+                    <div id="map cycle-page-map"></div>
+                    <div id="cycle-detail-slide"><jsp:include page="pdf_test.jsp"></jsp:include></div>
                 </div>
             </div>
         </div>

@@ -29,22 +29,20 @@ public class CampingAreaSearchPageController {
     }
     ////////////////////////////////////////////////////////
 
-//    @GetMapping
-//    public String sendCampingSearchingPage(Model model){
-//        model.addAttribute("msg", "camping");
-//
-//        return "jh/camp";
-//    }
-
-
-//    @GetMapping("/camping")
-//    public String sendDraft1(){
-//        return "jsp/camp/campingMain";
-//    }
-//    @GetMapping("/draft2")
-//    public String sendDraft2(){
-//        return "kmh/draft/2";
-//    }
+    @GetMapping("/About")
+    public String aboutPage(Model model){
+        return "RH/jsp/Camping/Camping_About";
+        // return "RH/jsp/Hiking/Hiking_About";
+        // return "RH/jsp/Riding/Riding_About";
+    }
+    @GetMapping("/Safety")
+    public String safetyPage(Model model){
+        return "RH/jsp/Camping/Camping_Safety";
+    }
+    @GetMapping("/Beginner")
+    public String beginnerPage(Model model){
+        return "RH/jsp/Camping/Camping_Beginner";
+    }
 
     @PostMapping("/detail/{campingAreaName}")
     public String sendDetailPage(
@@ -74,25 +72,49 @@ public class CampingAreaSearchPageController {
         model.addAttribute(
                 "subsidiaryFacilities",
                 data.getSbrsEtc().isEmpty()
-                        ? "부대시설 정보가 없습니다"
+                        ? "캠핑장에서 등록한 부대시설 정보가 없어요!"
                         : data.getSbrsEtc()
         );
 //        model.addAttribute("etc", data.getSbrsEtc());
         model.addAttribute("ratingAvg", ratingAvg);
         model.addAttribute("campingAreaNumber", data.getContentId());
         model.addAttribute("existReviews", !reviews.isEmpty());
-        model.addAttribute("lineIntro", data.getLineIntro());
+        model.addAttribute("lineIntro",
+                data.getLineIntro().isEmpty() ?
+                        "캠핑장에서 등록한 한 줄 소개가 없어요!" :
+                        data.getLineIntro()
+        );
         model.addAttribute("generalSite", data.getGnrlSiteCo());
-        model.addAttribute("autoSite", data.getAutoStieCo());
-        model.addAttribute("animalComingControl", data.getAnimalCmgCl());
-        model.addAttribute("equipmentRental", data.getEqpmnLendCl());
+        model.addAttribute("autoSite", data.getAutoSiteCo());
+        model.addAttribute("animalComingControl",
+                data.getAnimalCmgCl().isEmpty() ?
+                        "캠핑장에 문의해야해요!" :
+                        data.getAnimalCmgCl()
+        );
+        model.addAttribute("equipmentRental",
+                data.getEqpmnLendCl().isEmpty() ?
+                        "캠핑장에 문의해야해요!" :
+                        data.getEqpmnLendCl()
+        );
         model.addAttribute("trailerAccompanyAt", data.getTrlerAcmpnyAt());
         model.addAttribute("caravanAccompanyAt", data.getCaravAcmpnyAt());
         model.addAttribute("toiletCount", data.getToiletCo());
-        model.addAttribute("availableFacilities", data.getPosblFcltyCl());
+        model.addAttribute("availableFacilities",
+                data.getPosblFcltyCl().isEmpty() ?
+                        "이용가능한 주변 시설 정보가 없어요" :
+                        data.getPosblFcltyCl()
+        );
         model.addAttribute("managementStatement", data.getManageSttus());
-        model.addAttribute("holidaySeasonStart", data.getHvofBgnde());
-        model.addAttribute("holidaySeasonEnd", data.getHvofEnddle());
+        model.addAttribute("holidaySeasonStart",
+                data.getHvofBgnde().isEmpty() ?
+                        "연중무휴에요!" :
+                        data.getHvofBgnde()
+        );
+        model.addAttribute("holidaySeasonEnd",
+                data.getHvofEnddle().isEmpty() ?
+                        "연중무휴에요!" :
+                        data.getHvofEnddle()
+        );
         model.addAttribute("showerRoomCount", data.getSwrmCo());
         model.addAttribute("brazierControl", data.getBrazierCl());
         model.addAttribute("siteGrass", data.getSiteBottomCl1());

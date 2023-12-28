@@ -12,26 +12,14 @@
 
     <!-- Demo styles -->
     <style>
-        body {
-            background: #eee;
-            font-size: 14px;
-            /*color: #000;*/
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
 
-        html,
-        body {
-            position: relative;
-            height: 100%;
+        #cycle-detail-slide{
+            width: 35%;
+            height: 35vw;
+            margin-left: 1vw;
         }
-
-        .swiper {
-            width: 400px;
-            height: 566px;
+        .swiper-v {
+            width: 100%;
         }
 
         .swiper-slide {
@@ -53,7 +41,7 @@
 
 <body>
 <!-- Swiper -->
-<div class="swiper mySwiper swiper-h">
+<div class="swiper mySwiper1 swiper-h">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
             <div class="swiper mySwiper2 swiper-v">

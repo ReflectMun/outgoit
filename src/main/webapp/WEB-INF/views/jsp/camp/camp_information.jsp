@@ -279,7 +279,34 @@
                 reviewListContainer = document.createElement("div")
                 // 리뷰 리스트를 담을 컨테이너를 생성하고 zentai-box의 자식 요소로 추가
                 reviewListContainer.id = "hj-review-list-container"
+
+                const paging = document.createElement("div")
+
+                const prevButton = document.createElement("div")
+                prevButton.innerHTML = "<span>[앞으로]</span>"
+                prevButton.onclick = () => {
+                    getPrevCommentPage()
+                }
+                prevButton.id = "hj-prev-button"
+                paging.appendChild(prevButton)
+
+                const commentPageViewer = document.createElement("div")
+                commentPageViewer.innerHTML = "<span>1</span>"
+                commentPageViewer.id = "hj-pages"
+                paging.appendChild(commentPageViewer)
+
+                const nextButton = document.createElement("div")
+                nextButton.innerHTML = "<span>[다음으로]</span>"
+                nextButton.id = "hj-next-button"
+                nextButton.onclick = () => {
+                    getNextCommentPage()
+                }
+                paging.appendChild(nextButton)
+
+                paging.classList.add("hj-page-box")
+
                 zentai.appendChild(reviewListContainer)
+                zentai.appendChild(paging)
             }
 
             reviewListContainer.innerHTML = ""

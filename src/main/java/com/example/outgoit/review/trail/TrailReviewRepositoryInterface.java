@@ -10,23 +10,26 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface TrailReviewRepositoryInterface extends JpaRepository<TrailReview, Long> {
-    @Query("select avg(rating) from trail_review where trailRouteId = :trailRouteId")
+    @Query("select avg(rating) from trail_review where trailRouteId = :trailRouteId AND isDeleted = false")
     List<Object> findAvgRatingByTrailRouteId(@Param("trailRouteId") String trailRouteId);
 
-    List<TrailReview> findByTrailRouteId(String trailRouteId);
+    Page<TrailReview> findAllByTrailRouteIdAndIsDeletedFalse(String trailRouteId, Pageable pageable);
 
-    List<TrailReview> findByCommentNumber(int commentNumber);
+    List<TrailReview> findByCommentNumberAndIsDeletedFalse(Long commentNumber);
 
     @Modifying
-    @Query("update trail_review set content = :content where commentNumber = :commentNumber")
+    @Query("update trail_review set content = :content where commentNumber = :commentNumber AND isDeleted = false")
     int updateContentByCommentNumber(
             @Param("content") String content,
-            @Param("commentNumber") int commentNumber
+            @Param("commentNumber") Long commentNumber
     );
 
-    int deleteByCommentNumber(int commentNumber);
+    @Modifying
+    @Query("UPDATE trail_review SET isDeleted = true WHERE commentNumber = :commentNumber AND isDeleted = false")
+    int deleteByCommentNumber(
+            @Param("commentNumber") Long commentNumber
+    );
 
-    Page<TrailReview> findAllByTrailRouteId(String trailRouteId,Pageable pageable);
 }
 //@Query(value = "SELECT * FROM trail_review WHERE trail_route_id = :trailRouteId", nativeQuery = true)
 //List<TrailReview> findByTrailRouteId(@Param("trailRouteId") Long trailRouteId);
