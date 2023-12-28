@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUT GO IT - main</title>
-    <link rel="stylesheet" href="/static/kmh/css/main.css">
+    <link rel="stylesheet" href="/resources/static/kmh/css/main.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
@@ -51,8 +51,8 @@
             </div>
             <div class="search-result">
                 <div class="map-all">
-                    <div id="map"></div>
-                    <div id="search-result-list"><jsp:include page="pdf_test.jsp"></jsp:include></div>
+                    <div id="map cycle-page-map"></div>
+                    <div id="cycle-detail-slide"><jsp:include page="pdf_test.jsp"></jsp:include></div>
                 </div>
             </div>
         </div>

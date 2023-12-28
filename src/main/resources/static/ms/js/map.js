@@ -1,4 +1,4 @@
-const mapContainer = document.getElementById("map")
+const mapContainer = document.getElementById("cycle-page-map")
 const mapOption = {
     center: new kakao.maps.LatLng(37.57295965192006, 126.97690156991),
     level: 5
@@ -98,7 +98,7 @@ function displayMarker(){
 
 // ----------------- 자전거길 플러시 카드 ---------------------------------
 
-const swiper = new Swiper(".mySwiper", {
+const swiper1 = new Swiper(".mySwiper1", {
     direction: "vertical",
     spaceBetween: 50,
     pagination: {

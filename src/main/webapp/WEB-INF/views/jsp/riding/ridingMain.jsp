@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUT GO IT - riding </title>
-    <link rel="stylesheet" href="/static/kmh/css/main.css">
+    <link rel="stylesheet" href="/resources/static/kmh/css/main.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
@@ -30,11 +30,8 @@
                 <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
                 <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
             </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
                 <div class="banner-txt-wrap">
-                    <div class="banner-titlek">
+                    <div class="banner-title">
 <%--                        <span>HKING</span>--%>
                          <div class="banner-sub-txt">
                             <span> &nbsp; Campsite &nbsp; Campfire &nbsp; Tent Pitching &nbsp; Sleeping Bag &nbsp; Fishing Spot &nbsp; Sunrise/Sunset Views &nbsp; Stargazing &nbsp; Nature Exploration &nbsp; Outdoor Enthusiast </span>
@@ -60,8 +57,8 @@
             </div>
             <div class="search-result">
                 <div class="map-all">
-                    <div id="map"></div>
-                    <div id="search-result-list"><h1>리스트 띄워주는 div</h1></div>
+                    <div id="cycle-page-map"></div>
+                    <div id="cycle-detail-slide"><jsp:include page="../../ms/pdf_test.jsp"></jsp:include></div>
                 </div>
             </div>
         </div>
@@ -82,23 +79,15 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=770a2850e8ce3177b209d2d94dc1e58b&libraries=services"></script>
-    <script type="text/javascript" src="/static/kmh/js/camping_area_search.js"></script>
 
     <script>
         var swiper = new Swiper(".mySwiper", {
+            loop: true,
             autoplay: {
                 delay: 5000,
             },
-            pagination: {
-                el: ".swiper-pagination",
-                type: "progressbar",
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
         });
     </script>
-
+    <script type="text/javascript" src="/resources/static/ms/js/map.js"></script>
 </body>
 </html>
