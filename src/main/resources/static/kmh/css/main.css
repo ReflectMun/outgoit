@@ -157,7 +157,6 @@ body {
     height: 35vw;
     border-radius: 15px;
     overflow: hidden;
-    border: 3px solid black;
 }
 
 #search-result-list {

@@ -51,10 +51,10 @@
                     <span> 간단한 기능 설명하는 문장 하나 들어가면 좋을듯</span>
                 </div>
             </div>
-            <div class="camping-area-search">
-                <input id="search-box" placeholder="검색하고 싶은 지역!">
-                <button id="submit-search">검색!</button>
-            </div>
+<%--            <div class="camping-area-search">--%>
+<%--                <input id="search-box" placeholder="검색하고 싶은 지역!">--%>
+<%--                <button id="submit-search">검색!</button>--%>
+<%--            </div>--%>
             <div class="search-result">
                 <div class="map-all">
                     <div id="cycle-page-map"></div>
