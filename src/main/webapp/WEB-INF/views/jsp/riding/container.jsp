@@ -68,7 +68,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
         <div class="hj-box">
           <div class="hj-row hj-menu-txt">
             <div class="hj-col-2">
-              <div class="hj-story" onclick="location.href='/outgoit/riding/history'"><span>하이킹 이야기</span></div>
+              <div class="hj-story" onclick="location.href='/outgoit/riding/history'"><span>라이딩 이야기</span></div>
               <div class="hj-star-container-2"></div>
             </div>
           </div>

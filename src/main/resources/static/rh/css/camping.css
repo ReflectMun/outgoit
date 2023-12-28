@@ -154,6 +154,10 @@ body {
 .rh-redPin{
     width: 2.5vw;
 }
+#historyRedpin {
+    width: 4vw;
+
+}
 
 .rh-camping-wood-mainPost {
     margin: 5%;
@@ -167,7 +171,7 @@ body {
 }
 
 .rh-camping-wood-main-best {
-    margin: 3%;
+    margin: 5%;
     display: flex;
     font-size: 1vw;
     height: 9vw;
@@ -204,7 +208,7 @@ body {
     font-size: 0.8vw;
     text-align: center;
     width: 19vw;
-    margin: 10% 0;
+    margin: 17% 0;
 }
 
 .rh-animal-card tr:hover {
@@ -226,7 +230,6 @@ body {
     font-size: 1.1vw;
     text-align: center;
     margin-bottom: 2%;
-    border: 1px solid #275634;
     padding: 0.3vw 2vw;
     transition: 0.2s ease-in-out;
 }
@@ -242,10 +245,6 @@ body {
 .rh-camping-wood-beginner-zone:hover {
     background-color: #275634;
     color: white;
-}
-
-#line, #line2{
-    margin-top: 10%;
 }
 
 .rh-back-set {
@@ -439,7 +438,7 @@ body {
     }
 
     .rh-camping-wood {
-        width: 100vw;
+        width: 90vw;
         text-align: center;
     }
 
@@ -498,10 +497,10 @@ body {
     /* 정보 카드 */
     .rh-camping-wood-main {
         /*background-image: url("/resources/static/img/기타/paper.png");*/
-        background-size: contain;
+        background-size: 100% 100%;
         background-image: url("/resources/static/img/기타/양피지.png");
-        width: 43vw;
-        height: 43vw;
+        width: 40vw;
+        height: 40vw;
         margin: 1.5%;
         display: flex;
         justify-content: center;
@@ -525,7 +524,7 @@ body {
     }
 
     .rh-camping-wood-main-best {
-        margin: 3%;
+        margin: 5%;
         display: flex;
         font-size: 1vw;
         height: 18vw;
@@ -536,7 +535,7 @@ body {
         width: 100%;
         height: 100%;
         display: grid;
-        padding: 0vw 1vw;
+        padding: 0vw 0.5vw;
         align-items: end;
         text-align: center;
     }
@@ -571,20 +570,19 @@ body {
     }
 
     .rh-card-set {
-        font-size: 4vw;
+        font-size: 3.5vw;
     }
 
 
     /*비기너 카드 */
     .rh-camping-wood-beginner-zone {
-        width: 55%;
+        width: 50%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-size: 2.8vw;
         text-align: center;
         margin-bottom: 2%;
-        border: 1px solid #275634;
         padding: 0.3vw 2vw;
         transition: 0.2s ease-in-out;
     }
@@ -602,16 +600,12 @@ body {
         color: white;
     }
 
-    #line, #line2{
-        margin-top: 10%;
-    }
-
     .rh-back-set {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         width: 15vw;
-        font-size: 2.5vw;
+        font-size: 2.2vw;
         position: absolute;
         bottom: 0.7vw
 
@@ -725,23 +719,42 @@ body {
         /*background-image: url("/resources/static/img/기타/bigPaper2.png");*/
         /*background-size: 100% 100%;*/
         /*background-repeat: no-repeat;*/
-        background-color: white;
         width: 95vw;
         margin: 1%;
+    }
+
+    #historyRedpin {
+        width: 7vw;
+
     }
 
     .rh-camping-history-wood-text {
         font-size: 3vw;
         line-height: 5vw;
-        margin: 5% 2% 0% 2%;
+        margin: 5%;
         line-height: 5vw;
 
     }
 
     .rh-camping-history-wood-textLast {
-        margin: 5% 2% 0% 2%;
+        margin: 5% 5% 10% 5%;
         font-size: 3vw;
         line-height: 5vw;
+    }
+
+    /*핀 감싸는 div */
+    .rh-redPin-height{
+        height: 5vw;
+    }
+    /*콘텐트를 봤을 때 pin*/
+    .rh-redPin-textView{
+        height:1vw;
+        position: absolute;
+        top: 1.4vw;
+    }
+    /*핀 img*/
+    .rh-redPin{
+        width: 4vw;
     }
 }
 

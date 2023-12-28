@@ -122,8 +122,8 @@ body {
 
 /* 정보 카드 */
 .rh-hiking-wood-main {
-  background-image: url("/resources/static/img/기타/paper.png");
-  background-size: contain;
+  background-image: url("/resources/static/img/기타/양피지.png");
+  background-size: 100% 100%;
   width: 20vw;
   height: 20vw;
   margin: 1.5%;
@@ -148,8 +148,7 @@ body {
 }
 
 .rh-hiking-wood-main-best {
-  background-color: rgb(143, 255, 141);
-  margin: 3%;
+  margin: 5%;
   display: flex;
   font-size: 1vw;
   height: 9vw;
@@ -160,7 +159,7 @@ body {
   width: 100%;
   height: 100%;
   display: grid;
-  padding: 0vw 1vw;
+  padding: 0vw 0.5vw;
   align-items: end;
   text-align: center;
 }
@@ -184,7 +183,7 @@ body {
   font-size: 0.8vw;
   text-align: center;
   width: 19vw;
-  margin: 10% 0;
+  margin: 17% 0%;
 }
 
 .rh-animal-card tr:hover {
@@ -229,14 +228,13 @@ body {
 
 /*safety 야생동물 섹션*/
 .rh-hiking-animal{
-  width: 30%;
+  width: 35%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.3vw;
   text-align: center;
   margin-bottom: 2%;
-  border: 1px solid #275634;
   padding: 0.3vw 2vw;
   transition: 0.2s ease-in-out;
 }
@@ -292,7 +290,7 @@ body {
   width: 100%;
   height: 26.042vw;
   margin-bottom: 5%;
-  background-image: url("/resources/static/img/등산/등산용 인포_가이드.jpg");
+  background-image: url("/resources/static/img/등산/Hiking1.png");
   background-position: center;
   background-size: 66%;
   background-repeat: no-repeat;
@@ -302,7 +300,7 @@ body {
 .rh-hiking-history-wood-main {
   width: 65vw;
   margin: 1%;
-  background-image: url("/resources/static/img/기타/bigPaper.png");
+  background-image: url("/resources/static/img/기타/양피지.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -318,4 +316,19 @@ body {
   margin-bottom: 10%;
   font-size: 1vw;
   line-height: 1.8vw;
+}
+
+/*발간 핀*/
+.rh-redPin-height{
+  height: 2vw;
+}
+/*콘텐트를 봤을 때 pin*/
+.rh-redPin-textView{
+  height: 2vw;
+  position: absolute;
+  top: 1.4vw;
+}
+/*핀 img*/
+.rh-redPin{
+  width: 2.5vw;
 }
