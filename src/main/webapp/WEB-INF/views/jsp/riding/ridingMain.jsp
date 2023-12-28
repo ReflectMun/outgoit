@@ -45,16 +45,24 @@
         <div class="content">
             <div class="map-txt-wrap">
                 <div class="map-title">
-                    <span> Search </span>
+                    <span>  </span>
                 </div>
                 <div class="map-sub-txt">
                     <span> 간단한 기능 설명하는 문장 하나 들어가면 좋을듯</span>
                 </div>
             </div>
-<%--            <div class="camping-area-search">--%>
-<%--                <input id="search-box" placeholder="검색하고 싶은 지역!">--%>
-<%--                <button id="submit-search">검색!</button>--%>
-<%--            </div>--%>
+            <div class="metro-city-btn-menu">
+                <div class="metro-city-btns">
+                    <div class="metro-city-btn orange-btn" data-value="1" onclick="goMetroCity(this)">서울</div>
+                    <div class="metro-city-btn orange-btn" data-value="7" onclick="goMetroCity(this)">인천</div>
+                    <div class="metro-city-btn blue-btn" data-value="14" onclick="goMetroCity(this)">대전</div>
+                    <div class="metro-city-btn blue-btn" data-value="21" onclick="goMetroCity(this)">세종</div>
+                    <div class="metro-city-btn green-btn" data-value="10" onclick="goMetroCity(this)">광주</div>
+                    <div class="metro-city-btn pink-btn" data-value="2" onclick="goMetroCity(this)">부산</div>
+                    <div class="metro-city-btn pink-btn" data-value="5" onclick="goMetroCity(this)">대구</div>
+                    <div class="metro-city-btn pink-btn" data-value="17" onclick="goMetroCity(this)">울산</div>
+                </div>
+            </div>
             <div class="search-result">
                 <div class="map-all">
                     <div id="cycle-page-map"></div>
