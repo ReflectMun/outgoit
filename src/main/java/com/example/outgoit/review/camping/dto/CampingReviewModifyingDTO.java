@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class CampingReviewModifyingDTO {
-    private int commentNumber;
+    private Long commentNumber;
     private String password;
     private String content;
 }
