@@ -31,7 +31,7 @@
             <!-- 통나무 -->
             <div class="rh-hiking-wood-titleBox">
                 <!-- 통나무 타이틀 -->
-                <div class="rh-hiking-wood-title">
+                <div class="rh-hiking-wood-title" id="campingTitleText">
                     숙지해야 할 안전사항을 안내드려요
                 </div>
             </div>

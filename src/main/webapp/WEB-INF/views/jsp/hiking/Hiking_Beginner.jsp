@@ -207,7 +207,7 @@
                         <div class="rh-hiking-wood-main-best">
                             <div class="rh-hiking-wood-mainPost-best" id="best1">
                                 <div onclick="location.href=''" class="rh-hiking-wood-mainPost-bestText">
-                                    <div>강원도</div>
+                                    <div class="bestTextLocal">강원도</div>
                                     <div class="bestText2">오대산 - 노인봉</div>
                                 </div>
                             </div>
@@ -215,7 +215,7 @@
                         <div class="rh-hiking-wood-main-best">
                             <div class="rh-hiking-wood-mainPost-best" id="best2">
                                 <div onclick="location.href=''" class="rh-hiking-wood-mainPost-bestText">
-                                    <div>울산</div>
+                                    <div class="bestTextLocal">울산</div>
                                     <div class="bestText2">천황산</div>
                                 </div>
                             </div>
@@ -223,13 +223,13 @@
                         <div class="rh-hiking-wood-main-best">
                             <div class="rh-hiking-wood-mainPost-best" id="best3">
                                 <div onclick="location.href=''" class="rh-hiking-wood-mainPost-bestText">
-                                    <div>서울</div>
+                                    <div class="bestTextLocal">서울</div>
                                     <div class="bestText2">안산</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                <div class="rh-hiking-wood-main" style="visibility: hidden">
+                <div class="rh-hiking-wood-main" style="visibility: hidden; height: 0;">
                     </div>
                 </div>
             </div>
