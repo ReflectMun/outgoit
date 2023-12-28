@@ -6,10 +6,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OUT GO IT - hiking </title>
-    <link rel="stylesheet" href="/resources/static/kmh/css/camping.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <title>OUT GO IT - main</title>
+    <link rel="stylesheet" href="/resources/static/kmh/css/main.css">
 </head>
 <body>
     <!-- 헤더 영역 -->
@@ -22,25 +20,17 @@
 
         <!-- 배너 영역 (슬라이드 들어가면 좋을듯!) -->
 
-        <div class="banner-wrap camp swiper mySwiper">
-            <div class="banner swiper-wrapper">
-                <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
-                <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
-                <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
-                <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
-                <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
-            </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
+        <div class="banner-wrap camp">
+            <div class="banner">
                 <div class="banner-txt-wrap">
-                    <div class="banner-titlek">
-<%--                        <span>HKING</span>--%>
-                         <div class="banner-sub-txt">
-                            <span> &nbsp; Campsite &nbsp; Campfire &nbsp; Tent Pitching &nbsp; Sleeping Bag &nbsp; Fishing Spot &nbsp; Sunrise/Sunset Views &nbsp; Stargazing &nbsp; Nature Exploration &nbsp; Outdoor Enthusiast </span>
-                         </div>
+                    <div class="banner-title">
+                        <span>CAMPING</span>
+                    </div>
+                     <div class="banner-sub-txt"> 
+                        <span> 캠핑에 대한 간단한 케치프레이즈 ^0^ </span>
                     </div>
                 </div>
+            </div>
         </div>
 
         <!-- 배너 여기까지 / 컨텐트 영역 (지도 API)-->
@@ -82,23 +72,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=770a2850e8ce3177b209d2d94dc1e58b&libraries=services"></script>
-
-    <script src="../resources/static/kmh/js/trailDraft1.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            autoplay: {
-                delay: 5000,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                type: "progressbar",
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
-
+    <script type="text/javascript" src="/resources/static/kmh/js/draft1.js"></script>
 </body>
 </html>

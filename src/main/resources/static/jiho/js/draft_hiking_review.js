@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', async function () {
     /**
      * 상세한 정보창 클릭시 닫히도록 하는 이벤트 리스너 등록
      * */
-    document.querySelector("#hj-content-plus-container").addEventListener("click", (e) => {
-        document.getElementById("hj-content-plus-container").classList.remove("show")
-        document.getElementById("hj-overlay-popup").classList.remove("active")
-    })
+    // document.querySelector("#hj-content-plus-container").addEventListener("click", (e) => {
+    //     document.getElementById("hj-content-plus-container").classList.remove("show")
+    //     document.getElementById("hj-overlay-popup").classList.remove("active")
+    // })
 
     /**
      * 작성된 리뷰 목로글 불러와서 화면에 렌더링하도록 하는 메서드
@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', async function () {
      * */
     const reviewListContainer = document.getElementById("hj-review-list-container")
     if(reviewListContainer){
-        const campingAreaId = document.getElementById("camping-area-id").value
+        const trailAreaId = document.getElementById("trail-area-id").value
         try {
-            const resData = await getReviewList(campingAreaId, 1)
+            const resData = await getReviewList(trailAreaId, 1)
 
             if(resData === null)
                 throw new Error("서버와의 통신 중 알 수 없는 오류가 발생")
@@ -81,10 +81,11 @@ document.addEventListener('DOMContentLoaded', async function () {
  * 한페이지 이전의 리뷰 목록을 불러오도록 하는 함수
  * */
 async function getPrevCommentPage() {
-    const campingAreaId = document.getElementById("camping-area-id").value
+    const trailAreaId = document.getElementById("trail-area-id").value
     try {
-        const resData = await getReviewList(campingAreaId, pageNum - 1)
-        // console.log(resData)
+        const resData = await getReviewList(trailAreaId, pageNum - 1)
+
+
         if (resData === null)
             throw new Error("서버와 통신 중 원인을 알 수 없는 오류 발생")
 
@@ -113,9 +114,9 @@ async function getPrevCommentPage() {
  * 다음페이지의 리뷰 목록을 불러오도록 하는 함수
  * */
 async function getNextCommentPage() {
-    const campingAreaId = document.getElementById("camping-area-id").value
+    const trailAreaId = document.getElementById("trail-area-id").value
     try {
-        const resData = await getReviewList(campingAreaId, pageNum + 1)
+        const resData = await getReviewList(trailAreaId, pageNum + 1)
 
         if (resData === null)
             throw new Error("서버와 통신 중 원인을 알 수 없는 오류 발생")
@@ -146,6 +147,7 @@ async function getNextCommentPage() {
  * 추후 리뷰가 하나도 없을 경우 작성된 리뷰가 없다는 메시지가 리뷰란에 출력되도록 수정해야함
  * */
 async function deleteComment(commentNumber, element) {
+    alert(commentNumber)
     const passwordInput = element.parentNode.firstElementChild.firstElementChild
     if(!passwordInput.value){
         alert("댓글을 삭제하시려면 비밀번호를 입력해주세요!")
@@ -154,22 +156,22 @@ async function deleteComment(commentNumber, element) {
 
     try{
         const { data: resData } = await axios.post(
-            '/api/review/camping/delete',
+            '/api/review/trail/delete',
             {
                 password: passwordInput.value,
                 commentNumber: commentNumber
             }
         )
 
-        if(resData['statusCode'] === 200)
+        if(resData== 1)
             alert("댓글 삭제 완료!")
         else {
-            alert(resData['errorMessage'])
+            alert("삭제 실패")
             return
         }
 
-        const campingAreaId = document.getElementById("camping-area-id").value
-        const reviewDataList = await getReviewList(campingAreaId, pageNum)
+        const trailAreaId = document.getElementById("trail-area-id").value
+        const reviewDataList = await getReviewList(trailAreaId, pageNum)
 
         if (reviewDataList.length !== 0) { // 빈 데이터가 아닐 경우
             const reviewListContainer = document.getElementById("hj-review-list-container")
@@ -216,7 +218,8 @@ async function commentModifyingReady(commentNumber, element) {
  * */
 async function updateComment(commentNumber, reviewContentInput, modifyButtonElement){
     const passwordInput = modifyButtonElement.parentNode.firstElementChild.firstElementChild
-
+    // console.log(commentNumber)
+    // console.log(reviewContentInput.value);
     // const commentInput = document.createElement("input")
     // commentInput.type = "text"
     // commentInput.value = commentDiv.innerText
@@ -230,10 +233,37 @@ async function updateComment(commentNumber, reviewContentInput, modifyButtonElem
         alert("댓글 내용이 비어있어요!")
         return
     }
+// 3가지 방법 알려줄게요.  역시 mz..!
 
+// 1. url  querystring 으로 전달하는 경우   @requestparam 으로 파라미터 값 받아야됨
+// 2. url을 조금 restful 하게 만들어서 처리하는 방법 있음 이 경우 @ParamVariable 써서 url의 데이터와 값 일치 시켜 받으면 됨
+// 3. controller에서 객체 맵핑 받는 경우     @requestbody 로 json body값을 java dto에 맵핑 시켜야됨
+    // 1.
+    // try{
+    //     const { data: resData } = await axios.post(
+    //         '/api/review/trail/update', null,
+    //         {
+    //             params:{
+    //                 password: passwordInput.value,
+    //                 content: reviewContentInput.value,
+    //                 commentNumber: commentNumber
+    //             }
+    //         }
+    //     )
+
+    // 2.
+    // try{
+    //     let mzUrl = '/api/review/trail/update/';
+    //         mzUrl += reviewContentInput.value;
+    //         mzUrl += "/" + commentNumber;
+    //     const { data: resData } = await axios.post(
+    //       mzUrl
+    //     )
+
+    // 3.
     try{
         const { data: resData } = await axios.post(
-            '/api/review/camping/update',
+            '/api/review/trail/update',
             {
                 password: passwordInput.value,
                 content: reviewContentInput.value,
@@ -241,16 +271,16 @@ async function updateComment(commentNumber, reviewContentInput, modifyButtonElem
             }
         )
 
-        if(resData['statusCode'] === 200)
+        if(resData== 1)
             alert("댓글 수정 완료!")
         else {
-            alert(resData['errorMessage'])
+            alert("댓글 수정 실패")
             return
         }
 
-        const campingAreaId = document.getElementById("camping-area-id").value
+        const trailAreaId = document.getElementById("trail-area-id").value
 
-        const reviewDataList = await getReviewList(campingAreaId, pageNum)
+        const reviewDataList = await getReviewList(trailAreaId, pageNum)
 
         const reviewListContainer = document.getElementById("hj-review-list-container")
         reviewListContainer.innerHTML = ""
@@ -363,6 +393,7 @@ function makeReviewBox(reviewData) {
      *   </div>
      * */
     const commentNum = reviewData['commentNumber']
+
     const editDrop = document.createElement("div")
 
     const passwordInputDiv = document.createElement("div")
@@ -400,7 +431,9 @@ function makeReviewBox(reviewData) {
  * null을 리턴할 경우 서버와 통신하는 도중에 문제가 생겼다는 의미임
  * */
 async function getReviewList(areaId, pageNumber){
-    const reqUrl = "/api/review/camping/list?" + `campingAreaId=${areaId}&pageNumber=${pageNumber}`
+    // console.log(areaId)
+    // console.log(pageNumber)
+    const reqUrl = "/api/review/trail/list?" + `trailRouteId=${areaId}&pageNumber=${pageNumber}`
     try {
         const {data: resData} = await axios.get(reqUrl)
         // console.log(resData)

@@ -15,19 +15,19 @@ public class IndexPageController {
 
     @GetMapping("/camping")
     public String sendCampingPage(Model model){
-        model.addAttribute("campingContentPage", "Camping_About.jsp");
+        model.addAttribute("campingContentPage", "campingMain.jsp");
         return "jsp/camp/container";
     }
 
     @GetMapping("/hiking")
     public String sendHikingMainPage(Model model) {
-        model.addAttribute("campingContentPage", "Hiking_About.jsp");
+        model.addAttribute("hikingContentPage", "hikingMain.jsp");
         return "jsp/hiking/container";
     }
 
     @GetMapping("/riding")
     public String sendRidingMainPage(Model model) {
-        model.addAttribute("campingContentPage", "Riding_About.jsp");
+        model.addAttribute("ridingContentPage", "Riding_About.jsp");
         return "jsp/riding/container";
     }
 

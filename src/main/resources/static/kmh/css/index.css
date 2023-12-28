@@ -61,7 +61,7 @@ a {
     font-weight: 700;
     color: #116228;
     text-shadow: 0 0.7vw 0 rgb(222, 111, 26);
-    animation: bounce 2s ease-in-out infinite; /* 애니메이션을 무한히 반복 */
+    animation: bounce 2s ease-in-out 1; /* 애니메이션을 무한히 반복  - > 숫자 작성하면 해당 숫자만큼 움직임 */
 }
 
 @keyframes bounce {
@@ -157,11 +157,12 @@ a {
     -webkit-background-clip: text;
     color: transparent;
     background-repeat: no-repeat;
-    transition: background-size 0.2s ease-in;
+    transition: background-size 0.32s ease-in;
 }
 
 .menu:hover {
     transform: scale(1.1); /* 호버 시 크기를 1.1배로 확대 */
+    cursor: pointer;
 }
 
 .menu:hover .menu-txt {

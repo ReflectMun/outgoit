@@ -27,6 +27,11 @@
 송호국민관광지캠핑장 https://blog.naver.com/baboksy/221549303286
 대저캠핑장2 https://blog.naver.com/sooojebi/222398160384
 
+[배경 이미지]
+- 나무보드: https://kr.freepik.com/free-vector/realistic-wood-background_21153531.htm#page=6&query=%EB%82%98%EB%AC%B4%EB%B3%B4%EB%93%9C&position=16&from_view=search&track=ais&uuid=633cd583-1783-40ca-8078-cbec46e7e00e 작가 coolvector 출처 Freepik
+- 양피지: https://kr.freepik.com/free-vector/blank-brown-paper-mobile-phone-wallpaper-vector_25516962.htm#query=%EC%96%91%ED%94%BC%EC%A7%80&position=14&from_view=search&track=sph&uuid=4a78a2eb-cafc-4334-b51b-85b5b194c61c 작가 rawpixel.com 출처 Freepik
+- 압정 핀: https://kr.freepik.com/free-vector/realistic-thumbtack-pins-collection-with-notes_21149820.htm#query=note%20pin&position=2&from_view=search&track=ais&uuid=5ae4bf86-10eb-4597-9966-8ee64f8f5d32 작가 pikisuperstar 출처 Freepik 핀
+
 [타이틀 이미지]
 - 캠핑
   1. 캠핑 이야기

@@ -29,14 +29,15 @@ public class CampingAreaSearchPageController {
     }
     ////////////////////////////////////////////////////////
 
-    @GetMapping
-    public String sendCampingSearchingPage(Model model){
-        model.addAttribute("msg", "camping");
+//    @GetMapping
+//    public String sendCampingSearchingPage(Model model){
+//        model.addAttribute("msg", "camping");
+//
+//        return "jh/camp";
+//    }
 
-        return "jh/camp";
-    }
 
-
+<<<<<<< HEAD
     @GetMapping("/draft1")  // 지도메인페이지
     public String sendDraft1(){
         return "jiho/draft/1";
@@ -45,6 +46,16 @@ public class CampingAreaSearchPageController {
     public String sendDraft2(){
         return "kmh/draft/2";
     }
+=======
+//    @GetMapping("/camping")
+//    public String sendDraft1(){
+//        return "jsp/camp/campingMain";
+//    }
+//    @GetMapping("/draft2")
+//    public String sendDraft2(){
+//        return "kmh/draft/2";
+//    }
+>>>>>>> front
 
     @PostMapping("/detail/{campingAreaName}") // 디테일
     public String sendDetailPage(
@@ -100,8 +111,8 @@ public class CampingAreaSearchPageController {
         model.addAttribute("siteDeck", data.getSiteBottomCl3());
         model.addAttribute("siteGravel", data.getSiteBottomCl4());
         model.addAttribute("siteSoil", data.getSiteBottomCl5());
-
-        return "jiho/draft/camp_information";
+        model.addAttribute("campingContentPage","camp_information.jsp");
+        return "jsp/camp/container";
     }
 
     @GetMapping("/detail/{campingAreaName}")

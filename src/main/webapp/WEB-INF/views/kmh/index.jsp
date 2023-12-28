@@ -40,17 +40,17 @@
 			<div class="sub-title animate__animated animate__fadein"><span>시간을 느리게, 경험을 깊게</span></div>
 		</div>
 		<div class="menu-wrap">
-			<div class="menu">
+			<div class="menu" onclick="location.href='/outgoit/camping'">
 				<div class="camp-icon"></div>
-				<a href="/outgoit/camping"><div class="txt menu-txt" id="txt1"><span>CAMPING</span></div></a>
+				<div class="txt menu-txt" id="txt1"><span>CAMPING</span></div>
 			</div>
-			<div class="menu">
+			<div class="menu" onclick="location.href='/outgoit/hiking'">
 				<div class="hiking-icon"></div>
-				<a href="/outgoit/hiking"><div class="txt menu-txt" id="txt2"><span>HIKING</span></div></a>
+				<div class="txt menu-txt" id="txt2"><span>HIKING</span></div>
 			</div>
-			<div class="menu">
+			<div class="menu" onclick="location.href='/outgoit/riding'">
 				<div class="riding-icon"></div>
-				<a href="/outgoit/riding"><div class="txt menu-txt" id="txt3"><span>RIDING</span></div></a>
+				<div class="txt menu-txt" id="txt3"><span>RIDING</span></div>
 			</div>
 		</div>
         <div class="footer"></div>

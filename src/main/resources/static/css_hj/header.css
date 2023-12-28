@@ -18,6 +18,7 @@ body {
     margin: 0;
     width: 100vw;
     height: 100vh;
+    overflow-x:hidden;
 }
 
 .hj-container {
@@ -29,13 +30,11 @@ body {
     /*box-shadow: 0 0 0 0.35vw #1c4728 inset;*/
     border-bottom: 0.35vw solid #1c4728;
     display: flex;
-    height: 5.99vw;
+    height: 4.5vw;
     width: 100%;
     justify-content: space-between;
     background-color: #275634;
-    position: fixed;
     top: 0;
-    z-index: 999;
 }
 
 .hj-right {
@@ -50,7 +49,7 @@ body {
 
 .hj-left {
     display: flex;
-    margin-right: 1vw;
+    margin-right: 1.5vw;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
@@ -61,7 +60,6 @@ body {
     /*border: 1px solid red;*/
     background-color: white;
     width: 6vw;
-    margin-left: 2.5vw;
 }
 
 .hj-title {
@@ -69,7 +67,7 @@ body {
     font-weight: bolder;
     font-size: 2vw;
     width: 10vw;
-    margin-left: 1.5vw;
+    margin-left: 1vw;
     color: rgb(242, 166, 52);
     text-shadow: -0.1vw 0 #FFFAF6, 0 0.1vw #FFFAF6, 0.1vw 0 #FFFAF6, 0 -0.1vw #FFFAF6;
     display: flex;
@@ -91,9 +89,7 @@ body {
     color: rgb(242, 166, 52);
     user-select: none;
     overflow: hidden;
-    background-color: #FFFAF6;
     border-radius: 10%;
-    box-shadow: 0.2vw 0.2vw 0.2vw 0 #173b21;
 }
 
 .hj-tracking span {
@@ -154,9 +150,7 @@ body {
     color: rgb(242, 166, 52);
     user-select: none;
     overflow: hidden;
-    background-color: #FFFAF6;
     border-radius: 10%;
-    box-shadow: 0.2vw 0.2vw 0.2vw 0 #173b21;
 }
 
 .hj-riding span {
@@ -212,12 +206,13 @@ body {
 
 .hj-font {
     /* border: 1px solid red; */
-    width: 8vw;
-    margin: 0.3vw 1vw 0.3vw 0vw;
+    width: 7vw;
+    margin: 0.6vw 1vw 0.3vw 0vw;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.2vw;
 }
 
 .hj-menu-tab {
@@ -233,8 +228,8 @@ body {
 
 .hj-menu-icon {
     /*border: 1px solid red;*/
-    width: 3.5vw;
-    height: 3.5vw;
+    width: 3vw;
+    height: 3vw;
     background-image: url("../Img_hj/menu_sun1.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -247,7 +242,6 @@ body {
 .hj-camping-content-page {
     width: 100%;
     height: auto;
-    margin-top: 6vw;
 }
 
 /*호버 효과*/
