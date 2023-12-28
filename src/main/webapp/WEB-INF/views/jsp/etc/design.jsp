@@ -124,6 +124,9 @@ Cycle lane icons created by Freepik - Flaticon
 Map pointer icons created by Freepik - Flaticon
 야생동물 표지판 created by iconixarPro - Flaticon
 </pre>
-
+<h2>기타</h2>
+<pre>
+테이프 이미지: https://kr.freepik.com/free-vector/cute-washi-tape-clipart-colorful-diary-decorative-sticker-vector-set_20346087.htm#query=tape&position=1&from_view=search&track=sph&uuid=65aaa961-9794-47bb-b606-9ed34948fa51 작가 rawpixel.com 출처 Freepik
+</pre>
 </body>
 </html>
