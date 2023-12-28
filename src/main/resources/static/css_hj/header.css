@@ -21,9 +21,7 @@ body {
     overflow-x:hidden;
 }
 
-.hj-container {
 
-}
 
 .hj-header {
     box-sizing: border-box;
@@ -217,6 +215,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1.2vw;
+    height: 100%;
 }
 
 .hj-menu-tab {

@@ -43,6 +43,7 @@
 
             <!-- 칠판에 쓰인 분필 -->
             <div id="hj-content-box-comment"><span>OUT GO IT</span></div>
+            <div id="hj-post-it"></div>
            <!-- 이미지 부분 -->
             <div id="hj-content-inside-box">
               <div id="hj-content-img">

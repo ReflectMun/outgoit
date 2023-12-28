@@ -84,15 +84,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // 메뉴 누르면 가운데서 퍼지는 효과
         $(document).ready(function() {
             $('.hj-menu-icon').on('click', function() {
-                $('.hj-overlay').fadeToggle(100); // 500은 애니메이션 지속 시간(ms)입니다. 필요에 따라 조절 가능
+                $('.hj-overlay').fadeToggle(100);
                 $('body').css("overflow-x", "hidden").css("overflow-y","hidden");
             });
+
             $('.hj-menu-icon-2').on('click', function() {
-                $('.hj-overlay').fadeToggle(100); // 500은 애니메이션 지속 시간(ms)입니다. 필요에 따라 조절 가능
+                $('.hj-overlay').fadeToggle(100);
+                $('.hj-overlay').css("display", "grid"); // "block"을 "grid"로 변경
                 $('body').css("overflow-y", "auto");
             });
-
         });
+
 
 
 

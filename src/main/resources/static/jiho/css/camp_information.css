@@ -73,7 +73,7 @@ div{
     bottom: 5%;
 }
 #hj-post-it{
-    background-image: url(/resources/static/Img_hj/tapeGreen.png);
+    background-image: url(/resources/static/Img_hj/tapeClear.png);
     height: 2vw;
     width: 9vw;
     background-size: contain;
@@ -322,8 +322,8 @@ div{
 }
 #hj-review-zentai-box{
     /*border: 5px solid blueviolet;*/
-    width: 95%;
-    /*margin-top: 2%;*/
+
+    margin-top: 2%;
 
 }
 .hj-review-stars{
