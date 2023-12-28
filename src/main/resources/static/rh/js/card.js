@@ -30,22 +30,27 @@ $(function () {
 
     // 하이킹 세이프티 2번
     $("#bee").click(function () {
+        $("#hikingSafety2Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#bee, #snake, #pig, #dog, #line").hide();
         $("#beeC, #back2").fadeToggle();
     });
     $("#snake").click(function () {
+        $("#hikingSafety2Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#bee, #snake, #pig, #dog, #line").hide();
         $("#snakeC, #back2").fadeToggle();
     });
     $("#pig").click(function () {
+        $("#hikingSafety2Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#bee, #snake, #pig, #dog, #line").hide();
         $("#pigC, #back2").fadeToggle();
     });
     $("#dog").click(function () {
+        $("#hikingSafety2Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#bee, #snake, #pig, #dog, #line").hide();
         $("#dogC, #back2").fadeToggle();
     });
     $("#back2").click(function () {
+        $("#hikingSafety2Pin").removeClass('rh-redPin-textView').addClass('rh-redPin-height');
         $("#beeC, #snakeC, #pigC, #dogC, #back2").hide();
         $("#bee, #snake, #pig, #dog, #line").fadeToggle();
     });
@@ -54,18 +59,22 @@ $(function () {
 
     // 라이딩 비기너 2번
     $("#mtb").click(function () {
+        $("#ridingBeginner2Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#mtbC, #back2").fadeToggle();
         $("#mtb, #rb, #hb, #line").hide();
     });
     $("#rb").click(function () {
+        $("#ridingBeginner2Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#rbC, #back2").fadeToggle();
         $("#mtb, #rb, #hb, #line").hide();
     });
     $("#hb").click(function () {
+        $("#ridingBeginner2Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#hbC, #back2").fadeToggle();
         $("#mtb, #rb, #hb, #line").hide();
     });
     $("#back2").click(function (){
+        $("#ridingBeginner2Pin").removeClass('rh-redPin-textView').addClass('rh-redPin-height');
         $("#mtb, #rb, #hb, #line").show();
         $("#mtbC, #rbC, #hbC, #back2").hide();
     });
@@ -94,18 +103,22 @@ $(function () {
 
     // 캠핑 비기너 4번
     $("#autoCamp").click(function (){
+        $("#beginner4Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
        $("#autoCamp, #backCamp, #glamping, #line2").hide();
        $("#autoCampC, #back4").fadeToggle();
     });
     $("#backCamp").click(function (){
+        $("#beginner4Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#autoCamp, #backCamp, #glamping, #line2").hide();
         $("#backCampC, #back4").fadeToggle();
     });
     $("#glamping").click(function (){
+        $("#beginner4Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#autoCamp, #backCamp, #glamping, #line2").hide();
         $("#glampingC, #back4").fadeToggle();
     });
     $("#back4").click(function (){
+        $("#beginner4Pin").removeClass('rh-redPin-textView').addClass('rh-redPin-height');
         $("#autoCampC, #backCampC, #glampingC, #back4").hide();
         $("#autoCamp, #backCamp, #glamping, #line2").fadeToggle();
     });
@@ -125,21 +138,22 @@ $(function () {
 
     //캠핑 비기너 5번
     $("#stone").click(function () {
-        // $("#stoneC").show();
+        $("#beginner5Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#stoneC, #back5").fadeToggle();
         $("#stone, #grass, #deck, #line").hide();
     });
     $("#deck").click(function () {
-        // $("#stoneC").show();
+        $("#beginner5Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#deckC, #back5").fadeToggle();
         $("#stone, #grass, #deck, #line").hide();
     });
     $("#grass").click(function () {
-        // $("#stoneC").show();
+        $("#beginner5Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#grassC, #back5").fadeToggle();
         $("#stone, #grass, #deck, #line").hide();
     });
     $("#back5").click(function (){
+        $("#beginner5Pin").removeClass('rh-redPin-textView').addClass('rh-redPin-height');
         $("#stone, #grass, #deck, #line").fadeToggle();
         $("#stoneC, #grassC, #deckC, #back").hide();
     });
