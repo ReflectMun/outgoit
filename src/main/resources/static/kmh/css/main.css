@@ -159,5 +159,20 @@
     background-color: aquamarine;
     width: 35%;
     height: 30vw;
-    overflow: scroll;
+    overflow-y: scroll;
+}
+#search-result-list::-webkit-scrollbar{
+    width: 10px;
+}
+
+#search-result-list::-webkit-scrollbar-button {
+    display: none;
+}
+#search-result-list::-webkit-scrollbar-thumb{
+    background-color: rgb(0, 52, 255);
+    width: 8px;
+    border-radius: 30px;
+}
+#search-result-list::-webkit-scrollbar-track{
+    background-color: rgba(0,0,0,0);
 }
