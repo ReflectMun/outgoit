@@ -31,7 +31,6 @@ public class CampingAreaSearchPageController {
 
 
 
-    @PostMapping("/detail/{campingAreaName}") // 디테일
 
     @GetMapping("/About")
     public String aboutPage(Model model){

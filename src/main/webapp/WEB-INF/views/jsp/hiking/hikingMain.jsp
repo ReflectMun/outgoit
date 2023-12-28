@@ -13,28 +13,25 @@
 </head>
 <body>
     <!-- 헤더 영역 -->
-
     <div class="header"></div>
 
     <!-- 컨테이너 영역 -->
-
     <div class="container">
 
         <!-- 배너 영역 (슬라이드 들어가면 좋을듯!) -->
-
         <div class="banner-wrap camp swiper mySwiper">
             <div class="banner swiper-wrapper">
-                <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
-                <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
-                <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
-                <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
-                <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
+                <div class="swiper-slide"><img src="/resources/static/kmh/img/hiking_banner.png"></div>
+                <div class="swiper-slide"><img src="/resources/static/kmh/img/hiking_banner.png"></div>
+                <div class="swiper-slide"><img src="/resources/static/kmh/img/hiking_banner.png"></div>
+                <div class="swiper-slide"><img src="/resources/static/kmh/img/hiking_banner.png"></div>
+                <div class="swiper-slide"><img src="/resources/static/kmh/img/hiking_banner.png"></div>
             </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
                 <div class="banner-txt-wrap">
-                    <div class="banner-titlek">
+                    <div class="banner-title">
 <%--                        <span>HKING</span>--%>
                          <div class="banner-sub-txt">
                             <span> &nbsp; Campsite &nbsp; Campfire &nbsp; Tent Pitching &nbsp; Sleeping Bag &nbsp; Fishing Spot &nbsp; Sunrise/Sunset Views &nbsp; Stargazing &nbsp; Nature Exploration &nbsp; Outdoor Enthusiast </span>
@@ -86,18 +83,12 @@
     <script src="../resources/static/kmh/js/trailDraft1.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
+            loop: true,
             autoplay: {
                 delay: 5000,
             },
-            pagination: {
-                el: ".swiper-pagination",
-                type: "progressbar",
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
         });
+    </script>
     </script>
 
 </body>
