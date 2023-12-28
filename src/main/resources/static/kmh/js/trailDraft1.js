@@ -225,7 +225,7 @@ function addListElementsToResultList(name, data) {
             const hiddenForm = document.createElement("form");
             hiddenForm.style.display = "none";
             hiddenForm.method = "post";
-            hiddenForm.action = `/trail/detail/${lngi}/${lati}/${index}/${trailRouteId}`;
+            hiddenForm.action = `/hiking/detail/${lngi}/${lati}/${index}/${trailRouteId}`;
             // C로 간다
 
             let tempInput;
