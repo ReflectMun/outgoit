@@ -38,7 +38,7 @@ public class TrailRoutePageController {
     }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-<<<<<<< HEAD
+
 //    public TrailRoutePageController(TrailReviewService trailReviewService){
 //        this.trailReviewService = trailReviewService;
 //    }
@@ -78,8 +78,7 @@ public class TrailRoutePageController {
 //        }
 //
 //    }
-=======
->>>>>>> dev
+
     @PostMapping("/detail/{lngi}/{lati}/{index}/{trailRouteId}")
     public String GetDetailTrain(
                                  @PageableDefault(size = 5, sort = "commentNumber", direction = Sort.Direction.DESC) Pageable pageable,
@@ -124,9 +123,5 @@ public class TrailRoutePageController {
     public String sendError() {
         return "잘못된 접근입니다";
     }
-<<<<<<< HEAD
 
-
-=======
->>>>>>> dev
 }

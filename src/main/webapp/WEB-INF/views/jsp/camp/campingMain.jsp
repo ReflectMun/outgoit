@@ -24,11 +24,11 @@
 
         <div class="banner-wrap camp swiper mySwiper">
             <div class="banner swiper-wrapper">
-                <div class="swiper-slide"><img src="resources/static/img/camping_banner.jpg"></div>
-                <div class="swiper-slide"><img src="resources/static/img/camping_banner.jpg"></div>
-                <div class="swiper-slide"><img src="resources/static/img/camping_banner.jpg"></div>
-                <div class="swiper-slide"><img src="resources/static/img/camping_banner.jpg"></div>
-                <div class="swiper-slide"><img src="resources/static/img/camping_banner.jpg"></div>
+                <div class="swiper-slide"><img src="resources/static/kmh/img/camping_banner.jpg"></div>
+                <div class="swiper-slide"><img src="resources/static/kmh/img/camping_banner.jpg"></div>
+                <div class="swiper-slide"><img src="resources/static/kmh/img/camping_banner.jpg"></div>
+                <div class="swiper-slide"><img src="resources/static/kmh/img/camping_banner.jpg"></div>
+                <div class="swiper-slide"><img src="resources/static/kmh/img/camping_banner.jpg"></div>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>

@@ -29,10 +29,10 @@ public class CampingAreaSearchPageController {
     }
     ////////////////////////////////////////////////////////
 
-<<<<<<< HEAD
+
 
     @PostMapping("/detail/{campingAreaName}") // 디테일
-=======
+
     @GetMapping("/About")
     public String aboutPage(Model model){
         return "RH/jsp/Camping/Camping_About";
@@ -49,7 +49,7 @@ public class CampingAreaSearchPageController {
     }
 
     @PostMapping("/detail/{campingAreaName}")
->>>>>>> dev
+
     public String sendDetailPage(
             @PageableDefault(size = 5, sort = "commentNumber", direction = Sort.Direction.DESC) Pageable pageable,
             CampingAreaInfoDTO data,
