@@ -13,7 +13,7 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="/static/jiho/js/draft_information.js"></script>
+    <script src="/resources/static/jiho/js/draft_information.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
@@ -260,7 +260,7 @@
             const campingAreaId = document.getElementById("camping-area-id").value
 
             // 화면상의 리뷰 목록 갱신을 위해 서버에서 리뷰 데이터를 받아옴
-            const reviewDataList = await getReviewList(campingAreaId, pageNum)
+            const reviewDataList = await getReviewList(campingAreaId, 1)
 
             // 리뷰 컨테이너를 비우고 받아온 데이터 기반으로 리뷰 목록을 다시 렌더링함
             let reviewListContainer = document.getElementById("hj-review-list-container")
@@ -271,7 +271,34 @@
                 reviewListContainer = document.createElement("div")
                 // 리뷰 리스트를 담을 컨테이너를 생성하고 zentai-box의 자식 요소로 추가
                 reviewListContainer.id = "hj-review-list-container"
+
+                const paging = document.createElement("div")
+
+                const prevButton = document.createElement("div")
+                prevButton.innerHTML = "<span>[앞으로]</span>"
+                prevButton.onclick = () => {
+                    getPrevCommentPage()
+                }
+                prevButton.id = "hj-prev-button"
+                paging.appendChild(prevButton)
+
+                const commentPageViewer = document.createElement("div")
+                commentPageViewer.innerHTML = "<span>1</span>"
+                commentPageViewer.id = "hj-pages"
+                paging.appendChild(commentPageViewer)
+
+                const nextButton = document.createElement("div")
+                nextButton.innerHTML = "<span>[다음으로]</span>"
+                nextButton.id = "hj-next-button"
+                nextButton.onclick = () => {
+                    getNextCommentPage()
+                }
+                paging.appendChild(nextButton)
+
+                paging.classList.add("hj-page-box")
+
                 zentai.appendChild(reviewListContainer)
+                zentai.appendChild(paging)
             }
 
             reviewListContainer.innerHTML = ""

@@ -12,37 +12,36 @@ import java.util.List;
 
 @Repository
 public interface CampingReviewRepositoryInterface extends JpaRepository<CampingReview, Long> {
-    // SELECT AVG(Rating) FROM (Table) WHERE Camping_Area_Id := camping_area_id
+    // SELECT AVG(Rating) FROM (Table) WHERE Camping_Area_Id := camping_area_id AND is_deleted = false
     // 특정 캠핑장의 평균평점을 불러오는 쿼리문
-    @Query("SELECT AVG(rating) FROM camping_review WHERE campingAreaId = :campingAreaId")
-    List<Object> findAvgRatingByCampingAreaId(@Param("campingAreaId") int campingAreaId);
+    @Query("SELECT AVG(rating) FROM camping_review WHERE campingAreaId = :campingAreaId AND isDeleted = false")
+    List<Object> findAvgRatingByCampingAreaIdAndIsDeletedFalse(@Param("campingAreaId") int campingAreaId);
 
-    // SELECT * FROM (Table) WHERE Camping_Area_Id := camping_area_id
+    // SELECT * FROM (Table) WHERE Camping_Area_Id := camping_area_id AND is_deleted = false
     // 해당 캠핑장의 리뷰를 모두 불러오는 쿼리문
     // Pageable 객체를 이용해서 페이징하면 됨
     // 페이지네이션 객체는 CampingReviewApiController와 CampingReviewService에 좋은 예제가 있음
-    Page<CampingReview> findByCampingAreaId(int campingAreaId, Pageable pageable);
+    Page<CampingReview> findByCampingAreaIdAndIsDeletedFalse(int campingAreaId, Pageable pageable);
 
     // SELECT * FROM (Table) WHERE Comment_Number := comment_number
     // 수정 및 삭제를 위한 특정 리뷰 하나만을 불러오기 위한 쿼리문
-    List<CampingReview> findByCommentNumber(int commentNumber);
+    List<CampingReview> findByCommentNumberAndIsDeletedFalse(Long commentNumber);
 
-    @Modifying
-    @Query("UPDATE camping_review SET content = :content WHERE commentNumber = :commentNumber")
     // UPDATE (Table) SET Content := content WHERE Comment_Number := comment_number
     // 특정 리뷰 내용을 수정하는 쿼리문
+    @Modifying
+    @Query("UPDATE camping_review SET content = :content WHERE commentNumber = :commentNumber AND isDeleted = false")
     int updateContentByCommentNumber(
             @Param("content") String content,
-            @Param("commentNumber") int commentNumber
+            @Param("commentNumber") Long commentNumber
     );
 
     // DELETE FROM (Table) WHERE Comment_Number := comment_number
     // 특정 리뷰를 삭제하는 쿼리문
-    int deleteByCommentNumber(int commentNumber);
-
-
-
-
-
+    @Modifying
+    @Query("UPDATE camping_review SET isDeleted = true WHERE commentNumber = :commentNumber AND isDeleted = false")
+    int deleteByCommentNumber(
+            @Param("commentNumber") Long commentNumber
+    );
 }
 

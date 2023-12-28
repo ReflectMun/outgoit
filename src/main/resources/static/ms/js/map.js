@@ -1,8 +1,4 @@
-const hostName = window.location.host
-const mapContainer = document.getElementById("map")
-const searchBox = document.getElementById("search-box")
-const submitSearch = document.getElementById("submit-search")
-const resultList = document.getElementById("search-result-list")
+const mapContainer = document.getElementById("cycle-page-map")
 const mapOption = {
     center: new kakao.maps.LatLng(37.57295965192006, 126.97690156991),
     level: 5
@@ -16,16 +12,14 @@ let markers = []
 let polyline = null
 // const mapTypes = kakao.maps.MapTypeId.BICYCLE;
 // map.addOverlayMapTypeId(mapTypes);
-submitSearch.addEventListener("click", async (e) => {
-    const searchKeyword = searchBox.value
-    if(!searchKeyword) {
-        alert("검색어를 입력해주세요!")
+async function showCycleRoute(trackNumber){
+    if(!trackNumber) {
+        return
     }
-    const reqUrl = "http://" + hostName + "/api/cycle/search/" + searchKeyword
+    const reqUrl = "/api/cycle/search/" + trackNumber
 
     const  {data: resData} = await axios.get(reqUrl)
     deleteMarker()
-    resultList.innerText = ""
 
     const refPosition = []
     for(let i = 0; i < 3; i++){
@@ -57,14 +51,12 @@ submitSearch.addEventListener("click", async (e) => {
     polyline.setMap(map)
 
     displayMarker()
-})
+}
 
 function addMarker(coord, resData){
     const marker = new kakao.maps.Marker({
         position: coord
     })
-// 아직 구현 안해봄
-//     resultList.appendChild(makeListElement(searchRes, resData))
 
     kakao.maps.event.addListener(marker, 'click', () => {
         map.panTo(coord)
@@ -104,38 +96,98 @@ function displayMarker(){
     markers[2].setMap(null)
 }
 
-/**
- * <div class="camping-area-info-box">
- *     <div class="camping-area-name">
- *         <h2>자전거길 이름</h2>
- *     </div>
- *     <div class="button-wrapper">
- *         <button class="open-detail-button">자전거길 정보 보기<button>
- *     </div>
- * </div>
- * */
-function makeListElement(searchData, apiResData){
-    const child = document.createElement("div")
-    child.classList.add("camping-area-info-box")
+// ----------------- 자전거길 플러시 카드 ---------------------------------
 
-    const childCycleRouteName = document.createElement("div")
-    childCycleRouteName.innerHTML = `<h2>${apiResData}</h2>`
-    childCycleRouteName.classList.add("camping-area-name")
+const swiper1 = new Swiper(".mySwiper1", {
+    direction: "vertical",
+    spaceBetween: 50,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
 
-    const childButtonWrapper = document.createElement("div")
+const swiper2 = new Swiper(".mySwiper2", {
+    effect: "cards",
+    grabCursor: true,
+    on: {
+        realIndexChange: () => {
+            const index = swiper2.realIndex
+            const current_slide_data = swiper2.slides[index]
+            showCycleRoute(current_slide_data.getAttribute("data-value"))
+        }
+    }
+});
 
-    const openDetailButton = document.createElement("button")
-    openDetailButton.innerText = "자전거길 지도 크게 보기"
-    openDetailButton.classList.add("open-detail-button")
-    openDetailButton.addEventListener("click", (e) => {
-        alert(apiResData)
-    })
+const swiper3 = new Swiper(".mySwiper3", {
+    effect: "cards",
+    grabCursor: true,
+    on: {
+        realIndexChange: () => {
 
-    childButtonWrapper.classList.add("button-wrapper")
-    childButtonWrapper.appendChild(openDetailButton)
+            const index = swiper3.realIndex
+            const current_slide_data = swiper3.slides[index]
+            showCycleRoute(current_slide_data.getAttribute("data-value"))
+        }
+    }
+});
+const swiper4 = new Swiper(".mySwiper4", {
+    effect: "cards",
+    grabCursor: true,
+    on: {
+        realIndexChange: () => {
 
-    child.appendChild(childCycleRouteName)
-    child.appendChild(childButtonWrapper)
+            const index = swiper4.realIndex
+            const current_slide_data = swiper4.slides[index]
+            showCycleRoute(current_slide_data.getAttribute("data-value"))
+        }
+    }
+});
+const swiper5 = new Swiper(".mySwiper5", {
+    effect: "cards",
+    grabCursor: true,
+    on: {
+        realIndexChange: () => {
 
-    return child
-}
+            const index = swiper5.realIndex
+            const current_slide_data = swiper5.slides[index]
+            showCycleRoute(current_slide_data.getAttribute("data-value"))
+        }
+    }
+});
+const swiper6 = new Swiper(".mySwiper6", {
+    effect: "cards",
+    grabCursor: true,
+    on: {
+        realIndexChange: () => {
+
+            const index = swiper6.realIndex
+            const current_slide_data = swiper6.slides[index]
+            showCycleRoute(current_slide_data.getAttribute("data-value"))
+        }
+    }
+});
+const swiper7 = new Swiper(".mySwiper7", {
+    effect: "cards",
+    grabCursor: true,
+    on: {
+        realIndexChange: () => {
+
+            const index = swiper7.realIndex
+            const current_slide_data = swiper7.slides[index]
+            showCycleRoute(current_slide_data.getAttribute("data-value"))
+        }
+    }
+});
+const swiper8 = new Swiper(".mySwiper8", {
+    effect: "cards",
+    grabCursor: true,
+    on: {
+        realIndexChange: () => {
+
+            const index = swiper8.realIndex
+            const current_slide_data = swiper8.slides[index]
+            showCycleRoute(current_slide_data.getAttribute("data-value"))
+        }
+    }
+});

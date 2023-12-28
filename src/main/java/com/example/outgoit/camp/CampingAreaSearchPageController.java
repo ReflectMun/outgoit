@@ -29,22 +29,20 @@ public class CampingAreaSearchPageController {
     }
     ////////////////////////////////////////////////////////
 
-//    @GetMapping
-//    public String sendCampingSearchingPage(Model model){
-//        model.addAttribute("msg", "camping");
-//
-//        return "jh/camp";
-//    }
-
-
-//    @GetMapping("/camping")
-//    public String sendDraft1(){
-//        return "jsp/camp/campingMain";
-//    }
-//    @GetMapping("/draft2")
-//    public String sendDraft2(){
-//        return "kmh/draft/2";
-//    }
+    @GetMapping("/About")
+    public String aboutPage(Model model){
+        return "RH/jsp/Camping/Camping_About";
+        // return "RH/jsp/Hiking/Hiking_About";
+        // return "RH/jsp/Riding/Riding_About";
+    }
+    @GetMapping("/Safety")
+    public String safetyPage(Model model){
+        return "RH/jsp/Camping/Camping_Safety";
+    }
+    @GetMapping("/Beginner")
+    public String beginnerPage(Model model){
+        return "RH/jsp/Camping/Camping_Beginner";
+    }
 
     @PostMapping("/detail/{campingAreaName}")
     public String sendDetailPage(
