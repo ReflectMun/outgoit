@@ -218,14 +218,14 @@ function addListElementsToResultList(name, data) {
         lati = data[0].y
         console.log(lngi) // 한라산 국립공원 (마크 핀)의 경도
         console.log(lati) // 한라산 국립공원 위도
-
+        let trailRouteId = n.id
         openDetailButton.innerText = "캠핑장 정보 보기";
         openDetailButton.classList.add("open-detail-button");
         openDetailButton.addEventListener("click", (e) => {
             const hiddenForm = document.createElement("form");
             hiddenForm.style.display = "none";
             hiddenForm.method = "post";
-            hiddenForm.action = `/trail/detail/${lngi}/${lati}/${index}`;
+            hiddenForm.action = `/trail/detail/${lngi}/${lati}/${index}/${trailRouteId}`;
             // C로 간다
 
             let tempInput;
