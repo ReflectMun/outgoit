@@ -11,5 +11,5 @@ import lombok.Setter;
 @Setter
 public class CampingReviewDeleteDTO {
     private String password;
-    private int commentNumber;
+    private Long commentNumber;
 }
