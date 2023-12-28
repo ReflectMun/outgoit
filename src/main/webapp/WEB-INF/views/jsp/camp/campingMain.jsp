@@ -24,11 +24,9 @@
 
         <div class="banner-wrap camp swiper mySwiper">
             <div class="banner swiper-wrapper">
-                <div class="swiper-slide"><img src="resources/static/kmh/img/camping_banner.jpg"></div>
-                <div class="swiper-slide"><img src="resources/static/kmh/img/camping_banner.jpg"></div>
-                <div class="swiper-slide"><img src="resources/static/kmh/img/camping_banner.jpg"></div>
-                <div class="swiper-slide"><img src="resources/static/kmh/img/camping_banner.jpg"></div>
-                <div class="swiper-slide"><img src="resources/static/kmh/img/camping_banner.jpg"></div>
+                <div class="swiper-slide"><img src="/resources/static/img/캠핑/camping_banner.jpg"></div>
+                <div class="swiper-slide"><img src="/resources/static/img/캠핑/camping_banner.jpg"></div>
+                <div class="swiper-slide"><img src="/resources/static/img/캠핑/camping_banner.jpg"></div>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -84,6 +82,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=770a2850e8ce3177b209d2d94dc1e58b&libraries=services"></script>
     <script type="text/javascript" src="/resources/static/kmh/js/draft1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
             loop: true,
