@@ -244,7 +244,6 @@
             reviewListContainer = document.createElement("div")
             // 리뷰 리스트를 담을 컨테이너를 생성하고 zentai-box의 자식 요소로 추가
             reviewListContainer.id = "hj-review-list-container"
-            console.log(reviewListContainer);
 
             zentai.appendChild(reviewListContainer)
           }
