@@ -1,4 +1,5 @@
 $(function () {
+
     $("#icon1, #icon2, #riding-content2, #icon3, #icon4, #icon5, #camping-content5, #icon6, #camping-icon7, #icon7, #icon8, #icon9").show();
     $("#content1, #content2, #content3, #content4, #content5, #content6, #camping-content7, #content7, #content8, #content9").hide();
     $("#autoCampC, #glampingC, #backCampC").hide();
@@ -30,22 +31,27 @@ $(function () {
 
     // 하이킹 세이프티 2번
     $("#bee").click(function () {
+        $("#hikingSafety2Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#bee, #snake, #pig, #dog, #line").hide();
         $("#beeC, #back2").fadeToggle();
     });
     $("#snake").click(function () {
+        $("#hikingSafety2Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#bee, #snake, #pig, #dog, #line").hide();
         $("#snakeC, #back2").fadeToggle();
     });
     $("#pig").click(function () {
+        $("#hikingSafety2Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#bee, #snake, #pig, #dog, #line").hide();
         $("#pigC, #back2").fadeToggle();
     });
     $("#dog").click(function () {
+        $("#hikingSafety2Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#bee, #snake, #pig, #dog, #line").hide();
         $("#dogC, #back2").fadeToggle();
     });
     $("#back2").click(function () {
+        $("#hikingSafety2Pin").removeClass('rh-redPin-textView').addClass('rh-redPin-height');
         $("#beeC, #snakeC, #pigC, #dogC, #back2").hide();
         $("#bee, #snake, #pig, #dog, #line").fadeToggle();
     });
@@ -54,18 +60,22 @@ $(function () {
 
     // 라이딩 비기너 2번
     $("#mtb").click(function () {
+        $("#ridingBeginner2Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#mtbC, #back2").fadeToggle();
         $("#mtb, #rb, #hb, #line").hide();
     });
     $("#rb").click(function () {
+        $("#ridingBeginner2Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#rbC, #back2").fadeToggle();
         $("#mtb, #rb, #hb, #line").hide();
     });
     $("#hb").click(function () {
+        $("#ridingBeginner2Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#hbC, #back2").fadeToggle();
         $("#mtb, #rb, #hb, #line").hide();
     });
     $("#back2").click(function (){
+        $("#ridingBeginner2Pin").removeClass('rh-redPin-textView').addClass('rh-redPin-height');
         $("#mtb, #rb, #hb, #line").show();
         $("#mtbC, #rbC, #hbC, #back2").hide();
     });
@@ -94,18 +104,22 @@ $(function () {
 
     // 캠핑 비기너 4번
     $("#autoCamp").click(function (){
+        $("#beginner4Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
        $("#autoCamp, #backCamp, #glamping, #line2").hide();
        $("#autoCampC, #back4").fadeToggle();
     });
     $("#backCamp").click(function (){
+        $("#beginner4Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#autoCamp, #backCamp, #glamping, #line2").hide();
         $("#backCampC, #back4").fadeToggle();
     });
     $("#glamping").click(function (){
+        $("#beginner4Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#autoCamp, #backCamp, #glamping, #line2").hide();
         $("#glampingC, #back4").fadeToggle();
     });
     $("#back4").click(function (){
+        $("#beginner4Pin").removeClass('rh-redPin-textView').addClass('rh-redPin-height');
         $("#autoCampC, #backCampC, #glampingC, #back4").hide();
         $("#autoCamp, #backCamp, #glamping, #line2").fadeToggle();
     });
@@ -125,21 +139,22 @@ $(function () {
 
     //캠핑 비기너 5번
     $("#stone").click(function () {
-        // $("#stoneC").show();
+        $("#beginner5Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#stoneC, #back5").fadeToggle();
         $("#stone, #grass, #deck, #line").hide();
     });
     $("#deck").click(function () {
-        // $("#stoneC").show();
+        $("#beginner5Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#deckC, #back5").fadeToggle();
         $("#stone, #grass, #deck, #line").hide();
     });
     $("#grass").click(function () {
-        // $("#stoneC").show();
+        $("#beginner5Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#grassC, #back5").fadeToggle();
         $("#stone, #grass, #deck, #line").hide();
     });
     $("#back5").click(function (){
+        $("#beginner5Pin").removeClass('rh-redPin-textView').addClass('rh-redPin-height');
         $("#stone, #grass, #deck, #line").fadeToggle();
         $("#stoneC, #grassC, #deckC, #back").hide();
     });
@@ -181,7 +196,7 @@ $(function () {
     $("#icon8").click(function () {
         $("#icon8").hide();
         $("#content8, #back8").fadeToggle();
-        $("#best").css("visibility","visible").css("left","0").css("height","100%").css("background-image", " url('/resources/static/img/기타/noPin.png')").css("background-size", "100% 100%").css("transition","0.5s ease-in-out");
+        $("#best").css("visibility","visible").css("left","0").css("height","100%").css("background-image", " url('/resources/static/img/기타/양피지.png')").css("background-size", "100% 100%").css("transition","0.5s ease-in-out");
     });
     $("#back8").click(function () {
         $("#best").css("left","-25.3vw").css("visibility","hidden").css("height","0");
@@ -193,13 +208,23 @@ $(function () {
     $("#icon9").click(function () {
         $("#icon9").hide();
         $("#content9, #back9").fadeToggle();
-        $("#animal").css("height", "100%").css("background-image", " url('/resources/static/img/기타/longPaper.png')").css("background-size", "100% 100%");
+        $("#animal").css("height", "100%").css("background-image", " url('/resources/static/img/기타/양피지.png')").css("background-size", "100% 100%");
     });
     $("#back9").click(function () {
         $("#content9, #back9").hide();
         $("#icon9").fadeToggle();
-        $("#animal").css("height", "20vw").css("background-image", " url('/resources/static/img/기타/paper.png')").css("background-size", "contain");
+        if (window.innerWidth === 430 && window.innerHeight === 932) {
+            $("#animal").css("height", "40vw").css("background-image", "url('/resources/static/img/기타/양피지.png')");
+        } else {
+            $("#animal").css("height", "20vw").css("background-image", "url('/resources/static/img/기타/양피지.png')");
+        }
     });
+
+    if (window.innerWidth === 430 && window.innerHeight === 932) {
+        $("#campingTitleText").css("font-size", "6vw");
+    } else {
+        $("#campingTitleText").css("font-size", "2.4vw");
+    }
 
 
 });

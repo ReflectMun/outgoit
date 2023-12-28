@@ -121,8 +121,8 @@ body {
 
 /* 정보 카드 */
 .rh-riding-wood-main {
-  background-image: url("/resources/static/img/기타/paper.png");
-  background-size: contain;
+  background-image: url("/resources/static/img/기타/양피지.png");
+  background-size: 100% 100%;
   width: 20vw;
   height: 20vw;
   margin: 1.5%;
@@ -153,7 +153,7 @@ body {
 }
 
 .rh-riding-wood-main-best {
-  margin: 3%;
+  margin: 5%;
   display: flex;
   font-size: 1vw;
   height: 9vw;
@@ -163,7 +163,7 @@ body {
   width: 100%;
   height: 100%;
   display: grid;
-  padding: 0vw 1vw;
+  padding: 0vw 0.5vw;
   align-items: end;
   text-align: center;
 }
@@ -187,7 +187,7 @@ body {
   font-size: 0.8vw;
   text-align: center;
   width: 19vw;
-  margin: 10% 0;
+  margin: 17% 0;
 }
 
 .rh-animal-card tr:hover {
@@ -262,7 +262,7 @@ body {
   width: 100%;
   height: 26.042vw;
   margin-bottom: 5%;
-  background-image: url("/resources/static/img/자전거/riding_history2.png");
+  background-image: url("/resources/static/img/자전거/riding2.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -283,7 +283,7 @@ body {
 /*}*/
 .rh-riding-history-wood-main {
   /* border: 3px solid rgb(255, 0, 0); */
-  background-image: url("/resources/static/img/기타/bigPaper.png");
+  background-image: url("/resources/static/img/기타/양피지.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: 65vw;
@@ -310,7 +310,6 @@ body {
   font-size: 1.1vw;
   text-align: center;
   margin-bottom: 2%;
-  border: 1px solid #275634;
   padding: 0.1vw 1vw;
   transition: 0.2s ease-in-out;
 }
@@ -325,9 +324,22 @@ body {
 .first {
   margin-top: 5%;
 }
-#line{
-  margin-top: 10%;
+/*빨간핀*/
+/*핀 감싸는 div */
+.rh-redPin-height{
+  height: 2vw;
 }
+/*콘텐트를 봤을 때 pin*/
+.rh-redPin-textView{
+  height: 2vw;
+  position: absolute;
+  top: 1.4vw;
+}
+/*핀 img*/
+.rh-redPin{
+  width: 2.5vw;
+}
+
 
 
 
