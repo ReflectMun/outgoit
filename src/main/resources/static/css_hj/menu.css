@@ -2,40 +2,42 @@
 /* 전체 div */
 
 @font-face {
-  font-family: 'JalnanGothic';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'JalnanGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
-body{
- overflow: auto;
+
+body {
+    overflow: auto;
 }
 
 /*아이콘 클릭했을떄 가운데서 퍼지는 css 효과*/
 
 
 .hj-overlay {
-  font-family: 'JalnanGothic';
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #303C51;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  z-index: 999;
-  /*display: grid;*/
-  /*animation-fill-mode: forwards;*/
-  /*animation: expand 1s ease-out, fadeOut 1s ease-out;*/
-  /* border: 4px solid red; */
+    font-family: 'JalnanGothic';
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #303C51;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    z-index: 999;
+    /*display: grid;*/
+    /*animation-fill-mode: forwards;*/
+    /*animation: expand 1s ease-out, fadeOut 1s ease-out;*/
+    /* border: 4px solid red; */
 }
 
-.hj-menu-icon, .hj-menu-icon-2{
-  cursor: pointer;
+.hj-menu-icon, .hj-menu-icon-2 {
+    cursor: pointer;
 }
+
 /*@keyframes expand {*/
 /*  from {*/
 /*    transform: translate(-50%, -50%) scale(1);*/
@@ -46,99 +48,104 @@ body{
 /*}*/
 
 @keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 
 /* 별똥별 효과*/
 .hj-col, .hj-col-2, .hj-col-3, .hj-col-4 {
-  position: relative;
-  display: flex;
-  padding: 1vw;
-  /* background-color: #3498db; */
-  color: #fff;
-  transition: background-color 0.3s ease;
-  overflow: hidden;
-  width: 100%;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
+    position: relative;
+    display: flex;
+    padding: 1vw;
+    /* background-color: #3498db; */
+    color: #fff;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }
 
 .hj-star-container, .hj-star-container-2, .hj-star-container-3, .hj-star-container-4 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
 }
 
 
 .star, .star2, .star3, .star4 {
-  position: absolute;
-  background: #fff;
-  width: 5px;
-  height: 3px;
-  animation: shooting-star 5s infinite linear;
+    position: absolute;
+    background: #fff;
+    width: 5px;
+    height: 3px;
+    animation: shooting-star 5s infinite linear;
 }
 
 @keyframes shooting-star {
-  to {
-    transform: translateX(-100vw) translateY(100vh);
-  }
+    to {
+        transform: translateX(-100vw) translateY(100vh);
+    }
 }
 
 .hj-col:hover {
-  background-color: black;
-  /*backdrop-filter: blur(10px);*/
-  box-shadow: inset 0 0 20px 0 #3498db;
-  border-radius: 50%;
+    background-color: black;
+    /*backdrop-filter: blur(10px);*/
+    box-shadow: inset 0 0 20px 0 #3498db;
+    border-radius: 50%;
 }
 
 .hj-col-2:hover {
-  background-color: black;
-  border-radius: 50%;
-  box-shadow: inset 0 0 20px 0 #3498db;
+    background-color: black;
+    border-radius: 50%;
+    box-shadow: inset 0 0 20px 0 #3498db;
 }
+
 .hj-col-3:hover {
-  background-color: black;
-  border-radius: 50%;
-  box-shadow: inset 0 0 20px 0 #3498db;
+    background-color: black;
+    border-radius: 50%;
+    box-shadow: inset 0 0 20px 0 #3498db;
 }
+
 .hj-col-4:hover {
-  background-color: black;
-  border-radius: 50%;
-  box-shadow: inset 0 0 20px 0 #3498db;
+    background-color: black;
+    border-radius: 50%;
+    box-shadow: inset 0 0 20px 0 #3498db;
 }
+
 /*원래 css 효과*/
 
 /* 아이콘 */
 .hj-box-1 {
-  height: 5vw;
-  /* border: 1px solid violet; */
-}
-.hj-row-1 {
-  /* border: 1px solid blue; */
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  height: 100%;
-}
-.hj-col-1 {
-  position: fixed;
-  right: 0;
-  width: 7%;
-  height: 8%;
+    height: 5vw;
+    /* border: 1px solid violet; */
 }
 
-  .hj-menu-icon-2 {
+.hj-row-1 {
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+}
+
+.hj-col-1 {
+    position: fixed;
+    right: 0;
+    width: 7%;
+    height: 8%;
+}
+
+.hj-menu-icon-2 {
     /*border: 1px solid red;*/
     width: 3vw;
     height: 4vw;
@@ -149,24 +156,25 @@ body{
     margin-bottom: auto;
     text-align: center;
     margin-left: 1.5vw;
-  }
+}
 
 /* 나머지 디브 */
 .hj-box {
-  /* display: flex;
-  justify-content: center; */
-  /* border: 1px solid violet; */
-  height: 8.2vw;
-  display: flex;
-  justify-content: center;
+    /* display: flex;
+    justify-content: center; */
+    /* border: 1px solid violet; */
+    height: 8.2vw;
+    display: flex;
+    justify-content: center;
 }
+
 .hj-row {
-  /* border: 1px solid blue; */
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  height: 100%;
-  width: 40%;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: 40%;
 }
 
 
@@ -174,30 +182,211 @@ body{
 .hj-story,
 .hj-info,
 .hj-guide {
-  font-size: 2vw;
+    font-size: 2vw;
 }
 
-.hj-home:hover, .hj-story:hover, .hj-info:hover, .hj-guide:hover{
+.hj-home:hover, .hj-story:hover, .hj-info:hover, .hj-guide:hover {
     cursor: pointer;
 }
 
 .hj-menu-txt :hover {
-  color: rgb(242, 166, 52);
+    color: rgb(242, 166, 52);
 
 }
 
 
 .hj-menu-img {
-  width: 100vw;
-  height: 20vw;
-  background-image: url("../Img_hj/menu_img_dark.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-top: 0.2vh;
-  /*margin-bottom: 6vh;*/
+    width: 100vw;
+    height: 20vw;
+    background-image: url("../Img_hj/menu_img_dark.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0.2vh;
+    /*margin-bottom: 6vh;*/
 
 }
 
-@media only screen and (max-width: 430px) and (max-height: 932px){
+@media only screen and (max-width: 430px) and (max-height: 932px) {
+    body {
+        overflow: auto;
+    }
+
+    /*아이콘 클릭했을떄 가운데서 퍼지는 css 효과*/
+    .hj-overlay {
+        font-family: 'JalnanGothic';
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #303C51;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        z-index: 999;
+    }
+
+    .hj-menu-icon, .hj-menu-icon-2 {
+        cursor: pointer;
+    }
+
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+
+
+    /* 별똥별 효과*/
+    .hj-col, .hj-col-2, .hj-col-3, .hj-col-4 {
+        position: relative;
+        display: flex;
+        padding: 1vw;
+        /* background-color: #3498db; */
+        color: #fff;
+        transition: background-color 0.3s ease;
+        overflow: hidden;
+        width: 70%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+
+    .hj-star-container, .hj-star-container-2, .hj-star-container-3, .hj-star-container-4 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+
+    .star, .star2, .star3, .star4 {
+        position: absolute;
+        background: #fff;
+        width: 5px;
+        height: 3px;
+        animation: shooting-star 5s infinite linear;
+    }
+
+    @keyframes shooting-star {
+        to {
+            transform: translateX(-100vw) translateY(100vh);
+        }
+    }
+
+    .hj-col:hover {
+        background-color: black;
+        /*backdrop-filter: blur(10px);*/
+        box-shadow: inset 0 0 20px 0 #3498db;
+        border-radius: 50%;
+    }
+
+    .hj-col-2:hover {
+        background-color: black;
+        border-radius: 50%;
+        box-shadow: inset 0 0 20px 0 #3498db;
+    }
+
+    .hj-col-3:hover {
+        background-color: black;
+        border-radius: 50%;
+        box-shadow: inset 0 0 20px 0 #3498db;
+    }
+
+    .hj-col-4:hover {
+        background-color: black;
+        border-radius: 50%;
+        box-shadow: inset 0 0 20px 0 #3498db;
+    }
+
+    /*원래 css 효과*/
+    /* 아이콘 */
+    .hj-box-1 {
+        height: 15vw;
+        /* border: 1px solid violet; */
+    }
+
+    .hj-row-1 {
+        /* border: 1px solid blue; */
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+    }
+
+    .hj-col-1 {
+        position: fixed;
+        right: 6vw;
+        width: 7%;
+        height: 7%;
+    }
+
+    .hj-menu-icon-2 {
+        /*border: 1px solid red;*/
+        width: 10vw;
+        height: 10vw;
+        background-image: url("../Img_hj/menu_moon1.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-top: 2vw;
+        text-align: center;
+    }
+
+    /* 나머지 디브 */
+    .hj-box {
+        /* display: flex;
+        justify-content: center; */
+        /* border: 1px solid violet; */
+        height: 20vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hj-row {
+        /* border: 1px solid blue; */
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+        width: 100%;
+    }
+
+
+    .hj-home,
+    .hj-story,
+    .hj-info,
+    .hj-guide {
+        font-size: 7vw;
+    }
+
+    .hj-home:hover, .hj-story:hover, .hj-info:hover, .hj-guide:hover {
+        cursor: pointer;
+    }
+
+    .hj-menu-txt :hover {
+        color: rgb(242, 166, 52);
+
+    }
+
+
+    .hj-menu-img {
+        width: 100vw;
+        height: 50vw;
+        background-image: url("../Img_hj/menu_img_dark.png");
+        background-size: cover;
+        background-position: 75%;
+        background-repeat: no-repeat;
+        margin-top: 0.2vh;
+        /*margin-bottom: 6vh;*/
+
+    }
 }

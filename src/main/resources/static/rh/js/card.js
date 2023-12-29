@@ -211,19 +211,6 @@ $(function () {
         $("#icon8").fadeToggle();
     });
 
-    // 라이딩베스트 8번
-    $("#ridingicon8").click(function () {
-        $("#ridingicon8").hide();
-        $("#ridingcontent8, #back8").fadeToggle();
-        $("#best").css("visibility","visible").css("left","21.5vw").css("height","100%").css("transition","0.5s ease-in-out");
-    });
-    $("#back8").click(function () {
-        $("#best").css("left","-25.3vw").css("visibility","hidden").css("height","0");
-        $("#ridingcontent8, #back8").hide();
-        $("#ridingicon8").fadeToggle();
-    });
-
-
     // 동물 신고 9번
     $("#icon9").click(function () {
         $("#icon9").hide();

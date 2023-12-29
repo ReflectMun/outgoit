@@ -265,10 +265,18 @@
     border-radius: 5vw;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> rh
 #search-result-list::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0);
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> rh
 /*검색부분 버튼 CSS*/
 .mh-button {
     font-family: 'SOYOMapleBoldTTF';
