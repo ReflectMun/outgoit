@@ -7,9 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUT GO IT - hiking </title>
-
-    <link rel="stylesheet" href="../resources/static/kmh/css/main.css">
-
+    <link rel="stylesheet" href="/resources/static/kmh/css/main.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
@@ -32,11 +30,8 @@
                 <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
                 <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
             </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
                 <div class="banner-txt-wrap">
-                    <div class="banner-titlek">
+                    <div class="banner-title">
 <%--                        <span>HKING</span>--%>
                          <div class="banner-sub-txt">
                             <span> &nbsp; Campsite &nbsp; Campfire &nbsp; Tent Pitching &nbsp; Sleeping Bag &nbsp; Fishing Spot &nbsp; Sunrise/Sunset Views &nbsp; Stargazing &nbsp; Nature Exploration &nbsp; Outdoor Enthusiast </span>
@@ -88,16 +83,9 @@
     <script src="../resources/static/kmh/js/trailDraft1.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
+            loop: true,
             autoplay: {
                 delay: 5000,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                type: "progressbar",
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
             },
         });
     </script>
