@@ -45,10 +45,10 @@
         <div class="content">
             <div class="map-txt-wrap">
                 <div class="map-title">
-                    <span> Search </span>
+                    <span> Camping Area Search </span>
                 </div>
                 <div class="map-sub-txt">
-                    <span> 간단한 기능 설명하는 문장 하나 들어가면 좋을듯</span>
+                    <span> 원하는 지역의 캠핑장을 찾아 캠핑을 즐기세요!</span>
                 </div>
             </div>
             <div class="search-wrap">

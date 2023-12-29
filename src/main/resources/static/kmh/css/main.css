@@ -14,6 +14,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'BMJUA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .body {
     margin: 0;
     padding: 0;
@@ -101,28 +108,42 @@
 }
 
 .map-txt-wrap {
-    border: 3px solid black;
+    border: 0.5vw solid rgb(76 44 9);
     margin-top: 7vw;
     display: grid;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
     place-items: center;
+    width: 40vw;
+    height: 6vw;
+    padding: 1vw;
+    border-radius: 2vw;
+    background-image: url("../../../../resources/static/img/기타/나무보드.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .map-title {
     font-family: 'JalnanGothic';
-    font-size: 3vw;
+    font-size: 3.2vw;
     font-weight: bolder;
+    color: #ccdf9c;
+    -webkit-text-stroke: 0.01vw black;
+
 }
 
 .map-sub-txt {
     font-family: 'SOYOMapleBoldTTF';
-    font-size: 1vw;
+    font-size: 1.4vw;
     margin-top: 0.5vw;
+    color: white;
 }
 
 .search-wrap {
     width: 100%;
     height: 40vw;
-    margin-top: 1vw;
+    margin-top: 2vw;
 }
 
 .background-map {
@@ -130,8 +151,11 @@
     justify-content: center;
     margin: auto;
     width: 75%;
-    background-color: rgb(117 101 78);
-    border-radius: 5%;
+    border: 0.5vw solid rgb(76 44 9);
+    border-radius: 3vw;
+    background-image: url("../../../../resources/static/img/기타/나무보드.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -140,9 +164,10 @@
     height: 5vw;
     display: flex;
     justify-content: center;
-    margin-top: 2vw;
-
+    margin-top: 1.8vw;
 }
+
+
 
 .map-all {
     width: 75%;
@@ -153,8 +178,6 @@
     margin-right: auto;
     margin: auto;
     padding: 1%;
-
-
 }
 
 
@@ -184,16 +207,14 @@
     height: 30vw;
     overflow-y: scroll;
     font-size: 0.7vw;
-<<<<<<< HEAD
     border-top-right-radius : 5%;
     border-bottom-right-radius : 5%;
-=======
     border-top-right-radius: 5%;
     border-bottom-right-radius :5%;
-
->>>>>>> front-mh
 }
 
+
+/*리스트 스크롤 css*/
 #search-result-list::-webkit-scrollbar {
     width: 10px;
 }
@@ -203,32 +224,28 @@
 }
 
 #search-result-list::-webkit-scrollbar-thumb {
-    background-color: rgb(0, 52, 255);
+    background-color: rgb(43, 128, 66);
     width: 8px;
     border-radius: 30px;
 }
-<<<<<<< HEAD
+
 #search-result-list::-webkit-scrollbar-track{
     background-color: rgba(0,0,0,0);
 }
 
-=======
 
 #search-result-list::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0);
 }
->>>>>>> front-mh
-
 
 /*검색부분 버튼 CSS*/
-
 .mh-button {
     font-family: 'SOYOMapleBoldTTF';
     width: 7vw;
     height: 3vw;
     display: inline-block;
     padding: 1vw 2vw;
-    font-size: 1vw;
+    font-size: 1.2vw;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -236,8 +253,9 @@
     color: #fff;
     background-color: #609f55;
     border: none;
-    border-radius: 5%;
+    border-radius: 0.5vw;
     box-shadow: 0 0.7vw #1c4728;
+    line-height: 1vw;
 }
 
 .mh-button:hover {
@@ -253,11 +271,9 @@
 .mh-button > span {
     display: flex;
     justify-content: center;
-
 }
 
 /*검색창 CSS*/
-
 .search-input {
     font-family: 'SOYOMapleBoldTTF';
     display: flex;
@@ -265,13 +281,13 @@
     cursor: pointer;
     text-align: center;
     width: 20vw;
-    height: 3.5vw;
+    height: 3.3vw;
     margin-right: 1vw;
-    border-radius: 5%;
+    border-radius: 0.5vw;
     outline: none;
     border: 0;
     background-color: rgb(250 250 250);
-    font-size: 1vw;
+    font-size: 1.2vw;
 }
 
 /*리스트 fadeIn 효과*/
@@ -298,10 +314,9 @@
     }
 }
 
-/* 리스트 위치 조정 */
-
+/* 리스트 박스 */
 .camping-area-info-box {
-    font-family: 'SOYOMapleBoldTTF';
+    font-family: 'BMJUA';
     background-color: rgb(236, 236, 236);
     width: 23.5vw;
     height: 6.5vw;
@@ -311,8 +326,9 @@
     margin-top: 1vw;
     border-bottom: 0.2vw solid #b9b9b9;
     border-radius: 3%;
-
+    display: grid;
 }
+
 
 .camping-area-name {
     margin-left: 1vw;
@@ -321,15 +337,18 @@
 
 .button-wrapper {
     margin-left: 1vw;
+    margin-bottom: 1vw;
 }
 
 
 /*리스트 버튼 CSS test*/
-
 .open-detail-button {
-    font-family: 'SOYOMapleBoldTTF';
+    font-family: 'BMJUA';
+    background-color: #609f55;
+    color: white;
+    border: 0.07vw solid #173b21;
+    height: 1.5vw;
+    font-size: 1vw;
+    width: 7.5vw;
+    border-radius: 3%;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> front-mh
