@@ -69,7 +69,7 @@
                 <div id="hj-overlay-popup"></div>
                 <!-- 칠판에 쓰인 분필 -->
                 <div id="hj-content-box-comment"><span>OUT GO IT</span></div>
-                <div id="hj-post-it"></div>
+                <div id="hj-tape"></div>
 
                 <!-- 이미지 부분 -->
                 <div id="hj-content-inside-box">
@@ -112,6 +112,8 @@
                 <!-- 코멘트 칠판 효과 -->
                 <div id="hj-comment-pic">
                     <div id="hj-content-inside-box2">
+                        <div id="hj-paper"></div>
+                        <div id="hj-tape2"></div>
                         <div id="hj-content-detail2">
                             <div id="hj-content-zentai-box">
                                 <!-- 별부분 -->
@@ -131,6 +133,8 @@
                                                     id="hj-id-input"
                                                     placeholder="닉네임"
                                                     name="author"
+                                                    onfocus="this.placeholder=''"
+                                                    onblur="this.placeholder='닉네임'"
                                             />
                                         </div>
                                         <div id="hj-pw">
@@ -139,6 +143,8 @@
                                                     id="hj-pw-input"
                                                     placeholder="비번"
                                                     name="password"
+                                                    onfocus="this.placeholder=''"
+                                                    onblur="this.placeholder='비번'"
                                             />
                                         </div>
                                     </div>
@@ -148,6 +154,8 @@
                                                 type="text"
                                                 id="hj-review-input"
                                                 placeholder="비방글은 삭제 조치 됩니다."
+                                                onfocus="this.placeholder=''"
+                                                onblur="this.placeholder='비방글은 삭제 조치 됩니다.'"
                                         />
                                     </div>
                                     <!-- 확인버튼 -->
@@ -171,6 +179,7 @@
 
                     <!--  칠판 코멘트 -->
                     <div id="hj-content-box-comment2"><span>Camping</span></div>
+                    <div id="hj-tape3"></div>
                     <div id="hj-review-inside-box2">
 
                         <div id="hj-review-detail2">

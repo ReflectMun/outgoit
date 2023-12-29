@@ -80,7 +80,7 @@ div{
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: 8%;
+    top: 6%;
     right: 20%;
 }
 
@@ -95,6 +95,7 @@ div{
     width: 70vw;
     padding-bottom: 7vw;
     background-size: cover;
+    height: 25vw;
 }
 #hj-content-inside-box {
     display: flex;
@@ -116,19 +117,18 @@ div{
 /* 정보 부분 */
 #hj-content-detail {
     /*background-color: rgb(6, 57, 10);*/
-    background-image: url("/resources/static/img/기타/양피지.png");
-    /*border: 0.6vw solid rgb(157, 111, 76);*/
+    background-image: url(/resources/static/img/기타/양피지.png);
+    /* border: 0.6vw solid rgb(157, 111, 76); */
     padding: 3% 0% 5% 2%;
     margin-right: 5%;
-    width: 45%;
+    width: 40%;
+    height: 3vw;
     color: black;
     font-family: 'SOYOMapleBoldTTF';
     background-size: cover;
 }
 
-#hj-content-detail:hover{
-    cursor: pointer;
-}
+
 #hj-content-plus-container{
     position: absolute;
     background-image: url("/resources/static/img/기타/양피지.png");
@@ -147,9 +147,7 @@ div{
     opacity: 0;
     transition: opacity 1s ease;
 }
-#hj-content-plus-container:hover{
-    cursor: pointer;
-}
+
 #hj-content-plus-container.show {
     opacity: 1;
     display: block;

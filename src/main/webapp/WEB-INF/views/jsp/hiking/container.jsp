@@ -22,8 +22,8 @@ charset=UTF-8" pageEncoding="UTF-8"%>
   <%-- 헤더 시작 --%>
     <div class="hj-container">
       <div class="hj-header">
-        <div class="hj-logo-container">
-          <div class="hj-logo" onclick="location.href='/outgoit/camping'">  </div>
+        <div class="hj-logo-container" onclick="location.href='/outgoit/hiking'">
+          <div class="hj-logo">  </div>
           <!-- 로고 이미지 넣기 -->
           <div class="hj-title">시간을 느리게, 경험을 깊게</div>
           <!-- 글자 나중에    -->
