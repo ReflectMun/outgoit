@@ -91,7 +91,7 @@ div{
     border: 2vw solid #6c480c;
     background-color: #59795a;
     box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
-    width: 65%;
+    width: 70vw;
     padding-bottom: 7vw;
 }
 #hj-content-inside-box {
@@ -101,7 +101,7 @@ div{
     justify-content: space-between;
 }
 #hj-content-img {
-    background-color: white;
+    /*background-color: white;*/
     margin-left: 5%;
     width: 26vw;
     height: 20vw;
@@ -213,7 +213,7 @@ div{
     border: 2vw solid #6c480c;
     background-color: #59795a;
     box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
-    width: 65%;
+    width: 70vw;
     padding-bottom: 3vw;
 }
 #hj-content-inside-box2 {
@@ -234,10 +234,11 @@ div{
 }
 #hj-content-zentai-box {
     margin-top: 1%;
+    width: 90%;
 }
 #hj-review-star-box {
     display: flex;
-    margin-left: 32%;
+    margin-left: 36%;
 }
 .hj-star{
     font-size: 2vw;
@@ -257,28 +258,74 @@ div{
 
 #hj-input {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-top: 1%;
+    /* align-content: center; */
+    width: 100%;
+    margin-left: 5%;
 }
 #hj-input-content {
-    margin-left: 3%;
-    margin-top: 1%;
+    /*margin-left: 3%;*/
+    /*margin-top: 1%;*/
+}
+#hj-pw{
+    margin-top: 3%;
 }
 #hj-id-input, #hj-pw-input{
-
-    /*padding: 4%;*/
+    font-family: 'SOYOMapleBoldTTF';
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    width: 11vw;
+    height: 2vw;
+    /*margin-right: vw;*/
+    border-radius: 0.5vw;
+    outline: none;
+    border: 0;
+    background-color: rgb(250 250 250);
+    font-size: 1vw;
 
 }
 #hj-review-content {
     width: 50%;
 }
 #hj-review-input {
-    height: 100%;
-    width: 100%;
-    /*padding: 2%;*/
+
+    font-family: 'SOYOMapleBoldTTF';
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    width: 31vw;
+    height: 5vw;
+    /* margin-right: 1vw; */
+    border-radius: 0.5vw;
+    outline: none;
+    border: 0;
+    background-color: rgb(250 250 250);
+    font-size: 1vw;
 }
 #hj-btn {
-    margin-top: 3%;
+    /*margin-top: 3%;*/
+}
+#hj-btn-button{
+    font-family: 'SOYOMapleBoldTTF';
+    width: 5vw;
+    height: 2.5vw;
+    display: inline-block;
+    /* padding: 1vw 2vw; */
+    font-size: 1vw;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #609f55;
+    border: none;
+    border-radius: 0.5vw;
+    box-shadow: 0 0.7vw #1c4728;
+    line-height: 1vw;
 }
 /* 리뷰 보여주는 창 */
 
@@ -293,7 +340,7 @@ div{
     border: 2vw solid #6c480c;
     background-color: #59795a;
     box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
-    width: 65%;
+    width: 70vw;
     padding-bottom: 3vw;
     /*height: 100%;*/
 
@@ -401,6 +448,9 @@ div{
 #hj-no-review{
     /*margin-left: 40%;*/
     text-align: center;
+    font-size: 1.18vw;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 /*페이지 처리*/
 #hj-page-box{
@@ -413,4 +463,9 @@ div{
 }
 #hj-final-button{
     margin-left: 1%;
+}
+#hj-prev-button:hover,
+#hj-next-button:hover
+{
+    cursor: pointer;
 }
