@@ -15,7 +15,8 @@
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous"
     ></script>
-    <script src="../../../../../../../resources/static/rh/js/card.js"></script>
+    <script src="/resources/static/rh/js/card.js"></script>
+    <script src="/resources/static/rh/js/recommend_riding.js"></script>
 </head>
 <body>
 <div>
@@ -228,7 +229,7 @@
                 </div>
                 <div class="rh-riding-wood-main" style="display: block" id="best">
                     <div class="rh-riding-wood-main-best">
-                        <div class="rh-riding-wood-mainPost-best rh-pointer" id="best1">
+                        <div class="rh-riding-wood-mainPost-best" id="best1">
                             <div class="rh-riding-wood-mainPost-bestText">
                                 <div class="bestTextLocal">춘천</div>
                                 <div class="bestText2">의암호 자전거길</div>
@@ -236,7 +237,7 @@
                         </div>
                     </div>
                     <div class="rh-riding-wood-main-best">
-                        <div class="rh-riding-wood-mainPost-best rh-pointer" id="best2">
+                        <div class="rh-riding-wood-mainPost-best" id="best2">
                             <div class="rh-riding-wood-mainPost-bestText">
                                 <div class="bestTextLocal">인천-서울</div>
                                 <div class="bestText2">아라 자전거길</div>
@@ -244,7 +245,7 @@
                         </div>
                     </div>
                     <div class="rh-riding-wood-main-best">
-                        <div class="rh-riding-wood-mainPost-best rh-pointer" id="best3">
+                        <div class="rh-riding-wood-mainPost-best" id="best3">
                             <div class="rh-riding-wood-mainPost-bestText">
                                 <div class="bestTextLocal">대전</div>
                                 <div class="bestText2">대청호수 자전거길</div>
