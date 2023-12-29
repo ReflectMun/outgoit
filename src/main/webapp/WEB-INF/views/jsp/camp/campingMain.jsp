@@ -25,11 +25,11 @@
 
         <div class="mh-banner-wrap camp swiper mySwiper">
             <div class="mh-banner swiper-wrapper">
-                <div class="swiper-slide"><img src="../kmh/img/camping_banner.jpg"></div>
-                <div class="swiper-slide"><img src="../kmh/img/camping_banner.jpg"></div>
-                <div class="swiper-slide"><img src="../kmh/img/camping_banner.jpg"></div>
-                <div class="swiper-slide"><img src="../kmh/img/camping_banner.jpg"></div>
-                <div class="swiper-slide"><img src="../kmh/img/camping_banner.jpg"></div>
+                <div class="swiper-slide"><img src="/resources/static/kmh/img/camping_banner.jpg"></div>
+                <div class="swiper-slide"><img src="/resources/static/kmh/img/Campingbanner1.png"></div>
+                <div class="swiper-slide"><img src="/resources/static/kmh/img/Campingbanner2.png"></div>
+                <div class="swiper-slide"><img src="/resources/static/kmh/img/Campingbanner3.png"></div>
+<%--                <div class="swiper-slide"><img src="../kmh/img/camping_banner.jpg"></div>--%>
             </div>
             <div class="mh-banner-txt-wrap">
                 <div class="mh-banner-title">
@@ -85,7 +85,7 @@
         var swiper = new Swiper(".mySwiper", {
             loop: true,
             autoplay: {
-                delay: 5000,
+                delay: 3000,
             },
         });
     </script>
