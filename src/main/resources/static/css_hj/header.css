@@ -65,16 +65,17 @@ body {
 }
 
 .hj-title {
-    font-family: 'JalnanGothic';
     font-weight: bolder;
-    font-size: 2vw;
-    width: 10vw;
+    font-size: 1vw;
+    width: 12vw;
     margin-left: 1vw;
     color: rgb(242, 166, 52);
-    text-shadow: -0.1vw 0 #FFFAF6, 0 0.1vw #FFFAF6, 0.1vw 0 #FFFAF6, 0 -0.1vw #FFFAF6;
+    /* text-shadow: -0.1vw 0 #FFFAF6, 0 0.1vw #FFFAF6, 0.1vw 0 #FFFAF6, 0 -0.1vw #FFFAF6; */
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'SOYOMapleBoldTTF';
+    margin-top: 1%;
 }
 
 .hj-title > span {

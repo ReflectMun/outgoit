@@ -209,8 +209,7 @@
     font-size: 0.7vw;
     border-top-right-radius : 5%;
     border-bottom-right-radius : 5%;
-    border-top-right-radius: 5%;
-    border-bottom-right-radius :5%;
+
 }
 
 
@@ -229,13 +228,16 @@
     border-radius: 30px;
 }
 
+
+
+
+
+
 #search-result-list::-webkit-scrollbar-track{
     background-color: rgba(0,0,0,0);
 }
 
-#search-result-list::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0);
-}
+
 
 /*검색부분 버튼 CSS*/
 .mh-button {

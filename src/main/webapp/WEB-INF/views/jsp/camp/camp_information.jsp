@@ -197,7 +197,7 @@
                                         <!--페이징 처리 div 끝 -->
                                     </c:when>
                                     <c:otherwise>
-                                        <h2 id="hj-no-review">아직 작성된 리뷰가 없습니다</h2>
+                                        <div id="hj-no-review">아직 작성된 리뷰가 없습니다</div>
                                     </c:otherwise>
                                 </c:choose>
 
