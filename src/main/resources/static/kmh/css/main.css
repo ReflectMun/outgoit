@@ -34,11 +34,12 @@
     background-color: #FFFAF6;
 }
 
-.container {
+.mh-container {
     /*border: 3px solid red;*/
     position: relative;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 /*슬라이드*/
@@ -88,13 +89,13 @@
 /*    background-size: cover;*/
 /*}*/
 
-.banner-txt-wrap {
+.mh-banner-txt-wrap {
     margin-top: 14vw;
     display: none;
     place-items: center;
 }
 
-.banner-title {
+.mh-banner-title {
     font-family: 'JalnanGothic';
     font-size: 6vw;
     font-weight: bolder;
@@ -102,12 +103,12 @@
 }
 
 
-.content {
+.mh-content {
     width: 100%;
     height: 100%;
 }
 
-.map-txt-wrap {
+.mh-map-txt-wrap {
     border: 0.5vw solid rgb(76 44 9);
     margin-top: 7vw;
     display: grid;
@@ -121,36 +122,45 @@
     border-radius: 2vw;
     background-image: url("../../../../resources/static/img/기타/나무보드.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: initial;
 }
 
-.map-title {
+.mh-map-title {
     font-family: 'JalnanGothic';
     font-size: 3.2vw;
     font-weight: bolder;
-    color: #ccdf9c;
+    color: #b5ce6b;
     -webkit-text-stroke: 0.01vw black;
 
 }
 
-.map-sub-txt {
+.mh-map-sub-txt {
     font-family: 'SOYOMapleBoldTTF';
     font-size: 1.4vw;
     margin-top: 0.5vw;
     color: white;
 }
 
-.search-wrap {
+.mh-search-wrap {
     width: 100%;
-    height: 40vw;
+    /*height: 40vw;*/
     margin-top: 2vw;
+    /*padding-bottom: 8vw;*/
 }
 
-.background-map {
+.mh-search-wrap-riding {
+    width: 100%;
+    /*height: 40vw;*/
+    margin-top: 2vw;
+    /*padding-bottom: 17vw;*/
+}
+
+
+.mh-background-map {
     display: grid;
     justify-content: center;
     margin: auto;
-    width: 75%;
+    width: 70%;
     border: 0.5vw solid rgb(76 44 9);
     border-radius: 3vw;
     background-image: url("../../../../resources/static/img/기타/나무보드.jpg");
@@ -158,8 +168,23 @@
     background-size: cover;
 }
 
+.mh-background-map-riding {
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    width: 70%;
+    height: 48vw;
+    border: 0.5vw solid rgb(76 44 9);
+    border-radius: 3vw;
+    background-image: url("../../../../resources/static/img/기타/나무보드.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+}
 
-.area-search {
+
+
+.mh-area-search {
     width: 100vw;
     height: 5vw;
     display: flex;
@@ -169,8 +194,8 @@
 
 
 
-.map-all {
-    width: 75%;
+.mh-map-all {
+    width: 70vw;
     height: 33vw;
     display: flex;
     justify-content: center;
@@ -178,6 +203,18 @@
     margin-right: auto;
     margin: auto;
     padding: 1%;
+}
+
+.mh-map-all-riding {
+    width: 70vw;
+    height: 39vw;
+    display: flex;
+    justify-content: center;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    margin: auto;
+    padding: 1%;
+
 }
 
 
@@ -209,14 +246,13 @@
     font-size: 0.7vw;
     border-top-right-radius : 5%;
     border-bottom-right-radius : 5%;
-    border-top-right-radius: 5%;
-    border-bottom-right-radius :5%;
+
 }
 
 
 /*리스트 스크롤 css*/
 #search-result-list::-webkit-scrollbar {
-    width: 10px;
+    width: 0.8vw;
 }
 
 #search-result-list::-webkit-scrollbar-button {
@@ -225,14 +261,13 @@
 
 #search-result-list::-webkit-scrollbar-thumb {
     background-color: rgb(43, 128, 66);
-    width: 8px;
-    border-radius: 30px;
+    width: 10vw;
+    border-radius: 5vw;
 }
 
 #search-result-list::-webkit-scrollbar-track{
     background-color: rgba(0,0,0,0);
 }
-
 
 /*검색부분 버튼 CSS*/
 .mh-button {
@@ -260,7 +295,7 @@
 
 .mh-button:active {
     background-color: #3e8e41;
-    box-shadow: 0 5px #1c4728;
+    box-shadow: 0 0.45vw #1c4728;
     transform: translateY(4px);
 }
 
@@ -270,7 +305,7 @@
 }
 
 /*검색창 CSS*/
-.search-input {
+.mh-search-input {
     font-family: 'SOYOMapleBoldTTF';
     display: flex;
     justify-content: center;
@@ -287,9 +322,9 @@
 }
 
 /*리스트 fadeIn 효과*/
-.camping-area-info-box {
-    animation: fadeInList 2s ease 3s;
-    -webkit-animation: fadeInList 1s;
+.mh-camping-area-info-box {
+    animation: fadeInList 2s ease-in-out 3s;
+    -webkit-animation: fadeInList 2s;
 }
 
 @keyframes fadeInList {
@@ -314,7 +349,7 @@
 .camping-area-info-box {
     font-family: 'BMJUA';
     background-color: rgb(236, 236, 236);
-    width: 23.5vw;
+    width: 22vw;
     height: 6.5vw;
     font-size: 1vw;
     margin: auto;
@@ -346,5 +381,86 @@
     height: 1.5vw;
     font-size: 1vw;
     width: 7.5vw;
-    border-radius: 3%;
+    border-radius: 0.5vw;
+    cursor: pointer;
+}
+
+/*라이딩 지도 메뉴 버튼*/
+
+.metro-city-btn-menu{
+    display: flex;
+    justify-content: center;
+    padding: 3.5%;
+    line-height: 1vw;
+}
+.metro-city-btns{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60vw;
+}
+.metro-city-btn{
+    font-family: 'SOYOMapleBoldTTF';
+    width: 2vw;
+    height: 1vw;
+    display: inline-block;
+    padding: 1vw 2vw;
+    font-size: 1vw;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 0.5vw
+}
+.orange-btn{
+    color: #fff;
+    background-color: #d99661;
+    box-shadow: 0 0.7vw #71431E;
+}
+.orange-btn:hover{
+    background-color: #d37f3a;
+}
+.orange-btn:active{
+    background-color: #d37f3a;
+    box-shadow: 0 0.45vw #71431E;
+    transform: translateY(4px);
+}
+.pink-btn{
+    color: #fff;
+    background-color: #da8cad;
+    box-shadow: 0 0.7vw #9C2A57;
+}
+.pink-btn:hover{
+    background-color: #c4668a;
+}
+.pink-btn:active{
+    background-color: #c4668a;
+    box-shadow: 0 0.45vw #9C2A57;
+    transform: translateY(4px);
+}
+.green-btn{
+    color: #fff;
+    background-color: #609f55;
+    box-shadow: 0 0.7vw #1c4728;
+}
+.green-btn:hover{
+    background-color: #3e8e41
+}
+.green-btn:active{
+    background-color: #3e8e41;
+    box-shadow: 0 0.45vw #1c4728;
+    transform: translateY(4px);
+}
+.blue-btn{
+    color: #fff;
+    background-color: #6380be;
+    box-shadow: 0 0.7vw #232A8E;
+}
+.blue-btn:hover{
+    background-color: #4670be;
+}
+.blue-btn:active{
+    background-color: #4670be;
+    box-shadow: 0 0.45vw #232A8E;
+    transform: translateY(4px);
 }

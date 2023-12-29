@@ -208,7 +208,7 @@
                     </div>
                 </div>
                 <div class="rh-riding-wood-main">
-                    <div class="rh-pointer" id="ridingicon8">
+                    <div class="rh-pointer" id="icon8">
                         <div class="rh-redPin-height">
                             <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
                         </div>
@@ -216,7 +216,7 @@
                                   alt=""></div>
                         <div class="rh-card-set">초보 라이더 베스트</div>
                     </div>
-                    <div class="rh-riding-wood-mainPost" id="ridingcontent8">
+                    <div class="rh-riding-wood-mainPost" id="content8">
                         <div class="rh-redPin-textView">
                             <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
                         </div>

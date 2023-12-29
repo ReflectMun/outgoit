@@ -29,28 +29,28 @@
 </head>
 <body>
     
-	<div class="container">
+	<div class="mh-index-container">
         <div class="header"></div>
-		<div class="title-wrap">
-			<div class="title animate__animated animate__bounce" >
+		<div class="mh-index-title-wrap">
+			<div class="mh-title animate__animated animate__bounce" >
 				<span>OUT&nbsp;</span>
-                <span class="go">GO&nbsp;</span>
+                <span class="mh-go">GO&nbsp;</span>
                 <span>IT</span>
 			</div>
-			<div class="sub-title animate__animated animate__fadein"><span>시간을 느리게, 경험을 깊게</span></div>
+			<div class="mh-sub-title animate__animated animate__fadein"><span>시간을 느리게, 경험을 깊게</span></div>
 		</div>
-		<div class="menu-wrap">
-			<div class="menu" onclick="location.href='/outgoit/camping'">
-				<div class="camp-icon"></div>
-				<div class="txt menu-txt" id="txt1"><span>CAMPING</span></div>
+		<div class="mh-menu-wrap">
+			<div class="mh-menu" onclick="location.href='/outgoit/camping'">
+				<div class="mh-camp-icon"></div>
+				<div class="mh-txt mh-menu-txt" id="txt1"><span>CAMPING</span></div>
 			</div>
-			<div class="menu" onclick="location.href='/outgoit/hiking'">
-				<div class="hiking-icon"></div>
-				<div class="txt menu-txt" id="txt2"><span>HIKING</span></div>
+			<div class="mh-menu" onclick="location.href='/outgoit/hiking'">
+				<div class="mh-hiking-icon"></div>
+				<div class="mh-txt mh-menu-txt" id="txt2"><span>HIKING</span></div>
 			</div>
-			<div class="menu" onclick="location.href='/outgoit/riding'">
-				<div class="riding-icon"></div>
-				<div class="txt menu-txt" id="txt3"><span>RIDING</span></div>
+			<div class="mh-menu" onclick="location.href='/outgoit/riding'">
+				<div class="mh-riding-icon"></div>
+				<div class="mh-txt mh-menu-txt" id="txt3"><span>RIDING</span></div>
 			</div>
 		</div>
         <div class="footer"></div>

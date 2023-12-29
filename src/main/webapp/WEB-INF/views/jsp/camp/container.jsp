@@ -25,7 +25,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
         <div class="hj-logo-container" onclick="location.href='/outgoit/camping'">
           <div class="hj-logo">  </div>
           <!-- 로고 이미지 넣기 -->
-          <div class="hj-title">Out<span>&nbsp;Go&nbsp;</span>It</div>
+          <div class="hj-title">시간을 느리게, 경험을 깊게</div>
           <!-- 글자 나중에    -->
         </div>
         <div class="hj-right">
@@ -108,7 +108,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
       <div class="hj-container-footer">
 
         <div class="hj-footer-pic">
-          <img src="../../Img_hj/footer_tree.png" alt="" />
+          <img src="/resources/static/Img_hj/footer_tree.png" alt="" />
         </div>
         <div class="hj-footer">
           <div class="hj-footer-box hj-footer-box-first">
