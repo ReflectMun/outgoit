@@ -54,7 +54,7 @@
             <div class="mh-search-wrap">
                 <div class="mh-background-map">
                     <div class="mh-area-search">
-                        <input class="mh-search-input" id="search-box" placeholder="검색하고 싶은 지역을 입력해주세요">
+                        <input class="mh-search-input" id="search-box" placeholder="검색하고 싶은 지역을 입력해주세요" onfocus="this.placeholder=''" onblur="this.placeholder='검색하고 싶은 지역을 입력해주세요'">
                         <button class="mh-button" id="submit-search"><span>Search</span></button>
                     </div>
                     <div class="mh-map-all">

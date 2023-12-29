@@ -111,7 +111,7 @@ function makeListElement(searchData, apiResData){
     child.classList.add("camping-area-info-box")
 
     const childCampingAreaName = document.createElement("div")
-    childCampingAreaName.innerHTML = `<h2>${apiResData['facltNm']}</h2>`
+    childCampingAreaName.innerHTML = `<span>${apiResData['facltNm']}</span>`
     childCampingAreaName.classList.add("camping-area-name")
 
     const childButtonWrapper = document.createElement("div")

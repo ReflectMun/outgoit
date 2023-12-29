@@ -375,7 +375,6 @@
     background-color: rgb(236, 236, 236);
     width: 22vw;
     height: 6.5vw;
-    font-size: 1vw;
     margin: auto;
     margin-bottom: 1vw;
     margin-top: 1vw;
@@ -386,6 +385,8 @@
 
 
 .camping-area-name {
+    font-size: 1.6vw;
+    margin: 1.2vw;
     margin-left: 1vw;
 
 }
@@ -403,8 +404,8 @@
     color: white;
     border: 0.07vw solid #173b21;
     height: 1.5vw;
-    font-size: 1vw;
-    width: 7.5vw;
+    font-size: 0.85vw;
+    width: 8vw;
     border-radius: 0.5vw;
     cursor: pointer;
 }

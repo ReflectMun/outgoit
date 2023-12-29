@@ -212,7 +212,7 @@ function addListElementsToResultList(name, data) {
         const child = document.createElement("div");
         child.classList.add("camping-area-info-box");
         const childCampingAreaName = document.createElement("div");
-        childCampingAreaName.innerHTML = `<h2>${n.properties.mntn_nm}</h2>`;
+        childCampingAreaName.innerHTML = `<span>${n.properties.mntn_nm}</span>`;
         childCampingAreaName.classList.add("camping-area-name");
         const childButtonWrapper = document.createElement("div");
 
