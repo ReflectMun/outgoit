@@ -183,7 +183,9 @@
     width: 35%;
     height: 30vw;
     overflow-y: scroll;
-<<<<<<< HEAD
+    font-size: 0.7vw;
+    border-top-right-radius : 5%;
+    border-bottom-right-radius : 5%;
 }
 #search-result-list::-webkit-scrollbar{
     width: 10px;
@@ -200,12 +202,7 @@
 #search-result-list::-webkit-scrollbar-track{
     background-color: rgba(0,0,0,0);
 }
-=======
-    font-size: 0.7vw;
-    border-top-right-radius : 5%;
-    border-bottom-right-radius : 5%;
 
-}
 
 
 /*검색부분 버튼 CSS*/
@@ -319,4 +316,3 @@
 .open-detail-button {
     font-family: 'SOYOMapleBoldTTF';
 }
->>>>>>> front-mh
