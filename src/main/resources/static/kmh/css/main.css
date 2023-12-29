@@ -261,33 +261,14 @@
 
 #search-result-list::-webkit-scrollbar-thumb {
     background-color: rgb(43, 128, 66);
-<<<<<<< HEAD
     width: 10vw;
     border-radius: 5vw;
-}
-
-<<<<<<< HEAD
-=======
-
->>>>>>> rh
-#search-result-list::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0);
-}
-=======
-    width: 8px;
-    border-radius: 30px;
 }
 
 #search-result-list::-webkit-scrollbar-track{
     background-color: rgba(0,0,0,0);
 }
 
->>>>>>> dev
-
-<<<<<<< HEAD
-=======
-
->>>>>>> rh
 /*검색부분 버튼 CSS*/
 .mh-button {
     font-family: 'SOYOMapleBoldTTF';
@@ -401,6 +382,7 @@
     font-size: 1vw;
     width: 7.5vw;
     border-radius: 0.5vw;
+    cursor: pointer;
 }
 
 /*라이딩 지도 메뉴 버튼*/

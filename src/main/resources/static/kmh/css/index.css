@@ -162,7 +162,7 @@ body {
     cursor: pointer;
 }
 
-.mh-menu:hover .menu-txt {
+.mh-menu:hover .mh-menu-txt {
     background-size: 100% 100%; /* menu-txt도 같이 호버되도록 */
 }
 
