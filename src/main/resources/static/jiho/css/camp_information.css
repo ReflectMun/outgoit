@@ -118,15 +118,29 @@ div{
     /*background-color: rgb(6, 57, 10);*/
     background-image: url("/resources/static/img/기타/양피지.png");
     /*border: 0.6vw solid rgb(157, 111, 76);*/
-    padding: 3% 0% 5% 2%;
+    padding-left: 3%;
     margin-right: 5%;
+    padding-top: 2%;
     width: 45%;
     color: black;
     font-family: 'SOYOMapleBoldTTF';
     background-size: cover;
 }
+#hj-detail-contain{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 22%;
+}
+#hj-detail-contain2{
+    margin-top: 32%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 
-#hj-content-detail:hover{
+#hj-detail-form:hover{
     cursor: pointer;
 }
 #hj-content-plus-container{
@@ -147,8 +161,9 @@ div{
     opacity: 0;
     transition: opacity 1s ease;
 }
-#hj-content-plus-container:hover{
+#hj-detail{
     cursor: pointer;
+    border-bottom: 1px solid black;
 }
 #hj-content-plus-container.show {
     opacity: 1;
@@ -171,8 +186,9 @@ div{
 #hj-content-plus-overray{
     display: flex;
     justify-content: space-around;
-    line-height: 1.7vw;
-    padding-bottom: 1.5vw;
+    padding-bottom: 2vw;
+    position: relative;
+
 }
 #hj-no,
 #hj-time,
@@ -185,10 +201,12 @@ div{
 }
 .hj-content-plus-ray{
     margin-top: 1vw;
+    line-height: 1.7vw;
 }
 .hj-content-plus-ray2{
     margin-top: 4.5vw;
     width: 27%;
+    line-height: 1.7vw;
 
 }
 /* 코멘트 부분 */
