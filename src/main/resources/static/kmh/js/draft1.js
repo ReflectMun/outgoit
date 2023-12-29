@@ -15,10 +15,17 @@ const infowindow = new kakao.maps.InfoWindow({ zIndex: 1 })
 let latlngBounds = new kakao.maps.LatLngBounds()
 let markers = []
 
+searchBox.addEventListener("keyup", (e) => {
+    if(e.key === "Enter"){
+        submitSearch.click()
+    }
+})
+
 submitSearch.addEventListener("click", async (e) => {
     const searchKeyword = searchBox.value
     if(!searchKeyword) {
         alert("검색어를 입력해주세요!")
+        return
     }
     const reqUrl = "http://" + hostName + "/api/camping/search/" + searchKeyword
 
