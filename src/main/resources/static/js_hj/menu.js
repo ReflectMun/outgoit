@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             $('.hj-menu-icon-2').on('click', function() {
                 $('.hj-overlay').fadeToggle(100);
-                $('.hj-overlay').css("display", "grid"); // "block"을 "grid"로 변경
+                $('.hj-overlay').css("display", "grid").css("align-content","space-between"); // "block"을 "grid"로 변경
                 $('body').css("overflow-y", "auto");
             });
         });

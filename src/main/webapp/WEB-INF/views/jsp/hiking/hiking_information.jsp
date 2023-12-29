@@ -48,7 +48,7 @@
             <div id="hj-content-inside-box">
               <div id="hj-content-img">
                 <div id="hj-content-img-link">
-                  지도넣어..?
+
 
                 </div>
               </div>
