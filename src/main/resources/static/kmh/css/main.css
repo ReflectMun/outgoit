@@ -270,9 +270,28 @@
     border-radius: 5vw;
 }
 
-#search-result-list::-webkit-scrollbar-track{
-    background-color: rgba(0,0,0,0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#search-result-list::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
 }
+
+
+
 
 /*검색부분 버튼 CSS*/
 .mh-button {
