@@ -266,16 +266,29 @@
 }
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+>>>>>>> origin/hj
 #search-result-list::-webkit-scrollbar-track{
     background-color: rgba(0,0,0,0);
 }
 
 
 
+<<<<<<< HEAD
 #search-result-list::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0);
 }
 
+=======
+>>>>>>> origin/hj
 
 /*검색부분 버튼 CSS*/
 .mh-button {
