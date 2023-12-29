@@ -129,7 +129,7 @@
     font-family: 'JalnanGothic';
     font-size: 3.2vw;
     font-weight: bolder;
-    color: #ccdf9c;
+    color: #b5ce6b;
     -webkit-text-stroke: 0.01vw black;
 
 }
@@ -252,7 +252,7 @@
 
 /*리스트 스크롤 css*/
 #search-result-list::-webkit-scrollbar {
-    width: 10px;
+    width: 0.8vw;
 }
 
 #search-result-list::-webkit-scrollbar-button {
@@ -261,8 +261,8 @@
 
 #search-result-list::-webkit-scrollbar-thumb {
     background-color: rgb(43, 128, 66);
-    width: 8px;
-    border-radius: 30px;
+    width: 10vw;
+    border-radius: 5vw;
 }
 
 #search-result-list::-webkit-scrollbar-track {
@@ -323,8 +323,8 @@
 
 /*리스트 fadeIn 효과*/
 .mh-camping-area-info-box {
-    animation: fadeInList 2s ease 3s;
-    -webkit-animation: fadeInList 1s;
+    animation: fadeInList 2s ease-in-out 3s;
+    -webkit-animation: fadeInList 2s;
 }
 
 @keyframes fadeInList {
@@ -381,7 +381,7 @@
     height: 1.5vw;
     font-size: 1vw;
     width: 7.5vw;
-    border-radius: 3%;
+    border-radius: 0.5vw;
 }
 
 /*라이딩 지도 메뉴 버튼*/
@@ -413,27 +413,27 @@
 }
 .orange-btn{
     color: #fff;
-    background-color: #F78F3A;
+    background-color: #d99661;
     box-shadow: 0 0.7vw #71431E;
 }
 .orange-btn:hover{
-    background-color: #CE6E1F
+    background-color: #d37f3a;
 }
 .orange-btn:active{
-    background-color: #CE6E1F;
+    background-color: #d37f3a;
     box-shadow: 0 0.45vw #71431E;
     transform: translateY(4px);
 }
 .pink-btn{
     color: #fff;
-    background-color: #FC76AC;
+    background-color: #da8cad;
     box-shadow: 0 0.7vw #9C2A57;
 }
 .pink-btn:hover{
-    background-color: #DA4983
+    background-color: #c4668a;
 }
 .pink-btn:active{
-    background-color: #DA4983;
+    background-color: #c4668a;
     box-shadow: 0 0.45vw #9C2A57;
     transform: translateY(4px);
 }
@@ -452,14 +452,14 @@
 }
 .blue-btn{
     color: #fff;
-    background-color: #3069E5;
+    background-color: #6380be;
     box-shadow: 0 0.7vw #232A8E;
 }
 .blue-btn:hover{
-    background-color: #2F5DBE
+    background-color: #4670be;
 }
 .blue-btn:active{
-    background-color: #2F5DBE;
+    background-color: #4670be;
     box-shadow: 0 0.45vw #232A8E;
     transform: translateY(4px);
 }
