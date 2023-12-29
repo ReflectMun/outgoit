@@ -228,21 +228,11 @@
     width: 8px;
     border-radius: 30px;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> e4ad8799ee37bb7dc838545a901623803d57855b
 #search-result-list::-webkit-scrollbar-track{
     background-color: rgba(0,0,0,0);
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> e4ad8799ee37bb7dc838545a901623803d57855b
-#search-result-list::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0);
-}
 
 /*검색부분 버튼 CSS*/
 .mh-button {
