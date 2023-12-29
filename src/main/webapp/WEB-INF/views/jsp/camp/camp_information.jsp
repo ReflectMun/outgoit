@@ -38,24 +38,21 @@
                 <div id="hj-content-plus-container">
                     <div id="hj-content-plus-overray">
                     <div class="hj-content-plus-ray">
-                    <div id="hj-detail-tel">번호: ${telephoneNumber}</div>
-                    <div id="hj-detail-season">운영 시즌: ${periodOfOperation}</div>
-                    <div id="hj-detail-addr">주소: ${address}</div>
-                    <div id="hj-detail-facilities">부대시설: ${subsidiaryFacilities}</div>
+                        <div id="hj-line-introduce">
+                            <%--                        <div>한줄 소개</div>--%>
+                            <div>${lineIntro}</div>
+                            <br>
+                        </div>
+                        <div>일반 야영장 개수: ${generalSite}</div>
+                        <div>자동차 야영장 개수: ${autoSite}</div>
+                        <div>애완동물 동반 가능 여부: ${animalComingControl}</div>
+                        <div>장비 대여 가능 여부: ${equipmentRental}</div>
+                        <div>개인 트레일러 동반 가능 여부: ${trailerAccompanyAt}</div>
+                        <div>개인 카라반 동반 가능 여부: ${caravanAccompanyAt}</div>
+                        <div>화장실 개수: ${toiletCount}</div>
+                        <div>이용 가능한 주면 시설: ${availableFacilities}</div>
                     </div>
-                    <div class="hj-content-plus-ray">
-                    <div id="hj-line-introduce">
-<%--                        <div>한줄 소개</div>--%>
-                        <div>${lineIntro}</div>
-                    </div>
-                    <div>일반 야영장 개수: ${generalSite}</div>
-                    <div>자동차 야영장 개수: ${autoSite}</div>
-                    <div>애완동물 동반 가능 여부: ${animalComingControl}</div>
-                    <div>장비 대여 가능 여부: ${equipmentRental}</div>
-                    <div>개인 트레일러 동반 가능 여부: ${trailerAccompanyAt}</div>
-                    <div>개인 카라반 동반 가능 여부: ${caravanAccompanyAt}</div>
-                    <div>화장실 개수: ${toiletCount}</div>
-                    <div>이용 가능한 주면 시설: ${availableFacilities}</div>
+                    <div class="hj-content-plus-ray2">
                     <div>현재 운영 상태: ${managementStatement}</div>
                     <div>휴장 시작: ${holidaySeasonStart}</div>
                     <div>휴장 종료: ${holidaySeasonEnd}</div>

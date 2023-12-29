@@ -79,7 +79,7 @@ div{
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: 10%;
+    top: 8%;
     right: 20%;
 }
 
@@ -103,11 +103,13 @@ div{
 #hj-content-img {
     background-color: white;
     margin-left: 5%;
-    width: 375px;
-    height: 250px;
+    width: 26vw;
+    height: 20vw;
 }
 #hj-content-img-slide-wrapper img {
-    height: 250px;
+    /*height: 250px;*/
+    width: 26vw;
+    height: 20vw;
 }
 /* 정보 부분 */
 #hj-content-detail {
@@ -129,19 +131,12 @@ div{
     position: absolute;
     background-image: url("/resources/static/img/기타/양피지.png");
     background-size: cover;
-    /* position: fixed; */
-    /* transform: translate(-50%, -50%); */
-    /* border: 3px solid blue; */
+
     width: 95%;
     right: 2%;
     top: 3%;
-    height: 90%;
-    /*background-color: rgb(6, 57, 10);*/
+    height: auto;
 
-    /*border: 0.6vw solid rgb(157, 111, 76);*/
-    /* padding: 2% 0% 5% 2%; */
-    /* margin-right: 5%; */
-    /* width: 45%; */
     color: black;
     font-family: 'SOYOMapleBoldTTF';
     /* 팝업 효과*/
@@ -174,6 +169,8 @@ div{
 #hj-content-plus-overray{
     display: flex;
     justify-content: space-around;
+    line-height: 1.7vw;
+    padding-bottom: 1.5vw;
 }
 #hj-no,
 #hj-time,
@@ -186,6 +183,11 @@ div{
 }
 .hj-content-plus-ray{
     margin-top: 1vw;
+}
+.hj-content-plus-ray2{
+    margin-top: 4.5vw;
+    width: 27%;
+
 }
 /* 코멘트 부분 */
 #hj-comment-name-img{
@@ -211,7 +213,7 @@ div{
     border: 2vw solid #6c480c;
     background-color: #59795a;
     box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
-    width: 70vw;
+    width: 65%;
     padding-bottom: 3vw;
 }
 #hj-content-inside-box2 {
@@ -235,7 +237,7 @@ div{
 }
 #hj-review-star-box {
     display: flex;
-    margin-left: 30%;
+    margin-left: 32%;
 }
 .hj-star{
     font-size: 2vw;
@@ -291,8 +293,8 @@ div{
     border: 2vw solid #6c480c;
     background-color: #59795a;
     box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
-    width: 70vw;
-    padding-bottom: 5vw;
+    width: 65%;
+    padding-bottom: 3vw;
     /*height: 100%;*/
 
 }
@@ -313,8 +315,8 @@ div{
 #hj-review-detail2{
     /* background-image: url(/resources/static/img/기타/양피지.png); */
     /* border: 0.6vw solid rgb(157, 111, 76); */
-    padding: 3% 0% 2% 2%;
-    margin-right: 5%;
+    /*padding: 3% 0% 2% 2%;*/
+    /*margin-right: 5%;*/
     width: 70%;
     color: white;
     font-family: 'SOYOMapleBoldTTF';
@@ -397,13 +399,13 @@ div{
 }
 /*리뷰가 없을떄 css 따로주기*/
 #hj-no-review{
-    margin-left: 40%;
+    /*margin-left: 40%;*/
+    text-align: center;
 }
 /*페이지 처리*/
 #hj-page-box{
     display: flex;
     align-content: center;
-
     justify-content: center;
 }
 #hj-first-button{

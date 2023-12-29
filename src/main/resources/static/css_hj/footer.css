@@ -35,12 +35,12 @@ body {
 
 }
 
-@media screen and (max-width: 400px) {
+
   .container {
-    max-height: 5vh; /* 원하는 최대 높이 값 설정 */
+
     overflow-y: auto; /* 내용이 넘칠 경우 스크롤 표시 */
   }
-}
+
 
 
 .hj-footer-box {
@@ -66,7 +66,7 @@ body {
   justify-content: flex-start;
   color: rgb(242, 166, 52);
   height: 2vw;
-  margin-left: 10%;
+  margin-left: 7%;
   /*margin-top: 3%;*/
 }
 .hj-footer-logo {
@@ -77,7 +77,7 @@ body {
   margin-left: 2%;
   padding: 1%;
   color: rgb(242, 166, 52);
-  bottom: 4vw;
+  bottom: 2vw;
   left: 1vw;
   /* background-color: #FFFAF6; */
   /* border-radius: 10%; */
@@ -121,7 +121,7 @@ body {
   justify-content: flex-start;
   color: rgb(242, 166, 52);
   height: 4vw;
-  margin-left: 5%;
+  margin-left: 2.5%;
 }
 .hj-footer-tel,
 .hj-footer-location {
@@ -181,8 +181,11 @@ body {
 .hj-footer-box2 {
   /*padding-top: 3.2vw;*/
   /*border: 1px solid green;*/
-  width: 60%;
+  /*width: 60%;*/
+  margin-right: 3%;
+  margin-top: 1%;
 }
+
 .hj-footer-garo3{
   margin-top: 3%;
 }
@@ -208,7 +211,7 @@ body {
 .hj-footer-camp,
 .hj-footer-tracking,
 .hj-footer-riding {
-  margin: 2vw;
+  margin: 1vw;
   width: 4vw;
   text-align: center;
   font-size: 1vw;
@@ -220,17 +223,17 @@ body {
   cursor: pointer;
 }
 .hj-footer-camp{
-  background-image: url("/resources/static/Img_hj/camp.png");
+  background-image: url("/resources/static/Img_hj/camping2.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
 .hj-footer-tracking{
-  background-image: url("/resources/static/Img_hj/hiking.png");
+  background-image: url("/resources/static/Img_hj/hiking2.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
 .hj-footer-riding{
-  background-image: url("/resources/static/Img_hj/riding.png");
+  background-image: url("/resources/static/Img_hj/bicycle2.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
