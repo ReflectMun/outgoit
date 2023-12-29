@@ -55,7 +55,7 @@
                 <div class="background-map">
                     <div class="area-search">
                         <input class="search-input" id="search-box" placeholder="검색하고 싶은 지역을 입력해주세요">
-                        <button class="button" id="submit-search"><span>Search</span></button>
+                        <button class="mh-button" id="submit-search"><span>Search</span></button>
                     </div>
                     <div class="map-all">
                         <div id="map"></div>
