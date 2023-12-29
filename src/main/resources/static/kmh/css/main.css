@@ -265,25 +265,20 @@
     border-radius: 30px;
 }
 
-<<<<<<< HEAD
 
 
 
 
 
-=======
->>>>>>> front-mh
+
+
+
 #search-result-list::-webkit-scrollbar-track{
     background-color: rgba(0,0,0,0);
 }
 
 
-<<<<<<< HEAD
-=======
-#search-result-list::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0);
-}
->>>>>>> front-mh
+
 
 /*검색부분 버튼 CSS*/
 .mh-button {

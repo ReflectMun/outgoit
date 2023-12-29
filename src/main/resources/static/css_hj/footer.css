@@ -9,6 +9,9 @@ body {
   width: 100%;
   /*border: 2px solid black;*/
 }
+.hj-container-footer{
+  margin-top: 7vw;
+}
 .hj-footer-pic{
   display: flex;
   justify-content: center;
