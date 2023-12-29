@@ -18,22 +18,22 @@
 
     <!-- 컨테이너 영역 -->
 
-    <div class="container">
+    <div class="mh-container">
 
         <!-- 배너 영역 (슬라이드 들어가면 좋을듯!) -->
 
-        <div class="banner-wrap camp swiper mySwiper">
-            <div class="banner swiper-wrapper">
+        <div class="mh-banner-wrap camp swiper mySwiper">
+            <div class="mh-banner swiper-wrapper">
                 <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
                 <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
                 <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
                 <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
                 <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
             </div>
-                <div class="banner-txt-wrap">
-                    <div class="banner-title">
+                <div class="mh-banner-txt-wrap">
+                    <div class="mh-banner-title">
 <%--                        <span>HKING</span>--%>
-                         <div class="banner-sub-txt">
+                         <div class="mh-banner-sub-txt">
                             <span> &nbsp; Campsite &nbsp; Campfire &nbsp; Tent Pitching &nbsp; Sleeping Bag &nbsp; Fishing Spot &nbsp; Sunrise/Sunset Views &nbsp; Stargazing &nbsp; Nature Exploration &nbsp; Outdoor Enthusiast </span>
                          </div>
                     </div>
@@ -42,27 +42,28 @@
 
         <!-- 배너 여기까지 / 컨텐트 영역 (지도 API)-->
 
-        <div class="content">
-            <div class="map-txt-wrap">
-                <div class="map-title">
-                    <span> Search </span>
+        <div class="mh-content">
+            <div class="mh-map-txt-wrap">
+                <div class="mh-map-title">
+                    <span> Hiking Area Search </span>
                 </div>
-                <div class="map-sub-txt">
-                    <span> 간단한 기능 설명하는 문장 하나 들어가면 좋을듯</span>
+                <div class="mh-map-sub-txt">
+                    <span> 원하는 지역의 등산로를 찾아 등산을 즐기세요!</span>
                 </div>
             </div>
-            <div class="camping-area-search">
-                <input id="search-box" placeholder="검색하고 싶은 지역!">
-                <button id="submit-search">검색!</button>
-            </div>
-            <div class="search-result">
-                <div class="map-all">
-                    <div id="map"></div>
-                    <div id="search-result-list"><h1>리스트 띄워주는 div</h1></div>
+            <div class="mh-search-wrap">
+                <div class="mh-background-map">
+                    <div class="mh-area-search">
+                        <input class="mh-search-input" id="search-box" placeholder="검색하고 싶은 지역을 입력해주세요">
+                        <button class="mh-button" id="submit-search"><span>Search</span></button>
+                    </div>
+                    <div class="mh-map-all">
+                        <div id="map"></div>
+                        <div id="search-result-list"><h1></h1></div>
+                    </div>
                 </div>
             </div>
         </div>
-
         <!-- 컨텐트 영역 여기까지 -->
 
     </div>
