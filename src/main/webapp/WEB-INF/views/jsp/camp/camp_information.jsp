@@ -37,6 +37,7 @@
                 <!-- 팝업 클릭했을떄 뜨는 상세내용 디브 -->
                 <div id="hj-content-plus-container">
                     <div id="hj-content-plus-overray">
+                        <div id="hj-detail-contain2"><div id="hj-detail">돌아가기</div> </div>
                     <div class="hj-content-plus-ray">
                         <div id="hj-line-introduce">
                             <%--                        <div>한줄 소개</div>--%>
@@ -64,6 +65,7 @@
                     <div>자갈 자리: ${siteGravel}</div>
                     <div>맨흙 자리: ${siteSoil}</div>
                     </div>
+
                     </div>
                 </div>
                 <div id="hj-overlay-popup"></div>
@@ -92,6 +94,9 @@
                         <div id="hj-addr">주소: ${address}</div>
                         <div id="hj-ability">부대시설: ${subsidiaryFacilities}</div>
                         <div id="hj-rating-avg">캠핑장 평점: ${ratingAvg}</div>
+                        <div id="hj-detail-contain">
+                        <div id="hj-detail-form">자세히 보기</div>
+                        </div>
                     </div>
                 </div>
             </div>
