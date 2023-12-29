@@ -5,6 +5,7 @@ for (const camp of recommendedCamps) {
     camp.addEventListener("click", async (e) => {
         // data-value 어트리뷰트에 설정해놓은 데이터 값을 가져오는 코드
         const campingAreaName = camp.getAttribute("data-value");
+        console.log(camp)
 
         try {
             const campingApiUrl = "/api/camping/search/" + campingAreaName;
