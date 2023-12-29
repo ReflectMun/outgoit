@@ -191,3 +191,11 @@ const swiper8 = new Swiper(".mySwiper8", {
         }
     }
 });
+
+// 광역시 이동 기능
+function goMetroCity(metroCityBtn){
+    const metroNum = metroCityBtn.getAttribute("data-value")
+    swiper2.slideTo(0, 100)
+    swiper2.slideTo(metroNum, 1000)
+    swiper1.slideTo(0, 1000)
+}

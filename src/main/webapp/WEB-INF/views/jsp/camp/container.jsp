@@ -22,13 +22,13 @@ charset=UTF-8" pageEncoding="UTF-8"%>
   <%-- 헤더 시작 --%>
     <div class="hj-container">
       <div class="hj-header">
-        <div class="hj-right" onclick="location.href='/outgoit/camping'">
-          <div class="hj-logo"></div>
+        <div class="hj-logo-container" onclick="location.href='/outgoit/camping'">
+          <div class="hj-logo">  </div>
           <!-- 로고 이미지 넣기 -->
           <div class="hj-title">Out<span>&nbsp;Go&nbsp;</span>It</div>
           <!-- 글자 나중에    -->
         </div>
-        <div class="hj-left">
+        <div class="hj-right">
           <div class="hj-tracking hj-font" onclick="location.href='/outgoit/camping'">
             <span>C</span><span>a</span><span>m</span><span>p</span
           ><span>i</span><span>n</span><span>g</span>
@@ -59,7 +59,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
         <div class="hj-box">
           <div class="hj-row hj-menu-txt">
             <div class="hj-col">
-              <lavel><div class="hj-home" id="hj-home" onclick="location.href='/outgoit/camping/home'"><span>Home</span></div></lavel>
+              <lavel><div class="hj-home" id="hj-home" onclick="location.href='/outgoit/camping'"><span>Home</span></div></lavel>
               <div class="hj-star-container"></div>
 
             </div>
@@ -106,6 +106,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
 
       <!-- 푸터 시작 -->
       <div class="hj-container-footer">
+
         <div class="hj-footer-pic">
           <img src="../../Img_hj/footer_tree.png" alt="" />
         </div>
@@ -113,7 +114,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
           <div class="hj-footer-box hj-footer-box-first">
             <div class="hj-footer-garo">
               <div class="hj-footer-col">
-                <div class="hj-footer-logo">Out <span>Go</span> It</div>
+                <div class="hj-footer-logo"></div>
                 <div class="hj-footer-kobox">
                   <div class="hj-footer-kozin">
                     <span onclick="">개인정보 처리 방침</span>
@@ -124,10 +125,10 @@ charset=UTF-8" pageEncoding="UTF-8"%>
                 </div>
               </div>
             </div>
-            <div class="hj-footer-garo">
+            <div class="hj-footer-garo2">
               <div class="hj-footer-col">
-                <div class="hj-footer-connact">Contact</div>
-                <div class="hj-footer-kobox">
+
+                <div class="hj-footer-kobox2">
                   <div class="hj-footer-tel">
                     <div class="hj-tel-icon"></div>
                     <div class="hj-tel"><sapn>telephone</sapn></div>
@@ -140,25 +141,25 @@ charset=UTF-8" pageEncoding="UTF-8"%>
               </div>
             </div>
           </div>
-          <div class="hj-footer-box">
-            <div class="hj-footer-garo">
+          <div class="hj-footer-box2">
+            <div class="hj-footer-garo3">
               <div class="hj-footer-col">
-                <div class="hj-footer-links">Links</div>
-                <div class="hj-footer-kobox">
-                  <div class="hj-footer-camp">
-                    <img src="" alt="" onclick="" />camping
+
+                <div class="hj-footer-kobox3">
+                  <div class="hj-footer-camp" onclick="location.href='/outgoit/camping'">
+
                   </div>
-                  <div class="hj-footer-tracking">
-                    <img src="" alt="" onclick="" />Tracking
+                  <div class="hj-footer-tracking" onclick="location.href='/outgoit/hiking'">
+
                   </div>
-                  <div class="hj-footer-riding">
-                    <img src="" alt="" onclick="" />Riding
+                  <div class="hj-footer-riding" onclick="location.href='/outgoit/riding'">
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </body>

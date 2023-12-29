@@ -21,9 +21,7 @@ body {
     overflow-x:hidden;
 }
 
-.hj-container {
 
-}
 
 .hj-header {
     box-sizing: border-box;
@@ -37,7 +35,7 @@ body {
     top: 0;
 }
 
-.hj-right {
+.hj-logo-container {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -47,7 +45,7 @@ body {
     /*border: 3px solid green;*/
 }
 
-.hj-left {
+.hj-right {
     display: flex;
     margin-right: 1.5vw;
     justify-content: center;
@@ -56,10 +54,14 @@ body {
     /*border: 3px solid palevioletred;*/
 }
 
+
 .hj-logo {
-    /*border: 1px solid red;*/
-    background-color: white;
-    width: 6vw;
+        /* border: 1px solid red; */
+        /* background-color: white; */
+        width: 4vw;
+        background-image: url("/resources/static/Img_hj/outgoit_logo2.png");
+        background-size: cover;
+        background-repeat: no-repeat;
 }
 
 .hj-title {
@@ -213,6 +215,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 1.2vw;
+    height: 100%;
 }
 
 .hj-menu-tab {
@@ -246,6 +249,9 @@ body {
 
 /*호버 효과*/
 
-.hj-font:hover, .hj-right:hover {
+.hj-font:hover, .hj-logo-container:hover {
     cursor: pointer;
+}
+body{
+    background-color: #FFFAF6;
 }

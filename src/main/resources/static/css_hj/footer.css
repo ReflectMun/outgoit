@@ -31,19 +31,20 @@ body {
   background-color: #275634;
   border-top: 0.35vw solid #1c4728;
   margin-top: -2vw;
+  position: relative;
 
 }
 
-@media screen and (max-width: 400px) {
+
   .container {
-    max-height: 5vh; /* 원하는 최대 높이 값 설정 */
+
     overflow-y: auto; /* 내용이 넘칠 경우 스크롤 표시 */
   }
-}
+
 
 
 .hj-footer-box {
-  padding-top: 3.2vw;
+  /*padding-top: 3.2vw;*/
   /*border: 1px solid green;*/
   width: 100%;
 }
@@ -51,58 +52,90 @@ body {
   margin-left: 4%;
 }
 .hj-footer-garo {
-  height: 40%;
+  height: auto;
+  margin-top: 3%;
   /*border: 1px solid red;*/
 }
 .hj-footer-col {
-  height: 100%;
+  height: auto;
   /*border: 1px solid pink;*/
   display: grid;
 }
 .hj-footer-kobox {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   color: rgb(242, 166, 52);
-  height: 5vw;
+  height: 2vw;
+  margin-left: 7%;
+  /*margin-top: 3%;*/
 }
 .hj-footer-logo {
-  margin: 1%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  /* margin: 1%; */
+  margin-left: 2%;
   padding: 1%;
   color: rgb(242, 166, 52);
-  background-color: #FFFAF6;
-  border-radius: 10%;
-  width: 5.5vw;
-  text-align: center;
-  box-shadow: 0.07vw 0.07vw 0.07vw 0 #173b21;
+  bottom: 2vw;
+  left: 1vw;
+  /* background-color: #FFFAF6; */
+  /* border-radius: 10%; */
+  width: 3.5vw;
+  height: 3vw;
+  /* text-align: center; */
+  /* box-shadow: 0.07vw 0.07vw 0.07vw 0 #173b21; */
   font-size: 1vw;
+  background-image: url(/resources/static/Img_hj/outgoit_logo2.png);
 }
 
-.hj-footer-logo > span {
-  color: rgb(222, 111, 26);
+/*.hj-footer-logo > span {*/
+/*  color: rgb(222, 111, 26);*/
 
-}
+/*}*/
 
 
 
 .hj-footer-kozin,
 .hj-footer-design {
-  margin: 1vw;
+  margin-left: 1vw;
+  margin-top: 0.5vw;
   width: 10vw;
   text-align: center;
   font-size: 1vw;
 }
+.hj-footer-kozin:hover{
+  cursor: pointer;
+}
+.hj-footer-design:hover{
+  cursor: pointer;
+}
+
 
 /* 두번쨰 푸터 */
+.hj-footer-garo2{
+  height: auto;
+}
+.hj-footer-kobox2 {
+  display: flex;
+  justify-content: flex-start;
+  color: rgb(242, 166, 52);
+  height: 4vw;
+  margin-left: 2.5%;
+}
 .hj-footer-tel,
 .hj-footer-location {
   display: flex;
   justify-content: center;
   text-align: center;
-  width: 10vw;
+  width: 8vw;
   /*height: 3.5vh;*/
-  margin: 1vw;
   font-size: 1vw;
+  margin: 1vw 1vw 1vw 3.5vw;
 
+}
+.hj-footer-location{
+  margin-left: 5%;
 }
 .hj-tel,
 .hj-location {
@@ -115,19 +148,19 @@ body {
 .hj-footer-connact {
   margin: 1%;
   padding: 1%;
-  color: rgb(222, 111, 26);
-  background-color: #FFFAF6;
+  /*color: rgb(222, 111, 26);*/
+  /*background-color: #FFFAF6;*/
   border-radius: 10%;
   width: 5.5vw;
   text-align: center;
-  box-shadow: 0.07vw 0.07vw 0.07vw 0 #173b21;
+  /*box-shadow: 0.07vw 0.07vw 0.07vw 0 #173b21;*/
   font-size: 1vw;
 
 }
 .hj-tel-icon{
   width: 1.2vw;
   height: 1.2vw;
-  background-image: url("../../Img_hj/tel.png");
+  background-image: url("/resources/static/Img_hj/tel.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -139,30 +172,68 @@ body {
 .hj-location-icon {
   width: 1.2vw;
   height: 1.2vw;
-  background-image: url("../../Img_hj/location.png");
+  background-image: url("/resources/static/Img_hj/location.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   margin-right: 0.35vw;
 }
+.hj-footer-box2 {
+  /*padding-top: 3.2vw;*/
+  /*border: 1px solid green;*/
+  /*width: 60%;*/
+  margin-right: 3%;
+  margin-top: 1%;
+}
+
+.hj-footer-garo3{
+  margin-top: 3%;
+}
 /* 세번쨰 푸터 */
 .hj-footer-links {
   margin: 1%;
   padding: 1%;
-  color: rgb(222, 111, 26);
-  background-color: #FFFAF6;
+  /*color: rgb(222, 111, 26);*/
+  /*background-color: #FFFAF6;*/
   border-radius: 10%;
   width: 5.5vw;
   text-align: center;
-  box-shadow: 0.07vw 0.07vw 0.07vw 0 #173b21;
+  /*box-shadow: 0.07vw 0.07vw 0.07vw 0 #173b21;*/
   font-size: 1vw;
 }
-.hj-footer-home,
+.hj-footer-kobox3{
+  display: flex;
+  justify-content: flex-start;
+  color: rgb(242, 166, 52);
+  height: auto;
+  margin-left: 5%;
+}
 .hj-footer-camp,
 .hj-footer-tracking,
 .hj-footer-riding {
   margin: 1vw;
-  width: 6.5vw;
+  width: 4vw;
   text-align: center;
   font-size: 1vw;
+  height: 4vw;
+}
+.hj-footer-camp:hover,
+.hj-footer-tracking:hover,
+.hj-footer-riding:hover{
+  cursor: pointer;
+}
+.hj-footer-camp{
+  background-image: url("/resources/static/Img_hj/camping2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.hj-footer-tracking{
+  background-image: url("/resources/static/Img_hj/hiking2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.hj-footer-riding{
+  background-image: url("/resources/static/Img_hj/bicycle2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }

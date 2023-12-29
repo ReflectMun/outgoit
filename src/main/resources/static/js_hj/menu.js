@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const star = $('<div class="star"></div>');
                 star.css({
                     left: Math.random() * 100 + '%',
-                    animationDuration: Math.random() * 2 + 1 + 's'
+                    animationDuration: Math.random() * 9 + 1 + 's'
                 });
                 starsContainer.append(star);
             }
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const star2 = $('<div class="star2"></div>');
                 star2.css({
                     left: Math.random() * 100 + '%',
-                    animationDuration: Math.random() * 2 + 1 + 's'
+                    animationDuration: Math.random() * 9 + 1 + 's'
                 });
                 starsContainer2.append(star2);
             }
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const star3 = $('<div class="star3"></div>');
                 star3.css({
                     left: Math.random() * 100 + '%',
-                    animationDuration: Math.random() * 2 + 1 + 's'
+                    animationDuration: Math.random() * 9 + 1 + 's'
                 });
                 starsContainer3.append(star3);
             }
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const star4 = $('<div class="star4"></div>');
                 star4.css({
                     left: Math.random() * 100 + '%',
-                    animationDuration: Math.random() * 2 + 1 + 's'
+                    animationDuration: Math.random() * 9 + 1 + 's'
                 });
                 starsContainer4.append(star4);
             }
@@ -83,16 +83,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 메뉴 누르면 가운데서 퍼지는 효과
         $(document).ready(function() {
+
             $('.hj-menu-icon').on('click', function() {
-                $('.hj-overlay').fadeToggle(100); // 500은 애니메이션 지속 시간(ms)입니다. 필요에 따라 조절 가능
+                $('.hj-overlay').fadeToggle(100);
+                $('.hj-overlay').css("display", "grid").css("align-content","space-between");
                 $('body').css("overflow-x", "hidden").css("overflow-y","hidden");
             });
             $('.hj-menu-icon-2').on('click', function() {
-                $('.hj-overlay').fadeToggle(100); // 500은 애니메이션 지속 시간(ms)입니다. 필요에 따라 조절 가능
+                $('.hj-overlay').fadeToggle(100);
                 $('body').css("overflow-y", "auto");
             });
-
         });
+
 
 
 

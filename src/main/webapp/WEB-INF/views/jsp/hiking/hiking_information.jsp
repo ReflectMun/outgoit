@@ -9,7 +9,7 @@
 
     <title>${trailRouteList.mntn_nm} 상세정보</title>
 
-    <link rel="stylesheet" href="/resources/static/jiho/css/draft1.css"/>
+    <link rel="stylesheet" href="/static/jiho/css/camp_information.css"/>
 
     <script src="/resources/static/jiho/js/draft_hiking_review.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -43,11 +43,12 @@
 
             <!-- 칠판에 쓰인 분필 -->
             <div id="hj-content-box-comment"><span>OUT GO IT</span></div>
+            <div id="hj-post-it"></div>
            <!-- 이미지 부분 -->
             <div id="hj-content-inside-box">
               <div id="hj-content-img">
                 <div id="hj-content-img-link">
-                  지도넣어..?
+
 
                 </div>
               </div>

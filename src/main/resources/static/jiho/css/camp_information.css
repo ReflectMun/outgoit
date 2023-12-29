@@ -16,7 +16,7 @@
 body {
     margin: 0;
     width: 100%;
-    height: 100vh;
+    height: 100vw;
     padding: 0;
 }
 
@@ -29,6 +29,7 @@ div{
     height: 100%;
     width: 100%;
     background-color: #FFFAF6;
+    margin-top: 5%;
 }
 /* 첫번쨰  */
 #hj-info {
@@ -44,7 +45,7 @@ div{
 #hj-info-name-img {
 
     /*border: 1px solid gray;*/
-    width: 30%;
+    width: 25%;
     background-color: #59795a;
     padding: 2%;
     border-radius: 3vw;
@@ -54,7 +55,7 @@ div{
 }
 .hj-info-name {
     text-align: center;
-    font-size: 1.9vw;
+    font-size: 1.6vw;
     color: white;
     font-family: 'JalnanGothic';
 }
@@ -66,10 +67,20 @@ div{
 #hj-content-box-comment {
     font-family: "Drawing Guides", sans-serif;
     color: white;
-    font-size: 4vw;
+    font-size: 3vw;
     position: absolute;
     right: 5%;
     bottom: 5%;
+}
+#hj-post-it{
+    background-image: url(/resources/static/Img_hj/tapeClear.png);
+    height: 2vw;
+    width: 9vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 8%;
+    right: 20%;
 }
 
 /* 사진 내용 부분 */
@@ -80,8 +91,8 @@ div{
     border: 2vw solid #6c480c;
     background-color: #59795a;
     box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
-    width: 80%;
-    padding-bottom: 15vw;
+    width: 65%;
+    padding-bottom: 7vw;
 }
 #hj-content-inside-box {
     display: flex;
@@ -92,40 +103,41 @@ div{
 #hj-content-img {
     background-color: white;
     margin-left: 5%;
-    width: 375px;
-    height: 250px;
+    width: 26vw;
+    height: 20vw;
 }
 #hj-content-img-slide-wrapper img {
-    height: 250px;
+    /*height: 250px;*/
+    width: 26vw;
+    height: 20vw;
 }
 /* 정보 부분 */
 #hj-content-detail {
-    background-color: rgb(6, 57, 10);
-
-    border: 0.6vw solid rgb(157, 111, 76);
-    padding: 2% 0% 5% 2%;
+    /*background-color: rgb(6, 57, 10);*/
+    background-image: url("/resources/static/img/기타/양피지.png");
+    /*border: 0.6vw solid rgb(157, 111, 76);*/
+    padding: 3% 0% 5% 2%;
     margin-right: 5%;
     width: 45%;
-    color: #fffaf6;
+    color: black;
     font-family: 'SOYOMapleBoldTTF';
+    background-size: cover;
+}
+
+#hj-content-detail:hover{
+    cursor: pointer;
 }
 #hj-content-plus-container{
     position: absolute;
+    background-image: url("/resources/static/img/기타/양피지.png");
+    background-size: cover;
 
-    /* position: fixed; */
-    /* transform: translate(-50%, -50%); */
-    /* border: 3px solid blue; */
     width: 95%;
     right: 2%;
     top: 3%;
-    height: 90%;
-    background-color: rgb(6, 57, 10);
+    height: auto;
 
-    border: 0.6vw solid rgb(157, 111, 76);
-    /* padding: 2% 0% 5% 2%; */
-    /* margin-right: 5%; */
-    /* width: 45%; */
-    color: #fffaf6;
+    color: black;
     font-family: 'SOYOMapleBoldTTF';
     /* 팝업 효과*/
     z-index: 5;
@@ -133,9 +145,13 @@ div{
     opacity: 0;
     transition: opacity 1s ease;
 }
+#hj-content-plus-container:hover{
+    cursor: pointer;
+}
 #hj-content-plus-container.show {
     opacity: 1;
     display: block;
+    font-size: 1vw;
 }
 #hj-overlay-popup{
     background: rgba(0, 0, 0, 0.1); /* 어두운 오버레이의 색상과 투명도를 조절합니다. */
@@ -150,19 +166,33 @@ div{
 #hj-overlay-popup.active {
     display: block;
 }
+#hj-content-plus-overray{
+    display: flex;
+    justify-content: space-around;
+    line-height: 1.7vw;
+    padding-bottom: 1.5vw;
+}
 #hj-no,
 #hj-time,
 #hj-addr,
 #hj-ability,
 #hj-etc,
 #hj-rating-avg{
-    font-size: 1.7vw;
+    font-size: 1vw;
     line-height: 2;
+}
+.hj-content-plus-ray{
+    margin-top: 1vw;
+}
+.hj-content-plus-ray2{
+    margin-top: 4.5vw;
+    width: 27%;
+
 }
 /* 코멘트 부분 */
 #hj-comment-name-img{
     /*border: 1px solid gray;*/
-    width: 30%;
+    width: 20%;
     background-color: #59795a;
     padding: 2%;
     border-radius: 3vw;
@@ -170,7 +200,10 @@ div{
 
     box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
 }
-
+.hj-line-introduce{
+    font-size: 1.3vw;
+    color: yellow;
+}
 #hj-comment {
     /* border: 1px solid pink; */
     margin-top: 2%;
@@ -180,8 +213,8 @@ div{
     border: 2vw solid #6c480c;
     background-color: #59795a;
     box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
-    width: 80%;
-    padding-bottom: 6vw;
+    width: 65%;
+    padding-bottom: 3vw;
 }
 #hj-content-inside-box2 {
     justify-content: center;
@@ -200,14 +233,14 @@ div{
     /*padding-bottom: 4vw;*/
 }
 #hj-content-zentai-box {
-    margin-top: 3%;
+    margin-top: 1%;
 }
 #hj-review-star-box {
     display: flex;
-    margin-left: 30%;
+    margin-left: 32%;
 }
 .hj-star{
-    font-size: 3vw;
+    font-size: 2vw;
 }
 .hj-star.checked{
     color: yellow;
@@ -233,7 +266,7 @@ div{
 }
 #hj-id-input, #hj-pw-input{
 
-    padding: 4%;
+    /*padding: 4%;*/
 
 }
 #hj-review-content {
@@ -242,7 +275,7 @@ div{
 #hj-review-input {
     height: 100%;
     width: 100%;
-    padding: 2%;
+    /*padding: 2%;*/
 }
 #hj-btn {
     margin-top: 3%;
@@ -260,15 +293,15 @@ div{
     border: 2vw solid #6c480c;
     background-color: #59795a;
     box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
-    width: 80%;
-    padding-bottom: 8vw;
+    width: 65%;
+    padding-bottom: 3vw;
     /*height: 100%;*/
 
 }
 #hj-content-box-comment2{
     font-family: "Drawing Guides", sans-serif;
     color: white;
-    font-size: 4vw;
+    font-size: 3vw;
     position: absolute;
     left: 5%;
     bottom: 5%;
@@ -280,27 +313,19 @@ div{
 
 }
 #hj-review-detail2{
-    /* border: 3px solid blue; */
-
-
-    background-color: rgb(6, 57, 10);
-    border: 0.6vw solid rgb(157, 111, 76);
-    padding: 2% 0% 2% 2%;
-    /*padding-bottom: 15vw;*/
-    /* margin-left: 10%; */
-    /* justify-content: center; */
-    /* display: flex; */
-    align-content: center;
-    width: 80%;
-    color: #fffaf6;
+    /* background-image: url(/resources/static/img/기타/양피지.png); */
+    /* border: 0.6vw solid rgb(157, 111, 76); */
+    /*padding: 3% 0% 2% 2%;*/
+    /*margin-right: 5%;*/
+    width: 70%;
+    color: white;
     font-family: 'SOYOMapleBoldTTF';
-    margin-top: 3%;
-    height: auto;
+    /* background-size: cover;
 }
 #hj-review-zentai-box{
     /*border: 5px solid blueviolet;*/
-    width: 95%;
-    /*margin-top: 2%;*/
+
+    margin-top: 2%;
 
 }
 .hj-review-stars{
@@ -320,7 +345,7 @@ div{
     /*border: 1px solid darkgreen;*/
     width: 100%;
     /*margin-top: 2%;*/
-    font-size: 1.7vw;
+    font-size: 1vw;
     /*height: 100%;*/
     position: relative;
 }
@@ -351,13 +376,18 @@ div{
     width: 80%;
     height: 2vw;
 }
-
+.hj-edit-icon:hover{
+    cursor: pointer;
+}
+.hj-edit-part:hover{
+    cursor: pointer;
+}
 /* 드롭 수정 삭제 창*/
 .hj-edit-drop{
     position: absolute;
     font-size: 1vw;
     right: 3%;
-    top: 60%;
+    top: 1%;
     display: none;
     transition: height 0.5s ease;
     /*line-height: 2px;*/
@@ -365,16 +395,17 @@ div{
 }
 .hj-edit-part{
     margin-top: 2%;
+
 }
 /*리뷰가 없을떄 css 따로주기*/
 #hj-no-review{
-    margin-left: 40%;
+    /*margin-left: 40%;*/
+    text-align: center;
 }
 /*페이지 처리*/
 #hj-page-box{
     display: flex;
     align-content: center;
-
     justify-content: center;
 }
 #hj-first-button{
