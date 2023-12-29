@@ -258,7 +258,7 @@ div{
 
 #hj-input {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 1%;
     /* align-content: center; */
     width: 100%;
@@ -267,6 +267,7 @@ div{
 #hj-input-content {
     /*margin-left: 3%;*/
     /*margin-top: 1%;*/
+    height: 5vw;
 }
 #hj-pw{
     margin-top: 3%;
@@ -278,7 +279,7 @@ div{
     cursor: pointer;
     text-align: center;
     width: 11vw;
-    height: 2vw;
+    height: 2.3vw;
     /*margin-right: vw;*/
     border-radius: 0.5vw;
     outline: none;

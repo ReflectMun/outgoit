@@ -108,7 +108,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
       <div class="hj-container-footer">
 
         <div class="hj-footer-pic">
-          <img src="../../Img_hj/footer_tree.png" alt="" />
+          <img src="/resources/static/Img_hj/footer_tree.png" alt="" />
         </div>
         <div class="hj-footer">
           <div class="hj-footer-box hj-footer-box-first">
