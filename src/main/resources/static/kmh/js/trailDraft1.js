@@ -17,9 +17,13 @@ let markers = []
 let polylines =[]
 let latlngBounds = new kakao.maps.LatLngBounds()
 
+searchBox.addEventListener("keyup", (e) => {
+    if(e.key === "Enter"){
+        submitSearch.click()
+    }
+})
+
 try {
-
-
     submitSearch.addEventListener('click', async (e) => {
         const inputValue = searchBox.value
         if (!inputValue) {
