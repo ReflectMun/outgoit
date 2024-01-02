@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-
-
-
 @font-face {
     font-family: 'JalnanGothic';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
@@ -24,8 +21,6 @@
     font-style: normal;
 }
 
-
-
 body {
     margin: 0;
     padding: 0;
@@ -36,8 +31,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /*overflow: hidden;*/
-    /*align-items: center;*/
 }
 
 .mh-index-container {
@@ -67,7 +60,6 @@ body {
     animation: bounce 2s ease-in-out 1; /* 애니메이션을 무한히 반복  - > 숫자 작성하면 해당 숫자만큼 움직임 */
 }
 
-
 @keyframes bounce {
     0% {
         transform: translateY(0); /* 애니메이션의 시작 상태 */
@@ -85,7 +77,8 @@ body {
     text-shadow: 0 0.7vw 0 #116228;
 
 }
-    
+
+
 .mh-sub-title {
     font-family: 'SOYOMapleBoldTTF';
     display: flex;
@@ -97,34 +90,11 @@ body {
     animation-duration: 2s;
 }
 
-
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
     to {
-        opacity: 1;
-        }
-    }
-
-.menu-wrap {
-    /* border: 5px solid black; */
-    width: 100vw;
-    /*height: 35vw;*/
-    display: flex;
-    justify-content: center;
-    animation: fadeInUp 1s ease-in-out forwards;
-    margin-top: 2vw;
-}
-
-
-@keyframes fadeInUp {
-    0% {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
         opacity: 1;
     }
 }
@@ -138,29 +108,19 @@ body {
     justify-content: center;
     animation: fadeInUp 1s ease-in-out forwards;
     margin-bottom: 1vw;
-}   
+}
 
 @keyframes fadeInUp {
     0% {
-      transform: translateY(50px);
-      opacity: 0;
-
-    .riding-icon {
-        /* border: 4px solid red; */
-        width: 13vw;
-        height: 13vw;
-        opacity: 1;
-        background-image: url("../img/bicycle.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-
+        transform: translateY(50px);
+        opacity: 0;
     }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
-
-        /*미디어쿼리*/
-
-@media only screen and (max-width: 430px) and (max-height: 932px){
 
 .mh-menu {
     width: 18vw;
@@ -438,5 +398,4 @@ body {
         background-position: center;
 
     }
-
 }
