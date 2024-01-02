@@ -367,7 +367,12 @@ function makeReviewBox(reviewData) {
 
     const editDrop = document.createElement("div")
 
-
+    const passwordInputDiv = document.createElement("div")
+    const passwordInput = document.createElement("input")
+    passwordInput.type = "text"
+    passwordInput.placeholder = "비밀번호"
+    passwordInputDiv.appendChild(passwordInput)
+    editDrop.appendChild(passwordInputDiv)
 
     const editButtonDiv = document.createElement("div")
     editButtonDiv.innerText = "수정"
@@ -385,12 +390,7 @@ function makeReviewBox(reviewData) {
     deleteButtonDiv.classList.add("hj-edit-part")
     editDrop.appendChild(deleteButtonDiv)
 
-    const passwordInputDiv = document.createElement("div")
-    const passwordInput = document.createElement("input")
-    passwordInput.type = "text"
-    passwordInput.placeholder = "비밀번호"
-    passwordInputDiv.appendChild(passwordInput)
-    editDrop.appendChild(passwordInputDiv)
+
 
     editDrop.classList.add("hj-edit-drop")
     reviewComment.appendChild(editDrop)

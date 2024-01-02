@@ -50,7 +50,7 @@ div{
     padding: 2%;
     border-radius: 3vw;
     border: 0.5vw solid #4c2c09;
-    box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
     background-image: url(/resources/static/img/기타/나무보드.jpg);
     background-size: cover;
 }
@@ -91,7 +91,7 @@ div{
     border-radius: 5vw;
     border: 1vw solid rgb(76, 44, 9);
     /* background-color: #59795a; */
-    box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
     width: 70vw;
     padding-bottom: 7vw;
     background-size: cover;
@@ -196,7 +196,7 @@ div{
     padding: 2%;
     border-radius: 3vw;
     border: 0.5vw solid #4c2c09;
-    box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
     background-image: url(/resources/static/img/기타/나무보드.jpg);
     background-size: cover;
 }
@@ -214,7 +214,7 @@ div{
     border-radius: 5vw;
 
     /*background-color: #59795a;*/
-    box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
     width: 70vw;
     padding-bottom: 4vw;
     background-size: cover;
@@ -378,7 +378,7 @@ input::placeholder{
     /* border: 10px solid hsl(197, 78%, 28%); */
     position: relative;
     border-radius: 5vw;
-    box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
     width: 70vw;
     padding-bottom: 5vw;
     background-size: cover;
