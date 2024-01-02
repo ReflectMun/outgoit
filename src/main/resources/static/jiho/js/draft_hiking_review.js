@@ -147,7 +147,7 @@ async function getNextCommentPage() {
  * 추후 리뷰가 하나도 없을 경우 작성된 리뷰가 없다는 메시지가 리뷰란에 출력되도록 수정해야함
  * */
 async function deleteComment(commentNumber, element) {
-    alert(commentNumber)
+    // alert(commentNumber)
     const passwordInput = element.parentNode.firstElementChild.firstElementChild
     if(!passwordInput.value){
         alert("댓글을 삭제하시려면 비밀번호를 입력해주세요!")
@@ -313,14 +313,17 @@ function makeReviewBox(reviewData) {
     reviewStars.classList.add("hj-review-stars")
     reviewComment.appendChild(reviewStars)
 
+    const tape = document.createElement("div")
+    tape.classList.add("hj-review-tape")
+    reviewComment.appendChild(tape)
     // <br>
-    reviewComment.appendChild(document.createElement("br"))
+    // reviewComment.appendChild(document.createElement("br"))
 
     /*
      *   <div class="hj-review-nickname">닉네임: ${review.author}</div>
      * */
     const authorDiv = document.createElement("div")
-    authorDiv.innerText = `닉네임: ${reviewData['author']}`
+    authorDiv.innerText = `${reviewData['author']}`
     authorDiv.classList.add("hj-review-nickname")
     reviewComment.appendChild(authorDiv)
 
@@ -331,7 +334,7 @@ function makeReviewBox(reviewData) {
      *   </div>
      * */
     const comment = document.createElement("div")
-    comment.innerHTML = `<div>한줄평</div><div class="hj-review-comment-content">${reviewData['content']}</div>`
+    comment.innerHTML = `<div class="hj-review-comment-content">${reviewData['content']}</div>`
     comment.classList.add("hj-review-comment")
     reviewComment.appendChild(comment)
 
@@ -364,12 +367,7 @@ function makeReviewBox(reviewData) {
 
     const editDrop = document.createElement("div")
 
-    const passwordInputDiv = document.createElement("div")
-    const passwordInput = document.createElement("input")
-    passwordInput.type = "text"
-    passwordInput.placeholder = "비밀번호"
-    passwordInputDiv.appendChild(passwordInput)
-    editDrop.appendChild(passwordInputDiv)
+
 
     const editButtonDiv = document.createElement("div")
     editButtonDiv.innerText = "수정"
@@ -386,6 +384,13 @@ function makeReviewBox(reviewData) {
     }
     deleteButtonDiv.classList.add("hj-edit-part")
     editDrop.appendChild(deleteButtonDiv)
+
+    const passwordInputDiv = document.createElement("div")
+    const passwordInput = document.createElement("input")
+    passwordInput.type = "text"
+    passwordInput.placeholder = "비밀번호"
+    passwordInputDiv.appendChild(passwordInput)
+    editDrop.appendChild(passwordInputDiv)
 
     editDrop.classList.add("hj-edit-drop")
     reviewComment.appendChild(editDrop)
