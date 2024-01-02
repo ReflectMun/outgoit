@@ -415,7 +415,7 @@ input::placeholder{
 #hj-review-zentai-box{
     /*border: 5px solid blueviolet;*/
 
-    width: 90%;
+    width: 95%;
 
 }
 #hj-review-list-container {
@@ -423,7 +423,7 @@ input::placeholder{
     /*line-height: 1.2vw;*/
     flex-wrap: wrap;
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 .hj-review-content-box{
     background-image: url(/resources/static/img/기타/양피지.png);
@@ -431,8 +431,8 @@ input::placeholder{
     line-height: 1.8vw;
     width: 18vw;
     height: 21vw;
-    margin-top: 5%;
     position: relative;
+    margin: 3vw 0.7vw 0vw 0.7vw;
     padding: 1vw;
 }
 
@@ -478,6 +478,8 @@ input::placeholder{
 }
 .hj-comment-textarea{
     background-color: transparent;
+    width: 17.7vw;
+    height: 14vw;
 }
 .hj-edit-box {
 
@@ -546,8 +548,7 @@ input::placeholder{
     /*margin-left: 40%;*/
     text-align: center;
     font-size: 1.18vw;
-    margin-top: 3%;
-    margin-bottom: 1%;
+    margin: 5vw;
     color: white;
     font-family: 'SOYOMapleBoldTTF';
 }

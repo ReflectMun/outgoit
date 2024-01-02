@@ -201,8 +201,7 @@ async function commentModifyingReady(commentNumber, element) {
             .getElementsByClassName("hj-review-comment-content")[0]
 
     const reviewModifyingInput = document.createElement("textarea")
-    reviewModifyingInput.cols=45
-    reviewModifyingInput.rows=18
+
     reviewModifyingInput.classList.add("hj-comment-textarea")
     // reviewModifyingInput.type = "text"
     reviewModifyingInput.value = commentDiv.innerText
