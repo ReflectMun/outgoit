@@ -155,13 +155,12 @@
                                     </div>
                                     <!-- 리뷰부분 -->
                                     <div id="hj-review-content">
-                                        <input
-                                                type="text"
+                                        <textarea
                                                 id="hj-review-input"
                                                 placeholder="비방글은 삭제 조치 됩니다."
                                                 onfocus="this.placeholder=''"
                                                 onblur="this.placeholder='비방글은 삭제 조치 됩니다.'"
-                                        />
+                                        > </textarea>
                                     </div>
                                     <!-- 확인버튼 -->
                                     <div id="hj-btn">

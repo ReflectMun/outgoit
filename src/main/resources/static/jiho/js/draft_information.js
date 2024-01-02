@@ -196,11 +196,15 @@ async function commentModifyingReady(commentNumber, element) {
     const commentDiv =
         element.parentNode
             .parentElement
+            .parentElement
             .getElementsByClassName("hj-review-comment")[0]
             .getElementsByClassName("hj-review-comment-content")[0]
 
-    const reviewModifyingInput = document.createElement("input")
-    reviewModifyingInput.type = "text"
+    const reviewModifyingInput = document.createElement("textarea")
+    reviewModifyingInput.cols=45
+    reviewModifyingInput.rows=18
+    reviewModifyingInput.classList.add("hj-comment-textarea")
+    // reviewModifyingInput.type = "text"
     reviewModifyingInput.value = commentDiv.innerText
     commentDiv.innerText = ""
 
@@ -371,12 +375,24 @@ function makeReviewBox(reviewData) {
     const commentNum = reviewData['commentNumber']
     const editDrop = document.createElement("div")
 
+    const editDropbox = document.createElement("div")
+    editDrop.appendChild(editDropbox)
+
     const passwordInputDiv = document.createElement("div")
     const passwordInput = document.createElement("input")
     passwordInput.type = "text"
     passwordInput.placeholder = "비밀번호"
+    passwordInput.onfocus=clearPlaceholder
+    passwordInput.onblur=setPlaceholder
+    function  clearPlaceholder(){
+        passwordInput.placeholder='';
+    }
+    function setPlaceholder(){
+        passwordInput.placeholder='비밀번호';
+    }
+    passwordInput.classList.add("hj-password-input")
     passwordInputDiv.appendChild(passwordInput)
-    editDrop.appendChild(passwordInputDiv)
+    editDropbox.appendChild(passwordInputDiv)
 
     const editButtonDiv = document.createElement("div")
     editButtonDiv.innerText = "수정"
@@ -384,7 +400,8 @@ function makeReviewBox(reviewData) {
         commentModifyingReady(commentNum, editButtonDiv)
     }
     editButtonDiv.classList.add("hj-edit-part")
-    editDrop.appendChild(editButtonDiv)
+    editDropbox.appendChild(editButtonDiv)
+
 
     const deleteButtonDiv = document.createElement("div")
     deleteButtonDiv.innerText = "삭제"
@@ -392,13 +409,15 @@ function makeReviewBox(reviewData) {
         deleteComment(commentNum, deleteButtonDiv)
     }
     deleteButtonDiv.classList.add("hj-edit-part")
-    editDrop.appendChild(deleteButtonDiv)
+    editDropbox.appendChild(deleteButtonDiv)
 
 
 
 
     editDrop.classList.add("hj-edit-drop")
+    editDropbox.classList.add("hj-edit-drop-box")
     reviewComment.appendChild(editDrop)
+
 
     reviewComment.classList.add("hj-review-content-box")
     return reviewComment
