@@ -21,7 +21,7 @@
     font-style: normal;
 }
 
-body {
+.body {
     /*margin: 0;*/
     /*width: 100vw;*/
     /*height: 100vh;*/
@@ -127,6 +127,7 @@ body {
     background-image: url("../../../../resources/static/img/기타/나무보드.jpg");
     background-repeat: no-repeat;
     background-size: initial;
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
 }
 
 .mh-map-title {
@@ -149,7 +150,7 @@ body {
     width: 100%;
     /*height: 40vw;*/
     margin-top: 2vw;
-    /*padding-bottom: 8vw;*/
+    padding-bottom: 1vw;
 }
 
 .mh-search-wrap-riding {
@@ -170,6 +171,7 @@ body {
     background-image: url("../../../../resources/static/img/기타/나무보드.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
 }
 
 .mh-background-map-riding {
@@ -184,6 +186,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
 }
 
 
@@ -559,6 +562,7 @@ body {
         background-image: url(/resources/static/img/기타/나무보드.jpg);
         background-repeat: no-repeat;
         background-size: initial;
+        box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
     }
 
     .mh-map-title {
