@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     let img = $('<img>', {
                         src: imagePath,
                         class: 'c1_s' + (index + 1),
-                        style: 'top:' + (index * 10) + 'px;left:' + (index * 130) + 'px;'
+                        style: 'top:' + (index * 10) + 'px;left:' + (index * 200) + 'px;'
                     });
                     starContainer4.append(img);
                 });
