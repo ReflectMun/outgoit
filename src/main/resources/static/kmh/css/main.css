@@ -371,10 +371,10 @@
 
 
 .camping-area-name {
-    font-size: 1.6vw;
+    font-size: 1.4vw;
     margin: 1.2vw;
-    margin-left: 1vw;
-
+    /*margin-left: 1vw;*/
+    /*만약 폰트사이즈가 1.6이 되어있다면 1.4로 고치시오*/
 }
 
 .button-wrapper {
@@ -785,11 +785,11 @@
     }
 
     .camping-area-name {
-        font-size: 1.4vw;
+        font-size: 4vw;
         margin: 1.2vw;
         /*margin-left: 1vw;*/
-
     }
+
 
     .button-wrapper {
         margin-left: 1vw;
