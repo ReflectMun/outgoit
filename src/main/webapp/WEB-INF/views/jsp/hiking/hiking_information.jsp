@@ -114,13 +114,13 @@
                       </div>
                       <!-- 리뷰부분 -->
                       <div id="hj-review-content">
-                        <input
-                                type="text"
+                        <textarea
+
                                 id="hj-review-input"
                                 placeholder="비방글은 삭제 조치 됩니다."
                                 onfocus="this.placeholder=''"
                                 onblur="this.placeholder='비방글은 삭제 조치 됩니다.'"
-                        />
+                        ></textarea>
                       </div>
                       <!-- 확인버튼 -->
                       <div id="hj-btn">
@@ -159,7 +159,7 @@
                         </div>
                         <!-- 코멘트 보여주는 위치 여기까지 -->
                         <!-- 페이징 처리-->
-                        <div id="hj-page-box">
+                        <div class="hj-page-box">
                           <div id="hj-prev-button" onclick="getPrevCommentPage()"><span>[앞으로]</span>
                           </div>
                           <div id="hj-pages"><span>1</span></div>

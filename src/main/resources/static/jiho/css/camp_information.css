@@ -447,22 +447,20 @@ input::placeholder{
 }
 #hj-review-list-container {
     display: flex;
-    line-height: 1.2vw;
+    /*line-height: 1.2vw;*/
     flex-wrap: wrap;
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
 }
 .hj-review-content-box{
     background-image: url(/resources/static/img/기타/양피지.png);
     background-size: cover;
-    line-height: 2vw;
+    line-height: 1.8vw;
     width: 18vw;
-    padding-top: 1vw;
-    height: 20vw;
-    padding-left: 1vw;
+    height: 21vw;
     margin-top: 5%;
-    margin-left: 2%;
     position: relative;
+    padding: 1vw;
 }
 
 .hj-review-stars{
@@ -482,7 +480,7 @@ input::placeholder{
 .hj-review-nickname{
     /*width: 100%;*/
     /*height: 100%;*/
-    font-size: 1.5vw;
+    font-size: 1.2vw;
 
 }
 .hj-review-comment{
@@ -490,7 +488,7 @@ input::placeholder{
     /*width: 100%;*/
     /*height: 100%;*/
     /*margin-bottom: 2%;*/
-    font-size: 1.18vw;
+    font-size: 1vw;
 }
 .hj-review-tape{
     background-image: url(/resources/static/Img_hj/tapeClear.png);
@@ -503,14 +501,17 @@ input::placeholder{
     left: 5vw;
 }
 .hj-review-comment-content{
-    width: 17vw;
+    /*width: 17vw;*/
     word-break: break-all;
+}
+.hj-comment-textarea{
+    background-color: transparent;
 }
 .hj-edit-box {
 
     width: 5%;
     position: absolute;
-    top: 90%;
+    top: 0;
     left: 90%;
 }
 .hj-edit-icon{
@@ -533,16 +534,39 @@ input::placeholder{
 .hj-edit-drop{
     position: absolute;
     font-size: 1vw;
-    right: -1vw;
-    top: 14vw;
+    right: 1vw;
+    top: 90%;
     display: none;
     transition: height 0.5s ease;
     text-align: center;
-    width: 50%;
+    width: 12vw;
+
+}
+.hj-edit-drop-box{
+    display: flex;
+    justify-content: space-between;
 }
 .hj-edit-drop input{
     width: 6vw;
     height: 1vw;
+}
+.hj-password-input{
+    width: 6vw;
+    /* height: 1vw; */
+    font-family: 'SOYOMapleBoldTTF';
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    /* width: 11vw; */
+    height: 1.3vw;
+    /* border-radius: 0.5vw; */
+    outline: none;
+    /* border: 0; */
+    background-color: rgb(250 250 250 / 0%);
+    font-size: 0.8vw;
+    border-width: 0;
+    border-bottom: 1px solid black;
 }
 
 /*리뷰가 없을떄 css 따로주기*/
@@ -562,6 +586,7 @@ input::placeholder{
     justify-content: center;
     margin-top: 4%;
 }
+
 #hj-first-button{
     margin-right: 1%;
 }
