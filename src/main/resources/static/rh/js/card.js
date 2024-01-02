@@ -1,7 +1,5 @@
 $(function () {
-
-    $("#icon1, #icon2, #riding-content2, #icon3, #icon4, #icon5, #camping-content5, #icon6, #camping-icon7, #icon7, #icon8, #icon9").show();
-    $("#content1, #content2, #content3, #content4, #content5, #content6, #camping-content7, #content7, #content8, #content9").hide();
+    $("#content1, #content2, #content3, #content4, #content5, #content6, #camping-content7, #content7, #content8, #ridingcontent8, #content9").hide();
     $("#autoCampC, #glampingC, #backCampC").hide();
     $("#stoneC, #deckC, #grassC").hide();
     $("#beeC, #snakeC, #pigC, #dogC").hide();
@@ -125,8 +123,6 @@ $(function () {
     });
 
 
-
-
     //5번
     $("#icon5").click(function () {
         $("#icon5").hide();
@@ -185,18 +181,29 @@ $(function () {
     $("#icon7").click(function () {
         $("#icon7").hide();
         $("#content7, #back7").fadeToggle();
+        if (window.innerWidth === 430 && window.innerHeight === 932) {
+            $("#riding14Size").css("height", "46vw");
+        } else {
+            $("#riding14Size").css("height", "20vw");
+        }
     });
     $("#back7").click(function () {
         $("#content7, #back7").hide();
         $("#icon7").fadeToggle();
+        if (window.innerWidth === 430 && window.innerHeight === 932) {
+            $("#riding14Size").css("height", "40vw");
+        } else {
+            $("#riding14Size").css("height", "20vw");
+        }
+
     });
 
     //비기너 베스트 8번
-    $("#best").css("position","relative").css("left","-25.3vw").css("z-index","0").css("visibility","hidden");
+    $("#best").css("position","relative").css("left","-25.3vw").css("z-index","0").css("visibility","hidden").css("height", "0");
     $("#icon8").click(function () {
         $("#icon8").hide();
         $("#content8, #back8").fadeToggle();
-        $("#best").css("visibility","visible").css("left","0").css("height","100%").css("background-image", " url('/resources/static/img/기타/양피지.png')").css("background-size", "100% 100%").css("transition","0.5s ease-in-out");
+        $("#best").css("visibility","visible").css("left","0").css("height","100%").css("transition","0.5s ease-in-out");
     });
     $("#back8").click(function () {
         $("#best").css("left","-25.3vw").css("visibility","hidden").css("height","0");

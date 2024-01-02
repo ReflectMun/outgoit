@@ -15,7 +15,8 @@
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous"
     ></script>
-    <script src="../../../../../../../resources/static/rh/js/card.js"></script>
+    <script src="/resources/static/rh/js/card.js"></script>
+    <script src="/resources/static/rh/js/recommend_riding.js"></script>
 </head>
 <body>
 <div>
@@ -184,7 +185,7 @@
                                                                                  alt=""></div>
                     </div>
                 </div>
-                <div class="rh-riding-wood-main">
+                <div class="rh-riding-wood-main" id="riding14Size">
                     <div class="rh-pointer" id="icon7">
                         <div class="rh-redPin-height">
                             <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
@@ -197,7 +198,7 @@
                         <div class="rh-redPin-textView">
                             <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
                         </div>
-                        &nbsp;초보 라이더가 준수해야 하는 주요 사항이에요. <br><br>
+                        &nbsp;초보 라이더가 준수해야 하는 주요 사항이에요. <br>
                         1. 동료와 나란히 라이딩을 진행할 경우 반대편 도로까지 침범하여 사고가 날 수 있으니 이와 같은 행동은 자제하는 것이 좋아요. <br>
                         2. 앞, 뒤 자전거와 일정 간격을 유지하여 라이딩을 진행해 주세요. 간혹 급정거를 할 경우, 뒤에 있는 자전거가 더 많은 피해를 입을 확률이 높아요. 최소 3m의 간격을
                         유지하는 편이 좋아요. <br>
@@ -228,25 +229,25 @@
                 </div>
                 <div class="rh-riding-wood-main" style="display: block" id="best">
                     <div class="rh-riding-wood-main-best">
-                        <div class="rh-riding-wood-mainPost-best rh-pointer" id="best1">
-                            <div onclick="location.href=''" class="rh-riding-wood-mainPost-bestText">
-                                <div>춘천</div>
+                        <div class="rh-riding-wood-mainPost-best" id="best1">
+                            <div class="rh-riding-wood-mainPost-bestText">
+                                <div class="bestTextLocal">춘천</div>
                                 <div class="bestText2">의암호 자전거길</div>
                             </div>
                         </div>
                     </div>
                     <div class="rh-riding-wood-main-best">
-                        <div class="rh-riding-wood-mainPost-best rh-pointer" id="best2">
-                            <div onclick="location.href=''" class="rh-riding-wood-mainPost-bestText">
-                                <div>인천-서울</div>
+                        <div class="rh-riding-wood-mainPost-best" id="best2">
+                            <div class="rh-riding-wood-mainPost-bestText">
+                                <div class="bestTextLocal">인천-서울</div>
                                 <div class="bestText2">아라 자전거길</div>
                             </div>
                         </div>
                     </div>
                     <div class="rh-riding-wood-main-best">
-                        <div class="rh-riding-wood-mainPost-best rh-pointer" id="best3">
-                            <div onclick="location.href=''" class="rh-riding-wood-mainPost-bestText">
-                                <div>대전</div>
+                        <div class="rh-riding-wood-mainPost-best" id="best3">
+                            <div class="rh-riding-wood-mainPost-bestText">
+                                <div class="bestTextLocal">대전</div>
                                 <div class="bestText2">대청호수 자전거길</div>
                             </div>
                         </div>

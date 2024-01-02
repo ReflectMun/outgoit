@@ -17,9 +17,13 @@ let markers = []
 let polylines =[]
 let latlngBounds = new kakao.maps.LatLngBounds()
 
+searchBox.addEventListener("keyup", (e) => {
+    if(e.key === "Enter"){
+        submitSearch.click()
+    }
+})
+
 try {
-
-
     submitSearch.addEventListener('click', async (e) => {
         const inputValue = searchBox.value
         if (!inputValue) {
@@ -208,7 +212,7 @@ function addListElementsToResultList(name, data) {
         const child = document.createElement("div");
         child.classList.add("camping-area-info-box");
         const childCampingAreaName = document.createElement("div");
-        childCampingAreaName.innerHTML = `<h2>${n.properties.mntn_nm}</h2>`;
+        childCampingAreaName.innerHTML = `<span>${n.properties.mntn_nm}</span>`;
         childCampingAreaName.classList.add("camping-area-name");
         const childButtonWrapper = document.createElement("div");
 
@@ -219,7 +223,7 @@ function addListElementsToResultList(name, data) {
         console.log(lngi) // 한라산 국립공원 (마크 핀)의 경도
         console.log(lati) // 한라산 국립공원 위도
         let trailRouteId = n.id
-        openDetailButton.innerText = "캠핑장 정보 보기";
+        openDetailButton.innerText = "등산로 정보 보기";
         openDetailButton.classList.add("open-detail-button");
         openDetailButton.addEventListener("click", (e) => {
             const hiddenForm = document.createElement("form");

@@ -6,7 +6,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>${campingAreaName} 상세정보</title>
-    <link rel="stylesheet" href="/resources/static/jiho/css/draft1.css"/>
+    <link rel="stylesheet" href="/resources/static/jiho/css/camp_information.css"/>
     <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -36,22 +36,24 @@
             <div id="hj-content-pic">
                 <!-- 팝업 클릭했을떄 뜨는 상세내용 디브 -->
                 <div id="hj-content-plus-container">
-                    <div id="hj-detail-tel">번호: ${telephoneNumber}</div>
-                    <div id="hj-detail-season">운영 시즌: ${periodOfOperation}</div>
-                    <div id="hj-detail-addr">주소: ${address}</div>
-                    <div id="hj-detail-facilities">부대시설: ${subsidiaryFacilities}</div>
-                    <div id="hj-line-introduce">
-                        <div>한줄 소개</div>
-                        <div>${lineIntro}</div>
+                    <div id="hj-content-plus-overray">
+                        <div id="hj-detail-contain2"><div id="hj-detail">돌아가기</div> </div>
+                    <div class="hj-content-plus-ray">
+                        <div id="hj-line-introduce">
+                            <%--                        <div>한줄 소개</div>--%>
+                            <div>${lineIntro}</div>
+                            <br>
+                        </div>
+                        <div>일반 야영장 개수: ${generalSite}</div>
+                        <div>자동차 야영장 개수: ${autoSite}</div>
+                        <div>애완동물 동반 가능 여부: ${animalComingControl}</div>
+                        <div>장비 대여 가능 여부: ${equipmentRental}</div>
+                        <div>개인 트레일러 동반 가능 여부: ${trailerAccompanyAt}</div>
+                        <div>개인 카라반 동반 가능 여부: ${caravanAccompanyAt}</div>
+                        <div>화장실 개수: ${toiletCount}</div>
+                        <div>이용 가능한 주면 시설: ${availableFacilities}</div>
                     </div>
-                    <div>일반 야영장 개수: ${generalSite}</div>
-                    <div>자동차 야영장 개수: ${autoSite}</div>
-                    <div>애완동물 동반 가능 여부: ${animalComingControl}</div>
-                    <div>장비 대여 가능 여부: ${equipmentRental}</div>
-                    <div>개인 트레일러 동반 가능 여부: ${trailerAccompanyAt}</div>
-                    <div>개인 카라반 동반 가능 여부: ${caravanAccompanyAt}</div>
-                    <div>화장실 개수: ${toiletCount}</div>
-                    <div>이용 가능한 주면 시설: ${availableFacilities}</div>
+                    <div class="hj-content-plus-ray2">
                     <div>현재 운영 상태: ${managementStatement}</div>
                     <div>휴장 시작: ${holidaySeasonStart}</div>
                     <div>휴장 종료: ${holidaySeasonEnd}</div>
@@ -62,10 +64,15 @@
                     <div>테크 자리: ${siteDeck}</div>
                     <div>자갈 자리: ${siteGravel}</div>
                     <div>맨흙 자리: ${siteSoil}</div>
+                    </div>
+
+                    </div>
                 </div>
                 <div id="hj-overlay-popup"></div>
                 <!-- 칠판에 쓰인 분필 -->
                 <div id="hj-content-box-comment"><span>OUT GO IT</span></div>
+                <div id="hj-tape"></div>
+
                 <!-- 이미지 부분 -->
                 <div id="hj-content-inside-box">
                     <div id="hj-content-img" class="swiper">
@@ -87,6 +94,9 @@
                         <div id="hj-addr">주소: ${address}</div>
                         <div id="hj-ability">부대시설: ${subsidiaryFacilities}</div>
                         <div id="hj-rating-avg">캠핑장 평점: ${ratingAvg}</div>
+                        <div id="hj-detail-contain">
+                        <div id="hj-detail-form">자세히 보기</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -107,6 +117,8 @@
                 <!-- 코멘트 칠판 효과 -->
                 <div id="hj-comment-pic">
                     <div id="hj-content-inside-box2">
+                        <div id="hj-paper"></div>
+                        <div id="hj-tape2"></div>
                         <div id="hj-content-detail2">
                             <div id="hj-content-zentai-box">
                                 <!-- 별부분 -->
@@ -126,6 +138,8 @@
                                                     id="hj-id-input"
                                                     placeholder="닉네임"
                                                     name="author"
+                                                    onfocus="this.placeholder=''"
+                                                    onblur="this.placeholder='닉네임'"
                                             />
                                         </div>
                                         <div id="hj-pw">
@@ -134,6 +148,8 @@
                                                     id="hj-pw-input"
                                                     placeholder="비번"
                                                     name="password"
+                                                    onfocus="this.placeholder=''"
+                                                    onblur="this.placeholder='비번'"
                                             />
                                         </div>
                                     </div>
@@ -143,6 +159,8 @@
                                                 type="text"
                                                 id="hj-review-input"
                                                 placeholder="비방글은 삭제 조치 됩니다."
+                                                onfocus="this.placeholder=''"
+                                                onblur="this.placeholder='비방글은 삭제 조치 됩니다.'"
                                         />
                                     </div>
                                     <!-- 확인버튼 -->
@@ -166,6 +184,7 @@
 
                     <!--  칠판 코멘트 -->
                     <div id="hj-content-box-comment2"><span>Camping</span></div>
+                    <div id="hj-tape3"></div>
                     <div id="hj-review-inside-box2">
 
                         <div id="hj-review-detail2">
@@ -192,7 +211,7 @@
                                         <!--페이징 처리 div 끝 -->
                                     </c:when>
                                     <c:otherwise>
-                                        <h2 id="hj-no-review">아직 작성된 리뷰가 없습니다</h2>
+                                        <div id="hj-no-review">아직 작성된 리뷰가 없습니다</div>
                                     </c:otherwise>
                                 </c:choose>
 

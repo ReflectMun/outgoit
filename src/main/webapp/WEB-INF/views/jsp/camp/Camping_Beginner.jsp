@@ -8,14 +8,15 @@
     <title>Document</title>
     <link
             rel="stylesheet"
-            href="../../../../../../../resources/static/rh/css/camping.css"
+            href="/resources/static/rh/css/camping.css"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script
             src="https://code.jquery.com/jquery-3.5.1.js"
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous"
     ></script>
-    <script src="../../../../../../../resources/static/rh/js/card.js"></script>
+    <script src="/resources/static/rh/js/card.js"></script>
 </head>
 <body>
 <div>
@@ -63,7 +64,7 @@
                             • 텐트 <br/>
                             • 그라운드 시트 <br/>
                             • 의자, 테이블 <br/>
-                            • 취침 용품<span style="font-size: 0.7vw">(침낭, 매트 등)</span> <br/>
+                            • 취침 용품<span>(침낭, 매트 등)</span> <br/>
                         </div>
                         <div class="rh-camping-content1-cut" id="cut2">
                             <span style="border-radius: 50%; background-color: #98bd98">조리도구</span><br>
@@ -261,36 +262,38 @@
                 <div class="rh-camping-wood-main" style="display: block" id="best">
                     <div class="rh-camping-wood-main-best rh-pointer">
                         <div class="rh-camping-wood-mainPost-best" id="best1">
-                            <div onclick="location.href=''" class="rh-camping-wood-mainPost-bestText">
-                                <div>서울</div>
+                            <div class="rh-camping-wood-mainPost-bestText recommended-camp-for-beginner"
+                                 data-value="한강공원 난지캠핑장">
+                                <div class="bestTextLocal">서울</div>
                                 <div class="bestText2">한강공원 난지 캠핑장</div>
                             </div>
                         </div>
                     </div>
                     <div class="rh-camping-wood-main-best rh-pointer">
-                        <div class="rh-camping-wood-mainPost-best " id="best2">
-                            <div onclick="location.href=''" class="rh-camping-wood-mainPost-bestText">
-                                <div>충청북도</div>
+                        <div class="rh-camping-wood-mainPost-best" id="best2">
+                            <div class="rh-camping-wood-mainPost-bestText recommended-camp-for-beginner"
+                                 data-value="송호관광지 야영장">
+                                <div class="bestTextLocal">충청북도</div>
                                 <div class="bestText2">송호국민관광지 캠핑장</div>
                             </div>
                         </div>
                     </div>
                     <div class="rh-camping-wood-main-best rh-pointer">
                         <div class="rh-camping-wood-mainPost-best" id="best3">
-                            <div onclick="location.href=''" class="rh-camping-wood-mainPost-bestText">
-                                <div>부산</div>
+                            <div class="rh-camping-wood-mainPost-bestText recommended-camp-for-beginner"
+                                 data-value="대저 캠핑장">
+                                <div class="bestTextLocal">부산</div>
                                 <div class="bestText2">대저 생태공원 캠핑장</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="rh-camping-wood-main" style="visibility: hidden; height: 0;">
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-</div>
+<script src="/resources/static/rh/js/recommend_camp.js"></script>
 </body>
 </html>

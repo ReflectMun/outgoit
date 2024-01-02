@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     /**
      * 간략한 정보창 클릭시 상세한 정보창 열리도록 하는 이벤트 리스너 등록
      * */
-    document.querySelector("#hj-content-detail").addEventListener("click", (e) => {
+    document.querySelector("#hj-detail-form").addEventListener("click", (e) => {
         document.getElementById("hj-content-plus-container").classList.add("show")
         document.getElementById("hj-overlay-popup").classList.add("active")
     })
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     /**
      * 상세한 정보창 클릭시 닫히도록 하는 이벤트 리스너 등록
      * */
-    document.querySelector("#hj-content-plus-container").addEventListener("click", (e) => {
+    document.querySelector("#hj-detail").addEventListener("click", (e) => {
         document.getElementById("hj-content-plus-container").classList.remove("show")
         document.getElementById("hj-overlay-popup").classList.remove("active")
     })
