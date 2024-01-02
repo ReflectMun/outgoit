@@ -65,7 +65,18 @@
                         </div>
                     </div>
                 <%--            자전거 메뉴 버튼 끝--%>
+
+                        <%-- 자전거 지도 & 슬라이드 --%>
                     <div class="mh-map-all-riding">
+                        <div class="mh-button" id="cycle-road-btn">자전거 도로</div>
+                        <div id="cycle-road-legend">
+                            <div id="cycle-road-legend-menu">
+                                <div class="cycle-road-legend-btn" id="road-guide">도로안내</div>
+                                <div class="cycle-road-legend-btn" id="driveway">진입로</div>
+                                <div class="cycle-road-legend-btn" id="amenities">편의시설</div>
+                            </div>
+                            <div id="cycle-road-guide"></div>
+                        </div>
                         <div id="cycle-page-map"></div>
                         <div id="cycle-detail-slide"><jsp:include page="../../ms/pdf_test.jsp"></jsp:include></div>
                     </div>
