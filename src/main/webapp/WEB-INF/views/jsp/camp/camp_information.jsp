@@ -201,7 +201,7 @@
                                         </div>
                                         <!-- 코멘트 보여주는 위치 여기까지 -->
                                         <!-- 페이징 처리-->
-                                        <div id="hj-page-box">
+                                        <div class="hj-page-box">
                                             <div id="hj-prev-button" onclick="getPrevCommentPage()"><span>[앞으로]</span>
                                             </div>
                                             <div id="hj-pages"><span>1</span></div>

@@ -384,11 +384,11 @@ body {
   margin-left: 40%;
 }
 /*페이지 처리*/
-#hj-page-box{
+.hj-page-box{
   display: flex;
-  align-content: center;
-
+  font-size: 1.5vw;
   justify-content: center;
+  margin: 2vw;
 }
 #hj-prev-button{
   margin-right: 1%;

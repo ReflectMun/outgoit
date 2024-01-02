@@ -556,7 +556,7 @@ input::placeholder{
     font-family: 'SOYOMapleBoldTTF';
 }
 /*페이지 처리*/
-#hj-page-box{
+.hj-page-box{
     display: flex;
     align-content: center;
     justify-content: center;
