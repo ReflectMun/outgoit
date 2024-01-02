@@ -21,8 +21,6 @@
     <div class="mh-container">
 
         <!-- 배너 영역 (슬라이드 들어가면 좋을듯!) -->
-
-
         <div class="mh-banner-wrap camp swiper mySwiper">
             <div class="mh-banner swiper-wrapper">
                 <div class="swiper-slide"><img src="/resources/static/kmh/img/Campingbanner.png"></div>
@@ -40,6 +38,8 @@
                 </div>
             </div>
         </div>
+
+
         <!-- 배너 여기까지 / 컨텐트 영역 (지도 API)-->
 
         <div class="mh-content">
@@ -90,5 +90,14 @@
         });
     </script>
     <script type="text/javascript" src="/resources/static/kmh/js/draft1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+        });
+    </script>
 </body>
 </html>

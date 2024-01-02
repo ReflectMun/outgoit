@@ -78,7 +78,7 @@ body {
 
 }
 
-    
+
 .mh-sub-title {
     font-family: 'SOYOMapleBoldTTF';
     display: flex;
@@ -108,18 +108,18 @@ body {
     justify-content: center;
     animation: fadeInUp 1s ease-in-out forwards;
     margin-bottom: 1vw;
-}   
+}
 
 @keyframes fadeInUp {
     0% {
-      transform: translateY(50px);
-      opacity: 0;
+        transform: translateY(50px);
+        opacity: 0;
     }
     100% {
-      transform: translateY(0);
-      opacity: 1;
+        transform: translateY(0);
+        opacity: 1;
     }
-  }
+}
 
 
 .mh-menu {

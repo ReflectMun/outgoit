@@ -9,7 +9,6 @@
     <title>OUT GO IT - riding </title>
     <link rel="stylesheet" href="/resources/static/kmh/css/main.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
     <!-- 헤더 영역 -->
@@ -21,10 +20,9 @@
     <div class="mh-container">
 
         <!-- 배너 영역 (슬라이드 들어가면 좋을듯!) -->
-
         <div class="mh-banner-wrap camp swiper mySwiper">
             <div class="mh-banner swiper-wrapper">
-                <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
+                <div class="swiper-slide"><img src="/resources/static/img/자전거/riding_banner1.jpg"></div>
                 <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
                 <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
                 <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
@@ -102,7 +100,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=770a2850e8ce3177b209d2d94dc1e58b&libraries=services"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
             loop: true,

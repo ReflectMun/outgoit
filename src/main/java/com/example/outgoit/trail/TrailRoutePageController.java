@@ -10,8 +10,16 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+
 
 import java.util.ArrayList;
 
@@ -24,10 +32,52 @@ public class TrailRoutePageController {
     public final TrailReviewService trailReviewService;
 
     public TrailRoutePageController(TrailRouteService trailRouteService, TrailReviewService trailReviewService) {
+
         this.trailRouteService = trailRouteService;
         this.trailReviewService = trailReviewService;
     }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//    public TrailRoutePageController(TrailReviewService trailReviewService){
+//        this.trailReviewService = trailReviewService;
+//    }
+
+
+    @GetMapping
+    public String getTrailRoutePage() {
+        return "jiho/trail";
+    }
+
+    @GetMapping("/draft1")
+    public String sendDraft1() {
+        return "kmh/hiking";
+    }
+
+//    @GetMapping
+//    public String getTrailRoutePage() {
+//        return "jiho/trail";
+//    }
+//
+//    @GetMapping("/draft1")
+//    public String sendDraft1() {
+//        return "jsp/hiking/hiking";
+//    }
+
+
+//    @GetMapping("/draft2min")
+//    public String sendDraft2(){
+//        return "kmh/hiking3";
+//    }
+
+    //    @PostMapping("/detail/{lngi}/{lati}")
+//    public ArrayList<TrailRouteDTO> GetDetailTrain(@PathVariable ("lngi") double lngi, @PathVariable ("lati") double lati) throws Exception {
+//       trailRouteService.getTrailRouteList(lngi, lati);
+//        {
+//            return new ArrayList<TrailRouteDTO>();
+//        }
+//
+//    }
 
     @PostMapping("/detail/{lngi}/{lati}/{index}/{trailRouteId}")
     public String GetDetailTrain(
@@ -73,4 +123,5 @@ public class TrailRoutePageController {
     public String sendError() {
         return "잘못된 접근입니다";
     }
+
 }
