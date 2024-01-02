@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUT GO IT - main</title>
     <link rel="stylesheet" href="/resources/static/kmh/css/main.css">
+    <link rel="stylesheet" href="/resources/static/kmh/css/main_media.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
