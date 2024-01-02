@@ -176,7 +176,7 @@
         }
         #cycle-road-guide{
             width: 100%;
-            height: 8vh;
+            height: 4vw;
             background-image: url("/resources/static/cycle_detail/road_guide.png");
             background-size: 24vw;
             background-position-y: 24.2vw;
@@ -226,6 +226,30 @@
                 text-shadow: 2px 2px 1px #275634;
                 filter: blur(0);
                 z-index: 1;
+            }
+            #cycle-road-btn{
+                font-size: 2vw;
+                padding: 1vw 2vw;
+                width: auto;
+                height: auto;
+                display: flex;
+                position: absolute;
+                z-index: 500;
+                left: 3vw;
+                top: 1vw;
+            }
+            #cycle-road-legend{
+                display: none;
+                position: absolute;
+                width: 21vw;
+                height: auto;
+                left: 14vw;
+                bottom: 7vw;
+                padding: 1vw;
+                background-color: #fefefe;
+                box-shadow: 2px 2px rgba(0, 0, 0, 0.45);
+                border-radius: 1vw;
+                z-index: 500;
             }
 
         }
