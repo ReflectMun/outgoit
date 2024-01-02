@@ -135,6 +135,35 @@
             99%{left: 10%; top: 50%; transform: translate(170%, -180%)}
             100%{visibility: hidden; left: 10%; top: 50%; transform: translate(170%, -180%)}
         }
+
+        @media only screen and (max-width: 430px) and (max-height: 932px){
+            .swiper{
+                margin-left: auto;
+                margin-right: auto;
+                position: relative;
+                overflow: hidden;
+                list-style: none;
+                padding: 0;
+                z-index: 1;
+                display: block;
+                height: 65vw;
+            }
+            #cycle-detail-slide {
+                width: 55%;
+                height: 35vw;
+                margin-left: 1vw;
+            }
+            .thumbnail-txt {
+                font-family: 'SOYOMapleBoldTTF';
+                position: absolute;
+                color: #ffffff;
+                font-size: 4vw;
+                text-shadow: 2px 2px 1px #275634;
+                filter: blur(0);
+                z-index: 1;
+            }
+
+        }
     </style>
 </head>
 
