@@ -220,17 +220,17 @@ const cycleRoadGuide = document.getElementById("cycle-road-guide")
 // 도로안내
 roadGuide.addEventListener('click', (e) => {
     cycleRoadGuide.style.backgroundPositionY = "24.2vw"
-    cycleRoadGuide.style.height = "8vh"
+    cycleRoadGuide.style.height = "4vw"
 })
 
 // 진입로
 driveway.addEventListener('click', (e) => {
     cycleRoadGuide.style.backgroundPositionY = "28.36vw"
-    cycleRoadGuide.style.height = "8.5vh"
+    cycleRoadGuide.style.height = "4vw"
 })
 
 // 편의시설
 amenities.addEventListener('click', (e) => {
     cycleRoadGuide.style.backgroundPositionY = "32.8vw"
-    cycleRoadGuide.style.height = "9vh"
+    cycleRoadGuide.style.height = "4.3vw"
 })

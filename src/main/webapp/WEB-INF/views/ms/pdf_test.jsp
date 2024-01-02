@@ -176,7 +176,7 @@
         }
         #cycle-road-guide{
             width: 100%;
-            height: 8vh;
+            height: 4vw;
             background-image: url("/resources/static/cycle_detail/road_guide.png");
             background-size: 24vw;
             background-position-y: 24.2vw;
