@@ -77,7 +77,7 @@ public class CampingReviewApiController {
 
     @GetMapping("/list")
     public ArrayList<CampingReview> getCampingAreaReviewList(
-            @PageableDefault(size = 5, sort = "commentNumber", direction = Sort.Direction.DESC) Pageable pageable,
+            @PageableDefault(size = 6, sort = "commentNumber", direction = Sort.Direction.DESC) Pageable pageable,
             Integer campingAreaId,
             Integer pageNumber
     ){

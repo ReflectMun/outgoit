@@ -65,7 +65,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
         <div class="hj-box">
           <div class="hj-row hj-menu-txt">
             <div class="hj-col">
-              <lavel><div class="hj-home" id="hj-home" onclick="location.href='/outgoit/riding/home'"><span>Home</span></div></lavel>
+              <lavel><div class="hj-home" id="hj-home" onclick="location.href='/outgoit/riding'"><span>Home</span></div></lavel>
 
 
             </div>

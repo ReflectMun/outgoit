@@ -50,7 +50,7 @@ div{
     padding: 2%;
     border-radius: 3vw;
     border: 0.5vw solid #4c2c09;
-    box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
     background-image: url(/resources/static/img/기타/나무보드.jpg);
     background-size: cover;
 }
@@ -91,7 +91,7 @@ div{
     border-radius: 5vw;
     border: 1vw solid rgb(76, 44, 9);
     /* background-color: #59795a; */
-    box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
     width: 70vw;
     padding-bottom: 7vw;
     background-size: cover;
@@ -196,7 +196,7 @@ div{
     padding: 2%;
     border-radius: 3vw;
     border: 0.5vw solid #4c2c09;
-    box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
     background-image: url(/resources/static/img/기타/나무보드.jpg);
     background-size: cover;
 }
@@ -214,9 +214,9 @@ div{
     border-radius: 5vw;
 
     /*background-color: #59795a;*/
-    box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
     width: 70vw;
-    padding-bottom: 3vw;
+    padding-bottom: 4vw;
     background-size: cover;
     position: relative;
 }
@@ -378,7 +378,7 @@ input::placeholder{
     /* border: 10px solid hsl(197, 78%, 28%); */
     position: relative;
     border-radius: 5vw;
-    box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
     width: 70vw;
     padding-bottom: 5vw;
     background-size: cover;
@@ -407,69 +407,83 @@ input::placeholder{
     /* border: 2px solid red; */
     display: flex;
     justify-content: center;
-    background-image: url(/resources/static/img/기타/양피지.png);
-    /* margin: 5%; */
-    margin-right: 5%;
-    margin-left: 5%;
-    margin-top: 3%;
-    background-size: cover;
-    padding-bottom: 1vw;
+    width: 70vw;
+    font-family: 'SOYOMapleBoldTTF';
 
 }
-#hj-review-detail2{
-    /* background-image: url(/resources/static/img/기타/양피지.png); */
-    /* border: 0.6vw solid rgb(157, 111, 76); */
-    /*padding: 3% 0% 2% 2%;*/
-    /*margin-right: 5%;*/
-    width: 70%;
-    color: black;
-    font-family: 'SOYOMapleBoldTTF';
-    margin-top: 3%;
-}
+
 #hj-review-zentai-box{
     /*border: 5px solid blueviolet;*/
 
-    margin-top: 2%;
+    width: 90%;
 
 }
+#hj-review-list-container {
+    display: flex;
+    line-height: 1.2vw;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+.hj-review-content-box{
+    background-image: url(/resources/static/img/기타/양피지.png);
+    background-size: cover;
+    line-height: 2vw;
+    width: 18vw;
+    padding-top: 1vw;
+    height: 20vw;
+    padding-left: 1vw;
+    margin-top: 5%;
+    margin-left: 2%;
+    position: relative;
+}
+
 .hj-review-stars{
     /*border: 1px solid darkgoldenrod;*/
     display: flex;
     align-content: space-between;
     width: 10%;
     height: auto;
+    font-size: 1.18vw;
     /* margin-left: ; */
 }
 .hj-review-star {
     display: flex;
     margin-left: 25%;
 }
-.hj-review-content-box{
-    /*display: flex;*/
-    /*border: 1px solid darkgreen;*/
-    width: 100%;
-    /*margin-top: 2%;*/
-    font-size: 1vw;
-    /*height: 100%;*/
-    position: relative;
-}
 .hj-review-nickname{
-    width: 100%;
-    height: 100%;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    font-size: 1.5vw;
 
 }
 .hj-review-comment{
     /*border: 1px solid darkorange;*/
-    width: 100%;
-    height: 100%;
-    margin-bottom: 2%;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*margin-bottom: 2%;*/
+    font-size: 1.18vw;
+}
+.hj-review-tape{
+    background-image: url(/resources/static/Img_hj/tapeClear.png);
+    height: 2vw;
+    width: 9vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -1vw;
+    left: 5vw;
+}
+.hj-review-comment-content{
+    width: 17vw;
+    word-break: break-all;
 }
 .hj-edit-box {
 
     width: 5%;
     position: absolute;
-    top: 45%;
-    right: 0;
+    top: 90%;
+    left: 90%;
 }
 .hj-edit-icon{
     /*background-image: url(/resources/static/Img_hj/horizon_icon.png);*/
@@ -481,6 +495,7 @@ input::placeholder{
     height: 2vw;
     font-size: 1.5vw;
 }
+
 .hj-edit-icon:hover{
     cursor: pointer;
 }
@@ -491,30 +506,34 @@ input::placeholder{
 .hj-edit-drop{
     position: absolute;
     font-size: 1vw;
-    right: 3%;
-    top: 1%;
+    right: -1vw;
+    top: 14vw;
     display: none;
     transition: height 0.5s ease;
-    /*line-height: 2px;*/
     text-align: center;
+    width: 50%;
 }
-.hj-edit-part{
-    margin-top: 2%;
+.hj-edit-drop input{
+    width: 6vw;
+    height: 1vw;
+}
 
-}
 /*리뷰가 없을떄 css 따로주기*/
 #hj-no-review{
     /*margin-left: 40%;*/
     text-align: center;
     font-size: 1.18vw;
-    margin-top: 1%;
+    margin-top: 3%;
     margin-bottom: 1%;
+    color: white;
+    font-family: 'SOYOMapleBoldTTF';
 }
 /*페이지 처리*/
 #hj-page-box{
     display: flex;
     align-content: center;
     justify-content: center;
+    margin-top: 4%;
 }
 #hj-first-button{
     margin-right: 1%;

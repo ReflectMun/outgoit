@@ -31,7 +31,7 @@
             <!-- 통나무 -->
             <div class="rh-riding-wood-titleBox">
                 <!-- 통나무 타이틀 -->
-                <div class="rh-riding-wood-title">
+                <div class="rh-riding-wood-title" id="ridingTitleText">
                     숙지해야 할 안전사항을 안내드려요
                 </div>
             </div>

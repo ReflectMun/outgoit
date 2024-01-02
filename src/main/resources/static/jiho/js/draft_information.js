@@ -293,6 +293,7 @@ async function updateComment(commentNumber, reviewContentInput, modifyButtonElem
 function makeReviewBox(reviewData) {
     const reviewComment = document.createElement("div")
 
+
     /*
     * <div class="hj-review-stars">
     *   <div class="hj-review-star">★</div>
@@ -315,14 +316,17 @@ function makeReviewBox(reviewData) {
     reviewStars.classList.add("hj-review-stars")
     reviewComment.appendChild(reviewStars)
 
+    const tape = document.createElement("div")
+    tape.classList.add("hj-review-tape")
+    reviewComment.appendChild(tape)
     // <br>
-    reviewComment.appendChild(document.createElement("br"))
+    // reviewComment.appendChild(document.createElement("br"))
 
     /*
      *   <div class="hj-review-nickname">닉네임: ${review.author}</div>
      * */
     const authorDiv = document.createElement("div")
-    authorDiv.innerText = `닉네임: ${reviewData['author']}`
+    authorDiv.innerText = `${reviewData['author']}`
     authorDiv.classList.add("hj-review-nickname")
     reviewComment.appendChild(authorDiv)
 
@@ -333,9 +337,11 @@ function makeReviewBox(reviewData) {
      *   </div>
      * */
     const comment = document.createElement("div")
-    comment.innerHTML = `<div>한줄평</div><div class="hj-review-comment-content">${reviewData['content']}</div>`
+    comment.innerHTML = `<div class="hj-review-comment-content">${reviewData['content']}</div>`
     comment.classList.add("hj-review-comment")
     reviewComment.appendChild(comment)
+
+
 
     /*
      *   <div class="hj-edit-box">
@@ -387,6 +393,9 @@ function makeReviewBox(reviewData) {
     }
     deleteButtonDiv.classList.add("hj-edit-part")
     editDrop.appendChild(deleteButtonDiv)
+
+
+
 
     editDrop.classList.add("hj-edit-drop")
     reviewComment.appendChild(editDrop)

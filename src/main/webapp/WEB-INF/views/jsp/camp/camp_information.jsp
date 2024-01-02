@@ -184,10 +184,10 @@
 
                     <!--  칠판 코멘트 -->
                     <div id="hj-content-box-comment2"><span>Camping</span></div>
-                    <div id="hj-tape3"></div>
+
                     <div id="hj-review-inside-box2">
 
-                        <div id="hj-review-detail2">
+<%--                        <div id="hj-review-detail2">--%>
                             <div id="hj-review-zentai-box">
 
                                 <!-- 작성된 리뷰들을 개별 출력하는 부분 -->
@@ -217,7 +217,7 @@
 
                             </div>
 
-                        </div>
+<%--                            </div>--%>
                     </div>
                     <!-- 칠판모양 코멘트 영역 여기까지 -->
 
