@@ -221,7 +221,7 @@
     /* margin-right: auto; */
     margin: auto;
     padding: 1%;
-
+    position: relative;
 }
 
 
@@ -641,6 +641,7 @@
         justify-content: center;
         margin: auto;
         padding: 0%;
+        position: relative;  /* 자전거 도로 버튼을 위한 포지션 */
     }
 
     /*명성님 자전거 css*/
