@@ -21,23 +21,6 @@
     <div class="mh-container">
 
         <!-- 배너 영역 (슬라이드 들어가면 좋을듯!) -->
-
-<<<<<<< HEAD
-        <div class="banner-wrap camp swiper mySwiper">
-            <div class="banner swiper-wrapper">
-                <div class="swiper-slide"><img src="/resources/static/img/캠핑/camping_banner.jpg"></div>
-                <div class="swiper-slide"><img src="/resources/static/img/캠핑/camping_banner.jpg"></div>
-                <div class="swiper-slide"><img src="/resources/static/img/캠핑/camping_banner.jpg"></div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-            <div class="banner-txt-wrap">
-                <div class="banner-title">
-                    <%--                        <span>CAMPING</span>--%>
-                    <div class="banner-sub-txt">
-=======
-
         <div class="mh-banner-wrap camp swiper mySwiper">
             <div class="mh-banner swiper-wrapper">
                 <div class="swiper-slide"><img src="/resources/static/kmh/img/Campingbanner.png"></div>
@@ -50,17 +33,13 @@
                 <div class="mh-banner-title">
                     <%--                        <span>CAMPING</span>--%>
                     <div class="mh-banner-sub-txt">
->>>>>>> front-mh
                         <span> &nbsp; Campsite &nbsp; Campfire &nbsp; Tent Pitching &nbsp; Sleeping Bag &nbsp; Fishing Spot &nbsp; Sunrise/Sunset Views &nbsp; Stargazing &nbsp; Nature Exploration &nbsp; Outdoor Enthusiast </span>
                     </div>
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
+        
 
-
-=======
->>>>>>> front-mh
         <!-- 배너 여기까지 / 컨텐트 영역 (지도 API)-->
 
         <div class="mh-content">

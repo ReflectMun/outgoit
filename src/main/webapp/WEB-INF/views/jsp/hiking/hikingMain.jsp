@@ -7,41 +7,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUT GO IT - hiking </title>
-<<<<<<< HEAD
     <link rel="stylesheet" href="../resources/static/kmh/css/main.css">
-=======
     <link rel="stylesheet" href="/resources/static/kmh/css/main.css">
->>>>>>> front-mh
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 </head>
 <body>
     <!-- 헤더 영역 -->
+
     <div class="header"></div>
 
     <!-- 컨테이너 영역 -->
-<<<<<<< HEAD
-    <div class="container">
-
-        <!-- 배너 영역 (슬라이드 들어가면 좋을듯!) -->
-        <div class="banner-wrap camp swiper mySwiper">
-            <div class="banner swiper-wrapper">
-                <div class="swiper-slide"><img src="/resources/static/kmh/img/hiking_banner.png"></div>
-                <div class="swiper-slide"><img src="/resources/static/kmh/img/hiking_banner.png"></div>
-                <div class="swiper-slide"><img src="/resources/static/kmh/img/hiking_banner.png"></div>
-                <div class="swiper-slide"><img src="/resources/static/kmh/img/hiking_banner.png"></div>
-                <div class="swiper-slide"><img src="/resources/static/kmh/img/hiking_banner.png"></div>
-            </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-                <div class="banner-txt-wrap">
-                    <div class="banner-title">
-=======
 
     <div class="mh-container">
 
         <!-- 배너 영역 (슬라이드 들어가면 좋을듯!) -->
-
         <div class="mh-banner-wrap camp swiper mySwiper">
             <div class="mh-banner swiper-wrapper">
                 <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
@@ -52,7 +31,6 @@
             </div>
                 <div class="mh-banner-txt-wrap">
                     <div class="mh-banner-title">
->>>>>>> front-mh
 <%--                        <span>HKING</span>--%>
                          <div class="mh-banner-sub-txt">
                             <span> &nbsp; Campsite &nbsp; Campfire &nbsp; Tent Pitching &nbsp; Sleeping Bag &nbsp; Fishing Spot &nbsp; Sunrise/Sunset Views &nbsp; Stargazing &nbsp; Nature Exploration &nbsp; Outdoor Enthusiast </span>

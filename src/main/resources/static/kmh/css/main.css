@@ -14,14 +14,12 @@
     font-style: normal;
 }
 
-<<<<<<< HEAD
-body {
-=======
 @font-face {
     font-family: 'BMJUA';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+
 }
 
 body {
@@ -29,7 +27,6 @@ body {
     /*width: 100vw;*/
     /*height: 100vh;*/
     /*overflow-x: hidden;*/
->>>>>>> front-mh
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -42,21 +39,15 @@ body {
     background-color: #FFFAF6;
 }
 
-<<<<<<< HEAD
-.container {
-=======
+
 .mh-container {
->>>>>>> front-mh
     /*border: 3px solid red;*/
     position: relative;
     width: 100%;
     height: 100%;
-<<<<<<< HEAD
     display: flex;
     justify-content: center;
     align-items: center;
-=======
->>>>>>> front-mh
     overflow-x: hidden;
 }
 
@@ -490,7 +481,7 @@ body {
 
 
 /*모바일 사이즈*/
-@media only screen and (max-width: 430px) and (max-height: 932px){
+@media only screen and (max-width: 430px) and (max-height: 932px) {
     body {
         margin: 0;
         padding: 0;
@@ -570,7 +561,7 @@ body {
         height: 15vw;
         padding: 1vw;
         border-radius: 2vw;
-        background-image: url(/resources/static/img/기타/나무보드.jpg);
+        background-image: url("../../../../resources/static/img/기타/나무보드.jpg");
         background-repeat: no-repeat;
         background-size: initial;
     }
@@ -608,7 +599,7 @@ body {
         width: 90%;
         border: 0.5vw solid rgb(76 44 9);
         border-radius: 3vw;
-        background-image: url("/resources/static/img/기타/나무보드.jpg");
+        background-image: url("../../../../resources/static/img/기타/나무보드.jpg");
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -679,8 +670,8 @@ body {
         height: 70vw;
         overflow-y: scroll;
         font-size: 0.7vw;
-        border-top-right-radius : 5%;
-        border-bottom-right-radius : 5%;
+        border-top-right-radius: 5%;
+        border-bottom-right-radius: 5%;
 
     }
 
@@ -821,20 +812,21 @@ body {
     }
 
     /*라이딩 지도 메뉴 버튼*/
-
-    .metro-city-btn-menu{
+    .metro-city-btn-menu {
         display: flex;
         justify-content: center;
         padding: 2.5%;
         line-height: 1vw;
     }
-    .metro-city-btns{
+
+    .metro-city-btns {
         display: flex;
         justify-content: space-evenly;
         width: 80vw;
         flex-wrap: wrap;
     }
-    .metro-city-btn{
+
+    .metro-city-btn {
         font-family: 'SOYOMapleBoldTTF';
         width: 10vw;
         height: 1vw;
@@ -849,59 +841,71 @@ body {
         border-radius: 0.5vw;
         margin: 1vw;
     }
-    .orange-btn{
+
+    .orange-btn {
         color: #fff;
         background-color: #d99661;
         box-shadow: 0 0.7vw #71431E;
     }
-    .orange-btn:hover{
+
+    .orange-btn:hover {
         background-color: #d37f3a;
     }
-    .orange-btn:active{
+
+    .orange-btn:active {
         background-color: #d37f3a;
         box-shadow: 0 0.45vw #71431E;
         transform: translateY(4px);
     }
-    .pink-btn{
+
+    .pink-btn {
         color: #fff;
         background-color: #da8cad;
         box-shadow: 0 0.7vw #9C2A57;
     }
-    .pink-btn:hover{
+
+    .pink-btn:hover {
         background-color: #c4668a;
     }
-    .pink-btn:active{
+
+    .pink-btn:active {
         background-color: #c4668a;
         box-shadow: 0 0.45vw #9C2A57;
         transform: translateY(4px);
     }
-    .green-btn{
+
+    .green-btn {
         color: #fff;
         background-color: #609f55;
         box-shadow: 0 0.7vw #1c4728;
     }
-    .green-btn:hover{
+
+    .green-btn:hover {
         background-color: #3e8e41
     }
-    .green-btn:active{
+
+    .green-btn:active {
         background-color: #3e8e41;
         box-shadow: 0 0.45vw #1c4728;
         transform: translateY(4px);
     }
-    .blue-btn{
+
+    .blue-btn {
         color: #fff;
         background-color: #6380be;
         box-shadow: 0 0.7vw #232A8E;
     }
-    .blue-btn:hover{
+
+    .blue-btn:hover {
         background-color: #4670be;
     }
-    .blue-btn:active{
+
+    .blue-btn:active {
         background-color: #4670be;
         box-shadow: 0 0.45vw #232A8E;
         transform: translateY(4px);
     }
 
-
-
 }
+
+
