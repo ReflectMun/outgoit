@@ -22,7 +22,7 @@
         <!-- 배너 영역 (슬라이드 들어가면 좋을듯!) -->
         <div class="mh-banner-wrap camp swiper mySwiper">
             <div class="mh-banner swiper-wrapper">
-                <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
+                <div class="swiper-slide"><img src="/resources/static/img/자전거/riding_banner1.jpg"></div>
                 <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
                 <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
                 <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
