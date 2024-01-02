@@ -106,7 +106,6 @@ const swiper1 = new Swiper(".mySwiper1", {
         clickable: true,
     },
 });
-
 const swiper2 = new Swiper(".mySwiper2", {
     effect: "cards",
     grabCursor: true,
@@ -118,7 +117,6 @@ const swiper2 = new Swiper(".mySwiper2", {
         }
     }
 });
-
 const swiper3 = new Swiper(".mySwiper3", {
     effect: "cards",
     grabCursor: true,
@@ -199,3 +197,40 @@ function goMetroCity(metroCityBtn){
     swiper2.slideTo(metroNum, 1000)
     swiper1.slideTo(0, 1000)
 }
+// 자전거 도로 온오프 기능
+let isOverlaying = false
+const cycleRoadBtn = document.getElementById("cycle-road-btn")
+const cycleRoadGuideDiv = document.getElementById("cycle-road-legend")
+cycleRoadBtn.addEventListener('click', (e) =>{
+    if (!isOverlaying){
+        map.addOverlayMapTypeId(kakao.maps.MapTypeId.BICYCLE)
+        cycleRoadGuideDiv.style.display = "block"
+        isOverlaying = true
+    } else {
+        map.removeOverlayMapTypeId(kakao.maps.MapTypeId.BICYCLE)
+        cycleRoadGuideDiv.style.display = "none"
+        isOverlaying = false
+    }
+})
+// 자전거 도로 범례 변경 버튼
+const roadGuide = document.getElementById("road-guide")
+const driveway = document.getElementById("driveway")
+const amenities = document.getElementById("amenities")
+const cycleRoadGuide = document.getElementById("cycle-road-guide")
+// 도로안내
+roadGuide.addEventListener('click', (e) => {
+    cycleRoadGuide.style.backgroundPositionY = "24.2vw"
+    cycleRoadGuide.style.height = "8vh"
+})
+
+// 진입로
+driveway.addEventListener('click', (e) => {
+    cycleRoadGuide.style.backgroundPositionY = "28.36vw"
+    cycleRoadGuide.style.height = "8.5vh"
+})
+
+// 편의시설
+amenities.addEventListener('click', (e) => {
+    cycleRoadGuide.style.backgroundPositionY = "32.8vw"
+    cycleRoadGuide.style.height = "9vh"
+})

@@ -12,7 +12,6 @@
 
     <!-- Demo styles -->
     <style>
-
         #cycle-detail-slide {
             width: 35%;
             height: 35vw;
@@ -44,6 +43,8 @@
             width: 100%;
             height: 100%;
             filter: blur(2px);
+            transform: scale(1.02);
+            overflow: hidden;
             z-index: -1;
         }
 
@@ -54,6 +55,8 @@
             width: 100%;
             height: 100%;
             filter: blur(2px);
+            transform: scale(1.02);
+            overflow: hidden;
             z-index: -1;
         }
 
@@ -63,6 +66,8 @@
             width: 100%;
             height: 100%;
             filter: blur(2px);
+            transform: scale(1.02);
+            overflow: hidden;
             z-index: -1;
         }
 
@@ -72,6 +77,8 @@
             width: 100%;
             height: 100%;
             filter: blur(2px);
+            transform: scale(1.02);
+            overflow: hidden;
             z-index: -1;
         }
 
@@ -81,6 +88,8 @@
             width: 100%;
             height: 100%;
             filter: blur(2px);
+            transform: scale(1.02);
+            overflow: hidden;
             z-index: -1;
 
         }
@@ -91,6 +100,8 @@
             width: 100%;
             height: 100%;
             filter: blur(2px);
+            transform: scale(1.02);
+            overflow: hidden;
             z-index: -1;
         }
 
@@ -101,6 +112,8 @@
             width: 100%;
             height: 100%;
             filter: blur(2px);
+            transform: scale(1.02);
+            overflow: hidden;
             z-index: -1;
         }
 
@@ -132,8 +145,60 @@
             0%{left: 10%; top: 50%; transform: translateX(170%)}
             50%{left: 10%; top: 50%; transform: translateX(0)}
             51%{left: 10%; top: 50%; transform: translate(170%, 50%)}
-            99%{left: 10%; top: 50%; transform: translate(170%, -180%)}
-            100%{visibility: hidden; left: 10%; top: 50%; transform: translate(170%, -180%)}
+            99%{left: 10%; top: 50%; transform: translate(170%, -160%)}
+            100%{visibility: hidden; left: 10%; top: 50%; transform: translate(170%, -160%)}
+        }
+
+        /* 자전거 도로 지도 가이드*/
+        #cycle-road-btn{
+            font-size: 0.8vw;
+            padding: 0.5vw 1vw;
+            width: auto;
+            height: auto;
+            display: flex;
+            position: absolute;
+            z-index: 500;
+            left: 5.8vw;
+            top: 1vw;
+        }
+        #cycle-road-legend{
+            display: none;
+            position: absolute;
+            width: 21vw;
+            height: auto;
+            left: 17vw;
+            bottom: 5vw;
+            padding: 1vw;
+            background-color: #fefefe;
+            box-shadow: 2px 2px rgba(0, 0, 0, 0.45);
+            border-radius: 1vw;
+            z-index: 500;
+        }
+        #cycle-road-guide{
+            width: 100%;
+            height: 8vh;
+            background-image: url("/resources/static/cycle_detail/road_guide.png");
+            background-size: 24vw;
+            background-position-y: 24.2vw;
+        }
+        /* 지도 변경 버튼*/
+        #cycle-road-legend-menu{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-bottom: 1vw;
+        }
+        .cycle-road-legend-btn{
+            font-family: 'SOYOMapleBoldTTF';
+            font-size: 0.8vw;
+            color: #121212;
+            padding: 0.2vw 0.4vw 0.2vw 0.4vw;
+            border-radius: 1vw;
+        }
+        .cycle-road-legend-btn:hover{
+            color: #097f06;
+            font-weight: bold;
+            background-color: #fff53b;
         }
 
         @media only screen and (max-width: 430px) and (max-height: 932px){
