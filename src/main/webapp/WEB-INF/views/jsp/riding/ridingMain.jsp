@@ -110,6 +110,7 @@
             },
         });
     </script>
+    <script src="/resources/static/ms/js/cycle_slide.js"></script>
     <script type="text/javascript" src="/resources/static/ms/js/map.js"></script>
 </body>
 </html>
