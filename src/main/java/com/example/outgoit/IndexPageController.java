@@ -36,6 +36,5 @@ public class IndexPageController {
         return "jsp/etc/design";
     }
 
-
 }
 
