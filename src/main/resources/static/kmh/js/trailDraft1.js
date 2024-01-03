@@ -44,7 +44,6 @@ try {
 
                 const {data: resData} = await axios.get(url)
                 // resData - data에서 get요청으로 검색된 등산로만 뽑아내서 담음.
-                console.log(data)
                 console.log(resData)
 
                 addMarker(data.slice(0, 1), resData, data)
@@ -53,11 +52,40 @@ try {
 
                 //MAth.r 1~10d
 
-                const trailName = [] // 등산로 이름 담을 배열
+                // 이름을 그룹화하여 객체들을 묶는 함수
+                function groupAndUniqueNames(resData) {
+                    const grouped = {};
+
+                    resData.forEach((resData) => {
+                        const name = resData.properties.mntn_nm;
+
+                        if (!grouped[name]) {
+                            grouped[name] = [];
+                        }
+                        grouped[name].push(resData);
+                    });
+
+                    const result = [];
+                    const groupedNames = Object.keys(grouped);
+
+                    groupedNames.forEach((name) => {
+                        result.push(grouped[name]);
+                    });
+
+                    return result;
+                }
+
+                const groupedAndUnique = groupAndUniqueNames(data);
+                console.log(groupedAndUnique);
+
+
+
+
+                const trailRoutes = [] // 등산로 이름 담을 배열
                 for (const trail of resData) {
 
-                    console.log(trail.properties.mntn_nm) // 등산로 이름
-                    trailName.push(trail.properties.mntn_nm) // 배열에 추가하기
+                    // console.log(trail.properties.mntn_nm) // 등산로 이름
+                    // trailName.push(trail.properties.mntn_nm) // 배열에 추가하기
 
                     const trailLIne = trail['geometry']['coordinates'][0]
 
@@ -67,26 +95,14 @@ try {
                         path.push(new kakao.maps.LatLng(coord[1], coord[0]))
                     }
 
-                    // 중복 이름만 따로 뽑아서 다시 배열로 담는 메서드
-                    // function groupDuplicates(trailName) {
-                    //     const trailRoutes = {};
-                    //     trailName.forEach((item) => {
-                    //         if (!trailRoutes[item]) {
-                    //             trailRoutes[item] = [];
-                    //         }
-                    //         trailRoutes[item].push(item);
-                    //     });
-                    //
-                    //     // 중복된 항목들을 그룹으로 나눔
-                    //     const sameTrailRoutes = Object.values(trailRoutes).filter((group) => group.length > 1);
-                    //     return sameTrailRoutes;
-                    // }
-                    //
-                    // const groupedDuplicates = groupDuplicates(trailName);
-                    // console.log(groupedDuplicates); // ex)한라산이면 ['걸쇠오름', '걸쇠오름', '걸쇠오름'] 이름만 남음
 
-
-                    // 중복된 이름만 따로 뽑고, 중복되지 않은 애들도 다시 메서드
+                    // [
+                    //     ['중복1', '중복1', '중복1'], // 중복된 이름들의 그룹
+                    //     ['중복X1']
+                    //     ['중복X2']
+                    //     ['중복X3']
+                    // ]
+                    // 이렇게 만들어주는 메서드...ㅜㅜ
                     // function groupAndUniqueNames(trailName) {
                     //     const trailRoutes = {};
                     //     const duplicates = [];
@@ -104,56 +120,15 @@ try {
                     //     const sameTrailRoutes = Object.values(trailRoutes).filter((group) => group.length > 1);
                     //     const uniqueNames = trailName.filter((item) => !duplicates.includes(item)); // 중복되지 않은 이름들의 배열
                     //
-                    //     return [...sameTrailRoutes, uniqueNames]; // 중복된 이름들의 그룹과 중복되지 않은 이름들을 같이 포함하는 배열 반환
+                    //     const result = sameTrailRoutes.concat(uniqueNames.map((name) => [name])); // 중복된 이름들의 그룹과 중복되지 않은 이름들을 각자의 배열로 재구성
+                    //
+                    //     return result;
                     // }
                     //
                     // const groupedAndUniqueNames = groupAndUniqueNames(trailName);
-                    // console.log(groupedAndUniqueNames); // 중복된 이름들의 그룹과 중복되지 않은 이름들이 함께 포함된 배열
+                    // console.log(groupedAndUniqueNames); // 중복된 이름들의 그룹과 각각의 중복되지 않은 이름이 별도의 배열로 담긴 배열
 
 
-                    // [
-                    //     ['중복1', '중복1', '중복1'], // 중복된 이름들의 그룹
-                    //     ['중복X1']
-                    //     ['중복X2']
-                    //     ['중복X3']
-                    // ]
-                    // 이렇게 만들어주는 메서드...ㅜㅜ
-                    function groupAndUniqueNames(trailName) {
-                        const trailRoutes = {};
-                        const duplicates = [];
-                        trailName.forEach((item) => {
-                            if (!trailRoutes[item]) {
-                                trailRoutes[item] = [];
-                            } else {
-                                if (!duplicates.includes(item)) {
-                                    duplicates.push(item); // 중복된 이름들의 그룹에 추가
-                                }
-                            }
-                            trailRoutes[item].push(item);
-                        });
-
-                        const sameTrailRoutes = Object.values(trailRoutes).filter((group) => group.length > 1);
-                        const uniqueNames = trailName.filter((item) => !duplicates.includes(item)); // 중복되지 않은 이름들의 배열
-
-                        const result = sameTrailRoutes.concat(uniqueNames.map((name) => [name])); // 중복된 이름들의 그룹과 중복되지 않은 이름들을 각자의 배열로 재구성
-
-                        return result;
-                    }
-
-                    const groupedAndUniqueNames = groupAndUniqueNames(trailName);
-                    console.log(groupedAndUniqueNames); // 중복된 이름들의 그룹과 각각의 중복되지 않은 이름이 별도의 배열로 담긴 배열
-
-
-
-
-                    // 랜덤한 색상 뽑는 메서드
-                    // function getRandomColor() {
-                    //     // 랜덤한 RGB 값을 생성
-                    //     const randomColor = Math.floor(Math.random()*16777215).toString(16);
-                    //
-                    //     // 생성된 RGB 값을 색상 문자열로 변환
-                    //     return '#' + randomColor;
-                    // }
 
 
                     // 지정된 무지개색 7가지 랜덤으로 뽑는 메서드
@@ -216,7 +191,7 @@ try {
                     polyLine.setMap(map)
 
                 }
-                console.log(trailName) // 성공적으로 이름만 배열에 담음!! 오예ㅋㅋㅋ
+
 
             }
         })
@@ -336,7 +311,7 @@ function addListElementsToResultList(name, data) {
     for (const [index, n] of name.entries()) {
         // console.log(index)
         // console.log(n);
-        console.log(n.properties.mntn_nm); // 산 이름
+        // console.log(n.properties.mntn_nm); // 산 이름
         // const trailName = n.properties.mntn_nm;
 
         const child = document.createElement("div");
@@ -347,7 +322,6 @@ function addListElementsToResultList(name, data) {
         const childButtonWrapper = document.createElement("div");
 
         const openDetailButton = document.createElement("button");
-        console.log(n)
         lngi = data[0].x
         lati = data[0].y
         console.log(lngi) // 한라산 국립공원 (마크 핀)의 경도
