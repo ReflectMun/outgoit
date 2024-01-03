@@ -45,6 +45,8 @@ document.addEventListener('DOMContentLoaded', async function () {
 
                 const madeReviewBox = makeReviewBox(review)
                 reviewListContainer.appendChild(madeReviewBox)
+
+
             }
         } catch (e) {
             console.log(e)
@@ -61,20 +63,22 @@ document.addEventListener('DOMContentLoaded', async function () {
         });
     });
 
-//     function handleStarClick(clickedStar) {
-//         // 클릭된 별의 data-value 속성 값을 가져옵니다.
-//         clickedValue = clickedStar.getAttribute('data-value');
-//         // 클릭된 별까지 노란색으로 채우기
-//         stars.forEach(function (star) {
-//             const starValue = star.getAttribute('data-value');
-//
-//             if (starValue <= clickedValue) {
-//                 star.classList.add('checked');
-//             } else {
-//                 star.classList.remove('checked');
-//             }
-//         });
-//     }
+    function handleStarClick(clickedStar) {
+        // 클릭된 별의 data-value 속성 값을 가져옵니다.
+        clickedValue = clickedStar.getAttribute('data-value');
+        // 클릭된 별까지 노란색으로 채우기
+        stars.forEach(function (star) {
+            const starValue = star.getAttribute('data-value');
+
+            if (starValue <= clickedValue) {
+                star.innerHTML= "★"
+                star.classList.add('checked');
+            } else {
+                star.innerHTML="☆"
+                star.classList.remove('checked');
+            }
+        });
+    }
     function handleStarHover(hoveredStar) {
         // 호버된 별의 data-value 속성 값을 가져옵니다.
         const hoveredValue = hoveredStar.getAttribute('data-value');
@@ -91,21 +95,6 @@ document.addEventListener('DOMContentLoaded', async function () {
         });
     }
 
-    function handleStarClick(clickedStar) {
-        // 클릭된 별의 data-value 속성 값을 가져옵니다.
-        const clickedValue = clickedStar.getAttribute('data-value');
-
-        // 클릭된 별까지 노란색으로 채우기
-        stars.forEach(function (star) {
-            const starValue = star.getAttribute('data-value');
-
-            if (starValue <= clickedValue) {
-                star.classList.add('checked');
-            } else {
-                star.classList.remove('checked');
-            }
-        });
-    }
 
     function handleStarMouseOut() {
         // 마우스가 별에서 벗어났을 때 모든 별의 호버 클래스 제거
@@ -125,9 +114,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             handleStarMouseOut();
         });
 
-        star.addEventListener('click', function () {
-            handleStarClick(star);
-        });
+
     });
 
 });
@@ -156,6 +143,7 @@ async function getPrevCommentPage() {
         for(const review of resData){
             const madeReviewBox = makeReviewBox(review)
             reviewListContainer.appendChild(madeReviewBox)
+
         }
 
         pageNum -= 1
@@ -251,21 +239,80 @@ async function deleteComment(commentNumber, element) {
 /**
  * 말 그대로 처음 수정하기 버튼 눌렀을 때 수정될 내용을 받는 등의 준비동작을 하도록 하는 함수임
  * */
-async function commentModifyingReady(commentNumber, element) {
+async function commentModifyingReady(commentNumber, element, reviewData) {
+    console.log(reviewData)
     const commentDiv =
         element.parentNode
             .parentElement
             .parentElement
             .getElementsByClassName("hj-review-comment")[0]
             .getElementsByClassName("hj-review-comment-content")[0]
-
+    const starDiv =
+        element.parentNode
+            .parentElement
+            .parentElement
+            .parentElement
+            .getElementsByClassName("hj-review-content-box")[0]
+            .getElementsByClassName("hj-review-stars")[0]
     const reviewModifyingInput = document.createElement("textarea")
+    const reviewModifyStar = document.createElement("div")
+
+    reviewModifyStar.classList.add("hj-review-stars")
+    for (let i = 1; i <= 5; i++) {
+        const ratingStar = document.createElement("div")
+        ratingStar.dataset.index = i;
+        if (reviewData['rating'] >= i) {
+            ratingStar.innerText = "★"
+        }
+        else {
+            ratingStar.innerText = "☆"
+        }
+        ratingStar.classList.add("hj-review-star")
+        ratingStar.addEventListener("mouseover", function () {
+            const index = parseInt(this.dataset.index, 10);
+
+            // 별을 호버하면 그 별을 기준으로 이전 별들을 변경
+            for (let j = 1; j <= 5; j++) {
+                const star = reviewModifyStar.children[j - 1];
+                if (j <= index) {
+                    star.innerText = "★";
+                    star.setAttribute("value", '1');
+                } else {
+                    star.innerText = "☆";
+                    star.removeAttribute("value");
+                }
+            }
+        });
+
+        // 마우스 아웃 이벤트
+        ratingStar.addEventListener("mouseout", function () {
+            // 마우스가 벗어나면 현재 평가로 다시 표시
+            for (let j = 1; j <= 5; j++) {
+                const star = reviewModifyStar.children[j - 1];
+                if (reviewData['rating'] >= j) {
+                    star.innerText = "★";
+                    star.setAttribute("value", '1');
+                } else {
+                    star.innerText = "☆";
+                    star.removeAttribute("value");
+                }
+            }
+        });
+        reviewModifyStar.appendChild(ratingStar)
+    }
+
+
+
+
+
+
 
     reviewModifyingInput.classList.add("hj-comment-textarea")
-    // reviewModifyingInput.type = "text"
-    reviewModifyingInput.value = commentDiv.innerText
+    reviewModifyingInput.type = "text"
+    reviewModifyingInput.value = `${reviewData['content']}`
     commentDiv.innerText = ""
-
+    starDiv.innerHTML=""
+    starDiv.appendChild(reviewModifyStar)
     commentDiv.appendChild(reviewModifyingInput)
 
     element.onclick = function (){
@@ -315,6 +362,7 @@ async function updateComment(commentNumber, reviewContentInput, modifyButtonElem
         for(const review of reviewDataList){
             const madeReviewBox = makeReviewBox(review)
             reviewListContainer.appendChild(madeReviewBox)
+
         }
     }
     catch (e){
@@ -363,10 +411,15 @@ function makeReviewBox(reviewData) {
     const reviewStars = document.createElement("div")
     for (let i = 1; i <= 5; i++) {
         const ratingStar = document.createElement("div")
-        if (reviewData['rating'] >= i)
+        if (reviewData['rating'] >= i) {
             ratingStar.innerText = "★"
-        else
+            ratingStar.setAttribute("value", '1')
+        } else {
+
             ratingStar.innerText = "☆"
+            ratingStar.setAttribute("value", '0');
+        }
+
         ratingStar.classList.add("hj-review-star")
         reviewStars.appendChild(ratingStar)
     }
@@ -449,7 +502,7 @@ function makeReviewBox(reviewData) {
     const editButtonDiv = document.createElement("div")
     editButtonDiv.innerText = "수정"
     editButtonDiv.onclick = function (){
-        commentModifyingReady(commentNum, editButtonDiv)
+        commentModifyingReady(commentNum, editButtonDiv, reviewData)
     }
     editButtonDiv.classList.add("hj-edit-part")
     editDropbox.appendChild(editButtonDiv)
