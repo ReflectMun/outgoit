@@ -103,13 +103,14 @@ public class TrailRoutePageController {
             }
 
     ArrayList<com.example.outgoit.trail.dto.FeatureData> trailRouteList = trailRouteService.getTrailRouteList(lngi, lati); // list를 반환함.
-        System.out.println(index);
+//        System.out.println(index);
 
     // 한라산을 검색했을때 분류한 5개의 등산로가 배열로 담겨있음!
-        System.out.println(trailRouteList.get(index).getProperties());
+//        System.out.println(trailRouteList.get(index).getProperties());
 
     // 모델에 trailRouteList를 추가
     model.addAttribute("trailRouteList", trailRouteList.get(index).getProperties());
+    model.addAttribute("trailPath",trailRouteList.get(index).getGeometry().getCoordinates().get(0));
     model.addAttribute("trailRouteId", trailRouteList.get(index).getId());
     model.addAttribute("ratingAvg", ratingAvg);
     model.addAttribute("existReviews", !reviews.isEmpty());

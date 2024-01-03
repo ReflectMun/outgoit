@@ -52,7 +52,7 @@ div{
     border: 0.5vw solid #4c2c09;
     box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
     background-image: url(/resources/static/img/기타/나무보드.jpg);
-    background-size: cover;
+    background-size: inherit;
 }
 .hj-info-name {
     text-align: center;
@@ -62,7 +62,7 @@ div{
 }
 /* 정보 div */
 .hj-content1{
-    margin-top: 3%;
+    margin-top: 2%;
 }
 
 #hj-content-box-comment {
@@ -103,17 +103,13 @@ div{
 
     justify-content: space-between;
 }
-#hj-content-img {
+#hj-map-container {
     /*background-color: white;*/
     margin-left: 5%;
-    width: 26vw;
-    height: 20vw;
+    width: 31vw;
+    height: 24vw;
 }
-#hj-content-img-slide-wrapper img {
-    /*height: 250px;*/
-    width: 26vw;
-    height: 20vw;
-}
+
 /* 정보 부분 */
 #hj-content-detail {
     /*background-color: rgb(6, 57, 10);*/
@@ -198,7 +194,8 @@ div{
     border: 0.5vw solid #4c2c09;
     box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
     background-image: url(/resources/static/img/기타/나무보드.jpg);
-    background-size: cover;
+    background-size: inherit;
+    margin-top: 3%;
 }
 .hj-line-introduce{
     font-size: 1.3vw;
@@ -268,9 +265,13 @@ div{
 }
 .hj-star{
     font-size: 2vw;
+    cursor: pointer;
 }
 .hj-star.checked{
     color: yellow;
+}
+.hj-star.hovered {
+    color: grey;
 }
 .hj-review {
     /* border: 1px solid purple; */
@@ -380,7 +381,7 @@ input::placeholder{
     border-radius: 5vw;
     box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
     width: 70vw;
-    padding-bottom: 5vw;
+    padding-bottom: 3vw;
     background-size: cover;
     /*height: 100%;*/
 
