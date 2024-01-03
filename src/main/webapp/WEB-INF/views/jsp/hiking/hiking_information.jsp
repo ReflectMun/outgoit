@@ -21,8 +21,12 @@
     <input id="trail-area-id" value="${trailRouteId}" style="display: none;">
     <input id="trail-area-path" value="${trailPath}" style="display: none;">
     <div id="hj-container2">
+
       <!-- 정보 div -->
       <div id="hj-info">
+        <div id="hj-info-weather">
+          <div id="hj-info-weather-text"><span>서울</span><span>아이콘</span><span>온도</span></div>
+        </div>
         <div class="hj-info-box">
           <div id="hj-info-name-img">
             <div class="hj-info-name">${trailRouteList.mntn_nm}</div>
