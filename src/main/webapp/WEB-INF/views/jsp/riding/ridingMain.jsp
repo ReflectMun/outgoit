@@ -51,6 +51,7 @@
                 </div>
             </div>
             <div class="mh-search-wrap-riding">
+                <a name="cycle-border"></a>
                 <div class="mh-background-map-riding">
                     <%--            자전거 메뉴 버튼--%>
                     <div class="metro-city-btn-menu">

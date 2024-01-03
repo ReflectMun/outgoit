@@ -248,4 +248,5 @@ if (recommendParam !== null){
         swiper1.slideTo(0,1000)
         swiper2.slideTo(recommendParam, 1000)
     }
+    location.href="#cycle-border";
 }
