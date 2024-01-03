@@ -25,7 +25,8 @@
       <!-- 정보 div -->
       <div id="hj-info">
         <div id="hj-info-weather">
-          <div id="hj-info-weather-text"><span>서울</span><span>아이콘</span><span>온도</span></div>
+          <div id="hj-info-weather-text"><span>서울</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></div>
+        </div>
         </div>
         <div class="hj-info-box">
           <div id="hj-info-name-img">

@@ -615,7 +615,12 @@ input::placeholder{
 #hj-info-weather-text{
     font-size: 1vw;
     font-family: 'Pretendard-Regular';
+    display: flex;
+    align-items: center;
 }
 #hj-info-weather-text > span{
     margin: 0vw 0.5vw 0vw 0.5vw;
+}
+#hj-info-weather-text > img{
+  width: 1.2vw;
 }
