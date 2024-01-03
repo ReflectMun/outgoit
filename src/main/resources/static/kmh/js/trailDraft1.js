@@ -43,7 +43,7 @@ try {
                 // data는 한라산을 검색했을때 한라산에 관련된 모든 정보
 
                 const {data: resData} = await axios.get(url)
-                // resData - data에서 등산로만 뽑아냄.
+                // resData - data에서 get요청으로 검색된 등산로만 뽑아내서 담음.
                 console.log(data)
                 console.log(resData)
 
@@ -52,45 +52,172 @@ try {
                 //const = [r,d,q,w,d,s,a,z,,c,,vv,g]
 
                 //MAth.r 1~10d
-                for (const trail of resData) {
-                    // a[rint]
-                    // 이게 등산로 하나.
-                    // 이때 색깔 핸덤하나 생성
-                    // console.log(resData)
-                    //console.log(trail)
 
-                    // console.log(JSON.stringify(resData['properties']['mntn_nm']))
-                    //console.log(trail.properties.mntn_nm)
+                const trailName = [] // 등산로 이름 담을 배열
+                for (const trail of resData) {
+
+                    console.log(trail.properties.mntn_nm) // 등산로 이름
+                    trailName.push(trail.properties.mntn_nm) // 배열에 추가하기
+
                     const trailLIne = trail['geometry']['coordinates'][0]
 
-                    // console.log(trailLIne)
                     const path = []
-
 
                     for (const coord of trailLIne) {
                         path.push(new kakao.maps.LatLng(coord[1], coord[0]))
-
-                    }
-                    function getRandomColor() {
-                        // 랜덤한 RGB 값을 생성
-                        const randomColor = Math.floor(Math.random()*16777215).toString(16);
-
-                        // 생성된 RGB 값을 색상 문자열로 변환
-                        return '#' + randomColor;
                     }
 
+                    // 중복 이름만 따로 뽑아서 다시 배열로 담는 메서드
+                    // function groupDuplicates(trailName) {
+                    //     const trailRoutes = {};
+                    //     trailName.forEach((item) => {
+                    //         if (!trailRoutes[item]) {
+                    //             trailRoutes[item] = [];
+                    //         }
+                    //         trailRoutes[item].push(item);
+                    //     });
+                    //
+                    //     // 중복된 항목들을 그룹으로 나눔
+                    //     const sameTrailRoutes = Object.values(trailRoutes).filter((group) => group.length > 1);
+                    //     return sameTrailRoutes;
+                    // }
+                    //
+                    // const groupedDuplicates = groupDuplicates(trailName);
+                    // console.log(groupedDuplicates); // ex)한라산이면 ['걸쇠오름', '걸쇠오름', '걸쇠오름'] 이름만 남음
+
+
+                    // 중복된 이름만 따로 뽑고, 중복되지 않은 애들도 다시 메서드
+                    // function groupAndUniqueNames(trailName) {
+                    //     const trailRoutes = {};
+                    //     const duplicates = [];
+                    //     trailName.forEach((item) => {
+                    //         if (!trailRoutes[item]) {
+                    //             trailRoutes[item] = [];
+                    //         } else {
+                    //             if (!duplicates.includes(item)) {
+                    //                 duplicates.push(item); // 중복된 이름들의 그룹에 추가
+                    //             }
+                    //         }
+                    //         trailRoutes[item].push(item);
+                    //     });
+                    //
+                    //     const sameTrailRoutes = Object.values(trailRoutes).filter((group) => group.length > 1);
+                    //     const uniqueNames = trailName.filter((item) => !duplicates.includes(item)); // 중복되지 않은 이름들의 배열
+                    //
+                    //     return [...sameTrailRoutes, uniqueNames]; // 중복된 이름들의 그룹과 중복되지 않은 이름들을 같이 포함하는 배열 반환
+                    // }
+                    //
+                    // const groupedAndUniqueNames = groupAndUniqueNames(trailName);
+                    // console.log(groupedAndUniqueNames); // 중복된 이름들의 그룹과 중복되지 않은 이름들이 함께 포함된 배열
+
+
+                    // [
+                    //     ['중복1', '중복1', '중복1'], // 중복된 이름들의 그룹
+                    //     ['중복X1']
+                    //     ['중복X2']
+                    //     ['중복X3']
+                    // ]
+                    // 이렇게 만들어주는 메서드...ㅜㅜ
+                    function groupAndUniqueNames(trailName) {
+                        const trailRoutes = {};
+                        const duplicates = [];
+                        trailName.forEach((item) => {
+                            if (!trailRoutes[item]) {
+                                trailRoutes[item] = [];
+                            } else {
+                                if (!duplicates.includes(item)) {
+                                    duplicates.push(item); // 중복된 이름들의 그룹에 추가
+                                }
+                            }
+                            trailRoutes[item].push(item);
+                        });
+
+                        const sameTrailRoutes = Object.values(trailRoutes).filter((group) => group.length > 1);
+                        const uniqueNames = trailName.filter((item) => !duplicates.includes(item)); // 중복되지 않은 이름들의 배열
+
+                        const result = sameTrailRoutes.concat(uniqueNames.map((name) => [name])); // 중복된 이름들의 그룹과 중복되지 않은 이름들을 각자의 배열로 재구성
+
+                        return result;
+                    }
+
+                    const groupedAndUniqueNames = groupAndUniqueNames(trailName);
+                    console.log(groupedAndUniqueNames); // 중복된 이름들의 그룹과 각각의 중복되지 않은 이름이 별도의 배열로 담긴 배열
+
+
+
+
+                    // 랜덤한 색상 뽑는 메서드
+                    // function getRandomColor() {
+                    //     // 랜덤한 RGB 값을 생성
+                    //     const randomColor = Math.floor(Math.random()*16777215).toString(16);
+                    //
+                    //     // 생성된 RGB 값을 색상 문자열로 변환
+                    //     return '#' + randomColor;
+                    // }
+
+
+                    // 지정된 무지개색 7가지 랜덤으로 뽑는 메서드
+                    function getRandomPastelRainbowColor() {
+
+                        const pastelRainbowColors = [
+                            '#ff92ae', // 빨간색
+                            '#ff9e57', // 주황색
+                            '#ffd97b', // 노란색
+                            '#caff6e', // 초록색
+                            '#98eeff', // 연하늘색
+                            '#0080ff', // 파란색
+                            '#ca93ff'  // 보라색
+                        ];
+
+                        // 랜덤한 인덱스 선택
+                        const randomColor = Math.floor(Math.random() * pastelRainbowColors.length);
+
+                        // 랜덤한 파스텔 무지개 색상 반환
+                        return pastelRainbowColors[randomColor];
+                    }
+
+                    // // 그룹된 선의 색으로 변환하는 메서드
+                    // function getRandomPastelRainbowColor() {
+                    //     const pastelRainbowColors = [
+                    //         '#ff92ae', // 빨간색
+                    //         '#ff9e57', // 주황색
+                    //         '#ffd97b', // 노란색
+                    //         '#caff6e', // 초록색
+                    //         '#98eeff', // 연하늘색
+                    //         '#0080ff', // 파란색
+                    //         '#ca93ff'  // 보라색
+                    //     ];
+                    //
+                    //     const randomColorIndex = Math.floor(Math.random() * pastelRainbowColors.length);
+                    //     return pastelRainbowColors[randomColorIndex];
+                    // }
+                    //
+                    // groupedDuplicates.forEach((group) => {
+                    //     const color = getRandomPastelRainbowColor(); // 각 그룹에 랜덤 색상을 선택합니다.
+                    //     group.forEach((trailName) => {
+                    //         const polyline = findPolylineByTrailName(trailName); // 산책로 이름에 해당하는 폴리라인 객체를 찾습니다.
+                    //         if (polyline) {
+                    //             polyline.setStrokeColor(color); // 폴리라인 객체의 strokeColor를 랜덤 색상으로 변경합니다.
+                    //         }
+                    //     });
+                    // });
+
+
+                    // 기존 폴리라인
                     const polyLine = new kakao.maps.Polyline({
                         path: path,
-                        strokeWeight: 5,
-                        strokeColor: getRandomColor(),
-                        strokeOpacity: 0.7,
-                        strokeStyle: 'dotted'
+                        strokeWeight: 6.5,
+                        strokeColor: getRandomPastelRainbowColor(),
+                        strokeOpacity: 1,
+                        strokeStyle: 'solid'
                     })
 
                     polylines.push(polyLine)
                     polyLine.setMap(map)
 
                 }
+                console.log(trailName) // 성공적으로 이름만 배열에 담음!! 오예ㅋㅋㅋ
+
             }
         })
 
@@ -204,10 +331,13 @@ catch (e) {
 
 function addListElementsToResultList(name, data) {
     // 등산로만 있는 것임.
+
+    // let trailRouteNames = []; // 추출한 등산로의 name값만 담을 것임.
     for (const [index, n] of name.entries()) {
-        console.log(index)
-        console.log(n);
-        console.log(n.properties.mntn_nm);
+        // console.log(index)
+        // console.log(n);
+        console.log(n.properties.mntn_nm); // 산 이름
+        // const trailName = n.properties.mntn_nm;
 
         const child = document.createElement("div");
         child.classList.add("camping-area-info-box");
@@ -242,7 +372,12 @@ function addListElementsToResultList(name, data) {
 
             document.body.appendChild(hiddenForm);
             hiddenForm.submit();
+
+            // trailRouteNames.push(trailName);
+            // 배열에 뽑은 trailName 추가
         });
+
+
 
         childButtonWrapper.classList.add("button-wrapper");
 
