@@ -44,8 +44,8 @@ try {
 
                 const {data: resData} = await axios.get(url)
                 // resData - data에서 등산로만 뽑아냄.
-                console.log(data)
-                console.log(resData)
+                // console.log(data)
+                // console.log(resData)
 
                 addMarker(data.slice(0, 1), resData, data)
                 displayMarker()
@@ -205,9 +205,9 @@ catch (e) {
 function addListElementsToResultList(name, data) {
     // 등산로만 있는 것임.
     for (const [index, n] of name.entries()) {
-        console.log(index)
-        console.log(n);
-        console.log(n.properties.mntn_nm);
+        // console.log(index)
+        // console.log(n);
+        // console.log(n.properties.mntn_nm);
 
         const child = document.createElement("div");
         child.classList.add("camping-area-info-box");
@@ -217,11 +217,8 @@ function addListElementsToResultList(name, data) {
         const childButtonWrapper = document.createElement("div");
 
         const openDetailButton = document.createElement("button");
-        console.log(n)
         lngi = data[0].x
         lati = data[0].y
-        console.log(lngi) // 한라산 국립공원 (마크 핀)의 경도
-        console.log(lati) // 한라산 국립공원 위도
         let trailRouteId = n.id
         openDetailButton.innerText = "등산로 정보 보기";
         openDetailButton.classList.add("open-detail-button");

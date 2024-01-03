@@ -61,9 +61,40 @@ document.addEventListener('DOMContentLoaded', async function () {
         });
     });
 
+//     function handleStarClick(clickedStar) {
+//         // 클릭된 별의 data-value 속성 값을 가져옵니다.
+//         clickedValue = clickedStar.getAttribute('data-value');
+//         // 클릭된 별까지 노란색으로 채우기
+//         stars.forEach(function (star) {
+//             const starValue = star.getAttribute('data-value');
+//
+//             if (starValue <= clickedValue) {
+//                 star.classList.add('checked');
+//             } else {
+//                 star.classList.remove('checked');
+//             }
+//         });
+//     }
+    function handleStarHover(hoveredStar) {
+        // 호버된 별의 data-value 속성 값을 가져옵니다.
+        const hoveredValue = hoveredStar.getAttribute('data-value');
+
+        // 모든 별에 대해 처리
+        stars.forEach(function (star) {
+            const starValue = star.getAttribute('data-value');
+
+            if (starValue <= hoveredValue) {
+                star.classList.add('hovered');
+            } else {
+                star.classList.remove('hovered');
+            }
+        });
+    }
+
     function handleStarClick(clickedStar) {
         // 클릭된 별의 data-value 속성 값을 가져옵니다.
-        clickedValue = clickedStar.getAttribute('data-value');
+        const clickedValue = clickedStar.getAttribute('data-value');
+
         // 클릭된 별까지 노란색으로 채우기
         stars.forEach(function (star) {
             const starValue = star.getAttribute('data-value');
@@ -75,7 +106,33 @@ document.addEventListener('DOMContentLoaded', async function () {
             }
         });
     }
+
+    function handleStarMouseOut() {
+        // 마우스가 별에서 벗어났을 때 모든 별의 호버 클래스 제거
+        stars.forEach(function (star) {
+            star.classList.remove('hovered');
+
+        });
+    }
+
+// 각 별에 이벤트 리스너 추가
+    stars.forEach(function (star) {
+        star.addEventListener('mouseover', function () {
+            handleStarHover(star);
+        });
+
+        star.addEventListener('mouseout', function () {
+            handleStarMouseOut();
+        });
+
+        star.addEventListener('click', function () {
+            handleStarClick(star);
+        });
+    });
+
 });
+
+
 
 /**
  * 한페이지 이전의 리뷰 목록을 불러오도록 하는 함수

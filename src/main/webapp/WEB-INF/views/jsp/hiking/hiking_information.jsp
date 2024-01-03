@@ -14,9 +14,12 @@
     <script src="/resources/static/jiho/js/draft_hiking_review.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/resources/static/js_hj/hiking_information_detail.js"></script>
+
   </head>
   <body>
     <input id="trail-area-id" value="${trailRouteId}" style="display: none;">
+    <input id="trail-area-path" value="${trailPath}" style="display: none;">
     <div id="hj-container2">
       <!-- 정보 div -->
       <div id="hj-info">
@@ -46,11 +49,8 @@
             <div id="hj-tape"></div>
            <!-- 이미지 부분 -->
             <div id="hj-content-inside-box">
-              <div id="hj-content-img">
-                <div id="hj-content-img-link">
+              <div id="hj-map-container">
 
-
-                </div>
               </div>
               <!-- 정보 부분 -->
               <div id="hj-content-detail">
@@ -321,6 +321,6 @@
       //   }
       // })
     </script>
-
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=770a2850e8ce3177b209d2d94dc1e58b&libraries=services"></script>
   </body>
 </html>
