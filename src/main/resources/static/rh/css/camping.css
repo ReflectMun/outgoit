@@ -364,7 +364,6 @@ body {
     align-items: center;
 }
 .rh-camping-history-wood-main {
-    /* border: 3px solid rgb(255, 0, 0); */
     background-image: url("/resources/static/img/기타/양피지.png");
     border-radius: 2%;
     width: 65vw;

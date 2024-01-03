@@ -20,6 +20,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 
 .body {
     /*margin: 0;*/
@@ -114,7 +120,6 @@
 
 .mh-map-txt-wrap {
     border: 0.5vw solid rgb(76 44 9);
-    margin-top: 7vw;
     display: grid;
     justify-content: center;
     margin-left: auto;
@@ -190,7 +195,6 @@
 }
 
 
-
 .mh-area-search {
     width: 100vw;
     height: 5vw;
@@ -198,7 +202,6 @@
     justify-content: center;
     margin-top: 1.8vw;
 }
-
 
 
 .mh-map-all {
@@ -251,8 +254,8 @@
     height: 30vw;
     overflow-y: scroll;
     font-size: 0.7vw;
-    border-top-right-radius : 5%;
-    border-bottom-right-radius : 5%;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
 
 }
 
@@ -275,8 +278,6 @@
 #search-result-list::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0);
 }
-
-
 
 
 /*검색부분 버튼 CSS*/
@@ -398,18 +399,20 @@
 
 /*라이딩 지도 메뉴 버튼*/
 
-.metro-city-btn-menu{
+.metro-city-btn-menu {
     display: flex;
     justify-content: center;
     padding: 3.5%;
     line-height: 1vw;
 }
-.metro-city-btns{
+
+.metro-city-btns {
     display: flex;
     justify-content: space-evenly;
     width: 60vw;
 }
-.metro-city-btn{
+
+.metro-city-btn {
     font-family: 'SOYOMapleBoldTTF';
     width: 2vw;
     height: 1vw;
@@ -423,63 +426,104 @@
     border: none;
     border-radius: 0.5vw
 }
-.orange-btn{
+
+.orange-btn {
     color: #fff;
     background-color: #d99661;
     box-shadow: 0 0.7vw #71431E;
 }
-.orange-btn:hover{
+
+.orange-btn:hover {
     background-color: #d37f3a;
 }
-.orange-btn:active{
+
+.orange-btn:active {
     background-color: #d37f3a;
     box-shadow: 0 0.45vw #71431E;
     transform: translateY(4px);
 }
-.pink-btn{
+
+.pink-btn {
     color: #fff;
     background-color: #da8cad;
     box-shadow: 0 0.7vw #9C2A57;
 }
-.pink-btn:hover{
+
+.pink-btn:hover {
     background-color: #c4668a;
 }
-.pink-btn:active{
+
+.pink-btn:active {
     background-color: #c4668a;
     box-shadow: 0 0.45vw #9C2A57;
     transform: translateY(4px);
 }
-.green-btn{
+
+.green-btn {
     color: #fff;
     background-color: #609f55;
     box-shadow: 0 0.7vw #1c4728;
 }
-.green-btn:hover{
+
+.green-btn:hover {
     background-color: #3e8e41
 }
-.green-btn:active{
+
+.green-btn:active {
     background-color: #3e8e41;
     box-shadow: 0 0.45vw #1c4728;
     transform: translateY(4px);
 }
-.blue-btn{
+
+.blue-btn {
     color: #fff;
     background-color: #6380be;
     box-shadow: 0 0.7vw #232A8E;
 }
-.blue-btn:hover{
+
+.blue-btn:hover {
     background-color: #4670be;
 }
-.blue-btn:active{
+
+.blue-btn:active {
     background-color: #4670be;
     box-shadow: 0 0.45vw #232A8E;
     transform: translateY(4px);
 }
 
+/*search 위 날씨*/
+.mh-weather-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 7vw 0vw 0vw 0vw;
+    height: 3vw;
+    overflow-y: hidden;
+}
+
+.mh-weather-text {
+    position: relative;
+    height: 3vw;
+    display: grid;
+    justify-content: center;
+    list-style: none;
+}
+
+.mh-weather-text li {
+    width: 100%;
+    height: 3vw;
+    line-height: 50px;
+}
+.mh-weather-text li > span{
+    font-size: 1vw;
+    margin: 0vw 0.5vw 0vw 0.5vw;
+    font-family: 'Pretendard-Regular';
+}
+
 
 
 /*모바일 사이즈*/
-@media only screen and (max-width: 430px) and (max-height: 932px){
+@media only screen and (max-width: 430px) and (max-height: 932px) {
     body {
         margin: 0;
         padding: 0;
@@ -641,7 +685,7 @@
         justify-content: center;
         margin: auto;
         padding: 0%;
-        position: relative;  /* 자전거 도로 버튼을 위한 포지션 */
+        position: relative; /* 자전거 도로 버튼을 위한 포지션 */
     }
 
     /*명성님 자전거 css*/
@@ -670,8 +714,8 @@
         height: 70vw;
         overflow-y: scroll;
         font-size: 0.7vw;
-        border-top-right-radius : 5%;
-        border-bottom-right-radius : 5%;
+        border-top-right-radius: 5%;
+        border-bottom-right-radius: 5%;
 
     }
 
@@ -812,20 +856,21 @@
     }
 
     /*라이딩 지도 메뉴 버튼*/
-
-    .metro-city-btn-menu{
+    .metro-city-btn-menu {
         display: flex;
         justify-content: center;
         padding: 2.5%;
         line-height: 1vw;
     }
-    .metro-city-btns{
+
+    .metro-city-btns {
         display: flex;
         justify-content: space-evenly;
         width: 80vw;
         flex-wrap: wrap;
     }
-    .metro-city-btn{
+
+    .metro-city-btn {
         font-family: 'SOYOMapleBoldTTF';
         width: 10vw;
         height: 1vw;
@@ -840,59 +885,70 @@
         border-radius: 0.5vw;
         margin: 1vw;
     }
-    .orange-btn{
+
+    .orange-btn {
         color: #fff;
         background-color: #d99661;
         box-shadow: 0 0.7vw #71431E;
     }
-    .orange-btn:hover{
+
+    .orange-btn:hover {
         background-color: #d37f3a;
     }
-    .orange-btn:active{
+
+    .orange-btn:active {
         background-color: #d37f3a;
         box-shadow: 0 0.45vw #71431E;
         transform: translateY(4px);
     }
-    .pink-btn{
+
+    .pink-btn {
         color: #fff;
         background-color: #da8cad;
         box-shadow: 0 0.7vw #9C2A57;
     }
-    .pink-btn:hover{
+
+    .pink-btn:hover {
         background-color: #c4668a;
     }
-    .pink-btn:active{
+
+    .pink-btn:active {
         background-color: #c4668a;
         box-shadow: 0 0.45vw #9C2A57;
         transform: translateY(4px);
     }
-    .green-btn{
+
+    .green-btn {
         color: #fff;
         background-color: #609f55;
         box-shadow: 0 0.7vw #1c4728;
     }
-    .green-btn:hover{
+
+    .green-btn:hover {
         background-color: #3e8e41
     }
-    .green-btn:active{
+
+    .green-btn:active {
         background-color: #3e8e41;
         box-shadow: 0 0.45vw #1c4728;
         transform: translateY(4px);
     }
-    .blue-btn{
+
+    .blue-btn {
         color: #fff;
         background-color: #6380be;
         box-shadow: 0 0.7vw #232A8E;
     }
-    .blue-btn:hover{
+
+    .blue-btn:hover {
         background-color: #4670be;
     }
-    .blue-btn:active{
+
+    .blue-btn:active {
         background-color: #4670be;
         box-shadow: 0 0.45vw #232A8E;
         transform: translateY(4px);
     }
-
 
 
 }
