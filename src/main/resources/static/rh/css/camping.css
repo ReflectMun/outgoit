@@ -81,7 +81,7 @@ body {
     border: 0.7vw solid rgb(76 44 9);
     background-image: url("/resources/static/img/기타/나무보드.jpg");
     box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
-    background-size: contain;
+    background-size: initial;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,15 +93,13 @@ body {
 }
 
 .rh-camping-wood-bridgeBox {
-
     display: flex;
     justify-content: center;
 }
 
 .rh-camping-wood-bridgeSet {
-
-    width: 45vw;
-    height: 3vw;
+    width: 43vw;
+    height: 2.5vw;
     display: flex;
     justify-content: space-between;
 }
@@ -451,9 +449,9 @@ body {
 
     .rh-camping-wood-title {
         width: 70vw;
-        border: 0.7vw solid rgb(76 44 9);
+        border: 1.5vw solid rgb(76 44 9);
         background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
-        background-size: contain;
+        background-size: initial;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -486,7 +484,7 @@ body {
     }
 
     .rh-camping-wood-mainBox {
-        border: 1vw solid rgb(76 44 9);
+        border: 2vw solid rgb(76 44 9);
         display: flex;
         background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
         box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;

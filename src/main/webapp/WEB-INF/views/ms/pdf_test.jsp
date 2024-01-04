@@ -211,10 +211,12 @@
                 padding: 0;
                 z-index: 1;
                 display: block;
-                height: 65vw;
+            }
+            .swiperHeight {
+             height: 100vw;
             }
             #cycle-detail-slide {
-                width: 55%;
+                width: 83%;
                 height: 35vw;
                 margin-left: 1vw;
             }
@@ -235,21 +237,38 @@
                 display: flex;
                 position: absolute;
                 z-index: 500;
-                left: 3vw;
+                left: 10vw;
                 top: 1vw;
             }
             #cycle-road-legend{
                 display: none;
                 position: absolute;
-                width: 21vw;
+                width: 35vw;
                 height: auto;
-                left: 14vw;
+                left: 44vw;
                 bottom: 7vw;
                 padding: 1vw;
                 background-color: #fefefe;
                 box-shadow: 2px 2px rgba(0, 0, 0, 0.45);
                 border-radius: 1vw;
                 z-index: 500;
+            }
+            .swiper-v{
+                height: 100%;
+            }
+            #cycle-road-guide{
+                width: 100%;
+                height: 7vw;
+                background-image: url("/resources/static/cycle_detail/road_guide.png");
+                background-size: 110%;
+                background-position-y: 39.1vw;
+            }
+            .cycle-road-legend-btn{
+                font-family: 'SOYOMapleBoldTTF';
+                font-size: 1.2vw;
+                color: #121212;
+                padding: 0.2vw 0.4vw 0.2vw 0.4vw;
+                border-radius: 1vw;
             }
 
         }
@@ -258,7 +277,7 @@
 
 <body>
 <!-- Swiper -->
-<div class="swiper mySwiper1 swiper-h">
+<div class="swiper mySwiper1 swiper-h swiperHeight">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
             <div class="swiper mySwiper2 swiper-v">

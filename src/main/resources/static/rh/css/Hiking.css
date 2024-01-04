@@ -85,7 +85,7 @@ body {
     border: 0.5vw solid rgb(76 44 9);
     background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
     box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
-    background-size: contain;
+    background-size: initial;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,8 +104,8 @@ body {
 
 .rh-hiking-wood-bridgeSet {
     /* border: 1px solid rgb(255, 0, 179); */
-    width: 45vw;
-    height: 3vw;
+    width: 43vw;
+    height: 2.5vw;
     display: flex;
     justify-content: space-between;
 }
@@ -421,10 +421,10 @@ body {
 
     .rh-hiking-wood-title {
         width: 70vw;
-        border: 0.5vw solid rgb(76 44 9);
+        border: 1.5vw solid rgb(76 44 9);
         background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
         box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
-        background-size: contain;
+        background-size: initial;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -442,7 +442,7 @@ body {
 
     .rh-hiking-wood-bridgeSet {
         width: 55vw;
-        height: 3vw;
+        height: 2.5vw;
         display: flex;
         justify-content: space-between;
     }
@@ -455,7 +455,7 @@ body {
     }
 
     .rh-hiking-wood-mainBox {
-        border: 1vw solid rgb(76 44 9);
+        border: 2vw solid rgb(76 44 9);
         display: flex;
         background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
         background-size: contain;
