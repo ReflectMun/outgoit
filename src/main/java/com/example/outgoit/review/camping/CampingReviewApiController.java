@@ -66,7 +66,8 @@ public class CampingReviewApiController {
         return campingReviewService.updateReviewContent(
                 body.getPassword(),
                 body.getCommentNumber(),
-                body.getContent()
+                body.getContent(),
+                body.getRating()
         );
     }
 

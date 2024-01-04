@@ -2,6 +2,7 @@
  * 현재 별점
  * */
 let clickedValue = null
+
 /**
  * 리뷰 란의 현재 페이지 번호
  * */
@@ -240,7 +241,6 @@ async function deleteComment(commentNumber, element) {
  * 말 그대로 처음 수정하기 버튼 눌렀을 때 수정될 내용을 받는 등의 준비동작을 하도록 하는 함수임
  * */
 async function commentModifyingReady(commentNumber, element, reviewData) {
-    console.log(reviewData)
     const commentDiv =
         element.parentNode
             .parentElement
@@ -258,49 +258,36 @@ async function commentModifyingReady(commentNumber, element, reviewData) {
     const reviewModifyStar = document.createElement("div")
 
     reviewModifyStar.classList.add("hj-review-stars")
+    let dataValue = 0;
     for (let i = 1; i <= 5; i++) {
         const ratingStar = document.createElement("div")
+
         ratingStar.dataset.index = i;
+        dataValue +=1;
         if (reviewData['rating'] >= i) {
             ratingStar.innerText = "★"
         }
         else {
             ratingStar.innerText = "☆"
         }
-        ratingStar.classList.add("hj-review-star")
+
         ratingStar.addEventListener("mouseover", function () {
             const index = parseInt(this.dataset.index, 10);
-
             // 별을 호버하면 그 별을 기준으로 이전 별들을 변경
             for (let j = 1; j <= 5; j++) {
                 const star = reviewModifyStar.children[j - 1];
                 if (j <= index) {
                     star.innerText = "★";
-                    star.setAttribute("value", '1');
                 } else {
                     star.innerText = "☆";
-                    star.removeAttribute("value");
                 }
             }
         });
 
-        // 마우스 아웃 이벤트
-        ratingStar.addEventListener("mouseout", function () {
-            // 마우스가 벗어나면 현재 평가로 다시 표시
-            for (let j = 1; j <= 5; j++) {
-                const star = reviewModifyStar.children[j - 1];
-                if (reviewData['rating'] >= j) {
-                    star.innerText = "★";
-                    star.setAttribute("value", '1');
-                } else {
-                    star.innerText = "☆";
-                    star.removeAttribute("value");
-                }
-            }
-        });
         reviewModifyStar.appendChild(ratingStar)
+        ratingStar.setAttribute("data-value",dataValue);
+        ratingStar.classList.add("hj-review-star")
     }
-
 
 
 
@@ -308,23 +295,58 @@ async function commentModifyingReady(commentNumber, element, reviewData) {
 
 
     reviewModifyingInput.classList.add("hj-comment-textarea")
-    reviewModifyingInput.type = "text"
+    // reviewModifyingInput.type = "text"
     reviewModifyingInput.value = `${reviewData['content']}`
     commentDiv.innerText = ""
     starDiv.innerHTML=""
     starDiv.appendChild(reviewModifyStar)
     commentDiv.appendChild(reviewModifyingInput)
 
+
+
+    let stars = document.querySelectorAll('.hj-review-star');
+
+    // 각 별에 이벤트 리스너를 등록합니다.
+    stars.forEach(function (star) {
+        star.addEventListener('click', function () {
+            handleStarClick(star);
+        });
+    });
+let clickedreviewValue;
+    function handleStarClick(clickedStar) {
+        // 클릭된 별의 data-value 속성 값을 가져옵니다.
+        clickedreviewValue = clickedStar.getAttribute('data-value');
+
+        // 클릭된 별까지 노란색으로 채우기
+        stars.forEach(function (star) {
+            const starValue = star.getAttribute('data-value');
+
+            if (starValue <= clickedreviewValue) {
+                star.classList.add('checked');
+            } else {
+                star.classList.remove('checked');
+            }
+        });
+    }
+
     element.onclick = function (){
-        updateComment(commentNumber, reviewModifyingInput, element)
+        updateComment(commentNumber, reviewModifyingInput, element, reviewData, clickedreviewValue)
     }
 }
 
 /**
  * 실제로 리뷰의 수정을 실행하는 함수
  * */
-async function updateComment(commentNumber, reviewContentInput, modifyButtonElement){
+async function updateComment(commentNumber, reviewContentInput, modifyButtonElement,reviewData, clickedValue){
     const passwordInput = modifyButtonElement.parentNode.firstElementChild.firstElementChild
+
+
+    if(clickedValue==null){
+        clickedValue = reviewData['rating']
+    }
+
+
+
 
     if(!passwordInput.value){
         alert("댓글을 수정하시려면 비밀번호를 입력해주세요!")
@@ -342,7 +364,8 @@ async function updateComment(commentNumber, reviewContentInput, modifyButtonElem
             {
                 password: passwordInput.value,
                 content: reviewContentInput.value,
-                commentNumber: commentNumber
+                commentNumber: commentNumber,
+                rating: clickedValue
             }
         )
 

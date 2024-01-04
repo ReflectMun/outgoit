@@ -38,14 +38,14 @@ public class CampingReviewService {
 
     // 리뷰 내용을 수정하는 메서드(만약 비밀번호가 맞으면)
     @Transactional
-    public NotificationProcessStatusDTO updateReviewContent(String password, Long commentId, String content){
+    public NotificationProcessStatusDTO updateReviewContent(String password, Long commentId, String content, Long rating){
         if(!isPasswordMatch(password, commentId)){
             System.out.println("비밀번호가 일치하지 않아 리뷰를 수정할 수 없음");
             return new NotificationProcessStatusDTO(5201, "비밀번호가 일치하지 않습니다!");
         }
 
-        Integer countOfUpdatedRecord = this.repo.updateContentByCommentNumber(content, commentId);
-        System.out.printf("총 %d개의 리뷰가 수정됨. 레코드 넘버: %d\n", countOfUpdatedRecord, commentId);
+        Integer countOfUpdatedRecord = this.repo.updateContentByCommentNumber(content, commentId, rating);
+        System.out.printf("총 %d개의 리뷰가 수정됨. 레코드 넘버: %d\n", countOfUpdatedRecord, commentId, rating);
         return new NotificationProcessStatusDTO(200);
     }
 
