@@ -294,7 +294,7 @@ div{
 .hj-star.checked{
     color: yellow;
 }
-.hj-star .hovered{
+.hj-star.hovered{
     color: yellow;
 }
 .hj-review {
