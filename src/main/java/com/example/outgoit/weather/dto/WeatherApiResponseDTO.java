@@ -10,12 +10,14 @@ public class WeatherApiResponseDTO {
     private String lightning; // LGT, 번개 상태
     private int statusCode;
     private String errorMsg;
+    private String dateTime;
 
     public WeatherApiResponseDTO(
             String temperature,
             String skyCondition,
             String precipitationType,
-            String lightning
+            String lightning,
+            String dateTime
     ){
         this.statusCode = 200;
         this.errorMsg = null;
@@ -24,6 +26,7 @@ public class WeatherApiResponseDTO {
         this.skyCondition = skyCondition;
         this.precipitationType = precipitationType;
         this.lightning = lightning;
+        this.dateTime = dateTime;
     }
 
     public WeatherApiResponseDTO(

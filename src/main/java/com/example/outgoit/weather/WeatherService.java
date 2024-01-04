@@ -1,5 +1,6 @@
 package com.example.outgoit.weather;
 
+import com.example.outgoit.weather.dto.WeatherApiResponseDTO;
 import com.example.outgoit.weather.dto.api_response.ApiResponse;
 import com.example.outgoit.weather.dto.api_response.Item;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -8,7 +9,6 @@ import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URL;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ import java.util.ArrayList;
 @Service
 public class WeatherService {
     private final String key = "s7uOVVVt02w8vbG4QdP35gAmWK%2F9GkwQ0GIX7lLHcQ6wXeuPyOF1LJia95iYlnTpaA2IJk6uYQekBwKXpqDspw%3D%3D";
-    public String getWeatherData(Double lati, Double lngi){
+    public WeatherApiResponseDTO getWeatherDataByCoordinate(Double lati, Double lngi){
         GridCoordinate coord = toGridCoordinate(lati, lngi);
 
         // 현재 날짜와 현재 시간을 파싱하는 코드
@@ -47,7 +47,7 @@ public class WeatherService {
         String date = current.format(dateFormatter);
         String hourM = current.format(timeFormatter);
 
-        System.out.println(date + " " + hourM);
+        WeatherApiResponseDTO result = null;
 
         try{
             UriComponents uri = UriComponentsBuilder.newInstance()
@@ -75,17 +75,107 @@ public class WeatherService {
             }
 
             ArrayList<Item> item = res.getResponse().getBody().getItems().getItem();
+
+            result = new WeatherApiResponseDTO(
+                    item.get(24).getFcstValue(),
+                    item.get(18).getFcstValue(),
+                    item.get(6).getFcstValue(),
+                    item.get(0).getFcstValue(),
+                    item.get(0).getFcstDate() + " " + item.get(0).getFcstTime()
+            );
         }
         catch (NationalWeatherServiceError e){
             e.printStackTrace();
             System.out.printf("기상청 오류: %s\n", e.getMessage());
+            result = new WeatherApiResponseDTO(3000, "기상청에서 데이터를 받아오는 과정에서 문제가 생겼습니다");
         }
         catch (Exception e){
             e.printStackTrace();
             System.out.println("에러 발생");
+            result = new WeatherApiResponseDTO(5000, "서버에서 알 수 없는 오류가 발생했습니다");
         }
 
-        return "OK";
+        return result;
+    }
+
+    public WeatherApiResponseDTO getWeatherDataByGrid(Integer X, Integer Y){
+        // 현재 날짜와 현재 시간을 파싱하는 코드
+        // 분 단위 시간은 0분 or 30분으로 파싱하도록 설정
+        LocalDateTime current = LocalDateTime.now();
+
+        int curMi = current.getMinute();
+        int adjMi = curMi - (curMi % 30);
+        current = current.withMinute(adjMi);
+
+        // 30분마다 데이터를 불러오는 기상청 시간에 맞추기 위한 코드
+        if(current.getMinute() != 30){
+            if(current.getHour() == 0){
+                current = current.minusDays(1);
+                current = current.withHour(23);
+                current = current.withMinute(30);
+            }
+            else{
+                current = current.minusHours(1);
+                current = current.withMinute(30);
+            }
+        }
+
+        // 기상청에서 쓰일 데이터로 문자열 변환
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyyMMdd");
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HHmm");
+
+        String date = current.format(dateFormatter);
+        String hourM = current.format(timeFormatter);
+
+        WeatherApiResponseDTO result = null;
+
+        try{
+            UriComponents uri = UriComponentsBuilder.newInstance()
+                    .scheme("https")
+                    .host("apis.data.go.kr")
+                    .path("/1360000/VilageFcstInfoService_2.0/getUltraSrtFcst")
+                    .queryParam("serviceKey", key)
+                    .queryParam("pageNo", "1")
+                    .queryParam("numOfRows", "1000")
+                    .queryParam("dataType", "JSON")
+                    .queryParam("base_date",  date)
+                    .queryParam("base_time", hourM)
+                    .queryParam("nx", X)
+                    .queryParam("ny", Y)
+                    .build(true);
+
+            ObjectMapper mapper = new ObjectMapper();
+            URL url = new URL(uri.toUriString());
+            ApiResponse res = mapper.readValue(url, ApiResponse.class);
+
+            String resultCode = res.getResponse().getHeader().getResultCode();
+
+            if(!resultCode.equals("00")){
+                throw new NationalWeatherServiceError(res.getResponse().getHeader().getResultMsg());
+            }
+
+            ArrayList<Item> item = res.getResponse().getBody().getItems().getItem();
+
+            result = new WeatherApiResponseDTO(
+                    item.get(24).getFcstValue(),
+                    item.get(18).getFcstValue(),
+                    item.get(6).getFcstValue(),
+                    item.get(0).getFcstValue(),
+                    item.get(0).getFcstDate() + " " + item.get(0).getFcstTime()
+            );
+        }
+        catch (NationalWeatherServiceError e){
+            e.printStackTrace();
+            System.out.printf("기상청 오류: %s\n", e.getMessage());
+            result = new WeatherApiResponseDTO(3000, "기상청에서 데이터를 받아오는 과정에서 문제가 생겼습니다");
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            System.out.println("에러 발생");
+            result = new WeatherApiResponseDTO(5000, "서버에서 알 수 없는 오류가 발생했습니다");
+        }
+
+        return result;
     }
 
     private GridCoordinate toGridCoordinate(Double lati, Double lngi){
