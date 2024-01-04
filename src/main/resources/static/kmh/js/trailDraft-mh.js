@@ -4,21 +4,21 @@ const searchBox = document.getElementById("search-box")
 const submitSearch = document.getElementById("submit-search")
 const resultList = document.getElementById("search-result-list")
 const mapOption = {
-    center: new kakao.maps.LatLng(37.57295965192006, 126.97690156991), level: 5
+    center: new kakao.maps.LatLng(37.57295965192006, 126.97690156991),
+    level: 5
 }
 
 const map = new kakao.maps.Map(mapContainer, mapOption)
 map.addOverlayMapTypeId(kakao.maps.MapTypeId.TERRAIN);
 const ps = new kakao.maps.services.Places()
-const infowindow = new kakao.maps.InfoWindow({zIndex: 1})
+const infowindow = new kakao.maps.InfoWindow({ zIndex: 1 })
 
 let markers = []
-let polylines = []
+let polylines =[]
 let latlngBounds = new kakao.maps.LatLngBounds()
-let polyLineId = 0; // 폴리라인에 아이디 부여하려고 만듬
 
 searchBox.addEventListener("keyup", (e) => {
-    if (e.key === "Enter") {
+    if(e.key === "Enter"){
         submitSearch.click()
     }
 })
@@ -33,7 +33,7 @@ try {
         deleteMarker()
         resultList.innerText = ""
 
-        ps.keywordSearch(inputValue, async (data, status, pagination) => {
+         ps.keywordSearch(inputValue, async (data, status, pagination) => {
 
             if (status === kakao.maps.services.Status.OK) {
                 const url = new URL("http://" + hostName + "/api/trail/search")
@@ -46,27 +46,22 @@ try {
                 // resData - data에서 get요청으로 검색된 등산로만 뽑아내서 담음.
                 console.log(resData)
 
-                // addMarker(data.slice(0, 1), resData, data)
-                // displayMarker()
+                addMarker(data.slice(0, 1), resData, data)
+                displayMarker()
                 //const = [r,d,q,w,d,s,a,z,,c,,vv,g]
 
                 //MAth.r 1~10d
 
-                const trailName = [] // 등산로 이름 담을 배열
+                const trailRoutes = [] // 등산로 이름 담을 배열
                 // 경도 위도 뽑는 작업
-                polyLineId = 0;
                 for (const trail of resData) {
 
-                    console.log(trail.properties.mntn_nm) // 등산로 이름
-                    trailName.push([trail.properties.mntn_nm, trail.id]) // 배열에 추가하기
-                    console.log(trailName)
-
+                    // console.log(trail.properties.mntn_nm) // 등산로 이름
+                    // trailName.push(trail.properties.mntn_nm) // 배열에 추가하기
 
                     const trailLIne = trail['geometry']['coordinates'][0]
 
                     const path = []
-
-
 
                     for (const coord of trailLIne) {
                         path.push(new kakao.maps.LatLng(coord[1], coord[0]))
@@ -159,12 +154,13 @@ try {
                     //     });
                     // });
 
-
+                    
 
                     // 지정된 무지개색 7가지 랜덤으로 뽑는 메서드
                     function getRandomPastelRainbowColor() {
 
-                        const pastelRainbowColors = ['#ff92ae', // 빨간색
+                        const pastelRainbowColors = [
+                            '#ff92ae', // 빨간색
                             '#ff9e57', // 주황색
                             '#ffd97b', // 노란색
                             '#caff6e', // 초록색
@@ -177,9 +173,11 @@ try {
                         const randomColor = Math.floor(Math.random() * pastelRainbowColors.length);
 
 
+
                         // 랜덤한 파스텔 무지개 색상 반환
                         return pastelRainbowColors[randomColor];
                     }
+
 
                     // 기존 폴리라인
                     const polyLine = new kakao.maps.Polyline({
@@ -187,114 +185,77 @@ try {
                         strokeWeight: 6.5,
                         strokeColor: getRandomPastelRainbowColor(),
                         strokeOpacity: 1,
-                        strokeStyle: 'solid',
-                        id: `polyLine${polyLineId}`
+                        strokeStyle: 'solid'
                     })
-
-                    polyLineId++;
 
                     polylines.push(polyLine)
                     polyLine.setMap(map)
-                    // ex) 한라산을 검색했을때 생성되는 폴리라인 5개의 경도,위도 주소값 배열로 담김.
+
                     const poliyLinesVaule = polyLine.getPath();
                     console.log(poliyLinesVaule)
-                    console.log(polyLineId) // 아이디 성공적으로 부여 완료.; // 생성 완료하고 다시 초기화
-
-                    // addMarker2(poliyLinesVaule)
-
-
 
                 }
 
-                addMarker(data.slice(0, 1), resData, data, trailName)
-                displayMarker()
 
             }
         })
 
     })
-} catch (e) {
+}
+catch (e) {
     console.log(e)
     alert("오류발생")
 }
+    function addMarker(places, resData, data) {
 
-function addMarker(places, resData, data, trailName) {
+        for (const place of places) {
+            const coord = new kakao.maps.LatLng(place.y, place.x)
+            const marker = new kakao.maps.Marker({
+                position: coord
 
-    for (const place of places) {
-        const coord = new kakao.maps.LatLng(place.y, place.x)
-        const marker = new kakao.maps.Marker({
-            position: coord
+            })
+            addListElementsToResultList(resData, data)
 
-        })
-        addListElementsToResultList(resData, data, trailName)
+            kakao.maps.event.addListener(marker, 'click', () => {
+                map.panTo(coord)
+            })
 
-        kakao.maps.event.addListener(marker, 'click', () => {
-            map.panTo(coord)
-        })
+            kakao.maps.event.addListener(marker, 'mouseover', () => {
+                infowindow.setContent('<div style="padding: 5px; font-size:12px;">' + place['place_name'] + '</div>')
+                infowindow.open(map, marker)
+            })
 
-        kakao.maps.event.addListener(marker, 'mouseover', () => {
-            infowindow.setContent('<div style="padding: 5px; font-size:12px;">' + place['place_name'] + '</div>')
-            infowindow.open(map, marker)
-        })
+            kakao.maps.event.addListener(marker, 'mouseout', () => {
+                infowindow.close()
+            })
 
-        kakao.maps.event.addListener(marker, 'mouseout', () => {
-            infowindow.close()
-        })
-
-        latlngBounds.extend(coord)
-        markers.push(marker)
-    }
-
-}
-
-
-
-function addMarker2(poliyLinesVaule) {
-
-    for (const coord of poliyLinesVaule) {
-        const line = new kakao.maps.LatLng(coord.Ma, coord.La)
-        const marker = new kakao.maps.Marker({
-            position: line
-
-        })
-
-        kakao.maps.event.addListener(marker, 'click', () => {
-            map.panTo(line)
-        })
-
-        latlngBounds.extend(line)
-        markers.push(marker)
-        // console.log(coord)
+            latlngBounds.extend(coord)
+            markers.push(marker)
+        }
 
     }
 
-    displayMarker()
+    function deleteMarker() {
+        for (const marker of markers) {
+            marker.setMap(null)
+        }
+        for (const polyLine of polylines) {
+            polyLine.setMap(null)
+        }
 
-}
+        latlngBounds = new kakao.maps.LatLngBounds()
+        markers = []
+        polylines = []
 
-
-
-
-function deleteMarker() {
-    for (const marker of markers) {
-        marker.setMap(null)
     }
-    for (const polyLine of polylines) {
-        polyLine.setMap(null)
+
+    function displayMarker() {
+        for (const marker of markers) {
+            marker.setMap(map)
+        }
+        map.setBounds(latlngBounds)
     }
 
-    latlngBounds = new kakao.maps.LatLngBounds()
-    markers = []
-    polylines = []
-
-}
-
-function displayMarker() {
-    for (const marker of markers) {
-        marker.setMap(map)
-    }
-    map.setBounds(latlngBounds)
-}
 
 
 // function makeListElement(name) {
@@ -347,62 +308,21 @@ function displayMarker() {
 //     // }
 // }
 
-function addListElementsToResultList(name, data, trailName) {
+function addListElementsToResultList(name, data) {
     // 등산로만 있는 것임.
+
     // let trailRouteNames = []; // 추출한 등산로의 name값만 담을 것임.
-    console.log(trailName)
-    // const nameCount = {};
-    // const numberedNames = [];
-    //
-    // trailName.forEach(name => {
-    //     if (!nameCount[name]) {
-    //         nameCount[name] = 1;
-    //         numberedNames.push(name);
-    //     } else {
-    //         nameCount[name]++;
-    //         const numberedName = `${name} ${nameCount[name]}`;
-    //         numberedNames.push(numberedName);
-    //     }
-    // });
-
-    const nameCountMap = new Map();
-
-    const result = trailName.map(([name, id]) => {
-        if (!nameCountMap.has(name)) {
-            nameCountMap.set(name, 1);
-        } else {
-            const count = nameCountMap.get(name) + 1;
-            nameCountMap.set(name, count);
-        }
-
-        const count = nameCountMap.get(name);
-        const numberedName = count > 1 ? `${name} 루트${count}` : name;
-
-        return [numberedName, id];
-    });
-
-    console.log(result);
-
-
-
-
-    for (const [index, n] of result.entries()) {
-
-        console.log(result)
-
+    for (const [index, n] of name.entries()) {
         // console.log(index)
         // console.log(n);
         // console.log(n.properties.mntn_nm); // 산 이름
-
-
-        // 변경된 이름 출력 또는 사용
+        // const trailName = n.properties.mntn_nm;
 
         const child = document.createElement("div");
         child.classList.add("camping-area-info-box");
         const childCampingAreaName = document.createElement("div");
-        childCampingAreaName.innerHTML = `<span>${n[0]}</span>`;
+        childCampingAreaName.innerHTML = `<span>${n.properties.mntn_nm}</span>`;
         childCampingAreaName.classList.add("camping-area-name");
-        childCampingAreaName.setAttribute("data-value", n); // n 자체를 값을 넣어버림?
         const childButtonWrapper = document.createElement("div");
 
         const openDetailButton = document.createElement("button");
@@ -423,10 +343,10 @@ function addListElementsToResultList(name, data, trailName) {
             let tempInput;
 
 
-            tempInput = document.createElement("input");
-            tempInput.name = n;
-            tempInput.value = name;
-            hiddenForm.appendChild(tempInput);
+                tempInput = document.createElement("input");
+                tempInput.name = n;
+                tempInput.value = name;
+                hiddenForm.appendChild(tempInput);
 
             document.body.appendChild(hiddenForm);
             hiddenForm.submit();
@@ -434,6 +354,7 @@ function addListElementsToResultList(name, data, trailName) {
             // trailRouteNames.push(trailName);
             // 배열에 뽑은 trailName 추가
         });
+
 
 
         childButtonWrapper.classList.add("button-wrapper");
@@ -447,5 +368,5 @@ function addListElementsToResultList(name, data, trailName) {
     }
 
 
-}
 
+}
