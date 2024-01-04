@@ -48,6 +48,7 @@ try {
                 // console.log(resData)
 
                 addMarker(data.slice(0, 1), resData, data)
+
                 displayMarker()
                 //const = [r,d,q,w,d,s,a,z,,c,,vv,g]
 
@@ -71,6 +72,14 @@ try {
                         path.push(new kakao.maps.LatLng(coord[1], coord[0]))
 
                     }
+
+
+
+
+
+
+
+
                     function getRandomColor() {
                         // 랜덤한 RGB 값을 생성
                         const randomColor = Math.floor(Math.random()*16777215).toString(16);
@@ -89,6 +98,13 @@ try {
 
                     polylines.push(polyLine)
                     polyLine.setMap(map)
+                    const polyPath = polyLine.getPath();
+                    console.log(polyPath)
+                    let refPosition =null;
+                    refPosition = polyPath.length >>1
+                    
+
+
 
                 }
             }
@@ -152,55 +168,7 @@ catch (e) {
 
 
 
-// function makeListElement(name) {
-//     // for (n of name) {
-//          console.log(name)
-//         // console.log(n);
-//
-//         console.log(name.properties.mntn_nm)
-//
-//         const child = document.createElement("div")
-//         child.classList.add("camping-area-info-box")
-//         const childCampingAreaName = document.createElement("div")
-//         childCampingAreaName.innerHTML = `<h2>${n.properties.mntn_nm}</h2>`
-//         childCampingAreaName.classList.add("camping-area-name")
-//         const childButtonWrapper = document.createElement("div")
-//
-//         const openDetailButton = document.createElement("button")
-//
-//         openDetailButton.innerText = "캠핑장 정보 보기"
-//         openDetailButton.classList.add("open-detail-button")
-//         openDetailButton.addEventListener("click", (e) => {
-//            const hiddenForm = document.createElement("form")
-//             hiddenForm.style.display = "none"
-//             hiddenForm.method = "post"
-//             hiddenForm.action = `/trail/detail/${n.properties.mntn_nm}`
-//             let tempInput
-//
-//             for (const prop in apiResData) {
-//                 tempInput = document.createElement("input")
-//                 tempInput.name = prop
-//                 tempInput.value = apiResData[prop]
-//                 hiddenForm.appendChild(tempInput)
-//
-//             }
-//             document.body.appendChild(hiddenForm)
-//
-//             hiddenForm.submit()
-//         })
-//             childButtonWrapper.classList.add("button-wrapper")
-//
-//
-//         childButtonWrapper.appendChild(openDetailButton)
-//         child.appendChild(childCampingAreaName)
-//
-//         child.appendChild(childButtonWrapper)
-//         return child
-//
-//         console.log(11)
-//
-//     // }
-// }
+
 
 function addListElementsToResultList(name, data) {
     // 등산로만 있는 것임.

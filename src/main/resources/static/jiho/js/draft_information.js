@@ -75,8 +75,11 @@ document.addEventListener('DOMContentLoaded', async function () {
                 star.innerHTML="☆"
                 star.classList.remove('checked');
             }
+
+
         });
     }
+
     function handleStarHover(hoveredStar) {
         // 호버된 별의 data-value 속성 값을 가져옵니다.
         const hoveredValue = hoveredStar.getAttribute('data-value');
