@@ -133,11 +133,11 @@ div{
     margin-top: 22%;
 }
 #hj-detail-contain2{
-    margin-top: 32%;
     position: absolute;
     display: flex;
     justify-content: center;
     align-content: center;
+    bottom: 1vw;
 }
 
 #hj-detail-form:hover{
@@ -147,8 +147,7 @@ div{
     position: absolute;
     background-image: url("/resources/static/img/기타/양피지.png");
     background-size: cover;
-
-    width: 95%;
+    width: 98%;
     right: 2%;
     top: 3%;
     height: auto;
@@ -184,11 +183,8 @@ div{
     display: block;
 }
 #hj-content-plus-overray{
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 2vw;
+    padding-bottom: 1vw;
     position: relative;
-
 }
 #hj-no,
 #hj-time,
@@ -200,11 +196,9 @@ div{
     line-height: 2;
 }
 .hj-content-plus-ray{
-    margin-top: 1vw;
     line-height: 1.7vw;
 }
 .hj-content-plus-ray2{
-    margin-top: 4.5vw;
     width: 27%;
     line-height: 1.7vw;
 
@@ -250,12 +244,13 @@ div{
 }
 #hj-paper{
     background-image: url(/resources/static/img/기타/양피지.png);
-    width: 65vw;
+    width: 66vw;
     position: absolute;
     height: 12vw;
     top: 7%;
     z-index: 1;
     left: 2%;
+    background-size: cover;
 }
 #hj-tape2{
     background-image: url(/resources/static/Img_hj/tapeClear.png);
@@ -416,7 +411,7 @@ input::placeholder{
     font-size: 3vw;
     position: absolute;
     left: 5%;
-    bottom: 0;
+    bottom: 0vw;
 }
 #hj-tape3{
     background-image: url(/resources/static/Img_hj/tapeClear.png);
@@ -509,6 +504,7 @@ input::placeholder{
 .hj-review-comment-content{
     /*width: 17vw;*/
     word-break: break-all;
+    text-align: justify;
 }
 .hj-comment-textarea{
     background-color: transparent;
@@ -640,4 +636,18 @@ input::placeholder{
 }
 #hj-info-weather-text > img{
   width: 1.2vw;
+}
+
+/*상세정보 세팅*/
+#hj-detail-contain-set{
+    display: flex;
+    justify-content: space-around;
+    margin: 3vw 0vw;
+}
+#hj-line-introduce{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw 0vw;
+    font-size: 1.3vw;
 }

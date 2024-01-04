@@ -20,7 +20,8 @@
 <input id="camping-area-id" value="${campingAreaNumber}" style="display: none;">
 <div id="hj-container2">
     <div id="hj-info-weather">
-        <div id="hj-info-weather-text"><span>서울</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></div>
+        <div id="hj-info-weather-text"><span>서울</span><img src="/resources/static/img/weather/rain.png"
+                                                           alt=""><span>℃</span></div>
     </div>
     <!-- 정보 div -->
     <div id="hj-info">
@@ -40,34 +41,40 @@
                 <!-- 팝업 클릭했을떄 뜨는 상세내용 디브 -->
                 <div id="hj-content-plus-container">
                     <div id="hj-content-plus-overray">
-                        <div id="hj-detail-contain2"><div id="hj-detail">돌아가기</div> </div>
-                    <div class="hj-content-plus-ray">
                         <div id="hj-line-introduce">
                             <%--                        <div>한줄 소개</div>--%>
-                            <div>${lineIntro}</div>
-                            <br>
+                            <div>"${lineIntro}"</div>
                         </div>
-                        <div>일반 야영장 개수: ${generalSite}</div>
-                        <div>자동차 야영장 개수: ${autoSite}</div>
-                        <div>애완동물 동반 가능 여부: ${animalComingControl}</div>
-                        <div>장비 대여 가능 여부: ${equipmentRental}</div>
-                        <div>개인 트레일러 동반 가능 여부: ${trailerAccompanyAt}</div>
-                        <div>개인 카라반 동반 가능 여부: ${caravanAccompanyAt}</div>
-                        <div>화장실 개수: ${toiletCount}</div>
-                        <div>이용 가능한 주면 시설: ${availableFacilities}</div>
-                    </div>
-                    <div class="hj-content-plus-ray2">
-                    <div>현재 운영 상태: ${managementStatement}</div>
-                    <div>휴장 시작: ${holidaySeasonStart}</div>
-                    <div>휴장 종료: ${holidaySeasonEnd}</div>
-                    <div>샤워룸 개수: ${showerRoomCount}</div>
-                    <div>화로대 개인 지참 여부: ${brazierControl}</div>
-                    <div>잔디바닥 자리: ${siteGrass}</div>
-                    <div>파쇄석 자리: ${siteCrushedStone}</div>
-                    <div>테크 자리: ${siteDeck}</div>
-                    <div>자갈 자리: ${siteGravel}</div>
-                    <div>맨흙 자리: ${siteSoil}</div>
-                    </div>
+                        <div id="hj-detail-contain-set">
+                            <div id="hj-detail-contain2">
+                                <div id="hj-detail">돌아가기</div>
+                            </div>
+                            <div class="hj-content-plus-ray">
+                                <div>
+                                    <div>현재 운영 상태: ${managementStatement}</div>
+                                    <div>휴장 시작: ${holidaySeasonStart}</div>
+                                    <div>휴장 종료: ${holidaySeasonEnd}</div>
+                                    <div>이용 가능한 주면 시설: ${availableFacilities}</div>
+                                    <div>애완동물 동반 가능 여부: ${animalComingControl}</div>
+                                    <div>장비 대여 가능 여부: ${equipmentRental}</div>
+                                    <div>화로대 개인 지참 여부: ${brazierControl}</div>
+                                    <div>개인 트레일러 동반 가능 여부: ${trailerAccompanyAt}</div>
+                                    <div>개인 카라반 동반 가능 여부: ${caravanAccompanyAt}</div>
+                                </div>
+                            </div>
+                            <div class="hj-content-plus-ray2">
+                                <div>일반 야영장 개수: ${generalSite}</div>
+                                <div>자동차 야영장 개수: ${autoSite}</div>
+                                <div>잔디바닥 자리: ${siteGrass}</div>
+                                <div>파쇄석 자리: ${siteCrushedStone}</div>
+                                <div>데크 자리: ${siteDeck}</div>
+                                <div>자갈 자리: ${siteGravel}</div>
+                                <div>맨흙 자리: ${siteSoil}</div>
+                                <div>화장실 개수: ${toiletCount}</div>
+                                <div>샤워룸 개수: ${showerRoomCount}</div>
+                            </div>
+                        </div>
+
 
                     </div>
                 </div>
@@ -92,13 +99,13 @@
                     </div>
                     <!-- 정보 부분 -->
                     <div id="hj-content-detail">
-                        <div id="hj-no">번호: ${telephoneNumber}</div>
+                        <div id="hj-no">연락처: ${telephoneNumber}</div>
                         <div id="hj-time">운영 시즌: ${periodOfOperation}</div>
                         <div id="hj-addr">주소: ${address}</div>
                         <div id="hj-ability">부대시설: ${subsidiaryFacilities}</div>
                         <div id="hj-rating-avg">캠핑장 평점: ${ratingAvg}</div>
                         <div id="hj-detail-contain">
-                        <div id="hj-detail-form">자세히 보기</div>
+                            <div id="hj-detail-form">자세히 보기</div>
                         </div>
                     </div>
                 </div>
@@ -189,37 +196,37 @@
 
                     <div id="hj-review-inside-box2">
 
-<%--                        <div id="hj-review-detail2">--%>
-                            <div id="hj-review-zentai-box">
+                        <%--                        <div id="hj-review-detail2">--%>
+                        <div id="hj-review-zentai-box">
 
-                                <!-- 작성된 리뷰들을 개별 출력하는 부분 -->
-                                <c:choose>
-                                    <c:when test="${existReviews}">
-                                        <div id="hj-review-list-container">
-                                            <!--
-                                            여기에 리뷰 나타날 예정
-                                            동적으로 생성됩니다
-                                            -->
+                            <!-- 작성된 리뷰들을 개별 출력하는 부분 -->
+                            <c:choose>
+                                <c:when test="${existReviews}">
+                                    <div id="hj-review-list-container">
+                                        <!--
+                                        여기에 리뷰 나타날 예정
+                                        동적으로 생성됩니다
+                                        -->
+                                    </div>
+                                    <!-- 코멘트 보여주는 위치 여기까지 -->
+                                    <!-- 페이징 처리-->
+                                    <div class="hj-page-box">
+                                        <div id="hj-prev-button" onclick="getPrevCommentPage()"><span>[앞으로]</span>
                                         </div>
-                                        <!-- 코멘트 보여주는 위치 여기까지 -->
-                                        <!-- 페이징 처리-->
-                                        <div class="hj-page-box">
-                                            <div id="hj-prev-button" onclick="getPrevCommentPage()"><span>[앞으로]</span>
-                                            </div>
-                                            <div id="hj-pages"><span>1</span></div>
-                                            <div id="hj-next-button" onclick="getNextCommentPage()"><span>[다음으로]</span>
-                                            </div>
+                                        <div id="hj-pages"><span>1</span></div>
+                                        <div id="hj-next-button" onclick="getNextCommentPage()"><span>[다음으로]</span>
                                         </div>
-                                        <!--페이징 처리 div 끝 -->
-                                    </c:when>
-                                    <c:otherwise>
-                                        <div id="hj-no-review">아직 작성된 리뷰가 없습니다</div>
-                                    </c:otherwise>
-                                </c:choose>
+                                    </div>
+                                    <!--페이징 처리 div 끝 -->
+                                </c:when>
+                                <c:otherwise>
+                                    <div id="hj-no-review">아직 작성된 리뷰가 없습니다</div>
+                                </c:otherwise>
+                            </c:choose>
 
-                            </div>
+                        </div>
 
-<%--                            </div>--%>
+                        <%--                            </div>--%>
                     </div>
                     <!-- 칠판모양 코멘트 영역 여기까지 -->
 
@@ -351,7 +358,7 @@
         spaceBetween: 30,
         loop: true,
         pagination: {
-            el:".swiper-pagination",
+            el: ".swiper-pagination",
             clickable: true,
         },
         navigation: {

@@ -112,12 +112,12 @@ public class CampingAreaSearchPageController {
         model.addAttribute("managementStatement", data.getManageSttus());
         model.addAttribute("holidaySeasonStart",
                 data.getHvofBgnde().isEmpty() ?
-                        "연중무휴에요!" :
+                        "연중무휴예요!" :
                         data.getHvofBgnde()
         );
         model.addAttribute("holidaySeasonEnd",
                 data.getHvofEnddle().isEmpty() ?
-                        "연중무휴에요!" :
+                        "연중무휴예요!" :
                         data.getHvofEnddle()
         );
         model.addAttribute("showerRoomCount", data.getSwrmCo());
