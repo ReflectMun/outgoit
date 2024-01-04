@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     /**
      * 간략한 정보창 클릭시 상세한 정보창 열리도록 하는 이벤트 리스너 등록
      * */
-    document.querySelector("#hj-content-detail").addEventListener("click", (e) => {
+    document.querySelector("#hj-detail-form").addEventListener("click", (e) => {
         document.getElementById("hj-content-plus-container").classList.add("show")
         document.getElementById("hj-overlay-popup").classList.add("active")
     })
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     /**
      * 상세한 정보창 클릭시 닫히도록 하는 이벤트 리스너 등록
      * */
-    document.querySelector("#hj-content-plus-container").addEventListener("click", (e) => {
+    document.querySelector("#hj-detail").addEventListener("click", (e) => {
         document.getElementById("hj-content-plus-container").classList.remove("show")
         document.getElementById("hj-overlay-popup").classList.remove("active")
     })
@@ -61,9 +61,41 @@ document.addEventListener('DOMContentLoaded', async function () {
         });
     });
 
+    // function handleStarClick(clickedStar) {
+    //     // 클릭된 별의 data-value 속성 값을 가져옵니다.
+    //     clickedValue = clickedStar.getAttribute('data-value');
+    //     // 클릭된 별까지 노란색으로 채우기
+    //     stars.forEach(function (star) {
+    //         const starValue = star.getAttribute('data-value');
+    //
+    //         if (starValue <= clickedValue) {
+    //             star.classList.add('checked');
+    //         } else {
+    //             star.classList.remove('checked');
+    //         }
+    //     });
+    // }
+
+    function handleStarHover(hoveredStar) {
+        // 호버된 별의 data-value 속성 값을 가져옵니다.
+        const hoveredValue = hoveredStar.getAttribute('data-value');
+
+        // 모든 별에 대해 처리
+        stars.forEach(function (star) {
+            const starValue = star.getAttribute('data-value');
+
+            if (starValue <= hoveredValue) {
+                star.classList.add('hovered');
+            } else {
+                star.classList.remove('hovered');
+            }
+        });
+    }
+
     function handleStarClick(clickedStar) {
         // 클릭된 별의 data-value 속성 값을 가져옵니다.
-        clickedValue = clickedStar.getAttribute('data-value');
+        const clickedValue = clickedStar.getAttribute('data-value');
+
         // 클릭된 별까지 노란색으로 채우기
         stars.forEach(function (star) {
             const starValue = star.getAttribute('data-value');
@@ -75,6 +107,29 @@ document.addEventListener('DOMContentLoaded', async function () {
             }
         });
     }
+
+    function handleStarMouseOut() {
+        // 마우스가 별에서 벗어났을 때 모든 별의 호버 클래스 제거
+        stars.forEach(function (star) {
+            star.classList.remove('hovered');
+
+        });
+    }
+
+// 각 별에 이벤트 리스너 추가
+    stars.forEach(function (star) {
+        star.addEventListener('mouseover', function () {
+            handleStarHover(star);
+        });
+
+        star.addEventListener('mouseout', function () {
+            handleStarMouseOut();
+        });
+
+        star.addEventListener('click', function () {
+            handleStarClick(star);
+        });
+    });
 });
 
 /**
@@ -196,11 +251,14 @@ async function commentModifyingReady(commentNumber, element) {
     const commentDiv =
         element.parentNode
             .parentElement
+            .parentElement
             .getElementsByClassName("hj-review-comment")[0]
             .getElementsByClassName("hj-review-comment-content")[0]
 
-    const reviewModifyingInput = document.createElement("input")
-    reviewModifyingInput.type = "text"
+    const reviewModifyingInput = document.createElement("textarea")
+
+    reviewModifyingInput.classList.add("hj-comment-textarea")
+    // reviewModifyingInput.type = "text"
     reviewModifyingInput.value = commentDiv.innerText
     commentDiv.innerText = ""
 
@@ -293,6 +351,7 @@ async function updateComment(commentNumber, reviewContentInput, modifyButtonElem
 function makeReviewBox(reviewData) {
     const reviewComment = document.createElement("div")
 
+
     /*
     * <div class="hj-review-stars">
     *   <div class="hj-review-star">★</div>
@@ -315,14 +374,17 @@ function makeReviewBox(reviewData) {
     reviewStars.classList.add("hj-review-stars")
     reviewComment.appendChild(reviewStars)
 
+    const tape = document.createElement("div")
+    tape.classList.add("hj-review-tape")
+    reviewComment.appendChild(tape)
     // <br>
-    reviewComment.appendChild(document.createElement("br"))
+    // reviewComment.appendChild(document.createElement("br"))
 
     /*
      *   <div class="hj-review-nickname">닉네임: ${review.author}</div>
      * */
     const authorDiv = document.createElement("div")
-    authorDiv.innerText = `닉네임: ${reviewData['author']}`
+    authorDiv.innerText = `${reviewData['author']}`
     authorDiv.classList.add("hj-review-nickname")
     reviewComment.appendChild(authorDiv)
 
@@ -333,9 +395,11 @@ function makeReviewBox(reviewData) {
      *   </div>
      * */
     const comment = document.createElement("div")
-    comment.innerHTML = `<div>한줄평</div><div class="hj-review-comment-content">${reviewData['content']}</div>`
+    comment.innerHTML = `<div class="hj-review-comment-content">${reviewData['content']}</div>`
     comment.classList.add("hj-review-comment")
     reviewComment.appendChild(comment)
+
+
 
     /*
      *   <div class="hj-edit-box">
@@ -365,12 +429,24 @@ function makeReviewBox(reviewData) {
     const commentNum = reviewData['commentNumber']
     const editDrop = document.createElement("div")
 
+    const editDropbox = document.createElement("div")
+    editDrop.appendChild(editDropbox)
+
     const passwordInputDiv = document.createElement("div")
     const passwordInput = document.createElement("input")
     passwordInput.type = "text"
     passwordInput.placeholder = "비밀번호"
+    passwordInput.onfocus=clearPlaceholder
+    passwordInput.onblur=setPlaceholder
+    function  clearPlaceholder(){
+        passwordInput.placeholder='';
+    }
+    function setPlaceholder(){
+        passwordInput.placeholder='비밀번호';
+    }
+    passwordInput.classList.add("hj-password-input")
     passwordInputDiv.appendChild(passwordInput)
-    editDrop.appendChild(passwordInputDiv)
+    editDropbox.appendChild(passwordInputDiv)
 
     const editButtonDiv = document.createElement("div")
     editButtonDiv.innerText = "수정"
@@ -378,7 +454,8 @@ function makeReviewBox(reviewData) {
         commentModifyingReady(commentNum, editButtonDiv)
     }
     editButtonDiv.classList.add("hj-edit-part")
-    editDrop.appendChild(editButtonDiv)
+    editDropbox.appendChild(editButtonDiv)
+
 
     const deleteButtonDiv = document.createElement("div")
     deleteButtonDiv.innerText = "삭제"
@@ -386,10 +463,15 @@ function makeReviewBox(reviewData) {
         deleteComment(commentNum, deleteButtonDiv)
     }
     deleteButtonDiv.classList.add("hj-edit-part")
-    editDrop.appendChild(deleteButtonDiv)
+    editDropbox.appendChild(deleteButtonDiv)
+
+
+
 
     editDrop.classList.add("hj-edit-drop")
+    editDropbox.classList.add("hj-edit-drop-box")
     reviewComment.appendChild(editDrop)
+
 
     reviewComment.classList.add("hj-review-content-box")
     return reviewComment
@@ -409,3 +491,4 @@ async function getReviewList(areaId, pageNumber){
         return null
     }
 }
+

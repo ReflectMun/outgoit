@@ -51,7 +51,7 @@ public class TrailReviewApiController {
 
     @GetMapping("/list")
     public ArrayList<TrailReview> getTrailRouteReviewList(
-            @PageableDefault(size = 5, sort = "commentNumber",direction = Sort.Direction.DESC) Pageable pageable,
+            @PageableDefault(size = 6, sort = "commentNumber",direction = Sort.Direction.DESC) Pageable pageable,
             String trailRouteId,
             Integer pageNumber
     ){

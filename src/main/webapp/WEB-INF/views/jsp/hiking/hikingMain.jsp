@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUT GO IT - hiking </title>
     <link rel="stylesheet" href="/resources/static/kmh/css/main.css">
+    <link rel="stylesheet" href="/resources/static/kmh/css/main_media.css">
+    <script src="/resources/static/rh/js/banner.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
     <!-- 헤더 영역 -->
@@ -21,7 +22,6 @@
     <div class="mh-container">
 
         <!-- 배너 영역 (슬라이드 들어가면 좋을듯!) -->
-
         <div class="mh-banner-wrap camp swiper mySwiper">
             <div class="mh-banner swiper-wrapper">
                 <div class="swiper-slide"><img src="../kmh/img/hiking_banner.png"></div>
@@ -43,6 +43,23 @@
         <!-- 배너 여기까지 / 컨텐트 영역 (지도 API)-->
 
         <div class="mh-content">
+            <div class="mh-weather-container">
+                <div class="mh-weather-text">
+                    <li><span>서울</span><img src="/resources/static/img/weather/rain.png" alt=""><span>3℃</span></li>
+                    <li><span>경기</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>인천</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>춘천</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>강릉</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>청주</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>대전</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>대구</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>울산</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>부산</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>목포</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>광주</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>제주</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                </div>
+            </div>
             <div class="mh-map-txt-wrap">
                 <div class="mh-map-title">
                     <span> Hiking Area Search </span>
@@ -54,7 +71,7 @@
             <div class="mh-search-wrap">
                 <div class="mh-background-map">
                     <div class="mh-area-search">
-                        <input class="mh-search-input" id="search-box" placeholder="검색하고 싶은 지역을 입력해주세요">
+                        <input class="mh-search-input" id="search-box" placeholder="검색하고 싶은 지역을 입력해주세요" onfocus="this.placeholder=''" onblur="this.placeholder='검색하고 싶은 지역을 입력해주세요'">
                         <button class="mh-button" id="submit-search"><span>Search</span></button>
                     </div>
                     <div class="mh-map-all">
@@ -80,7 +97,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=770a2850e8ce3177b209d2d94dc1e58b&libraries=services"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../resources/static/kmh/js/trailDraft1.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
@@ -89,6 +106,7 @@
                 delay: 5000,
             },
         });
+    </script>
     </script>
 
 </body>

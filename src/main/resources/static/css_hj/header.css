@@ -18,9 +18,9 @@ body {
     margin: 0;
     width: 100vw;
     height: 100vh;
-    overflow-x:hidden;
-}
+    overflow-x: hidden;
 
+}
 
 
 .hj-header {
@@ -56,12 +56,12 @@ body {
 
 
 .hj-logo {
-        /* border: 1px solid red; */
-        /* background-color: white; */
-        width: 4vw;
-        background-image: url("/resources/static/Img_hj/outgoit_logo2.png");
-        background-size: cover;
-        background-repeat: no-repeat;
+    /* border: 1px solid red; */
+    /* background-color: white; */
+    width: 4vw;
+    background-image: url("/resources/static/Img_hj/outgoit_logo2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .hj-title {
@@ -253,19 +253,34 @@ body {
 .hj-font:hover, .hj-logo-container:hover {
     cursor: pointer;
 }
-body{
+
+body {
     background-color: #FFFAF6;
 }
 
-@media only screen and (max-width: 430px) and (max-height: 932px){
+/*헤더 우측*/
+.hj-right-up{
+
+}
+.hj-right-under{
+    display: flex;
+}
+
+
+
+
+
+
+
+/*미디어쿼리 시작*/
+@media only screen and (max-width: 430px) and (max-height: 932px) {
     body {
         margin: 0;
         width: 100vw;
         height: 100vh;
-        overflow-x:hidden;
+        overflow-x: hidden;
         background-color: #FFFAF6;
     }
-
 
 
     .hj-header {
@@ -482,7 +497,6 @@ body{
     }
 
     /*호버 효과*/
-
     .hj-font:hover, .hj-logo-container:hover {
         cursor: pointer;
     }

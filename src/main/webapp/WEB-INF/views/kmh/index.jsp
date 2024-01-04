@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUT GO IT - index</title>
 	<link rel="stylesheet" href="/resources/static/kmh/css/index.css">
-	<link rel="stylesheet" href="../../kmh/css/index.css">
+	<link rel="stylesheet" href="/resources/static/kmh/css/index.css">
 	<link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <%--	<script type="text/javascript" src="../../kmh/js/index.js"></script>--%>
@@ -30,7 +30,8 @@
 <body>
     
 	<div class="mh-index-container">
-        <div class="header"></div>
+		<div class="mh-index-wrap">
+
 		<div class="mh-index-title-wrap">
 			<div class="mh-title animate__animated animate__bounce" >
 				<span>OUT&nbsp;</span>
@@ -39,6 +40,9 @@
 			</div>
 			<div class="mh-sub-title animate__animated animate__fadein"><span>시간을 느리게, 경험을 깊게</span></div>
 		</div>
+
+		<div class="mh-index-wrap-container">
+<%--			menu wrap을 중앙 정렬하기 위한 div--%>
 		<div class="mh-menu-wrap">
 			<div class="mh-menu" onclick="location.href='/outgoit/camping'">
 				<div class="mh-camp-icon"></div>
@@ -53,6 +57,10 @@
 				<div class="mh-txt mh-menu-txt" id="txt3"><span>RIDING</span></div>
 			</div>
 		</div>
+		</div>
+
+	</div>
+
         <div class="footer"></div>
 	</div> 
 

@@ -18,6 +18,7 @@ body {
     width: 100vw;
     height: 100vw;
     padding: 0;
+    overflow-x:hidden;
 }
 
 div{
@@ -44,14 +45,14 @@ div{
 }
 #hj-info-name-img {
 
-    /*border: 1px solid gray;*/
     width: 25%;
-    background-color: #59795a;
+    /* background-color: #59795a; */
     padding: 2%;
     border-radius: 3vw;
-    border: 1vw solid #6c480c;
-
-    box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+    border: 0.5vw solid #4c2c09;
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
+    background-image: url(/resources/static/img/기타/나무보드.jpg);
+    background-size: inherit;
 }
 .hj-info-name {
     text-align: center;
@@ -61,18 +62,18 @@ div{
 }
 /* 정보 div */
 .hj-content1{
-    margin-top: 3%;
+    margin-top: 2%;
 }
 
 #hj-content-box-comment {
     font-family: "Drawing Guides", sans-serif;
-    color: white;
+    color: #000;
     font-size: 3vw;
     position: absolute;
     right: 5%;
-    bottom: 5%;
+    bottom: 2%;
 }
-#hj-post-it{
+#hj-tape{
     background-image: url(/resources/static/Img_hj/tapeClear.png);
     height: 2vw;
     width: 9vw;
@@ -86,13 +87,14 @@ div{
 /* 사진 내용 부분 */
 #hj-content-pic {
     position: relative;
-
+    background-image: url(/resources/static/img/기타/나무보드.jpg);
     border-radius: 5vw;
-    border: 2vw solid #6c480c;
-    background-color: #59795a;
-    box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+    border: 1vw solid rgb(76, 44, 9);
+    /* background-color: #59795a; */
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
     width: 70vw;
-    padding-bottom: 7vw;
+    padding-bottom: 5vw;
+    background-size: cover;
 }
 #hj-content-inside-box {
     display: flex;
@@ -116,15 +118,29 @@ div{
     /*background-color: rgb(6, 57, 10);*/
     background-image: url("/resources/static/img/기타/양피지.png");
     /*border: 0.6vw solid rgb(157, 111, 76);*/
-    padding: 3% 0% 5% 2%;
+    padding-left: 3%;
     margin-right: 5%;
+    padding-top: 2%;
     width: 45%;
     color: black;
     font-family: 'SOYOMapleBoldTTF';
     background-size: cover;
 }
+#hj-detail-contain{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 22%;
+}
+#hj-detail-contain2{
+    margin-top: 32%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 
-#hj-content-detail:hover{
+#hj-detail-form:hover{
     cursor: pointer;
 }
 #hj-content-plus-container{
@@ -145,8 +161,9 @@ div{
     opacity: 0;
     transition: opacity 1s ease;
 }
-#hj-content-plus-container:hover{
+#hj-detail{
     cursor: pointer;
+    border-bottom: 1px solid black;
 }
 #hj-content-plus-container.show {
     opacity: 1;
@@ -169,8 +186,9 @@ div{
 #hj-content-plus-overray{
     display: flex;
     justify-content: space-around;
-    line-height: 1.7vw;
-    padding-bottom: 1.5vw;
+    padding-bottom: 2vw;
+    position: relative;
+
 }
 #hj-no,
 #hj-time,
@@ -183,22 +201,25 @@ div{
 }
 .hj-content-plus-ray{
     margin-top: 1vw;
+    line-height: 1.7vw;
 }
 .hj-content-plus-ray2{
     margin-top: 4.5vw;
     width: 27%;
+    line-height: 1.7vw;
 
 }
 /* 코멘트 부분 */
 #hj-comment-name-img{
-    /*border: 1px solid gray;*/
-    width: 20%;
-    background-color: #59795a;
+    width: 25%;
+    /* background-color: #59795a; */
     padding: 2%;
     border-radius: 3vw;
-    border: 1vw solid #6c480c;
-
-    box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+    border: 0.5vw solid #4c2c09;
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
+    background-image: url(/resources/static/img/기타/나무보드.jpg);
+    background-size: inherit;
+    margin-top: 3%;
 }
 .hj-line-introduce{
     font-size: 1.3vw;
@@ -209,12 +230,16 @@ div{
     margin-top: 2%;
 }
 #hj-comment-pic{
+    border: 1vw solid rgb(76, 44, 9);
+    background-image: url("/resources/static/img/기타/나무보드.jpg");
     border-radius: 5vw;
-    border: 2vw solid #6c480c;
-    background-color: #59795a;
-    box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+
+    /*background-color: #59795a;*/
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
     width: 70vw;
-    padding-bottom: 3vw;
+    padding-bottom: 4vw;
+    background-size: cover;
+    position: relative;
 }
 #hj-content-inside-box2 {
     justify-content: center;
@@ -222,6 +247,26 @@ div{
     display: flex;
     width: 100%;
     /* margin-top: 5%; */
+}
+#hj-paper{
+    background-image: url(/resources/static/img/기타/양피지.png);
+    width: 65vw;
+    position: absolute;
+    height: 12vw;
+    top: 7%;
+    z-index: 1;
+    left: 2%;
+}
+#hj-tape2{
+    background-image: url(/resources/static/Img_hj/tapeClear.png);
+    height: 2vw;
+    width: 9vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 4%;
+    right: 40%;
+    z-index: 33;
 }
 #hj-content-detail2 {
     /*background-image: url(../img/kami.jpeg);*/
@@ -231,20 +276,26 @@ div{
     /* margin-right: 5%; */
     width: 100%;
     /*padding-bottom: 4vw;*/
+    z-index: 22;
 }
 #hj-content-zentai-box {
-    margin-top: 1%;
+    margin-top: 3%;
     width: 90%;
 }
 #hj-review-star-box {
     display: flex;
-    margin-left: 36%;
+    margin-left: 12%;
+    margin-top: 2%;
 }
 .hj-star{
     font-size: 2vw;
+    cursor: pointer;
 }
 .hj-star.checked{
     color: yellow;
+}
+.hj-star .hovered{
+    color: grey;
 }
 .hj-review {
     /* border: 1px solid purple; */
@@ -258,7 +309,7 @@ div{
 
 #hj-input {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-top: 1%;
     /* align-content: center; */
     width: 100%;
@@ -280,13 +331,18 @@ div{
     text-align: center;
     width: 11vw;
     height: 2.3vw;
-    /*margin-right: vw;*/
-    border-radius: 0.5vw;
+    /* border-radius: 0.5vw; */
     outline: none;
-    border: 0;
-    background-color: rgb(250 250 250);
+    /* border: 0; */
+    background-color: rgb(250 250 250 / 0%);
     font-size: 1vw;
+    border-width: 0;
+    border-bottom: 1px solid black;
+    /*color: black;*/
 
+}
+input::placeholder{
+    color: black;
 }
 #hj-review-content {
     width: 50%;
@@ -298,17 +354,25 @@ div{
     justify-content: center;
     cursor: pointer;
     text-align: center;
-    width: 31vw;
-    height: 5vw;
+    width: 30vw;
+    height: 3vw;
+    margin-top: 2.5%;
     /* margin-right: 1vw; */
-    border-radius: 0.5vw;
+    /* border-radius: 0.5vw; */
     outline: none;
-    border: 0;
-    background-color: rgb(250 250 250);
+    /*border: 0;*/
+    /*background-color: rgb(250 250 250);*/
     font-size: 1vw;
+    /*outline: none;*/
+    /* border: 0; */
+    background-color: rgb(250 250 250 / 0%);
+    /*font-size: 1vw;*/
+    border-width: 0;
+    border-bottom: 1px solid black;
 }
 #hj-btn {
     /*margin-top: 3%;*/
+    margin-top: 2.35%;
 }
 #hj-btn-button{
     font-family: 'SOYOMapleBoldTTF';
@@ -321,12 +385,11 @@ div{
     text-align: center;
     text-decoration: none;
     outline: none;
-    color: #fff;
-    background-color: #609f55;
-    border: none;
-    border-radius: 0.5vw;
-    box-shadow: 0 0.7vw #1c4728;
     line-height: 1vw;
+    background-color: rgb(250 250 250 / 0%);
+    border: 0 none;
+    border-bottom: 1px solid black;
+    color: black;
 }
 /* 리뷰 보여주는 창 */
 
@@ -335,47 +398,76 @@ div{
     height: auto;
 }
 #hj-review-pic{
+    border: 1vw solid rgb(76, 44, 9);
+    background-image: url("/resources/static/img/기타/나무보드.jpg");
     /* border: 10px solid hsl(197, 78%, 28%); */
     position: relative;
     border-radius: 5vw;
-    border: 2vw solid #6c480c;
-    background-color: #59795a;
-    box-shadow: 2px 15px 8px 4px rgb(96 114 116 / 50%);
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
     width: 70vw;
-    padding-bottom: 3vw;
+    padding-bottom: 1vw;
+    background-size: cover;
     /*height: 100%;*/
 
 }
 #hj-content-box-comment2{
     font-family: "Drawing Guides", sans-serif;
-    color: white;
+    color: #000;
     font-size: 3vw;
     position: absolute;
     left: 5%;
-    bottom: 5%;
+    bottom: 0;
+}
+#hj-tape3{
+    background-image: url(/resources/static/Img_hj/tapeClear.png);
+    height: 2vw;
+    width: 9vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 8%;
+    right: 45%;
 }
 #hj-review-inside-box2{
     /* border: 2px solid red; */
     display: flex;
     justify-content: center;
-
-}
-#hj-review-detail2{
-    /* background-image: url(/resources/static/img/기타/양피지.png); */
-    /* border: 0.6vw solid rgb(157, 111, 76); */
-    /*padding: 3% 0% 2% 2%;*/
-    /*margin-right: 5%;*/
-    width: 70%;
-    color: white;
+    width: 70vw;
     font-family: 'SOYOMapleBoldTTF';
-    /* background-size: cover;
+
 }
+/*#hj-review-detail2{*/
+/*    !* background-image: url(/resources/static/img/기타/양피지.png); *!*/
+/*    !* border: 0.6vw solid rgb(157, 111, 76); *!*/
+/*    !*padding: 3% 0% 2% 2%;*!*/
+/*    !*margin-right: 5%;*!*/
+/*    width: 70%;*/
+/*    color: black;*/
+/*    font-family: 'SOYOMapleBoldTTF';*/
+/*    margin-top: 3%;*/
+/*}*/
 #hj-review-zentai-box{
-    /*border: 5px solid blueviolet;*/
-
-    margin-top: 2%;
+    width: 95%;
 
 }
+#hj-review-list-container {
+    display: flex;
+    /*line-height: 1.2vw;*/
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+}
+.hj-review-content-box{
+    background-image: url(/resources/static/img/기타/양피지.png);
+    background-size: cover;
+    line-height: 1.8vw;
+    width: 18vw;
+    height: 21vw;
+    margin: 3vw 0.7vw 0vw 0.7vw;
+    position: relative;
+    padding: 1vw;
+}
+
 .hj-review-stars{
     /*border: 1px solid darkgoldenrod;*/
     display: flex;
@@ -383,37 +475,51 @@ div{
     width: 10%;
     height: auto;
     /* margin-left: ; */
+    font-size: 1.18vw;
 }
 .hj-review-star {
     display: flex;
     margin-left: 25%;
 }
-.hj-review-content-box{
-    /*display: flex;*/
-    /*border: 1px solid darkgreen;*/
-    width: 100%;
-    /*margin-top: 2%;*/
-    font-size: 1vw;
-    /*height: 100%;*/
-    position: relative;
-}
+
 .hj-review-nickname{
-    width: 100%;
-    height: 100%;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    font-size: 1.2vw;
 
 }
 .hj-review-comment{
     /*border: 1px solid darkorange;*/
-    width: 100%;
-    height: 100%;
-    margin-bottom: 2%;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*margin-bottom: 2%;*/
+    font-size: 1vw;
+}
+.hj-review-tape{
+    background-image: url(/resources/static/Img_hj/tapeClear.png);
+    height: 2vw;
+    width: 9vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -1vw;
+    left: 5vw;
+}
+.hj-review-comment-content{
+    /*width: 17vw;*/
+    word-break: break-all;
+}
+.hj-comment-textarea{
+    background-color: transparent;
+    width: 17.7vw;
+    height: 14vw;
 }
 .hj-edit-box {
 
     width: 5%;
     position: absolute;
-    top: 45%;
-    right: 0;
+    top: 0;
+    left: 90%;
 }
 .hj-edit-icon{
     /*background-image: url(/resources/static/Img_hj/horizon_icon.png);*/
@@ -423,6 +529,7 @@ div{
     /*!*border: 1px solid darkcyan;*!*/
     width: 80%;
     height: 2vw;
+    font-size: 1.5vw;
 }
 .hj-edit-icon:hover{
     cursor: pointer;
@@ -434,31 +541,58 @@ div{
 .hj-edit-drop{
     position: absolute;
     font-size: 1vw;
-    right: 3%;
-    top: 1%;
+    right: 1vw;
+    top: 90%;
     display: none;
     transition: height 0.5s ease;
-    /*line-height: 2px;*/
     text-align: center;
-}
-.hj-edit-part{
-    margin-top: 2%;
+    width: 12vw;
 
 }
+.hj-edit-drop-box{
+    display: flex;
+    justify-content: space-between;
+}
+.hj-edit-drop input{
+    width: 6vw;
+    height: 1vw;
+}
+.hj-password-input{
+    width: 6vw;
+    /* height: 1vw; */
+    font-family: 'SOYOMapleBoldTTF';
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    /* width: 11vw; */
+    height: 1.3vw;
+    /* border-radius: 0.5vw; */
+    outline: none;
+    /* border: 0; */
+    background-color: rgb(250 250 250 / 0%);
+    font-size: 0.8vw;
+    border-width: 0;
+    border-bottom: 1px solid black;
+}
+
 /*리뷰가 없을떄 css 따로주기*/
 #hj-no-review{
     /*margin-left: 40%;*/
     text-align: center;
     font-size: 1.18vw;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin: 5vw;
+    color: white;
+    font-family: 'SOYOMapleBoldTTF';
 }
 /*페이지 처리*/
-#hj-page-box{
+.hj-page-box{
     display: flex;
     align-content: center;
     justify-content: center;
+    margin-top: 4%;
 }
+
 #hj-first-button{
     margin-right: 1%;
 }
@@ -469,4 +603,24 @@ div{
 #hj-next-button:hover
 {
     cursor: pointer;
+
+}
+/*날씨 정보*/
+#hj-info-weather{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3vw;
+}
+#hj-info-weather-text{
+    font-size: 1vw;
+    font-family: 'Pretendard-Regular';
+    display: flex;
+    align-items: center;
+}
+#hj-info-weather-text > span{
+    margin: 0vw 0.5vw 0vw 0.5vw;
+}
+#hj-info-weather-text > img{
+  width: 1.2vw;
 }
