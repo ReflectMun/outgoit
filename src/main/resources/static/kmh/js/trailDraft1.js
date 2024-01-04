@@ -98,11 +98,7 @@ try {
 
                     polylines.push(polyLine)
                     polyLine.setMap(map)
-                    const polyPath = polyLine.getPath();
-                    console.log(polyPath)
-                    let refPosition =null;
-                    refPosition = polyPath.length >>1
-                    
+                   
 
 
 
