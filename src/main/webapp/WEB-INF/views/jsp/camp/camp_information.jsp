@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>${campingAreaName} 상세정보</title>
     <link rel="stylesheet" href="/resources/static/jiho/css/camp_information.css"/>
+    <link rel="stylesheet" href="/resources/static/css_hj/camp_info_media.css"/>
     <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
