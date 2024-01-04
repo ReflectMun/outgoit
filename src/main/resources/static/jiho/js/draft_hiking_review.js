@@ -257,7 +257,7 @@ async function commentModifyingReady(commentNumber, element, reviewData) {
     const reviewModifyingInput = document.createElement("textarea")
     const reviewModifyStar = document.createElement("div")
 
-    reviewModifyStar.classList.add("hj-review-stars")
+    reviewModifyStar.classList.add("hj-review-stars-edit")
     let dataValue = 0;
     for (let i = 1; i <= 5; i++) {
         const ratingStar = document.createElement("div")
@@ -286,7 +286,7 @@ async function commentModifyingReady(commentNumber, element, reviewData) {
 
         reviewModifyStar.appendChild(ratingStar)
         ratingStar.setAttribute("data-value",dataValue);
-        ratingStar.classList.add("hj-review-star")
+        ratingStar.classList.add("hj-review-star-edit")
     }
 
 
@@ -304,7 +304,7 @@ async function commentModifyingReady(commentNumber, element, reviewData) {
 
 
 
-    let stars = document.querySelectorAll('.hj-review-star');
+    let stars = document.querySelectorAll('.hj-review-star-edit');
 
     // 각 별에 이벤트 리스너를 등록합니다.
     stars.forEach(function (star) {
