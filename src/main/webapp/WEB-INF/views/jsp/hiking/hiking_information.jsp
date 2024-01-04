@@ -10,6 +10,8 @@
     <title>${trailRouteList.mntn_nm} 상세정보</title>
 
     <link rel="stylesheet" href="/resources/static/css_hj/hiking_information.css"/>
+    <link rel="stylesheet" href="/resources/static/css_hj/hiking_info_media.css"/>
+
 
     <script src="/resources/static/jiho/js/draft_hiking_review.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
