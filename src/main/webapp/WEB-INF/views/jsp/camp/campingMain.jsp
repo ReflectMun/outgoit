@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,19 +49,8 @@
         <%--            날씨 부분--%>
         <div class="mh-weather-container">
             <div class="mh-weather-text">
-                <li><span>서울</span><img src="/resources/static/img/weather/rain.png" alt=""><span>3℃</span></li>
-                <li><span>경기</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
-                <li><span>인천</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
-                <li><span>춘천</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
-                <li><span>강릉</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
-                <li><span>청주</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
-                <li><span>대전</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
-                <li><span>대구</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
-                <li><span>울산</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
-                <li><span>부산</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
-                <li><span>목포</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
-                <li><span>광주</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
-                <li><span>제주</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+
+                    <li><span>서울</span><img src="/resources/static/img/weather/rain.png" alt=""><span>이걸 어카노</span></li>
             </div>
         </div>
 <%--            search--%>
