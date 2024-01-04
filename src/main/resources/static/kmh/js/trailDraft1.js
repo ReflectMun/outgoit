@@ -11,14 +11,14 @@ const mapOption = {
 const map = new kakao.maps.Map(mapContainer, mapOption)
 map.addOverlayMapTypeId(kakao.maps.MapTypeId.TERRAIN);
 const ps = new kakao.maps.services.Places()
-const infowindow = new kakao.maps.InfoWindow({ zIndex: 1 })
+const infowindow = new kakao.maps.InfoWindow({zIndex: 1})
 
 let markers = []
-let polylines =[]
+let polylines = []
 let latlngBounds = new kakao.maps.LatLngBounds()
 
 searchBox.addEventListener("keyup", (e) => {
-    if(e.key === "Enter"){
+    if (e.key === "Enter") {
         submitSearch.click()
     }
 })
@@ -33,7 +33,7 @@ try {
         deleteMarker()
         resultList.innerText = ""
 
-         ps.keywordSearch(inputValue, async (data, status, pagination) => {
+        ps.keywordSearch(inputValue, async (data, status, pagination) => {
 
             if (status === kakao.maps.services.Status.OK) {
                 const url = new URL("http://" + hostName + "/api/trail/search")
@@ -49,10 +49,11 @@ try {
 
                 addMarker(data.slice(0, 1), resData, data)
 
-                displayMarker()
+                // displayMarker()
                 //const = [r,d,q,w,d,s,a,z,,c,,vv,g]
 
                 //MAth.r 1~10d
+                let index = 0;
                 for (const trail of resData) {
                     // a[rint]
                     // 이게 등산로 하나.
@@ -74,15 +75,9 @@ try {
                     }
 
 
-
-
-
-
-
-
                     function getRandomColor() {
                         // 랜덤한 RGB 값을 생성
-                        const randomColor = Math.floor(Math.random()*16777215).toString(16);
+                        const randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
                         // 생성된 RGB 값을 색상 문자열로 변환
                         return '#' + randomColor;
@@ -98,76 +93,92 @@ try {
 
                     polylines.push(polyLine)
                     polyLine.setMap(map)
-                    const polyPath = polyLine.getPath();
-                    console.log(polyPath)
-                    let refPosition =null;
-                    refPosition = polyPath.length >>1
-                    
 
-
-
+                    // 마커 등산로 별로 만들기 테스트 중
+                    const trailInfoBox = document.getElementsByClassName("camping-area-info-box")
+                    let refPosition = trailLIne.length >> 1;
+                    const trailRouteCoordX = trailLIne[refPosition][0]
+                    const trailRouteCoordY = trailLIne[refPosition][1]
+                    addHiddenMarker(trailRouteCoordX, trailRouteCoordY, trailInfoBox[index])
+                    index = index + 1;
+                    console.log(index)
+                    displayMarker()
                 }
             }
         })
 
     })
-}
-catch (e) {
+} catch (e) {
     console.log(e)
     alert("오류발생")
 }
-    function addMarker(places, resData, data) {
 
-        for (const place of places) {
-            const coord = new kakao.maps.LatLng(place.y, place.x)
-            const marker = new kakao.maps.Marker({
-                position: coord
+function addMarker(places, resData, data) {
 
-            })
-            addListElementsToResultList(resData, data)
+    for (const place of places) {
+        const coord = new kakao.maps.LatLng(place.y, place.x)
+        const marker = new kakao.maps.Marker({
+            position: coord
 
-            kakao.maps.event.addListener(marker, 'click', () => {
-                map.panTo(coord)
-            })
+        })
+        addListElementsToResultList(resData, data)
 
-            kakao.maps.event.addListener(marker, 'mouseover', () => {
-                infowindow.setContent('<div style="padding: 5px; font-size:12px;">' + place['place_name'] + '</div>')
-                infowindow.open(map, marker)
-            })
+        kakao.maps.event.addListener(marker, 'click', () => {
+            map.panTo(coord)
+        })
 
-            kakao.maps.event.addListener(marker, 'mouseout', () => {
-                infowindow.close()
-            })
+        kakao.maps.event.addListener(marker, 'mouseover', () => {
+            infowindow.setContent('<div style="padding: 5px; font-size:12px;">' + place['place_name'] + '</div>')
+            infowindow.open(map, marker)
+        })
 
-            latlngBounds.extend(coord)
-            markers.push(marker)
-        }
+        kakao.maps.event.addListener(marker, 'mouseout', () => {
+            infowindow.close()
+        })
 
+        latlngBounds.extend(coord)
+        markers.push(marker)
     }
 
-    function deleteMarker() {
-        for (const marker of markers) {
-            marker.setMap(null)
-        }
-        for (const polyLine of polylines) {
-            polyLine.setMap(null)
-        }
+}
 
-        latlngBounds = new kakao.maps.LatLngBounds()
-        markers = []
-        polylines = []
+function addHiddenMarker(x, y, infoBox) {
+    const coord = new kakao.maps.LatLng(y, x)
+    const marker = new kakao.maps.Marker({
+        position: coord
+    })
 
+    infoBox.addEventListener('click', (e) => {
+        map.panTo(coord)
+    })
+
+    latlngBounds.extend(coord)
+    markers.push(marker)
+}
+
+function deleteMarker() {
+    for (const marker of markers) {
+        marker.setMap(null)
+    }
+    for (const polyLine of polylines) {
+        polyLine.setMap(null)
     }
 
-    function displayMarker() {
-        for (const marker of markers) {
-            marker.setMap(map)
-        }
-        map.setBounds(latlngBounds)
+    latlngBounds = new kakao.maps.LatLngBounds()
+    markers = []
+    polylines = []
+
+}
+
+function displayMarker() {
+    for (const marker of markers) {
+        marker.setMap(map)
     }
-
-
-
+    map.setBounds(latlngBounds)
+    for (let i = 1; i < markers.length; i++) {
+        markers[i].setMap(null)
+    }
+}
 
 
 function addListElementsToResultList(name, data) {
@@ -200,10 +211,10 @@ function addListElementsToResultList(name, data) {
             let tempInput;
 
 
-                tempInput = document.createElement("input");
-                tempInput.name = n;
-                tempInput.value = name;
-                hiddenForm.appendChild(tempInput);
+            tempInput = document.createElement("input");
+            tempInput.name = n;
+            tempInput.value = name;
+            hiddenForm.appendChild(tempInput);
 
             document.body.appendChild(hiddenForm);
             hiddenForm.submit();
@@ -218,7 +229,6 @@ function addListElementsToResultList(name, data) {
         // 각각의 엘리먼트를 직접 추가
         resultList.appendChild(child);
     }
-
 
 
 }
