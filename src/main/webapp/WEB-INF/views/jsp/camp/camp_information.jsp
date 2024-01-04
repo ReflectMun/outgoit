@@ -126,11 +126,11 @@
                             <div id="hj-content-zentai-box">
                                 <!-- 별부분 -->
                                 <div id="hj-review-star-box">
-                                    <span class="hj-star" data-value="1">&#9733;</span>
-                                    <span class="hj-star" data-value="2">&#9733;</span>
-                                    <span class="hj-star" data-value="3">&#9733;</span>
-                                    <span class="hj-star" data-value="4">&#9733;</span>
-                                    <span class="hj-star" data-value="5">&#9733;</span>
+                                    <span class="hj-star" data-value="1">☆</span>
+                                    <span class="hj-star" data-value="2">☆</span>
+                                    <span class="hj-star" data-value="3">☆</span>
+                                    <span class="hj-star" data-value="4">☆</span>
+                                    <span class="hj-star" data-value="5">☆</span>
                                 </div>
                                 <!-- 인풋 아이디 비번 부분 -->
                                 <div id="hj-input">

@@ -294,8 +294,8 @@ div{
 .hj-star.checked{
     color: yellow;
 }
-.hj-star .hovered{
-    color: grey;
+.hj-star.hovered{
+    color: yellow;
 }
 .hj-review {
     /* border: 1px solid purple; */
@@ -477,6 +477,7 @@ input::placeholder{
     /* margin-left: ; */
     font-size: 1.18vw;
 }
+
 .hj-review-star {
     display: flex;
     margin-left: 25%;
@@ -513,6 +514,22 @@ input::placeholder{
     background-color: transparent;
     width: 17.7vw;
     height: 14vw;
+}
+.hj-review-stars-edit{
+    display: flex;
+    align-content: space-between;
+    width: 8vw;
+    height: auto;
+    font-size: 1.5vw;
+}
+.hj-review-star-edit{
+    width: 14vw;
+}
+.hj-review-stars-edit:hover{
+    cursor: pointer;
+}
+.hj-review-star-edit.checked{
+    color: yellow;
 }
 .hj-edit-box {
 

@@ -30,10 +30,11 @@ public interface CampingReviewRepositoryInterface extends JpaRepository<CampingR
     // UPDATE (Table) SET Content := content WHERE Comment_Number := comment_number
     // 특정 리뷰 내용을 수정하는 쿼리문
     @Modifying
-    @Query("UPDATE camping_review SET content = :content WHERE commentNumber = :commentNumber AND isDeleted = false")
+    @Query("UPDATE camping_review SET content = :content, rating = :rating WHERE commentNumber = :commentNumber AND isDeleted = false")
     int updateContentByCommentNumber(
             @Param("content") String content,
-            @Param("commentNumber") Long commentNumber
+            @Param("commentNumber") Long commentNumber,
+            @Param("rating") Long rating
     );
 
     // DELETE FROM (Table) WHERE Comment_Number := comment_number
