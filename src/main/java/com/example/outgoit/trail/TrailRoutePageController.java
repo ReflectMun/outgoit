@@ -1,7 +1,5 @@
 package com.example.outgoit.trail;
 
-import com.example.outgoit.camp.CampingAreaInfoDTO;
-import com.example.outgoit.review.camping.CampingReview;
 import com.example.outgoit.review.trail.TrailReview;
 import com.example.outgoit.review.trail.TrailReviewService;
 import com.example.outgoit.trail.dto.FeatureData;
@@ -81,40 +79,35 @@ public class TrailRoutePageController {
 
     @PostMapping("/detail/{lngi}/{lati}/{index}/{trailRouteId}")
     public String GetDetailTrain(
-                                 @PageableDefault(size = 5, sort = "commentNumber", direction = Sort.Direction.DESC) Pageable pageable,
-                                 @PathVariable("lngi") double lngi,
-                                 @PathVariable("lati") double lati,
-                                 @PathVariable ("index") int index,
-                                 @PathVariable("trailRouteId") String trailRouteId,
-                                 Model model) throws Exception
+            @PageableDefault(size = 5, sort = "commentNumber", direction = Sort.Direction.DESC) Pageable pageable,
+            @PathVariable("lngi") double lngi,
+            @PathVariable("lati") double lati,
+            @PathVariable("index") int index,
+            @PathVariable("trailRouteId") String trailRouteId,
+            Model model) throws Exception
     {
+        Pageable modified = PageRequest.of(0, pageable.getPageSize(), pageable.getSort());
+        ArrayList<TrailReview> reviews =
+                new ArrayList<>(trailReviewService.loadTrailRouteReview(trailRouteId, modified).getContent());
 
+        String ratingAvg;
+        try {
+            ratingAvg = trailReviewService.getTrailRouteRating(trailRouteId).get(0).toString();
+        } catch (NullPointerException e) {
+            ratingAvg = "아직 평균평점 정보가 없어요!";
+        }
 
-            Pageable modified = PageRequest.of(0, pageable.getPageSize(), pageable.getSort());
-            ArrayList<TrailReview> reviews =
-                    new ArrayList<>(trailReviewService.loadTrailRouteReview(trailRouteId, modified).getContent());
+        ArrayList<FeatureData> trailRouteList = trailRouteService.getTrailRouteList(lngi, lati); // list를 반환함.
 
-            String ratingAvg;
-            try {
-                ratingAvg = trailReviewService.getTrailRouteRating(trailRouteId).get(0).toString();
-            }
-            catch (NullPointerException e){
-                ratingAvg = "아직 평균평점 정보가 없어요!";
-            }
+        // 한라산을 검색했을때 분류한 5개의 등산로가 배열로 담겨있음!
 
-    ArrayList<com.example.outgoit.trail.dto.FeatureData> trailRouteList = trailRouteService.getTrailRouteList(lngi, lati); // list를 반환함.
-//        System.out.println(index);
-
-    // 한라산을 검색했을때 분류한 5개의 등산로가 배열로 담겨있음!
-//        System.out.println(trailRouteList.get(index).getProperties());
-
-    // 모델에 trailRouteList를 추가
-    model.addAttribute("trailRouteList", trailRouteList.get(index).getProperties());
-    model.addAttribute("trailPath",trailRouteList.get(index).getGeometry().getCoordinates().get(0));
-    model.addAttribute("trailRouteId", trailRouteList.get(index).getId());
-    model.addAttribute("ratingAvg", ratingAvg);
-    model.addAttribute("existReviews", !reviews.isEmpty());
-    model.addAttribute("hikingContentPage", "hiking_information.jsp");
+        // 모델에 trailRouteList를 추가
+        model.addAttribute("trailRouteList", trailRouteList.get(index).getProperties());
+        model.addAttribute("trailPath", trailRouteList.get(index).getGeometry().getCoordinates().get(0));
+        model.addAttribute("trailRouteId", trailRouteList.get(index).getId());
+        model.addAttribute("ratingAvg", ratingAvg);
+        model.addAttribute("existReviews", !reviews.isEmpty());
+        model.addAttribute("hikingContentPage", "hiking_information.jsp");
 
         return "jsp/hiking/container"; // yourViewName은 실제로 사용할 JSP 파일의 이름이어야 합니다.
     }
