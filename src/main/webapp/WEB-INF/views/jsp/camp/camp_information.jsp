@@ -150,7 +150,7 @@
                                             <input
                                                     type="text"
                                                     id="hj-id-input"
-<%--                                                    placeholder="${nickname}"--%>
+                                            <%--                                                    placeholder="${nickname}"--%>
                                                     name="author"
                                                     value="${nickname}"
                                             <%--                                                    onfocus="this.placeholder=''"--%>
@@ -297,14 +297,9 @@
 
             const nicknameInput = document.getElementById('hj-id-input');
             const starsValue = document.getElementsByClassName("hj-star");
-
-                for (const star of starsValue){
-                    star.innerHTML = "☆";
-                }
-
-                const reqUrl2 ="/nickname/show"
-                const {data: resData2} = await axios.get(reqUrl2)
-                // nicknameInput.value = resData2; //     resData2에 초기화된 닉네임이 담겨있음
+            for (const star of starsValue) {
+                star.innerHTML = "☆";
+            }
 
 
             const campingAreaId = document.getElementById("camping-area-id").value
@@ -356,11 +351,14 @@
                 const madeReviewBox = makeReviewBox(review)
                 reviewListContainer.appendChild(madeReviewBox)
             }
+            const reqUrl2 = "/nickname/show"
+            const {data: resData2} = await axios.get(reqUrl2)
 
             // 작성을 완료하고 입력 박스들을 비움
             passwordInput.value = ""
-            authorInput.value = ""
             contentInput.value = ""
+            // 랜덤 닉네임 새로 넣어줌
+            authorInput.value = resData2; //     resData2에 초기화된 닉네임이 담겨있음
 
             // 평점 별 초기화
             const starList = document.getElementsByClassName("hj-star")

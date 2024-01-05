@@ -11,6 +11,15 @@
     <link rel="stylesheet" href="/resources/static/kmh/css/main.css">
     <link rel="stylesheet" href="/resources/static/kmh/css/main_media.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script>
+        $(function () {
+            if (window.innerWidth === 430 && window.innerHeight === 932) {
+                $("#media1").attr("src", "/resources/static/img/main_swiper/riding_banner1_mobile.jpg")
+                $("#media2").attr("src", "/resources/static/img/main_swiper/riding_banner2_mobile.jpg")
+                $("#media3").attr("src", "/resources/static/img/main_swiper/riding_banner3_mobile.jpg")
+            }
+        });
+    </script>
 </head>
 <body>
     <!-- 헤더 영역 -->
@@ -24,10 +33,10 @@
         <!-- 배너 영역 (슬라이드 들어가면 좋을듯!) -->
         <div class="mh-banner-wrap camp swiper mySwiper">
             <div class="mh-banner swiper-wrapper">
-                <div class="swiper-slide"><img src="/resources/static/img/자전거/riding_banner1.jpg"></div>
-                <div class="swiper-slide"><img src="/resources/static/img/자전거/riding_banner3.jpg"></div>
-                <div class="swiper-slide"><img src="/resources/static/img/자전거/riding_banner2.jpg"></div>
-                <div class="swiper-slide"><img src="/resources/static/img/자전거/riding_banner4.jpg"></div>
+                <div class="swiper-slide"><img id="media1" src="/resources/static/img/자전거/riding_banner1.jpg"></div>
+                <div class="swiper-slide"><img id="media3" src="/resources/static/img/자전거/riding_banner3.jpg"></div>
+                <div class="swiper-slide"><img id="media2" src="/resources/static/img/자전거/riding_banner2.jpg"></div>
+                <div class="swiper-slide"><img  src="/resources/static/img/자전거/riding_banner4.jpg"></div>
 <%--                <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>--%>
             </div>
                 <div class="mh-banner-txt-wrap">
