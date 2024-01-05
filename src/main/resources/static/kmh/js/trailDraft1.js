@@ -208,7 +208,6 @@ try {
 
                     // 마커 등산로 별로 만들기 테스트 중
                     const trailInfoBox = document.getElementsByClassName("camping-area-info-box")
-                    console.log(trailInfoBox)
                     let refPosition = trailLIne.length >> 1;
                     const trailRouteCoordX = trailLIne[refPosition][0]
                     const trailRouteCoordY = trailLIne[refPosition][1]
