@@ -1,5 +1,6 @@
 package com.example.outgoit.camp;
 
+import com.example.outgoit.nickname.RandomNicknameService;
 import com.example.outgoit.review.camping.CampingReview;
 import com.example.outgoit.review.camping.CampingReviewService;
 import com.example.outgoit.weather.WeatherService;
@@ -21,16 +22,28 @@ public class CampingAreaSearchPageController {
     // 허락없이 건들면 뒤집니다
     private final CampingReviewService campingReviewService;
     private final CampingSearchService campingSearchService;
+<<<<<<< HEAD
     private final WeatherService weatherService;
+=======
+    private final RandomNicknameService randomNicknameService;
+>>>>>>> rh
 
     public CampingAreaSearchPageController(
             CampingReviewService campingReviewService,
             CampingSearchService campingSearchService,
+<<<<<<< HEAD
             WeatherService weatherService
     ){
         this.campingReviewService = campingReviewService;
         this.campingSearchService = campingSearchService;
         this.weatherService = weatherService;
+=======
+            RandomNicknameService randomNicknameService
+    ){
+        this.campingReviewService = campingReviewService;
+        this.campingSearchService = campingSearchService;
+        this.randomNicknameService = randomNicknameService;
+>>>>>>> rh
     }
     ////////////////////////////////////////////////////////
 
@@ -141,6 +154,7 @@ public class CampingAreaSearchPageController {
         model.addAttribute("siteGravel", data.getSiteBottomCl4());
         model.addAttribute("siteSoil", data.getSiteBottomCl5());
         model.addAttribute("campingContentPage","camp_information.jsp");
+        model.addAttribute("nickname", randomNicknameService.getRandomNickname());
         return "jsp/camp/container";
     }
 
