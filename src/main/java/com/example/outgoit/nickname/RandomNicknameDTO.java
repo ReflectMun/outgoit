@@ -5,12 +5,14 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 public class RandomNicknameDTO {
-    private List<String> determiners;
-    private List<String> animals;
+    private ArrayList<String> determiners;
+    private ArrayList<String> animals;
 
 
 
