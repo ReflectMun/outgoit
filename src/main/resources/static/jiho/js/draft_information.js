@@ -360,7 +360,7 @@ async function updateComment(commentNumber, reviewContentInput, modifyButtonElem
 
         if(resData['statusCode'] === 200)
             alert("댓글 수정 완료!")
-            
+
         else {
             alert(resData['errorMessage'])
             return
