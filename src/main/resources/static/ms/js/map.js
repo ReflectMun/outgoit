@@ -96,6 +96,45 @@ function displayMarker(){
     markers[2].setMap(null)
 }
 
+// 자전거 도로 온오프 기능
+let isOverlaying = false
+const cycleRoadBtn = document.getElementById("cycle-road-btn")
+const cycleRoadGuideDiv = document.getElementById("cycle-road-legend")
+cycleRoadBtn.addEventListener('click', (e) =>{
+    if (!isOverlaying){
+        map.addOverlayMapTypeId(kakao.maps.MapTypeId.BICYCLE)
+        cycleRoadGuideDiv.style.display = "block"
+        isOverlaying = true
+    } else {
+        map.removeOverlayMapTypeId(kakao.maps.MapTypeId.BICYCLE)
+        cycleRoadGuideDiv.style.display = "none"
+        isOverlaying = false
+    }
+})
+// 자전거 도로 범례 변경 버튼
+const roadGuide = document.getElementById("road-guide")
+const driveway = document.getElementById("driveway")
+const amenities = document.getElementById("amenities")
+const cycleRoadGuide = document.getElementById("cycle-road-guide")
+// 도로안내
+roadGuide.addEventListener('click', (e) => {
+    cycleRoadGuide.style.backgroundPositionY = "24.2vw"
+    cycleRoadGuide.style.height = "4vw"
+})
+
+// 진입로
+driveway.addEventListener('click', (e) => {
+    cycleRoadGuide.style.backgroundPositionY = "28.36vw"
+    cycleRoadGuide.style.height = "4vw"
+})
+
+// 편의시설
+amenities.addEventListener('click', (e) => {
+    cycleRoadGuide.style.backgroundPositionY = "32.8vw"
+    cycleRoadGuide.style.height = "4.3vw"
+})
+
+
 // ----------------- 자전거길 플러시 카드 ---------------------------------
 
 const swiper1 = new Swiper(".mySwiper1", {
@@ -106,7 +145,6 @@ const swiper1 = new Swiper(".mySwiper1", {
         clickable: true,
     },
 });
-
 const swiper2 = new Swiper(".mySwiper2", {
     effect: "cards",
     grabCursor: true,
@@ -118,7 +156,6 @@ const swiper2 = new Swiper(".mySwiper2", {
         }
     }
 });
-
 const swiper3 = new Swiper(".mySwiper3", {
     effect: "cards",
     grabCursor: true,
@@ -191,3 +228,25 @@ const swiper8 = new Swiper(".mySwiper8", {
         }
     }
 });
+
+// 광역시 이동 기능
+function goMetroCity(metroCityBtn){
+    const metroNum = metroCityBtn.getAttribute("data-value")
+    swiper2.slideTo(0, 100)
+    swiper2.slideTo(metroNum, 1000)
+    swiper1.slideTo(0, 1000)
+}
+
+// 초보자 가이드 슬라이드 이동
+const urlParams = new URL(location.href).searchParams;
+const recommendParam = urlParams.get("recommend")
+if (recommendParam !== null){
+    if (recommendParam === "1"){
+        swiper1.slideTo(2, 1000)
+        swiper4.slideTo(recommendParam, 1000)
+    } else {
+        swiper1.slideTo(0,1000)
+        swiper2.slideTo(recommendParam, 1000)
+    }
+    location.href="#cycle-border";
+}

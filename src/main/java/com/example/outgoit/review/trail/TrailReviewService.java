@@ -31,13 +31,13 @@ public class TrailReviewService {
 
     // 리뷰 내용을 수정하는 메서드(만약 비밀번호가 맞으면)
     @Transactional
-    public void updateReviewContent(String content, Long commentNumber){
-        int countOfUpdatedRecord = this.repo.updateContentByCommentNumber(content, commentNumber);
-        System.out.printf("총 %d개의 리뷰가 수정됨. 레코드 넘버: %d\n", countOfUpdatedRecord, commentNumber);
+    public void updateReviewContent(String content, Long commentNumber, Integer rating){
+        int countOfUpdatedRecord = this.repo.updateContentByCommentNumber(content, commentNumber, rating);
+        System.out.printf("총 %d개의 리뷰가 수정됨. 레코드 넘버: %d\n", countOfUpdatedRecord, commentNumber, rating);
     }
     @Transactional
     public int updateReviewContent(TrailReview trailReview){
-        return this.repo.updateContentByCommentNumber(trailReview.getContent(), (long) Math.toIntExact(trailReview.getCommentNumber()));
+        return this.repo.updateContentByCommentNumber(trailReview.getContent(), (long) Math.toIntExact(trailReview.getCommentNumber()),trailReview.getRating());
 //        System.out.printf("총 %d개의 리뷰가 수정됨. 레코드 넘버: %d\n", countOfUpdatedRecord, commentNumber);
     }
     // 리뷰를 삭제하는 메서드(만약 비밀번호가 맞으면)

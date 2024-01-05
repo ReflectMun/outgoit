@@ -42,7 +42,7 @@ pageEncoding="UTF-8"%>
           <div class="rh-camping-wood-mainBox">
             <!-- 통나무 내용판 -->
             <div class="rh-camping-history-wood-main">
-              <p><img src="/resources/static/img/기타/pin.png" alt=""></p>
+              <p><img id="historyRedpin" src="/resources/static/img/기타/pin.png" alt=""></p>
               <p
                 class="rh-camping-history-wood-text"
                 data-aos="fade-up"
