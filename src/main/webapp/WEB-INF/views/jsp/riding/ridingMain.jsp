@@ -88,7 +88,7 @@
 
                         <%-- 자전거 지도 & 슬라이드 --%>
                     <div class="mh-map-all-riding">
-                        <div class="mh-button" id="cycle-road-btn">자전거 도로</div>
+                        <div class="mh-custom-btn mh-btn-14" id="cycle-road-btn">자전거 도로</div>
                         <div id="cycle-road-legend">
                             <div id="cycle-road-legend-menu">
                                 <div class="cycle-road-legend-btn" id="road-guide">도로안내</div>
