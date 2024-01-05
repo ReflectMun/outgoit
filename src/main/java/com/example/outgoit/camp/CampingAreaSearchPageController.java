@@ -40,22 +40,6 @@ public class CampingAreaSearchPageController {
 
 
 
-
-    @GetMapping("/About")
-    public String aboutPage(Model model){
-        return "RH/jsp/Camping/Camping_About";
-        // return "RH/jsp/Hiking/Hiking_About";
-        // return "RH/jsp/Riding/Riding_About";
-    }
-    @GetMapping("/Safety")
-    public String safetyPage(Model model){
-        return "RH/jsp/Camping/Camping_Safety";
-    }
-    @GetMapping("/Beginner")
-    public String beginnerPage(Model model){
-        return "RH/jsp/Camping/Camping_Beginner";
-    }
-
     @PostMapping("/detail/{campingAreaName}")
 
     public String sendDetailPage(

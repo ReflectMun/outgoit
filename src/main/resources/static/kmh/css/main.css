@@ -81,6 +81,11 @@
     object-fit: cover;
 }
 
+/*날씨 스와이퍼 배경*/
+.sw-background{
+    background-color: transparent;
+}
+
 /*슬라이드 끝*/
 
 /*.banner-wrap {*/
