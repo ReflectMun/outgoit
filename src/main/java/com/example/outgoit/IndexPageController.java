@@ -58,12 +58,56 @@ public class IndexPageController {
     @GetMapping("/hiking")
     public String sendHikingMainPage(Model model) {
         model.addAttribute("hikingContentPage", "hikingMain.jsp");
+
+        HashMap<String, WeatherApiResponseDTO> weatherList = weatherService.getWeatherDataList();
+        ArrayList<WeatherData> weatherDataList = new ArrayList<WeatherData>();
+        ArrayList<String> areaNames = new ArrayList<>(weatherList.keySet());
+
+        for(String area : areaNames){
+            String sky = weatherList.get(area).getSkyCondition();
+            String pty = weatherList.get(area).getPrecipitationType();
+
+            String weatherIcon = pty.equals("0")
+                    ? getSkyCondition(sky)
+                    : getPrecipitationType(pty);
+
+            weatherDataList.add(new WeatherData(
+                    area,
+                    weatherIcon,
+                    weatherList.get(area).getTemperature()
+            ));
+        }
+
+        model.addAttribute("weathers", weatherDataList);
+
         return "jsp/hiking/container";
     }
 
     @GetMapping("/riding")
     public String sendRidingMainPage(Model model) {
         model.addAttribute("ridingContentPage", "ridingMain.jsp");
+
+        HashMap<String, WeatherApiResponseDTO> weatherList = weatherService.getWeatherDataList();
+        ArrayList<WeatherData> weatherDataList = new ArrayList<WeatherData>();
+        ArrayList<String> areaNames = new ArrayList<>(weatherList.keySet());
+
+        for(String area : areaNames){
+            String sky = weatherList.get(area).getSkyCondition();
+            String pty = weatherList.get(area).getPrecipitationType();
+
+            String weatherIcon = pty.equals("0")
+                    ? getSkyCondition(sky)
+                    : getPrecipitationType(pty);
+
+            weatherDataList.add(new WeatherData(
+                    area,
+                    weatherIcon,
+                    weatherList.get(area).getTemperature()
+            ));
+        }
+
+        model.addAttribute("weathers", weatherDataList);
+
         return "jsp/riding/container";
     }
 

@@ -29,7 +29,6 @@
             <div class="swiper-slide"><img src="/resources/static/kmh/img/Campingbanner1.png"></div>
             <div class="swiper-slide"><img src="/resources/static/kmh/img/Campingbanner2.png"></div>
             <div class="swiper-slide"><img src="/resources/static/kmh/img/Campingbanner3.png"></div>
-            <%--                <div class="swiper-slide"><img src="../kmh/img/camping_banner.jpg"></div>--%>
         </div>
         <div class="mh-banner-txt-wrap">
             <div class="mh-banner-title">
@@ -101,7 +100,7 @@
 <script type="text/javascript"
         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=770a2850e8ce3177b209d2d94dc1e58b&libraries=services"></script>
 <script>
-    var swiper = new Swiper(".mySwiper", {
+    const swiper = new Swiper(".mySwiper", {
         loop: true,
         autoplay: {
             delay: 5000,
