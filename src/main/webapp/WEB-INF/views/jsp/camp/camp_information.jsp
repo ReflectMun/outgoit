@@ -290,13 +290,9 @@
 
             // 여기 위까지가 그거임 버튼 눌렀을 때 값 넘어가는 것
 
-<<<<<<< HEAD
             // 별 초기화, 닉네임 초기화
-
             const nicknameInput = document.getElementById('hj-id-input');
-=======
             // 별 초기화
->>>>>>> rh
             const starsValue = document.getElementsByClassName("hj-star");
             for (const star of starsValue) {
                 star.innerHTML = "☆";

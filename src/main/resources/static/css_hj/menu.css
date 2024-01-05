@@ -935,11 +935,11 @@ body {
         /*border: 1px solid red;*/
         width: 10vw;
         height: 10vw;
-        background-image: url("../Img_hj/menu_moon1.png");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
         margin-top: 2vw;
+        background-image: url("/resources/static/Img_hj/menu_moon_y.png");
         text-align: center;
     }
 

@@ -482,7 +482,7 @@ body {
     .hj-menu-icon {
         width: 8vw;
         height: 8vw;
-        background-image: url("../Img_hj/menu_sun1.png");
+        background-image: url("/resources/static/Img_hj/menu_sun_y.png");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
