@@ -484,7 +484,7 @@ body {
     /*border: 1px solid red;*/
     width: 3vw;
     height: 4vw;
-    background-image: url("../Img_hj/menu_moon1.png");
+    background-image: url("/resources/static/Img_hj/menu_moon_y.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
