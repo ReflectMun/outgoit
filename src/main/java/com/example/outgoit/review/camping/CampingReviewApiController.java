@@ -1,5 +1,6 @@
 package com.example.outgoit.review.camping;
 
+import com.example.outgoit.nickname.RandomNicknameService;
 import com.example.outgoit.review.camping.dto.CampingReviewDeleteDTO;
 import com.example.outgoit.review.camping.dto.CampingReviewModifyingDTO;
 import com.example.outgoit.review.camping.dto.CampingReviewSubmitBodyDTO;
@@ -18,9 +19,10 @@ import java.util.ArrayList;
 public class CampingReviewApiController {
     //////////////////// 초기화 코드니까 말 없이 건드리지 마시오 /////////////////////////
     private final CampingReviewService campingReviewService;
-
-    public CampingReviewApiController(CampingReviewService campingReviewService){
+    private final RandomNicknameService randomNicknameService;
+    public CampingReviewApiController(CampingReviewService campingReviewService, RandomNicknameService randomNicknameService){
         this.campingReviewService = campingReviewService;
+        this.randomNicknameService = randomNicknameService;
     }
     ////////////////////////////////////////////////////////////////////////////
 
@@ -35,6 +37,7 @@ public class CampingReviewApiController {
             }
 
             resultCode = campingReviewService.submitReview(
+//                    randomNicknameService.getRandomNickname(),
                     body.getAuthor(),
                     body.getPassword(),
                     body.getContent(),

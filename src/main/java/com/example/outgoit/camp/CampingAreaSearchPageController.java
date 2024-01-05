@@ -1,5 +1,6 @@
 package com.example.outgoit.camp;
 
+import com.example.outgoit.nickname.RandomNicknameService;
 import com.example.outgoit.review.camping.CampingReview;
 import com.example.outgoit.review.camping.CampingReviewService;
 import org.springframework.data.domain.PageRequest;
@@ -19,13 +20,16 @@ public class CampingAreaSearchPageController {
     // 허락없이 건들면 뒤집니다
     private final CampingReviewService campingReviewService;
     private final CampingSearchService campingSearchService;
+    private final RandomNicknameService randomNicknameService;
 
     public CampingAreaSearchPageController(
             CampingReviewService campingReviewService,
-            CampingSearchService campingSearchService
+            CampingSearchService campingSearchService,
+            RandomNicknameService randomNicknameService
     ){
         this.campingReviewService = campingReviewService;
         this.campingSearchService = campingSearchService;
+        this.randomNicknameService = randomNicknameService;
     }
     ////////////////////////////////////////////////////////
 
@@ -128,6 +132,7 @@ public class CampingAreaSearchPageController {
         model.addAttribute("siteGravel", data.getSiteBottomCl4());
         model.addAttribute("siteSoil", data.getSiteBottomCl5());
         model.addAttribute("campingContentPage","camp_information.jsp");
+        model.addAttribute("nickname", randomNicknameService.getRandomNickname());
         return "jsp/camp/container";
     }
 
