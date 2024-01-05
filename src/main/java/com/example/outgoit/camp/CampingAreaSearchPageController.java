@@ -2,6 +2,8 @@ package com.example.outgoit.camp;
 
 import com.example.outgoit.review.camping.CampingReview;
 import com.example.outgoit.review.camping.CampingReviewService;
+import com.example.outgoit.weather.WeatherService;
+import com.example.outgoit.weather.dto.WeatherApiResponseDTO;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -19,13 +21,16 @@ public class CampingAreaSearchPageController {
     // 허락없이 건들면 뒤집니다
     private final CampingReviewService campingReviewService;
     private final CampingSearchService campingSearchService;
+    private final WeatherService weatherService;
 
     public CampingAreaSearchPageController(
             CampingReviewService campingReviewService,
-            CampingSearchService campingSearchService
+            CampingSearchService campingSearchService,
+            WeatherService weatherService
     ){
         this.campingReviewService = campingReviewService;
         this.campingSearchService = campingSearchService;
+        this.weatherService = weatherService;
     }
     ////////////////////////////////////////////////////////
 
@@ -57,6 +62,14 @@ public class CampingAreaSearchPageController {
         Pageable modified = PageRequest.of(0, pageable.getPageSize(), pageable.getSort());
         ArrayList<CampingReview> reviews =
                 new ArrayList<>(campingReviewService.loadCampingAreaReview(data.getContentId(), modified).getContent());
+
+        WeatherApiResponseDTO weather = weatherService.getWeatherDataByCoordinate(
+                Double.parseDouble(data.getMapY()),
+                Double.parseDouble(data.getMapX())
+        );
+
+        model.addAttribute("weatherIcon", weatherService.getWeatherIcon(weather));
+        model.addAttribute("temperature", weather.getTemperature());
 
         String ratingAvg;
         try {

@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="/resources/static/kmh/css/main.css">
     <link rel="stylesheet" href="/resources/static/kmh/css/main_media.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-    <script src="/resources/static/rh/js/banner.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
@@ -30,7 +29,6 @@
             <div class="swiper-slide"><img src="/resources/static/kmh/img/Campingbanner1.png"></div>
             <div class="swiper-slide"><img src="/resources/static/kmh/img/Campingbanner2.png"></div>
             <div class="swiper-slide"><img src="/resources/static/kmh/img/Campingbanner3.png"></div>
-            <%--                <div class="swiper-slide"><img src="../kmh/img/camping_banner.jpg"></div>--%>
         </div>
         <div class="mh-banner-txt-wrap">
             <div class="mh-banner-title">
@@ -48,12 +46,20 @@
     <div class="mh-content">
         <%--            날씨 부분--%>
         <div class="mh-weather-container">
-            <div class="mh-weather-text">
-
-                    <li><span>서울</span><img src="/resources/static/img/weather/rain.png" alt=""><span>이걸 어카노</span></li>
+            <div class="swiper" id="weather-list-swiper">
+                <div class="swiper-wrapper">
+                    <c:forEach var="data" items="${weathers}">
+                        <div class="swiper-slide">
+                            <span>${data.area}</span>&nbsp;
+                            </nbsp><img style="width: 1.3vw; height: auto;"
+                                        src="/resources/static/img/weather/${data.weatherIcon}.png" alt="">&nbsp;
+                            <span>${data.temperature}℃</span>
+                        </div>
+                    </c:forEach>
+                </div>
             </div>
         </div>
-<%--            search--%>
+        <%--            search--%>
         <div class="mh-map-txt-wrap">
             <div class="mh-map-title">
                 <span> Camping Area Search </span>
@@ -95,14 +101,15 @@
 <script type="text/javascript"
         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=770a2850e8ce3177b209d2d94dc1e58b&libraries=services"></script>
 <script type="text/javascript" src="/resources/static/kmh/js/draft1.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="/resources/static/rh/js/banner.js"></script>
 <script>
-    var swiper = new Swiper(".mySwiper", {
+    const swiper = new Swiper(".mySwiper", {
         loop: true,
         autoplay: {
-            delay: 3000,
+            delay: 5000,
         },
     });
 </script>
+
 </body>
 </html>
