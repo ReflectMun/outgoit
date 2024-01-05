@@ -486,5 +486,8 @@
     .mh-weather-text li > img{
         width: 3vw;
     }
+    .sw-background{
+        background-color: transparent;
+    }
 
 }
