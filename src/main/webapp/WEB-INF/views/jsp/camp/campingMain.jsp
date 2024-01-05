@@ -60,8 +60,7 @@
                     <c:forEach var="data" items="${weathers}">
                         <div class="swiper-slide sw-background">
                             <span>${data.area}</span>&nbsp;
-                            </nbsp><img style="width: 1.3vw; height: auto;"
-                                        src="/resources/static/img/weather/${data.weatherIcon}.png" alt="">&nbsp;
+                            </nbsp><img src="/resources/static/img/weather/${data.weatherIcon}.png" alt="">&nbsp;
                             <span>${data.temperature}℃</span>
                         </div>
                     </c:forEach>

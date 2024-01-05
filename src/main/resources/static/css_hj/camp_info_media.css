@@ -164,7 +164,6 @@
         right: 2%;
         top: 3%;
         height: auto;
-
         color: black;
         font-family: 'SOYOMapleBoldTTF';
         /* 팝업 효과*/
@@ -216,7 +215,8 @@
         line-height: 2;
         margin: 0 5% 0 5%;
     }
-    #hj-no{
+
+    #hj-no {
         margin-top: 5%;
     }
 
@@ -363,11 +363,11 @@
         justify-content: center;
         cursor: pointer;
         text-align: center;
-        width: 15vw;
+        width: 20vw;
         height: 4vw;
         outline: none;
         background-color: rgb(250 250 250 / 0%);
-        font-size: 2.5vw;
+        font-size: 2.2vw;
         border-width: 0;
         border-bottom: 1px solid black;
     }
@@ -460,7 +460,6 @@
     }
 
     #hj-review-inside-box2 {
-        /* border: 2px solid red; */
         display: flex;
         justify-content: center;
         width: 90vw;
@@ -508,7 +507,7 @@
 
     .hj-review-nickname {
         font-size: 2.5vw;
-margin-bottom: 6%;
+        margin-bottom: 6%;
     }
 
     .hj-review-comment {
@@ -535,8 +534,10 @@ margin-bottom: 6%;
 
     .hj-comment-textarea {
         background-color: transparent;
-        width: 17.7vw;
-        height: 14vw;
+        width: 39vw;
+        height: 30vw;
+        margin-top: 5vw;
+        font-family: 'SOYOMapleBoldTTF';
     }
 
     .hj-review-stars-edit {
@@ -544,7 +545,7 @@ margin-bottom: 6%;
         align-content: space-between;
         width: 8vw;
         height: auto;
-        font-size: 1.5vw;
+        font-size: 3vw;
     }
 
     .hj-review-star-edit {
@@ -579,28 +580,29 @@ margin-bottom: 6%;
     .hj-edit-part:hover {
         cursor: pointer;
     }
-
+    .hj-edit-part{
+        margin-top: 2vw;
+    }
     /* 드롭 수정 삭제 창*/
     .hj-edit-drop {
         position: absolute;
-        font-size: 1vw;
+        font-size: 2.5vw;
         right: 1vw;
-        top: 90%;
+        top: 10%;
         display: none;
         transition: height 0.5s ease;
         text-align: center;
-        width: 12vw;
-
+        width: auto;
     }
 
     .hj-edit-drop-box {
-        display: flex;
-        justify-content: space-between;
+        display: block;
     }
 
     .hj-edit-drop input {
-        width: 6vw;
-        height: 1vw;
+        width: 13vw;
+        height: auto;
+        font-size: 2.5vw;
     }
 
     .hj-password-input {
@@ -640,7 +642,8 @@ margin-bottom: 6%;
         font-size: 2vw;
         margin-bottom: 5%;
     }
-    #hj-pages{
+
+    #hj-pages {
         margin: 0vw 2vw;
     }
 
@@ -663,7 +666,7 @@ margin-bottom: 6%;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 3vw;
+        height: 5vw;
         margin-bottom: 2%;
     }
 
@@ -675,11 +678,11 @@ margin-bottom: 6%;
     }
 
     #hj-info-weather-text > span {
-        margin: 0 1vw 0 1vw;
+        margin: 0 2vw 0 2vw;
     }
 
     #hj-info-weather-text > img {
-        width: 3.5vw;
+        width: 5vw;
     }
 
     /*상세정보 세팅*/
