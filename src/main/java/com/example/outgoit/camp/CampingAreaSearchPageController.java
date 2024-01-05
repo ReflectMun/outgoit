@@ -22,28 +22,19 @@ public class CampingAreaSearchPageController {
     // 허락없이 건들면 뒤집니다
     private final CampingReviewService campingReviewService;
     private final CampingSearchService campingSearchService;
-<<<<<<< HEAD
     private final WeatherService weatherService;
-=======
     private final RandomNicknameService randomNicknameService;
->>>>>>> rh
 
     public CampingAreaSearchPageController(
             CampingReviewService campingReviewService,
             CampingSearchService campingSearchService,
-<<<<<<< HEAD
-            WeatherService weatherService
-    ){
-        this.campingReviewService = campingReviewService;
-        this.campingSearchService = campingSearchService;
-        this.weatherService = weatherService;
-=======
+            WeatherService weatherService,
             RandomNicknameService randomNicknameService
     ){
-        this.campingReviewService = campingReviewService;
-        this.campingSearchService = campingSearchService;
-        this.randomNicknameService = randomNicknameService;
->>>>>>> rh
+            this.campingReviewService = campingReviewService;
+            this.campingSearchService = campingSearchService;
+            this.weatherService = weatherService;
+            this.randomNicknameService = randomNicknameService;
     }
     ////////////////////////////////////////////////////////
 
