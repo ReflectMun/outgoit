@@ -21,8 +21,11 @@
 <input id="camping-area-id" value="${campingAreaNumber}" style="display: none;">
 <div id="hj-container2">
     <div id="hj-info-weather">
-        <div id="hj-info-weather-text"><span>서울</span><img src="/resources/static/img/weather/rain.png"
-                                                           alt=""><span>℃</span></div>
+        <div id="hj-info-weather-text">
+            <span>현재 캠핑장 날씨</span>
+            <img src="/resources/static/img/weather/${weatherIcon}.png">
+            <span>${temperature}℃</span>
+        </div>
     </div>
     <!-- 정보 div -->
     <div id="hj-info">

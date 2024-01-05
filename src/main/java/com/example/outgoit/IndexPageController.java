@@ -36,13 +36,7 @@ public class IndexPageController {
         ArrayList<String> areaNames = new ArrayList<>(weatherList.keySet());
 
         for(String area : areaNames){
-            String sky = weatherList.get(area).getSkyCondition();
-            String pty = weatherList.get(area).getPrecipitationType();
-
-            String weatherIcon = pty.equals("0")
-                    ? getSkyCondition(sky)
-                    : getPrecipitationType(pty);
-
+            String weatherIcon = weatherService.getWeatherIcon(weatherList.get(area));
             weatherDataList.add(new WeatherData(
                     area,
                     weatherIcon,
@@ -64,13 +58,7 @@ public class IndexPageController {
         ArrayList<String> areaNames = new ArrayList<>(weatherList.keySet());
 
         for(String area : areaNames){
-            String sky = weatherList.get(area).getSkyCondition();
-            String pty = weatherList.get(area).getPrecipitationType();
-
-            String weatherIcon = pty.equals("0")
-                    ? getSkyCondition(sky)
-                    : getPrecipitationType(pty);
-
+            String weatherIcon = weatherService.getWeatherIcon(weatherList.get(area));
             weatherDataList.add(new WeatherData(
                     area,
                     weatherIcon,
@@ -92,13 +80,7 @@ public class IndexPageController {
         ArrayList<String> areaNames = new ArrayList<>(weatherList.keySet());
 
         for(String area : areaNames){
-            String sky = weatherList.get(area).getSkyCondition();
-            String pty = weatherList.get(area).getPrecipitationType();
-
-            String weatherIcon = pty.equals("0")
-                    ? getSkyCondition(sky)
-                    : getPrecipitationType(pty);
-
+            String weatherIcon = weatherService.getWeatherIcon(weatherList.get(area));
             weatherDataList.add(new WeatherData(
                     area,
                     weatherIcon,

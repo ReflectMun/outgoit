@@ -206,6 +206,17 @@ public class WeatherService {
         return result;
     }
 
+    public String getWeatherIcon(WeatherApiResponseDTO data){
+        String sky = data.getSkyCondition();
+        String pty = data.getPrecipitationType();
+
+        String weatherIcon = pty.equals("0")
+                ? getSkyCondition(sky)
+                : getPrecipitationType(pty);
+
+        return weatherIcon;
+    }
+
     private GridCoordinate toGridCoordinate(Double lati, Double lngi){
         Double RE = 6371.00877; // 지구 반경
         Double GRID = 5.0; // 격자 간격
@@ -252,6 +263,21 @@ public class WeatherService {
         public GridCoordinate(Integer X, Integer Y){
             this.X = X;
             this.Y = Y;
+        }
+    }
+
+    private String getSkyCondition(String code){
+        return code.equals("4")
+                ? "cloudy"
+                : (code.equals("3") ? "cloud" : "sun");
+    }
+
+    private String getPrecipitationType(String code){
+        switch (code){
+            case "3", "7":
+                return "cloud_snow";
+            default:
+                return "rain";
         }
     }
 }

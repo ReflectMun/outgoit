@@ -3,6 +3,8 @@ package com.example.outgoit.trail;
 import com.example.outgoit.review.trail.TrailReview;
 import com.example.outgoit.review.trail.TrailReviewService;
 import com.example.outgoit.trail.dto.FeatureData;
+import com.example.outgoit.weather.WeatherService;
+import com.example.outgoit.weather.dto.WeatherApiResponseDTO;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -27,12 +29,17 @@ public class TrailRoutePageController {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////// 의존성 주입 코드 ////////////////////////////////////////////////////
     private final TrailRouteService trailRouteService;
-    public final TrailReviewService trailReviewService;
+    private final TrailReviewService trailReviewService;
+    private final WeatherService weatherService;
 
-    public TrailRoutePageController(TrailRouteService trailRouteService, TrailReviewService trailReviewService) {
-
+    public TrailRoutePageController(
+            TrailRouteService trailRouteService,
+            TrailReviewService trailReviewService,
+            WeatherService weatherService
+    ) {
         this.trailRouteService = trailRouteService;
         this.trailReviewService = trailReviewService;
+        this.weatherService = weatherService;
     }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -89,6 +96,11 @@ public class TrailRoutePageController {
         Pageable modified = PageRequest.of(0, pageable.getPageSize(), pageable.getSort());
         ArrayList<TrailReview> reviews =
                 new ArrayList<>(trailReviewService.loadTrailRouteReview(trailRouteId, modified).getContent());
+
+        WeatherApiResponseDTO weather = weatherService.getWeatherDataByCoordinate(lati, lngi);
+
+        model.addAttribute("weatherIcon", weatherService.getWeatherIcon(weather));
+        model.addAttribute("temperature", weather.getTemperature());
 
         String ratingAvg;
         try {
