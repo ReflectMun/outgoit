@@ -39,6 +39,8 @@ public class WeatherService {
         result.put("진주", getWeatherDataByGrid(81, 75));
         result.put("제주", getWeatherDataByGrid(52, 38));
 
+        System.out.println("지역별 날씨정보 불러오기 완료");
+
         return result;
     }
 
