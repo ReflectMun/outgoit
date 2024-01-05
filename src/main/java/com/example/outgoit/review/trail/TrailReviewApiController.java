@@ -35,8 +35,8 @@ public class TrailReviewApiController {
     }
 
     @PostMapping("/rating")
-    public ArrayList<Object> getTrailRouteReview(@RequestBody TrailReview trailReview){
-        return new  ArrayList<> (trailReviewService.getTrailRouteRating(trailReview.getTrailRouteId()));
+    public ArrayList<Object> getTrailRouteRating(String trailRouteID){
+        return new  ArrayList<> (trailReviewService.getTrailRouteRating(trailRouteID));
     }
 
     @PostMapping("/update")
