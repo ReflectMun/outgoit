@@ -75,6 +75,7 @@
                         <button class="mh-button" id="submit-search"><span>Search</span></button>
                     </div>
                     <div class="mh-map-all">
+                        <div class="mh-custom-btn mh-btn-14" id="trail-road-btn">지형 정보</div>
                         <div id="map"></div>
                         <div id="search-result-list"><h1></h1></div>
                     </div>

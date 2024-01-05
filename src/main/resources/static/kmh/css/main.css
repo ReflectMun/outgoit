@@ -397,6 +397,20 @@
     cursor: pointer;
 }
 
+/* 지형 온오프 버튼 */
+#trail-road-btn {
+    font-size: 0.8vw;
+    padding: 0.5vw 1vw;
+    width: auto;
+    height: auto;
+    display: flex;
+    position: absolute;
+    z-index: 500;
+    left: 20.6vw;
+    margin-top: 0.3vw;
+}
+
+
 /* 자전거 도로 버튼*/
 .mh-btn-14 {
     font-family: 'SOYOMapleBoldTTF';
@@ -406,29 +420,30 @@
     border-radius: 2vw;
     /*border: 0.1vw solid black;*/
 }
-.mh-btn-14:after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 0;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: #ffb459;
-    transition: all 0.3s ease;
-    border-radius: 2vw;
-}
+/*.mh-btn-14:after {*/
+/*    position: absolute;*/
+/*    content: "";*/
+/*    width: 100%;*/
+/*    height: 0;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    z-index: -1;*/
+/*    background: #ffb459;*/
+/*    transition: all 0.3s ease;*/
+/*    border-radius: 2vw;*/
+/*}*/
 .mh-btn-14:hover {
+    background: #ffb459;
     color: #000000;
 }
-.mh-btn-14:hover:after {
-    top: auto;
-    bottom: 0;
-    height: 100%;
-}
-.mh-btn-14:active {
-    top: 1vw
-}
+/*.mh-btn-14:hover:after {*/
+/*    top: auto;*/
+/*    bottom: 0;*/
+/*    height: 100%;*/
+/*}*/
+/*.mh-btn-14:active {*/
+/*    top: 1vw*/
+/*}*/
 
 
 /*라이딩 지도 메뉴 버튼*/
