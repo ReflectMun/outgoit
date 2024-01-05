@@ -169,7 +169,7 @@
 
     .mh-map-all {
         width: 80vw;
-        height: 70vw;
+        height: 73vw;
         display: flex;
         justify-content: center;
         margin: auto;
@@ -458,7 +458,7 @@
         justify-content: center;
         align-items: center;
         margin: 7vw 0vw 1.5vw 0vw;
-        height: 4vw;
+        height: 5vw;
         overflow-y: hidden;
     }
 
@@ -478,17 +478,28 @@
         align-items: center;
         justify-content: center;
     }
-    .mh-weather-text li > span{
+    .sw-background > span{
         font-size: 3.5vw;
         margin: 0vw 2vw 0vw 2vw;
         font-family: 'Pretendard-Regular';
     }
-    .mh-weather-text li > img{
-        width: 3vw;
+    .sw-background > img {
+        width: 5vw;
+        height: auto;
     }
     .sw-background{
         background-color: transparent;
     }
+    #trail-road-btn {
+        font-size: 2.5vw;
+        padding: 0.5vw 1vw;
+        width: auto;
+        height: auto;
+        display: flex;
+        position: absolute;
+        z-index: 500;
+        left: 12vw;
+        margin-top: 0.3vw;
 
-
+    }
 }

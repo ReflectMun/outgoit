@@ -88,7 +88,7 @@
         background-size: contain;
         background-repeat: no-repeat;
         position: absolute;
-        top: 60.5%;
+        top: 57%;
         right: 40%;
     }
 
@@ -214,6 +214,11 @@
     #hj-ability,
     #hj-etc,
     #hj-rating-avg {
+        font-size: 3vw;
+        line-height: 2;
+        margin: 0 5% 0 5%;
+    }
+    .hj-addr{
         font-size: 3vw;
         line-height: 2;
         margin: 0 5% 0 5%;
@@ -365,11 +370,11 @@
         justify-content: center;
         cursor: pointer;
         text-align: center;
-        width: 15vw;
+        width: 20vw;
         height: 4vw;
         outline: none;
         background-color: rgb(250 250 250 / 0%);
-        font-size: 2.5vw;
+        font-size: 2.2vw;
         border-width: 0;
         border-bottom: 1px solid black;
     }
@@ -537,16 +542,17 @@
 
     .hj-comment-textarea {
         background-color: transparent;
-        width: 17.7vw;
-        height: 14vw;
+        width: 39vw;
+        height: 30vw;
+        margin-top: 5vw;
+        font-family: 'SOYOMapleBoldTTF';
     }
-
     .hj-review-stars-edit {
         display: flex;
         align-content: space-between;
         width: 8vw;
         height: auto;
-        font-size: 1.5vw;
+        font-size: 3vw;
     }
 
     .hj-review-star-edit {
@@ -585,25 +591,27 @@
     /* 드롭 수정 삭제 창*/
     .hj-edit-drop {
         position: absolute;
-        font-size: 1vw;
+        font-size: 2.5vw;
         right: 1vw;
-        top: 90%;
+        top: 10%;
         display: none;
         transition: height 0.5s ease;
         text-align: center;
-        width: 12vw;
-
+        width: auto;
     }
 
     .hj-edit-drop-box {
-        display: flex;
-        justify-content: space-between;
+        display: block;
+    }
+    .hj-edit-part{
+        margin-top: 2vw;
+    }
+    .hj-edit-drop input {
+        width: 13vw;
+        height: auto;
+        font-size: 2.5vw;
     }
 
-    .hj-edit-drop input {
-        width: 6vw;
-        height: 1vw;
-    }
 
     .hj-password-input {
         width: 6vw;
@@ -665,7 +673,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 3vw;
+        height: 5vw;
         margin-bottom: 2%;
     }
 
@@ -677,11 +685,11 @@
     }
 
     #hj-info-weather-text > span {
-        margin: 0 1vw 0 1vw;
+        margin: 0 2vw 0 2vw;
     }
 
     #hj-info-weather-text > img {
-        width: 3.5vw;
+        width: 5vw;
     }
 
     /*상세정보 세팅*/

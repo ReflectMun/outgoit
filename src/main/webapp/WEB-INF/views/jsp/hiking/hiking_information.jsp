@@ -106,10 +106,9 @@
                                         <input
                                                 type="text"
                                                 id="hj-id-input"
-                                                placeholder="닉네임"
                                                 name="author"
-                                                onfocus="this.placeholder=''"
-                                                onblur="this.placeholder='닉네임'"
+                                                value="${nickname}"
+                                                readonly
                                         />
                                     </div>
                                     <div id="hj-pw">
@@ -155,8 +154,6 @@
                 <!--  칠판 코멘트 -->
                 <div id="hj-content-box-comment2"><span>Hiking</span></div>
                 <div id="hj-review-inside-box2">
-
-                    <
                     <div id="hj-review-zentai-box">
 
                         <!-- 작성된 리뷰들을 개별 출력하는 부분 -->
@@ -249,6 +246,11 @@
                 alert("오류가 발생 했습니다")
                 return
             }
+            // 별 초기화
+            const starsValue = document.getElementsByClassName("hj-star");
+            for (const star of starsValue) {
+                star.innerHTML = "☆";
+            }
 
             const trailAreaId = document.getElementById("trail-area-id").value
 
@@ -300,10 +302,14 @@
                 reviewListContainer.appendChild(madeReviewBox)
             }
 
+            const reqUrl2 = "/nickname/show"
+            const {data: resData2} = await axios.get(reqUrl2)
+
             // 작성을 완료하고 입력 박스들을 비움
             passwordInput.value = ""
-            authorInput.value = ""
             contentInput.value = ""
+            // 랜덤 닉네임 새로 넣어줌
+            authorInput.value = resData2; //     resData2에 초기화된 닉네임이 담겨있음
 
             // 평점 별 초기화
             const starList = document.getElementsByClassName("hj-star")

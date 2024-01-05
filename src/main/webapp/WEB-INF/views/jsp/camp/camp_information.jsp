@@ -150,11 +150,8 @@
                                             <input
                                                     type="text"
                                                     id="hj-id-input"
-                                            <%--                                                    placeholder="${nickname}"--%>
                                                     name="author"
                                                     value="${nickname}"
-                                            <%--                                                    onfocus="this.placeholder=''"--%>
-                                            <%--                                                    onblur="this.placeholder='닉네임'"--%>
                                                     readonly
                                             />
                                         </div>
@@ -293,13 +290,18 @@
 
             // 여기 위까지가 그거임 버튼 눌렀을 때 값 넘어가는 것
 
+<<<<<<< HEAD
             // 별 초기화, 닉네임 초기화
 
             const nicknameInput = document.getElementById('hj-id-input');
+=======
+            // 별 초기화
+>>>>>>> rh
             const starsValue = document.getElementsByClassName("hj-star");
             for (const star of starsValue) {
                 star.innerHTML = "☆";
             }
+            // 여기까지가 초기화
 
 
             const campingAreaId = document.getElementById("camping-area-id").value
