@@ -43,6 +43,8 @@ public class WeatherTestController {
         result.put("진주", weatherService.getWeatherDataByGrid(81, 75));
         result.put("제주", weatherService.getWeatherDataByGrid(52, 38));
 
+
+
         return result;
     }
 }

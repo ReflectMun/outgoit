@@ -1,275 +1,298 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Joti+One&display=swap");
+
 @font-face {
-  font-family: "JalnanGothic";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "JalnanGothic";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
+
 @font-face {
-  font-family: "SOYOMapleBoldTTF";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2")
-    format("woff2");
-  font-weight: 700;
-  font-style: normal;
+    font-family: "SOYOMapleBoldTTF";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
 }
 
 /* 공통 내용 */
 
 body {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  background: #FFFAF6;
-  overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: #FFFAF6;
+    overflow-x: hidden;
 }
+
 /* 기본은 비기너 가이드임 */
 .rh-riding-titleBox {
-  width: 100%;
-  height: 26.042vw;
-  margin-bottom: 5%;
-  background-image: url("/resources/static/img/자전거/riding_beginner2.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  /* border: 2px solid rgb(255, 0, 0); */
+    width: 100%;
+    height: 26.042vw;
+    margin-bottom: 5%;
+    background-image: url("/resources/static/img/자전거/riding_beginner2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    /* border: 2px solid rgb(255, 0, 0); */
 }
 
 .rh-riding-title {
-  font-family: JalnanGothic;
-  width: 27%;
-  font-size: 4vw;
-  position: relative;
-  left: 13%;
-  animation: fadeInUp 1s ease-out forwards;
+    font-family: JalnanGothic;
+    width: 27%;
+    font-size: 4vw;
+    position: relative;
+    left: 13%;
+    animation: fadeInUp 1s ease-out forwards;
 }
+
 @keyframes fadeInUp {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .rh-riding-content {
-  /* border: 3px solid rgb(21, 255, 0); */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    /* border: 3px solid rgb(21, 255, 0); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+
 .rh-riding-wood {
-  /* border: 1px solid rgb(0, 183, 255); */
-  width: 70vw;
-  text-align: center;
+    /* border: 1px solid rgb(0, 183, 255); */
+    width: 70vw;
+    text-align: center;
 }
+
 .rh-riding-wood-titleBox {
-  /* border: 5px solid rgb(255, 0, 43); */
-  height: 5.5vw;
-  display: flex;
-  justify-content: center;
+    /* border: 5px solid rgb(255, 0, 43); */
+    height: 5.5vw;
+    display: flex;
+    justify-content: center;
 }
+
 .rh-riding-wood-title {
-  width: 50vw;
-  border: 0.5vw solid rgb(76 44 9);
-  background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
-  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
-  background-size: contain;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.4vw;
-  font-family: "JalnanGothic";
-  color: #ffffff;
-  -webkit-text-stroke: 0.1vw #290b0b;
+    width: 50vw;
+    border: 0.5vw solid rgb(76 44 9);
+    background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
+    background-size: initial;
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4vw;
+    font-family: "JalnanGothic";
+    color: #ffffff;
+    -webkit-text-stroke: 0.1vw #290b0b;
+    border-radius: 3vw;
 }
+
 .rh-riding-wood-bridgeBox {
-  /* border: 5px solid rgb(255, 0, 217); */
-  display: flex;
-  justify-content: center;
+    /* border: 5px solid rgb(255, 0, 217); */
+    display: flex;
+    justify-content: center;
 }
+
 .rh-riding-wood-bridgeSet {
-  /* border: 1px solid rgb(255, 0, 179); */
-  width: 45vw;
-  height: 3vh;
-  display: flex;
-  justify-content: space-between;
+    /* border: 1px solid rgb(255, 0, 179); */
+    width: 43vw;
+    height: 2.5vw;
+    display: flex;
+    justify-content: space-between;
 }
+
 .rh-riding-wood-bridge {
-  background-image: url(/resources/static/img/기타/나무보드.jpg);
-  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
-  background-size: contain;
-  width: 3vw;
+    background-image: url(/resources/static/img/기타/나무보드.jpg);
+    box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
+    background-size: contain;
+    width: 3vw;
 }
+
 .rh-riding-wood-mainBox {
-  border: 1vw solid rgb(76 44 9);
-  display: flex;
-  background-image: url(/resources/static/img/기타/나무보드.jpg);
-  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
-  background-size: contain;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 3vw 0;
-  border-radius: 1%;
+    border: 1vw solid rgb(76 44 9);
+    display: flex;
+    background-image: url(/resources/static/img/기타/나무보드.jpg);
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
+    background-size: contain;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3vw 0;
+    border-radius: 3VW;
 }
 
 /* 정보 카드 */
 .rh-riding-wood-main {
-  background-image: url("/resources/static/img/기타/양피지.png");
-  background-size: 100% 100%;
-  width: 20vw;
-  height: 20vw;
-  margin: 1.5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 0.9vw;
-  position: relative;
-  z-index: 1;
+    background-image: url("/resources/static/img/기타/양피지.png");
+    background-size: 100% 100%;
+    width: 20vw;
+    height: 20vw;
+    margin: 1.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9vw;
+    position: relative;
+    z-index: 1;
 }
-.rh-pointer:hover{
-  cursor: pointer;
+
+.rh-pointer:hover {
+    cursor: pointer;
 }
 
 .rh-riding-wood-mainPost {
-  margin: 5%;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  text-align: justify;
+    margin: 5%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    text-align: justify;
 }
-.rh-riding-wood-mainPost-content6-set{
-  display: flex;
+
+.rh-riding-wood-mainPost-content6-set {
+    display: flex;
 }
 
 .rh-riding-wood-main-best {
-  margin: 5%;
-  display: flex;
-  font-size: 1vw;
-  height: 9vw;
-  border-radius: 10%;
+    margin: 5%;
+    display: flex;
+    font-size: 1vw;
+    height: 9vw;
+    border-radius: 10%;
 }
+
 .rh-riding-wood-mainPost-best {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  padding: 0vw 0.5vw;
-  align-items: end;
-  text-align: center;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    padding: 0vw 0.5vw;
+    align-items: end;
+    text-align: center;
 }
+
 .rh-riding-wood-main-best:hover {
-  box-shadow: 0 0 5px 0px gray;
-  transition: all 0.3s ease;
-  margin: 3%;
+    box-shadow: 0 0 5px 0px gray;
+    transition: all 0.3s ease;
+    margin: 3%;
 }
+
 .rh-riding-wood-mainPost-bestText {
-  text-align: right;
-  margin-bottom: 1vw;
-  color: white;
-  text-shadow: 0 0 3px black;
+    text-align: right;
+    margin-bottom: 1vw;
+    color: white;
+    text-shadow: 0 0 3px black;
 }
-.bestText2{
-  font-size: 1.5vw;
+
+.bestText2 {
+    font-size: 1.5vw;
 }
 
 
 .rh-animal-card {
-  font-size: 0.8vw;
-  text-align: center;
-  width: 19vw;
-  margin: 17% 0;
+    font-size: 0.8vw;
+    text-align: center;
+    width: 19vw;
+    margin: 17% 0;
 }
 
 .rh-animal-card tr:hover {
-  background-color: #98bd98;
-  transition: background-color 0.3s ease;
+    background-color: #98bd98;
+    transition: background-color 0.3s ease;
 }
 
 .rh-card-set {
-  font-size: 1.4vw;
+    font-size: 1.4vw;
 }
+
 .rh-back-set {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 7vw;
-  font-size: 1.1vw;
-  position: absolute;
-  bottom: 0.7vw
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 7vw;
+    font-size: 1.1vw;
+    position: absolute;
+    bottom: 0.7vw
 }
-#best1{
-  background-image: url("/resources/static/img/best/의암호.jpg");
-  border-radius: 5%;
-  background-size: cover;
-  background-position: right;
+
+#best1 {
+    background-image: url("/resources/static/img/best/의암호.jpg");
+    border-radius: 5%;
+    background-size: cover;
+    background-position: right;
 }
-#best2{
-  background-image: url("/resources/static/img/best/아라뱃길.jpg");
-  border-radius: 5%;
-  background-size: cover;
+
+#best2 {
+    background-image: url("/resources/static/img/best/아라뱃길.jpg");
+    border-radius: 5%;
+    background-size: cover;
 }
-#best3{
-  background-image: url("/resources/static/img/best/대청호수자전거길.jpg");
-  border-radius: 5%;
-  background-size: cover;
+
+#best3 {
+    background-image: url("/resources/static/img/best/대청호수자전거길.jpg");
+    border-radius: 5%;
+    background-size: cover;
 }
+
 /* 따로 만짐 안전가드 */
 .rh-riding-safety-titleBox {
-  width: 100%;
-  height: 26.042vw;
-  margin-bottom: 5%;
-  background-image: url("/resources/static/img/자전거/riding_safety.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  /* border: 2px solid rgb(255, 0, 0); */
+    width: 100%;
+    height: 26.042vw;
+    margin-bottom: 5%;
+    background-image: url("/resources/static/img/자전거/riding_safety.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    /* border: 2px solid rgb(255, 0, 0); */
 }
+
 .rh-riding-safety-title {
-  font-family: JalnanGothic;
-  width: 35%;
-  font-size: 4vw;
-  color: white;
-  position: relative;
-  left: 56%;
-  animation: fadeInUp 1s ease-out forwards;
+    font-family: JalnanGothic;
+    width: 35%;
+    font-size: 4vw;
+    color: white;
+    position: relative;
+    left: 56%;
+    animation: fadeInUp 1s ease-out forwards;
 }
 
 @keyframes fadeInUp {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* 따로 만짐 역사 */
 .rh-riding-history-titleBox {
-  width: 100%;
-  height: 26.042vw;
-  margin-bottom: 5%;
-  background-image: url("/resources/static/img/자전거/riding2.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
+    width: 100%;
+    height: 26.042vw;
+    margin-bottom: 5%;
+    background-image: url("/resources/static/img/자전거/riding2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
 
 }
+
 /*.rh-riding-history-wood-mainBox {*/
 /*  !* border: 5px solid rgb(64, 0, 255); *!*/
 /*  display: flex;*/
@@ -282,393 +305,421 @@ body {
 /*  padding: 4vw 0;*/
 /*}*/
 .rh-riding-history-wood-main {
-  /* border: 3px solid rgb(255, 0, 0); */
-  background-image: url("/resources/static/img/기타/양피지.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  width: 65vw;
-  margin: 1%;
-}
-.rh-riding-history-wood-text {
-  margin-top: 5%;
-  margin-bottom: 5%;
-  font-size: 1vw;
-}
-.rh-riding-history-wood-textLast {
-  margin-top: 5%;
-  margin-bottom: 10%;
-  line-height: 1.8vw;
-  font-size: 1vw;
-}
-
-/*비기너 선택 카드*/
-.rh-riding-wood-beginner-zone {
-  width: 60%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.1vw;
-  text-align: center;
-  margin-bottom: 2%;
-  padding: 0.1vw 1vw;
-  transition: 0.2s ease-in-out;
-}
-.rh-riding-wood-beginner-zone > img {
-  width: 33%;
-}
-
-.rh-riding-wood-beginner-zone:hover {
-  background-color: #275634;
-  color: white;
-}
-.first {
-  margin-top: 5%;
-}
-/*빨간핀*/
-/*핀 감싸는 div */
-.rh-redPin-height{
-  height: 2vw;
-}
-/*콘텐트를 봤을 때 pin*/
-.rh-redPin-textView{
-  height: 2vw;
-  position: absolute;
-  top: 1.4vw;
-}
-/*핀 img*/
-.rh-redPin{
-  width: 2.5vw;
-}
-#historyRedpin {
-  width: 3vw;
-}
-
-
-@media only screen and (max-width: 430px) and (max-height: 932px){
-  /* 공통 내용 */
-  body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-  }
-  /* 기본은 비기너 가이드임 */
-  .rh-riding-titleBox {
-    width: 100%;
-    height: 60vw;
-    margin-bottom: 5%;
-    background-image: url("/resources/static/img/자전거/riding_beginner2.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-  }
-
-  .rh-riding-title {
-    font-family: JalnanGothic;
-    width: 40%;
-    font-size: 6vw;
-    position: relative;
-    left: 13%;
-    animation: fadeInUp 1s ease-out forwards;
-  }
-  @keyframes fadeInUp {
-    0% {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  .rh-riding-content {
-    /* border: 3px solid rgb(21, 255, 0); */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .rh-riding-wood {
-    /* border: 1px solid rgb(0, 183, 255); */
-    width: 90vw;
-    text-align: center;
-  }
-  .rh-riding-wood-titleBox {
-    /* border: 5px solid rgb(255, 0, 43); */
-    height: 17vw;
-    display: flex;
-    justify-content: center;
-  }
-  .rh-riding-wood-title {
-    width: 70vw;
-    border: 0.5vw solid rgb(76 44 9);
-    background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
-    box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
-    background-size: contain;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5.5vw;
-    font-family: "JalnanGothic";
-    color: #ffffff;
-    -webkit-text-stroke: 0.1vw #290b0b;
-  }
-  .rh-riding-wood-bridgeBox {
-    /* border: 5px solid rgb(255, 0, 217); */
-    display: flex;
-    justify-content: center;
-  }
-  .rh-riding-wood-bridgeSet {
-    /* border: 1px solid rgb(255, 0, 179); */
-    width: 55vw;
-    height: 3vh;
-    display: flex;
-    justify-content: space-between;
-  }
-  .rh-riding-wood-bridge {
-    background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
-    box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
-    background-size: contain;
-    width: 6vw;
-  }
-  .rh-riding-wood-mainBox {
-    border: 1vw solid rgb(76 44 9);
-    display: flex;
-    background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
-    box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
-    background-size: contain;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 3vw 0;
-    border-radius: 5%;
-  }
-
-  /* 정보 카드 */
-  .rh-riding-wood-main {
-    background-image: url("/resources/static/img/기타/양피지.png");
-    background-size: 100% 100%;
-    width: 40vw;
-    height: 40vw;
-    margin: 1.5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 0.9vw;
-    position: relative;
-    z-index: 1;
-  }
-  .rh-pointer:hover{
-    cursor: pointer;
-  }
-
-  .rh-riding-wood-mainPost {
-    margin: 5%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
-    text-align: justify;
-    font-size: 2vw;
-  }
-  .rh-riding-wood-mainPost-content6-set{
-    display: flex;
-  }
-
-  .rh-riding-wood-main-best {
-    margin: 5%;
-    display: flex;
-    font-size: 1vw;
-    height: 18vw;
-    border-radius: 5%;
-  }
-  .rh-riding-wood-mainPost-best {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    padding: 0vw 0.5vw;
-    align-items: end;
-    text-align: center;
-  }
-  .rh-riding-wood-main-best:hover {
-    box-shadow: 0 0 5px 0px gray;
-    transition: all 0.3s ease;
-    margin: 2%;
-  }
-  .rh-riding-wood-mainPost-bestText {
-    text-align: right;
-    margin-bottom: 1vw;
-    color: white;
-    text-shadow: 0 0 3px black;
-  }
-  .bestText2{
-    font-size: 3vw;
-  }
-
-  .rh-animal-card {
-    font-size: 1.5vw;
-    text-align: center;
-    width: 38vw;
-    margin: 10% 0;
-  }
-
-  .rh-animal-card tr:hover {
-    background-color: #98bd98;
-    transition: background-color 0.3s ease;
-  }
-
-  .rh-card-set {
-    font-size: 3.5vw;
-  }
-  .rh-back-set {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 15vw;
-    font-size: 2.2vw;
-    position: absolute;
-    bottom: 0.7vw
-  }
-  #best1{
-    background-image: url("/resources/static/img/best/의암호.jpg");
-    border-radius: 5%;
-    background-size: cover;
-    background-position: right;
-  }
-  #best2{
-    background-image: url("/resources/static/img/best/아라뱃길.jpg");
-    border-radius: 5%;
-    background-size: cover;
-  }
-  #best3{
-    background-image: url("/resources/static/img/best/대청호수자전거길.jpg");
-    border-radius: 5%;
-    background-size: cover;
-  }
-  /* 따로 만짐 안전가드 */
-  .rh-riding-safety-titleBox {
-    width: 100%;
-    height: 26.042vw;
-    margin-bottom: 5%;
-    background-image: url("/resources/static/img/자전거/riding_safety.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    /* border: 2px solid rgb(255, 0, 0); */
-  }
-  .rh-riding-safety-title {
-    font-family: JalnanGothic;
-    width: 35%;
-    font-size: 4vw;
-    color: white;
-    position: relative;
-    left: 56%;
-    animation: fadeInUp 1s ease-out forwards;
-  }
-
-  @keyframes fadeInUp {
-    0% {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  /* 따로 만짐 역사 */
-  .rh-riding-history-titleBox {
-    width: 100%;
-    height: 60vw;
-    margin-bottom: 5%;
-    background-image: url("/resources/static/img/자전거/riding2.png");
-    background-position: 88%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-  }
-  /*.rh-riding-history-wood-mainBox {*/
-  /*  !* border: 5px solid rgb(64, 0, 255); *!*/
-  /*  display: flex;*/
-  /*  background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);*/
-  /*  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;*/
-  /*  background-size: contain;*/
-  /*  flex-wrap: wrap;*/
-  /*  justify-content: center;*/
-  /*  background-color: rgb(226, 255, 238);*/
-  /*  padding: 4vw 0;*/
-  /*}*/
-  .rh-riding-history-wood-main {
     /* border: 3px solid rgb(255, 0, 0); */
     background-image: url("/resources/static/img/기타/양피지.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    width: 95vw;
+    width: 65vw;
     margin: 1%;
-  }
-  .rh-riding-history-wood-text {
-    margin: 5%;
-    font-size: 3vw;
-    line-height: 5vw;
-  }
-  .rh-riding-history-wood-textLast {
-    margin: 5% 5% 10% 5%;
-    font-size: 3vw;
-    line-height: 5vw;
-  }
+}
 
-  /*비기너 선택 카드*/
-  .rh-riding-wood-beginner-zone {
-    width: 50%;
+.rh-riding-history-wood-text {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 1vw;
+}
+
+.rh-riding-history-wood-textLast {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    line-height: 1.8vw;
+    font-size: 1vw;
+}
+
+/*비기너 선택 카드*/
+.rh-riding-wood-beginner-zone {
+    width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 2.2vw;
+    font-size: 1.1vw;
     text-align: center;
     margin-bottom: 2%;
-    padding: 0.3vw 2vw;
+    padding: 0.1vw 1vw;
     transition: 0.2s ease-in-out;
-  }
-  .rh-riding-wood-beginner-zone > img {
-    width: 33%;
-  }
+}
 
-  .rh-riding-wood-beginner-zone:hover {
+.rh-riding-wood-beginner-zone > img {
+    width: 33%;
+}
+
+.rh-riding-wood-beginner-zone:hover {
     background-color: #275634;
     color: white;
-  }
-  .first {
+}
+
+.first {
     margin-top: 5%;
-  }
-  /*빨간핀*/
-  /*핀 감싸는 div */
-  .rh-redPin-height{
-    height: 5vw;
-  }
-  /*콘텐트를 봤을 때 pin*/
-  .rh-redPin-textView{
-    height: 1vw;
+}
+
+/*빨간핀*/
+/*핀 감싸는 div */
+.rh-redPin-height {
+    height: 2vw;
+}
+
+/*콘텐트를 봤을 때 pin*/
+.rh-redPin-textView {
+    height: 2vw;
     position: absolute;
     top: 1.4vw;
-  }
-  /*핀 img*/
-  .rh-redPin{
-    width: 4vw;
-  }
-  #historyRedpin {
+}
+
+/*핀 img*/
+.rh-redPin {
+    width: 2.5vw;
+}
+
+#historyRedpin {
     width: 3vw;
-  }
+}
 
 
+@media only screen and (max-width: 430px) and (max-height: 932px) {
+    /* 공통 내용 */
+    body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+    }
 
+    /* 기본은 비기너 가이드임 */
+    .rh-riding-titleBox {
+        width: 100%;
+        height: 60vw;
+        margin-bottom: 5%;
+        background-image: url("/resources/static/img/자전거/riding_beginner2.jpg");
+        background-position: 90%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+    }
+
+    .rh-riding-title {
+        font-family: JalnanGothic;
+        width: 40%;
+        font-size: 6vw;
+        position: relative;
+        left: 13%;
+        animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .rh-riding-content {
+        /* border: 3px solid rgb(21, 255, 0); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .rh-riding-wood {
+        /* border: 1px solid rgb(0, 183, 255); */
+        width: 90vw;
+        text-align: center;
+    }
+
+    .rh-riding-wood-titleBox {
+        /* border: 5px solid rgb(255, 0, 43); */
+        height: 17vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .rh-riding-wood-title {
+        width: 70vw;
+        border: 1.5vw solid rgb(76 44 9);
+        background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
+        background-size: initial;
+        box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5.5vw;
+        font-family: "JalnanGothic";
+        color: #ffffff;
+        -webkit-text-stroke: 0.1vw #290b0b;
+        border-radius: 3vw;
+    }
+
+    .rh-riding-wood-bridgeBox {
+        /* border: 5px solid rgb(255, 0, 217); */
+        display: flex;
+        justify-content: center;
+    }
+
+    .rh-riding-wood-bridgeSet {
+        /* border: 1px solid rgb(255, 0, 179); */
+        width: 55vw;
+        height: 2.5vw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .rh-riding-wood-bridge {
+        background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
+        box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
+        background-size: contain;
+        width: 6vw;
+    }
+
+    .rh-riding-wood-mainBox {
+        border: 2vw solid rgb(76 44 9);
+        display: flex;
+        background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
+        background-size: contain;
+        box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 3vw 0;
+        border-radius: 5VW;
+    }
+
+    /* 정보 카드 */
+    .rh-riding-wood-main {
+        background-image: url("/resources/static/img/기타/양피지.png");
+        background-size: 100% 100%;
+        width: 40vw;
+        height: 40vw;
+        margin: 1.5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 0.9vw;
+        position: relative;
+        z-index: 1;
+    }
+
+    .rh-pointer:hover {
+        cursor: pointer;
+    }
+
+    .rh-riding-wood-mainPost {
+        margin: 5%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        text-align: justify;
+        font-size: 2vw;
+    }
+
+    .rh-riding-wood-mainPost-content6-set {
+        display: flex;
+    }
+
+    .rh-riding-wood-main-best {
+        margin: 5%;
+        display: flex;
+        font-size: 1vw;
+        height: 18vw;
+        border-radius: 5%;
+    }
+
+    .rh-riding-wood-mainPost-best {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        padding: 0vw 0.5vw;
+        align-items: end;
+        text-align: center;
+    }
+
+    .rh-riding-wood-main-best:hover {
+        box-shadow: 0 0 5px 0px gray;
+        transition: all 0.3s ease;
+        margin: 2%;
+    }
+
+    .rh-riding-wood-mainPost-bestText {
+        text-align: right;
+        margin-bottom: 1vw;
+        color: white;
+        text-shadow: 0 0 3px black;
+    }
+
+    .bestText2 {
+        font-size: 3vw;
+    }
+
+    .rh-animal-card {
+        font-size: 1.5vw;
+        text-align: center;
+        width: 38vw;
+        margin: 10% 0;
+    }
+
+    .rh-animal-card tr:hover {
+        background-color: #98bd98;
+        transition: background-color 0.3s ease;
+    }
+
+    .rh-card-set {
+        font-size: 3.5vw;
+    }
+
+    .rh-back-set {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 15vw;
+        font-size: 2.2vw;
+        position: absolute;
+        bottom: 0.7vw
+    }
+
+    #best1 {
+        background-image: url("/resources/static/img/best/의암호.jpg");
+        border-radius: 5%;
+        background-size: cover;
+        background-position: right;
+    }
+
+    #best2 {
+        background-image: url("/resources/static/img/best/아라뱃길.jpg");
+        border-radius: 5%;
+        background-size: cover;
+    }
+
+    #best3 {
+        background-image: url("/resources/static/img/best/대청호수자전거길.jpg");
+        border-radius: 5%;
+        background-size: cover;
+    }
+
+    /* 따로 만짐 안전가드 */
+    .rh-riding-safety-titleBox {
+        width: 100%;
+        height: 60vw;
+        margin-bottom: 5%;
+        background-image: url("/resources/static/img/자전거/riding_safety.jpg");
+        background-position: 37%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+    }
+
+    #ridingTitleText {
+        font-size: 6vw;
+    }
+
+    .rh-riding-safety-title {
+        font-family: JalnanGothic;
+        width: 45%;
+        font-size: 6vw;
+        color: white;
+        position: relative;
+        left: 52%;
+        animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* 따로 만짐 역사 */
+    .rh-riding-history-titleBox {
+        width: 100%;
+        height: 60vw;
+        margin-bottom: 5%;
+        background-image: url("/resources/static/img/자전거/riding2.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+    }
+
+    .rh-riding-history-wood-main {
+        /* border: 3px solid rgb(255, 0, 0); */
+        background-image: url("/resources/static/img/기타/양피지.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        width: 95vw;
+        margin: 1%;
+    }
+
+    .rh-riding-history-wood-text {
+        margin: 5%;
+        font-size: 3vw;
+        line-height: 5vw;
+    }
+
+    .rh-riding-history-wood-textLast {
+        margin: 5% 5% 10% 5%;
+        font-size: 3vw;
+        line-height: 5vw;
+    }
+
+    /*비기너 선택 카드*/
+    .rh-riding-wood-beginner-zone {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 2.2vw;
+        text-align: center;
+        margin-bottom: 2%;
+        padding: 0.3vw 2vw;
+        transition: 0.2s ease-in-out;
+    }
+
+    .rh-riding-wood-beginner-zone > img {
+        width: 33%;
+    }
+
+    .rh-riding-wood-beginner-zone:hover {
+        background-color: #275634;
+        color: white;
+    }
+
+    .first {
+        margin-top: 5%;
+    }
+
+    /*빨간핀*/
+    /*핀 감싸는 div */
+    .rh-redPin-height {
+        height: 5vw;
+    }
+
+    /*콘텐트를 봤을 때 pin*/
+    .rh-redPin-textView {
+        height: 1vw;
+        position: absolute;
+        top: 1.4vw;
+    }
+
+    /*핀 img*/
+    .rh-redPin {
+        width: 4vw;
+    }
+
+    #historyRedpin {
+        width: 3vw;
+    }
 
 
 }

@@ -3,81 +3,196 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 별똥별효과
     $(document).ready(function() {
-        const hoverEffect = $('.hj-col');
-        const starsContainer = $('.hj-star-container');
+//         const hoverEffect = $('.hj-col');
+//         const starsContainer = $('.hj-star-container');
+//
+//
+//         hoverEffect.on('mouseenter', function() {
+//             // for (let i = 0; i < 10; i++) {
+//             //     const star = $('<div class="star"></div>');
+//             //     star.css({
+//             //         left: Math.random() * 100 + '%',
+//             //         animationDuration: Math.random() * 9 + 1 + 's'
+//             //     });
+//             //     starsContainer.append(star);
+//             // }
+//
+//         });
+
+        // 시도
+
+            // 이미지 경로 배열
 
 
-        hoverEffect.on('mouseenter', function() {
-            for (let i = 0; i < 10; i++) {
-                const star = $('<div class="star"></div>');
-                star.css({
-                    left: Math.random() * 100 + '%',
-                    animationDuration: Math.random() * 9 + 1 + 's'
+                let starContainer = $('.hj-star-container');
+                let imagePaths = [
+                    "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s1.png",
+                    "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s2.png",
+                    "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s3.png",
+                    "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s4.png",
+                    "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s5.png",
+                    "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s6.png",
+                    "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s7.png",
+                    "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s8.png",
+                    "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s1.png",
+                    "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s2.png",
+                    "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s3.png",
+                    "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s4.png"
+                ];
+
+                // 이미지 떨어지는 애니메이션 함수
+
+
+                $('.hj-home').hover(
+                    function () {
+                        starContainer.empty(); // 이미지 초기화
+
+                        // 이미지 동적으로 생성하여 .hj-star-container에 추가
+                        $.each(imagePaths, function (index, imagePath) {
+                            let img = $('<img>', {
+                                src: imagePath,
+                                class: 'c1_s' + (index + 1),
+                                style: 'top:' + (index * 10) + 'px;left:' + (index * 130) + 'px;'
+                            });
+                            starContainer.append(img);
+                        });
+
+                        starContainer.fadeIn();
+                    },
+                    function () {
+                        // 호버 아웃
+                        starContainer.fadeOut();
+                    }
+                );
+
+
+
+        // hoverEffect.on('mouseleave', function() {
+        //     starsContainer.empty(); // 마우스를 떼면 별똥별을 모두 지웁니다.
+        // });
+
+        let starContainer2 = $('.hj-star-container-2');
+        let imagePaths2 = [
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s1.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s2.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s3.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s4.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s5.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s6.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s7.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s8.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s1.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s2.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s3.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s4.png"
+        ];
+
+        // 이미지 떨어지는 애니메이션 함수
+
+
+        $('.hj-story').hover(
+            function () {
+                starContainer2.empty(); // 이미지 초기화
+
+                // 이미지 동적으로 생성하여 .hj-star-container에 추가
+                $.each(imagePaths2, function (index, imagePath) {
+                    let img = $('<img>', {
+                        src: imagePath,
+                        class: 'c1_s' + (index + 1),
+                        style: 'top:' + (index * 10) + 'px;left:' + (index * 130) + 'px;'
+                    });
+                    starContainer2.append(img);
                 });
-                starsContainer.append(star);
+
+                starContainer2.fadeIn();
+            },
+            function () {
+                // 호버 아웃
+                starContainer2.fadeOut();
             }
-        });
+        );
 
-        hoverEffect.on('mouseleave', function() {
-            starsContainer.empty(); // 마우스를 떼면 별똥별을 모두 지웁니다.
-        });
+        let starContainer3 = $('.hj-star-container-3');
+        let imagePaths3 = [
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s1.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s2.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s3.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s4.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s5.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s6.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s7.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s8.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s1.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s2.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s3.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s4.png"
+        ];
 
-        const hoverEffect2 = $('.hj-col-2');
-        const starsContainer2 = $('.hj-star-container-2');
+        // 이미지 떨어지는 애니메이션 함수
 
 
-        hoverEffect2.on('mouseenter', function() {
-            for (let i = 0; i < 10; i++) {
-                const star2 = $('<div class="star2"></div>');
-                star2.css({
-                    left: Math.random() * 100 + '%',
-                    animationDuration: Math.random() * 9 + 1 + 's'
+        $('.hj-info').hover(
+            function () {
+                starContainer3.empty(); // 이미지 초기화
+
+                // 이미지 동적으로 생성하여 .hj-star-container에 추가
+                $.each(imagePaths3, function (index, imagePath) {
+                    let img = $('<img>', {
+                        src: imagePath,
+                        class: 'c1_s' + (index + 1),
+                        style: 'top:' + (index * 10) + 'px;left:' + (index * 130) + 'px;'
+                    });
+                    starContainer3.append(img);
                 });
-                starsContainer2.append(star2);
+
+                starContainer3.fadeIn();
+            },
+            function () {
+                // 호버 아웃
+                starContainer3.fadeOut();
             }
-        });
+        );
 
-        hoverEffect2.on('mouseleave', function() {
-            starsContainer2.empty(); // 마우스를 떼면 별똥별을 모두 지웁니다.
-        });
+        let starContainer4 = $('.hj-star-container-4');
+        let imagePaths4 = [
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s1.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s2.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s3.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s4.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s5.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s6.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s7.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s8.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s1.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s2.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s3.png",
+            "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s4.png"
+        ];
 
-        const hoverEffect3 = $('.hj-col-3');
-        const starsContainer3 = $('.hj-star-container-3');
+        // 이미지 떨어지는 애니메이션 함수
 
 
-        hoverEffect3.on('mouseenter', function() {
-            for (let i = 0; i < 10; i++) {
-                const star3 = $('<div class="star3"></div>');
-                star3.css({
-                    left: Math.random() * 100 + '%',
-                    animationDuration: Math.random() * 9 + 1 + 's'
+        $('.hj-guide').hover(
+            function () {
+                starContainer4.empty(); // 이미지 초기화
+
+                // 이미지 동적으로 생성하여 .hj-star-container에 추가
+                $.each(imagePaths4, function (index, imagePath) {
+                    let img = $('<img>', {
+                        src: imagePath,
+                        class: 'c1_s' + (index + 1),
+                        style: 'top:' + (index * 10) + 'px;left:' + (index * 200) + 'px;'
+                    });
+                    starContainer4.append(img);
                 });
-                starsContainer3.append(star3);
+
+                starContainer4.fadeIn();
+            },
+            function () {
+                // 호버 아웃
+                starContainer4.fadeOut();
             }
-        });
-
-        hoverEffect3.on('mouseleave', function() {
-            starsContainer3.empty(); // 마우스를 떼면 별똥별을 모두 지웁니다.
-        });
-
-        const hoverEffect4 = $('.hj-col-4');
-        const starsContainer4 = $('.hj-star-container-4');
-
-
-        hoverEffect4.on('mouseenter', function() {
-            for (let i = 0; i < 10; i++) {
-                const star4 = $('<div class="star4"></div>');
-                star4.css({
-                    left: Math.random() * 100 + '%',
-                    animationDuration: Math.random() * 9 + 1 + 's'
-                });
-                starsContainer4.append(star4);
-            }
-        });
-
-        hoverEffect4.on('mouseleave', function() {
-            starsContainer4.empty(); // 마우스를 떼면 별똥별을 모두 지웁니다.
-        });
+        );
 
 
 

@@ -19,15 +19,22 @@ AOS 라이브러리: https://michalsnik.github.io/aos/
 <h2>이미지</h2>
 <pre>
 [비기너 베스트]
-천황산 https://www.flickr.com/photos/hikingkorea/10513559136/in/photostream
-안산 https://blog.naver.com/duckyoo/222407266053
-오대산 https://blog.naver.com/likethwind/222808362186
-의암호 https://blog.naver.com/kgb99099/171642116
-아라뱃길 https://blog.naver.com/callvan777/223265131685
-대청호수자전거길 https://blog.naver.com/ph110614/222527217514
-난지 캠핑장 https://blog.naver.com/sudermi/223145401365
-송호국민관광지캠핑장 https://blog.naver.com/baboksy/221549303286
-대저캠핑장2 https://blog.naver.com/sooojebi/222398160384
+천황산: https://www.flickr.com/photos/hikingkorea/10513559136/in/photostream
+안산: https://blog.naver.com/duckyoo/222407266053
+오대산: https://blog.naver.com/likethwind/222808362186
+의암호: https://blog.naver.com/kgb99099/171642116
+아라뱃길: https://blog.naver.com/callvan777/223265131685
+대청호수자전거길: https://blog.naver.com/ph110614/222527217514
+난지 캠핑장: https://blog.naver.com/sudermi/223145401365
+송호국민관광지캠핑장: https://blog.naver.com/baboksy/221549303286
+대저캠핑장2: https://blog.naver.com/sooojebi/222398160384
+
+[라이딩 메인화면]
+- 카드
+    자전거행복나눔: https://www.bike.go.kr/index.do
+
+- 지역 이미지
+    
 
 [배경 이미지]
 - 나무보드: https://kr.freepik.com/free-vector/realistic-wood-background_21153531.htm#page=6&query=%EB%82%98%EB%AC%B4%EB%B3%B4%EB%93%9C&position=16&from_view=search&track=ais&uuid=633cd583-1783-40ca-8078-cbec46e7e00e 작가 coolvector 출처 Freepik

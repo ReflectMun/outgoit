@@ -29,6 +29,9 @@ public class CampingAreaSearchPageController {
     }
     ////////////////////////////////////////////////////////
 
+
+
+
     @GetMapping("/About")
     public String aboutPage(Model model){
         return "RH/jsp/Camping/Camping_About";
@@ -45,6 +48,7 @@ public class CampingAreaSearchPageController {
     }
 
     @PostMapping("/detail/{campingAreaName}")
+
     public String sendDetailPage(
             @PageableDefault(size = 5, sort = "commentNumber", direction = Sort.Direction.DESC) Pageable pageable,
             CampingAreaInfoDTO data,
@@ -75,7 +79,8 @@ public class CampingAreaSearchPageController {
                         ? "캠핑장에서 등록한 부대시설 정보가 없어요!"
                         : data.getSbrsEtc()
         );
-//        model.addAttribute("etc", data.getSbrsEtc());
+
+//      model.addAttribute("etc", data.getSbrsEtc());
         model.addAttribute("ratingAvg", ratingAvg);
         model.addAttribute("campingAreaNumber", data.getContentId());
         model.addAttribute("existReviews", !reviews.isEmpty());
@@ -107,12 +112,12 @@ public class CampingAreaSearchPageController {
         model.addAttribute("managementStatement", data.getManageSttus());
         model.addAttribute("holidaySeasonStart",
                 data.getHvofBgnde().isEmpty() ?
-                        "연중무휴에요!" :
+                        "연중무휴예요!" :
                         data.getHvofBgnde()
         );
         model.addAttribute("holidaySeasonEnd",
                 data.getHvofEnddle().isEmpty() ?
-                        "연중무휴에요!" :
+                        "연중무휴예요!" :
                         data.getHvofEnddle()
         );
         model.addAttribute("showerRoomCount", data.getSwrmCo());
@@ -131,5 +136,6 @@ public class CampingAreaSearchPageController {
     public String sendError(){
         return "잘못된 접근입니다";
     }
+
 
 }

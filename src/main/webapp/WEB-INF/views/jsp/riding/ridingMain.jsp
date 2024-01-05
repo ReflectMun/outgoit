@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUT GO IT - riding </title>
     <link rel="stylesheet" href="/resources/static/kmh/css/main.css">
+    <link rel="stylesheet" href="/resources/static/kmh/css/main_media.css">
+    <script src="/resources/static/rh/js/banner.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
     <!-- 헤더 영역 -->
@@ -21,14 +22,13 @@
     <div class="mh-container">
 
         <!-- 배너 영역 (슬라이드 들어가면 좋을듯!) -->
-
         <div class="mh-banner-wrap camp swiper mySwiper">
             <div class="mh-banner swiper-wrapper">
-                <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
-                <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
-                <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
-                <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
-                <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>
+                <div class="swiper-slide"><img src="/resources/static/img/자전거/riding_banner1.jpg"></div>
+                <div class="swiper-slide"><img src="/resources/static/img/자전거/riding_banner3.jpg"></div>
+                <div class="swiper-slide"><img src="/resources/static/img/자전거/riding_banner2.jpg"></div>
+                <div class="swiper-slide"><img src="/resources/static/img/자전거/riding_banner4.jpg"></div>
+<%--                <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>--%>
             </div>
                 <div class="mh-banner-txt-wrap">
                     <div class="mh-banner-title">
@@ -43,6 +43,23 @@
         <!-- 배너 여기까지 / 컨텐트 영역 (지도 API)-->
 
         <div class="mh-content">
+            <div class="mh-weather-container">
+                <div class="mh-weather-text">
+                    <li><span>서울</span><img src="/resources/static/img/weather/rain.png" alt=""><span>3℃</span></li>
+                    <li><span>경기</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>인천</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>춘천</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>강릉</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>청주</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>대전</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>대구</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>울산</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>부산</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>목포</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>광주</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                    <li><span>제주</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></li>
+                </div>
+            </div>
             <div class="mh-map-txt-wrap">
                 <div class="mh-map-title">
                     <span> Riding Course </span>
@@ -52,6 +69,7 @@
                 </div>
             </div>
             <div class="mh-search-wrap-riding">
+                <a name="cycle-border"></a>
                 <div class="mh-background-map-riding">
                     <%--            자전거 메뉴 버튼--%>
                     <div class="metro-city-btn-menu">
@@ -67,7 +85,18 @@
                         </div>
                     </div>
                 <%--            자전거 메뉴 버튼 끝--%>
+
+                        <%-- 자전거 지도 & 슬라이드 --%>
                     <div class="mh-map-all-riding">
+                        <div class="mh-button" id="cycle-road-btn">자전거 도로</div>
+                        <div id="cycle-road-legend">
+                            <div id="cycle-road-legend-menu">
+                                <div class="cycle-road-legend-btn" id="road-guide">도로안내</div>
+                                <div class="cycle-road-legend-btn" id="driveway">진입로</div>
+                                <div class="cycle-road-legend-btn" id="amenities">편의시설</div>
+                            </div>
+                            <div id="cycle-road-guide"></div>
+                        </div>
                         <div id="cycle-page-map"></div>
                         <div id="cycle-detail-slide"><jsp:include page="../../ms/pdf_test.jsp"></jsp:include></div>
                     </div>
@@ -91,7 +120,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=770a2850e8ce3177b209d2d94dc1e58b&libraries=services"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
             loop: true,
@@ -100,6 +129,7 @@
             },
         });
     </script>
+    <script src="/resources/static/ms/js/cycle_slide.js"></script>
     <script type="text/javascript" src="/resources/static/ms/js/map.js"></script>
 </body>
 </html>

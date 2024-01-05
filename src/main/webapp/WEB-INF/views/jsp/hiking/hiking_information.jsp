@@ -9,17 +9,27 @@
 
     <title>${trailRouteList.mntn_nm} 상세정보</title>
 
-    <link rel="stylesheet" href="/static/jiho/css/camp_information.css"/>
+    <link rel="stylesheet" href="/resources/static/css_hj/hiking_information.css"/>
+    <link rel="stylesheet" href="/resources/static/css_hj/hiking_info_media.css"/>
+
 
     <script src="/resources/static/jiho/js/draft_hiking_review.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/resources/static/js_hj/hiking_information_detail.js"></script>
+
   </head>
   <body>
     <input id="trail-area-id" value="${trailRouteId}" style="display: none;">
+    <input id="trail-area-path" value="${trailPath}" style="display: none;">
     <div id="hj-container2">
+
       <!-- 정보 div -->
       <div id="hj-info">
+        <div id="hj-info-weather">
+          <div id="hj-info-weather-text"><span>서울</span><img src="/resources/static/img/weather/rain.png" alt=""><span>℃</span></div>
+        </div>
+        </div>
         <div class="hj-info-box">
           <div id="hj-info-name-img">
             <div class="hj-info-name">${trailRouteList.mntn_nm}</div>
@@ -43,14 +53,11 @@
 
             <!-- 칠판에 쓰인 분필 -->
             <div id="hj-content-box-comment"><span>OUT GO IT</span></div>
-            <div id="hj-post-it"></div>
+            <div id="hj-tape"></div>
            <!-- 이미지 부분 -->
             <div id="hj-content-inside-box">
-              <div id="hj-content-img">
-                <div id="hj-content-img-link">
+              <div id="hj-map-container">
 
-
-                </div>
               </div>
               <!-- 정보 부분 -->
               <div id="hj-content-detail">
@@ -76,15 +83,17 @@
             <!-- 코멘트 칠판 효과 -->
             <div id="hj-comment-pic">
               <div id="hj-content-inside-box2">
+                <div id="hj-paper"></div>
+                <div id="hj-tape2"></div>
                 <div id="hj-content-detail2">
                   <div id="hj-content-zentai-box">
                     <!-- 별부분 -->
                     <div id="hj-review-star-box">
-                      <span class="hj-star" data-value="1">&#9733;</span>
-                      <span class="hj-star" data-value="2">&#9733;</span>
-                      <span class="hj-star" data-value="3">&#9733;</span>
-                      <span class="hj-star" data-value="4">&#9733;</span>
-                      <span class="hj-star" data-value="5">&#9733;</span>
+                      <span class="hj-star" data-value="1">☆</span>
+                      <span class="hj-star" data-value="2">☆</span>
+                      <span class="hj-star" data-value="3">☆</span>
+                      <span class="hj-star" data-value="4">☆</span>
+                      <span class="hj-star" data-value="5">☆</span>
                     </div>
                     <!-- 인풋 아이디 비번 부분 -->
                     <div id="hj-input">
@@ -95,6 +104,8 @@
                                   id="hj-id-input"
                                   placeholder="닉네임"
                                   name="author"
+                                  onfocus="this.placeholder=''"
+                                  onblur="this.placeholder='닉네임'"
                           />
                         </div>
                         <div id="hj-pw">
@@ -103,16 +114,20 @@
                                   id="hj-pw-input"
                                   placeholder="비번"
                                   name="password"
+                                  onfocus="this.placeholder=''"
+                                  onblur="this.placeholder='비번'"
                           />
                         </div>
                       </div>
                       <!-- 리뷰부분 -->
                       <div id="hj-review-content">
-                        <input
-                                type="text"
+                        <textarea
+
                                 id="hj-review-input"
                                 placeholder="비방글은 삭제 조치 됩니다."
-                        />
+                                onfocus="this.placeholder=''"
+                                onblur="this.placeholder='비방글은 삭제 조치 됩니다.'"
+                        ></textarea>
                       </div>
                       <!-- 확인버튼 -->
                       <div id="hj-btn">
@@ -137,7 +152,7 @@
               <div id="hj-content-box-comment2"><span>Hiking</span></div>
               <div id="hj-review-inside-box2">
 
-                <div id="hj-review-detail2">
+                <
                   <div id="hj-review-zentai-box">
 
                     <!-- 작성된 리뷰들을 개별 출력하는 부분 -->
@@ -151,7 +166,7 @@
                         </div>
                         <!-- 코멘트 보여주는 위치 여기까지 -->
                         <!-- 페이징 처리-->
-                        <div id="hj-page-box">
+                        <div class="hj-page-box">
                           <div id="hj-prev-button" onclick="getPrevCommentPage()"><span>[앞으로]</span>
                           </div>
                           <div id="hj-pages"><span>1</span></div>
@@ -167,7 +182,7 @@
 
                   </div>
 
-                </div>
+
               </div>
               <!-- 칠판모양 코멘트 영역 여기까지 -->
 
@@ -313,6 +328,6 @@
       //   }
       // })
     </script>
-
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=770a2850e8ce3177b209d2d94dc1e58b&libraries=services"></script>
   </body>
 </html>

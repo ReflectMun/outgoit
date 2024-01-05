@@ -12,7 +12,6 @@
 
     <!-- Demo styles -->
     <style>
-
         #cycle-detail-slide {
             width: 35%;
             height: 35vw;
@@ -33,7 +32,7 @@
             /*color: #fff;*/
         }
 
-        img {
+        .cycle-page-img {
             width: 100%;
         }
 
@@ -44,6 +43,8 @@
             width: 100%;
             height: 100%;
             filter: blur(2px);
+            transform: scale(1.02);
+            overflow: hidden;
             z-index: -1;
         }
 
@@ -54,6 +55,8 @@
             width: 100%;
             height: 100%;
             filter: blur(2px);
+            transform: scale(1.02);
+            overflow: hidden;
             z-index: -1;
         }
 
@@ -63,6 +66,8 @@
             width: 100%;
             height: 100%;
             filter: blur(2px);
+            transform: scale(1.02);
+            overflow: hidden;
             z-index: -1;
         }
 
@@ -72,6 +77,8 @@
             width: 100%;
             height: 100%;
             filter: blur(2px);
+            transform: scale(1.02);
+            overflow: hidden;
             z-index: -1;
         }
 
@@ -81,6 +88,8 @@
             width: 100%;
             height: 100%;
             filter: blur(2px);
+            transform: scale(1.02);
+            overflow: hidden;
             z-index: -1;
 
         }
@@ -91,6 +100,8 @@
             width: 100%;
             height: 100%;
             filter: blur(2px);
+            transform: scale(1.02);
+            overflow: hidden;
             z-index: -1;
         }
 
@@ -101,6 +112,8 @@
             width: 100%;
             height: 100%;
             filter: blur(2px);
+            transform: scale(1.02);
+            overflow: hidden;
             z-index: -1;
         }
 
@@ -132,15 +145,139 @@
             0%{left: 10%; top: 50%; transform: translateX(170%)}
             50%{left: 10%; top: 50%; transform: translateX(0)}
             51%{left: 10%; top: 50%; transform: translate(170%, 50%)}
-            99%{left: 10%; top: 50%; transform: translate(170%, -180%)}
-            100%{visibility: hidden; left: 10%; top: 50%; transform: translate(170%, -180%)}
+            99%{left: 10%; top: 50%; transform: translate(170%, -160%)}
+            100%{visibility: hidden; left: 10%; top: 50%; transform: translate(170%, -160%)}
+        }
+
+        /* 자전거 도로 지도 가이드*/
+        #cycle-road-btn{
+            font-size: 0.8vw;
+            padding: 0.5vw 1vw;
+            width: auto;
+            height: auto;
+            display: flex;
+            position: absolute;
+            z-index: 500;
+            left: 5.8vw;
+            top: 1vw;
+        }
+        #cycle-road-legend{
+            display: none;
+            position: absolute;
+            width: 21vw;
+            height: auto;
+            left: 17vw;
+            bottom: 5vw;
+            padding: 1vw;
+            background-color: #fefefe;
+            box-shadow: 2px 2px rgba(0, 0, 0, 0.45);
+            border-radius: 1vw;
+            z-index: 500;
+        }
+        #cycle-road-guide{
+            width: 100%;
+            height: 4vw;
+            background-image: url("/resources/static/cycle_detail/road_guide.png");
+            background-size: 24vw;
+            background-position-y: 24.2vw;
+        }
+        /* 지도 변경 버튼*/
+        #cycle-road-legend-menu{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-bottom: 1vw;
+        }
+        .cycle-road-legend-btn{
+            font-family: 'SOYOMapleBoldTTF';
+            font-size: 0.8vw;
+            color: #121212;
+            padding: 0.2vw 0.4vw 0.2vw 0.4vw;
+            border-radius: 1vw;
+        }
+        .cycle-road-legend-btn:hover{
+            color: #097f06;
+            font-weight: bold;
+            background-color: #fff53b;
+        }
+
+        @media only screen and (max-width: 430px) and (max-height: 932px){
+            .swiper{
+                margin-left: auto;
+                margin-right: auto;
+                position: relative;
+                overflow: hidden;
+                list-style: none;
+                padding: 0;
+                z-index: 1;
+                display: block;
+            }
+            .swiperHeight {
+             height: 100vw;
+            }
+            #cycle-detail-slide {
+                width: 83%;
+                height: 35vw;
+                margin-left: 1vw;
+            }
+            .thumbnail-txt {
+                font-family: 'SOYOMapleBoldTTF';
+                position: absolute;
+                color: #ffffff;
+                font-size: 4vw;
+                text-shadow: 2px 2px 1px #275634;
+                filter: blur(0);
+                z-index: 1;
+            }
+            #cycle-road-btn{
+                font-size: 2vw;
+                padding: 1vw 2vw;
+                width: auto;
+                height: auto;
+                display: flex;
+                position: absolute;
+                z-index: 500;
+                left: 10vw;
+                top: 1vw;
+            }
+            #cycle-road-legend{
+                display: none;
+                position: absolute;
+                width: 35vw;
+                height: auto;
+                left: 44vw;
+                bottom: 7vw;
+                padding: 1vw;
+                background-color: #fefefe;
+                box-shadow: 2px 2px rgba(0, 0, 0, 0.45);
+                border-radius: 1vw;
+                z-index: 500;
+            }
+            .swiper-v{
+                height: 100%;
+            }
+            #cycle-road-guide{
+                width: 100%;
+                height: 7vw;
+                background-image: url("/resources/static/cycle_detail/road_guide.png");
+                background-size: 110%;
+                background-position-y: 39.1vw;
+            }
+            .cycle-road-legend-btn{
+                font-family: 'SOYOMapleBoldTTF';
+                font-size: 1.2vw;
+                color: #121212;
+                padding: 0.2vw 0.4vw 0.2vw 0.4vw;
+                border-radius: 1vw;
+            }
+
         }
     </style>
 </head>
 
 <body>
 <!-- Swiper -->
-<div class="swiper mySwiper1 swiper-h">
+<div class="swiper mySwiper1 swiper-h swiperHeight">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
             <div class="swiper mySwiper2 swiper-v">
@@ -151,7 +288,7 @@
                         <div id="slide-guide"><img src="/resources/static/cycle_detail/slide-guide-icon.png"></div>
                     </div>
                     <c:forEach begin="1" end="22" var="i">
-                        <div class="swiper-slide" data-value="${i}"><img src="/resources/static/cycle_detail/${i}.jpg">
+                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg">
                         </div>
                     </c:forEach>
                 </div>
@@ -166,7 +303,7 @@
                         <span class="thumbnail-txt">경기도</span>
                     </div>
                     <c:forEach begin="23" end="30" var="i">
-                        <div class="swiper-slide" data-value="${i}"><img src="/resources/static/cycle_detail/${i}.jpg">
+                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg">
                         </div>
                     </c:forEach>
                 </div>
@@ -181,7 +318,7 @@
                         <span class="thumbnail-txt">강원도</span>
                     </div>
                     <c:forEach begin="31" end="43" var="i">
-                        <div class="swiper-slide" data-value="${i}"><img src="/resources/static/cycle_detail/${i}.jpg">
+                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg">
                         </div>
                     </c:forEach>
                 </div>
@@ -196,7 +333,7 @@
                         <span class="thumbnail-txt">충청도</span>
                     </div>
                     <c:forEach begin="44" end="57" var="i">
-                        <div class="swiper-slide" data-value="${i}"><img src="/resources/static/cycle_detail/${i}.jpg">
+                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg">
                         </div>
                     </c:forEach>
                 </div>
@@ -211,7 +348,7 @@
                         <span class="thumbnail-txt">전라도</span>
                     </div>
                     <c:forEach begin="58" end="80" var="i">
-                        <div class="swiper-slide" data-value="${i}"><img src="/resources/static/cycle_detail/${i}.jpg">
+                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg">
                         </div>
                     </c:forEach>
                 </div>
@@ -226,7 +363,7 @@
                         <span class="thumbnail-txt">경상도</span>
                     </div>
                     <c:forEach begin="81" end="96" var="i">
-                        <div class="swiper-slide" data-value="${i}"><img src="/resources/static/cycle_detail/${i}.jpg">
+                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg">
                         </div>
                     </c:forEach>
                 </div>
@@ -241,7 +378,7 @@
                         <span class="thumbnail-txt">제주도</span>
                     </div>
                     <c:forEach begin="97" end="100" var="i">
-                        <div class="swiper-slide" data-value="${i}"><img src="/resources/static/cycle_detail/${i}.jpg">
+                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg">
                         </div>
                     </c:forEach>
                 </div>

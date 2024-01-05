@@ -22,8 +22,8 @@ charset=UTF-8" pageEncoding="UTF-8"%>
   <%-- 헤더 시작 --%>
     <div class="hj-container">
       <div class="hj-header">
-        <div class="hj-logo-container">
-          <div class="hj-logo" onclick="location.href='/outgoit/camping'">  </div>
+        <div class="hj-logo-container" onclick="location.href='/outgoit/riding'">
+          <div class="hj-logo">  </div>
           <!-- 로고 이미지 넣기 -->
           <div class="hj-title">시간을 느리게, 경험을 깊게</div>
           <!-- 글자 나중에    -->
@@ -48,6 +48,12 @@ charset=UTF-8" pageEncoding="UTF-8"%>
 
       <%-- 메뉴 디브--%>
       <div class="hj-overlay" id="hj-overlay">
+
+        <div class="hj-star-container">
+        </div>
+        <div class="hj-star-container-2"></div>
+        <div class="hj-star-container-3"></div>
+        <div class="hj-star-container-4"></div>
         <div class="hj-box-1">
           <div class="hj-row-1">
             <div class="hj-col-1">
@@ -59,8 +65,8 @@ charset=UTF-8" pageEncoding="UTF-8"%>
         <div class="hj-box">
           <div class="hj-row hj-menu-txt">
             <div class="hj-col">
-              <lavel><div class="hj-home" id="hj-home" onclick="location.href='/outgoit/riding/home'"><span>Home</span></div></lavel>
-              <div class="hj-star-container"></div>
+              <lavel><div class="hj-home" id="hj-home" onclick="location.href='/outgoit/riding'"><span>Home</span></div></lavel>
+
 
             </div>
           </div>
@@ -69,7 +75,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
           <div class="hj-row hj-menu-txt">
             <div class="hj-col-2">
               <div class="hj-story" onclick="location.href='/outgoit/riding/history'"><span>라이딩 이야기</span></div>
-              <div class="hj-star-container-2"></div>
+
             </div>
           </div>
         </div>
@@ -77,7 +83,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
           <div class="hj-row hj-menu-txt">
             <div class="hj-col-3">
               <div class="hj-info" onclick="location.href='/outgoit/riding/safety'"><span>안전 정보</span></div>
-              <div class="hj-star-container-3"></div>
+
             </div>
           </div>
         </div>
@@ -85,7 +91,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
           <div class="hj-row hj-menu-txt">
             <div class="hj-col-4">
               <div class="hj-guide" onclick="location.href='/outgoit/riding/beginner'"><span>초보자 가이드</span></div>
-              <div class="hj-star-container-4"></div>
+
             </div>
           </div>
         </div>

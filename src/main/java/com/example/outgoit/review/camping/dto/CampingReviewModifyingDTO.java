@@ -13,4 +13,5 @@ public class CampingReviewModifyingDTO {
     private Long commentNumber;
     private String password;
     private String content;
+    private Long rating;
 }

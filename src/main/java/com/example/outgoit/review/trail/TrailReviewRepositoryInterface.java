@@ -18,11 +18,14 @@ public interface TrailReviewRepositoryInterface extends JpaRepository<TrailRevie
     List<TrailReview> findByCommentNumberAndIsDeletedFalse(Long commentNumber);
 
     @Modifying
-    @Query("update trail_review set content = :content where commentNumber = :commentNumber AND isDeleted = false")
+    @Query("update trail_review set content = :content, rating = :rating where commentNumber = :commentNumber AND isDeleted = false")
     int updateContentByCommentNumber(
             @Param("content") String content,
-            @Param("commentNumber") Long commentNumber
+            @Param("commentNumber") Long commentNumber,
+            @Param("rating") Integer rating
+
     );
+
 
     @Modifying
     @Query("UPDATE trail_review SET isDeleted = true WHERE commentNumber = :commentNumber AND isDeleted = false")
