@@ -8,7 +8,50 @@ const mapOption = {
 }
 
 const map = new kakao.maps.Map(mapContainer, mapOption)
-map.addOverlayMapTypeId(kakao.maps.MapTypeId.TERRAIN);
+
+// 지도에 지형정보 버튼 기능
+let isTerrainAdded = false;
+const trailTerrain = document.getElementById("trail-road-btn")
+trailTerrain.addEventListener('click', (e) =>{
+    if (!isTerrainAdded) {
+        map.addOverlayMapTypeId(kakao.maps.MapTypeId.TERRAIN);
+        isTerrainAdded = true;
+    } else {
+        map.removeOverlayMapTypeId(kakao.maps.MapTypeId.TERRAIN);
+        isTerrainAdded = false;
+    }
+})
+
+
+// var currentTypeId;
+// 버튼이 클릭되면 호출되는 함수입니다
+// function setOverlayMapTypeId(maptype) {
+//     var changeMaptype;
+//
+//     // maptype에 따라 지도에 추가할 지도타입을 결정합니다
+//     if (maptype === 'traffic') {
+//         // 지형정보 지도타입
+//         changeMaptype = kakao.maps.MapTypeId.TERRAIN;
+//
+//     }
+//
+//     // 이미 등록된 지도 타입이 있으면 제거합니다
+//     if (currentTypeId) {
+//         map.removeOverlayMapTypeId(currentTypeId);
+//     }
+//     // maptype에 해당하는 지도타입을 지도에 추가합니다
+//     map.addOverlayMapTypeId(changeMaptype);
+//
+//     // 지도에 추가된 타입정보를 갱신합니다
+//     currentTypeId = changeMaptype;
+// }
+
+
+
+
+
+
+
 const ps = new kakao.maps.services.Places()
 const infowindow = new kakao.maps.InfoWindow({zIndex: 1})
 
