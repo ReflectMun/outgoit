@@ -63,7 +63,8 @@
               <div id="hj-content-detail">
                 <div id="hj-no">총 거리 단위(m): ${trailRouteList.sec_len}</div>
                 <div id="hj-time">상행시간(분): ${trailRouteList.up_min}</div>
-                <div id="hj-addr">난이도: ${trailRouteList.cat_nam}</div>
+                <div class="hj-addr">난이도: ${trailRouteList.cat_nam}</div>
+                <div class="hj-addr">평균별점: ${ratingAvg}</div>
               </div>
             </div>
           </div>

@@ -95,12 +95,16 @@ public class TrailRoutePageController {
                     new ArrayList<>(trailReviewService.loadTrailRouteReview(trailRouteId, modified).getContent());
 
             String ratingAvg;
+
             try {
                 ratingAvg = trailReviewService.getTrailRouteRating(trailRouteId).get(0).toString();
+
             }
             catch (NullPointerException e){
                 ratingAvg = "아직 평균평점 정보가 없어요!";
             }
+
+        System.out.println(ratingAvg);
 
     ArrayList<com.example.outgoit.trail.dto.FeatureData> trailRouteList = trailRouteService.getTrailRouteList(lngi, lati); // list를 반환함.
 //        System.out.println(index);

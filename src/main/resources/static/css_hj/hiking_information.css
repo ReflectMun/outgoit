@@ -118,7 +118,7 @@ div{
     padding: 3% 0% 5% 2%;
     margin-right: 5%;
     width: 40%;
-    height: 3vw;
+    height: 5vw;
     color: black;
     font-family: 'SOYOMapleBoldTTF';
     background-size: cover;
@@ -170,7 +170,7 @@ div{
 }
 #hj-no,
 #hj-time,
-#hj-addr,
+.hj-addr,
 #hj-ability,
 #hj-etc,
 #hj-rating-avg{
