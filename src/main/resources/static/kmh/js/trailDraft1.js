@@ -15,7 +15,7 @@ const infowindow = new kakao.maps.InfoWindow({zIndex: 1})
 let markers = []
 let polylines = []
 let latlngBounds = new kakao.maps.LatLngBounds()
-let polyLineId = 0; // 폴리라인에 아이디 부여하려고 만듬
+// let polyLineId = 0; // 폴리라인에 아이디 부여하려고 만듬
 
 searchBox.addEventListener("keyup", (e) => {
     if (e.key === "Enter") {
@@ -57,7 +57,7 @@ try {
 
                 const trailName = [] // 등산로 이름 담을 배열
                 // 경도 위도 뽑는 작업
-                polyLineId = 0;
+                // polyLineId = 0;
                 for (const trail of resData){
                     trailName.push([trail.properties.mntn_nm, trail.id]) // 배열에 추가하기
                 }
@@ -208,7 +208,7 @@ try {
 
                     // 마커 등산로 별로 만들기 테스트 중
                     const trailInfoBox = document.getElementsByClassName("camping-area-info-box")
-                    console.log(trailInfoBox)
+
                     let refPosition = trailLIne.length >> 1;
                     const trailRouteCoordX = trailLIne[refPosition][0]
                     const trailRouteCoordY = trailLIne[refPosition][1]
