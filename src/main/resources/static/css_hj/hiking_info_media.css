@@ -210,7 +210,7 @@
 
     #hj-no,
     #hj-time,
-    #hj-addr,
+    .hj-addr,
     #hj-ability,
     #hj-etc,
     #hj-rating-avg {
@@ -218,11 +218,7 @@
         line-height: 2;
         margin: 0 5% 0 5%;
     }
-    .hj-addr{
-        font-size: 3vw;
-        line-height: 2;
-        margin: 0 5% 0 5%;
-    }
+
     #hj-no{
         margin-top: 5%;
     }
@@ -491,9 +487,9 @@
     .hj-review-content-box {
         background-image: url(/resources/static/img/기타/양피지.png);
         background-size: cover;
-        line-height: 1.8vw;
+        line-height: 1vw;
         width: 40vw;
-        height: 47vw;
+        height: 50vw;
         margin: 3vw 0.7vw 0vw 0.7vw;
         position: relative;
         padding: 1.8vw;
