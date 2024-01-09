@@ -470,7 +470,7 @@ input::placeholder{
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: 8vw;
+    top: -1vw;
     left: 5vw;
 }
 .hj-review-comment-content{
