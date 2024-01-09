@@ -157,12 +157,13 @@
                                         </div>
                                         <div id="hj-pw">
                                             <input
-                                                    type="text"
+                                                    type="password"
                                                     id="hj-pw-input"
-                                                    placeholder="비번"
+                                                    placeholder="비밀번호"
                                                     name="password"
                                                     onfocus="this.placeholder=''"
-                                                    onblur="this.placeholder='비번'"
+                                                    onblur="this.placeholder='비밀번호'"
+
                                             />
                                         </div>
                                     </div>
