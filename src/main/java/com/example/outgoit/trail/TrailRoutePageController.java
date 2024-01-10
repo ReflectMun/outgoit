@@ -48,21 +48,17 @@ public class TrailRoutePageController {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-//    public TrailRoutePageController(TrailReviewService trailReviewService){
-//        this.trailReviewService = trailReviewService;
+//    @GetMapping
+//    public String getTrailRoutePage() {
+//        return "jiho/trail";
+//    }
+//
+//    @GetMapping("/draft1")
+//    public String sendDraft1() {
+//        return "kmh/hiking";
 //    }
 
-
-    @GetMapping
-    public String getTrailRoutePage() {
-        return "jiho/trail";
-    }
-
-    @GetMapping("/draft1")
-    public String sendDraft1() {
-        return "kmh/hiking";
-    }
-
+    // 상세페이지로 가는 맵핑
     @PostMapping("/detail/{lngi}/{lati}/{index}/{trailRouteId}")
     public String GetDetailTrain(
             @PageableDefault(size = 5, sort = "commentNumber", direction = Sort.Direction.DESC) Pageable pageable,

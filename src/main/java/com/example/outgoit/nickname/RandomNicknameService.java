@@ -31,12 +31,10 @@ public class RandomNicknameService {
             randomNickname = randomDeterminers + " " + randomAnimal + " " + randomNum;
             System.out.println(randomNickname);
 
-
         } catch (Exception e) {
             e.printStackTrace();
         }
         return randomNickname;
-
     }
 
     private static String getRandomValue(JsonNode node) {

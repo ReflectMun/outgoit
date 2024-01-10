@@ -35,13 +35,4 @@ public class CycleRouteSearchService {
         return dto;
     }
 
-    public String extractTextFromPDF(int courseNumber) throws IOException {
-        PDDocument document = PDDocument.load(new File("src/main/resources/static/cycle_pdf/"+ courseNumber + ".pdf"));
-        PDFTextStripper pdfTextStripper = new PDFTextStripper();
-        pdfTextStripper.setStartPage(1);
-        pdfTextStripper.setEndPage(1);
-        String text = pdfTextStripper.getText(document);
-        document.close();
-        return text;
-    }
 }

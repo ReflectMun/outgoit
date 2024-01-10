@@ -9,6 +9,10 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.UnsupportedEncodingException;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,15 +23,29 @@ public class TrailReviewApiController {
 
     public final TrailReviewService trailReviewService;
 
-    public TrailReviewApiController(TrailReviewService trailReviewService){
+    public TrailReviewApiController(TrailReviewService trailReviewService) {
         this.trailReviewService = trailReviewService;
     }
+
     ////////////////////////////////////////////////////////////////////////////
     @PostMapping("/submit")
-    public int submitTrailRouteReview(@RequestBody TrailReview trailReview){
-       return trailReviewService.submitReview(
+    public int submitTrailRouteReview(@RequestBody TrailReview trailReview) {
+        String encryptedPassword = null;
+
+        try {
+            MessageDigest hashing = MessageDigest.getInstance("SHA-512");
+            hashing.reset();
+            hashing.update(trailReview.getPassword().getBytes("utf8"));
+            encryptedPassword = String.format("%0128x", new BigInteger(1, hashing.digest()));
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        return trailReviewService.submitReview(
                 trailReview.getAuthor(),
-                trailReview.getPassword(),
+                encryptedPassword,
                 trailReview.getContent(),
                 trailReview.getRating(),
                 trailReview.getTrailRouteId()
@@ -35,32 +53,32 @@ public class TrailReviewApiController {
     }
 
     @PostMapping("/rating")
-    public ArrayList<Object> getTrailRouteRating(TrailReview trailReview){
-        return new  ArrayList<> (trailReviewService.getTrailRouteRating(trailReview.getTrailRouteId()));
+    public ArrayList<Object> getTrailRouteReview(@RequestBody TrailReview trailReview) {
+        return new ArrayList<>(trailReviewService.getTrailRouteRating(trailReview.getTrailRouteId()));
     }
 
     @PostMapping("/update")
-    public int updateReview(@RequestBody TrailReview trailReview){
-     return    trailReviewService.updateReviewContent(trailReview);
+    public int updateReview(@RequestBody TrailReview trailReview) {
+        return trailReviewService.updateReviewContent(trailReview);
     }
 
     @PostMapping("/delete")
-    public int deleteReview(@RequestBody TrailReview trailReview){
-      return   trailReviewService.deleteReview((long) Math.toIntExact(trailReview.getCommentNumber()));
+    public int deleteReview(@RequestBody TrailReview trailReview) {
+        return trailReviewService.deleteReview(trailReview.getPassword(), trailReview.getCommentNumber());
     }
 
     @GetMapping("/list")
     public ArrayList<TrailReview> getTrailRouteReviewList(
-            @PageableDefault(size = 6, sort = "commentNumber",direction = Sort.Direction.DESC) Pageable pageable,
+            @PageableDefault(size = 6, sort = "commentNumber", direction = Sort.Direction.DESC) Pageable pageable,
             String trailRouteId,
             Integer pageNumber
-    ){
-        if (pageNumber == 0){
-            return  new ArrayList<>();
+    ) {
+        if (pageNumber == 0) {
+            return new ArrayList<>();
         }
-        Pageable modified = PageRequest.of(pageNumber -1, pageable.getPageSize(), pageable.getSort());
-        Page<TrailReview> result = trailReviewService.loadTrailRouteReview(trailRouteId , modified);
-        if (pageNumber > result.getTotalPages()){
+        Pageable modified = PageRequest.of(pageNumber - 1, pageable.getPageSize(), pageable.getSort());
+        Page<TrailReview> result = trailReviewService.loadTrailRouteReview(trailRouteId, modified);
+        if (pageNumber > result.getTotalPages()) {
             return new ArrayList<>();
         }
         return new ArrayList<TrailReview>(result.getContent());

@@ -8,8 +8,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUT GO IT - riding </title>
-    <link rel="stylesheet" href="/resources/static/kmh/css/main.css">
-    <link rel="stylesheet" href="/resources/static/kmh/css/main_media.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/main_media.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <script>
         $(function () {
@@ -33,10 +33,10 @@
         <!-- 배너 영역 (슬라이드 들어가면 좋을듯!) -->
         <div class="mh-banner-wrap camp swiper mySwiper">
             <div class="mh-banner swiper-wrapper">
-                <div class="swiper-slide"><img id="media1" src="/resources/static/img/자전거/riding_banner1.jpg"></div>
-                <div class="swiper-slide"><img id="media3" src="/resources/static/img/자전거/riding_banner3.jpg"></div>
-                <div class="swiper-slide"><img id="media2" src="/resources/static/img/자전거/riding_banner2.jpg"></div>
-                <div class="swiper-slide"><img  src="/resources/static/img/자전거/riding_banner4.jpg"></div>
+                <div class="swiper-slide"><img id="media1" src="/static/img/swiper/web_swiper/riding_banner1.jpg"></div>
+                <div class="swiper-slide"><img id="media3" src="/static/img/swiper/web_swiper/riding_banner3.jpg"></div>
+                <div class="swiper-slide"><img id="media2" src="/static/img/swiper/web_swiper/riding_banner2.jpg"></div>
+                <div class="swiper-slide"><img  src="/static/img/swiper/web_swiper/riding_banner4.jpg"></div>
 <%--                <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>--%>
             </div>
                 <div class="mh-banner-txt-wrap">
@@ -137,6 +137,6 @@
     </script>
     <script src="/resources/static/ms/js/cycle_slide.js"></script>
     <script type="text/javascript" src="/resources/static/ms/js/map.js"></script>
-    <script src="/resources/static/rh/js/banner.js"></script>
+    <script src="/static/js/banner.js"></script>
 </body>
 </html>
