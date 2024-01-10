@@ -8,8 +8,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUT GO IT - riding </title>
-    <link rel="stylesheet" href="/static/css/main.css">
-    <link rel="stylesheet" href="/static/css/main_media.css">
+    <link rel="stylesheet" href="/resources/static/css/main.css">
+    <link rel="stylesheet" href="/resources/static/css/main_media.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <script>
         $(function () {
@@ -33,10 +33,10 @@
         <!-- 배너 영역 (슬라이드 들어가면 좋을듯!) -->
         <div class="mh-banner-wrap camp swiper mySwiper">
             <div class="mh-banner swiper-wrapper">
-                <div class="swiper-slide"><img id="media1" src="/static/img/swiper/web_swiper/riding_banner1.jpg"></div>
-                <div class="swiper-slide"><img id="media3" src="/static/img/swiper/web_swiper/riding_banner3.jpg"></div>
-                <div class="swiper-slide"><img id="media2" src="/static/img/swiper/web_swiper/riding_banner2.jpg"></div>
-                <div class="swiper-slide"><img  src="/static/img/swiper/web_swiper/riding_banner4.jpg"></div>
+                <div class="swiper-slide"><img id="media1" src="/resources/static/img/swiper/web_swiper/riding_banner1.jpg"></div>
+                <div class="swiper-slide"><img id="media3" src="/resources/static/img/swiper/web_swiper/riding_banner3.jpg"></div>
+                <div class="swiper-slide"><img id="media2" src="/resources/static/img/swiper/web_swiper/riding_banner2.jpg"></div>
+                <div class="swiper-slide"><img  src="/resources/static/img/swiper/web_swiper/riding_banner4.jpg"></div>
 <%--                <div class="swiper-slide"><img src="../kmh/img/riding_banner.jpg"></div>--%>
             </div>
                 <div class="mh-banner-txt-wrap">
@@ -58,7 +58,7 @@
                         <c:forEach var="data" items="${weathers}">
                             <div class="swiper-slide sw-background">
                                 <span>${data.area}</span>&nbsp;
-                                </nbsp><img src="/resources/static/img/weather/${data.weatherIcon}.png" alt="">&nbsp;
+                                </nbsp><img src="/resources/static/img/icon/weather/${data.weatherIcon}.png">&nbsp;
                                 <span>${data.temperature}℃</span>
                             </div>
                         </c:forEach>
@@ -103,7 +103,7 @@
                             <div id="cycle-road-guide"></div>
                         </div>
                         <div id="cycle-page-map"></div>
-                        <div id="cycle-detail-slide"><jsp:include page="../../ms/pdf_test.jsp"></jsp:include></div>
+                        <div id="cycle-detail-slide"><jsp:include page="riding_slide.jsp"></jsp:include></div>
                     </div>
                 </div>
             </div>
@@ -135,8 +135,7 @@
             },
         });
     </script>
-    <script src="/resources/static/ms/js/cycle_slide.js"></script>
-    <script type="text/javascript" src="/resources/static/ms/js/map.js"></script>
-    <script src="/static/js/banner.js"></script>
+    <script type="text/javascript" src="/resources/static/js/riding_draft.js"></script>
+    <script src="/resources/static/js/weather_banner.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="/static/css/riding_slider.css"/>
+    <link rel="stylesheet" href="/resources/static/css/riding_slider.css"/>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
                     <div class="swiper-slide" id="slide-guide-card">
                         <div id="metro-city"></div>
                         <span class="thumbnail-txt">광역시</span>
-                        <div id="slide-guide"><img src="/static/cycle_detail/slide-guide-icon.png"></div>
+                        <div id="slide-guide"><img src="/resources/static/cycle_detail/slide-guide-icon.png"></div>
                     </div>
                     <c:forEach begin="1" end="22" var="i">
                         <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg">

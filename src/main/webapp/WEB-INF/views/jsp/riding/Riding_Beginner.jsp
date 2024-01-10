@@ -256,6 +256,6 @@
         </div>
     </div>
 </div>
-<script src="/static/js/recommend_riding.js"></script>
+<script src="/resources/static/js/recommend_riding.js"></script>
 </body>
 </html>
