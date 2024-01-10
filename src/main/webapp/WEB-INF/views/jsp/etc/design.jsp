@@ -17,6 +17,9 @@
 
 <h2>이미지</h2>
 <pre>
+[푸터]
+나무 이미지: 어도비스톡 - りんご 園(https://stock.adobe.com/kr/images/かわいい木と森のイラストセット/580244059?asset_id=580244059)
+
 [비기너 베스트]
 천황산: https://www.flickr.com/photos/hikingkorea/10513559136/in/photostream
 안산: https://blog.naver.com/duckyoo/222407266053
@@ -46,6 +49,8 @@
 - 양피지: https://kr.freepik.com/free-vector/blank-brown-paper-mobile-phone-wallpaper-vector_25516962.htm#query=%EC%96%91%ED%94%BC%EC%A7%80&position=14&from_view=search&track=sph&uuid=4a78a2eb-cafc-4334-b51b-85b5b194c61c 작가 rawpixel.com 출처 Freepik
 - 압정 핀: https://kr.freepik.com/free-vector/realistic-thumbtack-pins-collection-with-notes_21149820.htm#query=note%20pin&position=2&from_view=search&track=ais&uuid=5ae4bf86-10eb-4597-9966-8ee64f8f5d32 작가 pikisuperstar 출처 Freepik 핀
 - 테이프 이미지: https://kr.freepik.com/free-vector/cute-washi-tape-clipart-colorful-diary-decorative-sticker-vector-set_20346087.htm#query=tape&position=1&from_view=search&track=sph&uuid=65aaa961-9794-47bb-b606-9ed34948fa51 작가 rawpixel.com 출처 Freepik
+- 인덱스 배경: freepik @freepik 
+
 
 [타이틀 이미지]
 - 캠핑
@@ -64,8 +69,15 @@
 
 [슬라이드 이미지]
     -캠핑
+     -어도비스톡 klyaksun https://stock.adobe.com/kr/images/forest-camp-poster-with-van-chair-and-guitar-concept-of-travel-hiking-and-activity-vacation-vector-banner-with-cartoon-landscape-with-trees-campsite-on-green-grass-and-mountains-on-background/436970871
+     -freepik @macrovector
     -하이킹
+     -freepik @pikisuperstar
+     -freepik @freepik
     -라이딩
+     -freepik @pikisuperstar
+     -freepik @pch.vector
+     -freepik @freepik
 </pre>
 <h2>아이콘</h2>
 <pre>
@@ -140,10 +152,17 @@ Cycle lane icons created by Freepik - Flaticon
 Map pointer icons created by Freepik - Flaticon
 야생동물 표지판 created by iconixarPro - Flaticon
 
+[인덱스]
+freepik @macrovector
+
+[헤더]
+Out go it 로고: 자체제작(팀원 김민혜)
+메뉴(해, 달) 로고: 자체제작(팀원 김민혜)
 [푸터]
 캠핑 아이콘 제작자: Freepik - Flaticon
 등산 아이콘 제작자: Smashicons - Flaticon
 자전거 아이콘 제작자: Freepik - Flaticon
+전화, 지역 아이콘: 어도비스톡 - Oliviart(https://stock.adobe.com/kr/images/web-icon-set-business-card-contact-information-icons-contact-us-icon-set/376158439)
 </pre>
 </body>
 </html>

@@ -22,36 +22,6 @@ trailTerrain.addEventListener('click', (e) =>{
     }
 })
 
-
-// var currentTypeId;
-// 버튼이 클릭되면 호출되는 함수입니다
-// function setOverlayMapTypeId(maptype) {
-//     var changeMaptype;
-//
-//     // maptype에 따라 지도에 추가할 지도타입을 결정합니다
-//     if (maptype === 'traffic') {
-//         // 지형정보 지도타입
-//         changeMaptype = kakao.maps.MapTypeId.TERRAIN;
-//
-//     }
-//
-//     // 이미 등록된 지도 타입이 있으면 제거합니다
-//     if (currentTypeId) {
-//         map.removeOverlayMapTypeId(currentTypeId);
-//     }
-//     // maptype에 해당하는 지도타입을 지도에 추가합니다
-//     map.addOverlayMapTypeId(changeMaptype);
-//
-//     // 지도에 추가된 타입정보를 갱신합니다
-//     currentTypeId = changeMaptype;
-// }
-
-
-
-
-
-
-
 const ps = new kakao.maps.services.Places()
 const infowindow = new kakao.maps.InfoWindow({zIndex: 1})
 
@@ -87,39 +57,28 @@ try {
 
                 const {data: resData} = await axios.get(url)
                 // resData - data에서 등산로만 뽑아냄.
-                // console.log(data)
-                // console.log(resData)
                 // resData - data에서 get요청으로 검색된 등산로만 뽑아내서 담음.
 
-
-                // displayMarker()
-                //const = [r,d,q,w,d,s,a,z,,c,,vv,g]
-
-                //MAth.r 1~10d
                 let index = 0;
-
                 const trailName = [] // 등산로 이름 담을 배열
                 // 경도 위도 뽑는 작업
-                // polyLineId = 0;
+                // 겹치는 이름 넘버링 작업을 위한 배열 만들기
+
+                // 배열에 이름, 아이디값만 넣기
                 for (const trail of resData){
-                    trailName.push([trail.properties.mntn_nm, trail.id]) // 배열에 추가하기
+                    trailName.push([trail.properties.mntn_nm, trail.id]) // 이름, 아이디값 추가하기
                 }
+
                 addMarker(data.slice(0, 1), resData, data, trailName)
+
                 for (const trail of resData) {
-                    
                     const trailLIne = trail['geometry']['coordinates'][0]
-
                     const path = []
-
-
 
                     for (const coord of trailLIne) {
                         path.push(new kakao.maps.LatLng(coord[1], coord[0]))
 
                     }
-
-
-
 
 
                     // [
@@ -243,22 +202,14 @@ try {
                     polylines.push(polyLine)
                     polyLine.setMap(map)
 
-                    // ex) 한라산을 검색했을때 생성되는 폴리라인 5개의 경도,위도 주소값 배열로 담김.
-
-
-
-
-
                     // 마커 등산로 별로 만들기 테스트 중
                     const trailInfoBox = document.getElementsByClassName("camping-area-info-box")
-
                     let refPosition = trailLIne.length >> 1;
                     const trailRouteCoordX = trailLIne[refPosition][0]
                     const trailRouteCoordY = trailLIne[refPosition][1]
                     addHiddenMarker(trailRouteCoordX, trailRouteCoordY, trailInfoBox[index])
                     index = index + 1;
                 }
-
 
 
                 displayMarker()
@@ -401,27 +352,9 @@ function displayMarker() {
 // }
 
 function addListElementsToResultList(name, data, trailName) {
-    // 등산로만 있는 것임.
-        // console.log(index)
-        // console.log(n);
-        // console.log(n.properties.mntn_nm);
-        // let trailRouteNames = []; // 추출한 등산로의 name값만 담을 것임.
-        // const nameCount = {};
-        // const numberedNames = [];
-        //
-        // trailName.forEach(name => {
-        //     if (!nameCount[name]) {
-        //         nameCount[name] = 1;
-        //         numberedNames.push(name);
-        //     } else {
-        //         nameCount[name]++;
-        //         const numberedName = `${name} ${nameCount[name]}`;
-        //         numberedNames.push(numberedName);
-        //     }
-        // });
 
+        // 중복된 이름 체크, 중복된 이름에는 넘버링하는 메소드
         const nameCountMap = new Map();
-
         const result = trailName.map(([name, id]) => {
             if (!nameCountMap.has(name)) {
                 nameCountMap.set(name, 1);
@@ -436,16 +369,7 @@ function addListElementsToResultList(name, data, trailName) {
             return [numberedName, id];
         });
 
-
         for (const [index, n] of result.entries()) {
-
-
-            // console.log(index)
-            // console.log(n);
-            // console.log(n.properties.mntn_nm); // 산 이름
-
-
-            // 변경된 이름 출력 또는 사용
 
             const child = document.createElement("div");
             child.classList.add("camping-area-info-box");
@@ -466,7 +390,6 @@ function addListElementsToResultList(name, data, trailName) {
                 hiddenForm.style.display = "none";
                 hiddenForm.method = "post";
                 hiddenForm.action = `/hiking/detail/${lngi}/${lati}/${index}/${trailRouteId}`;
-                // C로 간다
 
                 let tempInput;
 
@@ -479,8 +402,6 @@ function addListElementsToResultList(name, data, trailName) {
                 document.body.appendChild(hiddenForm);
                 hiddenForm.submit();
 
-                // trailRouteNames.push(trailName);
-                // 배열에 뽑은 trailName 추가
             });
 
 

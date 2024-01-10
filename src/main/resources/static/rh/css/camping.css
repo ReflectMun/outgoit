@@ -388,13 +388,6 @@ body {
 
 /*모바일용 화면*/
 @media only screen and (max-width: 430px) and (max-height: 932px){
-    /* 공통 내용 */
-
-    body {
-        width: 100vw;
-        height: 100vh;
-        margin: 0;
-    }
 
     .rh-camping-titleBox {
         width: 100%;
