@@ -101,7 +101,7 @@
         height: 15vw;
         padding: 1vw;
         border-radius: 2vw;
-        background-image: url(/resources/static/img/기타/나무보드.jpg);
+        background-image: url("/resources/static/img/etc/wood.jpg");
         background-repeat: no-repeat;
         background-size: initial;
         box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
@@ -141,7 +141,7 @@
         width: 90%;
         border: 0.5vw solid rgb(76 44 9);
         border-radius: 3vw;
-        background-image: url("/resources/static/img/기타/나무보드.jpg");
+        background-image: url("/resources/static/img/etc/wood.jpg");
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -153,7 +153,7 @@
         height: 191vw;
         border: 0.5vw solid rgb(76 44 9);
         border-radius: 3vw;
-        background-image: url("../img/etc/나무보드.jpg");
+        background-image: url("/resources/static/img/etc/wood.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         align-items: center;

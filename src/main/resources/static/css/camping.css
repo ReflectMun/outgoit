@@ -29,7 +29,7 @@ body {
     width: 100%;
     height: 26.042vw;
     margin-bottom: 5%;
-    background-image: url("/resources/static/img/캠핑/camping_beginner.jpg");
+    background-image: url("/resources/static/img/page_banner/camping/camping_beginner.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -79,7 +79,7 @@ body {
 .rh-camping-wood-title {
     width: 50vw;
     border: 0.7vw solid rgb(76 44 9);
-    background-image: url("/resources/static/img/기타/나무보드.jpg");
+    background-image: url("/resources/static/img/etc/wood.jpg");
     box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
     background-size: initial;
     display: flex;
@@ -105,8 +105,8 @@ body {
 }
 
 .rh-camping-wood-bridge {
-    background-image: url("/resources/static/img/기타/나무보드.jpg");
     box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
+    background-image: url("/resources/static/img/etc/wood.jpg");
     background-size: contain;
     width: 3vw;
 }
@@ -114,8 +114,8 @@ body {
 .rh-camping-wood-mainBox {
     border: 1vw solid rgb(76 44 9);
     display: flex;
-    background-image: url("/resources/static/img/기타/나무보드.jpg");
     box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
+    background-image: url("/resources/static/img/etc/wood.jpg");
     background-size: contain;
     flex-wrap: wrap;
     justify-content: center;
@@ -126,9 +126,8 @@ body {
 
 /* 정보 카드 */
 .rh-camping-wood-main {
-    /*background-image: url("/resources/static/img/기타/paper.png");*/
     background-size: 100% 100%;
-    background-image: url("/resources/static/img/기타/양피지.png");
+    background-image: url("/resources/static/img/etc/paper.png");
     width: 20vw;
     height: 20vw;
     margin: 1.5%;
@@ -264,19 +263,19 @@ body {
 
 /*비기너 best3 이미지*/
 #best1 {
-    background-image: url("/resources/static/img/best/난지캠핑장.jpg");
+    background-image: url("/resources/static/img/best/camping_nanji.jpg");
     border-radius: 5%;
     background-size: cover;
     background-position: bottom;
 }
  #best2 {
-    background-image: url("/resources/static/img/best/송호국민관광지.jpg");
+    background-image: url("/resources/static/img/best/camping_songho.jpg");
     border-radius: 5%;
      background-size: cover;
      background-position: bottom;
 }
 #best3 {
-    background-image: url("/resources/static/img/best/대저캠핑장2.jpg");
+    background-image: url("/resources/static/img/best/camping_daejeo.jpg");
     border-radius: 5%;
     background-size: cover;
     background-position: right;
@@ -320,7 +319,7 @@ body {
     width: 100%;
     height: 26.042vw;
     margin-bottom: 5%;
-    background-image: url(../../../../../../../resources/static/img/캠핑/camping_safety.jpg);
+    background-image: url("/resources/static/img/page_banner/camping/camping_safety.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -354,7 +353,7 @@ body {
     width: 100%;
     height: 26.042vw;
     margin-bottom: 5%;
-    background-image: url(../../../../../../../resources/static/img/캠핑/camping_history4.jpg);
+    background-image: url("/resources/static/img/page_banner/camping/camping_history.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -362,7 +361,7 @@ body {
     align-items: center;
 }
 .rh-camping-history-wood-main {
-    background-image: url("/resources/static/img/기타/양피지.png");
+    background-image: url("/resources/static/img/etc/paper.png");
     border-radius: 2%;
     width: 65vw;
     margin: 1%;
@@ -393,7 +392,7 @@ body {
         width: 100%;
         height: 60vw;
         margin-bottom: 5%;
-        background-image: url("/resources/static/img/캠핑/camping_beginner.jpg");
+        background-image: url("/resources/static/img/page_banner/camping/camping_beginner.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -443,7 +442,7 @@ body {
     .rh-camping-wood-title {
         width: 70vw;
         border: 1.5vw solid rgb(76 44 9);
-        background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
+        background-image: url("/resources/static/img/etc/wood.jpg");
         background-size: initial;
         display: flex;
         justify-content: center;
@@ -470,8 +469,8 @@ body {
     }
 
     .rh-camping-wood-bridge {
-        background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
         box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
+        background-image: url("/resources/static/img/etc/wood.jpg");
         background-size: contain;
         width: 6vw;
     }
@@ -479,8 +478,8 @@ body {
     .rh-camping-wood-mainBox {
         border: 2vw solid rgb(76 44 9);
         display: flex;
-        background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
         box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
+        background-image: url("/resources/static/img/etc/wood.jpg");
         background-size: contain;
         flex-wrap: wrap;
         justify-content: center;
@@ -491,9 +490,8 @@ body {
 
     /* 정보 카드 */
     .rh-camping-wood-main {
-        /*background-image: url("/resources/static/img/기타/paper.png");*/
         background-size: 100% 100%;
-        background-image: url("/resources/static/img/기타/양피지.png");
+        background-image: url("/resources/static/img/etc/wood.jpg");
         width: 40vw;
         height: 40vw;
         margin: 1.5%;
@@ -612,19 +610,19 @@ body {
 
     /*비기너 best3 이미지*/
     #best1 {
-        background-image: url("/resources/static/img/best/난지캠핑장.jpg");
+        background-image: url("/resources/static/img/best/camping_nanji.jpg");
         border-radius: 5%;
         background-size: cover;
         background-position: bottom;
     }
     #best2 {
-        background-image: url("/resources/static/img/best/송호국민관광지.jpg");
+        background-image: url("/resources/static/img/best/camping_songho.jpg");
         border-radius: 5%;
         background-size: cover;
         background-position: bottom;
     }
     #best3 {
-        background-image: url("/resources/static/img/best/대저캠핑장2.jpg");
+        background-image: url("/resources/static/img/best/camping_daejeo.jpg");
         border-radius: 5%;
         background-size: cover;
         background-position: right;
@@ -668,7 +666,7 @@ body {
         width: 100%;
         height: 60vw;
         margin-bottom: 5%;
-        background-image: url(../../../../../../../resources/static/img/캠핑/camping_safety.jpg);
+        background-image: url("/resources/static/img/page_banner/camping/camping_safety.jpg");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -702,18 +700,14 @@ body {
         width: 100%;
         height: 65vw;
         margin-bottom: 5%;
-        background-image: url(../../../../../../../resources/static/img/캠핑/camping_history4.jpg);
         background-position: center;
+        background-image: url("/resources/static/img/page_banner/camping/camping_history.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         display: flex;
         align-items: center;
     }
     .rh-camping-history-wood-main {
-        /* border: 3px solid rgb(255, 0, 0); */
-        /*background-image: url("/resources/static/img/기타/bigPaper2.png");*/
-        /*background-size: 100% 100%;*/
-        /*background-repeat: no-repeat;*/
         width: 95vw;
         margin: 1%;
     }

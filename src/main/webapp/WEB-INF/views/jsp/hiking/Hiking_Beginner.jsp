@@ -8,14 +8,14 @@
     <title>Document</title>
     <link
             rel="stylesheet"
-            href="../../../../../../../resources/static/rh/css/hiking.css"
+            href="/resources/static/css/hiking.css"
     />
     <script
             src="https://code.jquery.com/jquery-3.5.1.js"
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous"
     ></script>
-    <script src="../../../../../../../resources/static/rh/js/card.js"></script>
+    <script src="/resources/static/rh/js/card.js"></script>
 </head>
 <body>
 <div>
@@ -182,59 +182,59 @@
                     </div>
                 </div>
 
-                    <div class="rh-hiking-wood-main">
-                        <div class="rh-pointer" id="icon8">
-                            <div class="rh-redPin-height">
-                                <img class="rh-redPin" src="/static/img/etc/pin.png" alt="">
-                            </div>
-                            <div><img style="margin: 10% 0%" width="45%"
-                                      src="/static/img/icon/card/mountainBest.png"
-                                      alt="">
-                            </div>
-                            <div class="rh-card-set">초보 하이커 베스트 코스</div>
+                <div class="rh-hiking-wood-main">
+                    <div class="rh-pointer" id="icon8">
+                        <div class="rh-redPin-height">
+                            <img class="rh-redPin" src="/static/img/etc/pin.png" alt="">
                         </div>
-                        <div class="rh-hiking-wood-mainPost" id="content8">
-                            <div class="rh-redPin-textView">
-                                <img class="rh-redPin" src="/static/img/etc/pin.png" alt="">
-                            </div>
-                            초보 하이커가 이용하기 좋을 장소를 선정했어요.
-                            <div class="rh-back-set rh-pointer" id="back8">돌아가기 <img width="20%"
-                                                                                     src="/static/img/icon/card/next.png"
-                                                                                     alt=""></div>
+                        <div><img style="margin: 10% 0%" width="45%"
+                                  src="/static/img/icon/card/mountainBest.png"
+                                  alt="">
                         </div>
+                        <div class="rh-card-set">초보 하이커 베스트 코스</div>
                     </div>
-                    <div class="rh-hiking-wood-main" style="display: block" id="best">
-                        <div class="rh-hiking-wood-main-best">
-                            <div class="rh-hiking-wood-mainPost-best" id="best1">
-                                <div class="rh-hiking-wood-mainPost-bestText">
-                                    <div class="bestTextLocal">강원도</div>
-                                    <div class="bestText2">오대산 - 노인봉</div>
-                                </div>
-                            </div>
+                    <div class="rh-hiking-wood-mainPost" id="content8">
+                        <div class="rh-redPin-textView">
+                            <img class="rh-redPin" src="/static/img/etc/pin.png" alt="">
                         </div>
-                        <div class="rh-hiking-wood-main-best">
-                            <div class="rh-hiking-wood-mainPost-best" id="best2">
-                                <div class="rh-hiking-wood-mainPost-bestText">
-                                    <div class="bestTextLocal">울산</div>
-                                    <div class="bestText2">천황산</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rh-hiking-wood-main-best">
-                            <div class="rh-hiking-wood-mainPost-best" id="best3">
-                                <div class="rh-hiking-wood-mainPost-bestText">
-                                    <div class="bestTextLocal">서울</div>
-                                    <div class="bestText2">안산</div>
-                                </div>
+                        초보 하이커가 이용하기 좋을 장소를 선정했어요.
+                        <div class="rh-back-set rh-pointer" id="back8">돌아가기 <img width="20%"
+                                                                                 src="/static/img/icon/card/next.png"
+                                                                                 alt=""></div>
+                    </div>
+                </div>
+                <div class="rh-hiking-wood-main" style="display: block" id="best">
+                    <div class="rh-hiking-wood-main-best">
+                        <div class="rh-hiking-wood-mainPost-best" id="best1">
+                            <div class="rh-hiking-wood-mainPost-bestText">
+                                <div class="bestTextLocal">강원도</div>
+                                <div class="bestText2">오대산 - 노인봉</div>
                             </div>
                         </div>
                     </div>
+                    <div class="rh-hiking-wood-main-best">
+                        <div class="rh-hiking-wood-mainPost-best" id="best2">
+                            <div class="rh-hiking-wood-mainPost-bestText">
+                                <div class="bestTextLocal">울산</div>
+                                <div class="bestText2">천황산</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rh-hiking-wood-main-best">
+                        <div class="rh-hiking-wood-mainPost-best" id="best3">
+                            <div class="rh-hiking-wood-mainPost-bestText">
+                                <div class="bestTextLocal">서울</div>
+                                <div class="bestText2">안산</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="rh-hiking-wood-main" style="visibility: hidden; height: 0;">
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 </div>
 </body>

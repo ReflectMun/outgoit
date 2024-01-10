@@ -8,7 +8,7 @@
     <title>Document</title>
     <link
             rel="stylesheet"
-            href="/static/css/camping.css"
+            href="/resources/static/css/camping.css"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script

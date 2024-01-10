@@ -8,16 +8,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUT GO IT - main</title>
-    <link rel="stylesheet" href="/static/css/main.css">
-    <link rel="stylesheet" href="/static/css/main_media.css">
+    <link rel="stylesheet" href="/resources/static/css/main.css">
+    <link rel="stylesheet" href="/resources/static/css/main_media.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
         $(function () {
             if (window.innerWidth === 430 && window.innerHeight === 932) {
-                $("#media2").attr("src", "/resources/static/img/main_swiper/camping_banner1_mobile.png")
-                $("#media3").attr("src", "/resources/static/img/main_swiper/camping_banner2_mobile.png")
-                $("#media4").attr("src", "/resources/static/img/main_swiper/camping_banner3_mobile.png")
+                $("#media2").attr("src", "/resources/static/img/swiper/mobile_swiper/camping_banner1_mobile.png")
+                $("#media3").attr("src", "/resources/static/img/swiper/mobile_swiper/camping_banner2_mobile.png")
+                $("#media4").attr("src", "/resources/static/img/swiper/mobile_swiper/camping_banner3_mobile.png")
             }
         });
     </script>
@@ -34,10 +34,10 @@
     <!-- 배너 영역 (슬라이드 들어가면 좋을듯!) -->
     <div class="mh-banner-wrap camp swiper mySwiper">
         <div class="mh-banner swiper-wrapper">
-            <div class="swiper-slide"><img src="/resources/static/kmh/img/Campingbanner.png"></div>
-            <div class="swiper-slide"><img id="media2" src="/resources/static/kmh/img/Campingbanner1.png"></div>
-            <div class="swiper-slide"><img id="media3" src="/resources/static/kmh/img/Campingbanner2.png"></div>
-            <div class="swiper-slide"><img id="media4" src="/resources/static/kmh/img/Campingbanner3.png"></div>
+            <div class="swiper-slide"><img src="/resources/static/img/swiper/camping_banner1.png"></div>
+            <div class="swiper-slide"><img id="media2" src="/resources/static/img/swiper/camping_banner2.png"></div>
+            <div class="swiper-slide"><img id="media3" src="/resources/static/img/swiper/camping_banner3.png"></div>
+            <div class="swiper-slide"><img id="media4" src="/resources/static/img/swiper/camping_banner4.png"></div>
         </div>
         <div class="mh-banner-txt-wrap">
             <div class="mh-banner-title">
@@ -108,8 +108,8 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script type="text/javascript"
         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=770a2850e8ce3177b209d2d94dc1e58b&libraries=services"></script>
-<script type="text/javascript" src="/static/js/draft1.js"></script>
-<script src="/static/js/banner.js"></script>
+<script type="text/javascript" src="/resources/static/js/camping_draft.js"></script>
+<script src="/resources/static/js/weather_banner.js"></script>
 <script>
     const swiper = new Swiper(".mySwiper", {
         loop: true,

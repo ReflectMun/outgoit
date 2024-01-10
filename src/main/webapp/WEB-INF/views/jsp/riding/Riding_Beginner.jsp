@@ -8,7 +8,7 @@
     <title>Document</title>
     <link
             rel="stylesheet"
-            href="../../../../../../../resources/static/rh/css/riding.css"
+            href="/resources/static/rh/css/riding.css"
     />
     <script
             src="https://code.jquery.com/jquery-3.5.1.js"
@@ -256,6 +256,6 @@
         </div>
     </div>
 </div>
-<script src="/static/js/recommend_riding.js"></script>
+<script src="/resources/static/js/recommend_riding.js"></script>
 </body>
 </html>
