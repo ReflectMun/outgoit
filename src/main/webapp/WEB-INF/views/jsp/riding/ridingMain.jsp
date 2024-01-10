@@ -14,9 +14,9 @@
     <script>
         $(function () {
             if (window.innerWidth === 430 && window.innerHeight === 932) {
-                $("#media1").attr("src", "/resources/static/img/main_swiper/riding_banner1_mobile.jpg")
-                $("#media2").attr("src", "/resources/static/img/main_swiper/riding_banner2_mobile.jpg")
-                $("#media3").attr("src", "/resources/static/img/main_swiper/riding_banner3_mobile.jpg")
+                $("#media1").attr("src", "/resources/static/img/swiper/mobile_swiper/riding_banner1_mobile.jpg")
+                $("#media2").attr("src", "/resources/static/img/swiper/mobile_swiper/riding_banner2_mobile.jpg")
+                $("#media3").attr("src", "/resources/static/img/swiper/mobile_swiper/riding_banner3_mobile.jpg")
             }
         });
     </script>

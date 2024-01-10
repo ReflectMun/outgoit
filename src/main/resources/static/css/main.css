@@ -28,10 +28,6 @@
 }
 
 .body {
-    /*margin: 0;*/
-    /*width: 100vw;*/
-    /*height: 100vh;*/
-    /*overflow-x: hidden;*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -45,7 +41,6 @@
 }
 
 .mh-container {
-    /*border: 3px solid red;*/
     position: relative;
     width: 100%;
     height: 100%;
@@ -54,8 +49,6 @@
 
 /*슬라이드*/
 .swiper {
-    /*width: 100%;*/
-    /*height: 100%;*/
     width: 100%;
     height: 35vw;
     display: flex;
@@ -66,7 +59,6 @@
     width: 80%;
     height: 27vw;
     text-align: center;
-    /*font-size: 18px;*/
     background: #fff;
     display: flex;
     justify-content: center;
@@ -85,24 +77,6 @@
 .sw-background{
     background-color: transparent;
 }
-
-/*슬라이드 끝*/
-
-/*.banner-wrap {*/
-/*    !*border: 3px solid blue;*!*/
-/*    width: 100%;*/
-/*    height: 27vw;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*}*/
-
-/*.banner {*/
-/*    width: 80%;*/
-/*    height: 27vw;*/
-/*    background-image: url("../../../../resources/static/kmh/img/camping_banner.jpg");*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: cover;*/
-/*}*/
 
 .mh-banner-txt-wrap {
     margin-top: 14vw;
@@ -134,7 +108,7 @@
     height: 6vw;
     padding: 1vw;
     border-radius: 2vw;
-    background-image: url("../img/etc/나무보드.jpg");
+    background-image: url("/resources/static/img/etc/wood.jpg");
     background-repeat: no-repeat;
     background-size: initial;
     box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
@@ -158,16 +132,13 @@
 
 .mh-search-wrap {
     width: 100%;
-    /*height: 40vw;*/
     margin-top: 2vw;
     padding-bottom: 1vw;
 }
 
 .mh-search-wrap-riding {
     width: 100%;
-    /*height: 40vw;*/
     margin-top: 2vw;
-    /*padding-bottom: 17vw;*/
 }
 
 
@@ -178,7 +149,7 @@
     width: 70%;
     border: 0.5vw solid rgb(76 44 9);
     border-radius: 3vw;
-    background-image: url("../img/etc/나무보드.jpg");
+    background-image: url("/resources/static/img/etc/wood.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
@@ -192,7 +163,7 @@
     height: 48vw;
     border: 0.5vw solid rgb(76 44 9);
     border-radius: 3vw;
-    background-image: url("../img/etc/나무보드.jpg");
+    background-image: url("/resources/static/img/etc/wood.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
@@ -225,8 +196,6 @@
     height: 39vw;
     display: flex;
     justify-content: center;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
     margin: auto;
     padding: 1%;
     position: relative;
@@ -379,8 +348,6 @@
 .camping-area-name {
     font-size: 1.4vw;
     margin: 1.2vw;
-    /*margin-left: 1vw;*/
-    /*만약 폰트사이즈가 1.6이 되어있다면 1.4로 고치시오*/
 }
 
 .button-wrapper {
@@ -423,33 +390,12 @@
     color: #fff;
     z-index: 1;
     border-radius: 2vw;
-    /*border: 0.1vw solid black;*/
 }
-/*.mh-btn-14:after {*/
-/*    position: absolute;*/
-/*    content: "";*/
-/*    width: 100%;*/
-/*    height: 0;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    z-index: -1;*/
-/*    background: #ffb459;*/
-/*    transition: all 0.3s ease;*/
-/*    border-radius: 2vw;*/
-/*}*/
+
 .mh-btn-14:hover {
     background: #ffb459;
     color: #000000;
 }
-/*.mh-btn-14:hover:after {*/
-/*    top: auto;*/
-/*    bottom: 0;*/
-/*    height: 100%;*/
-/*}*/
-/*.mh-btn-14:active {*/
-/*    top: 1vw*/
-/*}*/
-
 
 /*라이딩 지도 메뉴 버튼*/
 .metro-city-btn-menu {

@@ -24,7 +24,7 @@ public class IndexPageController {
 
     @GetMapping("/index")
     public String sendIndexPage() {
-        return "kmh/index";
+        return "jsp/etc/index";
     }
 
     @GetMapping("/camping")
