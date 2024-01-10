@@ -7,11 +7,11 @@ charset=UTF-8" pageEncoding="UTF-8" %>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Out Go It</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/header.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/menu.css">
+    <link rel="stylesheet" type="text/css" href="/resources/static/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="/resources/static/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/resources/static/css/menu.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="/static/js/menu.js"></script>
+    <script src="/resources/static/js/menu.js"></script>
 </head>
 <body>
 

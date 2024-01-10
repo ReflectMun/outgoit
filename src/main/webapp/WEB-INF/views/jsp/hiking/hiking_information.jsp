@@ -9,14 +9,14 @@
 
     <title>${trailRouteList.mntn_nm} 상세정보</title>
 
-    <link rel="stylesheet" href="/static/css/hiking_information.css"/>
-    <link rel="stylesheet" href="/static/css/hiking_info_media.css"/>
+    <link rel="stylesheet" href="/resources/static/css/hiking_info.css"/>
+    <link rel="stylesheet" href="/resources/static/css/hiking_info_media.css"/>
 
 
     <script src="/resources/static/js/hikinh_information_all.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="/static/js/hiking_information_detail.js"></script>
+    <script src="/resources/static/js/hiking_information_detail.js"></script>
 
 </head>
 <body>
@@ -29,7 +29,7 @@
         <div id="hj-info-weather">
             <div id="hj-info-weather-text">
                 <span>현재 등산로 날씨</span>
-                <img src="/resources/static/img/weather/${weatherIcon}.png">
+                <img src="/resources/static/img/icon/weather/${weatherIcon}.png">
                 <span>${temperature}℃</span>
             </div>
         </div>
