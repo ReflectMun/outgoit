@@ -51,7 +51,7 @@ div{
     border-radius: 3vw;
     border: 0.5vw solid #4c2c09;
     box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
-    background-image: url(/resources/static/img/기타/나무보드.jpg);
+    background-image: url(/resources/static/img/etc/wood.jpg);
     background-size: inherit;
 }
 .hj-info-name {
@@ -74,7 +74,7 @@ div{
     bottom: 2%;
 }
 #hj-tape{
-    background-image: url(/resources/static/Img_hj/tapeClear.png);
+    background-image: url(/resources/static/img/etc/tapeClear.png);
     height: 2vw;
     width: 9vw;
     background-size: contain;
@@ -87,7 +87,7 @@ div{
 /* 사진 내용 부분 */
 #hj-content-pic {
     position: relative;
-    background-image: url(/resources/static/img/기타/나무보드.jpg);
+    background-image: url(/resources/static/img/etc/wood.jpg);
     border-radius: 5vw;
     border: 1vw solid rgb(76, 44, 9);
     /* background-color: #59795a; */
@@ -113,7 +113,7 @@ div{
 /* 정보 부분 */
 #hj-content-detail {
     /*background-color: rgb(6, 57, 10);*/
-    background-image: url(/resources/static/img/기타/양피지.png);
+    background-image: url(/resources/static/img/etc/paper.png);
     /* border: 0.6vw solid rgb(157, 111, 76); */
     padding: 3% 0% 5% 2%;
     margin-right: 5%;
@@ -127,7 +127,7 @@ div{
 
 #hj-content-plus-container{
     position: absolute;
-    background-image: url("/resources/static/img/기타/양피지.png");
+    background-image: url("/resources/static/img/etc/paper.png");
     background-size: cover;
 
     width: 95%;
@@ -193,7 +193,7 @@ div{
     border-radius: 3vw;
     border: 0.5vw solid #4c2c09;
     box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
-    background-image: url(/resources/static/img/기타/나무보드.jpg);
+    background-image: url(/resources/static/img/etc/wood.jpg);
     background-size: inherit;
     margin-top: 3%;
 }
@@ -207,7 +207,7 @@ div{
 }
 #hj-comment-pic{
     border: 1vw solid rgb(76, 44, 9);
-    background-image: url("/resources/static/img/기타/나무보드.jpg");
+    background-image: url("/resources/static/img/etc/wood.jpg");
     border-radius: 5vw;
 
     /*background-color: #59795a;*/
@@ -225,7 +225,7 @@ div{
     /* margin-top: 5%; */
 }
 #hj-paper{
-    background-image: url(/resources/static/img/기타/양피지.png);
+    background-image: url(/resources/static/img/etc/paper.png);
     width: 65vw;
     position: absolute;
     height: 12vw;
@@ -234,7 +234,7 @@ div{
     left: 2%;
 }
 #hj-tape2{
-    background-image: url(/resources/static/Img_hj/tapeClear.png);
+    background-image: url(/resources/static/img/etc/tapeClear.png);
     height: 2vw;
     width: 9vw;
     background-size: contain;
@@ -375,7 +375,7 @@ input::placeholder{
 }
 #hj-review-pic{
     border: 1vw solid rgb(76, 44, 9);
-    background-image: url("/resources/static/img/기타/나무보드.jpg");
+    background-image: url("/resources/static/img/etc/wood.jpg");
     /* border: 10px solid hsl(197, 78%, 28%); */
     position: relative;
     border-radius: 5vw;
@@ -395,7 +395,7 @@ input::placeholder{
     bottom: 0;
 }
 #hj-tape3{
-    background-image: url(/resources/static/Img_hj/tapeClear.png);
+    background-image: url(/resources/static/img/etc/tapeClear.png);
     height: 2vw;
     width: 9vw;
     background-size: contain;
@@ -427,7 +427,7 @@ input::placeholder{
     justify-content: flex-start;
 }
 .hj-review-content-box{
-    background-image: url(/resources/static/img/기타/양피지.png);
+    background-image: url(/resources/static/img/etc/paper.png);
     background-size: cover;
     line-height: 1.8vw;
     width: 18vw;
@@ -464,7 +464,7 @@ input::placeholder{
     font-size: 0.85vw;
 }
 .hj-review-tape{
-    background-image: url(/resources/static/Img_hj/tapeClear.png);
+    background-image: url(/resources/static/img/etc/tapeClear.png);
     height: 2vw;
     width: 9vw;
     background-size: contain;

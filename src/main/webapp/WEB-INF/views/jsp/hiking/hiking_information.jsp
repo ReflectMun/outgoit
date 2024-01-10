@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/static/css/hiking_info_media.css"/>
 
 
-    <script src="/resources/static/jiho/js/draft_hiking_review.js"></script>
+    <script src="/resources/static/js/hikinh_information_all.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/static/js/hiking_information_detail.js"></script>

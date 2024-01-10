@@ -59,7 +59,7 @@ body {
     /* border: 1px solid red; */
     /* background-color: white; */
     width: 4.5vw;
-    background-image: url("/resources/static/Img_hj/outgoit_logo2.png");
+    background-image: url("/resources/static/img/header_footer/outgoit_logo.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -234,7 +234,7 @@ body {
     /*border: 1px solid red;*/
     width: 3vw;
     height: 3vw;
-    background-image: url("/resources/static/Img_hj/menu_sun_y.png");
+    background-image: url("/resources/static/img/header_footer/menu_sun_y.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -316,7 +316,7 @@ body {
 
     .hj-logo {
         width: 16vw;
-        background-image: url("/resources/static/Img_hj/outgoit_logo2.png");
+        background-image: url("/resources/static/img/header_footer/outgoit_logo2.png");
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -482,7 +482,7 @@ body {
     .hj-menu-icon {
         width: 8vw;
         height: 8vw;
-        background-image: url("/resources/static/Img_hj/menu_sun_y.png");
+        background-image: url("/resources/static/img/header_footer/menu_sun_y.png");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;

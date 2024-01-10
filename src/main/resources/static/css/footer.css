@@ -82,7 +82,7 @@ body {
   /* text-align: center; */
   /* box-shadow: 0.07vw 0.07vw 0.07vw 0 #173b21; */
   font-size: 1vw;
-  background-image: url(/resources/static/Img_hj/outgoit_logo2.png);
+  background-image: url(/resources/static/img/header_footer/outgoit_logo.png);
 }
 
 /*.hj-footer-logo > span {*/
@@ -155,7 +155,7 @@ body {
 .hj-tel-icon{
   width: 1.2vw;
   height: 1.2vw;
-  background-image: url("/resources/static/Img_hj/tel.png");
+  background-image: url("/resources/static/img/header_footer/tel.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -167,7 +167,7 @@ body {
 .hj-location-icon {
   width: 1.2vw;
   height: 1.2vw;
-  background-image: url("/resources/static/Img_hj/location.png");
+  background-image: url("/resources/static/img/header_footer/location.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -218,17 +218,17 @@ body {
   cursor: pointer;
 }
 .hj-footer-camp{
-  background-image: url("/resources/static/Img_hj/camping2.png");
+  background-image: url("/resources/static/img/header_footer/camping.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
 .hj-footer-tracking{
-  background-image: url("/resources/static/Img_hj/hiking2.png");
+  background-image: url("/resources/static/img/header_footer/hiking.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
 .hj-footer-riding{
-  background-image: url("/resources/static/Img_hj/bicycle2.png");
+  background-image: url("/resources/static/img/header_footer/bicycle.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -308,7 +308,7 @@ body {
     color: rgb(242, 166, 52);
     width: 10vw;
     height: 10vw;
-    background-image: url(/resources/static/Img_hj/outgoit_logo2.png);
+    background-image: url(/resources/static/img/header_footer/outgoit_logo.png);
     top: 4vw;
   }
 
@@ -376,7 +376,7 @@ body {
   .hj-tel-icon{
     width: 3.5vw;
     height: 3.5vw;
-    background-image: url(/resources/static/Img_hj/tel.png);
+    background-image: url(/resources/static/img/header_footer/tel.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -385,7 +385,7 @@ body {
   .hj-location-icon {
     width: 3.5vw;
     height: 3.5vw;
-    background-image: url("/resources/static/Img_hj/location.png");
+    background-image: url("/resources/static/img/header_footer/location.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -435,17 +435,17 @@ body {
     cursor: pointer;
   }
   .hj-footer-camp{
-    background-image: url("/resources/static/Img_hj/camping2.png");
+    background-image: url("/resources/static/img/header_footer/camping.png");
     background-size: contain;
     background-repeat: no-repeat;
   }
   .hj-footer-tracking{
-    background-image: url("/resources/static/Img_hj/hiking2.png");
+    background-image: url("/resources/static/img/header_footer/hiking.png");
     background-size: contain;
     background-repeat: no-repeat;
   }
   .hj-footer-riding{
-    background-image: url("/resources/static/Img_hj/bicycle2.png");
+    background-image: url("/resources/static/img/header_footer/bicycle.png");
     background-size: contain;
     background-repeat: no-repeat;
   }

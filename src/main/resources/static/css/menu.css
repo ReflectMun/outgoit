@@ -484,7 +484,7 @@ body {
     /*border: 1px solid red;*/
     width: 3vw;
     height: 4vw;
-    background-image: url("/resources/static/Img_hj/menu_moon_y.png");
+    background-image: url("/resources/static/img/header_footer/menu_moon_y.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -939,7 +939,7 @@ body {
         background-size: contain;
         background-position: center;
         margin-top: 2vw;
-        background-image: url("/resources/static/Img_hj/menu_moon_y.png");
+        background-image: url("/resources/static/img/header_footer/menu_moon_y.png");
         text-align: center;
     }
 

@@ -112,7 +112,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
       <!-- 푸터 시작 -->
       <div class="hj-container-footer">
         <div class="hj-footer-pic">
-          <img src="/static/img/기타/tree.png" alt="" />
+          <img src="/static/img/header_footer/tree.png" alt=""/>
         </div>
         <div class="hj-footer">
           <div class="hj-footer-box hj-footer-box-first">
