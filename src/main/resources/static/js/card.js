@@ -215,15 +215,15 @@ $(function () {
     $("#icon9").click(function () {
         $("#icon9").hide();
         $("#content9, #back9").fadeToggle();
-        $("#animal").css("height", "100%").css("background-image", " url('/resources/static/img/기타/paper.png')").css("background-size", "100% 100%");
+        $("#animal").css("height", "100%").css("background-image", " url('/resources/static/img/etc/paper.png')").css("background-size", "100% 100%");
     });
     $("#back9").click(function () {
         $("#content9, #back9").hide();
         $("#icon9").fadeToggle();
         if (window.innerWidth === 430 && window.innerHeight === 932) {
-            $("#animal").css("height", "40vw").css("background-image", "url('/resources/static/img/기타/paper.png')");
+            $("#animal").css("height", "40vw").css("background-image", "url('/resources/static/img/etc/paper.png')");
         } else {
-            $("#animal").css("height", "20vw").css("background-image", "url('/resources/static/img/기타/paper.png')");
+            $("#animal").css("height", "20vw").css("background-image", "url('/resources/static/img/etc/paper.png')");
         }
     });
 
