@@ -19,8 +19,6 @@ public interface CampingReviewRepositoryInterface extends JpaRepository<CampingR
 
     // SELECT * FROM (Table) WHERE Camping_Area_Id := camping_area_id AND is_deleted = false
     // 해당 캠핑장의 리뷰를 모두 불러오는 쿼리문
-    // Pageable 객체를 이용해서 페이징하면 됨
-    // 페이지네이션 객체는 CampingReviewApiController와 CampingReviewService에 좋은 예제가 있음
     Page<CampingReview> findByCampingAreaIdAndIsDeletedFalse(int campingAreaId, Pageable pageable);
 
     // SELECT * FROM (Table) WHERE Comment_Number := comment_number
