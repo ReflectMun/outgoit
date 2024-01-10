@@ -30,7 +30,7 @@ body {
     width: 100%;
     height: 26.042vw;
     margin-bottom: 5%;
-    background-image: url("/resources/static/img/자전거/riding_beginner2.jpg");
+    background-image: url("/resources/static/img/page_banner/riding/riding_beginner.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -60,7 +60,6 @@ body {
 }
 
 .rh-riding-content {
-    /* border: 3px solid rgb(21, 255, 0); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,13 +67,11 @@ body {
 }
 
 .rh-riding-wood {
-    /* border: 1px solid rgb(0, 183, 255); */
     width: 70vw;
     text-align: center;
 }
 
 .rh-riding-wood-titleBox {
-    /* border: 5px solid rgb(255, 0, 43); */
     height: 5.5vw;
     display: flex;
     justify-content: center;
@@ -83,7 +80,7 @@ body {
 .rh-riding-wood-title {
     width: 50vw;
     border: 0.5vw solid rgb(76 44 9);
-    background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
+    background-image: url("/resources/static/img/etc/wood.jpg");
     background-size: initial;
     box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
     display: flex;
@@ -111,7 +108,7 @@ body {
 }
 
 .rh-riding-wood-bridge {
-    background-image: url(/resources/static/img/기타/나무보드.jpg);
+    background-image: url("/resources/static/img/etc/wood.jpg");
     box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
     background-size: contain;
     width: 3vw;
@@ -120,8 +117,8 @@ body {
 .rh-riding-wood-mainBox {
     border: 1vw solid rgb(76 44 9);
     display: flex;
-    background-image: url(/resources/static/img/기타/나무보드.jpg);
     box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
+    background-image: url("/resources/static/img/etc/wood.jpg");
     background-size: contain;
     flex-wrap: wrap;
     justify-content: center;
@@ -131,7 +128,7 @@ body {
 
 /* 정보 카드 */
 .rh-riding-wood-main {
-    background-image: url("/resources/static/img/기타/양피지.png");
+    background-image: url("/resources/static/img/etc/paper.png");
     background-size: 100% 100%;
     width: 20vw;
     height: 20vw;
@@ -226,20 +223,20 @@ body {
 }
 
 #best1 {
-    background-image: url("/resources/static/img/best/의암호.jpg");
+    background-image: url("/resources/static/img/best/riding_uiamho.jpg");
     border-radius: 5%;
     background-size: cover;
     background-position: right;
 }
 
 #best2 {
-    background-image: url("/resources/static/img/best/아라뱃길.jpg");
+    background-image: url("/resources/static/img/best/riding_ara.jpg");
     border-radius: 5%;
     background-size: cover;
 }
 
 #best3 {
-    background-image: url("/resources/static/img/best/대청호수자전거길.jpg");
+    background-image: url("/resources/static/img/best/riding_daechungho.jpg");
     border-radius: 5%;
     background-size: cover;
 }
@@ -249,13 +246,12 @@ body {
     width: 100%;
     height: 26.042vw;
     margin-bottom: 5%;
-    background-image: url("/resources/static/img/자전거/riding_safety.jpg");
+    background-image: url("/resources/static/img/page_banner/riding/riding_safety.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    /* border: 2px solid rgb(255, 0, 0); */
 }
 
 .rh-riding-safety-title {
@@ -284,7 +280,7 @@ body {
     width: 100%;
     height: 26.042vw;
     margin-bottom: 5%;
-    background-image: url("/resources/static/img/자전거/riding2.png");
+    background-image: url("/resources/static/img/page_banner/riding/riding_history.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -293,20 +289,8 @@ body {
 
 }
 
-/*.rh-riding-history-wood-mainBox {*/
-/*  !* border: 5px solid rgb(64, 0, 255); *!*/
-/*  display: flex;*/
-/*  background-image: url(../../../../../../../resources/static/img/기타/wood.jpg);*/
-/*  box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;*/
-/*  background-size: contain;*/
-/*  flex-wrap: wrap;*/
-/*  justify-content: center;*/
-/*  background-color: rgb(226, 255, 238);*/
-/*  padding: 4vw 0;*/
-/*}*/
 .rh-riding-history-wood-main {
-    /* border: 3px solid rgb(255, 0, 0); */
-    background-image: url("/resources/static/img/기타/양피지.png");
+    background-image: url("/resources/static/img/etc/paper.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     width: 65vw;
@@ -388,7 +372,7 @@ body {
         width: 100%;
         height: 60vw;
         margin-bottom: 5%;
-        background-image: url("/resources/static/img/자전거/riding_beginner2.jpg");
+        background-image: url("/resources/static/img/page_banner/riding/riding_beginner.jpg");
         background-position: 90%;
         background-size: cover;
         background-repeat: no-repeat;
@@ -417,7 +401,6 @@ body {
     }
 
     .rh-riding-content {
-        /* border: 3px solid rgb(21, 255, 0); */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -425,13 +408,11 @@ body {
     }
 
     .rh-riding-wood {
-        /* border: 1px solid rgb(0, 183, 255); */
         width: 90vw;
         text-align: center;
     }
 
     .rh-riding-wood-titleBox {
-        /* border: 5px solid rgb(255, 0, 43); */
         height: 17vw;
         display: flex;
         justify-content: center;
@@ -440,7 +421,7 @@ body {
     .rh-riding-wood-title {
         width: 70vw;
         border: 1.5vw solid rgb(76 44 9);
-        background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
+        background-image: url("/resources/static/img/etc/wood.jpg");
         background-size: initial;
         box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
         display: flex;
@@ -454,13 +435,11 @@ body {
     }
 
     .rh-riding-wood-bridgeBox {
-        /* border: 5px solid rgb(255, 0, 217); */
         display: flex;
         justify-content: center;
     }
 
     .rh-riding-wood-bridgeSet {
-        /* border: 1px solid rgb(255, 0, 179); */
         width: 55vw;
         height: 2.5vw;
         display: flex;
@@ -468,7 +447,7 @@ body {
     }
 
     .rh-riding-wood-bridge {
-        background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
+        background-image: url("/resources/static/img/etc/wood.jpg");
         box-shadow: 1px 1px 0px 3px rgba(0, 0, 0, 0.56) inset;
         background-size: contain;
         width: 6vw;
@@ -477,7 +456,7 @@ body {
     .rh-riding-wood-mainBox {
         border: 2vw solid rgb(76 44 9);
         display: flex;
-        background-image: url(../../../../../../../resources/static/img/기타/나무보드.jpg);
+        background-image: url("/resources/static/img/etc/wood.jpg");
         background-size: contain;
         box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
         flex-wrap: wrap;
@@ -488,7 +467,7 @@ body {
 
     /* 정보 카드 */
     .rh-riding-wood-main {
-        background-image: url("/resources/static/img/기타/양피지.png");
+        background-image: url("/resources/static/img/etc/paper.png");
         background-size: 100% 100%;
         width: 40vw;
         height: 40vw;
@@ -583,20 +562,20 @@ body {
     }
 
     #best1 {
-        background-image: url("/resources/static/img/best/의암호.jpg");
+        background-image: url("/resources/static/img/best/riding_uiamho.jpg");
         border-radius: 5%;
         background-size: cover;
         background-position: right;
     }
 
     #best2 {
-        background-image: url("/resources/static/img/best/아라뱃길.jpg");
+        background-image: url("/resources/static/img/best/riding_ara.jpg");
         border-radius: 5%;
         background-size: cover;
     }
 
     #best3 {
-        background-image: url("/resources/static/img/best/대청호수자전거길.jpg");
+        background-image: url("/resources/static/img/best/riding_daechungho.jpg");
         border-radius: 5%;
         background-size: cover;
     }
@@ -606,7 +585,7 @@ body {
         width: 100%;
         height: 60vw;
         margin-bottom: 5%;
-        background-image: url("/resources/static/img/자전거/riding_safety.jpg");
+        background-image: url("/resources/static/img/page_banner/riding/riding_safety.jpg");
         background-position: 37%;
         background-size: cover;
         background-repeat: no-repeat;
@@ -644,7 +623,7 @@ body {
         width: 100%;
         height: 60vw;
         margin-bottom: 5%;
-        background-image: url("/resources/static/img/자전거/riding2.png");
+        background-image: url("/resources/static/img/page_banner/riding/riding_history.png");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -653,8 +632,7 @@ body {
     }
 
     .rh-riding-history-wood-main {
-        /* border: 3px solid rgb(255, 0, 0); */
-        background-image: url("/resources/static/img/기타/양피지.png");
+        background-image: url("/resources/static/img/etc/paper.png");
         background-size: 100% 100%;
         background-repeat: no-repeat;
         width: 95vw;
