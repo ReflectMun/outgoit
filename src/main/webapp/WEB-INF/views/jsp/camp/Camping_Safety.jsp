@@ -15,7 +15,7 @@ pageEncoding="UTF-8"%>
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
       crossorigin="anonymous"
     ></script>
-    <script src="/resources/static/rh/js/card.js"></script>
+    <script src="/resources/static/js/card.js"></script>
   </head>
   <body>
     <div>
