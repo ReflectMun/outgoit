@@ -8,14 +8,14 @@
     <title>Document</title>
     <link
             rel="stylesheet"
-            href="/resources/static/rh/css/riding.css"
+            href="/resources/static/css/riding.css"
     />
     <script
             src="https://code.jquery.com/jquery-3.5.1.js"
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous"
     ></script>
-    <script src="/static/js/card.js"></script>
+    <script src="/resources/static/js/card.js"></script>
 </head>
 <body>
 <div>
@@ -48,32 +48,32 @@
                 <div class="rh-riding-wood-main">
                     <div class="rh-pointer" id="icon1">
                         <div class="rh-redPin-height">
-                            <img class="rh-redPin" src="/static/img/etc/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
-                        <div><img style="margin: 10% 0%" width="45%" src="/static/img/icon/card/bikeCheck.png"
+                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/card/bikeCheck.png"
                                   alt=""></div>
                         <div class="rh-card-set">라이딩 전 체크리스트</div>
                     </div>
                     <div class="rh-riding-wood-mainPost" id="content1">
                         <div class="rh-redPin-textView">
-                            <img class="rh-redPin" src="/static/img/etc/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
                         &nbsp;자전거를 타기 전, 아래의 사항을 체크해야 해요. <br/><br/>• 브레이크
                         오염 상태 <br/>• 안장 높낮이, 각도 <br/>• 서스펜션 윤활, 청소
                         <br/>• 타이어 공기압 <br/>• 체인 상태 확인 및 관리<br/>• 후미등 밝기, 반사체 부착여부
                         <div class="rh-back-set rh-pointer" id="back1">돌아가기 <img width="20%"
-                                                                                 src="/static/img/icon/card/next.png"
+                                                                                 src="/resources/static/img/icon/card/next.png"
                                                                                  alt=""></div>
                     </div>
                 </div>
                 <div class="rh-riding-wood-main">
                     <div class="rh-riding-wood-mainPost" id="riding-content2">
                         <div class="rh-redPin-height" id="ridingBeginner2Pin">
-                            <img class="rh-redPin" src="/static/img/etc/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
                         <div class="rh-card-set" id="line">자전거 종류</div>
                         <div class="rh-riding-wood-beginner-zone first rh-pointer" id="mtb">
-                            <img src="/static/img/icon/card/mtb.png" alt="">
+                            <img src="/resources/static/img/icon/card/mtb.png" alt="">
                             산악자전거
                         </div>
                         <div id="mtbC">
@@ -82,7 +82,7 @@
                             &nbsp;낮은 기어 비율을 가지고 있어 오르막이나 어려운 지형에서 효과적이에요.<br>
                         </div>
                         <div class="rh-riding-wood-beginner-zone rh-pointer" id="rb">
-                            <img src="/static/img/icon/card/rb.png" alt="">
+                            <img src="/resources/static/img/icon/card/rb.png" alt="">
                             도로자전거
                         </div>
                         <div id="rbC">
@@ -90,7 +90,7 @@
                             &nbsp;가벼운 프레임과 기하학적인 디자인으로 편안한 자세를 유지해 빠르고 효율적으로 이동할 수 있으며, 얇고 좁은 고압 타이어로 공기 저항을 최소화하여 높은 속도를 유지할 수 있어요.
                         </div>
                         <div class="rh-riding-wood-beginner-zone rh-pointer" id="hb">
-                            <img width="10%" src="/static/img/icon/card/hb.png" alt="">
+                            <img width="10%" src="/resources/static/img/icon/card/hb.png" alt="">
                             하이브리드<br> 자전거
                         </div>
                         <div id="hbC">
@@ -98,104 +98,104 @@
                             &nbsp;중간 크기의 타이어와 경량 프레임으로 도로와 경로에서 안정적인 주행, 편안한 자세와 높은 편의성을 제공해요.<br>
                         </div>
                         <div class="rh-back-set rh-pointer" id="back2">돌아가기 <img width="20%"
-                                                                                 src="/static/img/icon/card/next.png"
+                                                                                 src="/resources/static/img/icon/card/next.png"
                                                                                  alt=""></div>
                     </div>
                 </div>
                 <div class="rh-riding-wood-main">
                     <div class="rh-pointer" id="icon3">
                         <div class="rh-redPin-height">
-                            <img class="rh-redPin" src="/static/img/etc/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
-                        <div><img style="margin: 10% 0%" width="45%" src="/static/img/icon/card/ridingSafe.png"
+                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/card/ridingSafe.png"
                                   alt=""></div>
                         <div class="rh-card-set">안전장비</div>
                     </div>
                     <div class="rh-riding-wood-mainPost" id="content3">
                         <div class="rh-redPin-textView">
-                            <img class="rh-redPin" src="/static/img/etc/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
                         &nbsp;헬멧, 고글, 장갑, 팔다리 보호대 등 안전장비 착용과 운행 전 스트레칭은 필수예요. 특히 생명과 직결되는 머리를 보호할 헬멧은 검증된 제품을 골라야 해요. <br>
                         &nbsp;또한 케이지를 설치하면 자전거 고장을 대비한 공구 통과 수분 보충을 위한 물통을 보관할 수 있어요.
 
                         <div class="rh-back-set rh-pointer" id="back3">돌아가기 <img width="20%"
-                                                                                 src="/static/img/icon/card/next.png"
+                                                                                 src="/resources/static/img/icon/card/next.png"
                                                                                  alt=""></div>
                     </div>
                 </div>
                 <div class="rh-riding-wood-main">
                     <div class="rh-pointer" id="icon4">
                         <div class="rh-redPin-height">
-                            <img class="rh-redPin" src="/static/img/etc/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
-                        <div><img style="margin: 10% 0%" width="45%" src="/static/img/icon/card/bikeroad3.png"
+                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/card/bikeroad3.png"
                                   alt=""></div>
                         <div class="rh-card-set">라이딩 코스</div>
                     </div>
                     <div class="rh-riding-wood-mainPost" id="content4">
                         <div class="rh-redPin-textView">
-                            <img class="rh-redPin" src="/static/img/etc/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
                         &nbsp; 처음부터 장거리 코스를 선택하는 것보다 동네 코스에 먼저 익숙해지는 것이 좋아요.
                         지리가 익숙한 동네 코스에서 저속으로 주행하며 기본기를 완성하고 이후 다음 목적지를 설계해요.
 
                         <div class="rh-back-set rh-pointer" id="back4">돌아가기 <img width="20%"
-                                                                                 src="/static/img/icon/card/next.png"
+                                                                                 src="/resources/static/img/icon/card/next.png"
                                                                                  alt=""></div>
                     </div>
                 </div>
                 <div class="rh-riding-wood-main">
                     <div class="rh-pointer" id="icon5">
                         <div class="rh-redPin-height">
-                            <img class="rh-redPin" src="/static/img/etc/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
-                        <div><img style="margin: 10% 0%" width="45%" src="/static/img/icon/card/waterBottle.png"
+                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/card/waterBottle.png"
                                   alt=""></div>
                         <div class="rh-card-set">라이딩 중 수분 섭취</div>
                     </div>
                     <div class="rh-riding-wood-mainPost" id="content5">
                         <div class="rh-redPin-textView">
-                            <img class="rh-redPin" src="/static/img/etc/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
                         &nbsp;라이딩 중 체내 수분 공급이 원활하지 않으면 운동 능력이 저하되고 근육 경련, 탈진, 탈수 증세가 발생해요. 이를 예방하기 위해 충분한 수분 섭취가 필요해요. <br>
                         &nbsp;특히 스포츠 드링크는 체내에서 빠져나간 전해질을 채우는 데에 도움이 되고, 음료는 갈증이 오기 전 미리 마셔야 해요.
                         <div class="rh-back-set rh-pointer" id="back5">돌아가기 <img width="20%"
-                                                                                 src="/static/img/icon/card/next.png"
+                                                                                 src="/resources/static/img/icon/card/next.png"
                                                                                  alt=""></div>
                     </div>
                 </div>
                 <div class="rh-riding-wood-main">
                     <div class="rh-pointer" id="icon6">
                         <div class="rh-redPin-height">
-                            <img class="rh-redPin" src="/static/img/etc/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
-                        <div><img style="margin: 10% 0%" width="45%" src="/static/img/icon/card/communi.png"
+                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/card/communi.png"
                                   alt=""></div>
                         <div class="rh-card-set">커뮤니케이션</div>
                     </div>
                     <div class="rh-riding-wood-mainPost" id="content6">
                         <div class="rh-redPin-textView">
-                            <img class="rh-redPin" src="/static/img/etc/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
                         &nbsp;다른 라이더나 차량과의 상호작용에 주의를 기울여요. 주행 중 진로를 변경하려는 경우 손 신호 등을
                         이용해 자신의 의도를 알려야 해요.
                         <div class="rh-back-set rh-pointer" id="back6">돌아가기 <img width="20%"
-                                                                                 src="/static/img/icon/card/next.png"
+                                                                                 src="/resources/static/img/icon/card/next.png"
                                                                                  alt=""></div>
                     </div>
                 </div>
                 <div class="rh-riding-wood-main" id="riding14Size">
                     <div class="rh-pointer" id="icon7">
                         <div class="rh-redPin-height">
-                            <img class="rh-redPin" src="/static/img/etc/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
-                        <div><img style="margin: 10% 0%" width="45%" src="/static/img/icon/card/bikeRule.png"
+                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/card/bikeRule.png"
                                   alt=""></div>
                         <div class="rh-card-set">주행 시 준수 사항</div>
                     </div>
                     <div class="rh-riding-wood-mainPost" id="content7">
                         <div class="rh-redPin-textView">
-                            <img class="rh-redPin" src="/static/img/etc/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
                         &nbsp;초보 라이더가 준수해야 하는 주요 사항이에요. <br>
                         1. 동료와 나란히 라이딩을 진행할 경우 반대편 도로까지 침범하여 사고가 날 수 있으니 이와 같은 행동은 자제하는 것이 좋아요. <br>
@@ -203,26 +203,26 @@
                         유지하는 편이 좋아요. <br>
                         3. 사고 예방을 위해 시속은 20km/h 이하로 유지해요.
                         <div class="rh-back-set rh-pointer" id="back7">돌아가기 <img width="20%"
-                                                                                 src="/static/img/icon/card/next.png"
+                                                                                 src="/resources/static/img/icon/card/next.png"
                                                                                  alt=""></div>
                     </div>
                 </div>
                 <div class="rh-riding-wood-main">
                     <div class="rh-pointer" id="icon8">
                         <div class="rh-redPin-height">
-                            <img class="rh-redPin" src="/static/img/etc/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
-                        <div><img style="margin: 10% 0%" width="45%" src="/static/img/icon/card/ridingBest.png"
+                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/card/ridingBest.png"
                                   alt=""></div>
                         <div class="rh-card-set">초보 라이더 베스트</div>
                     </div>
                     <div class="rh-riding-wood-mainPost" id="content8">
                         <div class="rh-redPin-textView">
-                            <img class="rh-redPin" src="/static/img/etc/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
                         초보 라이더가 이용하기 좋을 장소를 선정했어요.
                         <div class="rh-back-set rh-pointer" id="back8">돌아가기 <img width="20%"
-                                                                                 src="/static/img/icon/card/next.png"
+                                                                                 src="/resources/static/img/icon/card/next.png"
                                                                                  alt=""></div>
                     </div>
                 </div>
@@ -256,6 +256,6 @@
         </div>
     </div>
 </div>
-<script src="/resources/static/js/recommend_riding.js"></script>
+<script src="/resources/resources/static/js/recommend_riding.js"></script>
 </body>
 </html>

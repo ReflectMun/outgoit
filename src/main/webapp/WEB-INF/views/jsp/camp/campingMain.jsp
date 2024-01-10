@@ -34,10 +34,10 @@
     <!-- 배너 영역 (슬라이드 들어가면 좋을듯!) -->
     <div class="mh-banner-wrap camp swiper mySwiper">
         <div class="mh-banner swiper-wrapper">
-            <div class="swiper-slide"><img src="/resources/static/img/swiper/camping_banner1.png"></div>
-            <div class="swiper-slide"><img id="media2" src="/resources/static/img/swiper/camping_banner2.png"></div>
-            <div class="swiper-slide"><img id="media3" src="/resources/static/img/swiper/camping_banner3.png"></div>
-            <div class="swiper-slide"><img id="media4" src="/resources/static/img/swiper/camping_banner4.png"></div>
+            <div class="swiper-slide"><img src="/resources/static/img/swiper/web_swiper/camping_banner1.png"></div>
+            <div class="swiper-slide"><img id="media2" src="/resources/static/img/swiper/web_swiper/camping_banner2.png"></div>
+            <div class="swiper-slide"><img id="media3" src="/resources/static/img/swiper/web_swiper/camping_banner3.png"></div>
+            <div class="swiper-slide"><img id="media4" src="/resources/static/img/swiper/web_swiper/camping_banner4.png"></div>
         </div>
         <div class="mh-banner-txt-wrap">
             <div class="mh-banner-title">
@@ -60,7 +60,7 @@
                     <c:forEach var="data" items="${weathers}">
                         <div class="swiper-slide sw-background">
                             <span>${data.area}</span>&nbsp;
-                            </nbsp><img src="/resources/static/img/weather/${data.weatherIcon}.png" alt="">&nbsp;
+                            </nbsp><img src="/resources/static/img/icon/weather/${data.weatherIcon}.png" alt="">&nbsp;
                             <span>${data.temperature}℃</span>
                         </div>
                     </c:forEach>
@@ -109,7 +109,7 @@
 <script type="text/javascript"
         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=770a2850e8ce3177b209d2d94dc1e58b&libraries=services"></script>
 <script type="text/javascript" src="/resources/static/js/camping_draft.js"></script>
-<script src="/resources/static/js/weather_banner.js"></script>
+<script type="text/javascript" src="/resources/static/js/weather_banner.js"></script>
 <script>
     const swiper = new Swiper(".mySwiper", {
         loop: true,
