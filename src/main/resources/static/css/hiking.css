@@ -215,19 +215,19 @@ body {
 }
 
 #best1 {
-    background-image: url("/resources/static/img/best/오대산.jpg");
+    background-image: url("/resources/static/img/best/hiking_odaesan.jpg");
     border-radius: 5%;
     background-size: cover;
 }
 
 #best2 {
-    background-image: url("/resources/static/img/best/천황산.jpg");
+    background-image: url("/resources/static/img/best/hiking_chunhwansan.jpg");
     border-radius: 5%;
     background-size: cover;
 }
 
 #best3 {
-    background-image: url("/resources/static/img/best/안산.jpg");
+    background-image: url("/resources/static/img/best/hiking_ansan.jpg");
     border-radius: 5%;
     background-size: cover;
 }
@@ -315,7 +315,7 @@ body {
 .rh-hiking-history-wood-main {
     width: 65vw;
     margin: 1%;
-    background-image: url("/resources/static/img/기타/양피지.png");
+    background-image: url("/resources/static/img/etc/paper.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
