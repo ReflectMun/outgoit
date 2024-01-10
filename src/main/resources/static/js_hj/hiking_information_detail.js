@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             const polyLine = new kakao.maps.Polyline({
                 path: path,
                 strokeWeight: 6.5,
-                strokeColor: '#FF0000',
+                strokeColor: '#1c6f1c',
                 strokeOpacity: 1,
                 strokeStyle: 'solid'
             })

@@ -275,7 +275,7 @@ public class WeatherService {
     private String getPrecipitationType(String code){
         switch (code){
             case "3", "7":
-                return "cloud_snow";
+                return "snow";
             default:
                 return "rain";
         }

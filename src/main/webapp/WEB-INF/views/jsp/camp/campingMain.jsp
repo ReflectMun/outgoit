@@ -12,6 +12,15 @@
     <link rel="stylesheet" href="/resources/static/kmh/css/main_media.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        $(function () {
+            if (window.innerWidth === 430 && window.innerHeight === 932) {
+                $("#media2").attr("src", "/resources/static/img/main_swiper/Campingbanner1_mobile.png")
+                $("#media3").attr("src", "/resources/static/img/main_swiper/Campingbanner2_mobile.png")
+                $("#media4").attr("src", "/resources/static/img/main_swiper/Campingbanner3_mobile.png")
+            }
+        });
+    </script>
 </head>
 <body>
 <!-- 헤더 영역 -->
@@ -26,9 +35,9 @@
     <div class="mh-banner-wrap camp swiper mySwiper">
         <div class="mh-banner swiper-wrapper">
             <div class="swiper-slide"><img src="/resources/static/kmh/img/Campingbanner.png"></div>
-            <div class="swiper-slide"><img src="/resources/static/kmh/img/Campingbanner1.png"></div>
-            <div class="swiper-slide"><img src="/resources/static/kmh/img/Campingbanner2.png"></div>
-            <div class="swiper-slide"><img src="/resources/static/kmh/img/Campingbanner3.png"></div>
+            <div class="swiper-slide"><img id="media2" src="/resources/static/kmh/img/Campingbanner1.png"></div>
+            <div class="swiper-slide"><img id="media3" src="/resources/static/kmh/img/Campingbanner2.png"></div>
+            <div class="swiper-slide"><img id="media4" src="/resources/static/kmh/img/Campingbanner3.png"></div>
         </div>
         <div class="mh-banner-txt-wrap">
             <div class="mh-banner-title">
@@ -49,10 +58,9 @@
             <div class="swiper" id="weather-list-swiper">
                 <div class="swiper-wrapper">
                     <c:forEach var="data" items="${weathers}">
-                        <div class="swiper-slide">
+                        <div class="swiper-slide sw-background">
                             <span>${data.area}</span>&nbsp;
-                            </nbsp><img style="width: 1.3vw; height: auto;"
-                                        src="/resources/static/img/weather/${data.weatherIcon}.png" alt="">&nbsp;
+                            </nbsp><img src="/resources/static/img/weather/${data.weatherIcon}.png" alt="">&nbsp;
                             <span>${data.temperature}℃</span>
                         </div>
                     </c:forEach>

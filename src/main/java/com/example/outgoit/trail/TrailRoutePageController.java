@@ -1,5 +1,6 @@
 package com.example.outgoit.trail;
 
+import com.example.outgoit.nickname.RandomNicknameService;
 import com.example.outgoit.review.trail.TrailReview;
 import com.example.outgoit.review.trail.TrailReviewService;
 import com.example.outgoit.trail.dto.FeatureData;
@@ -31,15 +32,18 @@ public class TrailRoutePageController {
     private final TrailRouteService trailRouteService;
     private final TrailReviewService trailReviewService;
     private final WeatherService weatherService;
+    private final RandomNicknameService randomNicknameService;
 
     public TrailRoutePageController(
             TrailRouteService trailRouteService,
             TrailReviewService trailReviewService,
-            WeatherService weatherService
+            WeatherService weatherService,
+            RandomNicknameService randomNicknameService
     ) {
         this.trailRouteService = trailRouteService;
         this.trailReviewService = trailReviewService;
         this.weatherService = weatherService;
+        this.randomNicknameService = randomNicknameService;
     }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -58,31 +62,6 @@ public class TrailRoutePageController {
     public String sendDraft1() {
         return "kmh/hiking";
     }
-
-//    @GetMapping
-//    public String getTrailRoutePage() {
-//        return "jiho/trail";
-//    }
-//
-//    @GetMapping("/draft1")
-//    public String sendDraft1() {
-//        return "jsp/hiking/hiking";
-//    }
-
-
-//    @GetMapping("/draft2min")
-//    public String sendDraft2(){
-//        return "kmh/hiking3";
-//    }
-
-    //    @PostMapping("/detail/{lngi}/{lati}")
-//    public ArrayList<TrailRouteDTO> GetDetailTrain(@PathVariable ("lngi") double lngi, @PathVariable ("lati") double lati) throws Exception {
-//       trailRouteService.getTrailRouteList(lngi, lati);
-//        {
-//            return new ArrayList<TrailRouteDTO>();
-//        }
-//
-//    }
 
     @PostMapping("/detail/{lngi}/{lati}/{index}/{trailRouteId}")
     public String GetDetailTrain(
@@ -118,6 +97,7 @@ public class TrailRoutePageController {
         model.addAttribute("ratingAvg", ratingAvg);
         model.addAttribute("existReviews", !reviews.isEmpty());
         model.addAttribute("hikingContentPage", "hiking_information.jsp");
+        model.addAttribute("nickname",randomNicknameService.getRandomNickname());
 
         return "jsp/hiking/container"; // yourViewName은 실제로 사용할 JSP 파일의 이름이어야 합니다.
     }

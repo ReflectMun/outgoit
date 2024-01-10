@@ -40,7 +40,7 @@ body {
     justify-content: center;
     align-content: center;
     /*justify-content: space-evenly;*/
-    width: 25vw;
+    width: 21vw;
     margin-top: 0.3vw;
     /*border: 3px solid green;*/
 }
@@ -58,7 +58,7 @@ body {
 .hj-logo {
     /* border: 1px solid red; */
     /* background-color: white; */
-    width: 4vw;
+    width: 4.5vw;
     background-image: url("/resources/static/Img_hj/outgoit_logo2.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -482,7 +482,7 @@ body {
     .hj-menu-icon {
         width: 8vw;
         height: 8vw;
-        background-image: url("../Img_hj/menu_sun1.png");
+        background-image: url("/resources/static/Img_hj/menu_sun_y.png");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;

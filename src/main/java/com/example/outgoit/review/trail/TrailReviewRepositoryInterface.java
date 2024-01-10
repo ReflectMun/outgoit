@@ -10,7 +10,7 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface TrailReviewRepositoryInterface extends JpaRepository<TrailReview, Long> {
-    @Query("select avg(rating) from trail_review where trailRouteId = :trailRouteId AND isDeleted = false")
+    @Query("select AVG(rating) from trail_review where trailRouteId = :trailRouteId AND isDeleted = false")
     List<Object> findAvgRatingByTrailRouteId(@Param("trailRouteId") String trailRouteId);
 
     Page<TrailReview> findAllByTrailRouteIdAndIsDeletedFalse(String trailRouteId, Pageable pageable);

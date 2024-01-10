@@ -150,20 +150,20 @@
                                             <input
                                                     type="text"
                                                     id="hj-id-input"
-                                                    placeholder="닉네임"
                                                     name="author"
-                                                    onfocus="this.placeholder=''"
-                                                    onblur="this.placeholder='닉네임'"
+                                                    value="${nickname}"
+                                                    readonly
                                             />
                                         </div>
                                         <div id="hj-pw">
                                             <input
-                                                    type="text"
+                                                    type="password"
                                                     id="hj-pw-input"
-                                                    placeholder="비번"
+                                                    placeholder="비밀번호"
                                                     name="password"
                                                     onfocus="this.placeholder=''"
-                                                    onblur="this.placeholder='비번'"
+                                                    onblur="this.placeholder='비밀번호'"
+
                                             />
                                         </div>
                                     </div>
@@ -247,11 +247,10 @@
         const authorInput = document.getElementById("hj-id-input")
         const passwordInput = document.getElementById("hj-pw-input")
         const contentInput = document.getElementById("hj-review-input")
-
-        if (!authorInput.value) {
-            alert("닉네임을 입력해주세요!")
-            return
-        }
+        // if (!authorInput.value) {
+        //     alert("닉네임을 입력해주세요!")
+        //     return
+        // }
 
         if (!passwordInput.value) {
             alert("비밀번호를 입력해주세요!")
@@ -284,10 +283,23 @@
 
             if (resData['statusCode'] === 200) {
                 alert("리뷰 작성 성공")
+
             } else {
                 alert(resData['errorMessage'])
                 return
             }
+
+            // 여기 위까지가 그거임 버튼 눌렀을 때 값 넘어가는 것
+
+            // 별 초기화, 닉네임 초기화
+            const nicknameInput = document.getElementById('hj-id-input');
+            // 별 초기화
+            const starsValue = document.getElementsByClassName("hj-star");
+            for (const star of starsValue) {
+                star.innerHTML = "☆";
+            }
+            // 여기까지가 초기화
+
 
             const campingAreaId = document.getElementById("camping-area-id").value
 
@@ -338,11 +350,14 @@
                 const madeReviewBox = makeReviewBox(review)
                 reviewListContainer.appendChild(madeReviewBox)
             }
+            const reqUrl2 = "/nickname/show"
+            const {data: resData2} = await axios.get(reqUrl2)
 
             // 작성을 완료하고 입력 박스들을 비움
             passwordInput.value = ""
-            authorInput.value = ""
             contentInput.value = ""
+            // 랜덤 닉네임 새로 넣어줌
+            authorInput.value = resData2; //     resData2에 초기화된 닉네임이 담겨있음
 
             // 평점 별 초기화
             const starList = document.getElementsByClassName("hj-star")

@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="/resources/static/kmh/css/main_media.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        $(function () {
+            if (window.innerWidth === 430 && window.innerHeight === 932) {
+                $("#media1").attr("src", "/resources/static/img/main_swiper/hiking_banner2_mobile.jpg")
+            }
+        });
+    </script>
 </head>
 <body>
 <!-- 헤더 영역 -->
@@ -25,7 +32,7 @@
     <div class="mh-banner-wrap camp swiper mySwiper">
         <div class="mh-banner swiper-wrapper">
             <div class="swiper-slide"><img src="/resources/static/img/등산/hiking_banner1.jpg"></div>
-            <div class="swiper-slide"><img src="/resources/static/img/등산/hiking_banner2.jpg"></div>
+            <div class="swiper-slide"><img id="media1" src="/resources/static/img/등산/hiking_banner2.jpg"></div>
             <div class="swiper-slide"><img src="/resources/static/img/등산/hiking_banner4.jpg"></div>
             <div class="swiper-slide"><img src="/resources/static/img/등산/hiking_banner3.jpg"></div>
         </div>
@@ -46,9 +53,9 @@
         <div class="swiper" id="weather-list-swiper">
             <div class="swiper-wrapper">
                 <c:forEach var="data" items="${weathers}">
-                    <div class="swiper-slide">
+                    <div class="swiper-slide sw-background">
                         <span>${data.area}</span>&nbsp;
-                        </nbsp><img style="width: 1.3vw; height: auto;"
+                        </nbsp><img
                                     src="/resources/static/img/weather/${data.weatherIcon}.png" alt="">&nbsp;
                         <span>${data.temperature}℃</span>
                     </div>
@@ -72,6 +79,7 @@
                 <button class="mh-button" id="submit-search"><span>Search</span></button>
             </div>
             <div class="mh-map-all">
+                <div class="mh-custom-btn mh-btn-14" id="trail-road-btn">지형 변환</div>
                 <div id="map"></div>
                 <div id="search-result-list"><h1></h1></div>
             </div>

@@ -45,7 +45,7 @@ public class CampingReviewService {
         }
 
         Integer countOfUpdatedRecord = this.repo.updateContentByCommentNumber(content, commentId, rating);
-        System.out.printf("총 %d개의 리뷰가 수정됨. 레코드 넘버: %d\n", countOfUpdatedRecord, commentId, rating);
+        System.out.printf("총 %d개의 리뷰가 수정됨. 레코드 넘버: %d\n", countOfUpdatedRecord, commentId);
         return new NotificationProcessStatusDTO(200);
     }
 

@@ -42,6 +42,8 @@ body {
   /*padding-top: 3.2vw;*/
   /*border: 1px solid green;*/
   width: 100%;
+  margin-top: 2%;
+  height: 7vw;
 }
 .hj-footer-box-first {
   margin-left: 4%;
@@ -52,7 +54,6 @@ body {
   /*border: 1px solid red;*/
 }
 .hj-footer-col {
-  height: auto;
   /*border: 1px solid pink;*/
   display: grid;
 }
@@ -115,7 +116,6 @@ body {
   display: flex;
   justify-content: flex-start;
   color: rgb(242, 166, 52);
-  height: 4vw;
   margin-left: 2.5%;
 }
 .hj-footer-tel,

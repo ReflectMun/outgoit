@@ -21,7 +21,7 @@ $(function () {
         $("#icon2").hide();
         $("#content2, #back2").fadeToggle();
     });
-    $("#back2").click(function () {
+    $("#bacAk2").click(function () {
         $("#icon2").fadeToggle();
         $("#content2, #back2").hide();
     });

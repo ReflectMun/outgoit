@@ -1,5 +1,6 @@
 package com.example.outgoit.camp;
 
+import com.example.outgoit.nickname.RandomNicknameService;
 import com.example.outgoit.review.camping.CampingReview;
 import com.example.outgoit.review.camping.CampingReviewService;
 import com.example.outgoit.weather.WeatherService;
@@ -22,35 +23,22 @@ public class CampingAreaSearchPageController {
     private final CampingReviewService campingReviewService;
     private final CampingSearchService campingSearchService;
     private final WeatherService weatherService;
+    private final RandomNicknameService randomNicknameService;
 
     public CampingAreaSearchPageController(
             CampingReviewService campingReviewService,
             CampingSearchService campingSearchService,
-            WeatherService weatherService
+            WeatherService weatherService,
+            RandomNicknameService randomNicknameService
     ){
-        this.campingReviewService = campingReviewService;
-        this.campingSearchService = campingSearchService;
-        this.weatherService = weatherService;
+            this.campingReviewService = campingReviewService;
+            this.campingSearchService = campingSearchService;
+            this.weatherService = weatherService;
+            this.randomNicknameService = randomNicknameService;
     }
     ////////////////////////////////////////////////////////
 
 
-
-
-    @GetMapping("/About")
-    public String aboutPage(Model model){
-        return "RH/jsp/Camping/Camping_About";
-        // return "RH/jsp/Hiking/Hiking_About";
-        // return "RH/jsp/Riding/Riding_About";
-    }
-    @GetMapping("/Safety")
-    public String safetyPage(Model model){
-        return "RH/jsp/Camping/Camping_Safety";
-    }
-    @GetMapping("/Beginner")
-    public String beginnerPage(Model model){
-        return "RH/jsp/Camping/Camping_Beginner";
-    }
 
     @PostMapping("/detail/{campingAreaName}")
 
@@ -141,6 +129,7 @@ public class CampingAreaSearchPageController {
         model.addAttribute("siteGravel", data.getSiteBottomCl4());
         model.addAttribute("siteSoil", data.getSiteBottomCl5());
         model.addAttribute("campingContentPage","camp_information.jsp");
+        model.addAttribute("nickname", randomNicknameService.getRandomNickname());
         return "jsp/camp/container";
     }
 

@@ -260,10 +260,7 @@ div{
     background-repeat: no-repeat;
     position: absolute;
     top: 4%;
-<<<<<<< HEAD
     right: 43%;
-=======
->>>>>>> rh
     z-index: 33;
 }
 #hj-content-detail2 {
@@ -492,7 +489,7 @@ input::placeholder{
     /*width: 100%;*/
     /*height: 100%;*/
     /*margin-bottom: 2%;*/
-    font-size: 1vw;
+    font-size: 0.85vw;
 }
 .hj-review-tape{
     background-image: url(/resources/static/Img_hj/tapeClear.png);
@@ -508,6 +505,7 @@ input::placeholder{
     /*width: 17vw;*/
     word-break: break-all;
     text-align: justify;
+    line-height: 1.8;
 }
 .hj-comment-textarea{
     background-color: transparent;
