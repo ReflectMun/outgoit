@@ -8,14 +8,14 @@
     <title>Document</title>
     <link
             rel="stylesheet"
-            href="../../../../../../../resources/static/rh/css/riding.css"
+            href="/resources/static/rh/css/riding.css"
     />
     <script
             src="https://code.jquery.com/jquery-3.5.1.js"
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous"
     ></script>
-    <script src="../../../../../../../resources/static/rh/js/card.js"></script>
+    <script src="/resources/static/rh/js/card.js"></script>
 </head>
 <body>
 <div>
