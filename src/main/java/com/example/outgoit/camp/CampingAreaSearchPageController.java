@@ -53,7 +53,6 @@ public class CampingAreaSearchPageController {
     }
 
     @PostMapping("/detail/{campingAreaName}")
-
     public String sendDetailPage(
             @PageableDefault(size = 5, sort = "commentNumber", direction = Sort.Direction.DESC) Pageable pageable,
             CampingAreaInfoDTO data,

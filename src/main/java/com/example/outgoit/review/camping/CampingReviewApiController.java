@@ -11,6 +11,10 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.UnsupportedEncodingException;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
 @RestController
@@ -19,17 +23,17 @@ public class CampingReviewApiController {
     //////////////////// 초기화 코드니까 말 없이 건드리지 마시오 /////////////////////////
     private final CampingReviewService campingReviewService;
 
-    public CampingReviewApiController(CampingReviewService campingReviewService){
+    public CampingReviewApiController(CampingReviewService campingReviewService) {
         this.campingReviewService = campingReviewService;
     }
     ////////////////////////////////////////////////////////////////////////////
 
     @PostMapping("/submit")
-    public NotificationProcessStatusDTO submitCampingAreaReview(@RequestBody CampingReviewSubmitBodyDTO body){
+    public NotificationProcessStatusDTO submitCampingAreaReview(@RequestBody CampingReviewSubmitBodyDTO body) {
         Integer resultCode = null;
         try {
-            if(body.getAuthor().isEmpty() || body.getPassword().isEmpty() ||
-               body.getContent().isEmpty() || body.getCampingAreaId() == null){
+            if (body.getAuthor().isEmpty() || body.getPassword().isEmpty() ||
+                    body.getContent().isEmpty() || body.getCampingAreaId() == null) {
                 resultCode = 703;
                 throw new Exception("올바르지 않은 값이 전달되었습니다");
             }
@@ -42,14 +46,14 @@ public class CampingReviewApiController {
                     body.getCampingAreaId()
             );
 
-            if(resultCode != 200)
+            if (resultCode != 200)
                 throw new Exception("리뷰 작성 중 문제가 발생하였습니다");
 
             return new NotificationProcessStatusDTO(resultCode, null);
         } catch (Exception e) {
             e.printStackTrace();
 
-            if(resultCode == null)
+            if (resultCode == null)
                 resultCode = 700;
 
             return new NotificationProcessStatusDTO(resultCode, e.getMessage());
@@ -57,14 +61,27 @@ public class CampingReviewApiController {
     }
 
     @GetMapping("/rating")
-    public ArrayList<Object> getCampingAreaRating(Integer campingAreaId){
+    public ArrayList<Object> getCampingAreaRating(Integer campingAreaId) {
         return new ArrayList<>(campingReviewService.getCampingAreaRating(campingAreaId));
     }
 
     @PostMapping("/update")
-    public NotificationProcessStatusDTO updateReview(@RequestBody CampingReviewModifyingDTO body){
+    public NotificationProcessStatusDTO updateReview(@RequestBody CampingReviewModifyingDTO body) {
+        String password = null;
+
+        try {
+            MessageDigest hashing = MessageDigest.getInstance("SHA-512");
+            hashing.reset();
+            hashing.update(body.getPassword().getBytes("utf8"));
+            password = String.format("%0128x", new BigInteger(1, hashing.digest()));
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
         return campingReviewService.updateReviewContent(
-                body.getPassword(),
+                password,
                 body.getCommentNumber(),
                 body.getContent(),
                 body.getRating()
@@ -72,8 +89,21 @@ public class CampingReviewApiController {
     }
 
     @PostMapping("/delete")
-    public NotificationProcessStatusDTO deleteReview(@RequestBody CampingReviewDeleteDTO body){
-        return campingReviewService.deleteReview(body.getCommentNumber(), body.getPassword());
+    public NotificationProcessStatusDTO deleteReview(@RequestBody CampingReviewDeleteDTO body) {
+        String password = null;
+
+        try {
+            MessageDigest hashing = MessageDigest.getInstance("SHA-512");
+            hashing.reset();
+            hashing.update(body.getPassword().getBytes("utf8"));
+            password = String.format("%0128x", new BigInteger(1, hashing.digest()));
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        return campingReviewService.deleteReview(body.getCommentNumber(), password);
     }
 
     @GetMapping("/list")
@@ -81,7 +111,7 @@ public class CampingReviewApiController {
             @PageableDefault(size = 6, sort = "commentNumber", direction = Sort.Direction.DESC) Pageable pageable,
             Integer campingAreaId,
             Integer pageNumber
-    ){
+    ) {
         if (pageNumber == 0) {
             return new ArrayList<>();
         }
@@ -89,7 +119,7 @@ public class CampingReviewApiController {
         Pageable modified = PageRequest.of(pageNumber - 1, pageable.getPageSize(), pageable.getSort());
         Page<CampingReview> result = campingReviewService.loadCampingAreaReview(campingAreaId, modified);
 
-        if (pageNumber > result.getTotalPages()){
+        if (pageNumber > result.getTotalPages()) {
             return new ArrayList<>();
         }
 

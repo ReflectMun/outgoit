@@ -10,7 +10,7 @@ import java.time.ZoneId;
 @Entity(name = "camping_review")
 @Getter
 @NoArgsConstructor
-public class CampingReview { // 이 DTO는 캠핑장 리뷰에 관한 데이터를 담을 DTO임
+public class CampingReview { // 이 DTO 캠핑장 리뷰에 관한 데이터를 담을 DTO
     @Column(name = "comment_number", nullable = false, unique = true)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

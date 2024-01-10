@@ -39,9 +39,19 @@ public class CampingReviewService {
     // 리뷰 내용을 수정하는 메서드(만약 비밀번호가 맞으면)
     @Transactional
     public NotificationProcessStatusDTO updateReviewContent(String password, Long commentId, String content, Long rating){
-        if(!isPasswordMatch(password, commentId)){
-            System.out.println("비밀번호가 일치하지 않아 리뷰를 수정할 수 없음");
-            return new NotificationProcessStatusDTO(5201, "비밀번호가 일치하지 않습니다!");
+        if(password == null){
+            System.out.println("비밀번호 검증 중 오류 발생");
+            return new NotificationProcessStatusDTO(5202, "비밀번호가 일치하는지 확인하는 중에 오류가 발생했습니다");
+        }
+
+        try {
+            if(!isPasswordMatch(password, commentId)){
+                System.out.println("비밀번호가 일치하지 않아 리뷰를 수정할 수 없음");
+                return new NotificationProcessStatusDTO(5201, "비밀번호가 일치하지 않습니다!");
+            }
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("DB 내부에 해당하는 리뷰가 없음");
+            return new NotificationProcessStatusDTO(5203, "존재하지 않거나 이미 삭제된 리뷰의 수정을 시도했습니다");
         }
 
         Integer countOfUpdatedRecord = this.repo.updateContentByCommentNumber(content, commentId, rating);
@@ -52,9 +62,19 @@ public class CampingReviewService {
     // 리뷰를 삭제하는 메서드(만약 비밀번호가 맞으면)
     @Transactional
     public NotificationProcessStatusDTO deleteReview(Long commentId, String password){
-        if(!isPasswordMatch(password, commentId)){
-            System.out.println("입력된 비밀번호가 일치하지 않음");
-            return new NotificationProcessStatusDTO(5101, "입력된 비밀번호가 일치하지 않습니다!");
+        if(password == null){
+            System.out.println("비밀번호 검증 중 오류 발생");
+            return new NotificationProcessStatusDTO(5102, "비밀번호가 일치하는지 확인하는 중에 오류가 발생했습니다");
+        }
+
+        try {
+            if(!isPasswordMatch(password, commentId)){
+                System.out.println("입력된 비밀번호가 일치하지 않음");
+                return new NotificationProcessStatusDTO(5101, "입력된 비밀번호가 일치하지 않습니다!");
+            }
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("DB 내부에 해당하는 리뷰가 없음");
+            return new NotificationProcessStatusDTO(5103, "존재하지 않거나 이미 삭제된 리뷰의 삭제를 시도했습니다");
         }
 
         int countOfDeletedRecord = repo.deleteByCommentNumber(commentId);
