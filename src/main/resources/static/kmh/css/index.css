@@ -62,13 +62,13 @@ body {
 
 @keyframes bounce {
     0% {
-        transform: translateY(0); /* 애니메이션의 시작 상태 */
+        transform: translateY(0);
     }
     50% {
-        transform: translateY(-20px); /* 중간 상태 */
+        transform: translateY(-20px);
     }
     100% {
-        transform: translateY(0); /* 애니메이션의 마지막 상태 */
+        transform: translateY(0);
     }
 }
 
