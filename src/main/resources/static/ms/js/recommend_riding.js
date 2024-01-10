@@ -8,7 +8,6 @@ for (const riding of recommendedRidings){
 
         const detailReqUrl = "/outgoit/riding";
 
-        // 히든폼을 생성해서 submit 하는 방식으로 가는게 난이도가 더 쉬워서 이렇게 했음
         const hiddenForm = document.createElement("form");
 
         hiddenForm.style.display = "none";
