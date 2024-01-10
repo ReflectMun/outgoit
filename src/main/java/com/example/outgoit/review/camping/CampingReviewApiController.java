@@ -35,12 +35,17 @@ public class CampingReviewApiController {
             if (body.getAuthor().isEmpty() || body.getPassword().isEmpty() ||
                     body.getContent().isEmpty() || body.getCampingAreaId() == null) {
                 resultCode = 703;
-                throw new Exception("올바르지 않은 값이 전달되었습니다");
+                throw new Exception("올바르지 않은 데이터가 전달되었습니다");
             }
+
+            MessageDigest hashing = MessageDigest.getInstance("SHA-512");
+            hashing.reset();
+            hashing.update(body.getPassword().getBytes("utf8"));
+            String password = String.format("%0128x", new BigInteger(1, hashing.digest()));
 
             resultCode = campingReviewService.submitReview(
                     body.getAuthor(),
-                    body.getPassword(),
+                    password,
                     body.getContent(),
                     body.getRating(),
                     body.getCampingAreaId()
