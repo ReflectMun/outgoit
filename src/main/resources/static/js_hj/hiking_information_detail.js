@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const trailPathArray = JSON.parse(trailString);
 
 
-// 경도와 위도의 평균값을 계산합니다.
+
 
     let markers = []
 

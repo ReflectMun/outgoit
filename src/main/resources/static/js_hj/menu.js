@@ -39,15 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s3.png",
                     "http://img247.etoos.com/web/w247/images/cnt/recruit/early2021/c1_s4.png"
                 ];
-
-                // 이미지 떨어지는 애니메이션 함수
-
-
                 $('.hj-home').hover(
                     function () {
-                        starContainer.empty(); // 이미지 초기화
-
-                        // 이미지 동적으로 생성하여 .hj-star-container에 추가
+                        starContainer.empty();
                         $.each(imagePaths, function (index, imagePath) {
                             let img = $('<img>', {
                                 src: imagePath,
@@ -196,7 +190,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    // 메뉴 누르면 가운데서 퍼지는 효과
         $(document).ready(function() {
 
             $('.hj-menu-icon').on('click', function() {

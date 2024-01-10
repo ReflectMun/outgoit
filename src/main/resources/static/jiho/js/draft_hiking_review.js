@@ -275,7 +275,6 @@ async function commentModifyingReady(commentNumber, element, reviewData) {
 
         ratingStar.addEventListener("mouseover", function () {
             const index = parseInt(this.dataset.index, 10);
-            // 별을 호버하면 그 별을 기준으로 이전 별들을 변경
             for (let j = 1; j <= 5; j++) {
                 const star = reviewModifyStar.children[j - 1];
                 if (j <= index) {
@@ -346,9 +345,6 @@ async function updateComment(commentNumber, reviewContentInput, modifyButtonElem
     if(clickedValue==null){
         clickedValue = reviewData['rating']
     }
-
-
-
 
     if(!passwordInput.value){
         alert("댓글을 수정하시려면 비밀번호를 입력해주세요!")
