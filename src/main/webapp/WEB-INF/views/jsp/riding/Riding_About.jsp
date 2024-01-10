@@ -45,7 +45,7 @@ pageEncoding="UTF-8"%>
           <div class="rh-riding-wood-mainBox">
             <!-- 통나무 내용판 -->
             <div class="rh-riding-history-wood-main">
-              <p><img id="historyRedpin" src="/resources/static/img/기타/pin.png" alt=""></p>
+              <p><img id="historyRedpin" src="/static/img/etc/pin.png" alt=""></p>
               <p
                 class="rh-riding-history-wood-text"
                 data-aos="fade-up"

@@ -21,7 +21,6 @@ public class WeatherApiResponseDTO {
     ){
         this.statusCode = 200;
         this.errorMsg = null;
-
         this.temperature = temperature;
         this.skyCondition = skyCondition;
         this.precipitationType = precipitationType;

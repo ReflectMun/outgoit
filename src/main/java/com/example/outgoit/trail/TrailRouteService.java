@@ -66,5 +66,5 @@ public class TrailRouteService {
     }
 }
 
-class       NoSearchResultException extends Exception{
+class NoSearchResultException extends Exception{
 }

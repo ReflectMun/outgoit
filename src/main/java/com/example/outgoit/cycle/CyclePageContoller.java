@@ -15,18 +15,20 @@ public class CyclePageContoller {
         this.cycleRouteSearchService = cycleRouteSearchService;
     }
 
-    @GetMapping
-    public String sendCyclePage(Model model){
-        return "ms/cycle_test";
-    }
-    @GetMapping("/riding")
-    public String sendRidingPage(Model model){
-        return "jsp/riding/ridingMain";
-    }
+//    기능 구현을 위해 테스트용
+//    @GetMapping
+//    public String sendCyclePage(Model model){
+//        return "ms/cycle_test";
+//    }
+//    @GetMapping("/riding")
+//    public String sendRidingPage(Model model){
+//        return "jsp/riding/ridingMain";
+//    }
+//
+//    @GetMapping("/pdf")
+//    public String pdfTest(Model model) throws IOException {
+//
+//        return "ms/pdf_test";
+//    }
 
-    @GetMapping("/pdf")
-    public String pdfTest(Model model) throws IOException {
-
-        return "ms/pdf_test";
-    }
 }

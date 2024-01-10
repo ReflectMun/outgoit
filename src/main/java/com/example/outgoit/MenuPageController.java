@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/outgoit")
 public class MenuPageController {
 
-//    캠핑
+//  캠핑
     @GetMapping("/camping/history")
     public String sendCampingHistory(Model model){
         model.addAttribute("campingContentPage", "Camping_About.jsp");
@@ -30,7 +30,7 @@ public class MenuPageController {
     }
 
 
-//    하이킹
+// 하이킹
     @GetMapping("/hiking/history")
     public String sendHikingHistory(Model model){
         model.addAttribute("hikingContentPage", "Hiking_About.jsp");

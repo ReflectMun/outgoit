@@ -1,0 +1,574 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'JalnanGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SOYOMapleBoldTTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BMJUA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.body {
+    /*margin: 0;*/
+    /*width: 100vw;*/
+    /*height: 100vh;*/
+    /*overflow-x: hidden;*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    background-color: #FFFAF6;
+}
+
+.mh-container {
+    /*border: 3px solid red;*/
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/*슬라이드*/
+.swiper {
+    /*width: 100%;*/
+    /*height: 100%;*/
+    width: 100%;
+    height: 35vw;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-slide {
+    width: 80%;
+    height: 27vw;
+    text-align: center;
+    /*font-size: 18px;*/
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*날씨 스와이퍼 배경*/
+.sw-background{
+    background-color: transparent;
+}
+
+/*슬라이드 끝*/
+
+/*.banner-wrap {*/
+/*    !*border: 3px solid blue;*!*/
+/*    width: 100%;*/
+/*    height: 27vw;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.banner {*/
+/*    width: 80%;*/
+/*    height: 27vw;*/
+/*    background-image: url("../../../../resources/static/kmh/img/camping_banner.jpg");*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*}*/
+
+.mh-banner-txt-wrap {
+    margin-top: 14vw;
+    display: none;
+    place-items: center;
+}
+
+.mh-banner-title {
+    font-family: 'JalnanGothic';
+    font-size: 6vw;
+    font-weight: bolder;
+    color: black;
+}
+
+
+.mh-content {
+    width: 100%;
+    height: 100%;
+}
+
+.mh-map-txt-wrap {
+    border: 0.5vw solid rgb(76 44 9);
+    display: grid;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    place-items: center;
+    width: 40vw;
+    height: 6vw;
+    padding: 1vw;
+    border-radius: 2vw;
+    background-image: url("../img/etc/나무보드.jpg");
+    background-repeat: no-repeat;
+    background-size: initial;
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
+}
+
+.mh-map-title {
+    font-family: 'JalnanGothic';
+    font-size: 3.2vw;
+    font-weight: bolder;
+    color: #cbc87e;
+    -webkit-text-stroke: 0.01vw black;
+
+}
+
+.mh-map-sub-txt {
+    font-family: 'SOYOMapleBoldTTF';
+    font-size: 1.4vw;
+    margin-top: 0.5vw;
+    color: white;
+}
+
+.mh-search-wrap {
+    width: 100%;
+    /*height: 40vw;*/
+    margin-top: 2vw;
+    padding-bottom: 1vw;
+}
+
+.mh-search-wrap-riding {
+    width: 100%;
+    /*height: 40vw;*/
+    margin-top: 2vw;
+    /*padding-bottom: 17vw;*/
+}
+
+
+.mh-background-map {
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    width: 70%;
+    border: 0.5vw solid rgb(76 44 9);
+    border-radius: 3vw;
+    background-image: url("../img/etc/나무보드.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
+}
+
+.mh-background-map-riding {
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    width: 70%;
+    height: 48vw;
+    border: 0.5vw solid rgb(76 44 9);
+    border-radius: 3vw;
+    background-image: url("../img/etc/나무보드.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    box-shadow: 2px 7px 6px 0px rgb(105 94 90 / 63%);
+}
+
+
+.mh-area-search {
+    width: 100vw;
+    height: 5vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.8vw;
+}
+
+
+.mh-map-all {
+    width: 70vw;
+    height: 33vw;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
+    padding: 1%;
+}
+
+.mh-map-all-riding {
+    width: 70vw;
+    height: 39vw;
+    display: flex;
+    justify-content: center;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    margin: auto;
+    padding: 1%;
+    position: relative;
+}
+
+
+/*명성님 자전거 css*/
+#map {
+    width: 50%;
+    height: 30vw;
+    overflow: hidden;
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+    /*border-radius: 5%;*/
+
+}
+
+
+#cycle-page-map {
+    width: 50%;
+    height: 35vw;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#search-result-list {
+    font-family: 'SOYOMapleBoldTTF';
+    background-color: rgb(255, 255, 255);
+    width: 35%;
+    height: 30vw;
+    overflow-y: scroll;
+    font-size: 0.7vw;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+
+}
+
+
+/*리스트 스크롤 css*/
+#search-result-list::-webkit-scrollbar {
+    width: 0.8vw;
+}
+
+#search-result-list::-webkit-scrollbar-button {
+    display: none;
+}
+
+#search-result-list::-webkit-scrollbar-thumb {
+    background-color: rgb(43, 128, 66);
+    width: 10vw;
+    border-radius: 5vw;
+}
+
+#search-result-list::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+/*검색부분 버튼 CSS*/
+.mh-button {
+    font-family: 'SOYOMapleBoldTTF';
+    width: 7vw;
+    height: 3vw;
+    display: inline-block;
+    padding: 1vw 2vw;
+    font-size: 1.2vw;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #609f55;
+    border: none;
+    border-radius: 0.5vw;
+    box-shadow: 0 0.7vw #1c4728;
+    line-height: 1vw;
+}
+
+.mh-button:hover {
+    background-color: #3e8e41
+}
+
+.mh-button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 0.45vw #1c4728;
+    transform: translateY(4px);
+}
+
+.mh-button > span {
+    display: flex;
+    justify-content: center;
+}
+
+/*검색창 CSS*/
+.mh-search-input {
+    font-family: 'SOYOMapleBoldTTF';
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    width: 20vw;
+    height: 3.3vw;
+    margin-right: 1vw;
+    border-radius: 0.5vw;
+    outline: none;
+    border: 0;
+    background-color: rgb(250 250 250);
+    font-size: 1.2vw;
+}
+
+/*리스트 fadeIn 효과*/
+.mh-camping-area-info-box {
+    animation: fadeInList 2s ease-in-out 3s;
+    -webkit-animation: fadeInList 2s;
+}
+
+@keyframes fadeInList {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeInList {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 리스트 박스 */
+.camping-area-info-box {
+    font-family: 'BMJUA';
+    background-color: rgb(236, 236, 236);
+    width: 22vw;
+    height: 6.5vw;
+    margin: auto;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+    border-bottom: 0.2vw solid #b9b9b9;
+    border-radius: 3%;
+    display: grid;
+}
+
+
+.camping-area-name {
+    font-size: 1.4vw;
+    margin: 1.2vw;
+    /*margin-left: 1vw;*/
+    /*만약 폰트사이즈가 1.6이 되어있다면 1.4로 고치시오*/
+}
+
+.button-wrapper {
+    margin-left: 1vw;
+    margin-bottom: 1vw;
+}
+
+
+/*리스트 버튼 CSS test*/
+.open-detail-button {
+    font-family: 'BMJUA';
+    background-color: #609f55;
+    color: white;
+    border: 0.07vw solid #173b21;
+    height: 1.5vw;
+    font-size: 0.85vw;
+    width: 8vw;
+    border-radius: 0.5vw;
+    cursor: pointer;
+}
+
+/* 지형 온오프 버튼 */
+#trail-road-btn {
+    font-size: 0.77vw;
+    padding: 0.5vw 1vw;
+    width: auto;
+    height: auto;
+    display: flex;
+    position: absolute;
+    z-index: 500;
+    left: 20.6vw;
+    margin-top: 0.3vw;
+}
+
+
+/* 자전거 도로 버튼*/
+.mh-btn-14 {
+    font-family: 'SOYOMapleBoldTTF';
+    background: #2b8042;
+    color: #fff;
+    z-index: 1;
+    border-radius: 2vw;
+    /*border: 0.1vw solid black;*/
+}
+/*.mh-btn-14:after {*/
+/*    position: absolute;*/
+/*    content: "";*/
+/*    width: 100%;*/
+/*    height: 0;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    z-index: -1;*/
+/*    background: #ffb459;*/
+/*    transition: all 0.3s ease;*/
+/*    border-radius: 2vw;*/
+/*}*/
+.mh-btn-14:hover {
+    background: #ffb459;
+    color: #000000;
+}
+/*.mh-btn-14:hover:after {*/
+/*    top: auto;*/
+/*    bottom: 0;*/
+/*    height: 100%;*/
+/*}*/
+/*.mh-btn-14:active {*/
+/*    top: 1vw*/
+/*}*/
+
+
+/*라이딩 지도 메뉴 버튼*/
+.metro-city-btn-menu {
+    display: flex;
+    justify-content: center;
+    padding: 3.5%;
+    line-height: 1vw;
+}
+
+.metro-city-btns {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60vw;
+}
+
+.metro-city-btn {
+    font-family: 'SOYOMapleBoldTTF';
+    width: 2vw;
+    height: 1vw;
+    display: inline-block;
+    padding: 1vw 2vw;
+    font-size: 1vw;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 0.5vw
+}
+
+.orange-btn {
+    color: #fff;
+    background-color: #d99661;
+    box-shadow: 0 0.7vw #71431E;
+}
+
+.orange-btn:hover {
+    background-color: #d37f3a;
+}
+
+.orange-btn:active {
+    background-color: #d37f3a;
+    box-shadow: 0 0.45vw #71431E;
+    transform: translateY(4px);
+}
+
+.pink-btn {
+    color: #fff;
+    background-color: #da8cad;
+    box-shadow: 0 0.7vw #9C2A57;
+}
+
+.pink-btn:hover {
+    background-color: #c4668a;
+}
+
+.pink-btn:active {
+    background-color: #c4668a;
+    box-shadow: 0 0.45vw #9C2A57;
+    transform: translateY(4px);
+}
+
+.green-btn {
+    color: #fff;
+    background-color: #609f55;
+    box-shadow: 0 0.7vw #1c4728;
+}
+
+.green-btn:hover {
+    background-color: #3e8e41
+}
+
+.green-btn:active {
+    background-color: #3e8e41;
+    box-shadow: 0 0.45vw #1c4728;
+    transform: translateY(4px);
+}
+
+.blue-btn {
+    color: #fff;
+    background-color: #6380be;
+    box-shadow: 0 0.7vw #232A8E;
+}
+
+.blue-btn:hover {
+    background-color: #4670be;
+}
+
+.blue-btn:active {
+    background-color: #4670be;
+    box-shadow: 0 0.45vw #232A8E;
+    transform: translateY(4px);
+}
+
+/*search 위 날씨*/
+.mh-weather-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 7vw 0vw 0vw 0vw;
+    height: 3vw;
+    overflow-y: hidden;
+}
+
+.mh-weather-text {
+    position: relative;
+    height: 3vw;
+    display: grid;
+    justify-content: center;
+    list-style: none;
+}
+
+.sw-background> span{
+    font-size: 1.3vw;
+    margin: 0vw 0.5vw 0vw 0.5vw;
+    font-family: 'Pretendard-Regular';
+    font-weight: normal;
+}
+.sw-background > img {
+    width: 2.5vw;
+    height: auto;
+}
