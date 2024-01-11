@@ -1,20 +1,22 @@
-//package com.example.outgoit.encrypt;
-//
-//import com.example.outgoit.review.camping.CampingReview;
-//import org.springframework.security.crypto.bcrypt.BCrypt;
-//import org.springframework.stereotype.Service;
-//
-//@Service
-//public class EncryptService {
-//    public String getRandomSalt(){
-//        return BCrypt.gensalt(128);
-//    }
-//
-//    public String getEncryptedPassword(String password, String salt){
-//        return BCrypt.hashpw(password, salt);
-//    }
-//
-//    public Boolean isPasswordMatch_Camping(String password, CampingReview review){
-//        return review.getPassword().equals(password);
-//    }
-//}
+package com.example.outgoit.encrypt;
+
+import com.example.outgoit.review.camping.CampingReview;
+import com.example.outgoit.review.trail.TrailReview;
+import org.springframework.lang.NonNull;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.stereotype.Service;
+
+@Service
+public class EncryptService {
+    public String getEncryptedPassword(@NonNull String password){
+        return BCrypt.hashpw(password, BCrypt.gensalt(12));
+    }
+
+    public Boolean isPasswordMatch_Camping(String password, CampingReview review){
+        return BCrypt.checkpw(password, review.getPassword());
+    }
+
+    public Boolean isPasswordMatch_Trail(String password, TrailReview review){
+        return BCrypt.checkpw(password, review.getPassword());
+    }
+}

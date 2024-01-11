@@ -30,22 +30,9 @@ public class TrailReviewApiController {
     ////////////////////////////////////////////////////////////////////////////
     @PostMapping("/submit")
     public int submitTrailRouteReview(@RequestBody TrailReview trailReview) {
-        String encryptedPassword = null;
-
-        try {
-            MessageDigest hashing = MessageDigest.getInstance("SHA3-512");
-            hashing.reset();
-            hashing.update(trailReview.getPassword().getBytes("utf8"));
-            encryptedPassword = String.format("%0128x", new BigInteger(1, hashing.digest()));
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-
         return trailReviewService.submitReview(
                 trailReview.getAuthor(),
-                encryptedPassword,
+                trailReview.getPassword(),
                 trailReview.getContent(),
                 trailReview.getRating(),
                 trailReview.getTrailRouteId()

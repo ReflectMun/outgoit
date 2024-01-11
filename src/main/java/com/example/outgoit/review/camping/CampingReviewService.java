@@ -1,8 +1,9 @@
 package com.example.outgoit.review.camping;
 
+import com.example.outgoit.encrypt.EncryptService;
 import com.example.outgoit.review.camping.dto.NotificationProcessStatusDTO;
 import jakarta.transaction.Transactional;
-import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.dao.OptimisticLockingFailureException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -11,16 +12,10 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 
 @Service
+@RequiredArgsConstructor
 public class CampingReviewService {
-    //////////////////// 초기화 코드니까 말 없이 건드리지 마시오 /////////////////////////
     private final CampingReviewRepositoryInterface repo;
-    public CampingReviewService(CampingReviewRepositoryInterface repo){
-        this.repo = repo;
-    }
-    ////////////////////////////////////////////////////////////////////////////
-
-    @Getter
-    private final String salt = "mysalt";
+    private final EncryptService encryptService;
 
     ///////////////////////////// 서비스 구현 /////////////////////////////////////
     // 해당 캠핑장의 리뷰를 페이지별로 지정해서 불러오는 메서드
@@ -33,12 +28,6 @@ public class CampingReviewService {
         return new ArrayList<CampingReview>(repo.findByCommentNumberAndIsDeletedFalse(commentId));
     }
 
-    // 사용자가 입력한 비밀번호가 일치하는지 확인하는 메서드
-    public Boolean isPasswordMatch(String password, Long commentId){
-        CampingReview review = this.getCampingAreaReview(commentId).get(0);
-        return review.getPassword().equals(password);
-    }
-
     // 리뷰 내용을 수정하는 메서드(만약 비밀번호가 맞으면)
     @Transactional
     public NotificationProcessStatusDTO updateReviewContent(String password, Long commentId, String content, Long rating){
@@ -48,12 +37,15 @@ public class CampingReviewService {
         }
 
         try {
-            if(!isPasswordMatch(password, commentId)){
+            if(!encryptService.isPasswordMatch_Camping(
+                    password,
+                    this.getCampingAreaReview(commentId).get(0)
+            )){
                 System.out.println("비밀번호가 일치하지 않아 리뷰를 수정할 수 없음");
                 return new NotificationProcessStatusDTO(5201, "비밀번호가 일치하지 않습니다!");
             }
         } catch (IndexOutOfBoundsException e) {
-            System.out.println("DB 내부에 해당하는 리뷰가 없음");
+            System.out.printf("DB 내부에 해당하는 리뷰가 없거나 이미 삭제됨, 요청된 리뷰 번호: %s\n", commentId);
             return new NotificationProcessStatusDTO(5203, "존재하지 않거나 이미 삭제된 리뷰의 수정을 시도했습니다");
         }
 
@@ -71,12 +63,16 @@ public class CampingReviewService {
         }
 
         try {
-            if(!isPasswordMatch(password, commentId)){
-                System.out.println("입력된 비밀번호가 일치하지 않음");
+            if (!encryptService.isPasswordMatch_Camping(
+                    password,
+                    getCampingAreaReview(commentId).get(0)
+            )) {
+
+                System.out.printf("입력된 비밀번호가 일치하지 않아 리뷰를 삭제할 수 없음, 요청된 리뷰 번호: %s\n", commentId);
                 return new NotificationProcessStatusDTO(5101, "입력된 비밀번호가 일치하지 않습니다!");
             }
         } catch (IndexOutOfBoundsException e) {
-            System.out.println("DB 내부에 해당하는 리뷰가 없음");
+            System.out.printf("DB 내부에 해당하는 리뷰가 없거나 이미 삭제됨, 요청된 리뷰 번호: %s\n", commentId);
             return new NotificationProcessStatusDTO(5103, "존재하지 않거나 이미 삭제된 리뷰의 삭제를 시도했습니다");
         }
 
@@ -96,7 +92,7 @@ public class CampingReviewService {
         try {
             repo.save(new CampingReview(
                     author,
-                    password,
+                    encryptService.getEncryptedPassword(password),
                     content,
                     rating,
                     campingAreaId
@@ -113,9 +109,5 @@ public class CampingReviewService {
     // 캠핑장 평점 조회
     public ArrayList<Object> getCampingAreaRating(int campingAreaId){
         return new ArrayList<>(this.repo.findAvgRatingByCampingAreaIdAndIsDeletedFalse(campingAreaId));
-    }
-
-    public String getRandomSalt() {
-        return "S";
     }
 }

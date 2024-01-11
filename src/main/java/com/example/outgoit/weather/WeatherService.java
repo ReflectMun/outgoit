@@ -3,6 +3,7 @@ package com.example.outgoit.weather;
 import com.example.outgoit.weather.dto.WeatherApiResponseDTO;
 import com.example.outgoit.weather.dto.api_response.ApiResponse;
 import com.example.outgoit.weather.dto.api_response.Item;
+import com.example.outgoit.weather.exception_object.NationalWeatherServiceError;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.UriComponents;
@@ -282,8 +283,3 @@ public class WeatherService {
     }
 }
 
-class NationalWeatherServiceError extends Exception {
-    public NationalWeatherServiceError(String message){
-        super(message);
-    }
-}
