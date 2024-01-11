@@ -146,6 +146,7 @@ const swiper1 = new Swiper(".mySwiper1", {
     },
 });
 const swiper2 = new Swiper(".mySwiper2", {
+    lazy: true,
     effect: "cards",
     grabCursor: true,
     on: {
@@ -157,6 +158,7 @@ const swiper2 = new Swiper(".mySwiper2", {
     }
 });
 const swiper3 = new Swiper(".mySwiper3", {
+    lazy: true,
     effect: "cards",
     grabCursor: true,
     on: {
@@ -169,6 +171,7 @@ const swiper3 = new Swiper(".mySwiper3", {
     }
 });
 const swiper4 = new Swiper(".mySwiper4", {
+    lazy: true,
     effect: "cards",
     grabCursor: true,
     on: {
@@ -181,6 +184,7 @@ const swiper4 = new Swiper(".mySwiper4", {
     }
 });
 const swiper5 = new Swiper(".mySwiper5", {
+    lazy: true,
     effect: "cards",
     grabCursor: true,
     on: {
@@ -193,6 +197,7 @@ const swiper5 = new Swiper(".mySwiper5", {
     }
 });
 const swiper6 = new Swiper(".mySwiper6", {
+    lazy: true,
     effect: "cards",
     grabCursor: true,
     on: {
@@ -205,6 +210,7 @@ const swiper6 = new Swiper(".mySwiper6", {
     }
 });
 const swiper7 = new Swiper(".mySwiper7", {
+    lazy: true,
     effect: "cards",
     grabCursor: true,
     on: {
@@ -217,6 +223,7 @@ const swiper7 = new Swiper(".mySwiper7", {
     }
 });
 const swiper8 = new Swiper(".mySwiper8", {
+    lazy: true,
     effect: "cards",
     grabCursor: true,
     on: {

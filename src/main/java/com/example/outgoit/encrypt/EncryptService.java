@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class EncryptService {
     public String getEncryptedPassword(@NonNull String password){
-        return BCrypt.hashpw(password, BCrypt.gensalt(12));
+        return BCrypt.hashpw(password, BCrypt.gensalt(10));
     }
 
     public Boolean isPasswordMatch_Camping(String password, CampingReview review){

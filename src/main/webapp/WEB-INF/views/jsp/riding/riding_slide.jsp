@@ -25,8 +25,9 @@
                         <div id="slide-guide"><img src="/resources/static/cycle_detail/slide-guide-icon.png"></div>
                     </div>
                     <c:forEach begin="1" end="22" var="i">
-                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg">
+                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg" loading="lazy">
                         </div>
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </c:forEach>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -40,8 +41,9 @@
                         <span class="thumbnail-txt">경기도</span>
                     </div>
                     <c:forEach begin="23" end="30" var="i">
-                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg">
+                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg" loading="lazy">
                         </div>
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </c:forEach>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -55,8 +57,9 @@
                         <span class="thumbnail-txt">강원도</span>
                     </div>
                     <c:forEach begin="31" end="43" var="i">
-                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg">
+                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg" loading="lazy">
                         </div>
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </c:forEach>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -70,8 +73,9 @@
                         <span class="thumbnail-txt">충청도</span>
                     </div>
                     <c:forEach begin="44" end="57" var="i">
-                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg">
+                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg" loading="lazy">
                         </div>
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </c:forEach>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -85,8 +89,9 @@
                         <span class="thumbnail-txt">전라도</span>
                     </div>
                     <c:forEach begin="58" end="80" var="i">
-                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg">
+                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg" loading="lazy">
                         </div>
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </c:forEach>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -100,8 +105,9 @@
                         <span class="thumbnail-txt">경상도</span>
                     </div>
                     <c:forEach begin="81" end="96" var="i">
-                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg">
+                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg" loading="lazy">
                         </div>
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </c:forEach>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -115,8 +121,9 @@
                         <span class="thumbnail-txt">제주도</span>
                     </div>
                     <c:forEach begin="97" end="100" var="i">
-                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg">
+                        <div class="swiper-slide" data-value="${i}"><img class="cycle-page-img" src="/resources/static/cycle_detail/${i}.jpg" loading="lazy">
                         </div>
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </c:forEach>
                 </div>
                 <div class="swiper-pagination"></div>
