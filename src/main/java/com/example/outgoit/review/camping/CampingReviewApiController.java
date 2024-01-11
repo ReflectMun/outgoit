@@ -24,9 +24,15 @@ public class CampingReviewApiController {
     //////////////////// 초기화 코드니까 말 없이 건드리지 마시오 /////////////////////////
     private final CampingReviewService campingReviewService;
     private final RandomNicknameService randomNicknameService;
-    public CampingReviewApiController(CampingReviewService campingReviewService, RandomNicknameService randomNicknameService){
+//    private final EncryptService encryptService;
+    public CampingReviewApiController(
+            CampingReviewService campingReviewService,
+            RandomNicknameService randomNicknameService
+//            EncryptService encryptService
+    ){
         this.campingReviewService = campingReviewService;
         this.randomNicknameService = randomNicknameService;
+//        this.encryptService = encryptService;
     }
     ////////////////////////////////////////////////////////////////////////////
 
@@ -40,9 +46,9 @@ public class CampingReviewApiController {
                 throw new Exception("올바르지 않은 데이터가 전달되었습니다");
             }
 
-            MessageDigest hashing = MessageDigest.getInstance("SHA-512");
+            MessageDigest hashing = MessageDigest.getInstance("SHA3-512");
             hashing.reset();
-            hashing.update(body.getPassword().getBytes("utf8"));
+            hashing.update((body.getPassword() + campingReviewService.getSalt()).getBytes("utf8"));
             String password = String.format("%0128x", new BigInteger(1, hashing.digest()));
 
             resultCode = campingReviewService.submitReview(
@@ -78,9 +84,9 @@ public class CampingReviewApiController {
         String password = null;
 
         try {
-            MessageDigest hashing = MessageDigest.getInstance("SHA-512");
+            MessageDigest hashing = MessageDigest.getInstance("SHA3-512");
             hashing.reset();
-            hashing.update(body.getPassword().getBytes("utf8"));
+            hashing.update((body.getPassword() + campingReviewService.getSalt()).getBytes("utf8"));
             password = String.format("%0128x", new BigInteger(1, hashing.digest()));
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
@@ -101,9 +107,9 @@ public class CampingReviewApiController {
         String password = null;
 
         try {
-            MessageDigest hashing = MessageDigest.getInstance("SHA-512");
+            MessageDigest hashing = MessageDigest.getInstance("SHA3-512");
             hashing.reset();
-            hashing.update(body.getPassword().getBytes("utf8"));
+            hashing.update((body.getPassword() + campingReviewService.getSalt()).getBytes("utf8"));
             password = String.format("%0128x", new BigInteger(1, hashing.digest()));
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();

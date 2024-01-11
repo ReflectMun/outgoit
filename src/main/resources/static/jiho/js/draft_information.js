@@ -33,16 +33,15 @@ document.addEventListener('DOMContentLoaded', async function () {
      * 리뷰가 있을 때만 실행되도록 하는 구조임
      * */
     const reviewListContainer = document.getElementById("hj-review-list-container")
-    if(reviewListContainer){
+    if (reviewListContainer) {
         const campingAreaId = document.getElementById("camping-area-id").value
         try {
             const resData = await getReviewList(campingAreaId, 1)
 
-            if(resData === null)
+            if (resData === null)
                 throw new Error("서버와의 통신 중 알 수 없는 오류가 발생")
 
-            for(const review of resData){
-
+            for (const review of resData) {
                 const madeReviewBox = makeReviewBox(review)
                 reviewListContainer.appendChild(madeReviewBox)
             }
@@ -69,10 +68,10 @@ document.addEventListener('DOMContentLoaded', async function () {
             const starValue = star.getAttribute('data-value');
 
             if (starValue <= clickedValue) {
-                star.innerHTML= "★"
+                star.innerHTML = "★"
                 star.classList.add('checked');
             } else {
-                star.innerHTML="☆"
+                star.innerHTML = "☆"
                 star.classList.remove('checked');
             }
 
@@ -137,7 +136,7 @@ async function getPrevCommentPage() {
 
         const reviewListContainer = document.getElementById("hj-review-list-container")
         reviewListContainer.innerHTML = ""
-        for(const review of resData){
+        for (const review of resData) {
             const madeReviewBox = makeReviewBox(review)
             reviewListContainer.appendChild(madeReviewBox)
         }
@@ -169,7 +168,7 @@ async function getNextCommentPage() {
 
         const reviewListContainer = document.getElementById("hj-review-list-container")
         reviewListContainer.innerHTML = ""
-        for(const review of resData){
+        for (const review of resData) {
             const madeReviewBox = makeReviewBox(review)
             reviewListContainer.appendChild(madeReviewBox)
         }
@@ -189,13 +188,13 @@ async function getNextCommentPage() {
  * */
 async function deleteComment(commentNumber, element) {
     const passwordInput = element.parentNode.firstElementChild.firstElementChild
-    if(!passwordInput.value){
+    if (!passwordInput.value) {
         alert("댓글을 삭제하시려면 비밀번호를 입력해주세요!")
         return
     }
 
-    try{
-        const { data: resData } = await axios.post(
+    try {
+        const {data: resData} = await axios.post(
             '/api/review/camping/delete',
             {
                 password: passwordInput.value,
@@ -203,7 +202,7 @@ async function deleteComment(commentNumber, element) {
             }
         )
 
-        if(resData['statusCode'] === 200)
+        if (resData['statusCode'] === 200)
             alert("댓글 삭제 완료!")
         else {
             alert(resData['errorMessage'])
@@ -224,8 +223,7 @@ async function deleteComment(commentNumber, element) {
             const zentai = document.getElementById("hj-review-zentai-box")
             zentai.innerHTML = "<h2 id=\"hj-no-review\">아직 작성된 리뷰가 없습니다</h2>"
         }
-    }
-    catch (e){
+    } catch (e) {
         console.log(e)
         alert("알 수 없는 오류가 발생했습니다")
     }
@@ -257,11 +255,10 @@ async function commentModifyingReady(commentNumber, element, reviewData) {
         const ratingStar = document.createElement("div")
 
         ratingStar.dataset.index = i;
-        dataValue +=1;
+        dataValue += 1;
         if (reviewData['rating'] >= i) {
             ratingStar.innerText = "★"
-        }
-        else {
+        } else {
             ratingStar.innerText = "☆"
         }
 
@@ -279,19 +276,15 @@ async function commentModifyingReady(commentNumber, element, reviewData) {
         });
 
         reviewModifyStar.appendChild(ratingStar)
-        ratingStar.setAttribute("data-value",dataValue);
+        ratingStar.setAttribute("data-value", dataValue);
         ratingStar.classList.add("hj-review-star-edit")
     }
-
-
-
-
 
     reviewModifyingInput.classList.add("hj-comment-textarea")
     // reviewModifyingInput.type = "text"
     reviewModifyingInput.value = `${reviewData['content']}`
     commentDiv.innerText = ""
-    starDiv.innerHTML=""
+    starDiv.innerHTML = ""
     starDiv.appendChild(reviewModifyStar)
     commentDiv.appendChild(reviewModifyingInput)
 
@@ -303,6 +296,7 @@ async function commentModifyingReady(commentNumber, element, reviewData) {
         });
     });
     let clickedreviewValue;
+
     function handleStarClick(clickedStar) {
         // 클릭된 별의 data-value 속성 값을 가져옵니다.
         clickedreviewValue = clickedStar.getAttribute('data-value');
@@ -319,7 +313,7 @@ async function commentModifyingReady(commentNumber, element, reviewData) {
         });
     }
 
-    element.onclick = function (){
+    element.onclick = function () {
         updateComment(commentNumber, reviewModifyingInput, element, reviewData, clickedreviewValue)
     }
 }
@@ -327,28 +321,28 @@ async function commentModifyingReady(commentNumber, element, reviewData) {
 /**
  * 실제로 리뷰의 수정을 실행하는 함수
  * */
-async function updateComment(commentNumber, reviewContentInput, modifyButtonElement,reviewData, clickedValue){
+async function updateComment(commentNumber, reviewContentInput, modifyButtonElement, reviewData, clickedValue) {
     const passwordInput = modifyButtonElement.parentNode.firstElementChild.firstElementChild
 
     // const commentInput = document.createElement("input")
     // commentInput.type = "text"
     // commentInput.value = commentDiv.innerText
-    if(clickedValue==null){
+    if (clickedValue == null) {
         clickedValue = reviewData['rating']
     }
 
-    if(!passwordInput.value){
+    if (!passwordInput.value) {
         alert("댓글을 수정하시려면 비밀번호를 입력해주세요!")
         return
     }
 
-    if(!reviewContentInput.value){
+    if (!reviewContentInput.value) {
         alert("댓글 내용이 비어있어요!")
         return
     }
 
-    try{
-        const { data: resData } = await axios.post(
+    try {
+        const {data: resData} = await axios.post(
             '/api/review/camping/update',
             {
                 password: passwordInput.value,
@@ -358,7 +352,7 @@ async function updateComment(commentNumber, reviewContentInput, modifyButtonElem
             }
         )
 
-        if(resData['statusCode'] === 200)
+        if (resData['statusCode'] === 200)
             alert("댓글 수정 완료!")
 
         else {
@@ -372,12 +366,11 @@ async function updateComment(commentNumber, reviewContentInput, modifyButtonElem
 
         const reviewListContainer = document.getElementById("hj-review-list-container")
         reviewListContainer.innerHTML = ""
-        for(const review of reviewDataList){
+        for (const review of reviewDataList) {
             const madeReviewBox = makeReviewBox(review)
             reviewListContainer.appendChild(madeReviewBox)
         }
-    }
-    catch (e){
+    } catch (e) {
         console.log(e)
         alert("알 수 없는 오류가 발생했습니다")
     }
@@ -460,7 +453,6 @@ function makeReviewBox(reviewData) {
     reviewComment.appendChild(comment)
 
 
-
     /*
      *   <div class="hj-edit-box">
      *     <div class="hj-edit-icon">...</div>
@@ -472,7 +464,7 @@ function makeReviewBox(reviewData) {
     editIcon.classList.add("hj-edit-icon")
     editBox.appendChild(editIcon)
     editBox.addEventListener("click", (e) => {
-        const siblingEditDropBox =  editBox.parentNode.lastElementChild
+        const siblingEditDropBox = editBox.parentNode.lastElementChild
         const displayValue = siblingEditDropBox.style['display']
         siblingEditDropBox.style['display'] = displayValue === "none" ? "block" : "none"
     })
@@ -496,21 +488,24 @@ function makeReviewBox(reviewData) {
     const passwordInput = document.createElement("input")
     passwordInput.type = "text"
     passwordInput.placeholder = "비밀번호"
-    passwordInput.onfocus=clearPlaceholder
-    passwordInput.onblur=setPlaceholder
-    function  clearPlaceholder(){
-        passwordInput.placeholder='';
+    passwordInput.onfocus = clearPlaceholder
+    passwordInput.onblur = setPlaceholder
+
+    function clearPlaceholder() {
+        passwordInput.placeholder = '';
     }
-    function setPlaceholder(){
-        passwordInput.placeholder='비밀번호';
+
+    function setPlaceholder() {
+        passwordInput.placeholder = '비밀번호';
     }
+
     passwordInput.classList.add("hj-password-input")
     passwordInputDiv.appendChild(passwordInput)
     editDropbox.appendChild(passwordInputDiv)
 
     const editButtonDiv = document.createElement("div")
     editButtonDiv.innerText = "수정"
-    editButtonDiv.onclick = function (){
+    editButtonDiv.onclick = function () {
         commentModifyingReady(commentNum, editButtonDiv, reviewData)
     }
     editButtonDiv.classList.add("hj-edit-part")
@@ -519,13 +514,11 @@ function makeReviewBox(reviewData) {
 
     const deleteButtonDiv = document.createElement("div")
     deleteButtonDiv.innerText = "삭제"
-    deleteButtonDiv.onclick = function (){
+    deleteButtonDiv.onclick = function () {
         deleteComment(commentNum, deleteButtonDiv)
     }
     deleteButtonDiv.classList.add("hj-edit-part")
     editDropbox.appendChild(deleteButtonDiv)
-
-
 
 
     editDrop.classList.add("hj-edit-drop")
@@ -541,7 +534,7 @@ function makeReviewBox(reviewData) {
  * 서버에서 리뷰 목록을 불러오는 함수
  * null을 리턴할 경우 서버와 통신하는 도중에 문제가 생겼다는 의미임
  * */
-async function getReviewList(areaId, pageNumber){
+async function getReviewList(areaId, pageNumber) {
     const reqUrl = "/api/review/camping/list?" + `campingAreaId=${areaId}&pageNumber=${pageNumber}`
     try {
         const {data: resData} = await axios.get(reqUrl)

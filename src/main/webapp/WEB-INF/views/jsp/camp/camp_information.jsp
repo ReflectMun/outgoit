@@ -247,10 +247,6 @@
         const authorInput = document.getElementById("hj-id-input")
         const passwordInput = document.getElementById("hj-pw-input")
         const contentInput = document.getElementById("hj-review-input")
-        // if (!authorInput.value) {
-        //     alert("닉네임을 입력해주세요!")
-        //     return
-        // }
 
         if (!passwordInput.value) {
             alert("비밀번호를 입력해주세요!")
@@ -291,15 +287,13 @@
 
             // 여기 위까지가 그거임 버튼 눌렀을 때 값 넘어가는 것
 
-            // 별 초기화, 닉네임 초기화
-            const nicknameInput = document.getElementById('hj-id-input');
-            // 별 초기화
+            // 닉네임 초기화
+            document.getElementById('hj-id-input');
             const starsValue = document.getElementsByClassName("hj-star");
             for (const star of starsValue) {
                 star.innerHTML = "☆";
             }
             // 여기까지가 초기화
-
 
             const campingAreaId = document.getElementById("camping-area-id").value
 
@@ -350,6 +344,7 @@
                 const madeReviewBox = makeReviewBox(review)
                 reviewListContainer.appendChild(madeReviewBox)
             }
+
             const reqUrl2 = "/nickname/show"
             const {data: resData2} = await axios.get(reqUrl2)
 

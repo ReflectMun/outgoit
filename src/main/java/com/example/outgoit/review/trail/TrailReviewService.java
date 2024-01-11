@@ -35,7 +35,7 @@ public class TrailReviewService {
         String encryptedPassword = null;
 
         try {
-            MessageDigest hashing = MessageDigest.getInstance("SHA-512");
+            MessageDigest hashing = MessageDigest.getInstance("SHA3-512");
             hashing.reset();
             hashing.update(trailReview.getPassword().getBytes("utf8"));
             encryptedPassword = String.format("%0128x", new BigInteger(1, hashing.digest()));
@@ -69,7 +69,7 @@ public class TrailReviewService {
         String encryptedPassword = null;
 
         try {
-            MessageDigest hashing = MessageDigest.getInstance("SHA-512");
+            MessageDigest hashing = MessageDigest.getInstance("SHA3-512");
             hashing.reset();
             hashing.update(password.getBytes("utf8"));
             encryptedPassword = String.format("%0128x", new BigInteger(1, hashing.digest()));

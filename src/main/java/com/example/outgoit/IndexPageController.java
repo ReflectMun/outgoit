@@ -35,13 +35,23 @@ public class IndexPageController {
         ArrayList<WeatherData> weatherDataList = new ArrayList<WeatherData>();
         ArrayList<String> areaNames = new ArrayList<>(weatherList.keySet());
 
+        String weatherIcon = null;
         for(String area : areaNames){
-            String weatherIcon = weatherService.getWeatherIcon(weatherList.get(area));
-            weatherDataList.add(new WeatherData(
-                    area,
-                    weatherIcon,
-                    weatherList.get(area).getTemperature()
-            ));
+            try {
+                weatherIcon = weatherService.getWeatherIcon(weatherList.get(area));
+                weatherDataList.add(new WeatherData(
+                        area,
+                        weatherIcon,
+                        weatherList.get(area).getTemperature()
+                ));
+            } catch (Exception e) {
+                weatherIcon = "error";
+                weatherDataList.add(new WeatherData(
+                        area,
+                        weatherIcon,
+                        weatherList.get(area).getTemperature()
+                ));
+            }
         }
 
         model.addAttribute("weathers", weatherDataList);
@@ -57,13 +67,23 @@ public class IndexPageController {
         ArrayList<WeatherData> weatherDataList = new ArrayList<WeatherData>();
         ArrayList<String> areaNames = new ArrayList<>(weatherList.keySet());
 
+        String weatherIcon = null;
         for(String area : areaNames){
-            String weatherIcon = weatherService.getWeatherIcon(weatherList.get(area));
-            weatherDataList.add(new WeatherData(
-                    area,
-                    weatherIcon,
-                    weatherList.get(area).getTemperature()
-            ));
+            try {
+                weatherIcon = weatherService.getWeatherIcon(weatherList.get(area));
+                weatherDataList.add(new WeatherData(
+                        area,
+                        weatherIcon,
+                        weatherList.get(area).getTemperature()
+                ));
+            } catch (Exception e) {
+                weatherIcon = "error";
+                weatherDataList.add(new WeatherData(
+                        area,
+                        weatherIcon,
+                        weatherList.get(area).getTemperature()
+                ));
+            }
         }
 
         model.addAttribute("weathers", weatherDataList);
@@ -79,13 +99,23 @@ public class IndexPageController {
         ArrayList<WeatherData> weatherDataList = new ArrayList<WeatherData>();
         ArrayList<String> areaNames = new ArrayList<>(weatherList.keySet());
 
+        String weatherIcon = null;
         for(String area : areaNames){
-            String weatherIcon = weatherService.getWeatherIcon(weatherList.get(area));
-            weatherDataList.add(new WeatherData(
-                    area,
-                    weatherIcon,
-                    weatherList.get(area).getTemperature()
-            ));
+            try {
+                weatherIcon = weatherService.getWeatherIcon(weatherList.get(area));
+                weatherDataList.add(new WeatherData(
+                        area,
+                        weatherIcon,
+                        weatherList.get(area).getTemperature()
+                ));
+            } catch (Exception e) {
+                weatherIcon = "error";
+                weatherDataList.add(new WeatherData(
+                        area,
+                        weatherIcon,
+                        weatherList.get(area).getTemperature()
+                ));
+            }
         }
 
         model.addAttribute("weathers", weatherDataList);

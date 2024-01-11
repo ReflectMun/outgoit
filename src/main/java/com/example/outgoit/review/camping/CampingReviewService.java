@@ -2,9 +2,12 @@ package com.example.outgoit.review.camping;
 
 import com.example.outgoit.review.camping.dto.NotificationProcessStatusDTO;
 import jakarta.transaction.Transactional;
+import lombok.Getter;
 import org.springframework.dao.OptimisticLockingFailureException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -13,11 +16,13 @@ import java.util.ArrayList;
 public class CampingReviewService {
     //////////////////// 초기화 코드니까 말 없이 건드리지 마시오 /////////////////////////
     private final CampingReviewRepositoryInterface repo;
-
     public CampingReviewService(CampingReviewRepositoryInterface repo){
         this.repo = repo;
     }
     ////////////////////////////////////////////////////////////////////////////
+
+    @Getter
+    private final String salt = "mysalt";
 
     ///////////////////////////// 서비스 구현 /////////////////////////////////////
     // 해당 캠핑장의 리뷰를 페이지별로 지정해서 불러오는 메서드
@@ -110,5 +115,9 @@ public class CampingReviewService {
     // 캠핑장 평점 조회
     public ArrayList<Object> getCampingAreaRating(int campingAreaId){
         return new ArrayList<>(this.repo.findAvgRatingByCampingAreaIdAndIsDeletedFalse(campingAreaId));
+    }
+
+    public String getRandomSalt() {
+        return "S";
     }
 }
