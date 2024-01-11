@@ -12,11 +12,11 @@ public class EncryptService {
         return BCrypt.hashpw(password, BCrypt.gensalt(10));
     }
 
-    public Boolean isPasswordMatch_Camping(String password, CampingReview review){
+    public Boolean isPasswordMatch_Camping(@NonNull String password, @NonNull CampingReview review){
         return BCrypt.checkpw(password, review.getPassword());
     }
 
-    public Boolean isPasswordMatch_Trail(String password, TrailReview review){
+    public Boolean isPasswordMatch_Trail(@NonNull String password, @NonNull TrailReview review){
         return BCrypt.checkpw(password, review.getPassword());
     }
 }
