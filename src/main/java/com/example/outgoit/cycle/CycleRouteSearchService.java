@@ -13,7 +13,7 @@ public class CycleRouteSearchService {
         Scanner scanner = null;
         CycleRouteInfoDTO dto = null;
         try {
-            File file = new File("src/main/resources/static/cycle_paths/"+ fileNo + ".json");
+            File file = new File("src/main/resources/static/json/cycle_paths/"+ fileNo + ".json");
             scanner = new Scanner(file);
             StringBuilder stringBuilder = new StringBuilder();
             while (scanner.hasNextLine()){

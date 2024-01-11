@@ -8,7 +8,7 @@
     <title>Document</title>
     <link
             rel="stylesheet"
-            href="/resources/static/rh/css/camping.css"
+            href="/resources/static/css/camping.css"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script
@@ -16,7 +16,7 @@
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous"
     ></script>
-    <script src="/resources/static/rh/js/card.js"></script>
+    <script src="/resources/static/js/card.js"></script>
 </head>
 <body>
 <div>
@@ -49,15 +49,15 @@
                 <div class="rh-camping-wood-main">
                     <div class="rh-pointer" id="icon1">
                         <div class="rh-redPin-height">
-                            <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
-                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/stone.png" alt="">
+                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/card/stone.png" alt="">
                         </div>
                         <div class="rh-card-set">캠핑 필수 용품</div>
                     </div>
                     <div class="rh-camping-wood-mainPost-section4" id="content1">
                         <div class="rh-redPin-textView">
-                            <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
                         <div class="rh-camping-content1-cut" id="cut1">
                             <span id="mainItem" style="border-radius: 50%; background-color: yellow">메인 장비</span><br>
@@ -86,60 +86,60 @@
                         </div>
                         ※장비 구입 시 인원, 계절, 캠핑장 타입을 고려해 충분한 정보 수집과 질의를 거친 후 장만해야 해요.
                         <div class="rh-back-set rh-pointer" id="back1">돌아가기
-                            <img width="20%" src="/resources/static/img/icon/next.png" alt=""></div>
+                            <img width="20%" src="/resources/static/img/icon/card/next.png" alt=""></div>
                     </div>
                 </div>
                 <div class="rh-camping-wood-main">
                     <div class="rh-pointer" id="icon2">
                         <div class="rh-redPin-height">
-                            <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
-                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/howtouse.png"
+                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/card/howtouse.png"
                                   alt=""></div>
                         <div class="rh-card-set">장비 사용법 숙지</div>
                     </div>
 
                     <div class="rh-camping-wood-mainPost" id="content2">
                         <div class="rh-redPin-textView">
-                            <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
                         &nbsp;경험이 적을 시 장비 세팅에 많은 시간을 소모하게 되는데,
                         캠핑 전 장비 사용 방법을 미리 숙지해 두면 도움이 돼요.<br>
                         &nbsp;장비 사용법은 제품 상세 페이지나 SNS를 통해 사진 및 동영상으로 사용 방법을 숙지할 수 있어요.
                         <br>&nbsp;또한 캠핑 페어, 기업 주최 캠핑스쿨 등 다양한 박람회나 이벤트에 참여하는 것도 도움이 돼요.
                         <div class="rh-back-set rh-pointer" id="back2">돌아가기 <img width="20%"
-                                                                                 src="/resources/static/img/icon/next.png"
+                                                                                 src="/resources/static/img/icon/card/next.png"
                                                                                  alt=""></div>
                     </div>
                 </div>
                 <div class="rh-camping-wood-main">
                     <div class="rh-pointer" id="icon3">
                         <div class="rh-redPin-height">
-                            <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
-                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/weather3.png"
+                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/card/weather3.png"
                                   alt=""></div>
                         <div class="rh-card-set">날씨 확인</div>
                     </div>
                     <div class="rh-camping-wood-mainPost" id="content3">
                         <div class="rh-redPin-textView">
-                            <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
                         &nbsp;출발 전후는 물론 캠핑 중에도 수시로 기상 정보를 확인하며 위험에 대비하는 습관을 들이는 것이 좋아요. <br>
                         &nbsp;또한 기상 정보를 토대로 적절한 의류와 장비를 선택해 효율적인 캠핑을 즐겨요.
                         <div class="rh-back-set rh-pointer" id="back3">돌아가기 <img width="20%"
-                                                                                 src="/resources/static/img/icon/next.png"
+                                                                                 src="/resources/static/img/icon/card/next.png"
                                                                                  alt=""></div>
                     </div>
                 </div>
                 <div class="rh-camping-wood-main">
                     <div class="rh-camping-wood-mainPost">
                         <div class="rh-redPin-height" id="beginner4Pin">
-                            <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
                         <div class="rh-card-set" id="line2">캠핑 종류</div>
                         <div class="rh-camping-wood-beginner-zone first rh-pointer" id="autoCamp">
-                            <img src="/resources/static/img/icon/autocamping.png" alt="">
+                            <img src="/resources/static/img/icon/card/autocamping.png" alt="">
                             오토캠핑
                         </div>
                         <div id="autoCampC">
@@ -149,7 +149,7 @@
 
                         </div>
                         <div class="rh-camping-wood-beginner-zone rh-pointer" id="backCamp">
-                            <img src="/resources/static/img/icon/backpacking.png" alt="">
+                            <img src="/resources/static/img/icon/card/backpacking.png" alt="">
                             백패킹
                         </div>
                         <div id="backCampC">
@@ -158,7 +158,7 @@
                             &nbsp;또한 예기치 못한 환경에 대응해야 하는 경우가 발생할 수 있어 초보 캠퍼라면 조금 어려울 수 있어요.
                         </div>
                         <div class="rh-camping-wood-beginner-zone rh-pointer" id="glamping">
-                            <img width="10%" src="/resources/static/img/icon/glamping.png" alt="">
+                            <img width="10%" src="/resources/static/img/icon/card/glamping.png" alt="">
                             글램핑
                         </div>
                         <div id="glampingC">
@@ -166,18 +166,18 @@
                             &nbsp;자연 속에서 편안한 숙박 시설과 서비스를 경험할 수 있어 휴양과 캠핑을 동시에 즐길 수 있어요.
                         </div>
                         <div class="rh-back-set rh-pointer" id="back4">돌아가기 <img width="20%"
-                                                                                 src="/resources/static/img/icon/next.png"
+                                                                                 src="/resources/static/img/icon/card/next.png"
                                                                                  alt=""></div>
                     </div>
                 </div>
                 <div class="rh-camping-wood-main">
                     <div class="rh-camping-wood-mainPost" id="camping-content5">
                         <div class="rh-redPin-height" id="beginner5Pin">
-                            <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
-                        <div class="rh-card-set" id="line">캠핑존 종류</div>
+                        <div class="rh-card-set" id="line1">캠핑존 종류</div>
                         <div class="rh-camping-wood-beginner-zone first rh-pointer" id="stone">
-                            <img src="/resources/static/img/icon/stone.png" alt="">
+                            <img src="/resources/static/img/icon/card/stone.png" alt="">
                             파쇄석
                         </div>
                         <div id="stoneC">
@@ -187,7 +187,7 @@
                             좋아요.
                         </div>
                         <div class="rh-camping-wood-beginner-zone rh-pointer" id="deck">
-                            <img src="/resources/static/img/icon/deck.png" alt="">
+                            <img src="/resources/static/img/icon/card/deck.png" alt="">
                             데크
                         </div>
                         <div id="deckC">
@@ -199,7 +199,7 @@
                             화로대 사용 시 데크 밖에서 사용해야 해요.
                         </div>
                         <div class="rh-camping-wood-beginner-zone rh-pointer" id="grass">
-                            <img width="10%" src="/resources/static/img/icon/grass.png" alt="">
+                            <img width="10%" src="/resources/static/img/icon/card/grass.png" alt="">
                             잔디
                         </div>
                         <div id="grassC">
@@ -208,22 +208,22 @@
                             붙을 수 있어 관리가 필요해요.
                         </div>
                         <div class="rh-back-set rh-pointer" id="back5">돌아가기 <img width="20%"
-                                                                                 src="/resources/static/img/icon/next.png"
+                                                                                 src="/resources/static/img/icon/card/next.png"
                                                                                  alt=""></div>
                     </div>
                 </div>
                 <div class="rh-camping-wood-main">
                     <div class="rh-pointer" id="icon6">
                         <div class="rh-redPin-height">
-                            <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
-                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/checklist.png"
+                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/card/checklist.png"
                                   alt=""></div>
                         <div class="rh-card-set">캠핑장 이용 매너</div>
                     </div>
                     <div class="rh-camping-wood-mainPost" id="content6">
                         <div class="rh-redPin-textView">
-                            <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
                         • 캠핑장마다 매너 타임(취침 타임)이라는 것이 존재해요.
                         해당 시간엔 목소리를 낮추고 시끄러운 음악을 틀지 않도록 해요.
@@ -235,7 +235,7 @@
                         • 아이와 함께하는 경우, 항상 보호자가 아이들을 주시하고 있어야
                         해요.
                         <div class="rh-back-set rh-pointer" id="back6">돌아가기 <img width="20%"
-                                                                                 src="/resources/static/img/icon/next.png"
+                                                                                 src="/resources/static/img/icon/card/next.png"
                                                                                  alt=""></div>
                     </div>
                 </div>
@@ -243,19 +243,19 @@
                 <div class="rh-camping-wood-main">
                     <div class="rh-pointer" id="icon8">
                         <div class="rh-redPin-height">
-                            <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
-                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/campingBest.png"
+                        <div><img style="margin: 10% 0%" width="45%" src="/resources/static/img/icon/card/campingBest.png"
                                   alt=""></div>
                         <div class="rh-card-set">초보 캠퍼 베스트 캠핑장</div>
                     </div>
                     <div class="rh-camping-wood-mainPost" id="content8">
                         <div class="rh-redPin-textView">
-                            <img class="rh-redPin" src="/resources/static/img/기타/pin.png" alt="">
+                            <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
                         초보 캠퍼 이용하기 좋을 장소를 선정했어요.
                         <div class="rh-back-set rh-pointer" id="back8">돌아가기 <img width="20%"
-                                                                                 src="/resources/static/img/icon/next.png"
+                                                                                 src="/resources/static/img/icon/card/next.png"
                                                                                  alt=""></div>
                     </div>
                 </div>
@@ -294,6 +294,6 @@
         </div>
     </div>
 </div>
-<script src="/resources/static/rh/js/recommend_camp.js"></script>
+<script src="/resources/static/js/recommend_camp.js"></script>
 </body>
 </html>

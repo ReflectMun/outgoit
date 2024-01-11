@@ -24,7 +24,7 @@ public class IndexPageController {
 
     @GetMapping("/index")
     public String sendIndexPage() {
-        return "kmh/index";
+        return "jsp/etc/index";
     }
 
     @GetMapping("/camping")
@@ -128,20 +128,6 @@ public class IndexPageController {
         return "jsp/etc/design";
     }
 
-    private String getSkyCondition(String code){
-        return code.equals("4")
-                ? "cloudy"
-                : (code.equals("3") ? "cloud" : "sun");
-    }
-
-    private String getPrecipitationType(String code){
-        switch (code){
-            case "3", "7":
-                return "cloud_snow";
-            default:
-                return "rain";
-        }
-    }
 
     @Data
     @AllArgsConstructor

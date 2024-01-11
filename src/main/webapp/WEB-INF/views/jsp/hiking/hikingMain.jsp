@@ -8,14 +8,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUT GO IT - hiking </title>
-    <link rel="stylesheet" href="/resources/static/kmh/css/main.css">
-    <link rel="stylesheet" href="/resources/static/kmh/css/main_media.css">
+    <link rel="stylesheet" href="/resources/static/css/main.css">
+    <link rel="stylesheet" href="/resources/static/css/main_media.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         $(function () {
             if (window.innerWidth === 430 && window.innerHeight === 932) {
-                $("#media1").attr("src", "/resources/static/img/main_swiper/hiking_banner2_mobile.jpg")
+                $("#media1").attr("src", "/resources/static/img/swiper/mobile_swiper/hiking_banner2_mobile.jpg")
             }
         });
     </script>
@@ -31,10 +31,10 @@
     <!-- 배너 영역 (슬라이드 들어가면 좋을듯!) -->
     <div class="mh-banner-wrap camp swiper mySwiper">
         <div class="mh-banner swiper-wrapper">
-            <div class="swiper-slide"><img src="/resources/static/img/등산/hiking_banner1.jpg"></div>
-            <div class="swiper-slide"><img id="media1" src="/resources/static/img/등산/hiking_banner2.jpg"></div>
-            <div class="swiper-slide"><img src="/resources/static/img/등산/hiking_banner4.jpg"></div>
-            <div class="swiper-slide"><img src="/resources/static/img/등산/hiking_banner3.jpg"></div>
+            <div class="swiper-slide"><img src="/resources/static/img/swiper/web_swiper/hiking_banner1.jpg"></div>
+            <div class="swiper-slide"><img id="media1" src="/resources/static/img/swiper/web_swiper/hiking_banner2.jpg"></div>
+            <div class="swiper-slide"><img src="/resources/static/img/swiper/web_swiper/hiking_banner4.jpg"></div>
+            <div class="swiper-slide"><img src="/resources/static/img/swiper/web_swiper/hiking_banner3.jpg"></div>
         </div>
     </div>
     <div class="mh-banner-txt-wrap">
@@ -56,7 +56,7 @@
                     <div class="swiper-slide sw-background">
                         <span>${data.area}</span>&nbsp;
                         </nbsp><img
-                                    src="/resources/static/img/weather/${data.weatherIcon}.png" alt="">&nbsp;
+                                    src="/resources/static/img/icon/weather/${data.weatherIcon}.png" alt="">&nbsp;
                         <span>${data.temperature}℃</span>
                     </div>
                 </c:forEach>
@@ -102,7 +102,8 @@
 <script type="text/javascript"
         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=770a2850e8ce3177b209d2d94dc1e58b&libraries=services"></script>
 
-<script src="/resources/static/kmh/js/trailDraft1.js"></script>
+<script type="text/javascript" src="/resources/static/js/hiking_draft.js"></script>
+<script type="text/javascript" rc="/resources/static/js/weather_banner.js"></script>
 <script>
     const swiper = new Swiper(".mySwiper", {
         loop: true,
@@ -111,6 +112,5 @@
         },
     });
 </script>
-<script src="/resources/static/rh/js/banner.js"></script>
 </body>
 </html>

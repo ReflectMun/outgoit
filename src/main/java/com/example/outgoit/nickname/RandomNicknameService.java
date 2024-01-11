@@ -18,7 +18,7 @@ public class RandomNicknameService {
     public String getRandomNickname() {
         String randomNickname = null;
         try {
-            String filePath = "src/main/resources/static/rh/js/nickname.json";
+            String filePath = "src/main/resources/static/json/nickname.json";
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode rootNode = objectMapper.readTree(new File(filePath));
             JsonNode determiners = rootNode.get("determiners");
@@ -29,7 +29,6 @@ public class RandomNicknameService {
             String randomNum = String.format("%04d", getRandomNum());
 
             randomNickname = randomDeterminers + " " + randomAnimal + " " + randomNum;
-            System.out.println(randomNickname);
 
         } catch (Exception e) {
             e.printStackTrace();

@@ -7,11 +7,11 @@ charset=UTF-8" pageEncoding="UTF-8" %>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Out Go It</title>
-    <link rel="stylesheet" type="text/css" href="/resources/static/css_hj/footer.css">
-    <link rel="stylesheet" type="text/css" href="/resources/static/css_hj/header.css">
-    <link rel="stylesheet" type="text/css" href="/resources/static/css_hj/menu.css">
+    <link rel="stylesheet" type="text/css" href="/resources/static/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="/resources/static/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/resources/static/css/menu.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="/resources/static/js_hj/menu.js"></script>
+    <script src="/resources/static/js/menu.js"></script>
 </head>
 <body>
 
@@ -118,7 +118,7 @@ charset=UTF-8" pageEncoding="UTF-8" %>
     <div class="hj-container-footer">
 
         <div class="hj-footer-pic">
-            <img src="/resources/static/Img_hj/tree.png" alt=""/>
+            <img src="/resources/static/img/header_footer/tree.png" alt=""/>
         </div>
         <div class="hj-footer">
             <div class="hj-footer-box hj-footer-box-first">

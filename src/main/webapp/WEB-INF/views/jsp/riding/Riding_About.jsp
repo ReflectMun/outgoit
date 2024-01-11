@@ -8,7 +8,7 @@ pageEncoding="UTF-8"%>
     <title>Document</title>
     <link
       rel="stylesheet"
-      href="../../../../../../../resources/static/rh/css/riding.css"
+      href="/resources/static/css/riding.css"
     />
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
@@ -17,7 +17,6 @@ pageEncoding="UTF-8"%>
     ></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="../../../js/riding.js"></script>
   </head>
   <body>
     <script>
@@ -45,7 +44,7 @@ pageEncoding="UTF-8"%>
           <div class="rh-riding-wood-mainBox">
             <!-- 통나무 내용판 -->
             <div class="rh-riding-history-wood-main">
-              <p><img id="historyRedpin" src="/resources/static/img/기타/pin.png" alt=""></p>
+              <p><img id="historyRedpin" src="/static/img/etc/pin.png" alt=""></p>
               <p
                 class="rh-riding-history-wood-text"
                 data-aos="fade-up"

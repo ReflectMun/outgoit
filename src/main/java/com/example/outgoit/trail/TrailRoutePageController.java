@@ -48,21 +48,17 @@ public class TrailRoutePageController {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-//    public TrailRoutePageController(TrailReviewService trailReviewService){
-//        this.trailReviewService = trailReviewService;
+//    @GetMapping
+//    public String getTrailRoutePage() {
+//        return "jiho/trail";
+//    }
+//
+//    @GetMapping("/draft1")
+//    public String sendDraft1() {
+//        return "kmh/hiking";
 //    }
 
-
-    @GetMapping
-    public String getTrailRoutePage() {
-        return "jiho/trail";
-    }
-
-    @GetMapping("/draft1")
-    public String sendDraft1() {
-        return "kmh/hiking";
-    }
-
+    // 상세페이지로 가는 맵핑
     @PostMapping("/detail/{lngi}/{lati}/{index}/{trailRouteId}")
     public String GetDetailTrain(
             @PageableDefault(size = 5, sort = "commentNumber", direction = Sort.Direction.DESC) Pageable pageable,
@@ -88,9 +84,9 @@ public class TrailRoutePageController {
             ratingAvg = "아직 평균평점 정보가 없어요!";
         }
 
-        ArrayList<FeatureData> trailRouteList = trailRouteService.getTrailRouteList(lngi, lati); // list를 반환함.
+        ArrayList<FeatureData> trailRouteList = trailRouteService.getTrailRouteList(lngi, lati);
 
-        // 모델에 trailRouteList를 추가
+
         model.addAttribute("trailRouteList", trailRouteList.get(index).getProperties());
         model.addAttribute("trailPath", trailRouteList.get(index).getGeometry().getCoordinates().get(0));
         model.addAttribute("trailRouteId", trailRouteList.get(index).getId());
@@ -99,7 +95,7 @@ public class TrailRoutePageController {
         model.addAttribute("hikingContentPage", "hiking_information.jsp");
         model.addAttribute("nickname",randomNicknameService.getRandomNickname());
 
-        return "jsp/hiking/container"; // yourViewName은 실제로 사용할 JSP 파일의 이름이어야 합니다.
+        return "jsp/hiking/container";
     }
 
     @GetMapping("/detail/{TrailRouteName}")

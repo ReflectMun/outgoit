@@ -6,15 +6,15 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>${campingAreaName} 상세정보</title>
-    <link rel="stylesheet" href="/resources/static/jiho/css/camp_information.css"/>
-    <link rel="stylesheet" href="/resources/static/css_hj/camp_info_media.css"/>
+    <link rel="stylesheet" href="/resources/static/css/camp_info.css"/>
+    <link rel="stylesheet" href="/resources/static/css/camp_info_media.css"/>
     <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="/resources/static/jiho/js/draft_information.js"></script>
+    <script src="/resources/static/js/camping_information_all.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
@@ -23,7 +23,7 @@
     <div id="hj-info-weather">
         <div id="hj-info-weather-text">
             <span>현재 캠핑장 날씨</span>
-            <img src="/resources/static/img/weather/${weatherIcon}.png">
+            <img src="/resources/static/img/icon/weather/${weatherIcon}.png">
             <span>${temperature}℃</span>
         </div>
     </div>

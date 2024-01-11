@@ -6,7 +6,7 @@ pageEncoding="UTF-8"%>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Out Go It</title>
-    <link rel="stylesheet" href="/resources/static/rh/css/camping.css" />
+    <link rel="stylesheet" href="/resources/static/css/camping.css" />
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
@@ -42,7 +42,7 @@ pageEncoding="UTF-8"%>
           <div class="rh-camping-wood-mainBox">
             <!-- 통나무 내용판 -->
             <div class="rh-camping-history-wood-main">
-              <p><img id="historyRedpin" src="/resources/static/img/기타/pin.png" alt=""></p>
+              <p><img id="historyRedpin" src="/static/img/etc/pin.png" alt=""></p>
               <p
                 class="rh-camping-history-wood-text"
                 data-aos="fade-up"
