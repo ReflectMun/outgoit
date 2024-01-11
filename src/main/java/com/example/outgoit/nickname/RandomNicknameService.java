@@ -29,7 +29,6 @@ public class RandomNicknameService {
             String randomNum = String.format("%04d", getRandomNum());
 
             randomNickname = randomDeterminers + " " + randomAnimal + " " + randomNum;
-            System.out.println(randomNickname);
 
         } catch (Exception e) {
             e.printStackTrace();
