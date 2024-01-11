@@ -137,21 +137,21 @@ $(function () {
     $("#stone").click(function () {
         $("#beginner5Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#stoneC, #back5").fadeToggle();
-        $("#stone, #grass, #deck, #line").hide();
+        $("#stone, #grass, #deck, #line1").hide();
     });
     $("#deck").click(function () {
         $("#beginner5Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#deckC, #back5").fadeToggle();
-        $("#stone, #grass, #deck, #line").hide();
+        $("#stone, #grass, #deck, #line1").hide();
     });
     $("#grass").click(function () {
         $("#beginner5Pin").removeClass('rh-redPin-height').addClass('rh-redPin-textView');
         $("#grassC, #back5").fadeToggle();
-        $("#stone, #grass, #deck, #line").hide();
+        $("#stone, #grass, #deck, #line1").hide();
     });
     $("#back5").click(function (){
         $("#beginner5Pin").removeClass('rh-redPin-textView').addClass('rh-redPin-height');
-        $("#stone, #grass, #deck, #line").fadeToggle();
+        $("#stone, #grass, #deck, #line1").fadeToggle();
         $("#stoneC, #grassC, #deckC, #back").hide();
     });
 

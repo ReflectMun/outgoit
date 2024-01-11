@@ -175,7 +175,7 @@
                         <div class="rh-redPin-height" id="beginner5Pin">
                             <img class="rh-redPin" src="/resources/static/img/etc/pin.png" alt="">
                         </div>
-                        <div class="rh-card-set" id="line">캠핑존 종류</div>
+                        <div class="rh-card-set" id="line1">캠핑존 종류</div>
                         <div class="rh-camping-wood-beginner-zone first rh-pointer" id="stone">
                             <img src="/resources/static/img/icon/card/stone.png" alt="">
                             파쇄석
