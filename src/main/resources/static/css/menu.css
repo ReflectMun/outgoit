@@ -476,7 +476,7 @@ body {
 .hj-col-1 {
     position: fixed;
     right: 0;
-    width: 7%;
+    width: 6.5%;
     height: 8%;
 }
 
@@ -945,16 +945,12 @@ body {
 
     /* 나머지 디브 */
     .hj-box {
-        /* display: flex;
-        justify-content: center; */
-        /* border: 1px solid violet; */
         height: 20vw;
         display: flex;
         justify-content: center;
     }
 
     .hj-row {
-        /* border: 1px solid blue; */
         display: flex;
         justify-content: center;
         align-content: center;
@@ -988,7 +984,5 @@ body {
         background-position: 75%;
         background-repeat: no-repeat;
         margin-top: 0.2vh;
-        /*margin-bottom: 6vh;*/
-
     }
 }
