@@ -21,7 +21,7 @@ $(function () {
         $("#icon2").hide();
         $("#content2, #back2").fadeToggle();
     });
-    $("#bacAk2").click(function () {
+    $("#back2").click(function () {
         $("#icon2").fadeToggle();
         $("#content2, #back2").hide();
     });
@@ -199,14 +199,14 @@ $(function () {
     });
 
     //비기너 베스트 8번
-    $("#best").css("position","relative").css("left","-25.3vw").css("z-index","0").css("visibility","hidden").css("height", "0");
+    $("#best").css("position","relative").css("left","-22vw").css("z-index","0").css("visibility","hidden").css("height", "0");
     $("#icon8").click(function () {
         $("#icon8").hide();
         $("#content8, #back8").fadeToggle();
         $("#best").css("visibility","visible").css("left","0").css("height","100%").css("transition","0.5s ease-in-out");
     });
     $("#back8").click(function () {
-        $("#best").css("left","-25.3vw").css("visibility","hidden").css("height","0");
+        $("#best").css("left","-22vw").css("visibility","hidden").css("height","0");
         $("#content8, #back8").hide();
         $("#icon8").fadeToggle();
     });
