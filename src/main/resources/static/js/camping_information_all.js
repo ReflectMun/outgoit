@@ -194,11 +194,17 @@ async function deleteComment(commentNumber, element) {
     }
 
     try {
+        const csrfToken = await getCsrfToken()
+
         const {data: resData} = await axios.post(
             '/api/review/camping/delete',
             {
                 password: passwordInput.value,
                 commentNumber: commentNumber
+            }, {
+                headers: {
+                    "X-CSRF-TOKEN": csrfToken
+                }
             }
         )
 
@@ -342,6 +348,8 @@ async function updateComment(commentNumber, reviewContentInput, modifyButtonElem
     }
 
     try {
+        const csrfToken = await getCsrfToken()
+
         const {data: resData} = await axios.post(
             '/api/review/camping/update',
             {
@@ -349,6 +357,10 @@ async function updateComment(commentNumber, reviewContentInput, modifyButtonElem
                 content: reviewContentInput.value,
                 commentNumber: commentNumber,
                 rating: clickedValue
+            }, {
+                headers: {
+                    "X-CSRF-TOKEN": csrfToken
+                }
             }
         )
 
@@ -545,3 +557,8 @@ async function getReviewList(areaId, pageNumber) {
     }
 }
 
+async function getCsrfToken(){
+    const { data: csrfData }  = await axios.get("/csrf/token")
+    const token = csrfData['token']
+    return token
+}

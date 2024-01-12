@@ -119,8 +119,9 @@ function makeListElement(searchData, apiResData){
     const openDetailButton = document.createElement("button")
     openDetailButton.innerText = "캠핑장 정보 보기"
     openDetailButton.classList.add("open-detail-button")
-    openDetailButton.addEventListener("click", (e) => {
+    openDetailButton.addEventListener("click", async (e) => {
         const hiddenForm = document.createElement("form")
+
         hiddenForm.style.display = "none"
         hiddenForm.method = "post"
         hiddenForm.action = `/camping/detail/${apiResData['facltNm']}`
@@ -131,9 +132,17 @@ function makeListElement(searchData, apiResData){
             tempInput.name = prop
             tempInput.value = apiResData[prop]
 
-
             hiddenForm.appendChild(tempInput)
         }
+
+        const { data: token } = await axios.get("/csrf/token")
+        const csrfToken = token['token']
+
+        const csrfInput = document.createElement("input")
+        csrfInput.type = "hidden"
+        csrfInput.name = "_csrf"
+        csrfInput.value = csrfToken
+        hiddenForm.appendChild(csrfInput)
 
         document.body.appendChild(hiddenForm)
         hiddenForm.submit()
