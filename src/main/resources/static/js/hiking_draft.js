@@ -247,7 +247,7 @@ function addListElementsToResultList(name, data, trailName) {
             let trailRouteId = n.id
             openDetailButton.innerText = "등산로 정보 보기";
             openDetailButton.classList.add("open-detail-button");
-            openDetailButton.addEventListener("click", (e) => {
+            openDetailButton.addEventListener("click", async (e) => {
                 const hiddenForm = document.createElement("form");
                 hiddenForm.style.display = "none";
                 hiddenForm.method = "post";
@@ -255,17 +255,24 @@ function addListElementsToResultList(name, data, trailName) {
 
                 let tempInput;
 
-
                 tempInput = document.createElement("input");
                 tempInput.name = n;
                 tempInput.value = name;
                 hiddenForm.appendChild(tempInput);
 
+                const { data: token } = await axios.get("/csrf/token")
+                const csrfToken = token['token']
+
+                const csrfInput = document.createElement("input")
+                csrfInput.type = "hidden"
+                csrfInput.name = "_csrf"
+                csrfInput.value = csrfToken
+                hiddenForm.appendChild(csrfInput)
+
                 document.body.appendChild(hiddenForm);
                 hiddenForm.submit();
 
             });
-
 
             childButtonWrapper.classList.add("button-wrapper");
 

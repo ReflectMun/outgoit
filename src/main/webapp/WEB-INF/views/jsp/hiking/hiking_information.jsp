@@ -224,6 +224,8 @@
         }
 
         try {
+            const csrfToken = await getCsrfToken()
+
             const reqUrl = "/api/review/trail/submit"
 
             const {data: resData} = await axios.post(
@@ -234,6 +236,10 @@
                     content: contentInput.value,
                     rating: clickedValue, // starValue 값 관련 코드는 draft_information.js에 있는 외부 값임
                     trailRouteId: trailRouteId
+                }, {
+                    headers: {
+                        "X-CSRF-TOKEN": csrfToken
+                    }
                 }
             )
 

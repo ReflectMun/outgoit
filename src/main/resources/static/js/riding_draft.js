@@ -138,6 +138,7 @@ amenities.addEventListener('click', (e) => {
 // ----------------- 자전거길 플러시 카드 ---------------------------------
 
 const swiper1 = new Swiper(".mySwiper1", {
+    lazy: true,
     direction: "vertical",
     spaceBetween: 50,
     pagination: {
