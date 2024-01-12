@@ -60,7 +60,7 @@ body {
     font-weight: 700;
     color: #116228;
     text-shadow: 0 0.7vw 0 rgb(222, 111, 26);
-    animation: bounce 2s ease-in-out 1; /* 애니메이션을 무한히 반복  - > 숫자 작성하면 해당 숫자만큼 움직임 */
+    animation: bounce 2s ease-in-out 3; /* 애니메이션을 무한히 반복  - > 숫자 작성하면 해당 숫자만큼 움직임 */
 }
 
 @keyframes bounce {
@@ -244,7 +244,7 @@ body {
         font-weight: 700;
         color: #116228;
         text-shadow: 0 0.7vw 0 rgb(222, 111, 26);
-        animation: bounce 2s ease-in-out 1; /* 애니메이션을 무한히 반복  - > 숫자 작성하면 해당 숫자만큼 움직임 */
+        animation: bounce 2s ease-in-out 3; /* 애니메이션을 무한히 반복  - > 숫자 작성하면 해당 숫자만큼 움직임 */
     }
 
     @keyframes bounce {
