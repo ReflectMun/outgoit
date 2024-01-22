@@ -6,7 +6,7 @@ for (const riding of recommendedRidings){
         const ridingNum = riding.getAttribute("data-value");
         console.log(ridingNum)
 
-        const detailReqUrl = "/outgoit/riding";
+        const detailReqUrl = "/riding";
 
         const hiddenForm = document.createElement("form");
 

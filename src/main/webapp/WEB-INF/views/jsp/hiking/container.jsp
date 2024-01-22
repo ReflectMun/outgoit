@@ -22,21 +22,21 @@ charset=UTF-8" pageEncoding="UTF-8"%>
   <%-- 헤더 시작 --%>
     <div class="hj-container">
       <div class="hj-header">
-        <div class="hj-logo-container" onclick="location.href='/outgoit/hiking'">
+        <div class="hj-logo-container" onclick="location.href='/hiking'">
           <div class="hj-logo">  </div>
           <!-- 로고 이미지 넣기 -->
           <div class="hj-title">시간을 느리게, 경험을 깊게</div>
           <!-- 글자 나중에    -->
         </div>
         <div class="hj-right">
-          <div class="hj-tracking hj-font" onclick="location.href='/outgoit/camping'">
+          <div class="hj-tracking hj-font" onclick="location.href='/camping'">
             <span>C</span><span>a</span><span>m</span><span>p</span
           ><span>i</span><span>n</span><span>g</span>
           </div>
-          <div class="hj-tracking hj-font" onclick="location.href='/outgoit/hiking'">
+          <div class="hj-tracking hj-font" onclick="location.href='/hiking'">
             <span>H</span><span>i</span><span>k</span><span>i</span><span>n</span><span>g</span>
           </div>
-          <div class="hj-riding hj-font" onclick="location.href='/outgoit/riding'">
+          <div class="hj-riding hj-font" onclick="location.href='/riding'">
             <span>R</span><span>i</span><span>d</span><span>i</span
           ><span>n</span><span>g</span>
           </div>
@@ -64,7 +64,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
         <div class="hj-box">
           <div class="hj-row hj-menu-txt">
             <div class="hj-col">
-              <lavel><div class="hj-home" id="hj-home" onclick="location.href='/outgoit/hiking'"><span>Home</span></div></lavel>
+              <lavel><div class="hj-home" id="hj-home" onclick="location.href='/hiking'"><span>Home</span></div></lavel>
 
 
             </div>
@@ -73,7 +73,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
         <div class="hj-box">
           <div class="hj-row hj-menu-txt">
             <div class="hj-col-2">
-              <div class="hj-story" onclick="location.href='/outgoit/hiking/history'"><span>하이킹 이야기</span></div>
+              <div class="hj-story" onclick="location.href='/hiking/history'"><span>하이킹 이야기</span></div>
 
             </div>
           </div>
@@ -81,7 +81,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
         <div class="hj-box">
           <div class="hj-row hj-menu-txt">
             <div class="hj-col-3">
-              <div class="hj-info" onclick="location.href='/outgoit/hiking/safety'"><span>안전 정보</span></div>
+              <div class="hj-info" onclick="location.href='/hiking/safety'"><span>안전 정보</span></div>
 
             </div>
           </div>
@@ -89,7 +89,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
         <div class="hj-box">
           <div class="hj-row hj-menu-txt">
             <div class="hj-col-4">
-              <div class="hj-guide" onclick="location.href='/outgoit/hiking/beginner'"><span>초보자 가이드</span></div>
+              <div class="hj-guide" onclick="location.href='/hiking/beginner'"><span>초보자 가이드</span></div>
 
             </div>
           </div>
@@ -124,7 +124,7 @@ charset=UTF-8" pageEncoding="UTF-8"%>
                     <span onclick="">개인정보 처리 방침</span>
                   </div>
                   <div class="hj-footer-design">
-                    <span onclick="location.href='/outgoit/design'">디자인 출처</span>
+                    <span onclick="location.href='/design'">디자인 출처</span>
                   </div>
                 </div>
               </div>
@@ -150,13 +150,13 @@ charset=UTF-8" pageEncoding="UTF-8"%>
               <div class="hj-footer-col">
 
                 <div class="hj-footer-kobox3">
-                  <div class="hj-footer-camp" onclick="location.href='/outgoit/camping'">
+                  <div class="hj-footer-camp" onclick="location.href='/camping'">
 
                   </div>
-                  <div class="hj-footer-tracking" onclick="location.href='/outgoit/hiking'">
+                  <div class="hj-footer-tracking" onclick="location.href='/hiking'">
 
                   </div>
-                  <div class="hj-footer-riding" onclick="location.href='/outgoit/riding'">
+                  <div class="hj-footer-riding" onclick="location.href='/riding'">
                   </div>
                 </div>
               </div>

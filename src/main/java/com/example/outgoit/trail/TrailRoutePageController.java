@@ -1,5 +1,6 @@
 package com.example.outgoit.trail;
 
+import com.example.outgoit.IndexPageController;
 import com.example.outgoit.nickname.RandomNicknameService;
 import com.example.outgoit.review.trail.TrailReview;
 import com.example.outgoit.review.trail.TrailReviewService;
@@ -23,6 +24,7 @@ import java.util.ArrayList;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 @Controller
 @RequestMapping("/hiking")
@@ -47,16 +49,37 @@ public class TrailRoutePageController {
     }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    @GetMapping
+    public String sendHikingMainPage(Model model) {
+        model.addAttribute("hikingContentPage", "hikingMain.jsp");
 
-//    @GetMapping
-//    public String getTrailRoutePage() {
-//        return "jiho/trail";
-//    }
-//
-//    @GetMapping("/draft1")
-//    public String sendDraft1() {
-//        return "kmh/hiking";
-//    }
+        HashMap<String, WeatherApiResponseDTO> weatherList = weatherService.getWeatherDataList();
+        ArrayList<IndexPageController.WeatherData> weatherDataList = new ArrayList<IndexPageController.WeatherData>();
+        ArrayList<String> areaNames = new ArrayList<>(weatherList.keySet());
+
+        String weatherIcon = null;
+        for(String area : areaNames){
+            try {
+                weatherIcon = weatherService.getWeatherIcon(weatherList.get(area));
+                weatherDataList.add(new IndexPageController.WeatherData(
+                        area,
+                        weatherIcon,
+                        weatherList.get(area).getTemperature()
+                ));
+            } catch (Exception e) {
+                weatherIcon = "error";
+                weatherDataList.add(new IndexPageController.WeatherData(
+                        area,
+                        weatherIcon,
+                        weatherList.get(area).getTemperature()
+                ));
+            }
+        }
+
+        model.addAttribute("weathers", weatherDataList);
+
+        return "jsp/hiking/container";
+    }
 
     // 상세페이지로 가는 맵핑
     @PostMapping("/detail/{lngi}/{lati}/{index}/{trailRouteId}")
