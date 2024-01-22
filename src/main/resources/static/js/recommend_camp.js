@@ -35,6 +35,14 @@ for (const camp of recommendedCamps) {
 
                 hiddenForm.appendChild(tempInput);
             }
+            const { data: token } = await axios.get("/csrf/token")
+            const csrfToken = token['token']
+
+            const csrfInput = document.createElement("input")
+            csrfInput.type = "hidden"
+            csrfInput.name = "_csrf"
+            csrfInput.value = csrfToken
+            hiddenForm.appendChild(csrfInput)
 
             // body 태그의 자식 엘리먼트에 hiddenForm을 추가해줘야 히든폼의 submit이 동작함
             document.body.appendChild(hiddenForm);

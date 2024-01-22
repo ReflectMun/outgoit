@@ -1,5 +1,6 @@
 package com.example.outgoit.camp;
 
+import com.example.outgoit.IndexPageController;
 import com.example.outgoit.nickname.RandomNicknameService;
 import com.example.outgoit.review.camping.CampingReview;
 import com.example.outgoit.review.camping.CampingReviewService;
@@ -14,6 +15,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 @Controller
 @RequestMapping("/camping")
@@ -30,22 +32,52 @@ public class CampingAreaSearchPageController {
             CampingSearchService campingSearchService,
             WeatherService weatherService,
             RandomNicknameService randomNicknameService
-    ){
-            this.campingReviewService = campingReviewService;
-            this.campingSearchService = campingSearchService;
-            this.weatherService = weatherService;
-            this.randomNicknameService = randomNicknameService;
+    ) {
+        this.campingReviewService = campingReviewService;
+        this.campingSearchService = campingSearchService;
+        this.weatherService = weatherService;
+        this.randomNicknameService = randomNicknameService;
     }
+
     ////////////////////////////////////////////////////////
+    @GetMapping
+    public String sendCampingPage(Model model) {
+        model.addAttribute("campingContentPage", "campingMain.jsp");
 
+        HashMap<String, WeatherApiResponseDTO> weatherList = weatherService.getWeatherDataList();
+        ArrayList<IndexPageController.WeatherData> weatherDataList = new ArrayList<IndexPageController.WeatherData>();
+        ArrayList<String> areaNames = new ArrayList<>(weatherList.keySet());
 
+        String weatherIcon = null;
+        for (String area : areaNames) {
+            try {
+                weatherIcon = weatherService.getWeatherIcon(weatherList.get(area));
+                weatherDataList.add(new IndexPageController.WeatherData(
+                        area,
+                        weatherIcon,
+                        weatherList.get(area).getTemperature()
+                ));
+            } catch (Exception e) {
+                weatherIcon = "error";
+                weatherDataList.add(new IndexPageController.WeatherData(
+                        area,
+                        weatherIcon,
+                        weatherList.get(area).getTemperature()
+                ));
+            }
+        }
+
+        model.addAttribute("weathers", weatherDataList);
+
+        return "jsp/camp/container";
+    }
 
     @PostMapping("/detail/{campingAreaName}")
     public String sendDetailPage(
             @PageableDefault(size = 5, sort = "commentNumber", direction = Sort.Direction.DESC) Pageable pageable,
             CampingAreaInfoDTO data,
             Model model
-    ){
+    ) {
         Pageable modified = PageRequest.of(0, pageable.getPageSize(), pageable.getSort());
         ArrayList<CampingReview> reviews =
                 new ArrayList<>(campingReviewService.loadCampingAreaReview(data.getContentId(), modified).getContent());
@@ -61,8 +93,7 @@ public class CampingAreaSearchPageController {
         String ratingAvg;
         try {
             ratingAvg = campingReviewService.getCampingAreaRating(data.getContentId()).get(0).toString();
-        }
-        catch (NullPointerException e){
+        } catch (NullPointerException e) {
             ratingAvg = "아직 평균평점 정보가 없어요!";
         }
 
@@ -127,14 +158,14 @@ public class CampingAreaSearchPageController {
         model.addAttribute("siteDeck", data.getSiteBottomCl3());
         model.addAttribute("siteGravel", data.getSiteBottomCl4());
         model.addAttribute("siteSoil", data.getSiteBottomCl5());
-        model.addAttribute("campingContentPage","camp_information.jsp");
+        model.addAttribute("campingContentPage", "camp_information.jsp");
         model.addAttribute("nickname", randomNicknameService.getRandomNickname());
         return "jsp/camp/container";
     }
 
     @GetMapping("/detail/{campingAreaName}")
     @ResponseBody
-    public String sendError(){
+    public String sendError() {
         return "잘못된 접근입니다";
     }
 

@@ -28,15 +28,15 @@
 		<div class="mh-index-wrap-container">
 <%--			menu wrap을 중앙 정렬하기 위한 div--%>
 		<div class="mh-menu-wrap">
-			<div class="mh-menu" onclick="location.href='/outgoit/camping'">
+			<div class="mh-menu" onclick="location.href='/camping'">
 				<div class="mh-camp-icon"></div>
 				<div class="mh-txt mh-menu-txt" id="txt1"><span>CAMPING</span></div>
 			</div>
-			<div class="mh-menu" onclick="location.href='/outgoit/hiking'">
+			<div class="mh-menu" onclick="location.href='/hiking'">
 				<div class="mh-hiking-icon"></div>
 				<div class="mh-txt mh-menu-txt" id="txt2"><span>HIKING</span></div>
 			</div>
-			<div class="mh-menu" onclick="location.href='/outgoit/riding'">
+			<div class="mh-menu" onclick="location.href='/riding'">
 				<div class="mh-riding-icon"></div>
 				<div class="mh-txt mh-menu-txt" id="txt3"><span>RIDING</span></div>
 			</div>
