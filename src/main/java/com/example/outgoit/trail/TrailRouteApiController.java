@@ -1,20 +1,18 @@
 package com.example.outgoit.trail;
 
 import com.example.outgoit.trail.dto.FeatureData;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/trail")
 public class TrailRouteApiController {
     private final TrailRouteService trailRouteService;
-
-    public TrailRouteApiController(TrailRouteService trailRouteService){
-        this.trailRouteService = trailRouteService;
-    }
 
     @GetMapping("/search")
     public ArrayList<FeatureData> searchTrailRoute(Double lati, Double lngi){

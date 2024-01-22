@@ -1,5 +1,6 @@
 package com.example.outgoit.review.trail;
 
+import lombok.RequiredArgsConstructor;
 import org.hibernate.annotations.Parameter;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -18,15 +19,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/review/trail")
+@RequiredArgsConstructor
 public class TrailReviewApiController {
     //////////////////// 초기화 코드니까 말 없이 건드리지 마시오 /////////////////////////
-
     public final TrailReviewService trailReviewService;
-
-    public TrailReviewApiController(TrailReviewService trailReviewService) {
-        this.trailReviewService = trailReviewService;
-    }
-
     ////////////////////////////////////////////////////////////////////////////
     @PostMapping("/submit")
     public int submitTrailRouteReview(@RequestBody TrailReview trailReview) {

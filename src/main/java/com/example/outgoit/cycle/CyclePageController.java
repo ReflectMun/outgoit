@@ -3,24 +3,20 @@ package com.example.outgoit.cycle;
 import com.example.outgoit.IndexPageController;
 import com.example.outgoit.weather.WeatherService;
 import com.example.outgoit.weather.dto.WeatherApiResponseDTO;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 @Controller
 @RequestMapping("/riding")
-public class CyclePageContoller {
-    CycleRouteSearchService cycleRouteSearchService;
+@RequiredArgsConstructor
+public class CyclePageController {
     WeatherService weatherService;
 
-    public CyclePageContoller(CycleRouteSearchService cycleRouteSearchService, WeatherService weatherService){
-        this.cycleRouteSearchService = cycleRouteSearchService;
-        this.weatherService = weatherService;
-    }
     @GetMapping
     public String sendRidingMainPage(Model model) {
         model.addAttribute("ridingContentPage", "ridingMain.jsp");

@@ -6,6 +6,7 @@ import com.example.outgoit.review.camping.CampingReview;
 import com.example.outgoit.review.camping.CampingReviewService;
 import com.example.outgoit.weather.WeatherService;
 import com.example.outgoit.weather.dto.WeatherApiResponseDTO;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -17,28 +18,15 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+@RequiredArgsConstructor
 @Controller
 @RequestMapping("/camping")
 public class CampingAreaSearchPageController {
     //////////////////// 의존성 주입 코드 //////////////////////
-    // 허락없이 건들면 뒤집니다
     private final CampingReviewService campingReviewService;
     private final CampingSearchService campingSearchService;
     private final WeatherService weatherService;
     private final RandomNicknameService randomNicknameService;
-
-    public CampingAreaSearchPageController(
-            CampingReviewService campingReviewService,
-            CampingSearchService campingSearchService,
-            WeatherService weatherService,
-            RandomNicknameService randomNicknameService
-    ) {
-        this.campingReviewService = campingReviewService;
-        this.campingSearchService = campingSearchService;
-        this.weatherService = weatherService;
-        this.randomNicknameService = randomNicknameService;
-    }
-
     ////////////////////////////////////////////////////////
     @GetMapping
     public String sendCampingPage(Model model) {

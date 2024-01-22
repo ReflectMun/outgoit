@@ -1,17 +1,16 @@
 package com.example.outgoit.camp;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/camping")
 public class CampingAreaSearchApiController {
     private final CampingSearchService campingSearchService;
 
-    public CampingAreaSearchApiController(CampingSearchService campingSearchService){
-        this.campingSearchService = campingSearchService;
-    }
     @GetMapping("/search/{campName}")
     public List<CampingAreaInfoDTO> getCampingAreaInfo(@PathVariable String campName){
         System.out.printf("검색 키워드: %s\n", campName);

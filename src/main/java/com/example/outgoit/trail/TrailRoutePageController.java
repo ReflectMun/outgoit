@@ -7,6 +7,7 @@ import com.example.outgoit.review.trail.TrailReviewService;
 import com.example.outgoit.trail.dto.FeatureData;
 import com.example.outgoit.weather.WeatherService;
 import com.example.outgoit.weather.dto.WeatherApiResponseDTO;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -26,27 +27,15 @@ import java.util.ArrayList;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+@RequiredArgsConstructor
 @Controller
 @RequestMapping("/hiking")
 public class TrailRoutePageController {
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////// 의존성 주입 코드 ////////////////////////////////////////////////////
     private final TrailRouteService trailRouteService;
     private final TrailReviewService trailReviewService;
     private final WeatherService weatherService;
     private final RandomNicknameService randomNicknameService;
-
-    public TrailRoutePageController(
-            TrailRouteService trailRouteService,
-            TrailReviewService trailReviewService,
-            WeatherService weatherService,
-            RandomNicknameService randomNicknameService
-    ) {
-        this.trailRouteService = trailRouteService;
-        this.trailReviewService = trailReviewService;
-        this.weatherService = weatherService;
-        this.randomNicknameService = randomNicknameService;
-    }
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     @GetMapping
