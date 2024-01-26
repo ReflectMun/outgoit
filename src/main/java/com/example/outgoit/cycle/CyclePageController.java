@@ -15,7 +15,7 @@ import java.util.HashMap;
 @RequestMapping("/riding")
 @RequiredArgsConstructor
 public class CyclePageController {
-    WeatherService weatherService;
+    private final WeatherService weatherService;
 
     @GetMapping
     public String sendRidingMainPage(Model model) {

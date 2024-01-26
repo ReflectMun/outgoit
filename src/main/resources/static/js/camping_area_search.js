@@ -20,7 +20,7 @@ submitSearch.addEventListener("click", async (e) => {
     if(!searchKeyword) {
         alert("검색어를 입력해주세요!")
     }
-    const reqUrl = "http://" + hostName + "/api/camping/search/" + searchKeyword
+    const reqUrl = "/api/camping/search/" + searchKeyword
 
     try{
         const { data: resData } = await axios.get(reqUrl)

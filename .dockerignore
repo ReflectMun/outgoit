@@ -1,0 +1,10 @@
+.idea
+.metadata
+target
+.gitignore
+HELP.md
+test
+build
+.dockerignore
+.DS_Store
+gradlew.bat

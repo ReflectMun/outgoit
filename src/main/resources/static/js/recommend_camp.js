@@ -16,6 +16,11 @@ for (const camp of recommendedCamps) {
             // 해당 API는 리스트 형태로 결과를 반환하기 때문에 0번째 값을 가져오도록 했음
             campingAreaData = data[0];
 
+            if(!campingAreaData){
+                alert("서버에서 캠핑장 정보를 받아오는 중에 오류가 발생했습니다!")
+                return
+            }
+
             const detailReqUrl = "/camping/detail/" + campingAreaName;
 
             // 히든폼을 생성해서 submit 하는 방식으로 가는게 난이도가 더 쉬워서 이렇게 했음
