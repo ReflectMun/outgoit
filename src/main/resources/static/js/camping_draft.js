@@ -111,6 +111,15 @@ function makeListElement(searchData, apiResData){
     child.classList.add("camping-area-info-box")
 
     const childCampingAreaName = document.createElement("div")
+
+    if(apiResData['errorMessage']){
+        childCampingAreaName.innerHTML = `<span>${apiResData['facltNm']}</span>`
+        childCampingAreaName.classList.add("camping-area-name")
+        child.appendChild(childCampingAreaName)
+
+        return child
+    }
+
     childCampingAreaName.innerHTML = `<span>${apiResData['facltNm']}</span>`
     childCampingAreaName.classList.add("camping-area-name")
 

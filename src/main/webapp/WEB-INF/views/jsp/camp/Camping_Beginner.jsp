@@ -272,7 +272,7 @@
                     <div class="rh-camping-wood-main-best rh-pointer">
                         <div class="rh-camping-wood-mainPost-best" id="best2">
                             <div class="rh-camping-wood-mainPost-bestText recommended-camp-for-beginner"
-                                 data-value="송호관광지 야영장">
+                                 data-value="송호국민관광지 야영장">
                                 <div class="bestTextLocal">충청북도</div>
                                 <div class="bestText2">송호국민관광지 캠핑장</div>
                             </div>

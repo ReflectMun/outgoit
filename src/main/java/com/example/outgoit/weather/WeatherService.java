@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -175,7 +176,12 @@ public class WeatherService {
 
             ObjectMapper mapper = new ObjectMapper();
             URL url = new URL(uri.toUriString());
-            ApiResponse res = mapper.readValue(url, ApiResponse.class);
+            ApiResponse res = null;
+            try {
+                res = mapper.readValue(url, ApiResponse.class);
+            } catch (IOException e) {
+                throw new NationalWeatherServiceError("기상청에서 날씨 데이터를 가져오는데 실패함");
+            }
 
             String resultCode = res.getResponse().getHeader().getResultCode();
 

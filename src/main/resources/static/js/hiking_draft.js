@@ -1,4 +1,5 @@
 const hostName = window.location.host
+const scheme = window.location.protocol
 const mapContainer = document.getElementById("map")
 const searchBox = document.getElementById("search-box")
 const submitSearch = document.getElementById("submit-search")
@@ -40,6 +41,7 @@ try {
         const inputValue = searchBox.value
         if (!inputValue) {
             alert("검색어를 입력해주세요!")
+            return
         }
 
         deleteMarker()
@@ -48,7 +50,7 @@ try {
         ps.keywordSearch(inputValue, async (data, status, pagination) => {
 
             if (status === kakao.maps.services.Status.OK) {
-                const url = new URL("https://" + hostName + "/api/trail/search")
+                const url = new URL(scheme + hostName + "/api/trail/search")
 
                 url.searchParams.set("lati", data[0].y)
                 url.searchParams.set("lngi", data[0].x)
