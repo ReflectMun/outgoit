@@ -13,7 +13,7 @@ charset=UTF-8" pageEncoding="UTF-8" %>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="/resources/static/js/menu.js"></script>
 </head>
-<body>
+<body oncontextmenu="return false">
 
 
 <%-- 헤더 시작 --%>
